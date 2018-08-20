@@ -10,7 +10,7 @@ namespace YamaCaisse
     public partial class App : Application
     {
 
-        public static string UrlGateway = "http://localhost:63058/";
+        public static string UrlGateway = "http://192.168.1.25:63058/";
         public App()
         {
             InitializeComponent();

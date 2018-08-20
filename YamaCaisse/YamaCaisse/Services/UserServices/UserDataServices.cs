@@ -19,7 +19,9 @@ namespace YamaCaisse.Services.UserServices
             {
                 JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetT_EMPLOYEbyCode/", code));
                 Employe res = null;
-                await Task.Run(() => { res = o.First.First.ToObject<Employe>(); });
+                await Task.Run(() => { res = o.ToObject<Employe>(); });
+                if (res.EMP_ID == 0)
+                    return null;
                 return res;
             }
             catch (Exception)

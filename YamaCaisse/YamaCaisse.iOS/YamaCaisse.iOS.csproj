@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YamaCaisse\YamaCaisse.csproj">
-      <Project>{52734f0b-28bf-4002-8b76-b7554462b055}</Project>
+      <Project>{05EDA436-E111-4612-82DC-83EF3A3F620E}</Project>
       <Name>YamaCaisse</Name>
     </ProjectReference>
   </ItemGroup>
