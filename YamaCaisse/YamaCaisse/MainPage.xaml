@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:YamaCaisse"
+             x:Class="YamaCaisse.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0"
+            WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content >
+        <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}">
+            <ActivityIndicator IsVisible="{Binding IsBusy}" 
+                               IsRunning="{Binding IsBusy}" 
+                               VerticalOptions="FillAndExpand" 
+                               HorizontalOptions="FillAndExpand"
+                                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.33}"
+                                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                    Property=Height,
+                                    Factor=0.28}"/>
+            <StackLayout VerticalOptions="Start">
+                <Label Text="Login" Grid.Row="0" FontSize="50" TextColor="{StaticResource TextIconeColor}"></Label>
+                <Entry BackgroundColor="White" Opacity="1" x:Name="CodeUser" Placeholder="----"/>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Grid HorizontalOptions="Fill">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Button Text="1" Grid.Column="0" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="2" Grid.Column="1" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="3" Grid.Column="2" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+
+                    <Button Text="4" Grid.Column="0" Grid.Row="1"  Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="5" Grid.Column="1" Grid.Row="1"  Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="6" Grid.Column="2" Grid.Row="1"  Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+
+                    <Button Text="7" Grid.Column="0" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="8" Grid.Column="1" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="9" Grid.Column="2" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    
+                    <Button Text="0" Grid.Column="0" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="8" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" Clicked="Click_Connexion" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+
+                </Grid>
+            </StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
