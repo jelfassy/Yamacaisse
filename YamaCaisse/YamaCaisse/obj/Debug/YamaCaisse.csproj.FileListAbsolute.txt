@@ -44,3 +44,6 @@ C:/Users/jonat/source/repos/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Polly.xml
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.App.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.pdb
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.AppResources.resources
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.csproj.GenerateResource.cache
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.Pages.Caisse.xaml.g.cs
