@@ -15,6 +15,7 @@ namespace YamaCaisse
         public MainPage()
         {
             InitializeComponent();
+         //   this.btbackspace.Text = AppResources.
         }
 
 

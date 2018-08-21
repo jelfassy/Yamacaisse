@@ -51,8 +51,8 @@
                     <Button Text="8" Grid.Column="1" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
                     <Button Text="9" Grid.Column="2" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
                     
-                    <Button Text="retour" Grid.Column="0" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
-                    <Button Text="8" Grid.Column="1" Grid.Row="3"  Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button x:Name="btbackspace" Text="retour" Grid.Column="0" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
+                    <Button Text="0" Grid.Column="1" Grid.Row="3"  Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
                     <Button Text="Enter" Grid.Column="2" Grid.Row="3"  Clicked="Click_Connexion" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" ></Button>
 
                 </Grid>

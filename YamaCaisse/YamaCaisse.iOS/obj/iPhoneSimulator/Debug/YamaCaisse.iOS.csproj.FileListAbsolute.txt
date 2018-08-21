@@ -1,0 +1,6 @@
+C:\Users\jonat\source\repos\YamaCaisse\YamaCaisse\YamaCaisse.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\jonat\source\repos\YamaCaisse\YamaCaisse\YamaCaisse.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\jonat\source\repos\YamaCaisse\YamaCaisse\YamaCaisse.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\jonat\source\repos\YamaCaisse\YamaCaisse\YamaCaisse.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\jonat\source\repos\YamaCaisse\YamaCaisse\YamaCaisse.iOS\obj\iPhoneSimulator\Debug\YamaCaisse.iOS.csprojResolveAssemblyReference.cache
+C:\Users\jonat\source\repos\YamaCaisse\YamaCaisse\YamaCaisse.iOS\obj\iPhoneSimulator\Debug\YamaCaisse.iOS.csproj.CoreCompileInputs.cache

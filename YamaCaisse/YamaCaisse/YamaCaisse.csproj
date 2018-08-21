@@ -39,15 +39,20 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entity\Employe.cs" />
+    <Compile Include="Entity\Table.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TableServices\ITableDataServices.cs" />
+    <Compile Include="Services\TableServices\TableDataServices.cs" />
     <Compile Include="Services\UserServices\IUserDataServices.cs" />
     <Compile Include="Services\UserServices\UserDataServices.cs" />
     <Compile Include="Tools\HttpHelper.cs" />
     <Compile Include="AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
   </ItemGroup>
   <ItemGroup>
