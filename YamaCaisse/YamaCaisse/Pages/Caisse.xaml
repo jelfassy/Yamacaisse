@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YamaCaisse.Pages.Caisse">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}" Orientation="Vertical">
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression &#xA;                               Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.33}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.28}" />
+
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Orientation="Horizontal">
+                <Button Text="Reservation" Clicked="Click_Deconnexion" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Orientation="Horizontal">
+                <Button Text="Reservation" Clicked="Click_Reservation" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Text="Table" Clicked="Click_Table" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Text="Commande" Clicked="Click_Commande" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Text="Paiement" Clicked="Click_Paiement" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" MinimumHeightRequest="500">
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

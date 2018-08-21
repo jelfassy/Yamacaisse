@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using YamaCaisse.Entity;
 
 namespace YamaCaisse
 {
     public partial class App : Application
     {
 
-        public static string UrlGateway = "http://192.168.1.25:63058/";
+        public static string UrlGateway = "";
+
+        public static int UserId { get; set; }
+        public static Employe User { get; set; }
+
         public App()
         {
             InitializeComponent();

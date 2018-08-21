@@ -15,7 +15,7 @@ namespace YamaCaisse
         public MainPage()
         {
             InitializeComponent();
-         //   this.btbackspace.Text = AppResources.
+            this.AdresseServeur.Text = "192.168.1.25:63058";
         }
 
 
@@ -24,17 +24,27 @@ namespace YamaCaisse
             this.CodeUser.Text = string.Concat(this.CodeUser.Text,(sender as Button).Text);
         }
 
+        void Click_Back(object sender, EventArgs e)
+        {
+            if (this.CodeUser.Text != "")
+            this.CodeUser.Text = this.CodeUser.Text.Remove(this.CodeUser.Text.Length - 1);
+        }
+
         async void Click_Connexion(object sender, EventArgs e)
         {
+            App.UrlGateway = "http://" + this.AdresseServeur.Text +"/";
             _userDataServices = DependencyService.Get<IUserDataServices>();
             var user = await _userDataServices.GetUserbyCode(this.CodeUser.Text);
             if (user == null)
             {
+                this.CodeUser.Text = "";
                 await DisplayAlert("Login", "Code Invalid", "OK");
             }
             else
             {
-                await DisplayAlert("Login", "Bienvenue", "OK");
+                App.User = user;
+                App.UserId = user.EMP_ID;
+                await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
             }
         }
 
