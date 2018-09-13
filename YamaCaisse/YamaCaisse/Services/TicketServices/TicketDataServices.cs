@@ -1,0 +1,144 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using YamaCaisse.Entity;
+using YamaCaisse.Tools;
+
+[assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.TicketServices.TicketDataServices))]
+namespace YamaCaisse.Services.TicketServices
+{
+    public class TicketDataServices : ITicketDataServices
+    {
+        private string Baseurl = "api/Ticket/";
+
+        public TicketDataServices()
+        {
+        }
+
+        public async Task<List<Ticket>> GetTickets()
+        {
+            try
+            {
+                List<Ticket> res = new List<Ticket>();
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.Select((JToken s) => s.ToObject<Ticket>()).ToList();
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<Ticket> GetTicket(int id)
+        {
+            try
+            {
+                Ticket res = null;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,id.ToString()));
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<Ticket>();
+                });
+                if (res.TIK_ID == 0)
+                        return null;
+
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Gets the current table ticket
+        /// </summary>
+        /// <returns>The table ticket.</returns>
+        /// <param name="id">Identifier.</param>
+        public async Task<Ticket> GetCurrentTableTicket(int id)
+        {
+            try
+            {
+                Ticket res = null;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"Table/", id.ToString()));
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<Ticket>();
+                });
+                if (res == null)
+                    return null;
+
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<bool> PostTicket(Ticket ticket)
+        {
+            try
+            {
+                var js = JsonConvert.SerializeObject(ticket, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+               // var rs = string.Concat("{\"t_TICKET\":", js, "}");
+ 
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl),js);
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> PutTicket(int id, Ticket ticket)
+        {
+            try
+            {
+                var js = JsonConvert.SerializeObject(ticket, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PutAsync(string.Concat(App.UrlGateway, Baseurl, id), js);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+    }
+}

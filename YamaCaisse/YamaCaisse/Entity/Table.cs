@@ -12,5 +12,6 @@ namespace YamaCaisse.Entity
         public string TAB_NOM { get; set; }
         public Nullable<int> TAB_ICONE { get; set; }
         public Nullable<bool> TAB_UTILISE { get; set; }
+        public TableIcone T_TABLE_ICONE { get; set; }
     }
 }

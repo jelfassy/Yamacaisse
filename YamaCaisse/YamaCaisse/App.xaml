@@ -12,6 +12,8 @@
             <Color x:Key="PrimaryTextColor">#212121</Color>
             <Color x:Key="SecondaryTextColor">#757575</Color>
             <Color x:Key="DividerColor">#BDBDBD</Color>
+            <Color x:Key="ListcolorDark">#E3E3E3</Color>
+            <Color x:Key="ListcolorLight">#EEEEEE</Color>
         </ResourceDictionary>
         <!-- Application resource dictionary -->
 

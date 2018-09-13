@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" x:Class="YamaCaisse.Pages.MainTicketPage">
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <local:HeaderBar />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="9*" />
+                        <ColumnDefinition Width="5*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <StackLayout x:Name="StkTicketList" Grid.Column="1" Orientation="Vertical">
+                           <ListView x:Name="listViewTicket" HorizontalOptions="StartAndExpand" RowHeight="40" ItemsSource="{Binding ListTicket}" SeparatorVisibility="Default" ItemSelected="Ligne_ItemSelected">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell Appearing="Cell_OnAppearing">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="40">
+                                                    </RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2*"  />
+                                                    <ColumnDefinition Width="3*" />
+                                                    <ColumnDefinition Width="2*" />
+                                                    <ColumnDefinition Width="2*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding TIK_ID}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding TIK_DATE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding TIK_MNT_TOTAL}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding T_EMPLOYE.EMP_NOM}" BackgroundColor="{Binding T_EMPLOYE.EMP_COLOR}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                <Label Grid.Row="0" Grid.Column="4" Text="{Binding T_TABLE.TAB_NOM}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                       </Grid>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                    </StackLayout>
+                    <StackLayout x:Name="StkTicketDetail" Grid.Column="2" Orientation="Horizontal">
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </AbsoluteLayout>
+</ContentPage>

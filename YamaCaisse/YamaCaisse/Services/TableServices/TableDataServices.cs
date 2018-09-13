@@ -14,24 +14,18 @@ namespace YamaCaisse.Services.TableServices
     {
         private string Baseurl = "api/Table/";
 
-        private async Task<List<Table>> GetTableList()
+        public async Task<List<Table>> GetTableList()
         {
             try
             {
+                List<Table> res = new List<Table>();
                 JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
-                List<Table> res = null;
-                await Task.Run(() =>
-                {
-                    JToken token = o.SelectToken("T_TABLE");
-                    if (token == null)
-                    {
-                        res = new List<Table>();
-                    }
-                    else
-                    {
-                        res = token.Select((JToken s) => s.ToObject<Table>()).ToList();
-                    }
+
+                await Task.Run(() => {
+                    JToken token = o.SelectToken("data");
+                    res = token.Select((JToken s) => s.ToObject<Table>()).ToList();
                 });
+
                 return res;
             }
             catch (InvalidOperationException Iex)
@@ -39,6 +33,27 @@ namespace YamaCaisse.Services.TableServices
                 throw Iex;
             }
             catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<Table> GetTable(int id)
+        {
+            try
+            {
+                Table res = null;
+
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, id.ToString()));
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<Table>();
+    
+                });
+                return res;
+            }
+            catch(Exception ex)
             {
                 throw ex;
             }

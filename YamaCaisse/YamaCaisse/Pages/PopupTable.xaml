@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
+                 x:Class="YamaCaisse.Pages.PopupTable">
+<StackLayout x:Name="stkContent" Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
+<Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="1*" />
+        <ColumnDefinition Width="5*" />
+        <ColumnDefinition Width="3*" />
+    </Grid.ColumnDefinitions>
+    <StackLayout x:Name="StkPageList" Grid.Column="0" Orientation="Vertical">
+    </StackLayout>
+    <StackLayout x:Name="StkTableList" Grid.Column="1">
+    </StackLayout>
+    <StackLayout x:Name="StkList" Grid.Column="2">
+    </StackLayout>
+</Grid>
+    </StackLayout>
+</pages:PopupPage>

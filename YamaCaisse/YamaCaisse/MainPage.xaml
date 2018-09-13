@@ -7,9 +7,9 @@
         <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}">
             <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.33}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.28}" />
             <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
-                <Label WidthRequest="90" Text="Serveur adresse" Grid.Row="0" FontSize="50" TextColor="{StaticResource TextIconeColor}">
+                <Label WidthRequest="90" Text="Serveur adresse" Grid.Row="0" FontSize="20" TextColor="{StaticResource TextIconeColor}">
                 </Label>
-                <Entry  BackgroundColor="White" Opacity="1" x:Name="AdresseServeur" Placeholder="192.168.1.25:63058" WidthRequest="150" />
+                <Entry  BackgroundColor="White" Opacity="1" x:Name="AdresseServeur" Placeholder="192.168.1.15:63058" WidthRequest="150" />
             </StackLayout>
             <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
                 <Label WidthRequest="90" Text="Login" Grid.Row="0" FontSize="50" TextColor="{StaticResource TextIconeColor}">

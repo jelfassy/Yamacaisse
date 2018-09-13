@@ -16,6 +16,8 @@ namespace YamaCaisse
         {
             InitializeComponent();
             this.AdresseServeur.Text = "192.168.1.25:63058";
+            if (Application.Current.Properties.ContainsKey("ServeurAdress"))
+                this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
         }
 
 
@@ -32,20 +34,29 @@ namespace YamaCaisse
 
         async void Click_Connexion(object sender, EventArgs e)
         {
-            App.UrlGateway = "http://" + this.AdresseServeur.Text +"/";
-            _userDataServices = DependencyService.Get<IUserDataServices>();
-            var user = await _userDataServices.GetUserbyCode(this.CodeUser.Text);
-            if (user == null)
+            try
             {
-                this.CodeUser.Text = "";
-                await DisplayAlert("Login", "Code Invalid", "OK");
+                App.UrlGateway = "http://" + this.AdresseServeur.Text + "/";
+                Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
+                _userDataServices = DependencyService.Get<IUserDataServices>();
+                var user = await _userDataServices.GetUserbyCode(this.CodeUser.Text);
+                if (user == null)
+                {
+                    this.CodeUser.Text = "";
+                    await DisplayAlert("Login", "Code Invalid", "OK");
+                }
+                else
+                {
+                    App.User = user;
+                    App.UserId = user.EMP_ID;
+                    await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
+                }
             }
-            else
+            catch (Exception ex)
             {
-                App.User = user;
-                App.UserId = user.EMP_ID;
-                await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
+                await DisplayAlert("Serveur Indisponible", "Serveur indisponible", "OK");
             }
+           
         }
 
     }
