@@ -59,5 +59,14 @@ namespace YamaCaisse
            
         }
 
+
+        async void Click_Production(object sender,EventArgs e)
+        {
+            App.UrlGateway = "http://" + this.AdresseServeur.Text + "/";
+            Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
+            await Navigation.PushModalAsync(new YamaCaisse.Pages.ProductionPage());
+   
+        }
+
     }
 }

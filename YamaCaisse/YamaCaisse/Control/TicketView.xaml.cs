@@ -1,32 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
-using YamaCaisse.Entity;
-using YamaCaisse.Services.TicketServices;
+using YamaCaisse.Pages;
 using YamaCaisse.ViewModel;
 
-namespace YamaCaisse.Pages
+namespace YamaCaisse.Control
 {
-    public partial class MainTicketPage : ContentPage
+    public partial class TicketView : ContentView
     {
-        private ITicketDataServices _ticketDataServices;
-
-       
+        public TicketView()
+        {
+            InitializeComponent();
+            this.switchcolor = false;
+            BindingContext = this;
+        }
 
         private bool switchcolor;
 
-
-        public MainTicketPage()
-        {
-            InitializeComponent();
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
-            loadData();
+        public ListView ListligneTicket{
+            get { return this.E_listligneTicket; }
+            set { E_listligneTicket = value; }
         }
 
         private TicketViewModel _ticketViewModel;
 
-        private string CurrentPage;
+
         public TicketViewModel ticketViewModel
         {
             get { return _ticketViewModel; }
@@ -36,30 +35,39 @@ namespace YamaCaisse.Pages
                 OnPropertyChanged(nameof(ticketViewModel));
             }
         }
-
-
-        public async void loadData()
+        async void Click_NbCouvert(object sender, System.EventArgs e)
         {
-            var reslistTicket = await _ticketDataServices.GetTickets();
+            await PopupNavigation.Instance.PushAsync(new PopupCouvert(this));
+        }
 
-            var ListTicket = new ObservableCollection<Ticket>(reslistTicket);
-            listViewTicket.ItemsSource = ListTicket;
+
+
+        async void Click_SelectTable(object sender, System.EventArgs e)
+        {
+         //   await PopupNavigation.Instance.PushAsync(new PopupTable(this));
+        }
+
+
+        void listLigne_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
+        {
         }
 
         public void Cell_OnAppearing(object sender, EventArgs e)
         {
             var viewCell = (ViewCell)sender;
 
-            if(viewCell.View != null)
+            if (viewCell.View != null)
             {
-                if(viewCell.View.BackgroundColor != null 
+
+                if (viewCell.View.BackgroundColor != null
                    && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorDark"])
                    && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorLight"]))
                 {
-                    if(switchcolor)
+                    if (switchcolor)
                     {
                         switchcolor = false;
                         viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
+
                     }
                     else
                     {
@@ -70,10 +78,5 @@ namespace YamaCaisse.Pages
             }
         }
 
-        void Ligne_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            var list = sender as ListView;
-           App.CurrentTicket = ((Ticket)list.SelectedItem);
-        }
     }
 }

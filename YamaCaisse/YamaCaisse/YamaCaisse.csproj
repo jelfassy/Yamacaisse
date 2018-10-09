@@ -114,6 +114,22 @@
     <Compile Include="Services\TypePaiementServices\ITypePaiementDataServices.cs" />
     <Compile Include="Entity\PaiementTicket.cs" />
     <Compile Include="Entity\TypePaiement.cs" />
+    <Compile Include="Pages\ProductionPage.xaml.cs">
+      <DependentUpon>ProductionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ProductionServices\ProductionDataServices.cs" />
+    <Compile Include="Services\ProductionServices\IProductionDataServices.cs" />
+    <Compile Include="Entity\Production.cs" />
+    <Compile Include="Entity\BonProduction.cs" />
+    <Compile Include="Pages\PopupReclameBon.xaml.cs">
+      <DependentUpon>PopupReclameBon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TicketView.xaml.cs">
+      <DependentUpon>TicketView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TableView.xaml.cs">
+      <DependentUpon>TableView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -168,6 +184,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProductionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PopupReclameBon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\TicketView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\TableView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -216,6 +248,7 @@
     <Folder Include="Services\TicketServices\" />
     <Folder Include="Services\PaiementServices\" />
     <Folder Include="Services\TypePaiementServices\" />
+    <Folder Include="Services\ProductionServices\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />

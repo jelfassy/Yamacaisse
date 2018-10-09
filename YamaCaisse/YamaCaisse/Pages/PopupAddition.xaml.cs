@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
+using YamaCaisse.Control;
+using YamaCaisse.Services.TableServices;
+using YamaCaisse.Services.TicketServices;
 using YamaCaisse.Services.TypePaiementServices;
 using YamaCaisse.ViewModel;
 
@@ -15,38 +19,34 @@ namespace YamaCaisse.Pages
         private Entry curentEntry;
         private bool switchcolor;
 
+        private ITicketDataServices _TicketDataServices;
         private ITypePaiementDataServices _typePaiementServices;
-        private TicketViewModel _ticketViewModel;
-        public TicketViewModel ticketViewModel
-        {
-            get { return _ticketViewModel; }
-            set
-            {
-                _ticketViewModel = value;
-                OnPropertyChanged(nameof(ticketViewModel));
-            }
-        }
+        private ITableDataServices _tableDataServices;
+      
+
         public PopupAddition(ContentPage parent)
         {
             this.BindingContext = this;
             InitializeComponent();
-            if (parent.GetType() == typeof(MainTablePage))
-            {
-                _parentTable = (MainTablePage)parent;
-                ticketViewModel = _parentTable.ticketViewModel;
-            }
-            else
-            {
-                _parentCaisse = (Caisse)parent;
-                ticketViewModel = _parentCaisse.ticketViewModel;
-            }
             _typePaiementServices = DependencyService.Get<ITypePaiementDataServices>();
+            _tableDataServices = DependencyService.Get<ITableDataServices>();
+            this.ticketControl = ((MainTablePage)parent).TicketControl;
             LoadData();
         }
 
         public async void LoadData()
         {
-            this.ticketViewModel = _parentTable.ticketViewModel;
+            _TicketDataServices = DependencyService.Get<ITicketDataServices>();
+            var ticket = await _TicketDataServices.GetCurrentTableTicket((int)ticketControl.ticketViewModel.IdTable);
+            if (ticket.TIK_ID != 0)
+            {
+                int idTable = (int)ticketControl.ticketViewModel.IdTable;
+                var listTable = await _tableDataServices.GetTableList();
+                ticketControl.ticketViewModel = new TicketViewModel();
+                ticketControl.ticketViewModel.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
+                ticketControl.ticketViewModel.IdTable = idTable;
+            }
+
             var listPaiement = await _typePaiementServices.GetTypePaiements();
 
             ListViewPaiement.ItemsSource = listPaiement;
@@ -122,7 +122,7 @@ namespace YamaCaisse.Pages
         {
             curentEntry = (Entry)sender;
             if (curentEntry.Text != "")
-                lbResteAPayer.Text = (ticketViewModel.MontantTotal - decimal.Parse(curentEntry.Text)).ToString();
+                lbResteAPayer.Text = (ticketControl.ticketViewModel.MontantTotal - decimal.Parse(curentEntry.Text)).ToString();
         }
 
 

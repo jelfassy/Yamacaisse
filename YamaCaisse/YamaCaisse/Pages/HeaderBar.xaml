@@ -24,7 +24,7 @@
     <Button Grid.Column="4" Grid.Row="0"  Text="Ticket" Clicked="Click_Ticket" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />     
   
     <Button Grid.Column="5" Grid.Row="0"  Text="Rapport" Clicked="Click_Paiement" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-    <Button Grid.Column="6" Grid.Row="0"  Text="Logout" Clicked="Click_Paiement" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+    <Button Grid.Column="6" Grid.Row="0"  Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
     <Label Grid.Column= "7" Grid.Row="0" Text= "c'est moi"/>
     <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
 </Grid>

@@ -59,3 +59,7 @@ C:/Users/jonat/source/repos/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Polly.xml
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Microsoft.AppCenter.Analytics.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Microsoft.AppCenter.Crashes.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Microsoft.AppCenter.dll
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/ProductionPage.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupReclameBon.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Control/TicketView.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Control/TableView.xaml.g.cs

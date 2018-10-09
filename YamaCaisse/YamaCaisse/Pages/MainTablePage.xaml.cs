@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Control;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.PageProduitServices;
 using YamaCaisse.Services.SalleServices;
@@ -23,20 +24,15 @@ namespace YamaCaisse.Pages
         private ISalleTableDataServices _SalleTableDataServices;
         private ITicketDataServices _TicketDataServices;
 
-        private TicketViewModel _ticketViewModel;
-
         private string CurrentPage;
-        public TicketViewModel ticketViewModel
-        {
-            get { return _ticketViewModel; }
-            set
-            {
-                _ticketViewModel = value;
-                OnPropertyChanged(nameof(ticketViewModel));
-            }
-        }
+    
 
-        private bool switchcolor;
+
+        public TicketView TicketControl
+        {
+            get { return this.ticketControl; }
+            set { this.ticketControl = value;}
+        }
 
         public MainTablePage()
         {
@@ -44,7 +40,7 @@ namespace YamaCaisse.Pages
             {
                 this.BindingContext = this;
                 InitializeComponent();
-                ticketViewModel = new TicketViewModel();
+                ticketControl.ticketViewModel = new TicketViewModel();
                 CurrentPage = "Grille";
                 InitGridTable(CurrentPage);
                 InitListSalle();
@@ -279,34 +275,12 @@ namespace YamaCaisse.Pages
         {
         }
 
-        public void Cell_OnAppearing(object sender, EventArgs e)
-        {
-            var viewCell = (ViewCell)sender;
-
-            if (viewCell.View != null)
-            {
-                if (viewCell.View.BackgroundColor != null
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorDark"])
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorLight"]))
-                {
-                    if (switchcolor)
-                    {
-                        switchcolor = false;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
-                    }
-                    else
-                    {
-                        switchcolor = true;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
-                    }
-                }
-            }
-        }
+     
 
         public void Click_SelectTable(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            ticketViewModel.IdTable = int.Parse(button.ClassId);
+            ticketControl.ticketViewModel.IdTable = int.Parse(button.ClassId);
             LoadDataTicket();
         }
 
@@ -320,18 +294,18 @@ namespace YamaCaisse.Pages
 
         public async void LoadDataTicket()
         {
-            var ticket = await _TicketDataServices.GetCurrentTableTicket((int)ticketViewModel.IdTable);
+            var ticket = await _TicketDataServices.GetCurrentTableTicket((int)ticketControl.ticketViewModel.IdTable);
             if (ticket.TIK_ID != 0)
             {
-                ticketViewModel.SetTicket(ticket);
+                ticketControl.ticketViewModel.SetTicket(ticket);
             }
             else
             {
-                int idTable = (int)ticketViewModel.IdTable;
+                int idTable = (int)ticketControl.ticketViewModel.IdTable;
                 var listTable = await _tableDataServices.GetTableList();
-                ticketViewModel = new TicketViewModel();
-                ticketViewModel.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
-                ticketViewModel.IdTable = idTable;
+                ticketControl.ticketViewModel = new TicketViewModel();
+                ticketControl.ticketViewModel.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
+                ticketControl.ticketViewModel.IdTable = idTable;
             }
         }
 
@@ -344,8 +318,8 @@ namespace YamaCaisse.Pages
         async void Click_Take(object sender, System.EventArgs e)
         {
             var caisse = new YamaCaisse.Pages.Caisse();
-            caisse.ticketViewModel = this.ticketViewModel;
-            caisse.ticketViewModel.ListLigneTicket.Clear();
+           // caisse.ticketViewModel = this.ticketViewModel;
+            //caisse.ticketViewModel.ListLigneTicket.Clear();
             await Navigation.PushModalAsync(caisse);
         }
 

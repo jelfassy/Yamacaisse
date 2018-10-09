@@ -170,8 +170,8 @@ namespace YamaCaisse.Pages
                 int? tableId = int.Parse(button.ClassId);
                 if(tableId != null)
                 {
-                    _parentCaisse.ticketViewModel.IdTable = (int)tableId; 
-                    _parentCaisse.ticketViewModel.TableName = ListTable.SingleOrDefault(c => c.TAB_ID == tableId).TAB_NOM;
+                  //  _parentCaisse.ticketControl.ticketViewModel.IdTable = (int)tableId; 
+                  //  _parentCaisse.ticketControl.ticketViewModel.TableName = ListTable.SingleOrDefault(c => c.TAB_ID == tableId).TAB_NOM;
                 }
             }
             await PopupNavigation.PopAsync(false);

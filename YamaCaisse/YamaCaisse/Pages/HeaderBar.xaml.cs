@@ -21,20 +21,22 @@ namespace YamaCaisse.Pages
 
         async void Click_Table(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
+            if (this.GetType() != typeof(MainTablePage))
+                await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
         }
 
         async void Click_Commande(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
+            if (this.GetType() != typeof(Caisse))
+                await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
         }
 
         async void Click_Paiement(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
+                await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTicketPage());
         }
 
-        async void Click_Ticket(object sender,EventArgs e)
+        async void Click_Ticket(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTicketPage());
         }

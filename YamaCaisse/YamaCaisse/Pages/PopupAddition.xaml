@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" x:Class="YamaCaisse.Pages.PopupAddition">
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+xmlns:localControl="clr-namespace:YamaCaisse.Control;assembly=YamaCaisse"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" x:Class="YamaCaisse.Pages.PopupAddition">
     <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -13,58 +15,9 @@
             </Grid.RowDefinitions>
             <StackLayout x:Name="stkEntete" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
             <Label Text="Reste à payer :" FontSize="Large"/>
-             <Label x:Name="lbResteAPayer" Text="{Binding ticketViewModel.MontantTotal}" FontSize="Large" TextColor="Red"/>
+            <Label x:Name="lbResteAPayer" Text="{Binding ticketViewModel.MontantTotal}" FontSize="Large" TextColor="Red"/>
             </StackLayout>
-            <StackLayout x:Name="StkTicket" Grid.Column="0" Grid.Row="1">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="1*" />
-                        <RowDefinition Height="2" />
-                        <RowDefinition Height="8*" />
-                        <RowDefinition Height="2" />
-                        <RowDefinition Height="1*" />
-                    </Grid.RowDefinitions>
-                    <Button Grid.Row="0" Grid.Column="0" Text="{Binding ticketViewModel.TableName}" TextColor="{StaticResource PrimaryTextColor}" />
-                    <BoxView Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
-                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding ticketViewModel.MontantTotal}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                    <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
-                    <Button  Grid.Row="0" Grid.Column="4" Text="{Binding ticketViewModel.NbCouvert}" TextColor="{StaticResource PrimaryTextColor}" />
-                    <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-                    <ListView x:Name="listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" RowHeight="40" ItemsSource="{Binding ticketViewModel.ListLigneTicket}" SeparatorVisibility="None">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell Appearing="Cell_OnAppearing">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="40">
-                                            </RowDefinition>
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20" />
-                                            <ColumnDefinition Width="1*" />
-                                            <ColumnDefinition Width="5*" />
-                                            <ColumnDefinition Width="1*" />
-                                        </Grid.ColumnDefinitions>
-                                        <BoxView Grid.Column="0" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding T_RECLAME.REC_COLOR}" />
-                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_RECLAME.REC_NAME}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding T_PRODUIT.PDT_Prix}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                    </Grid>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                    <BoxView Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-                </Grid>
-            </StackLayout>
+             <localControl:TicketView x:Name="ticketControl" Grid.Column="0" Grid.Row="1" />
             <StackLayout x:Name="StPaiement" Grid.Column="1" Grid.Row="1" Orientation="Vertical">
                 <ListView x:Name="ListViewPaiement" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" RowHeight="60" SeparatorVisibility="None">
                     <ListView.ItemTemplate>

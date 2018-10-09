@@ -22,22 +22,9 @@ namespace YamaCaisse.Pages
         private IPageProduitDataServices _pageProduitDataServices;
         private ITicketDataServices _ticketDataServices;
 
-        private TicketViewModel _ticketViewModel;
-
-
-        public TicketViewModel ticketViewModel
-        {
-            get { return _ticketViewModel; }
-            set
-            {
-                _ticketViewModel = value;
-                OnPropertyChanged(nameof(ticketViewModel));
-            }
-        }
+    
 
         private bool isCompr;
-        private bool switchcolor;
-
         private int Number;
         private int idPage;
 
@@ -49,7 +36,7 @@ namespace YamaCaisse.Pages
 
         private List<Produit> lstProduitPage;
 
-      
+        private List<PageProduit> listPageProduit;
 
         public Caisse()
         {
@@ -58,11 +45,11 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
-            ticketViewModel = new TicketViewModel();
+            ticketControl.ticketViewModel = new TicketViewModel();
            // InitNumberList();
             InitPageButton(firstLoad);
             this.Number = 1;
-            this.switchcolor = false;
+          
             firstLoad = false;
 
         }
@@ -71,8 +58,8 @@ namespace YamaCaisse.Pages
         public void ResetTicket()
         {
             
-            ticketViewModel = new TicketViewModel();
-            listligneTicket.ItemsSource = new ObservableCollection<LigneTicket>();
+            ticketControl.ticketViewModel = new TicketViewModel();
+            ticketControl.ListligneTicket.ItemsSource = new ObservableCollection<LigneTicket>();
         }
 
         #region Number
@@ -110,7 +97,7 @@ namespace YamaCaisse.Pages
         {
             bool isfirst = true;
             var listPages = await _pageDataServices.GetPageList();
-            foreach (var page in listPages.OrderBy(c => c.PAG_ORDER))
+            foreach (var page in listPages.Where(cw=>cw.PAG_POPUP != true).OrderBy(c => c.PAG_ORDER))
             {
                 if (firstLoad && isfirst)
                 {
@@ -156,9 +143,9 @@ namespace YamaCaisse.Pages
         {
             gridProduit.Children.Clear();
             _pageProduitDataServices = DependencyService.Get<IPageProduitDataServices>();
-            var ListItems = await _pageProduitDataServices.GetPageProduitsbyId(this.idPage);
+            listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.idPage);
             lstProduitPage = new List<Produit>();
-            foreach (var item in ListItems)
+            foreach (var item in listPageProduit)
             {
                 var button = new Button
                 {
@@ -177,7 +164,7 @@ namespace YamaCaisse.Pages
                 button.HorizontalOptions = LayoutOptions.Fill;
                 button.VerticalOptions = LayoutOptions.Fill;
                 button.FontSize = 20;
-                button.ClassId = item.T_PRODUIT.PDT_ID.ToString();
+                button.ClassId = item.PGPD_ID.ToString();
                 button.Clicked += Click_Produit;
                 gridProduit.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);
                 if (lstProduitPage.SingleOrDefault(c => c.PDT_ID == item.T_PRODUIT.PDT_ID) == null)
@@ -185,13 +172,16 @@ namespace YamaCaisse.Pages
             }
         }
 
-        private void Click_Produit(object sender, EventArgs e)
+        private async void Click_Produit(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            int idpoduit = int.Parse(btn.ClassId);
-            var prod = lstProduitPage.SingleOrDefault(c => c.PDT_ID == idpoduit);
+            int idpgpd = int.Parse(btn.ClassId);
+
+            var pageprod = listPageProduit.SingleOrDefault(c => c.PGPD_ID == idpgpd);
+            int idpoduit = pageprod.FK_PDT_ID;
+            var prod = pageprod.T_PRODUIT;
             this.Number = 1;
-            this.ticketViewModel.MontantTotal = this.ticketViewModel.MontantTotal + (decimal)prod.PDT_Prix * this.Number;
+            ticketControl.ticketViewModel.MontantTotal = ticketControl.ticketViewModel.MontantTotal + (decimal)prod.PDT_Prix * this.Number;
 
             var ligneTicket = new LigneTicket()
             {
@@ -208,23 +198,23 @@ namespace YamaCaisse.Pages
                 T_TVA = prod.T_TVA,
             };
 
-            if(ticketViewModel.ListLigneTicket != null)
+            if(ticketControl.ticketViewModel.ListLigneTicket != null)
             {
-                ticketViewModel.ListLigneTicket.Add(ligneTicket);
+                ticketControl.ticketViewModel.ListLigneTicket.Add(ligneTicket);
             }
             else
             {
-                ticketViewModel.ListLigneTicket = new ObservableCollection<LigneTicket>();
-                ticketViewModel.ListLigneTicket.Add(ligneTicket);
+                ticketControl.ticketViewModel.ListLigneTicket = new ObservableCollection<LigneTicket>();
+                ticketControl.ticketViewModel.ListLigneTicket.Add(ligneTicket);
             }
 
-            listligneTicket.ItemsSource = ticketViewModel.ListLigneTicket;
+            ticketControl.ListligneTicket.ItemsSource = ticketControl.ticketViewModel.ListLigneTicket;
 
-           // var oldNumberBtn = StkNumberList.Children.SingleOrDefault(c => c.ClassId == this.Number.ToString());
-            //oldNumberBtn.BackgroundColor = (Color)Application.Current.Resources["LightPrimaryColor"];
-            //this.Number = 1;
-            //var NumberOneBtn = StkNumberList.Children.SingleOrDefault(c => c.ClassId == this.Number.ToString());
-            //NumberOneBtn.BackgroundColor = Color.Orange;
+            if(pageprod.PAG_ADD_ID != null)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopupCaisse());
+            }  
+
         }
 
 
@@ -240,6 +230,7 @@ namespace YamaCaisse.Pages
         {
             var list = sender as ListView;
             ligneTicketSelected = ((LigneTicket)list.SelectedItem);
+
         }
 
         #endregion
@@ -247,49 +238,10 @@ namespace YamaCaisse.Pages
 
         #region xtraButton
 
-        void listLigne_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
-        {
-        }
 
-        public void Cell_OnAppearing(object sender, EventArgs e)
-        {
-            var viewCell = (ViewCell)sender;
-
-            if (viewCell.View != null)
-            {
-                
-                if (viewCell.View.BackgroundColor != null
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorDark"])
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorLight"]))
-                {
-                    if (switchcolor)
-                    {
-                        switchcolor = false;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
-
-                    }
-                    else
-                    {
-                        switchcolor = true;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
-                    }
-                }
-            }
-        }
+      
 
      
-
-        async void Click_SelectTable(object sender, System.EventArgs e)
-        {
-            await PopupNavigation.Instance.PushAsync(new PopupTable(this));
-        }
-
-
-        async void Click_NbCouvert(object sender, System.EventArgs e)
-        {
-            await PopupNavigation.Instance.PushAsync(new PopupCouvert(this));
-        }
-
 
 
         #endregion
@@ -305,21 +257,28 @@ namespace YamaCaisse.Pages
             Button btn = (Button)sender;
             var newlist = new ObservableCollection<LigneTicket>();
             decimal? prixU;
-            foreach (var item in ticketViewModel.ListLigneTicket)
+          
+            foreach (var item in ticketControl.ticketViewModel.ListLigneTicket)
             {
                 if (item == this.ligneTicketSelected)
                 {
                     prixU = item.LTK_SOMME / item.LTK_QTE;
                     item.LTK_QTE = item.LTK_QTE + 1;
                     item.LTK_SOMME = prixU * item.LTK_QTE;
+                    ticketControl.ticketViewModel.MontantTotal = ((decimal)ticketControl.ticketViewModel.MontantTotal) + (decimal)prixU;
                 }
                 newlist.Add(item);
             }
-            ticketViewModel.ListLigneTicket = newlist;
-            listligneTicket.ItemsSource = ticketViewModel.ListLigneTicket;
+            ticketControl.ticketViewModel.ListLigneTicket = newlist;
+            ticketControl.ListligneTicket.ItemsSource = ticketControl.ticketViewModel.ListLigneTicket;
         }
 
 
+
+        void Click_Compr(object sender,EventArgs e)
+        {
+         
+        }
 
         /// <summary>
         /// Clicks the change reclame. affiche la popup de modification de reclame pour une ligne
@@ -335,7 +294,7 @@ namespace YamaCaisse.Pages
         public void ChangeLigneReclame(Reclame reclame)
         {
             var newlist = new ObservableCollection<LigneTicket>();
-            foreach (var item in ticketViewModel.ListLigneTicket)
+            foreach (var item in ticketControl.ticketViewModel.ListLigneTicket)
             {
                 if (item == this.ligneTicketSelected)
                 {
@@ -344,24 +303,24 @@ namespace YamaCaisse.Pages
                 }
                 newlist.Add(item);
             }
-            ticketViewModel.ListLigneTicket = newlist;
-            listligneTicket.ItemsSource = ticketViewModel.ListLigneTicket;
+            ticketControl.ticketViewModel.ListLigneTicket = newlist;
+            ticketControl.ListligneTicket.ItemsSource = ticketControl.ticketViewModel.ListLigneTicket;
         }
 
         async void Click_Envoi(object sender, System.EventArgs e)
         {
             try
             {
-                if (ticketViewModel.ListLigneTicket.Count > 0)
+                if (ticketControl.ticketViewModel.ListLigneTicket.Count > 0)
                 {
-                    if (ticketViewModel.TKT_ID == 0)
+                    if (ticketControl.ticketViewModel.TKT_ID == 0)
                     {
-                        var rs = await _ticketDataServices.PostTicket(ticketViewModel.GetTicket());
+                        var rs = await _ticketDataServices.PostTicket(ticketControl.ticketViewModel.GetTicket());
                         //   await PopupNavigation.Instance.PushAsync(new PopupAddition(this));
                     }
                     else
                     {
-                        var rs = await _ticketDataServices.PutTicket(ticketViewModel.TKT_ID, ticketViewModel.GetTicket());
+                        var rs = await _ticketDataServices.PutTicket(ticketControl.ticketViewModel.TKT_ID, ticketControl.ticketViewModel.GetTicket());
                     }
 
 
