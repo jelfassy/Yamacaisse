@@ -63,6 +63,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public int? FK_LTK_ID
+        {
+            get;
+            set;
+        }
+
         public Produit T_PRODUIT
         {
             get;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Entity;
 using YamaCaisse.Pages;
 using YamaCaisse.ViewModel;
 
@@ -44,12 +45,26 @@ namespace YamaCaisse.Control
 
         async void Click_SelectTable(object sender, System.EventArgs e)
         {
-         //   await PopupNavigation.Instance.PushAsync(new PopupTable(this));
+            //   await PopupNavigation.Instance.PushAsync(new PopupTable(this));
         }
 
 
         void listLigne_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
         {
+        }
+
+        void Message_Clicked(object sender, System.EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+
+            var ligneTicket = (LigneTicket)mi.CommandParameter;
+
+            throw new NotImplementedException();
+        }
+
+        void Supprimer_Clicked (object sender,System.EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         public void Cell_OnAppearing(object sender, EventArgs e)

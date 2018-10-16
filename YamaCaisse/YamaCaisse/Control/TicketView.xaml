@@ -25,10 +25,15 @@
                             <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
                             <Button Clicked="Click_NbCouvert" Grid.Row="0" Grid.Column="4" Text="{Binding ticketViewModel.NbCouvert}" TextColor="{StaticResource PrimaryTextColor}" />
                             <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-                            <ListView x:Name="E_listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" RowHeight="40" ItemsSource="{Binding ticketViewModel.ListLigneTicket}" SeparatorVisibility="None" ItemAppearing="listLigne_ItemAppearing">
+                            <ListView x:Name="E_listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" RowHeight="60" ItemsSource="{Binding ticketViewModel.ListLigneTicket}" SeparatorVisibility="None" ItemAppearing="listLigne_ItemAppearing">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell Appearing="Cell_OnAppearing">
+                                            <ViewCell.ContextActions>
+                                    <MenuItem Clicked="Message_Clicked" CommandParameter="{Binding .}" Text="Change" />
+                                    <MenuItem Clicked="Supprimer_Clicked" CommandParameter="{Binding .}" Text="Supprimer" IsDestructive="true"/>
+                                    
+                                </ViewCell.ContextActions>
                                             <Grid>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition Height="40">

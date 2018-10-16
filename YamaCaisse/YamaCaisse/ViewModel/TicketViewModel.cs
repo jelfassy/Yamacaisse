@@ -91,7 +91,8 @@ namespace YamaCaisse.ViewModel
                 TIK_DATE = DateTime.Now,
                 TIK_MNT_TOTAL = this.MontantTotal,
                 TIK_NB_COUVERT = this.NbCouvert,
-                T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>()
+                T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
+                FK_JOU_ID = App.JourId
             };
 
             foreach(var ligne in ListLigneTicket)

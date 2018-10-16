@@ -47,6 +47,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public int FK_JOU_ID
+        {
+            get;
+            set;
+        }
+
         public List<LigneTicket> T_LIGNE_TICKET
         {
             get;

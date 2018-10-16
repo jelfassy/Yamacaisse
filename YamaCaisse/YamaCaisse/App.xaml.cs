@@ -23,10 +23,11 @@ namespace YamaCaisse
 
         public static Ticket CurrentTicket { get; set; }
 
-
+        public static int JourId { get; set; }
         public static Caisse Caisse { get; set; }
         public static MainTablePage MainTablePage{ get; set; }
         public static MainTicketPage MainTicketPage { get; set; }
+
 
         public App()
         {

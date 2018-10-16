@@ -130,6 +130,9 @@
     <Compile Include="Control\TableView.xaml.cs">
       <DependentUpon>TableView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\JourServices\JourDataServices.cs" />
+    <Compile Include="Services\JourServices\IJourDataServices.cs" />
+    <Compile Include="Entity\Jour.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -249,6 +252,7 @@
     <Folder Include="Services\PaiementServices\" />
     <Folder Include="Services\TypePaiementServices\" />
     <Folder Include="Services\ProductionServices\" />
+    <Folder Include="Services\JourServices\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />

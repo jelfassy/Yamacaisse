@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using YamaCaisse.Services.JourServices;
 using YamaCaisse.Services.UserServices;
 
 namespace YamaCaisse
@@ -11,6 +12,7 @@ namespace YamaCaisse
     public partial class MainPage : ContentPage
     {
         private IUserDataServices _userDataServices;
+        private IJourDataServices _jourDataServices;
 
         public MainPage()
         {
@@ -49,6 +51,11 @@ namespace YamaCaisse
                 {
                     App.User = user;
                     App.UserId = user.EMP_ID;
+                    _jourDataServices = DependencyService.Get<IJourDataServices>();
+                    var jour = await _jourDataServices.GetCurrentJourId();
+                    if (jour == null)
+                        throw new Exception("Probleme de jour");
+                    App.JourId = jour.JOU_ID;
                     await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
                 }
             }
