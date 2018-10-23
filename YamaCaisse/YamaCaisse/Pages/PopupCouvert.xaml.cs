@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
-using YamaCaisse.Control;
+using YamaCaisse.View;
 using YamaCaisse.Services.TicketServices;
 
 namespace YamaCaisse.Pages

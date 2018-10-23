@@ -4,22 +4,51 @@ using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Pages;
+using YamaCaisse.Services.TableServices;
+using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
+using System.Linq;
 
-namespace YamaCaisse.Control
+namespace YamaCaisse.View
 {
     public partial class TicketView : ContentView
     {
-        public TicketView()
+
+        private ITicketDataServices _ticketDataServices;
+        private ITableDataServices _tableDataServices;
+
+         public TicketView()
         {
             InitializeComponent();
             this.switchcolor = false;
             BindingContext = this;
+           
+
+            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _tableDataServices = DependencyService.Get<ITableDataServices>();
+        }
+
+        public async void LoadDataTicket(int idTable)
+        {
+            this.ticketViewModel.IdTable = idTable;
+            var ticket = await _ticketDataServices.GetCurrentTableTicket((int)this.ticketViewModel.IdTable);
+            if (ticket.TIK_ID != 0)
+            {
+                this.ticketViewModel.SetTicket(ticket);
+            }
+            else
+            {
+                var listTable = await _tableDataServices.GetTableList();
+                ticketViewModel = new TicketViewModel();
+                ticketViewModel.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
+                ticketViewModel.IdTable = idTable;
+            }
         }
 
         private bool switchcolor;
 
-        public ListView ListligneTicket{
+        public ListView ListligneTicket
+        {
             get { return this.E_listligneTicket; }
             set { E_listligneTicket = value; }
         }
@@ -42,10 +71,9 @@ namespace YamaCaisse.Control
         }
 
 
-
         async void Click_SelectTable(object sender, System.EventArgs e)
         {
-            //   await PopupNavigation.Instance.PushAsync(new PopupTable(this));
+              await PopupNavigation.Instance.PushAsync(new PopupTable(this));
         }
 
 
@@ -62,7 +90,7 @@ namespace YamaCaisse.Control
             throw new NotImplementedException();
         }
 
-        void Supprimer_Clicked (object sender,System.EventArgs e)
+        void Supprimer_Clicked(object sender, System.EventArgs e)
         {
             throw new NotImplementedException();
         }

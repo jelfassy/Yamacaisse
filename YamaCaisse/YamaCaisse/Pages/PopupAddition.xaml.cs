@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
-using YamaCaisse.Control;
+using YamaCaisse.View;
 using YamaCaisse.Services.TableServices;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.Services.TypePaiementServices;
@@ -14,42 +14,45 @@ namespace YamaCaisse.Pages
     public partial class PopupAddition : PopupPage
     {
 
-        private MainTablePage _parentTable;
-        private Caisse _parentCaisse;
         private Entry curentEntry;
         private bool switchcolor;
 
-        private ITicketDataServices _TicketDataServices;
         private ITypePaiementDataServices _typePaiementServices;
         private ITableDataServices _tableDataServices;
-      
+        private ITicketDataServices _ticketDataServices;
 
-        public PopupAddition(ContentPage parent)
+        public int TikId
+        {
+            get;
+            set;
+        }
+
+        public PopupAddition(int ticketId)
         {
             this.BindingContext = this;
+           // this.ticketControl = ((MainTablePage)parent).TicketControl;
             InitializeComponent();
             _typePaiementServices = DependencyService.Get<ITypePaiementDataServices>();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
-            this.ticketControl = ((MainTablePage)parent).TicketControl;
+            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            TikId = ticketId;
             LoadData();
         }
 
         public async void LoadData()
         {
-            _TicketDataServices = DependencyService.Get<ITicketDataServices>();
-            var ticket = await _TicketDataServices.GetCurrentTableTicket((int)ticketControl.ticketViewModel.IdTable);
-            if (ticket.TIK_ID != 0)
-            {
-                int idTable = (int)ticketControl.ticketViewModel.IdTable;
-                var listTable = await _tableDataServices.GetTableList();
-                ticketControl.ticketViewModel = new TicketViewModel();
-                ticketControl.ticketViewModel.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
-                ticketControl.ticketViewModel.IdTable = idTable;
-            }
-
+       
             var listPaiement = await _typePaiementServices.GetTypePaiements();
 
             ListViewPaiement.ItemsSource = listPaiement;
+
+
+            var ticket = await _ticketDataServices.GetTicket(this.TikId);
+
+            this.ticketControl.ticketViewModel = new TicketViewModel();
+
+            this.ticketControl.ticketViewModel.SetTicket(ticket);
+
         }
 
         void Click_Number(object sender, EventArgs e)
@@ -121,8 +124,8 @@ namespace YamaCaisse.Pages
         void Paiement_Unfocused(object sender, Xamarin.Forms.FocusEventArgs e)
         {
             curentEntry = (Entry)sender;
-            if (curentEntry.Text != "")
-                lbResteAPayer.Text = (ticketControl.ticketViewModel.MontantTotal - decimal.Parse(curentEntry.Text)).ToString();
+            //if (curentEntry.Text != "")
+                //lbResteAPayer.Text = (ticketControl.ticketViewModel.MontantTotal - decimal.Parse(curentEntry.Text)).ToString();
         }
 
 

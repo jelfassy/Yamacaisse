@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
-             xmlns:localControl="clr-namespace:YamaCaisse.Control;assembly=YamaCaisse"
+             xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
              x:Class="YamaCaisse.Pages.Caisse">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
@@ -41,7 +41,7 @@
                             </Grid.ColumnDefinitions>
                         </Grid>
                     </StackLayout>
-                    <localControl:TicketView x:Name="ticketControl" Grid.Column="2" />
+                    <localView:TicketView x:Name="ticketControl" Grid.Column="2" />
      
                 </Grid>
                 <!-- Boutons de bas de pages -->

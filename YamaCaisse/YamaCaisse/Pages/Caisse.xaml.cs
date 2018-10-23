@@ -11,6 +11,7 @@ using YamaCaisse.Services.PageProduitServices;
 using YamaCaisse.Services.PageServices;
 using YamaCaisse.Services.TableServices;
 using YamaCaisse.Services.TicketServices;
+using YamaCaisse.View;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
@@ -22,9 +23,14 @@ namespace YamaCaisse.Pages
         private IPageProduitDataServices _pageProduitDataServices;
         private ITicketDataServices _ticketDataServices;
 
-    
 
-        private bool isCompr;
+        public TicketView TicketControl
+        {
+            get { return this.ticketControl; }
+            set { this.ticketControl = value; }
+        }
+
+
         private int Number;
         private int idPage;
 
@@ -45,19 +51,21 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
-            ticketControl.ticketViewModel = new TicketViewModel();
-           // InitNumberList();
+            if (this.ticketControl.ticketViewModel == null)
+                ticketControl.ticketViewModel = new TicketViewModel();
+            // InitNumberList();
             InitPageButton(firstLoad);
             this.Number = 1;
-          
+
             firstLoad = false;
+
 
         }
 
 
         public void ResetTicket()
         {
-            
+
             ticketControl.ticketViewModel = new TicketViewModel();
             ticketControl.ListligneTicket.ItemsSource = new ObservableCollection<LigneTicket>();
         }
@@ -97,7 +105,7 @@ namespace YamaCaisse.Pages
         {
             bool isfirst = true;
             var listPages = await _pageDataServices.GetPageList();
-            foreach (var page in listPages.Where(cw=>cw.PAG_POPUP != true).OrderBy(c => c.PAG_ORDER))
+            foreach (var page in listPages.Where(cw => cw.PAG_POPUP != true).OrderBy(c => c.PAG_ORDER))
             {
                 if (firstLoad && isfirst)
                 {
@@ -198,7 +206,7 @@ namespace YamaCaisse.Pages
                 T_TVA = prod.T_TVA,
             };
 
-            if(ticketControl.ticketViewModel.ListLigneTicket != null)
+            if (ticketControl.ticketViewModel.ListLigneTicket != null)
             {
                 ticketControl.ticketViewModel.ListLigneTicket.Add(ligneTicket);
             }
@@ -210,10 +218,10 @@ namespace YamaCaisse.Pages
 
             ticketControl.ListligneTicket.ItemsSource = ticketControl.ticketViewModel.ListLigneTicket;
 
-            if(pageprod.PAG_ADD_ID != null)
+            if (pageprod.PAG_ADD_ID != null)
             {
                 await PopupNavigation.Instance.PushAsync(new PopupCaisse());
-            }  
+            }
 
         }
 
@@ -224,7 +232,7 @@ namespace YamaCaisse.Pages
 
 
 
-      
+
 
         void Ligne_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
@@ -236,15 +244,6 @@ namespace YamaCaisse.Pages
         #endregion
 
 
-        #region xtraButton
-
-
-      
-
-     
-
-
-        #endregion
 
         /// <summary>
         /// Methode d'ajout d'une ligne :
@@ -257,7 +256,7 @@ namespace YamaCaisse.Pages
             Button btn = (Button)sender;
             var newlist = new ObservableCollection<LigneTicket>();
             decimal? prixU;
-          
+
             foreach (var item in ticketControl.ticketViewModel.ListLigneTicket)
             {
                 if (item == this.ligneTicketSelected)
@@ -275,9 +274,9 @@ namespace YamaCaisse.Pages
 
 
 
-        void Click_Compr(object sender,EventArgs e)
+        void Click_Compr(object sender, EventArgs e)
         {
-         
+
         }
 
         /// <summary>
@@ -335,7 +334,7 @@ namespace YamaCaisse.Pages
                 };
                 Crashes.TrackError(ex, property);
             }
-           
+
         }
     }
 }

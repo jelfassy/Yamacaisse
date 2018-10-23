@@ -27,8 +27,16 @@ namespace YamaCaisse.ViewModel
             get;
             set;
         }
-
-        public int? IdTable { get; set; }
+        private int? idTable;
+        public int? IdTable 
+        { 
+            get { return idTable; }
+            set
+            {
+                idTable = value;
+                this.GetTicket();
+            }
+        }
         private string _tableName;
         public string TableName
         {
@@ -94,7 +102,8 @@ namespace YamaCaisse.ViewModel
                 T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
                 FK_JOU_ID = App.JourId
             };
-
+            if (ListLigneTicket == null)
+                ListLigneTicket = new ObservableCollection<LigneTicket>();
             foreach(var ligne in ListLigneTicket)
             {
                 ligne.T_PRODUIT = null;

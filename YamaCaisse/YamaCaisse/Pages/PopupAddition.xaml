@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
 xmlns:localControl="clr-namespace:YamaCaisse.Control;assembly=YamaCaisse"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" x:Class="YamaCaisse.Pages.PopupAddition">
+                 xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+                 x:Class="YamaCaisse.Pages.PopupAddition">
     <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -17,7 +20,7 @@ xmlns:localControl="clr-namespace:YamaCaisse.Control;assembly=YamaCaisse"
             <Label Text="Reste à payer :" FontSize="Large"/>
             <Label x:Name="lbResteAPayer" Text="{Binding ticketViewModel.MontantTotal}" FontSize="Large" TextColor="Red"/>
             </StackLayout>
-             <localControl:TicketView x:Name="ticketControl" Grid.Column="0" Grid.Row="1" />
+             <localView:TicketView x:Name="ticketControl" Grid.Column="0" Grid.Row="1" />
             <StackLayout x:Name="StPaiement" Grid.Column="1" Grid.Row="1" Orientation="Vertical">
                 <ListView x:Name="ListViewPaiement" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" RowHeight="60" SeparatorVisibility="None">
                     <ListView.ItemTemplate>

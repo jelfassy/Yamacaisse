@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
-             xmlns:localControl="clr-namespace:YamaCaisse.Control;assembly=YamaCaisse"
+             xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
              x:Class="YamaCaisse.Pages.MainTablePage">
     <ContentPage.Content>
         <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
@@ -10,15 +10,11 @@
                 <local:HeaderBar />
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="8*" />
                         <ColumnDefinition Width="3*" />
                     </Grid.ColumnDefinitions>
-                    <StackLayout x:Name="StkPageList" Grid.Column="0" Orientation="Vertical">
-                    </StackLayout>
-                    <StackLayout x:Name="StkTableList" Grid.Column="1" MinimumHeightRequest="400" MinimumWidthRequest="400" WidthRequest="400" HeightRequest="400" BackgroundColor="White">
-                    </StackLayout>
-                    <localControl:TicketView x:Name="ticketControl" Grid.Column="2" />
+                    <localView:TableView x:Name="tableListControl" Grid.Column="0"/>
+                    <localView:TicketView x:Name="ticketView" Grid.Column="1" />
                 </Grid>
                 <Grid>
                     <Grid.RowDefinitions>
