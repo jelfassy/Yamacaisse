@@ -5,6 +5,7 @@ using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.View;
 using YamaCaisse.Services.TicketServices;
+using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
@@ -15,25 +16,12 @@ namespace YamaCaisse.Pages
         private ITicketDataServices _TicketDataServices;
         private TicketView _parentticketView;
 
-        public PopupCouvert(ContentPage parent)
+        public PopupCouvert()
         {
             InitializeComponent();
-            if(parent.GetType() == typeof(Caisse))
-            {
-                _parentCaisse = (Caisse)parent;
-            }
-            if(parent.GetType() == typeof(MainTablePage))
-            {
-                _parentTable = (MainTablePage)parent;
-            }
 
         }
 
-        public PopupCouvert(ContentView parent)
-        {
-            InitializeComponent();
-            _parentticketView = (TicketView)parent;
-        }
 
         void Click_Number(object sender, EventArgs e)
         {
@@ -46,29 +34,12 @@ namespace YamaCaisse.Pages
                 this.EntryNbCouvert.Text = this.EntryNbCouvert.Text.Remove(this.EntryNbCouvert.Text.Length - 1);
         }
 
-        async void Click_Couvert(object sender,EventArgs e)
+        async void Click_Couvert(object sender, EventArgs e)
         {
-            if(_parentCaisse != null)
-            {
-                //if (_parentCaisse.GetType() == typeof(Caisse))
-                //{
-                //    _parentCaisse.ticketViewModel.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
-                //}
-            }
-            if (_parentTable != null)
-            {
-                if (_parentTable.GetType() == typeof(MainTablePage))
-                {
-                    _TicketDataServices = DependencyService.Get<ITicketDataServices>();
-                    _parentTable.TicketControl.ticketViewModel.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
 
-                }
-            }
-            if(_parentticketView !=null)
-            {
-                _parentticketView.ticketViewModel.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
+            TicketViewModel.Current .NbCouvert = int.Parse(this.EntryNbCouvert.Text);
 
-            }
+
             await PopupNavigation.PopAsync(false);
         }
 

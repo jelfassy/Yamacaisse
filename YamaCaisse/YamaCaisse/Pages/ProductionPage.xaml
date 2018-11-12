@@ -12,55 +12,6 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Picker x:Name="PickerProduction" Grid.Row="0" Title="Choisir le lieux de production" SelectedIndexChanged="Handle_SelectedIndexChanged" />
-                    <ListView x:Name="ListTicket" Grid.Row="1">
-                        <ListView.ItemContainerStyle>
-                            <Style TargetType="ListViewItem">
-                                <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-                            </Style>
-                        </ListView.ItemContainerStyle>
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell Appearing="Cell_OnAppearing">
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="60" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="1*"/>
-                                            <ColumnDefinition Width="1*"/>
-                                            <ColumnDefinition Width="1*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <BoxView Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" BackgroundColor="Green"/>
-                                        <BoxView Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand" BackgroundColor="White" Margin="2"/>
-                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding MontantTotal}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding MontantTotal}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding MontantTotal}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" /> 
-                                        <ListView x:Name="List" ItemsSource="{Binding ChildItems}" Grid.Row="1" Grid.ColumnSpan="3">
-                                            <Grid>
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="1*" />
-                                                    <RowDefinition Height="8*" />
-                                                </Grid.RowDefinitions>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="20" />
-                                                    <ColumnDefinition Width="1*" />
-                                                    <ColumnDefinition Width="5*" />
-                                                    <ColumnDefinition Width="1*" />
-                                                    <ColumnDefinition Width="1*" />
-                                                </Grid.ColumnDefinitions>
-                                                <BoxView Grid.Column="0" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding T_RECLAME.REC_COLOR}" />
-                                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_RECLAME.REC_NAME}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                                <Label Grid.Row="0" Grid.Column="3" Text="{Binding T_PRODUIT.PDT_Prix}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                            </Grid>
-                                        </ListView>
-                                    </Grid>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
                 </Grid>
             </StackLayout>
         </AbsoluteLayout>

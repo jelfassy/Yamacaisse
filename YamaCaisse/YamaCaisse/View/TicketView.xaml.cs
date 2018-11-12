@@ -8,42 +8,28 @@ using YamaCaisse.Services.TableServices;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
 using System.Linq;
+using YamaCaisse.Services.PageServices;
 
 namespace YamaCaisse.View
 {
     public partial class TicketView : ContentView
     {
 
-        private ITicketDataServices _ticketDataServices;
+
         private ITableDataServices _tableDataServices;
+        private IPageDataServices _pageDataServices;
 
          public TicketView()
         {
             InitializeComponent();
             this.switchcolor = false;
             BindingContext = this;
-           
-
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            this.ticketViewModel = App.TicketViewModel;
+            _pageDataServices = DependencyService.Get<IPageDataServices>();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
         }
 
-        public async void LoadDataTicket(int idTable)
-        {
-            this.ticketViewModel.IdTable = idTable;
-            var ticket = await _ticketDataServices.GetCurrentTableTicket((int)this.ticketViewModel.IdTable);
-            if (ticket.TIK_ID != 0)
-            {
-                this.ticketViewModel.SetTicket(ticket);
-            }
-            else
-            {
-                var listTable = await _tableDataServices.GetTableList();
-                ticketViewModel = new TicketViewModel();
-                ticketViewModel.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
-                ticketViewModel.IdTable = idTable;
-            }
-        }
+      
 
         private bool switchcolor;
 
@@ -67,7 +53,7 @@ namespace YamaCaisse.View
         }
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupCouvert(this));
+            await PopupNavigation.Instance.PushAsync(new PopupCouvert());
         }
 
 
@@ -81,18 +67,30 @@ namespace YamaCaisse.View
         {
         }
 
-        void Message_Clicked(object sender, System.EventArgs e)
+        async void Click_ChangeReclame(object sender, System.EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var ligneTicket = (LigneTicket)mi.CommandParameter;
+            TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+            await PopupNavigation.Instance.PushAsync(new PopupReclame());
+        }
+
+        async void Message_Clicked(object sender, System.EventArgs e)
         {
             var mi = ((MenuItem)sender);
 
             var ligneTicket = (LigneTicket)mi.CommandParameter;
-
-            throw new NotImplementedException();
+            var listPages = await _pageDataServices.GetPageList();
+            var page = listPages.SingleOrDefault(cw => cw.PAG_NAME == "Message");
+            TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+            await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID));
         }
 
         void Supprimer_Clicked(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            var mi = ((MenuItem)sender);
+            var ligneTicket = (LigneTicket)mi.CommandParameter;
+            TicketViewModel.Current.RemoveLigneTicket(ligneTicket);
         }
 
         public void Cell_OnAppearing(object sender, EventArgs e)

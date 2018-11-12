@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace YamaCaisse.Entity
 {
     public class LigneTicket
@@ -81,6 +83,12 @@ namespace YamaCaisse.Entity
         }
 
         public Tva T_TVA {
+            get;
+            set;
+        }
+
+        public List<LigneTicket> LIST_COMPLEMENT
+        {
             get;
             set;
         }

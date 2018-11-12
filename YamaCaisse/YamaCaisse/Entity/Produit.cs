@@ -38,6 +38,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public bool? PDT_COMPLEMENT
+        {
+            get;
+            set;
+        }
+
         public Reclame T_RECLAME
         {
             get;

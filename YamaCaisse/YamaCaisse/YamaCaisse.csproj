@@ -131,6 +131,11 @@
     <Compile Include="Services\JourServices\IJourDataServices.cs" />
     <Compile Include="Entity\Jour.cs" />
     <Compile Include="ViewModel\AdditionViewModel.cs" />
+    <Compile Include="Services\BonProductionServices\BonProductionDataServices.cs" />
+    <Compile Include="Services\BonProductionServices\IBonProductionDataServices.cs" />
+    <Compile Include="View\ProduitListView.xaml.cs">
+      <DependentUpon>ProduitListView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -204,6 +209,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ProduitListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -254,6 +263,8 @@
     <Folder Include="Services\TypePaiementServices\" />
     <Folder Include="Services\ProductionServices\" />
     <Folder Include="Services\JourServices\" />
+    <Folder Include="Services\BonProductionServices\" />
+    <Folder Include="Services\PrinterServices\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />

@@ -49,9 +49,9 @@ namespace YamaCaisse.Pages
 
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
 
-            this.ticketControl.ticketViewModel = new TicketViewModel();
-
-            this.ticketControl.ticketViewModel.SetTicket(ticket);
+            TicketViewModel.Current.Clear();
+                           
+            TicketViewModel.Current.SetTicket(ticket);
 
         }
 
@@ -67,6 +67,11 @@ namespace YamaCaisse.Pages
                 this.curentEntry.Text = this.curentEntry.Text.Remove(this.curentEntry.Text.Length - 1);
         }
 
+
+        async void Click_Print(object sender, EventArgs e)
+        {
+            
+        }
 
         public void Cell_OnAppearing(object sender, EventArgs e)
         {

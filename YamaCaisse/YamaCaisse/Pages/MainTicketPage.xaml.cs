@@ -24,21 +24,7 @@ namespace YamaCaisse.Pages
             loadData();
         }
 
-        private TicketViewModel _ticketViewModel;
-
-        private string CurrentPage;
-        public TicketViewModel ticketViewModel
-        {
-            get { return _ticketViewModel; }
-            set
-            {
-                _ticketViewModel = value;
-                OnPropertyChanged(nameof(ticketViewModel));
-            }
-        }
-
-
-        public async void loadData()
+          public async void loadData()
         {
             var reslistTicket = await _ticketDataServices.GetTickets();
 
@@ -73,7 +59,7 @@ namespace YamaCaisse.Pages
         void Ligne_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
             var list = sender as ListView;
-           App.CurrentTicket = ((Ticket)list.SelectedItem);
+            TicketViewModel.Current.LoadDataTicketbyid(((Ticket)list.SelectedItem).TIK_ID);
         }
     }
 }

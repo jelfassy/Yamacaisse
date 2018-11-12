@@ -1,23 +1,50 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using Xamarin.Forms;
 using YamaCaisse.Entity;
+using YamaCaisse.Services.TableServices;
+using YamaCaisse.Services.TicketServices;
 
 namespace YamaCaisse.ViewModel
 {
     public class TicketViewModel : INotifyPropertyChanged
     {
+        private ITableDataServices _tableDataServices;
+        private ITicketDataServices _ticketDataServices;
+
+        public TicketViewModel()
+        {
+            _tableDataServices = DependencyService.Get<ITableDataServices>();
+            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+        }
+
+        private static TicketViewModel _current;
+        public static TicketViewModel Current => _current ?? (_current = new TicketViewModel());
+
+
+        public void Clear()
+        {
+            TicketViewModel.Current.IdTable = null;
+            TicketViewModel.Current.MontantTotal = 0;
+            TicketViewModel.Current.NbCouvert = null;
+            TicketViewModel.Current.TKT_ID = 0;
+            TicketViewModel.Current.TableName = null;
+            TicketViewModel.Current.ListLigneTicket.Clear();
+            TicketViewModel.Current.SelectedligneTicket = null;
+        }
 
         public void SetTicket(Ticket ticket)
         {
-            if(ticket != null)
+            if (ticket != null)
             {
                 this.TKT_ID = ticket.TIK_ID;
                 this.IdTable = (int)ticket.FK_TAB_ID;
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
                 this.TableName = ticket.T_TABLE.TAB_NOM;
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
-                this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET); 
+                this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
             }
         }
 
@@ -28,8 +55,8 @@ namespace YamaCaisse.ViewModel
             set;
         }
         private int? idTable;
-        public int? IdTable 
-        { 
+        public int? IdTable
+        {
             get { return idTable; }
             set
             {
@@ -64,8 +91,6 @@ namespace YamaCaisse.ViewModel
         public bool switchcolor;
 
 
-        public ObservableCollection<LigneTicket> ListViewligneTicket { get; set; }
-
         private decimal _montantTotal;
 
         public decimal MontantTotal
@@ -78,12 +103,19 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+        public LigneTicket SelectedligneTicket
+        {
+            get;
+            set;
+        }
+
         private ObservableCollection<LigneTicket> _listLigneTicket;
 
-        public ObservableCollection<LigneTicket>ListLigneTicket
+        public ObservableCollection<LigneTicket> ListLigneTicket
         {
             get { return _listLigneTicket; }
-            set{
+            set
+            {
                 _listLigneTicket = value;
                 OnPropertyChanged(nameof(ListLigneTicket));
             }
@@ -104,7 +136,7 @@ namespace YamaCaisse.ViewModel
             };
             if (ListLigneTicket == null)
                 ListLigneTicket = new ObservableCollection<LigneTicket>();
-            foreach(var ligne in ListLigneTicket)
+            foreach (var ligne in ListLigneTicket)
             {
                 ligne.T_PRODUIT = null;
                 ligne.T_RECLAME = null;
@@ -114,16 +146,64 @@ namespace YamaCaisse.ViewModel
             return ticket;
         }
 
+        public async void LoadDataTicketbyTable(int idTable)
+        {
+            this.IdTable = idTable;
+            var ticket = await _ticketDataServices.GetCurrentTableTicket((int)this.IdTable);
+            if (ticket.TIK_ID != 0)
+            {
+                this.SetTicket(ticket);
+            }
+            else
+            {
+                var listTable = await _tableDataServices.GetTableList();
+                this.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
+                this.IdTable = idTable;
+            }
+        }
+
+
+        public async void LoadDataTicketbyid(int ticketId)
+        {
+            var ticket = await _ticketDataServices.GetTicket(ticketId);
+            if (ticket != null)
+                this.SetTicket(ticket);
+        }
+
+
+        public void RemoveLigneTicket(LigneTicket ligneTicket)
+        {
+            TicketViewModel.Current.ListLigneTicket.Remove(ligneTicket);
+            TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal - (decimal)ligneTicket.LTK_SOMME;
+            TicketViewModel.Current.SelectedligneTicket = null;
+        }
+
+
+
+        public void ChangeLigneReclame(Reclame reclame)
+        {
+            var newlist = new ObservableCollection<LigneTicket>();
+            foreach (var item in TicketViewModel.Current.ListLigneTicket)
+            {
+                if (item == Current.SelectedligneTicket)
+                {
+                    item.FK_REC_ID = reclame.REC_ID;
+                    item.T_RECLAME = reclame;
+                }
+                newlist.Add(item);
+            }
+            TicketViewModel.Current.ListLigneTicket = newlist;
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(string name)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if(handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
+            if (PropertyChanged == null)
+                return;
+
+            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
 

@@ -4,6 +4,7 @@ using System.Linq;
 
 using Xamarin.Forms;
 using YamaCaisse.Entity;
+using YamaCaisse.Services.BonProductionServices;
 using YamaCaisse.Services.ProductionServices;
 
 namespace YamaCaisse.Pages
@@ -12,7 +13,7 @@ namespace YamaCaisse.Pages
     {
 
         private IProductionDataServices _productionDataServices;
-
+        private IBonProductionDataServices _bonProductionDataServices;
         private List<Production> listProduction;
 
         private int SelectedProduction;
@@ -21,6 +22,7 @@ namespace YamaCaisse.Pages
         {
             InitializeComponent();
             _productionDataServices = DependencyService.Get<IProductionDataServices>();
+            _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
             LoadPicker();
         }
 
@@ -32,7 +34,14 @@ namespace YamaCaisse.Pages
 
         void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
         {
+            var mode = PickerProduction.SelectedItem;
 
+            var curent = listProduction.SingleOrDefault(cw => cw.PROD_NAME == mode.ToString());
+
+            var listBon =  _bonProductionDataServices.GetBonProduction(curent.PROD_ID, true);
+
+
+            var rs = listBon;
         }
 
 

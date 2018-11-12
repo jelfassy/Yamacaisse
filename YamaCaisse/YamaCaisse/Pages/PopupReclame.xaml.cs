@@ -5,6 +5,8 @@ using Xamarin.Forms;
 using System.Linq;
 using YamaCaisse.Services.ReclameServices;
 using Rg.Plugins.Popup.Services;
+using YamaCaisse.Entity;
+using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
@@ -14,12 +16,12 @@ namespace YamaCaisse.Pages
 
         private List<Entity.Reclame> ListReclames;
 
-        private Caisse _parent;
-        public PopupReclame(Caisse parent)
+
+        public PopupReclame()
         {
             InitializeComponent();
             ListReclames = new List<Entity.Reclame>();
-            _parent = parent;
+
             LoadListReclame();
         }
 
@@ -51,7 +53,7 @@ namespace YamaCaisse.Pages
         {
             Button btn = (Button)sender;
             int idRec = int.Parse(btn.ClassId);
-           _parent.ChangeLigneReclame(ListReclames.SingleOrDefault(c=>c.REC_ID == idRec));
+            TicketViewModel.Current.ChangeLigneReclame(ListReclames.SingleOrDefault(c => c.REC_ID == idRec));
             await PopupNavigation.PopAsync(false);
         }
     }

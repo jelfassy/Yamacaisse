@@ -10,6 +10,8 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using YamaCaisse.Pages;
+using YamaCaisse.ViewModel;
+using Newtonsoft.Json.Linq;
 
 namespace YamaCaisse
 {
@@ -24,16 +26,19 @@ namespace YamaCaisse
         public static Ticket CurrentTicket { get; set; }
 
         public static int JourId { get; set; }
-        public static Caisse Caisse { get; set; }
-        public static MainTablePage MainTablePage{ get; set; }
-        public static MainTicketPage MainTicketPage { get; set; }
 
+        public static TicketViewModel TicketViewModel { get; set; }
+
+
+        public static JObject JsonPage { get; set; }
+        public static Dictionary<int, JObject> JsonPageProduit { get; set; }
 
         public App()
         {
             InitializeComponent();
-
+            TicketViewModel = new TicketViewModel();
             MainPage = new YamaCaisse.MainPage();
+            JsonPageProduit = new Dictionary<int, JObject>();
         }
 
         protected override void OnStart()

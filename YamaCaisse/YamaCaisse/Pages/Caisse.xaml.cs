@@ -51,14 +51,11 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
-            if (this.ticketControl.ticketViewModel == null)
-                ticketControl.ticketViewModel = new TicketViewModel();
-            // InitNumberList();
+
             InitPageButton(firstLoad);
             this.Number = 1;
 
             firstLoad = false;
-
 
         }
 
@@ -66,8 +63,7 @@ namespace YamaCaisse.Pages
         public void ResetTicket()
         {
 
-            ticketControl.ticketViewModel = new TicketViewModel();
-            ticketControl.ListligneTicket.ItemsSource = new ObservableCollection<LigneTicket>();
+            TicketViewModel.Current.Clear();
         }
 
         #region Number
@@ -111,7 +107,7 @@ namespace YamaCaisse.Pages
                 {
                     this.idPage = page.PAG_ID;
                     isfirst = false;
-                    InitProduitButton();
+                    this.PageProduitControl.InitProduitButton(this.idPage);
                 }
 
                 var button = new Button
@@ -142,92 +138,11 @@ namespace YamaCaisse.Pages
 
             this.idPage = int.Parse(btn.ClassId);
             btn.BackgroundColor = Color.Moccasin;
-            InitProduitButton();
+            this.PageProduitControl.InitProduitButton(this.idPage);
         }
 
 
-        #region EcranProduit
-        private async void InitProduitButton()
-        {
-            gridProduit.Children.Clear();
-            _pageProduitDataServices = DependencyService.Get<IPageProduitDataServices>();
-            listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.idPage);
-            lstProduitPage = new List<Produit>();
-            foreach (var item in listPageProduit)
-            {
-                var button = new Button
-                {
-                    BorderColor = Color.Gray,
-                    // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    TextColor = (Color)Application.Current.Resources["TextIconeColor"]
-                };
-                if (!string.IsNullOrEmpty(item.PGPD_COLOR))
-                    button.BackgroundColor = Color.FromHex(item.PGPD_COLOR);
-                //if (item.T_PRODUIT.PDT_Designation.Contains(" "))
-                //    button.Text = item.T_PRODUIT.PDT_Designation.Replace(" ", "\r\n");
-                //else
-                button.Text = item.T_PRODUIT.PDT_Designation;
-                button.WidthRequest = 70;
-                button.HeightRequest = 70;
-                button.HorizontalOptions = LayoutOptions.Fill;
-                button.VerticalOptions = LayoutOptions.Fill;
-                button.FontSize = 20;
-                button.ClassId = item.PGPD_ID.ToString();
-                button.Clicked += Click_Produit;
-                gridProduit.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);
-                if (lstProduitPage.SingleOrDefault(c => c.PDT_ID == item.T_PRODUIT.PDT_ID) == null)
-                    lstProduitPage.Add(item.T_PRODUIT);
-            }
-        }
-
-        private async void Click_Produit(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            int idpgpd = int.Parse(btn.ClassId);
-
-            var pageprod = listPageProduit.SingleOrDefault(c => c.PGPD_ID == idpgpd);
-            int idpoduit = pageprod.FK_PDT_ID;
-            var prod = pageprod.T_PRODUIT;
-            this.Number = 1;
-            ticketControl.ticketViewModel.MontantTotal = ticketControl.ticketViewModel.MontantTotal + (decimal)prod.PDT_Prix * this.Number;
-
-            var ligneTicket = new LigneTicket()
-            {
-                FK_EMP_ID = App.UserId,
-                FK_PDT_ID = idpoduit,
-                T_PRODUIT = prod,
-                LTK_SOMME = (decimal)prod.PDT_Prix * this.Number,
-                LTK_QTE = this.Number,
-                LTK_DATE = DateTime.Now,
-                FK_TVA_ID = (int)prod.FK_TVA_ID,
-                LTK_MNT_TVA = ((decimal)prod.PDT_Prix * this.Number) / 1 + prod.T_TVA.TVA_Tx,
-                FK_REC_ID = (int)prod.FK_REC_ID,
-                T_RECLAME = prod.T_RECLAME,
-                T_TVA = prod.T_TVA,
-            };
-
-            if (ticketControl.ticketViewModel.ListLigneTicket != null)
-            {
-                ticketControl.ticketViewModel.ListLigneTicket.Add(ligneTicket);
-            }
-            else
-            {
-                ticketControl.ticketViewModel.ListLigneTicket = new ObservableCollection<LigneTicket>();
-                ticketControl.ticketViewModel.ListLigneTicket.Add(ligneTicket);
-            }
-
-            ticketControl.ListligneTicket.ItemsSource = ticketControl.ticketViewModel.ListLigneTicket;
-
-            if (pageprod.PAG_ADD_ID != null)
-            {
-                await PopupNavigation.Instance.PushAsync(new PopupCaisse());
-            }
-
-        }
-
-
-        #endregion
-
+    
         #region Ticket
 
 
@@ -257,19 +172,18 @@ namespace YamaCaisse.Pages
             var newlist = new ObservableCollection<LigneTicket>();
             decimal? prixU;
 
-            foreach (var item in ticketControl.ticketViewModel.ListLigneTicket)
+            foreach (var item in TicketViewModel.Current .ListLigneTicket)
             {
                 if (item == this.ligneTicketSelected)
                 {
                     prixU = item.LTK_SOMME / item.LTK_QTE;
                     item.LTK_QTE = item.LTK_QTE + 1;
                     item.LTK_SOMME = prixU * item.LTK_QTE;
-                    ticketControl.ticketViewModel.MontantTotal = ((decimal)ticketControl.ticketViewModel.MontantTotal) + (decimal)prixU;
+                    TicketViewModel.Current.MontantTotal = ((decimal)TicketViewModel.Current .MontantTotal) + (decimal)prixU;
                 }
                 newlist.Add(item);
             }
-            ticketControl.ticketViewModel.ListLigneTicket = newlist;
-            ticketControl.ListligneTicket.ItemsSource = ticketControl.ticketViewModel.ListLigneTicket;
+            TicketViewModel.Current.ListLigneTicket = newlist;
         }
 
 
@@ -279,47 +193,20 @@ namespace YamaCaisse.Pages
 
         }
 
-        /// <summary>
-        /// Clicks the change reclame. affiche la popup de modification de reclame pour une ligne
-        /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
-        async void Click_ChangeReclame(object sender, EventArgs e)
-        {
-            if (this.ligneTicketSelected != null)
-                await PopupNavigation.Instance.PushAsync(new PopupReclame(this));
-        }
-
-        public void ChangeLigneReclame(Reclame reclame)
-        {
-            var newlist = new ObservableCollection<LigneTicket>();
-            foreach (var item in ticketControl.ticketViewModel.ListLigneTicket)
-            {
-                if (item == this.ligneTicketSelected)
-                {
-                    item.FK_REC_ID = reclame.REC_ID;
-                    item.T_RECLAME = reclame;
-                }
-                newlist.Add(item);
-            }
-            ticketControl.ticketViewModel.ListLigneTicket = newlist;
-            ticketControl.ListligneTicket.ItemsSource = ticketControl.ticketViewModel.ListLigneTicket;
-        }
-
         async void Click_Envoi(object sender, System.EventArgs e)
         {
             try
             {
-                if (ticketControl.ticketViewModel.ListLigneTicket.Count > 0)
+                if (TicketViewModel.Current.ListLigneTicket.Count > 0)
                 {
-                    if (ticketControl.ticketViewModel.TKT_ID == 0)
+                    if (TicketViewModel.Current .TKT_ID == 0)
                     {
-                        var rs = await _ticketDataServices.PostTicket(ticketControl.ticketViewModel.GetTicket());
+                        var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current .GetTicket());
                         //   await PopupNavigation.Instance.PushAsync(new PopupAddition(this));
                     }
                     else
                     {
-                        var rs = await _ticketDataServices.PutTicket(ticketControl.ticketViewModel.TKT_ID, ticketControl.ticketViewModel.GetTicket());
+                        var rs = await _ticketDataServices.PutTicket(TicketViewModel.Current .TKT_ID, TicketViewModel.Current .GetTicket());
                     }
 
 

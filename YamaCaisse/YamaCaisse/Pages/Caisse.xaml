@@ -22,25 +22,8 @@
                     </StackLayout>
                     <StackLayout x:Name="StkPageList" Grid.Column="0" Orientation="Vertical">
                     </StackLayout>
-                    <StackLayout x:Name="StkproduitList" Grid.Column="1" BackgroundColor="{StaticResource LightPrimaryColor}">
-                        <Grid x:Name="gridProduit">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                                <RowDefinition Height="1*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="1*" />
-                            </Grid.ColumnDefinitions>
-                        </Grid>
-                    </StackLayout>
+                    <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="1"/>
+
                     <localView:TicketView x:Name="ticketControl" Grid.Column="2" />
      
                 </Grid>

@@ -24,11 +24,7 @@ namespace YamaCaisse.View
         public PopupTable CurrentPopupTable { get; set; }
 
        
-        public TicketView _ticketView
-        {
-            get;
-            set;
-        }
+      
         private string CurrentPage;
     
         public int TableId
@@ -43,7 +39,6 @@ namespace YamaCaisse.View
             CurrentPage = "Grille";
             InitGridTable(CurrentPage);
             InitListSalle();
-            _ticketView = null;
         }
 
 
@@ -223,8 +218,8 @@ namespace YamaCaisse.View
         public void Click_SelectTable(object sender, EventArgs e)
         {
             var button = (Button)sender;
-          
-            _ticketView.LoadDataTicket(int.Parse(button.ClassId));
+            TicketViewModel.Current.Clear();
+            TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
 
             if (CurrentPopupTable != null)
                 CurrentPopupTable.ClosePopup();
@@ -233,7 +228,7 @@ namespace YamaCaisse.View
 
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupCouvert(this));
+            await PopupNavigation.Instance.PushAsync(new PopupCouvert());
             // NbCouvert = App.CurrentTicket.TIK_NB_COUVERT;
         }
 

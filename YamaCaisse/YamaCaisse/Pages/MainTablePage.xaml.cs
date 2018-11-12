@@ -20,21 +20,13 @@ namespace YamaCaisse.Pages
     {
         private ITicketDataServices _TicketDataServices;
 
-        public TicketView TicketControl
-        {
-            get { return this.ticketView; }
-            set { this.ticketView = value; }
-        }
-
         public MainTablePage()
         {
             try
             {
                 this.BindingContext = this;
                 InitializeComponent();
-                ticketView.ticketViewModel = new TicketViewModel();
-                tableListControl._ticketView = this.ticketView;
-
+                 
                 _TicketDataServices = DependencyService.Get<ITicketDataServices>();
 
             }
@@ -54,12 +46,12 @@ namespace YamaCaisse.Pages
         public void Click_SelectTable(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            ticketView.LoadDataTicket(int.Parse(button.ClassId));
+            TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
         }
 
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupCouvert(this));
+            await PopupNavigation.Instance.PushAsync(new PopupCouvert());
             // NbCouvert = App.CurrentTicket.TIK_NB_COUVERT;
         }
 
@@ -76,7 +68,6 @@ namespace YamaCaisse.Pages
         async void Click_Take(object sender, System.EventArgs e)
         {
             var caisse = new YamaCaisse.Pages.Caisse();
-            caisse.TicketControl = this.TicketControl;
             await Navigation.PushModalAsync(caisse);
         }
 
@@ -88,7 +79,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Addition(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupAddition(this.TicketControl.ticketViewModel.TKT_ID));
+            await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current .TKT_ID));
 
         }
 

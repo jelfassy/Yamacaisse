@@ -22,7 +22,7 @@ namespace YamaCaisse.Pages
         public PopupTable(TicketView tv)
         {
             InitializeComponent();
-            this.tableListControl._ticketView = tv;
+           // this.tableListControl._ticketView = tv;
             this.tableListControl.CurrentPopupTable = this;
            // task = taskCompletion;
         }
