@@ -33,6 +33,7 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.TableName = null;
             TicketViewModel.Current.ListLigneTicket.Clear();
             TicketViewModel.Current.SelectedligneTicket = null;
+            TicketViewModel.Current.NbElemCommand = null;
         }
 
         public void SetTicket(Ticket ticket)
@@ -40,9 +41,9 @@ namespace YamaCaisse.ViewModel
             if (ticket != null)
             {
                 this.TKT_ID = ticket.TIK_ID;
-                this.IdTable = (int)ticket.FK_TAB_ID;
+                this.IdTable = ticket.FK_TAB_ID;
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
-                this.TableName = ticket.T_TABLE.TAB_NOM;
+                this.TableName = ticket?.T_TABLE?.TAB_NOM;
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
             }
@@ -103,6 +104,21 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+
+        private int? _nbElemCommand;
+        /// <summary>
+        /// Nombre d'element commander 
+        /// </summary>
+        /// <value>The nb element command.</value>
+        public int? NbElemCommand
+        {
+            get { return _nbElemCommand; }
+            set{
+                _nbElemCommand = value;
+                OnPropertyChanged(nameof(NbElemCommand));
+            }
+        }
+
         public LigneTicket SelectedligneTicket
         {
             get;
@@ -132,7 +148,8 @@ namespace YamaCaisse.ViewModel
                 TIK_MNT_TOTAL = this.MontantTotal,
                 TIK_NB_COUVERT = this.NbCouvert,
                 T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
-                FK_JOU_ID = App.JourId
+                FK_JOU_ID = App.JourId,
+                FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID
             };
             if (ListLigneTicket == null)
                 ListLigneTicket = new ObservableCollection<LigneTicket>();

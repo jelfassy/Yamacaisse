@@ -109,6 +109,9 @@ namespace YamaCaisse.View
                 T_RECLAME = prod.T_RECLAME,
                 T_TVA = prod.T_TVA,
             };
+            if (TicketViewModel.Current.NbElemCommand == null)
+                TicketViewModel.Current.NbElemCommand = 0;
+            TicketViewModel.Current.NbElemCommand =TicketViewModel.Current.NbElemCommand + 1;
             if (TicketViewModel.Current.SelectedligneTicket != null)
             {
                 if(TicketViewModel.Current .SelectedligneTicket.LIST_COMPLEMENT == null)

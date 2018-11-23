@@ -29,6 +29,7 @@ namespace YamaCaisse
 
         public static TicketViewModel TicketViewModel { get; set; }
 
+        public static ConfigViewModel ConfigViewModel { get; set; }
 
         public static JObject JsonPage { get; set; }
         public static Dictionary<int, JObject> JsonPageProduit { get; set; }
@@ -37,6 +38,7 @@ namespace YamaCaisse
         {
             InitializeComponent();
             TicketViewModel = new TicketViewModel();
+            ConfigViewModel = ConfigViewModel.Current;
             MainPage = new YamaCaisse.MainPage();
             JsonPageProduit = new Dictionary<int, JObject>();
         }

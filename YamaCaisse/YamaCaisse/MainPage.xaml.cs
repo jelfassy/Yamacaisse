@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Pages;
 using YamaCaisse.Services.JourServices;
 using YamaCaisse.Services.UserServices;
 
@@ -56,11 +59,17 @@ namespace YamaCaisse
                     if (jour == null)
                         throw new Exception("Probleme de jour");
                     App.JourId = jour.JOU_ID;
+                    await PopupNavigation.Instance.PushAsync(new PopupPinter());
                     await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
                 }
             }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {"Caisse","Click_Connexion"}
+                };
+                Crashes.TrackError(ex, property);
                 await DisplayAlert("Serveur Indisponible", "Serveur indisponible", "OK");
             }
            

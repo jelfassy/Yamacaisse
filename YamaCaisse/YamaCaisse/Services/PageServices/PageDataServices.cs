@@ -23,10 +23,9 @@ namespace YamaCaisse.Services.PageServices
           try
             {
                 List<oPage> res = new List<oPage>();
-                if(App.JsonPage == null)
-                    App.JsonPage = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+                    var jsonPage = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
                 await Task.Run(() => {
-                    JToken token = App.JsonPage.SelectToken("data");
+                    JToken token = jsonPage.SelectToken("data");
                     res = token.Select((JToken s) => s.ToObject<oPage>()).ToList();
                 });
 

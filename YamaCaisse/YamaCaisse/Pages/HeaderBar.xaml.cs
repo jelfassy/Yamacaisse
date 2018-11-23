@@ -1,8 +1,9 @@
 ﻿
 using System;
 using System.Collections.Generic;
-
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Entity;
 
 namespace YamaCaisse.Pages
 {
@@ -11,8 +12,27 @@ namespace YamaCaisse.Pages
         public HeaderBar()
         {
             InitializeComponent();
+            LoadData();
         }
 
+        public Printer Printer
+        {
+            get;
+            set;
+        }
+
+        public void LoadData()
+        {
+            this.lbConnectUser.Text = App.User.EMP_NOM;
+            this.lbConnectUser.BackgroundColor =Color.FromHex(App.User.EMP_COULEUR);
+            this.lbConnectUser.TextColor = Color.White;
+        }
+
+        public Employe Employe
+        {
+            get;
+            set;
+        }
 
         async void Click_Reservation(object sender, EventArgs e)
         {
@@ -33,7 +53,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Paiement(object sender, EventArgs e)
         {
-                await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTicketPage());
+            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTicketPage());
         }
 
         async void Click_Ticket(object sender, EventArgs e)
@@ -43,7 +63,13 @@ namespace YamaCaisse.Pages
 
         async void Click_Deconnexion(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
+            await Navigation.PushModalAsync(new YamaCaisse.MainPage());
+        }
+
+        async void Printer_Clicked(object sender, System.EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupPinter());
+           
         }
     }
 }

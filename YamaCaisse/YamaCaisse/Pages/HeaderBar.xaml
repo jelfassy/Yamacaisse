@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Grid xmlns="http://xamarin.com/schemas/2014/forms" 
-      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YamaCaisse.Pages.HeaderBar"
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+      xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse"
+      x:Class="YamaCaisse.Pages.HeaderBar"
       Margin="10,20,10,0">
     <Grid.RowDefinitions>
         <RowDefinition Height="80" />
@@ -24,7 +26,14 @@
     <Button Grid.Column="4" Grid.Row="0"  Text="Ticket" Clicked="Click_Ticket" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />     
   
     <Button Grid.Column="5" Grid.Row="0"  Text="Rapport" Clicked="Click_Paiement" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-    <Button Grid.Column="6" Grid.Row="0"  Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-    <Label Grid.Column= "7" Grid.Row="0" Text= "c'est moi"/>
-    <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+    <Button Grid.Column="6" Grid.Row="0"  Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="Red" TextColor="{StaticResource TextIconeColor}" />
+    <Grid  Grid.Column= "7" Grid.Row="0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+        <RowDefinition Height="1*"/>
+        <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lbConnectUser" Grid.Row="0"/>
+        <Button x:Name="btPrinter" Grid.Row="1" BackgroundColor="Purple" TextColor="White" Clicked="Printer_Clicked" Text="{Binding Printer.PRT_NAME, Source={x:Static local:ConfigViewModel.Current}}"/>
+    </Grid>
+     <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
 </Grid>

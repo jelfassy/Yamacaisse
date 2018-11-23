@@ -101,7 +101,7 @@ namespace YamaCaisse.Pages
         {
             bool isfirst = true;
             var listPages = await _pageDataServices.GetPageList();
-            foreach (var page in listPages.Where(cw => cw.PAG_POPUP != true).OrderBy(c => c.PAG_ORDER))
+            foreach (var page in listPages.Where(cw => cw.PAG_POPUP != true && cw.PAG_MENU != true).OrderBy(c => c.PAG_ORDER))
             {
                 if (firstLoad && isfirst)
                 {
@@ -142,7 +142,7 @@ namespace YamaCaisse.Pages
         }
 
 
-    
+
         #region Ticket
 
 
@@ -172,14 +172,14 @@ namespace YamaCaisse.Pages
             var newlist = new ObservableCollection<LigneTicket>();
             decimal? prixU;
 
-            foreach (var item in TicketViewModel.Current .ListLigneTicket)
+            foreach (var item in TicketViewModel.Current.ListLigneTicket)
             {
                 if (item == this.ligneTicketSelected)
                 {
                     prixU = item.LTK_SOMME / item.LTK_QTE;
                     item.LTK_QTE = item.LTK_QTE + 1;
                     item.LTK_SOMME = prixU * item.LTK_QTE;
-                    TicketViewModel.Current.MontantTotal = ((decimal)TicketViewModel.Current .MontantTotal) + (decimal)prixU;
+                    TicketViewModel.Current.MontantTotal = ((decimal)TicketViewModel.Current.MontantTotal) + (decimal)prixU;
                 }
                 newlist.Add(item);
             }
@@ -199,14 +199,14 @@ namespace YamaCaisse.Pages
             {
                 if (TicketViewModel.Current.ListLigneTicket.Count > 0)
                 {
-                    if (TicketViewModel.Current .TKT_ID == 0)
+                    if (TicketViewModel.Current.TKT_ID == 0)
                     {
-                        var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current .GetTicket());
+                        var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current.GetTicket());
                         //   await PopupNavigation.Instance.PushAsync(new PopupAddition(this));
                     }
                     else
                     {
-                        var rs = await _ticketDataServices.PutTicket(TicketViewModel.Current .TKT_ID, TicketViewModel.Current .GetTicket());
+                        var rs = await _ticketDataServices.PutTicket(TicketViewModel.Current.TKT_ID, TicketViewModel.Current.GetTicket());
                     }
 
 
@@ -222,6 +222,11 @@ namespace YamaCaisse.Pages
                 Crashes.TrackError(ex, property);
             }
 
+        }
+
+        void Click_Clear(object sender, System.EventArgs e)
+        {
+            TicketViewModel.Current.ListLigneTicket.Clear();
         }
     }
 }
