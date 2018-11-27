@@ -32,13 +32,13 @@ namespace YamaCaisse.Pages
             PickerProduction.ItemsSource = listProduction.Select(cw => cw.PROD_NAME).ToList();
         }
 
-        void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
+        async void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             var mode = PickerProduction.SelectedItem;
 
             var curent = listProduction.SingleOrDefault(cw => cw.PROD_NAME == mode.ToString());
 
-            var listBon =  _bonProductionDataServices.GetBonProduction(curent.PROD_ID, true);
+            var listBon = await _bonProductionDataServices.GetBonProduction(curent.PROD_ID, true);
 
 
             var rs = listBon;

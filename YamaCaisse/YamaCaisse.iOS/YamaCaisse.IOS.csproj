@@ -39,8 +39,8 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignProvision>VS: YamaCaisse.IOS.app Development</CodesignProvision>
-    <CodesignKey>iPhone Developer: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution: jonathan el fassy (ZFL7473G29)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -90,7 +90,6 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>False</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignProvision>VS: YamaCaisse.IOS.app Development</CodesignProvision>
     <CodesignKey>iPhone Developer: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
     <CodesignEntitlements>Info.plist</CodesignEntitlements>
   </PropertyGroup>
@@ -100,13 +99,13 @@
     <OutputPath>bin\Release</OutputPath>
     <DefineConstants></DefineConstants>
     <WarningLevel>4</WarningLevel>
-    <CodesignKey>iPhone Developer: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
+    <CodesignKey>iPhone Distribution: jonathan el fassy (ZFL7473G29)</CodesignKey>
     <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
     <MtouchVerbosity></MtouchVerbosity>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <CodesignEntitlements>Info.plist</CodesignEntitlements>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignProvision>VS: YamaCaisse.IOS.app Development</CodesignProvision>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />

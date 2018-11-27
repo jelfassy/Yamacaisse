@@ -147,6 +147,9 @@
       <DependentUpon>PopupPinter.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\ConfigViewModel.cs" />
+    <Compile Include="View\BonProductionView.xaml.cs">
+      <DependentUpon>BonProductionView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -229,6 +232,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\PopupPinter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BonProductionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

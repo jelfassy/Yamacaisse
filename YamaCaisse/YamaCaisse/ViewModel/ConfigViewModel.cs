@@ -14,6 +14,12 @@ namespace YamaCaisse.ViewModel
         public static ConfigViewModel Current => _current ?? (_current = new ConfigViewModel());
 
 
+        public String Profil
+        {
+            get;
+            set;
+        }
+
 
         /// <summary>
         /// Default printer
