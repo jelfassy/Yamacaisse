@@ -39,7 +39,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignProvision>YamaCaisse</CodesignProvision>
+    <CodesignProvision>YamaCaisse Appstore</CodesignProvision>
     <CodesignKey>iPhone Distribution: jonathan el fassy (ZFL7473G29)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
