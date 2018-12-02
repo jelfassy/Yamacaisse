@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YamaCaisse.Pages.ProductionPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
+             x:Class="YamaCaisse.Pages.ProductionPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
     </ContentPage.Padding>
     <ContentPage.Content>
-        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
-            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="60" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Picker x:Name="PickerProduction" Grid.Row="0" Title="Choisir le lieux de production" SelectedIndexChanged="Handle_SelectedIndexChanged" />
-                </Grid>
-            </StackLayout>
-        </AbsoluteLayout>
+        <StackLayout x:Name="StkList" BackgroundColor="White" VerticalOptions="StartAndExpand" Orientation="Horizontal">
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

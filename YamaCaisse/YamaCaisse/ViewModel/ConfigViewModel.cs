@@ -38,6 +38,18 @@ namespace YamaCaisse.ViewModel
         }
 
 
+        private Production _production;
+        public Production Production
+        {
+            get{
+                return _production;
+            }
+            set{
+                _production = value;
+                OnPropertyChanged(nameof(Production));
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)

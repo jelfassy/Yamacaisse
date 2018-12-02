@@ -48,7 +48,7 @@ namespace YamaCaisse
             // Handle when your app starts
             AppCenter.Start("ios=a34b4b00-7405-4672-8ac5-4fc0c4857e87;" +
                   "uwp={Your UWP App secret here};" +
-                  "android={Your Android App secret here}",
+                            "android=a5becd59-b6a2-4a12-aaf4-1f264204ed9f",
                             typeof(Analytics), typeof(Crashes));
         }
 

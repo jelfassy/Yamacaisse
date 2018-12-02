@@ -6,44 +6,52 @@ using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.BonProductionServices;
 using YamaCaisse.Services.ProductionServices;
+using YamaCaisse.View;
+using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
     public partial class ProductionPage : ContentPage
     {
 
-        private IProductionDataServices _productionDataServices;
+      
         private IBonProductionDataServices _bonProductionDataServices;
         private List<Production> listProduction;
 
-        private int SelectedProduction;
 
         public ProductionPage()
         {
             InitializeComponent();
-            _productionDataServices = DependencyService.Get<IProductionDataServices>();
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
-            LoadPicker();
+            LoadData();
         }
 
-        public async void LoadPicker()
+
+        public async void LoadData()
         {
-            listProduction = await _productionDataServices.GetProductionList();
-            PickerProduction.ItemsSource = listProduction.Select(cw => cw.PROD_NAME).ToList();
+            try
+            {
+                var listBon = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+                var rs = listBon;
+
+                foreach (var item in listBon.Take(1))
+                {
+
+                    var bprod = new BonProductionView();
+                    bprod.BonProduction = item;
+                    StkList.Children.Add(new BonProductionView()
+                    {
+                        BonProduction = item
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+           
+           
         }
-
-        async void Handle_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-            var mode = PickerProduction.SelectedItem;
-
-            var curent = listProduction.SingleOrDefault(cw => cw.PROD_NAME == mode.ToString());
-
-            var listBon = await _bonProductionDataServices.GetBonProduction(curent.PROD_ID, true);
-
-
-            var rs = listBon;
-        }
-
 
     }
 }

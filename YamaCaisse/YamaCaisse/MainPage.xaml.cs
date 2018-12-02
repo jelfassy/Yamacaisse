@@ -80,8 +80,8 @@ namespace YamaCaisse
         {
             App.UrlGateway = "http://" + this.AdresseServeur.Text + "/";
             Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.ProductionPage());
-   
+            await PopupNavigation.Instance.PushAsync(new PopupGetProduction());
+           
         }
 
     }

@@ -45,7 +45,14 @@ namespace YamaCaisse.ViewModel
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
                 this.TableName = ticket?.T_TABLE?.TAB_NOM;
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
+              //  ticket.T_LIGNE_TICKET
+                      
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
+                //foreach(var ligne in ticket.T_LIGNE_TICKET)
+                //{
+                //    ligne.LIST_COMPLEMENT
+                //    this.ListLigneTicket.Add(ligne);
+                //}
             }
         }
 
@@ -113,16 +120,22 @@ namespace YamaCaisse.ViewModel
         public int? NbElemCommand
         {
             get { return _nbElemCommand; }
-            set{
+            set
+            {
                 _nbElemCommand = value;
                 OnPropertyChanged(nameof(NbElemCommand));
             }
         }
 
+        private LigneTicket _selectedligneTicket;
         public LigneTicket SelectedligneTicket
         {
-            get;
-            set;
+            get { return _selectedligneTicket; }
+            set
+            {
+                _selectedligneTicket = value;
+                OnPropertyChanged(nameof(SelectedligneTicket));
+            }
         }
 
         private ObservableCollection<LigneTicket> _listLigneTicket;
@@ -159,6 +172,7 @@ namespace YamaCaisse.ViewModel
                 ligne.T_RECLAME = null;
                 ligne.T_TVA = null;
                 ticket.T_LIGNE_TICKET.Add(ligne);
+
             }
             return ticket;
         }
@@ -210,6 +224,12 @@ namespace YamaCaisse.ViewModel
                 newlist.Add(item);
             }
             TicketViewModel.Current.ListLigneTicket = newlist;
+        }
+
+
+        public void RefreshPropertyChange()
+        {
+            OnPropertyChanged(nameof(ListLigneTicket));
         }
 
 

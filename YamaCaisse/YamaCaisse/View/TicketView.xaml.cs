@@ -93,6 +93,26 @@ namespace YamaCaisse.View
             TicketViewModel.Current.RemoveLigneTicket(ligneTicket);
         }
 
+        /// <summary>
+        /// Cells the underlist on appearing.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
+        public void CellUnder_OnAppearing(object sender,EventArgs e)
+        {
+            var viewCell = (ViewCell)sender;
+
+            if (!switchcolor)
+            {
+                viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
+
+            }
+            else
+            {
+                viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
+            }
+        }
+
         public void Cell_OnAppearing(object sender, EventArgs e)
         {
             var viewCell = (ViewCell)sender;
@@ -116,8 +136,10 @@ namespace YamaCaisse.View
                         viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
                     }
                 }
+
             }
         }
+
 
     }
 }

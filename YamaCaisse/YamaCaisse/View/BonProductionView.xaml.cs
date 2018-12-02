@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
+using YamaCaisse.Entity;
 
 namespace YamaCaisse.View
 {
@@ -9,6 +10,12 @@ namespace YamaCaisse.View
         public BonProductionView()
         {
             InitializeComponent();
+        }
+
+        public BonProduction BonProduction
+        {
+            get;
+            set;
         }
 
         void Envoye_Clicked(object sender, System.EventArgs e)

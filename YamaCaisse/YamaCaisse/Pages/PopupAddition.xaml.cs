@@ -13,10 +13,6 @@ namespace YamaCaisse.Pages
 {
     public partial class PopupAddition : PopupPage
     {
-
-        private Entry curentEntry;
-        private bool switchcolor;
-
         private ITypePaiementDataServices _typePaiementServices;
         private ITableDataServices _tableDataServices;
         private ITicketDataServices _ticketDataServices;
@@ -41,12 +37,7 @@ namespace YamaCaisse.Pages
 
         public async void LoadData()
         {
-       
-            var listPaiement = await _typePaiementServices.GetTypePaiements();
-
-            ListViewPaiement.ItemsSource = listPaiement;
-
-
+            LoadBouttonTypePaiement();
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
 
             TicketViewModel.Current.Clear();
@@ -55,16 +46,57 @@ namespace YamaCaisse.Pages
 
         }
 
+
+        public async void LoadBouttonTypePaiement()
+        {
+            var listPaiement = await _typePaiementServices.GetTypePaiements();
+            int nbligne = listPaiement.Count / 2;
+            int ligne = 0;
+            int column = 0;
+            foreach (var item in listPaiement)
+            {
+                var button = new Button
+                {
+                    BorderColor = Color.Gray,
+                    BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                    TextColor = (Color)Application.Current.Resources["TextIconeColor"]
+                };
+                button.Text = item.TPA_LIBELLE;
+                button.WidthRequest = 150;
+                button.HeightRequest = 120;
+                button.HorizontalOptions = LayoutOptions.Fill;
+                button.VerticalOptions = LayoutOptions.Fill;
+                button.FontSize = 20;
+                button.ClassId = item.TPA_ID.ToString();
+                button.Clicked += Click_SelectTypePaiement;
+                gdTypePaiment.Children.Add(button,column,ligne);
+
+                column = column + 1;
+                if (column > 1)
+                {
+                    column = 0; 
+                    ligne = ligne + 1;
+                }
+   
+            }
+        }
+
         void Click_Number(object sender, EventArgs e)
         {
-            curentEntry.Text = string.Concat(this.curentEntry.Text, (sender as Button).Text);
+            eMontantPayer.Text = string.Concat(this.eMontantPayer.Text, (sender as Button).Text);
             //  this.EntryNbCouvert.Text =
+        }
+
+
+        void Click_SelectTypePaiement(object sender, EventArgs e)
+        {
+           
         }
 
         void Click_Back(object sender, EventArgs e)
         {
-            if (this.curentEntry.Text != "")
-                this.curentEntry.Text = this.curentEntry.Text.Remove(this.curentEntry.Text.Length - 1);
+            if (this.eMontantPayer.Text != "")
+                this.eMontantPayer.Text = this.eMontantPayer.Text.Remove(this.eMontantPayer.Text.Length - 1);
         }
 
 
@@ -73,65 +105,6 @@ namespace YamaCaisse.Pages
             
         }
 
-        public void Cell_OnAppearing(object sender, EventArgs e)
-        {
-            var viewCell = (ViewCell)sender;
-
-            if (viewCell.View != null)
-            {
-                if (viewCell.View.BackgroundColor != null
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorDark"])
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorLight"]))
-                {
-                    if (switchcolor)
-                    {
-                        switchcolor = false;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
-                    }
-                    else
-                    {
-                        switchcolor = true;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
-                    }
-                }
-            }
-        }
-
-        public void CellPaiement_OnAppearing(object sender, EventArgs e)
-        {
-            var viewCell = (ViewCell)sender;
-
-            if (viewCell.View != null)
-            {
-                if (viewCell.View.BackgroundColor != null
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorDark"])
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorLight"]))
-                {
-                    if (switchcolor)
-                    {
-                        switchcolor = false;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
-                    }
-                    else
-                    {
-                        switchcolor = true;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
-                    }
-                }
-            }
-        }
-
-        void Paiement_focused(object sender, Xamarin.Forms.FocusEventArgs e)
-        {
-            curentEntry = (Entry)sender;
-        }
-
-        void Paiement_Unfocused(object sender, Xamarin.Forms.FocusEventArgs e)
-        {
-            curentEntry = (Entry)sender;
-            //if (curentEntry.Text != "")
-                //lbResteAPayer.Text = (ticketControl.ticketViewModel.MontantTotal - decimal.Parse(curentEntry.Text)).ToString();
-        }
 
 
     }

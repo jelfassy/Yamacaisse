@@ -137,9 +137,6 @@
     <Compile Include="View\ProduitListView.xaml.cs">
       <DependentUpon>ProduitListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\UnderLigneTicketView.xaml.cs">
-      <DependentUpon>UnderLigneTicketView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Services\PrinterServices\IPrinterDataServices.cs" />
     <Compile Include="Services\PrinterServices\PrinterDataServices.cs" />
     <Compile Include="Entity\Printer.cs" />
@@ -149,6 +146,9 @@
     <Compile Include="ViewModel\ConfigViewModel.cs" />
     <Compile Include="View\BonProductionView.xaml.cs">
       <DependentUpon>BonProductionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PopupGetProduction.xaml.cs">
+      <DependentUpon>PopupGetProduction.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -227,15 +227,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UnderLigneTicketView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pages\PopupPinter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="View\BonProductionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PopupGetProduction.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

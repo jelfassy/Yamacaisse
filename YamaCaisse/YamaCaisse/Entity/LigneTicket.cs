@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace YamaCaisse.Entity
 {
-    public class LigneTicket
+    public class LigneTicket : INotifyPropertyChanged
     {
-       
+
         public int LTK_ID
         {
             get;
@@ -77,20 +79,77 @@ namespace YamaCaisse.Entity
             set;
         }
 
-        public Reclame T_RECLAME{
-            get;
-            set;
-        }
-
-        public Tva T_TVA {
-            get;
-            set;
-        }
-
-        public List<LigneTicket> LIST_COMPLEMENT
+        public Reclame T_RECLAME
         {
             get;
             set;
         }
+
+        public Tva T_TVA
+        {
+            get;
+            set;
+        }
+
+
+        private ObservableCollection<LigneTicket> _LIST_COMPLEMENT;
+
+        public ObservableCollection<LigneTicket> LIST_COMPLEMENT
+        {
+            get { return _LIST_COMPLEMENT; }
+            set
+            {
+                _LIST_COMPLEMENT = value;
+                OnPropertyChanged(nameof(LIST_COMPLEMENT));
+                OnPropertyChanged(nameof(VisibleComplement));
+                OnPropertyChanged(nameof(SizeUnderList));
+            }
+        }
+
+        public bool? VisibleComplement
+        {
+            get
+            {
+                if (this._LIST_COMPLEMENT == null)
+                    return false;
+                else if (this._LIST_COMPLEMENT.Count == 0)
+                    return false;
+                else
+                    return true;
+            }
+        }
+
+        public int SizeUnderList
+        {
+            get
+            {
+                if (this._LIST_COMPLEMENT == null)
+                    return 0;
+                else if (this._LIST_COMPLEMENT.Count == 0)
+                    return 0;
+                else
+                    return 25 * this._LIST_COMPLEMENT.Count;
+            }
+        }
+    //private List<LigneTicket> _LIST_COMPLEMENT;
+    //public List<LigneTicket> LIST_COMPLEMENT
+    //{
+    //    get { return _LIST_COMPLEMENT;}
+    //    set{
+    //        _LIST_COMPLEMENT = value;
+    //        OnPropertyChanged(nameof(LIST_COMPLEMENT));
+    //    }
+    //}
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected virtual void OnPropertyChanged(string propertyName)
+    {
+        if (PropertyChanged == null)
+            return;
+
+        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
     }
+
+}
 }
