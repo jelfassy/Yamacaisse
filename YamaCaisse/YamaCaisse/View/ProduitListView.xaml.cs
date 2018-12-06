@@ -59,21 +59,26 @@ namespace YamaCaisse.View
                 {
                     var button = new Button
                     {
-                        BorderColor = Color.Gray,
+                        BorderWidth= 2.5,
                         // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                        TextColor = (Color)Application.Current.Resources["TextIconeColor"]
+                       
                     };
                     if (!string.IsNullOrEmpty(item.PGPD_COLOR))
-                        button.BackgroundColor = Color.FromHex(item.PGPD_COLOR);
+                    {
+                        button.BorderColor = Color.FromHex(item.PGPD_COLOR);
+                        button.TextColor = Color.FromHex(item.PGPD_COLOR);
+                    }
+                    button.BackgroundColor = Color.White;
+
                     //if (item.T_PRODUIT.PDT_Designation.Contains(" "))
                     //    button.Text = item.T_PRODUIT.PDT_Designation.Replace(" ", "\r\n");
                     //else
                     button.Text = item.T_PRODUIT.PDT_Designation;
                     button.WidthRequest = 70;
                     button.HeightRequest = 70;
-                    button.HorizontalOptions = LayoutOptions.Fill;
-                    button.VerticalOptions = LayoutOptions.Fill;
-                    button.FontSize = 20;
+                    button.HorizontalOptions = LayoutOptions.FillAndExpand;
+                    button.VerticalOptions = LayoutOptions.FillAndExpand;
+                    button.FontSize = 14;
                     button.ClassId = item.PGPD_ID.ToString();
                     button.Clicked += Click_Produit;
                     gridProduit.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);

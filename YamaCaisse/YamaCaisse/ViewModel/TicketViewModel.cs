@@ -210,6 +210,27 @@ namespace YamaCaisse.ViewModel
         }
 
 
+        public void ComprTicket()
+        {
+            var newlist = new ObservableCollection<LigneTicket>();
+            foreach(var item in TicketViewModel.Current.ListLigneTicket)
+            {
+                var inlist = newlist.SingleOrDefault(c => c.T_PRODUIT == item.T_PRODUIT && c.T_RECLAME == item.T_RECLAME);
+                if(inlist != null)
+                {
+                        inlist.LTK_QTE += item.LTK_QTE;
+                        inlist.LTK_MNT_TVA += item.LTK_MNT_TVA;
+                        inlist.LTK_SOMME += item.LTK_SOMME; 
+                }
+                else
+                {
+                    newlist.Add(item);
+                }
+        
+            }
+            TicketViewModel.Current.ListLigneTicket = newlist;
+        }
+
 
         public void ChangeLigneReclame(Reclame reclame)
         {

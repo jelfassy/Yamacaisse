@@ -12,5 +12,6 @@ namespace YamaCaisse.Entity
         public string EMP_NOM { get; set; }
         public string EMP_CODE { get; set; }
         public string EMP_COULEUR { get; set; }
+        public Profil T_USER_PROFIL { get; set; }
     }
 }

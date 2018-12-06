@@ -28,18 +28,18 @@ namespace YamaCaisse.Pages
             this.lbConnectUser.BackgroundColor =Color.FromHex(App.User.EMP_COULEUR);
             this.lbConnectUser.TextColor = Color.White;
 
-            //btTicket.IsVisible = false;
-            //btRapport.IsVisible = false;
+            btTicket.IsVisible = false;
+            btRapport.IsVisible = false;
 
-            //if (ConfigViewModel.Current.Profil == "Manager")
-            //{
-            //    btTicket.IsVisible = true;
-            //}
-            //if(ConfigViewModel.Current.Profil == "Admin")
-            //{
-            //    btTicket.IsVisible = true;
-            //    btRapport.IsVisible = true;
-            //}
+            if (ConfigViewModel.Current.Profil == "Manager")
+            {
+                btTicket.IsVisible = true;
+            }
+            if(ConfigViewModel.Current.Profil == "Admin")
+            {
+                btTicket.IsVisible = true;
+                btRapport.IsVisible = true;
+            }
         }
 
         public Employe Employe
@@ -61,6 +61,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Commande(object sender, EventArgs e)
         {
+            TicketViewModel.Current.Clear();
             if (this.GetType() != typeof(Caisse))
                 await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
         }
@@ -73,6 +74,11 @@ namespace YamaCaisse.Pages
         async void Click_Ticket(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTicketPage());
+        }
+
+        async void Click_Rapport (object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
         }
 
         async void Click_Deconnexion(object sender, EventArgs e)

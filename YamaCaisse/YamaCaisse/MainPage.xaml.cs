@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using YamaCaisse.Pages;
 using YamaCaisse.Services.JourServices;
 using YamaCaisse.Services.UserServices;
+using YamaCaisse.ViewModel;
 
 namespace YamaCaisse
 {
@@ -59,6 +60,7 @@ namespace YamaCaisse
                     if (jour == null)
                         throw new Exception("Probleme de jour");
                     App.JourId = jour.JOU_ID;
+                    ConfigViewModel.Current.Profil = user.T_USER_PROFIL.USP_NAME;
                     await PopupNavigation.Instance.PushAsync(new PopupPinter());
                     await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
                 }

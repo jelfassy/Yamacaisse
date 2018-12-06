@@ -199,8 +199,10 @@ namespace YamaCaisse.Pages
             {
                 if (TicketViewModel.Current.ListLigneTicket.Count > 0)
                 {
+                    TicketViewModel.Current.ComprTicket();
                     if (TicketViewModel.Current.TKT_ID == 0)
                     {
+
                         var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current.GetTicket());
                         //   await PopupNavigation.Instance.PushAsync(new PopupAddition(this));
                     }

@@ -150,6 +150,10 @@
     <Compile Include="Pages\PopupGetProduction.xaml.cs">
       <DependentUpon>PopupGetProduction.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RapportPage.xaml.cs">
+      <DependentUpon>RapportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\Profil.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -236,6 +240,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\PopupGetProduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\RapportPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

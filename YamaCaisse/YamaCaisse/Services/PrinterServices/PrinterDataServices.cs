@@ -23,10 +23,9 @@ namespace YamaCaisse.Services.PrinterServices
             try
             {
                 List<Printer> res = new List<Printer>();
-                if (App.JsonPage == null)
-                    App.JsonPage = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+                    var aa = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
                 await Task.Run(() => {
-                    JToken token = App.JsonPage.SelectToken("data");
+                    JToken token = aa.SelectToken("data");
                     res = token.Select((JToken s) => s.ToObject<Printer>()).ToList();
                 });
 

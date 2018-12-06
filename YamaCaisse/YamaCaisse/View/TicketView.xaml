@@ -19,7 +19,7 @@
                 </Grid.RowDefinitions>
                 <Button Grid.Row="0" Grid.Column="0" Clicked="Click_SelectTable" Text="{Binding TableName, Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
                 <BoxView Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
-                <Label Grid.Row="0" Grid.Column="2" Text="{Binding MontantTotal,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
+                <Label Grid.Row="0" Grid.Column="2" Text="{Binding MontantTotal,StringFormat='{0:0.00}',Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
                 <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
                 <Button Clicked="Click_NbCouvert" Grid.Row="0" Grid.Column="4" Text="{Binding ticketViewModel.NbCouvert,Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
                 <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
@@ -51,7 +51,7 @@
                                     <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding T_RECLAME.REC_NAME}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="2" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                    <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding T_PRODUIT.PDT_Prix}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                    <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding T_PRODUIT.PDT_Prix,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <ListView x:Name="ListUnder" Margin="15,0,0,0"  IsVisible="{Binding VisibleComplement}" 
                                                VerticalOptions="Start" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" 
                                               Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LIST_COMPLEMENT}">
@@ -68,7 +68,7 @@
                                                                 <ColumnDefinition Width="1*" />
                                                             </Grid.ColumnDefinitions>
                                                             <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_PRODUIT.PDT_Prix}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_PRODUIT.PDT_Prix ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                                         </Grid>
                                                     </ViewCell.View>
                                                 </ViewCell>
