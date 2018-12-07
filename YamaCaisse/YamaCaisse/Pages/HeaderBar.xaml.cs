@@ -68,12 +68,16 @@ namespace YamaCaisse.Pages
 
         async void Click_Paiement(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTicketPage());
+            var tmv = new YamaCaisse.Pages.MainTicketPage();
+            tmv.IsEcranTicket = false;
+            await Navigation.PushModalAsync(tmv);
         }
 
         async void Click_Ticket(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTicketPage());
+            var tmv = new YamaCaisse.Pages.MainTicketPage();
+            tmv.IsEcranTicket = true;
+            await Navigation.PushModalAsync(tmv);
         }
 
         async void Click_Rapport (object sender, EventArgs e)

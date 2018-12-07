@@ -8,6 +8,9 @@ using YamaCaisse.Services.TableServices;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.Services.TypePaiementServices;
 using YamaCaisse.ViewModel;
+using System.Collections.ObjectModel;
+using YamaCaisse.Entity;
+using Rg.Plugins.Popup.Services;
 
 namespace YamaCaisse.Pages
 {
@@ -23,6 +26,18 @@ namespace YamaCaisse.Pages
             set;
         }
 
+        private ObservableCollection<LigneTicket> _listSelectedLigneTicket;
+
+        public ObservableCollection<LigneTicket> ListSelectedLigneTicket
+        {
+            get { return _listSelectedLigneTicket; }
+            set
+            {
+                _listSelectedLigneTicket = value;
+                OnPropertyChanged(nameof(ListSelectedLigneTicket));
+            }
+        }
+
         public PopupAddition(int ticketId)
         {
             this.BindingContext = this;
@@ -31,6 +46,7 @@ namespace YamaCaisse.Pages
             _typePaiementServices = DependencyService.Get<ITypePaiementDataServices>();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            this.ListSelectedLigneTicket = new ObservableCollection<LigneTicket>();
             TikId = ticketId;
             LoadData();
         }
@@ -81,6 +97,23 @@ namespace YamaCaisse.Pages
             }
         }
 
+
+        void TappedItemcurrentList(object sender, ItemTappedEventArgs e)
+        {
+            if(e.Item != null)
+            {
+                var ligne = e.Item as LigneTicket;
+                ListSelectedLigneTicket.Add(ligne);
+                TicketViewModel.Current.ListLigneTicket.Remove(ligne);
+            }
+
+        }
+
+        void TappedItemListtopay(object sender, EventArgs e)
+        {
+
+        }
+
         void Click_Number(object sender, EventArgs e)
         {
             eMontantPayer.Text = string.Concat(this.eMontantPayer.Text, (sender as Button).Text);
@@ -105,6 +138,20 @@ namespace YamaCaisse.Pages
             
         }
 
+        async void Click_Fiche(object sender, EventArgs e)
+        {
+
+        }
+
+        async void Click_Encaisser(object sender, EventArgs e)
+        {
+
+        }
+
+        async void Click_closed(object sender, EventArgs e)
+        {
+            await PopupNavigation.PopAsync(false);
+        }
 
 
     }

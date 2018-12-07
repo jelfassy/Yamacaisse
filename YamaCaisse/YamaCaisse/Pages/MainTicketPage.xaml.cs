@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.TicketServices;
@@ -12,7 +13,15 @@ namespace YamaCaisse.Pages
     {
         private ITicketDataServices _ticketDataServices;
 
-       
+       /// <summary>
+       /// si true alors ecran ticket donc payer sinon ecran paiement . ticket a payer
+       /// </summary>
+       /// <value><c>true</c> if is ecran ticket; otherwise, <c>false</c>.</value>
+        public bool IsEcranTicket
+        {
+            get;
+            set;
+        }
 
         private bool switchcolor;
 
@@ -28,6 +37,11 @@ namespace YamaCaisse.Pages
         {
             var reslistTicket = await _ticketDataServices.GetTickets();
 
+            if (IsEcranTicket == true)
+                reslistTicket = reslistTicket.Where(c => c.TIK_PAYER == true).ToList();
+            else
+                reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true).ToList();
+            
             var ListTicket = new ObservableCollection<Ticket>(reslistTicket);
             listViewTicket.ItemsSource = ListTicket;
         }

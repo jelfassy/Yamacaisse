@@ -59,6 +59,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public List<PaiementTicket> T_PAIEMENT_TICKET
+        {
+            get;
+            set;
+        }
+
         public Employe T_EMPLOYE{
             get;
             set;

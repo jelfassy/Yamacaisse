@@ -34,6 +34,8 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.ListLigneTicket.Clear();
             TicketViewModel.Current.SelectedligneTicket = null;
             TicketViewModel.Current.NbElemCommand = null;
+            TicketViewModel.Current.ResteAPayer = null;
+            TicketViewModel.Current.ListPaiementTicket.Clear();
         }
 
         public void SetTicket(Ticket ticket)
@@ -45,14 +47,8 @@ namespace YamaCaisse.ViewModel
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
                 this.TableName = ticket?.T_TABLE?.TAB_NOM;
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
-              //  ticket.T_LIGNE_TICKET
-                      
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
-                //foreach(var ligne in ticket.T_LIGNE_TICKET)
-                //{
-                //    ligne.LIST_COMPLEMENT
-                //    this.ListLigneTicket.Add(ligne);
-                //}
+                this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
             }
         }
 
@@ -127,6 +123,17 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+
+        private decimal? _resteAPayer;
+        public decimal? ResteAPayer
+        {
+            get { return _resteAPayer; }
+            set {
+                _resteAPayer = value;
+                OnPropertyChanged(nameof(ResteAPayer));
+            }
+        }
+
         private LigneTicket _selectedligneTicket;
         public LigneTicket SelectedligneTicket
         {
@@ -149,6 +156,17 @@ namespace YamaCaisse.ViewModel
                 OnPropertyChanged(nameof(ListLigneTicket));
             }
         }
+
+        private ObservableCollection<PaiementTicket> _listPaiementTicket;
+        public ObservableCollection<PaiementTicket> ListPaiementTicket{
+            get { return _listPaiementTicket; }
+            set
+            {
+                _listPaiementTicket = value;
+                OnPropertyChanged(nameof(ListPaiementTicket));
+            }
+        }
+
 
         public Ticket GetTicket()
         {
@@ -174,6 +192,9 @@ namespace YamaCaisse.ViewModel
                 ticket.T_LIGNE_TICKET.Add(ligne);
 
             }
+            if (ListPaiementTicket == null)
+                ListPaiementTicket = new ObservableCollection<PaiementTicket>();
+
             return ticket;
         }
 
