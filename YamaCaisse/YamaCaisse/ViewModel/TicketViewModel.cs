@@ -24,6 +24,12 @@ namespace YamaCaisse.ViewModel
         public static TicketViewModel Current => _current ?? (_current = new TicketViewModel());
 
 
+        public void RefreshListProperty()
+        {
+            OnPropertyChanged(nameof(MontantTotal));
+
+        }
+
         public void Clear()
         {
             TicketViewModel.Current.IdTable = null;

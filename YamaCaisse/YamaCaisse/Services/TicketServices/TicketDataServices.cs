@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using YamaCaisse.Entity;
@@ -35,10 +36,20 @@ namespace YamaCaisse.Services.TicketServices
             }
             catch (InvalidOperationException Iex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetTickets"}
+                };
+                Crashes.TrackError(Iex, property);
                 throw Iex;
             }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetTickets"}
+                };
+                Crashes.TrackError(ex, property);
                 throw ex;
             }
         }
@@ -61,10 +72,20 @@ namespace YamaCaisse.Services.TicketServices
             }
             catch (InvalidOperationException Iex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetTicket" + id}
+                };
+                Crashes.TrackError(Iex, property);
                 throw Iex;
             }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetTicket" + id }
+                };
+                Crashes.TrackError(ex, property);
                 throw ex;
             }
         }
@@ -92,10 +113,20 @@ namespace YamaCaisse.Services.TicketServices
             }
             catch (InvalidOperationException Iex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetCurrentTableTicket" + id}
+                };
+                Crashes.TrackError(Iex, property);
                 throw Iex;
             }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetCurrentTableTicket" + id }
+                };
+                Crashes.TrackError(ex, property);
                 throw ex;
             }
         }
@@ -116,8 +147,22 @@ namespace YamaCaisse.Services.TicketServices
                 return true;
 
             }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_PostTicket"}
+                };
+                Crashes.TrackError(Iex, property);
+                return false;
+            }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PostTicket" }
+                };
+                Crashes.TrackError(ex, property);
                 return false;
             }
         }
@@ -134,8 +179,22 @@ namespace YamaCaisse.Services.TicketServices
 
                 return true;
             }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_PutTicket" + id}
+                };
+                Crashes.TrackError(Iex, property);
+                return false;
+            }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PutTicket" + id }
+                };
+                Crashes.TrackError(ex, property);
                 return false;
             }
 

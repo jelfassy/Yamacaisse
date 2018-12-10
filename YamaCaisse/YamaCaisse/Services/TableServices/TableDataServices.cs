@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,10 +31,20 @@ namespace YamaCaisse.Services.TableServices
             }
             catch (InvalidOperationException Iex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetTableList"}
+                };
+                Crashes.TrackError(Iex, property);
                 throw Iex;
             }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetTableList"}
+                };
+                Crashes.TrackError(ex, property);
                 throw ex;
             }
         }
@@ -53,8 +64,22 @@ namespace YamaCaisse.Services.TableServices
                 });
                 return res;
             }
-            catch(Exception ex)
+            catch (InvalidOperationException Iex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetTable" + id}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetTable" + id}
+                };
+                Crashes.TrackError(ex, property);
                 throw ex;
             }
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json.Linq;
 using YamaCaisse.Entity;
 using YamaCaisse.Tools;
@@ -33,10 +34,20 @@ namespace YamaCaisse.Services.PageServices
             }
             catch (InvalidOperationException Iex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetPageList"}
+                };
+                Crashes.TrackError(Iex, property);
                 throw Iex;
             }
             catch (Exception ex)
             {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetPageList"}
+                };
+                Crashes.TrackError(ex, property);
                 throw ex;
             }
         }

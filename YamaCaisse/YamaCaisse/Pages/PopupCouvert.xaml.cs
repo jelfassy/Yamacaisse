@@ -11,11 +11,7 @@ namespace YamaCaisse.Pages
 {
     public partial class PopupCouvert : PopupPage
     {
-        private Caisse _parentCaisse;
-        private MainTablePage _parentTable;
-        private ITicketDataServices _TicketDataServices;
-        private TicketView _parentticketView;
-
+      
         public PopupCouvert()
         {
             InitializeComponent();
