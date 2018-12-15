@@ -63,12 +63,17 @@ namespace YamaCaisse.View
                         // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                        
                     };
+                    //if (!string.IsNullOrEmpty(item.PGPD_COLOR))
+                    //{
+                    //    button.BorderColor = Color.FromHex(item.PGPD_COLOR);
+                    //    button.TextColor = Color.FromHex(item.PGPD_COLOR);
+                    //}
                     if (!string.IsNullOrEmpty(item.PGPD_COLOR))
                     {
+                        button.TextColor = Color.WhiteSmoke;
+                        button.BackgroundColor = Color.FromHex(item.PGPD_COLOR);
                         button.BorderColor = Color.FromHex(item.PGPD_COLOR);
-                        button.TextColor = Color.FromHex(item.PGPD_COLOR);
                     }
-                    button.BackgroundColor = Color.White;
 
                     //if (item.T_PRODUIT.PDT_Designation.Contains(" "))
                     //    button.Text = item.T_PRODUIT.PDT_Designation.Replace(" ", "\r\n");
@@ -123,7 +128,7 @@ namespace YamaCaisse.View
                     TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c == TicketViewModel.Current .SelectedligneTicket).LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
                    
                 TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c == TicketViewModel.Current .SelectedligneTicket).LIST_COMPLEMENT.Add(ligneTicket);
-                //RefreshUnderLine();
+                TicketViewModel.Current.RefreshListProperty();
             }
             else
             {
@@ -138,8 +143,6 @@ namespace YamaCaisse.View
                     TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);
                 }
             }
-            //ticketControl.ListligneTicket.ItemsSource = TicketViewModel.Current .ListLigneTicket;
-
             if (pageprod.PAG_ADD_ID != null)
             {
                 TicketViewModel.Current.SelectedligneTicket = ligneTicket;

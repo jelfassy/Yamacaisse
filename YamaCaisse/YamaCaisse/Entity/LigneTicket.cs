@@ -91,6 +91,11 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public bool? LTK_PAYE
+        {
+            get;
+            set;
+        }
 
         private ObservableCollection<LigneTicket> _LIST_COMPLEMENT;
 

@@ -27,6 +27,7 @@ namespace YamaCaisse.ViewModel
         public void RefreshListProperty()
         {
             OnPropertyChanged(nameof(MontantTotal));
+            OnPropertyChanged(nameof(ListLigneTicket));
 
         }
 
@@ -274,11 +275,6 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.ListLigneTicket = newlist;
         }
 
-
-        public void RefreshPropertyChange()
-        {
-            OnPropertyChanged(nameof(ListLigneTicket));
-        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

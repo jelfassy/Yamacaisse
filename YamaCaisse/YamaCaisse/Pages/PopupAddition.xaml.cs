@@ -109,8 +109,14 @@ namespace YamaCaisse.Pages
 
         }
 
-        void TappedItemListtopay(object sender, EventArgs e)
+        void TappedItemListtopay(object sender, ItemTappedEventArgs e)
         {
+            if (e.Item != null)
+            {
+                var ligne = e.Item as LigneTicket;
+                ListSelectedLigneTicket.Add(ligne);
+                TicketViewModel.Current.ListLigneTicket.Add(ligne);
+            }
 
         }
 
