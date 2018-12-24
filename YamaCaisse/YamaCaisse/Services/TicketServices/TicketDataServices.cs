@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using YamaCaisse.Entity;
 using YamaCaisse.Tools;
+using YamaCaisse.ViewModel;
 
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.TicketServices.TicketDataServices))]
 namespace YamaCaisse.Services.TicketServices
@@ -84,6 +85,43 @@ namespace YamaCaisse.Services.TicketServices
                 var property = new Dictionary<string, string>
                 {
                     {this.GetType().Name,"GetTicket" + id }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
+
+        public async Task<bool>PrintTable(int idTable)
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Print/", idTable.ToString(),"/",ConfigViewModel.Current.Printer.PRT_ID));
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintTicket" + idTable}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintTicket" + idTable }
                 };
                 Crashes.TrackError(ex, property);
                 throw ex;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.TicketServices;
@@ -75,5 +76,20 @@ namespace YamaCaisse.Pages
             var list = sender as ListView;
             TicketViewModel.Current.LoadDataTicketbyid(((Ticket)list.SelectedItem).TIK_ID);
         }
+
+
+        async void Click_Payer(object sender, EventArgs e)
+        {
+            //await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
+            await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current.TKT_ID));
+        }
+
+
+
+        async void Click_Reprint(object sender, EventArgs e)
+        {
+          //  await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
+        }
+
     }
 }

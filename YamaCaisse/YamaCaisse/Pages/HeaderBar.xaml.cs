@@ -10,6 +10,8 @@ namespace YamaCaisse.Pages
 {
     public partial class HeaderBar : Grid
     {
+        
+
         public HeaderBar()
         {
             InitializeComponent();
@@ -55,19 +57,26 @@ namespace YamaCaisse.Pages
 
         async void Click_Table(object sender, EventArgs e)
         {
-            if (this.GetType() != typeof(MainTablePage))
+            if (App.CurrentPage != nameof(MainTablePage))
+            {
+                App.CurrentPage = nameof(MainTablePage);
                 await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
+            }
         }
 
         async void Click_Commande(object sender, EventArgs e)
         {
             TicketViewModel.Current.Clear();
-            if (this.GetType() != typeof(Caisse))
+            if (App.CurrentPage != nameof(Caisse))
+            {
+                App.CurrentPage = nameof(Caisse);
                 await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
+            }
         }
 
         async void Click_Paiement(object sender, EventArgs e)
         {
+            TicketViewModel.Current.Clear();
             var tmv = new YamaCaisse.Pages.MainTicketPage();
             tmv.IsEcranTicket = false;
             await Navigation.PushModalAsync(tmv);
@@ -75,6 +84,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Ticket(object sender, EventArgs e)
         {
+            TicketViewModel.Current.Clear();
             var tmv = new YamaCaisse.Pages.MainTicketPage();
             tmv.IsEcranTicket = true;
             await Navigation.PushModalAsync(tmv);

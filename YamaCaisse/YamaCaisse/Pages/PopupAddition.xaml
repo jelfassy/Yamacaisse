@@ -151,7 +151,7 @@
                     </ListView>
             </StackLayout>
             <StackLayout x:Name="StPaiement" Grid.Row="2" Grid.Column="4" Orientation="Vertical">
-                <Entry x:Name="eMontantPayer" Placeholder="Montant payer" Text="" HorizontalOptions="FillAndExpand" FontSize="16" />
+                <Label x:Name="eMontantPayer"  Text="{Binding MontantTotal,StringFormat='{0:0.00}'}" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
                 <Grid x:Name="gdTypePaiment">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
@@ -193,7 +193,7 @@
                         </Button>
                         <Button WidthRequest="100" HeightRequest="100" Text="0" Grid.Column="1" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button WidthRequest="100" HeightRequest="100" x:Name="virgule" Text="," FontSize="Large" Grid.Column="2" Grid.Row="3" Clicked="Click_Back" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button WidthRequest="100" HeightRequest="100" x:Name="virgule" Text="," FontSize="Large" Grid.Column="2" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
                     </Grid>
                 </StackLayout>
@@ -205,20 +205,17 @@
                 <RowDefinition Height="70" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
-                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-            <Button Grid.Column="0" Clicked="Click_closed" Grid.Row="1" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Button Grid.Column="3" Clicked="Click_closed" Grid.Row="1" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
             <Button Grid.Column="1" Clicked="Click_Print" Grid.Row="1" Text="Imprimer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
 
-            <Button Grid.Column="6" Clicked="Click_Fiche" Grid.Row="1" Text="Imprimer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-            <Button Grid.Column="7" Clicked="Click_Encaisser" Grid.Row="1" Text="Encaisser" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Button Grid.Column="2" Clicked="Click_Fiche" Grid.Row="1" Text="Imprimer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Button Grid.Column="0" Clicked="Click_Encaisser" Grid.Row="1" Text="Encaisser" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
         </Grid>
     </StackLayout>
 </pages:PopupPage>

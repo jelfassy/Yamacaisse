@@ -23,11 +23,11 @@
                                     <ColumnDefinition Width="2*" />
                                     <ColumnDefinition Width="2*" />
                                 </Grid.ColumnDefinitions>
-                                   <Label Grid.Row="0" Grid.Column="0" Text="Numéro" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="1" Text="Date" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="2" Text="Montant" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="3" Text="Staff" BackgroundColor="{Binding T_EMPLOYE.EMP_COLOR}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                        <Label Grid.Row="0" Grid.Column="4" Text="Table" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="0" Text="Numéro" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="Date" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="Montant" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="3" Text="Staff" BackgroundColor="{Binding T_EMPLOYE.EMP_COLOR}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="4" Text="Table" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>
@@ -56,6 +56,18 @@
                     </ListView>
                 </StackLayout>
                 <localView:TicketView x:Name="ticketControl" Grid.Column="1" />
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Payer" Clicked="Click_Payer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Grid.Column="1" Text="ReImprimer" Clicked="Click_Reprint" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
             </Grid>
         </StackLayout>
     </AbsoluteLayout>

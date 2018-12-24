@@ -12,5 +12,6 @@ namespace YamaCaisse.Services.TicketServices
         Task<Ticket> GetTicket(int id);
         Task<Ticket> GetCurrentTableTicket(int id);
         Task<bool> PutTicket(int id, Ticket ticket);
+        Task<bool> PrintTable(int idTable);
     }
 }

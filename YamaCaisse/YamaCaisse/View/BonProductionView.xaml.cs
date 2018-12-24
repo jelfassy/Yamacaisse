@@ -18,6 +18,12 @@ namespace YamaCaisse.View
             set;
         }
 
+        public void LoadData()
+        {
+            
+        }
+
+
         void Envoye_Clicked(object sender, System.EventArgs e)
         {
             var button = (Button)sender;
