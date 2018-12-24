@@ -81,7 +81,7 @@ namespace YamaCaisse.Entity
             set;
         }
 
-        public int FK_PRT_ID
+        public int? FK_PRT_ID
         {
             get;
             set;
