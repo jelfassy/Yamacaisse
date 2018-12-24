@@ -20,14 +20,12 @@ namespace YamaCaisse.Services.PageProduitServices
             try
             {
                 List<PageProduit> res = new List<PageProduit>();
-                if(!App.JsonPageProduit.ContainsKey(idPage)){
-                    App.JsonPageProduit.Add(idPage,await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetT_PAGE_PRODUITbyPage/", idPage)));
-                }
-                //JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+                //await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetT_PAGE_PRODUITbyPage/", idPage));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetT_PAGE_PRODUITbyPage/", idPage));
 
                 await Task.Run(() =>
                 {
-                    JToken token = App.JsonPageProduit[idPage].SelectToken("data");
+                    JToken token = o.SelectToken("data");
                     res = token.Select((JToken s) => s.ToObject<PageProduit>()).ToList();
                 });
                 return res;
