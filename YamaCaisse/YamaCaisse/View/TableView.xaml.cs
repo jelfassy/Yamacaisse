@@ -218,6 +218,7 @@ namespace YamaCaisse.View
         public void Click_SelectTable(object sender, EventArgs e)
         {
             var button = (Button)sender;
+            button.BorderColor = Color.BlueViolet;
             TicketViewModel.Current.Clear();
             TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
 
@@ -232,10 +233,10 @@ namespace YamaCaisse.View
             // NbCouvert = App.CurrentTicket.TIK_NB_COUVERT;
         }
 
-        async void ShowPageTable(string Id)
+        async void ShowPageTable(string id)
         {
             StkTableList.Children.Clear();
-            switch (Id)
+            switch (id)
             {
                 case "Grille":
                     await Task.Run(() =>
@@ -262,8 +263,8 @@ namespace YamaCaisse.View
                     {
                         Device.BeginInvokeOnMainThread(() =>
                         {
-                            CurrentPage = Id;
-                            InitMapSalle(int.Parse(Id));
+                            CurrentPage = id;
+                            InitMapSalle(int.Parse(id));
                         });
                     });
                     break;

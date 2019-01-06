@@ -144,3 +144,8 @@ C:/Users/jonat/source/repos/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/a
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Polly.dll.mdb
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Rg.Plugins.Popup.Droid.dll.mdb
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Xamarin.Forms.Platform.Android.dll.mdb
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/obj/Debug/YamaCaisse.Android.nuget.stamp
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/obj/Debug/MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/obj/Debug/YamaCaisse.Android.csprojAssemblyReference.cache
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/obj/Debug/libraryimports.cache.stamp
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/obj/Debug/res.flag

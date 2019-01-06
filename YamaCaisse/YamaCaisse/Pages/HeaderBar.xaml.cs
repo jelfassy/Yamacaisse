@@ -97,6 +97,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Deconnexion(object sender, EventArgs e)
         {
+            TicketViewModel.Current.Clear();
             await Navigation.PushModalAsync(new YamaCaisse.MainPage());
         }
 

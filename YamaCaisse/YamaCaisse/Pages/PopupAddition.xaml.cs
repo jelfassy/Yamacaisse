@@ -138,6 +138,8 @@ namespace YamaCaisse.Pages
                 else
                 {
                     ligne.LTK_QTE = ligne.LTK_QTE - 1;
+                    TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c=>c.LTK_ID == ligne.LTK_ID).LTK_QTE = ligne.LTK_QTE;
+                    this.E_listligneTicket.ItemsSource = TicketViewModel.Current.ListLigneTicket;
                     ligne.LTK_SOMME = ligne.T_PRODUIT.PDT_Prix * ligne.LTK_QTE;
                     ListSelectedLigneTicket.Add(ligne);
                     MontantTotal = MontantTotal + ligne.LTK_SOMME.Value;
