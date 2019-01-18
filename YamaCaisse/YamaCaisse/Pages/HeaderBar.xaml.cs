@@ -27,6 +27,7 @@ namespace YamaCaisse.Pages
         public void LoadData()
         {
             this.lbConnectUser.Text = App.User.EMP_NOM;
+            if(App.User.EMP_COULEUR != null)
             this.lbConnectUser.BackgroundColor =Color.FromHex(App.User.EMP_COULEUR);
             this.lbConnectUser.TextColor = Color.White;
 

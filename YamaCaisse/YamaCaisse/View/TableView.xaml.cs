@@ -95,7 +95,8 @@ namespace YamaCaisse.View
             var ls = await _SalleTableDataServices.SalleTablesbyIdSalle(id);
 
             RelativeLayout layout = new RelativeLayout();
-
+            layout.MinimumWidthRequest = 800;
+            layout.MinimumHeightRequest = 800;
             foreach (var rr in ls)
             {
                 var buton = CreateButtonImageTable(rr.T_TABLE);
@@ -175,8 +176,8 @@ namespace YamaCaisse.View
             var image = new Image()
             {
                 Source = tab.T_TABLE_ICONE.ICT_name + ".png",
-                HeightRequest = 100,
-                WidthRequest = 100,
+                HeightRequest = 250,
+                WidthRequest = 250,
                 Aspect = Aspect.AspectFill,
             };
 
@@ -184,8 +185,8 @@ namespace YamaCaisse.View
             {
                 Text = tab.TAB_NOM,
                 TextColor = Color.White,
-                WidthRequest = 100,
-                HeightRequest = 100,
+                WidthRequest = 250,
+                HeightRequest = 250,
                 BorderWidth = 1,
                 BorderColor = tab.TAB_UTILISE == true ? Color.Green : Color.Transparent,
                 // BackgroundColor = (Color)Application.Current.Resources["DividerColor"],
