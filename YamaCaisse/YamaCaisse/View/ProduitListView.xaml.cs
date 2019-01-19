@@ -47,7 +47,7 @@ namespace YamaCaisse.View
             listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.IdPage);
 
             _pageDataServices = DependencyService.Get<IPageDataServices>();
-            var Lpage =  _pageDataServices.GetPageList().Result;
+            var Lpage =  await _pageDataServices.GetPageList();
             var page = Lpage.SingleOrDefault(c => c.PAG_ID == this.IdPage);
             this.Autoclose = page.PAG_AUTOCLOSE;
             lstProduitPage = new List<Produit>();

@@ -34,7 +34,7 @@ namespace YamaCaisse.Entity
             set;
         }
 
-        public bool PAG_AUTOCLOSE
+        public bool? PAG_AUTOCLOSE
         {
             get;
             set;
