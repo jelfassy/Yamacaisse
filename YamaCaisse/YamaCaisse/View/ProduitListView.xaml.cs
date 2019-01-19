@@ -24,6 +24,7 @@ namespace YamaCaisse.View
             set;
         }
 
+        public bool? Autoclose { get; set; }
 
         public ProduitListView()
         {
@@ -32,9 +33,10 @@ namespace YamaCaisse.View
         }
 
 
-        public async void InitProduitButton(int idPage)
+        public async void InitProduitButton(int idPage,bool? autoclose)
         {
             this.IdPage = idPage;
+            this.Autoclose = autoclose;
             gridProduit.Children.Clear();
             gridProduit.RowDefinitions.Clear();
             gridProduit.ColumnDefinitions.Clear();
@@ -147,6 +149,11 @@ namespace YamaCaisse.View
             {
                 TicketViewModel.Current.SelectedligneTicket = ligneTicket;
                 await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
+            }
+
+            if(this.Autoclose == true)
+            {
+                await PopupNavigation.PopAsync(false);
             }
 
         }

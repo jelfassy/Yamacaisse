@@ -33,5 +33,11 @@ namespace YamaCaisse.Entity
             get;
             set;
         }
+
+        public bool PAG_AUTOCLOSE
+        {
+            get;
+            set;
+        }
     }
 }
