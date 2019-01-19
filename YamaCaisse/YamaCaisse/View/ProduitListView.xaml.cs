@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Pages;
 using YamaCaisse.Services.PageProduitServices;
+using YamaCaisse.Services.PageServices;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.View
@@ -15,6 +16,7 @@ namespace YamaCaisse.View
     {
 
         private IPageProduitDataServices _pageProduitDataServices;
+        private IPageDataServices _pageDataServices;
         private List<PageProduit> listPageProduit;
         private List<Produit> lstProduitPage;
 
@@ -33,16 +35,21 @@ namespace YamaCaisse.View
         }
 
 
-        public async void InitProduitButton(int idPage,bool? autoclose)
+        public async void InitProduitButton(int idPage)
         {
             this.IdPage = idPage;
-            this.Autoclose = autoclose;
+
             gridProduit.Children.Clear();
             gridProduit.RowDefinitions.Clear();
             gridProduit.ColumnDefinitions.Clear();
 
             _pageProduitDataServices = DependencyService.Get<IPageProduitDataServices>();
             listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.IdPage);
+
+            _pageDataServices = DependencyService.Get<IPageDataServices>();
+            var Lpage = await _pageDataServices.GetPageList();
+            var page = Lpage.SingleOrDefault(c => c.PAG_ID == this.IdPage);
+            this.Autoclose = page.PAG_AUTOCLOSE;
             lstProduitPage = new List<Produit>();
 
             //Ajout des lignes et columns 
