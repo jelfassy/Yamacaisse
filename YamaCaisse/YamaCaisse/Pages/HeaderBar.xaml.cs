@@ -58,21 +58,15 @@ namespace YamaCaisse.Pages
 
         async void Click_Table(object sender, EventArgs e)
         {
-            if (App.CurrentPage != nameof(MainTablePage))
-            {
                 App.CurrentPage = nameof(MainTablePage);
                 await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
-            }
         }
 
         async void Click_Commande(object sender, EventArgs e)
         {
             TicketViewModel.Current.Clear();
-            if (App.CurrentPage != nameof(Caisse))
-            {
                 App.CurrentPage = nameof(Caisse);
                 await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
-            }
         }
 
         async void Click_Paiement(object sender, EventArgs e)

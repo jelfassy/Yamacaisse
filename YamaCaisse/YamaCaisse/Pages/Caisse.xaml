@@ -16,7 +16,7 @@
                         <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="10*" />
                         <ColumnDefinition Width="6*" />
-                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="10" />
                     </Grid.ColumnDefinitions>
                     <StackLayout x:Name="StkNumberList" Grid.Column="0" Orientation="Vertical">
                     </StackLayout>

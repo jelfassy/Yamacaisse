@@ -123,17 +123,25 @@ namespace YamaCaisse.View
                 LTK_QTE = 1,
                 LTK_DATE = DateTime.Now,
                 FK_TVA_ID = prod.FK_TVA_ID.HasValue ?prod.FK_TVA_ID.Value : 0,
-                LTK_MNT_TVA = prod.PDT_Prix.HasValue ? (prod.PDT_Prix * Number) / 1 + prod.T_TVA.TVA_Tx : 0,
-                FK_REC_ID = prod.FK_REC_ID.HasValue ? prod.FK_REC_ID.Value : 1,
+                 FK_REC_ID = prod.FK_REC_ID.HasValue ? prod.FK_REC_ID.Value : 1,
                 T_RECLAME = prod.T_RECLAME,
                 T_TVA = prod.T_TVA,
             };
+
+            if(prod.PDT_Prix.HasValue && prod.T_TVA != null)
+            {
+                var HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
+
+                ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_Prix.Value - HT),2);
+            }
+       
+
             if (TicketViewModel.Current.NbElemCommand == null)
                 TicketViewModel.Current.NbElemCommand = 0;
             
             if (TicketViewModel.Current.SelectedligneTicket != null && prod.PDT_COMPLEMENT == true)
             {
-                if(TicketViewModel.Current .SelectedligneTicket.LIST_COMPLEMENT == null)
+                if(TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT == null)
                     TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c == TicketViewModel.Current .SelectedligneTicket).LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
                    
                 TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c == TicketViewModel.Current .SelectedligneTicket).LIST_COMPLEMENT.Add(ligneTicket);
@@ -152,6 +160,7 @@ namespace YamaCaisse.View
                     TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);
                 }
             }
+            TicketViewModel.Current.RefreshListProperty();
             if (pageprod.PAG_ADD_ID != null)
             {
                 TicketViewModel.Current.SelectedligneTicket = ligneTicket;
