@@ -218,10 +218,11 @@ namespace YamaCaisse.Pages
                 {
                     // si le traitement est ok
                     this.MontantTotal = 0;
+                    await PopupNavigation.PopAsync(false);
                 }
                 else
                 {
-                    //si traitement KO
+                    await DisplayAlert("Encaisser", "Merci de reessayer !", "OK");
                 }
 
             }

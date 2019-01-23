@@ -211,7 +211,7 @@
             <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
             <Button Grid.Column="3" Clicked="Click_closed" Grid.Row="1" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
             <Button Grid.Column="1" Clicked="Click_Print" Grid.Row="1" Text="Imprimer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-            <Button Grid.Column="2" Clicked="Click_Fiche" Grid.Row="1" Text="Imprimer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Button Grid.Column="2" Clicked="Click_Fiche" Grid.Row="1" Text="Fiche" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
             <Button Grid.Column="0" Clicked="Click_Encaisser" Grid.Row="1" Text="Encaisser" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
         </Grid>
     </StackLayout>

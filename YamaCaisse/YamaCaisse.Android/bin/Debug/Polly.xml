@@ -8315,7 +8315,7 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8327,7 +8327,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the raised exception and the current sleep duration.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8346,7 +8346,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the raised exception, current sleep duration and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8365,7 +8365,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the raised exception, current sleep duration, retry count, and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8383,7 +8383,7 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8395,7 +8395,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the raised exception, current sleep duration and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8414,7 +8414,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the raised exception, current sleep duration, retry count, and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8433,7 +8433,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the raised exception, current sleep duration, retry count, and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc), previous exception and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8507,6 +8507,8 @@
         <member name="M:Polly.RetrySyntax.WaitAndRetryForever(Polly.PolicyBuilder,System.Func{System.Int32,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -8516,6 +8518,8 @@
         <member name="M:Polly.RetrySyntax.WaitAndRetryForever(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -8526,6 +8530,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetry"/> on each retry with the raised exception.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -8538,6 +8544,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetry"/> on each retry with the raised exception and retry count.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -8549,8 +8557,9 @@
         <member name="M:Polly.RetrySyntax.WaitAndRetryForever(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{System.Exception,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the raised exception and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the raised exception and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -8562,8 +8571,9 @@
         <member name="M:Polly.RetrySyntax.WaitAndRetryForever(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{System.Exception,System.Int32,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the raised exception, retry count and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the raised exception, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -8575,8 +8585,9 @@
         <member name="M:Polly.RetrySyntax.WaitAndRetryForever(Polly.PolicyBuilder,System.Func{System.Int32,System.Exception,Polly.Context,System.TimeSpan},System.Action{System.Exception,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the raised exception and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the raised exception and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous exceution and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -8588,8 +8599,9 @@
         <member name="M:Polly.RetrySyntax.WaitAndRetryForever(Polly.PolicyBuilder,System.Func{System.Int32,System.Exception,Polly.Context,System.TimeSpan},System.Action{System.Exception,System.Int32,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the raised exception, retry count and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the raised exception, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous exception and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -8797,7 +8809,7 @@
             <summary>
                 Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8809,7 +8821,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the raised exception and the current sleep duration.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8828,7 +8840,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the raised exception and the current sleep duration.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8847,7 +8859,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the raised exception, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8866,7 +8878,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the raised exception, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8885,7 +8897,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the raised exception, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8904,7 +8916,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the raised exception, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8923,7 +8935,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the raised exception, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8942,7 +8954,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the raised exception, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8961,7 +8973,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the raised exception, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8980,7 +8992,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the raised exception, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -8999,7 +9011,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the raised exception, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc), previous exception and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9128,6 +9140,8 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -9137,6 +9151,8 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -9147,6 +9163,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
             calling <paramref name="onRetry"/> on each retry with the raised exception.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9159,6 +9177,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
             calling <paramref name="onRetry"/> on each retry with the raised exception and retry count.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9171,6 +9191,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
             calling <paramref name="onRetryAsync"/> on each retry with the raised exception.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9183,6 +9205,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
             calling <paramref name="onRetryAsync"/> on each retry with the raised exception and retry count.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9194,8 +9218,9 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{System.Exception,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
-            calling <paramref name="onRetry"/> on each retry with the raised exception and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the raised exception and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9207,8 +9232,9 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{System.Exception,System.Int32,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
-            calling <paramref name="onRetry"/> on each retry with the raised exception, retry count and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the raised exception, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9220,8 +9246,9 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Func{System.Exception,System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
-            calling <paramref name="onRetryAsync"/> on each retry with the raised exception and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the raised exception and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9233,8 +9260,9 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Func{System.Exception,System.Int32,System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
-            calling <paramref name="onRetryAsync"/> on each retry with the raised exception, retry count and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the raised exception, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9246,8 +9274,9 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,System.Exception,Polly.Context,System.TimeSpan},System.Func{System.Exception,System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
-            calling <paramref name="onRetryAsync"/> on each retry with the raised exception and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the raised exception and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous exception and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9259,8 +9288,9 @@
         <member name="M:Polly.RetrySyntaxAsync.WaitAndRetryForeverAsync(Polly.PolicyBuilder,System.Func{System.Int32,System.Exception,Polly.Context,System.TimeSpan},System.Func{System.Exception,System.Int32,System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely
-            calling <paramref name="onRetryAsync"/> on each retry with the raised exception, retry count and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the raised exception, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous exception and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9384,7 +9414,7 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9396,7 +9426,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the handled exception or result and the current sleep duration.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9415,7 +9445,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the handled exception or result, current sleep duration and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9434,7 +9464,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the handled exception or result, current sleep duration, retry count, and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9452,7 +9482,7 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9464,7 +9494,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the handled exception or result, current sleep duration and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9483,7 +9513,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the handled exception or result, current sleep duration, retry count, and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9501,7 +9531,7 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc), previous execution result and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9513,7 +9543,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the handled exception or result, current sleep duration and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc), previous execution result and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9532,7 +9562,7 @@
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times
             calling <paramref name="onRetry"/> on each retry with the handled exception or result, current sleep duration, retry count, and context data.
             On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-            the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+            the current retry number (1 for first retry, 2 for second etc), previous execution result and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9606,6 +9636,8 @@
         <member name="M:Polly.RetryTResultSyntax.WaitAndRetryForever``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -9615,6 +9647,8 @@
         <member name="M:Polly.RetryTResultSyntax.WaitAndRetryForever``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -9625,6 +9659,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetry"/> on each retry with the handled exception or result.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9637,6 +9673,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetry"/> on each retry with the handled exception or result and retry count.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9648,8 +9686,9 @@
         <member name="M:Polly.RetryTResultSyntax.WaitAndRetryForever``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{Polly.DelegateResult{``0},System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the handled exception or result and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the handled exception or result and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9661,8 +9700,9 @@
         <member name="M:Polly.RetryTResultSyntax.WaitAndRetryForever``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{Polly.DelegateResult{``0},System.Int32,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the handled exception or result, retry count and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the handled exception or result, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9674,8 +9714,9 @@
         <member name="M:Polly.RetryTResultSyntax.WaitAndRetryForever``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.DelegateResult{``0},Polly.Context,System.TimeSpan},System.Action{Polly.DelegateResult{``0},System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the handled exception or result and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the handled exception or result and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous execution result and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9687,8 +9728,9 @@
         <member name="M:Polly.RetryTResultSyntax.WaitAndRetryForever``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.DelegateResult{``0},Polly.Context,System.TimeSpan},System.Action{Polly.DelegateResult{``0},System.Int32,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the handled exception or result, retry count and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the handled exception or result, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous execution result and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -9896,7 +9938,7 @@
             <summary>
                 Builds a <see cref="T:Polly.Policy"/> that will wait and retry <paramref name="retryCount"/> times.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider"/> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9908,7 +9950,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the handled exception or result and the current sleep duration.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc)
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9927,7 +9969,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the handled exception or result and the current sleep duration.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9946,7 +9988,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the handled exception or result, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9965,7 +10007,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the handled exception or result, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -9984,7 +10026,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the handled exception or result, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -10003,7 +10045,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the handled exception or result, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -10022,7 +10064,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the handled exception or result, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -10041,7 +10083,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the handled exception or result, the current sleep duration and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -10060,7 +10102,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetry" /> on each retry with the handled exception or result, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -10079,7 +10121,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the handled exception or result, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -10098,7 +10140,7 @@
                 Builds a <see cref="T:Polly.Policy" /> that will wait and retry <paramref name="retryCount" /> times
                 calling <paramref name="onRetryAsync" /> on each retry with the handled exception or result, the current sleep duration, retry count, and context data.
                 On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with
-                the current retry attempt allowing an exponentially increasing wait time (exponential backoff).
+                the current retry number (1 for first retry, 2 for second etc), result of previous execution, and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="retryCount">The retry count.</param>
@@ -10227,6 +10269,8 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -10236,6 +10280,8 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">The function that provides the duration to wait for for a particular retry attempt.</param>
@@ -10246,6 +10292,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetry"/> on each retry with the handled exception or result.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10258,6 +10306,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetry"/> on each retry with the handled exception or result.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10270,6 +10320,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10282,6 +10334,8 @@
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
             calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result and retry count.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc).
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10293,8 +10347,9 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{Polly.DelegateResult{``0},System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the handled exception or result and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the handled exception or result and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10306,8 +10361,9 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Action{Polly.DelegateResult{``0},System.Int32,System.TimeSpan,Polly.Context})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetry"/> on each retry with the handled exception or result and
-            execution context.
+            calling <paramref name="onRetry"/> on each retry with the handled exception or result and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10319,8 +10375,9 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Func{Polly.DelegateResult{``0},System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10332,8 +10389,9 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.Context,System.TimeSpan},System.Func{Polly.DelegateResult{``0},System.Int32,System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result, retry count and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc) and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10345,8 +10403,9 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.DelegateResult{``0},Polly.Context,System.TimeSpan},System.Func{Polly.DelegateResult{``0},System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous execution result and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10358,8 +10417,9 @@
         <member name="M:Polly.RetryTResultSyntaxAsync.WaitAndRetryForeverAsync``1(Polly.PolicyBuilder{``0},System.Func{System.Int32,Polly.DelegateResult{``0},Polly.Context,System.TimeSpan},System.Func{Polly.DelegateResult{``0},System.Int32,System.TimeSpan,Polly.Context,System.Threading.Tasks.Task})">
             <summary>
             Builds a <see cref="T:Polly.Policy"/> that will wait and retry indefinitely until the action succeeds, 
-            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result, retry count and
-            execution context.
+            calling <paramref name="onRetryAsync"/> on each retry with the handled exception or result, retry count and execution context.
+                On each retry, the duration to wait is calculated by calling <paramref name="sleepDurationProvider" /> with 
+                the current retry number (1 for first retry, 2 for second etc), previous execution result and execution context.
             </summary>
             <param name="policyBuilder">The policy builder.</param>
             <param name="sleepDurationProvider">A function providing the duration to wait before retrying.</param>
@@ -10431,18 +10491,6 @@
             A null struct for policies and actions which do not return a TResult.
             </summary>
         </member>
-        <member name="T:Polly.Utilities.SemaphoreSlimFactory">
-            <summary>
-            A factory class for the different implementations of SemaphoreSlim used by Polly.
-            </summary>
-        </member>
-        <member name="M:Polly.Utilities.SemaphoreSlimFactory.CreateSemaphoreSlim(System.Int32)">
-            <summary>
-            Creates the semaphore slim.
-            </summary>
-            <param name="maxParallelization">The maximum parallelization.</param>
-            <returns>SemaphoreSlim.</returns>
-        </member>
         <member name="T:Polly.Utilities.SystemClock">
             <summary>
             Time related delegates used to support different compilation targets and to improve testability of the code.
@@ -10493,15 +10541,6 @@
             <summary>
             Defines a completed Task for use as a completed, empty asynchronous delegate.
             </summary>
-        </member>
-        <member name="M:Polly.Utilities.TaskHelper.FromResult``1(``0)">
-            <summary>
-            Creates an already completed <see cref="T:System.Threading.Tasks.Task`1"/> from the specified result.
-            </summary>
-            <param name="result">The result from which to create the completed task.</param>
-            <returns>
-            The completed task.
-            </returns>
         </member>
         <member name="T:Polly.Wrap.IPolicyWrap">
             <summary>

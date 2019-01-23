@@ -45,6 +45,12 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csprojAssemblyReference.cache
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csproj.CoreCompileInputs.cache
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csproj.CopyComplete
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.exe
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.pdb
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad4.2-12.1/ibtool/_BundleResourceWithLogicalName.items
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad4.2-12.1/actool/_PartialAppManifest.items
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad4.2-12.1/actool/_BundleResourceWithLogicalName.items
@@ -78,9 +84,3 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad4.2-12.1/optimized/Tab4_carre_90.png
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad4.2-12.1/optimized/Tab4_rond_90.png
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad4.2-12.1/optimized/
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csprojAssemblyReference.cache
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csproj.CoreCompileInputs.cache
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csproj.CopyComplete
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.exe
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.pdb

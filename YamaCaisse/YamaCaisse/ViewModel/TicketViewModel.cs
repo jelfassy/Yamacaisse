@@ -207,13 +207,46 @@ namespace YamaCaisse.ViewModel
             return ticket;
         }
 
+        public Ticket GetTicketToSend()
+        {
+            var ticket = new Ticket()
+            {
+                TIK_ID = this.TKT_ID,
+                FK_EMP_ID = App.UserId,
+                FK_TAB_ID = this.IdTable,
+                TIK_DATE = DateTime.Now,
+                TIK_MNT_TOTAL = this.MontantTotal,
+                TIK_NB_COUVERT = this.NbCouvert,
+                T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
+                FK_JOU_ID = App.JourId,
+
+            };
+            if (App.ConfigViewModel.Printer != null)
+                ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
+            if (ListLigneTicket == null)
+                ListLigneTicket = new ObservableCollection<LigneTicket>();
+            foreach (var ligne in ListLigneTicket.Where(c=>c.LTK_SEND != true))
+            {
+                ligne.T_PRODUIT = null;
+                ligne.T_RECLAME = null;
+                ligne.T_TVA = null;
+                ticket.T_LIGNE_TICKET.Add(ligne);
+
+            }
+            if (ListPaiementTicket == null)
+                ListPaiementTicket = new ObservableCollection<PaiementTicket>();
+
+            return ticket;
+        }
+
         public async void LoadDataTicketbyTable(int idTable)
         {
             this.IdTable = idTable;
             var ticket = await _ticketDataServices.GetCurrentTableTicket((int)this.IdTable);
             if (ticket.TIK_ID != 0)
             {
-                this.SetTicket(ticket);
+
+                                this.SetTicket(ticket);
             }
             else
             {

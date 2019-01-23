@@ -68,7 +68,8 @@ namespace YamaCaisse.Pages
         async void Click_Take(object sender, System.EventArgs e)
         {
             var caisse = new YamaCaisse.Pages.Caisse();
-            await Navigation.PushModalAsync(caisse);
+            TicketViewModel.Current.ListLigneTicket.Clear();
+           await Navigation.PushModalAsync(caisse);
         }
 
 

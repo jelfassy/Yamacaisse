@@ -203,12 +203,12 @@ namespace YamaCaisse.Pages
                     if (TicketViewModel.Current.TKT_ID == 0)
                     {
 
-                        var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current.GetTicket());
+                        var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current.GetTicketToSend());
                         //   await PopupNavigation.Instance.PushAsync(new PopupAddition(this));
                     }
                     else
                     {
-                        var rs = await _ticketDataServices.PutTicket(TicketViewModel.Current.TKT_ID, TicketViewModel.Current.GetTicket());
+                        var rs = await _ticketDataServices.PutTicket(TicketViewModel.Current.TKT_ID, TicketViewModel.Current.GetTicketToSend());
                     }
 
 
