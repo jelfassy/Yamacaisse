@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace YamaCaisse.Droid
 {
-    [Activity(Label = "YamaCaisse", Icon = "@drawable/icon",Theme = "style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "YamaCaisse", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
