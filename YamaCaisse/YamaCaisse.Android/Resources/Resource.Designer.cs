@@ -4647,10 +4647,10 @@ namespace YamaCaisse.Droid
 			public const int CardView_Light = 2131427342;
 			
 			// aapt resource value: 0x7f0b018f
-			public const int MainTheme = 2131427727;
+			public const int MyTheme = 2131427727;
 			
 			// aapt resource value: 0x7f0b0190
-			public const int MainTheme_Base = 2131427728;
+			public const int MyTheme_Base = 2131427728;
 			
 			// aapt resource value: 0x7f0b0192
 			public const int MyTheme_Splash = 2131427730;
