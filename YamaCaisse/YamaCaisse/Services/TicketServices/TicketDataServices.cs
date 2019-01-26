@@ -97,11 +97,12 @@ namespace YamaCaisse.Services.TicketServices
             try
             {
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Print/", idTable.ToString(),"/",ConfigViewModel.Current.Printer.PRT_ID));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Print/", idTable.ToString()));
 
                 await Task.Run(() =>
                 {
-                    res = o.ToObject<bool>();
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
                 });
                 if (res == false)
                     return false;

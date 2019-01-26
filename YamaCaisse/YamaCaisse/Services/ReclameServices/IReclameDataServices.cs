@@ -8,5 +8,6 @@ namespace YamaCaisse.Services.ReclameServices
     public interface IReclameDataServices
     {
         Task<List<Reclame>> GetReclameList();
+        Task<bool> CallReclame(int idTable, int idReclame);
     }
 }

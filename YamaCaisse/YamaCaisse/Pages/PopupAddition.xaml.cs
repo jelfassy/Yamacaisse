@@ -137,7 +137,7 @@ namespace YamaCaisse.Pages
                 }
                 else
                 {
-                    ligne.LTK_QTE = ligne.LTK_QTE - 1;
+                    ((LigneTicket)e.Item).LTK_QTE = ligne.LTK_QTE - 1;
                     TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c=>c.LTK_ID == ligne.LTK_ID).LTK_QTE = ligne.LTK_QTE;
                     this.E_listligneTicket.ItemsSource = TicketViewModel.Current.ListLigneTicket;
                     ligne.LTK_SOMME = ligne.T_PRODUIT.PDT_Prix * ligne.LTK_QTE;
@@ -195,7 +195,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Print(object sender, EventArgs e)
         {
-           await _ticketDataServices.PrintTable((int)TicketViewModel.Current.IdTable);
+           await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
         }
 
         async void Click_Fiche(object sender, EventArgs e)

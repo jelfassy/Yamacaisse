@@ -75,6 +75,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Reclame(object sender, System.EventArgs e)
         {
+            await PopupNavigation.Instance.PushAsync(new PopupReclameBon(TicketViewModel.Current.TKT_ID));
 
         }
 
