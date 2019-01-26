@@ -50,6 +50,8 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public bool? PDT_INFO_BT { get; set; }
+
         public Tva T_TVA
         {
             get;

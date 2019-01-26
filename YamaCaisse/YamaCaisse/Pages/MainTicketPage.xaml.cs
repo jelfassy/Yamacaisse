@@ -81,7 +81,9 @@ namespace YamaCaisse.Pages
         async void Click_Payer(object sender, EventArgs e)
         {
             //await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
-            await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current.TKT_ID));
+            var popupAdd = new PopupAddition(TicketViewModel.Current.TKT_ID);
+            popupAdd._maintTicketPage = this;
+            await PopupNavigation.Instance.PushAsync(popupAdd);
         }
 
 

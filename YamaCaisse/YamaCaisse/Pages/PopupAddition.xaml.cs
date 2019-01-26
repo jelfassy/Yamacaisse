@@ -24,6 +24,8 @@ namespace YamaCaisse.Pages
         private IPaiementDataServices _paiementDataServices;
 
 
+        public MainTicketPage _maintTicketPage { get; set; }
+
         private decimal _montantTotal;
 
         public decimal MontantTotal
@@ -84,7 +86,7 @@ namespace YamaCaisse.Pages
             TicketViewModel.Current.Clear();
                            
             TicketViewModel.Current.SetTicket(ticket);
-
+            MontantTotal = TicketViewModel.Current.MontantTotal;
         }
 
 
@@ -218,6 +220,7 @@ namespace YamaCaisse.Pages
                 {
                     // si le traitement est ok
                     this.MontantTotal = 0;
+                    _maintTicketPage.loadData();
                     await PopupNavigation.PopAsync(false);
                 }
                 else
@@ -239,6 +242,7 @@ namespace YamaCaisse.Pages
 
         async void Click_closed(object sender, EventArgs e)
         {
+             _maintTicketPage.loadData();
             await PopupNavigation.PopAsync(false);
         }
 
