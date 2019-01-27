@@ -220,7 +220,8 @@ namespace YamaCaisse.Pages
                 {
                     // si le traitement est ok
                     this.MontantTotal = 0;
-                    _maintTicketPage.loadData();
+                    if(this._maintTicketPage != null)
+                        _maintTicketPage.loadData();
                     await PopupNavigation.PopAsync(false);
                 }
                 else
@@ -242,7 +243,8 @@ namespace YamaCaisse.Pages
 
         async void Click_closed(object sender, EventArgs e)
         {
-             _maintTicketPage.loadData();
+            if(this._maintTicketPage != null)
+                _maintTicketPage.loadData();
             await PopupNavigation.PopAsync(false);
         }
 
