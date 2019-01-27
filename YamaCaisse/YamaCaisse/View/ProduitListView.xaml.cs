@@ -168,6 +168,7 @@ namespace YamaCaisse.View
                     await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
                 }
             }
+
             else
             {
                 await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));

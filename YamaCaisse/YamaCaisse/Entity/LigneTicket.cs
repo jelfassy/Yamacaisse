@@ -32,7 +32,7 @@ namespace YamaCaisse.Entity
             set;
         }
 
-        public int FK_TKT_ID
+        public int? FK_TKT_ID
         {
             get;
             set;
