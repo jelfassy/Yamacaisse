@@ -23,6 +23,14 @@ namespace YamaCaisse.View
             
         }
 
+        void listLigne_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
+        {
+        }
+
+        public void CellUnder_OnAppearing(object sender, EventArgs e)
+        {
+            var viewCell = (ViewCell)sender;
+        }
 
         void Envoye_Clicked(object sender, System.EventArgs e)
         {
