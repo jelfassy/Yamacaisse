@@ -24,10 +24,10 @@ namespace YamaCaisse.Services.UserServices
                     return null;
                 return res;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
     }

@@ -187,6 +187,8 @@ namespace YamaCaisse.View
                 TextColor = Color.White,
                 WidthRequest = 250,
                 HeightRequest = 250,
+                MinimumHeightRequest = 100,
+                MinimumWidthRequest = 100,
                 BorderWidth = 1,
                 BorderColor = tab.TAB_UTILISE == true ? Color.Green : Color.Transparent,
                 // BackgroundColor = (Color)Application.Current.Resources["DividerColor"],

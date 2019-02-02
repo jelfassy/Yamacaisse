@@ -56,10 +56,6 @@ namespace YamaCaisse.Pages
         }
 
 
-
-
-
-
         /// <summary>
         /// Prive d'une table direction de l'ecran de commande
         /// </summary>

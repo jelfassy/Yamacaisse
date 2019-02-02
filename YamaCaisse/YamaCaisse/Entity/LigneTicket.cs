@@ -73,6 +73,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public int? FK_PATI_ID
+        {
+            get;
+            set;
+        }
+
         public Produit T_PRODUIT
         {
             get;

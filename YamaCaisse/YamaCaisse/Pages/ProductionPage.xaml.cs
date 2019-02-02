@@ -23,7 +23,12 @@ namespace YamaCaisse.Pages
         {
             InitializeComponent();
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
-            LoadData();
+            Device.StartTimer(TimeSpan.FromSeconds(30), () =>
+            {
+                LoadData();
+                return true; // True = Repeat again, False = Stop the timer
+            });
+           
         }
 
 

@@ -18,13 +18,14 @@ namespace YamaCaisse
         private IUserDataServices _userDataServices;
         private IJourDataServices _jourDataServices;
 
+        private string typeconnection = "https://";
         public MainPage()
         {
             InitializeComponent();
-            //this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
-            this.AdresseServeur.Text = "192.168.1.25:63058";
-            if (Application.Current.Properties.ContainsKey("ServeurAdress"))
-                this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
+            this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
+            //this.AdresseServeur.Text = "192.168.1.25:63058";
+            //if (Application.Current.Properties.ContainsKey("ServeurAdress"))
+              //  this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
         }
 
 
@@ -43,7 +44,7 @@ namespace YamaCaisse
         {
             try
             {
-                App.UrlGateway = "http://" + this.AdresseServeur.Text + "/";
+                App.UrlGateway = typeconnection + this.AdresseServeur.Text + "/";
                 Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
                 _userDataServices = DependencyService.Get<IUserDataServices>();
                 var user = await _userDataServices.GetUserbyCode(this.CodeUser.Text);
@@ -81,7 +82,7 @@ namespace YamaCaisse
 
         async void Click_Production(object sender,EventArgs e)
         {
-            App.UrlGateway = "http://" + this.AdresseServeur.Text + "/";
+            App.UrlGateway = typeconnection + this.AdresseServeur.Text + "/";
             Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
             await PopupNavigation.Instance.PushAsync(new PopupGetProduction());
            

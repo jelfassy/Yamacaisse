@@ -81,7 +81,10 @@
                     </ListView>
                 </Grid>
             </StackLayout>
-            <StackLayout Grid.Row="0" Grid.Column="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Grid.Row="0" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="FillAndExpand" x:Name="stkBtSplit">
+                <Button Grid.Column="0" Grid.Row="0" Text="Split" Clicked="Click_Split" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            </StackLayout>
+            <StackLayout Grid.Row="0" Grid.Column="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" x:Name="StkplitDetail">
                   <Grid  BackgroundColor="{StaticResource LightPrimaryColor}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />

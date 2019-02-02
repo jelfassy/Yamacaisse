@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace YamaCaisse.Entity
 {
     public class PaiementTicket
@@ -20,10 +22,18 @@ namespace YamaCaisse.Entity
             get;
             set;
         }
+
         public decimal? Montant
         {
             get;
             set;
         }
+
+        public List<LigneTicket> T_LIGNE_TICKET
+        {
+            get;
+            set;
+        }
+
     }
 }

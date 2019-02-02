@@ -76,12 +76,15 @@ namespace YamaCaisse.Pages
             TikId = ticketId;
             MontantTotal = 0;
             LoadData();
+            stkBtSplit.IsVisible = true;
+            StkplitDetail.IsVisible = false;
         }
 
         public async void LoadData()
         {
             LoadBouttonTypePaiement();
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
+
 
             TicketViewModel.Current.Clear();
                            
@@ -171,6 +174,13 @@ namespace YamaCaisse.Pages
             //  this.EntryNbCouvert.Text =
         }
 
+        void Click_Split(object sender,EventArgs e)
+        {
+            MontantTotal = 0;
+            stkBtSplit.IsVisible = false;
+            StkplitDetail.IsVisible = true;
+        }
+
 
         void Click_SelectTypePaiement(object sender, EventArgs e)
         {
@@ -215,8 +225,10 @@ namespace YamaCaisse.Pages
                     FK_TPA_ID = this.IdTypePaiement,
                     Montant = this.MontantTotal
                 };
+                paiement.T_LIGNE_TICKET = ListSelectedLigneTicket.ToList();
                 var rs = await this._paiementDataServices.PostPaiement(paiement);
-                if(rs)
+                LoadData();
+                if (rs)
                 {
                     // si le traitement est ok
                     this.MontantTotal = 0;

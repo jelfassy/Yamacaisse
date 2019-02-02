@@ -56,7 +56,7 @@
                 </Grid>
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="End">
-                  <Button Text="Ecran de Bon" WidthRequest="50" Clicked="Click_Production" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                  <Button Text="Ecran de Bon" WidthRequest="100" Clicked="Click_Production" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                     </Button>
             </StackLayout>
         </StackLayout>

@@ -35,6 +35,8 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public bool? TIK_OUT { get; set; }
+
         public int? FK_TAB_ID
         {
             get;
