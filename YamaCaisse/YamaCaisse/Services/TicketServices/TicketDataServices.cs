@@ -129,6 +129,43 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
+        public async Task<bool> PrintFiche(int idTicket)
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/", idTicket.ToString()));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintFiche" + idTicket}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintFiche" + idTicket }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Gets the current table ticket
         /// </summary>
