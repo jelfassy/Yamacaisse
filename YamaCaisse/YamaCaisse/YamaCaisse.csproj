@@ -154,6 +154,7 @@
       <DependentUpon>RapportPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entity\Profil.cs" />
+    <Compile Include="Entity\BonLigneTicket.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

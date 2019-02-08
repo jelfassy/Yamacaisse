@@ -9,40 +9,16 @@ namespace YamaCaisse.Entity
         {
         }
 
-        public int REC_ID { get; set; }
+        public int BON_ID { get; set; }
 
-        public Reclame Reclame
-        {
-            get;set;
-        }
+        public DateTime? Bon_DATE_DEBUT { get; set; }
 
-        public int? FK_TAB_ID
-        {
-            get;
-            set;
-        }
+        public DateTime? BON_DATE_FIN { get; set; }
 
-        public int FK_EMP_ID
-        {
-            get;
-            set;
-        }
-
-        public Employe T_EMPLOYE
-        {
-            get;
-            set;
-        }
+        public int? FK_PROD_ID { get; set; }
 
 
-        public Table T_TABLE
-        {
-            get;
-            set;
-        }
-
-
-        public List<LigneTicket> T_LIGNE_TICKET
+        public List<BonLigneTicket> T_BON_LIGNE_TICKET
         {
             get;
             set;

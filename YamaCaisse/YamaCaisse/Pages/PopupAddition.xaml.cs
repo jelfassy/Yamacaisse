@@ -89,7 +89,7 @@ namespace YamaCaisse.Pages
             TicketViewModel.Current.Clear();
                            
             TicketViewModel.Current.SetTicket(ticket);
-            MontantTotal = TicketViewModel.Current.MontantTotal;
+            MontantTotal = (decimal)TicketViewModel.Current.ListLigneTicket.Sum(c=>c.LTK_SOMME);
         }
 
 
@@ -133,7 +133,8 @@ namespace YamaCaisse.Pages
             if(e.Item != null)
             {
                 var ligne = e.Item as LigneTicket;
-               
+                if (ListSelectedLigneTicket.Count == 0)
+                    MontantTotal = 0;
                 if (ligne.LTK_QTE == 1)
                 {
                     ListSelectedLigneTicket.Add(ligne);
@@ -149,7 +150,9 @@ namespace YamaCaisse.Pages
                     ListSelectedLigneTicket.Add(ligne);
                     MontantTotal = MontantTotal + ligne.LTK_SOMME.Value;
                 }
-                    
+                stkBtSplit.IsVisible = false;
+                StkplitDetail.IsVisible = true;
+
             }
 
         }
@@ -163,7 +166,11 @@ namespace YamaCaisse.Pages
                 TicketViewModel.Current.ListLigneTicket.Add(ligne);
                // eMontantPayer.Text = ((decimal.Parse(eMontantPayer.Text) - ligne.LTK_SOMME).ToString());
                 MontantTotal = MontantTotal - ligne.LTK_SOMME.Value;
-
+                if(ListSelectedLigneTicket.Count == 0)
+                {
+                    stkBtSplit.IsVisible = true;
+                    StkplitDetail.IsVisible = false;
+                }
             }
 
         }
@@ -176,7 +183,14 @@ namespace YamaCaisse.Pages
 
         void Click_Split(object sender,EventArgs e)
         {
-            MontantTotal = 0;
+            if(ListSelectedLigneTicket.Count > 0)
+            {
+                MontantTotal = (decimal)ListSelectedLigneTicket.Sum(c => c.LTK_SOMME);
+            }else
+            {
+                MontantTotal = 0;
+
+            }
             stkBtSplit.IsVisible = false;
             StkplitDetail.IsVisible = true;
         }
@@ -219,26 +233,35 @@ namespace YamaCaisse.Pages
         {
            try
             {
-                var paiement = new PaiementTicket()
+                if (this.IdTypePaiement != 0)
                 {
-                    FK_TIK_ID = this.TikId,
-                    FK_TPA_ID = this.IdTypePaiement,
-                    Montant = this.MontantTotal
-                };
-                paiement.T_LIGNE_TICKET = ListSelectedLigneTicket.ToList();
-                var rs = await this._paiementDataServices.PostPaiement(paiement);
-                LoadData();
-                if (rs)
-                {
-                    // si le traitement est ok
-                    this.MontantTotal = 0;
-                    if(this._maintTicketPage != null)
-                        _maintTicketPage.loadData();
-                    await PopupNavigation.PopAsync(false);
+                    var paiement = new PaiementTicket()
+                    {
+                        FK_TIK_ID = this.TikId,
+                        FK_TPA_ID = this.IdTypePaiement,
+                        Montant = this.MontantTotal
+                    };
+                    paiement.T_LIGNE_TICKET = ListSelectedLigneTicket.ToList();
+                    foreach (var ligne in paiement.T_LIGNE_TICKET)
+                        ligne.TIK_MOVE_TIK = this.TikId;
+                    var rs = await this._paiementDataServices.PostPaiement(paiement);
+                    LoadData();
+                    if (rs)
+                    {
+                        // si le traitement est ok
+                        this.MontantTotal = 0;
+                        if (this._maintTicketPage != null)
+                            _maintTicketPage.loadData();
+                        await PopupNavigation.PopAsync(false);
+                    }
+                    else
+                    {
+                        await DisplayAlert("Encaisser", "Merci de reessayer !", "OK");
+                    }
                 }
                 else
                 {
-                    await DisplayAlert("Encaisser", "Merci de reessayer !", "OK");
+                    await DisplayAlert("Payer", "Selectionner un type de paiement", "OK");
                 }
 
             }

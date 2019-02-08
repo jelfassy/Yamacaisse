@@ -109,6 +109,10 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public int? TIK_MOVE_TIK { get; set; }
+
+        public Employe T_EMPLOYE { get; set; }
+
         private ObservableCollection<LigneTicket> _LIST_COMPLEMENT;
 
         public ObservableCollection<LigneTicket> LIST_COMPLEMENT
