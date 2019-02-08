@@ -35,5 +35,7 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public int? EMP_ID { get; set; }
+
     }
 }

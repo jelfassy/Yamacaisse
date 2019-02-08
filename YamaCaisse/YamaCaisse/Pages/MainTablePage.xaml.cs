@@ -81,6 +81,12 @@ namespace YamaCaisse.Pages
 
         }
 
+        async void Click_Move(object sender, System.EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketView));
+            this.tableListControl = new View.TableView();
+        }
+
         public TicketView GetTicketView()
         {
             throw new NotImplementedException();

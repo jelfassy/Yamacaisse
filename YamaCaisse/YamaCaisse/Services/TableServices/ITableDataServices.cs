@@ -10,5 +10,7 @@ namespace YamaCaisse.Services.TableServices
     interface ITableDataServices
     {
         Task<List<Table>> GetTableList();
+        Task<Table> GetTable(int id);
+        Task<bool> MoveTable(int idCurrentTable, int idNewTable);
     }
 }

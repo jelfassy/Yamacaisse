@@ -32,6 +32,7 @@
                     </Grid.ColumnDefinitions>
                     <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
                     <Button Grid.Column="1" Grid.Row="1" Text="Prendre" Clicked="Click_Take" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Grid.Column="1" Grid.Row="1" Text="Move" Clicked="Click_Move" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="3" Grid.Row="1" Text="Addition" Clicked="Click_Addition" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="4" Grid.Row="1" Text="Reclame" Clicked="Click_Reclame" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 </Grid>

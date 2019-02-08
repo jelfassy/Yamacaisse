@@ -33,14 +33,21 @@ namespace YamaCaisse.View
             set;
         }
 
-        public TableView()
+        public bool Move { get; set; }
+
+        public TableView() : this(false)
+        {
+
+        }
+
+        public TableView(bool move)
         {
             InitializeComponent();
             CurrentPage = "Grille";
             InitGridTable(CurrentPage);
             InitListSalle();
+            this.Move = move;
         }
-
 
         private async void InitListSalle()
         {
@@ -218,13 +225,21 @@ namespace YamaCaisse.View
 
 
 
-        public void Click_SelectTable(object sender, EventArgs e)
+        public async void Click_SelectTable(object sender, EventArgs e)
         {
             var button = (Button)sender;
             button.BorderColor = Color.BlueViolet;
-            TicketViewModel.Current.Clear();
-            TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
 
+            if (this.Move == true)
+            {
+                var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, int.Parse(button.ClassId));
+
+            }
+            else
+            {
+                TicketViewModel.Current.Clear();
+                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
+            }
             if (CurrentPopupTable != null)
                 CurrentPopupTable.ClosePopup();
              

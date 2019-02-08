@@ -174,7 +174,6 @@ namespace YamaCaisse.ViewModel
             }
         }
 
-
         public Ticket GetTicket()
         {
             var ticket = new Ticket()
