@@ -112,7 +112,7 @@ namespace YamaCaisse.Services.TableServices
             try
             {
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Move/", idCurrentTable.ToString(),idNewTable.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Move/", idCurrentTable.ToString(),"/",idNewTable.ToString()));
 
                 await Task.Run(() =>
                 {
