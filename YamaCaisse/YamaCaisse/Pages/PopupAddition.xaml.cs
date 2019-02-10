@@ -226,7 +226,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Fiche(object sender, EventArgs e)
         {
-
+            await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
         }
 
         async void Click_Encaisser(object sender, EventArgs e)

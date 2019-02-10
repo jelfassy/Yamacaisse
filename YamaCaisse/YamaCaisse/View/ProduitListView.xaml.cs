@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
@@ -28,14 +29,14 @@ namespace YamaCaisse.View
 
         public bool? Autoclose { get; set; }
 
+
         public ProduitListView()
         {
             InitializeComponent();
 
         }
 
-
-        public async void InitProduitButton(int idPage)
+         public async void InitProduitButton(int idPage)
         {
             this.IdPage = idPage;
 
@@ -165,20 +166,29 @@ namespace YamaCaisse.View
                 if (pageprod.PAG_ADD_ID != null)
                 {
                     TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+                    if (this.Autoclose == true)
+                    {
+                        await PopupNavigation.PopAsync(false);
+                    }
                     await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
                 }
-            }
+                if (this.Autoclose == true)
+                {
+                    await PopupNavigation.PopAsync(false);
+                }
 
+            }
             else
             {
+                if (this.Autoclose == true)
+                {
+                    await PopupNavigation.PopAsync(false);
+                }
                 await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
             }
 
 
-            if (this.Autoclose == true)
-            {
-                await PopupNavigation.PopAsync(false);
-            }
+
 
         }
     }

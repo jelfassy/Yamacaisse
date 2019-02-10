@@ -75,6 +75,15 @@ namespace YamaCaisse.View
             await PopupNavigation.Instance.PushAsync(new PopupReclame());
         }
 
+        async void Click_Quantite(object sender, System.EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var ligneTicket = (LigneTicket)mi.CommandParameter;
+            TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+            await PopupNavigation.Instance.PushAsync(new PopupQuantite());
+        }
+
+
         async void Message_Clicked(object sender, System.EventArgs e)
         {
             var mi = ((MenuItem)sender);
