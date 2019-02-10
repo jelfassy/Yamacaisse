@@ -155,6 +155,9 @@
     </Compile>
     <Compile Include="Entity\Profil.cs" />
     <Compile Include="Entity\BonLigneTicket.cs" />
+    <Compile Include="Pages\PopupQuantite.xaml.cs">
+      <DependentUpon>PopupQuantite.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -245,6 +248,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\RapportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PopupQuantite.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
