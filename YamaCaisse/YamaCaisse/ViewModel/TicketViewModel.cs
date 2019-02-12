@@ -230,6 +230,16 @@ namespace YamaCaisse.ViewModel
                 ligne.T_RECLAME = null;
                 ligne.T_TVA = null;
                 ticket.T_LIGNE_TICKET.Add(ligne);
+                if (ligne.LIST_COMPLEMENT?.Count > 0)
+                {
+                    foreach (var ssligne in ligne.LIST_COMPLEMENT)
+                    {
+                        ssligne.T_RECLAME = null;
+                        ssligne.T_TVA = null;
+                        ssligne.T_PRODUIT = null;
+                        ssligne.T_EMPLOYE = null;
+                    }
+                }
 
             }
             if (ListPaiementTicket == null)
