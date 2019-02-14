@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using YamaCaisse.Services.RapportServices;
 
 namespace YamaCaisse.Pages
 {
     public partial class RapportPage : ContentPage
     {
+
+        private IRapportDataServices _rapportDataServices;
+
         public RapportPage()
         {
             InitializeComponent();
+            _rapportDataServices = DependencyService.Get<RapportDataServices>();
         }
 
-        void RapportJour_Clicked(object sender, System.EventArgs e)
+        async void RapportJour_Clicked(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            var rs = await _rapportDataServices.GetRapportJour();
         }
 
         void RapportCouvert_Clicked(object sender, System.EventArgs e)

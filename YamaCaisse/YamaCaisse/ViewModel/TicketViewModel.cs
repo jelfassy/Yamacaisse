@@ -203,6 +203,7 @@ namespace YamaCaisse.ViewModel
             if (ListPaiementTicket == null)
                 ListPaiementTicket = new ObservableCollection<PaiementTicket>();
 
+            ComprTicket();
             return ticket;
         }
 
@@ -229,6 +230,7 @@ namespace YamaCaisse.ViewModel
                 ligne.T_PRODUIT = null;
                 ligne.T_RECLAME = null;
                 ligne.T_TVA = null;
+                ligne.T_EMPLOYE = null; 
                 ticket.T_LIGNE_TICKET.Add(ligne);
                 if (ligne.LIST_COMPLEMENT?.Count > 0)
                 {
