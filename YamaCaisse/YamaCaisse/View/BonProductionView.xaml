@@ -29,8 +29,8 @@
                                 <ColumnDefinition Width="1*" />
                                 <ColumnDefinition Width="4*" />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_LIGNE_TICKET.LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_LIGNE_TICKET.T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                            <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" Text="{Binding T_LIGNE_TICKET.LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                            <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" Text="{Binding T_LIGNE_TICKET.T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

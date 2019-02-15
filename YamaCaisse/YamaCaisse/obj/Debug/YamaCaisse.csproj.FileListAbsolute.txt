@@ -104,3 +104,4 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupQuantite.xaml.g.cs
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/ReservationPage.xaml.g.cs
