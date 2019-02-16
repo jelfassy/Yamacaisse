@@ -41,7 +41,7 @@ namespace YamaCaisse.Pages
 
         void startTimer()
         {
-            Device.StartTimer(TimeSpan.FromSeconds(30), () =>
+            Device.StartTimer(TimeSpan.FromSeconds(10), () =>
             {
                 // Do something
                 if (this.cancellation.IsCancellationRequested) return false;

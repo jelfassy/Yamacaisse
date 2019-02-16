@@ -29,7 +29,7 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
-                <ListView x:Name="ListRecapToDo" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ListView x:Name="ListRecapToDo" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
                 <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
