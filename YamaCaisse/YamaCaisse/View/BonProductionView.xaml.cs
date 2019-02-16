@@ -75,6 +75,7 @@ namespace YamaCaisse.View
             this.BonProduction.BON_DATE_FIN = DateTime.Now;
 
             var rs  = await _bonProductionDataServices.PutBonProduction(this.idBon, this.BonProduction);
+            await this.ProductionPage.CreateRecap();
             this.ProductionPage.RemoveBonProduction(this);
         }
     }

@@ -1,25 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse" 
-             xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
-             xmlns:localvm="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse" 
-             x:Class="YamaCaisse.Pages.ProductionPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse" xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" xmlns:localvm="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse" x:Class="YamaCaisse.Pages.ProductionPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 20, 0, 0" WinPhone="0, 20, 0, 0" />
     </ContentPage.Padding>
     <ContentPage.Content>
-         <StackLayout x:Name="StkList" BackgroundColor="Gray" VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="0,10,0,0">
-               <ActivityIndicator x:Name="actInd"
-                                  Color="Blue"
-                                  VerticalOptions="CenterAndExpand"
-                                  HorizontalOptions="CenterAndExpand"
-                                  BackgroundColor="Transparent"
-                                 IsRunning="False"
-                                 IsEnabled ="False"/>
+        <StackLayout x:Name="StkList" BackgroundColor="Gray" VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="0,10,0,0">
+            <ActivityIndicator x:Name="actInd" Color="Blue" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" IsRunning="False" IsEnabled="False" />
             <Grid BackgroundColor="Purple">
                 <Grid.RowDefinitions>
-                   <RowDefinition Height="1" />
+                    <RowDefinition Height="1" />
                     <RowDefinition Height="80" />
                     <RowDefinition Height="1" />
                 </Grid.RowDefinitions>
@@ -35,25 +24,68 @@
                 <Button x:Name="btPrinter" Grid.Column="2" Grid.Row="1" BackgroundColor="red" TextColor="White" Clicked="Printer_Clicked" Text="{Binding Printer.PRT_NAME, Source={x:Static localvm:ConfigViewModel.Current}}" />
                 <BoxView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
             </Grid>
-            <Grid x:Name="GdListBon">
+            <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
                 </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                
+                <ListView x:Name="ListRecapToDo" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50" />
+                                 <RowDefinition Height="{Binding SizeUnderList}" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="4*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                            <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                        <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="Start" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LIST_COMPLEMENT}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell x:Name="T_LIGNE_TICKET.UnderViewCell">
+                                                    <ViewCell.View>
+                                                        <Grid>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="25" />
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="5*" />
+                                                                <ColumnDefinition Width="1*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
+                                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_PRODUIT.PDT_Prix ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                        </Grid>
+                                                    </ViewCell.View>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+                </ListView>
+                <Grid x:Name="GdListBon" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                </Grid>
             </Grid>
         </StackLayout>
-    
     </ContentPage.Content>
 </ContentPage>
-
- 

@@ -23,7 +23,7 @@ namespace YamaCaisse.Pages
         private List<Production> listProduction;
         private CancellationTokenSource cancellation;
         private List<Table> listTable;
-
+        public List<LigneTicket> listRecap; 
         public ProductionPage()
         {
 
@@ -35,7 +35,8 @@ namespace YamaCaisse.Pages
             StartActivityIndicateur(false);
             this.cancellation = new CancellationTokenSource();
             this.startTimer();
-            
+            listRecap = new List<LigneTicket>();
+
         }
 
         void startTimer()
@@ -113,7 +114,8 @@ namespace YamaCaisse.Pages
                     
                 };
 
-
+                GdListBon.Children.Clear();
+              
                 foreach (var item in listBon.Take(16))
                 {
                     var bprod = new BonProductionView();
@@ -133,7 +135,7 @@ namespace YamaCaisse.Pages
 
                     }
                 }
-               
+                CreateRecap();
             }
             catch (Exception ex)
             {
@@ -143,29 +145,30 @@ namespace YamaCaisse.Pages
         }
 
 
-        private List<LigneTicket> CreateRecap(List<BonProduction> ListAll)
+        public  async Task CreateRecap()
         {
+            List<BonProduction> ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+
             List<LigneTicket> list = new List<LigneTicket>();
             foreach (var BligneTicket in ListAll.Select(c=>c.T_BON_LIGNE_TICKET.Select(d=>d.T_LIGNE_TICKET)))
             {
                 foreach(var ligne in BligneTicket)
                 {
-                    if(list.Select(c=>c.T_PRODUIT).Contains(ligne.T_PRODUIT))
+                    if(list.Select(c=>c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
                     {
-                        list.SingleOrDefault(c => c.T_PRODUIT == ligne.T_PRODUIT).LTK_QTE += ligne.LTK_QTE; 
+                        list.SingleOrDefault(c => c.T_PRODUIT.PDT_Designation == ligne.T_PRODUIT.PDT_Designation).LTK_QTE += ligne.LTK_QTE; 
                     }
+                    else
                     list.Add(ligne);
                 }
             }
-            return list;
+            this.ListRecapToDo.ItemsSource = list;
         }
 
         public void RemoveBonProduction(BonProductionView view)
         {
             GdListBon.Children.Remove(view);
         }
-
-
 
     }
 }
