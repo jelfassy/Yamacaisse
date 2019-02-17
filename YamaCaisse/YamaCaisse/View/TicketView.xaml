@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse" xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse" x:Class="YamaCaisse.View.TicketView">
+    <ContentView.Content>
+        <StackLayout x:Name="StkList" Grid.Column="2" BackgroundColor="White" VerticalOptions="StartAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="8*" />
+                    <RowDefinition Height="2" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Clicked="Click_SelectTable" Text="{Binding TableName, Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
+                <BoxView Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
+                <Label Grid.Row="0" Grid.Column="2" Text="{Binding MontantTotal,StringFormat='{0:0.00}',Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
+                <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
+                <Button Clicked="Click_NbCouvert" Grid.Row="0" Grid.Column="4" Text="{Binding NbCouvert,Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
+                <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+                <ListView x:Name="E_listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" HasUnevenRows="true" ItemsSource="{Binding ListLigneTicket,Source={x:Static local:TicketViewModel.Current}}" SeparatorVisibility="None" ItemAppearing="listLigne_ItemAppearing">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Appearing="Cell_OnAppearing">
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="Click_ChangeReclame" CommandParameter="{Binding .}" Text="Suite" />
+                                    <MenuItem Clicked="Message_Clicked" CommandParameter="{Binding .}" Text="Change" />
+                                    <MenuItem Clicked="Supprimer_Clicked" CommandParameter="{Binding .}" Text="Supprimer" IsDestructive="true" />
+                                </ViewCell.ContextActions>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40" />
+                                        <RowDefinition Height="{Binding SizeUnderList}" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20" />
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="5*" />
+                                        <ColumnDefinition Width="1*" />
+                                    </Grid.ColumnDefinitions>
+                                    <BoxView Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding T_RECLAME.REC_COLOR}" />
+                                    <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding T_RECLAME.REC_NAME}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Click_Quantite}" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                    <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding T_PRODUIT.PDT_Prix,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                    <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="Start" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LIST_COMPLEMENT}">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell Appearing="CellUnder_OnAppearing" x:Name="UnderViewCell">
+                                                    <ViewCell.View>
+                                                        <Grid>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="25" />
+                                                            </Grid.RowDefinitions>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="5*" />
+                                                                <ColumnDefinition Width="1*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
+                                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_PRODUIT.PDT_Prix ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                        </Grid>
+                                                    </ViewCell.View>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <BoxView Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+                <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="nb Element" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding NbElemCommand,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="Reste A Payer" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding ResteAPayer,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
