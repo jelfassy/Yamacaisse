@@ -107,7 +107,7 @@ namespace YamaCaisse.View
         {
             Button btn = (Button)sender;
             int idpgpd = int.Parse(btn.ClassId);
-            btn.TextColor = Color.FromHex("#00BCD4");
+            btn.TextColor = Color.FromHex("#212121");
             int Number = 1;
             var pageprod = listPageProduit.SingleOrDefault(c => c.PGPD_ID == idpgpd);
             int idpoduit = pageprod.FK_PDT_ID;
