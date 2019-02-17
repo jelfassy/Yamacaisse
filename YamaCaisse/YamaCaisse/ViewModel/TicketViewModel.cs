@@ -289,7 +289,7 @@ namespace YamaCaisse.ViewModel
             var newlist = new ObservableCollection<LigneTicket>();
             foreach(var item in TicketViewModel.Current.ListLigneTicket)
             {
-                var inlist = newlist.SingleOrDefault(c => c.T_PRODUIT == item.T_PRODUIT && c.T_RECLAME == item.T_RECLAME);
+                var inlist = newlist.SingleOrDefault(c => c.T_PRODUIT == item.T_PRODUIT && c.LIST_COMPLEMENT == item.LIST_COMPLEMENT && c.T_RECLAME == item.T_RECLAME);
                 if(inlist != null)
                 {
                         inlist.LTK_QTE += item.LTK_QTE;
