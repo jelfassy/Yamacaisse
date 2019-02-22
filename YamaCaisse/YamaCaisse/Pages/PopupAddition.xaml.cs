@@ -41,6 +41,8 @@ namespace YamaCaisse.Pages
             }
         }
 
+        public bool FirstPressNumber { get; set; }
+
         public int IdTypePaiement
         {
             get;
@@ -98,6 +100,7 @@ namespace YamaCaisse.Pages
             LoadData();
             stkBtSplit.IsVisible = true;
             StkplitDetail.IsVisible = false;
+            FirstPressNumber = true;
         }
 
         public async void LoadData()
@@ -196,8 +199,14 @@ namespace YamaCaisse.Pages
 
         void Click_Number(object sender, EventArgs e)
         {
+            if (this.FirstPressNumber)
+            {
+                eMontantPayer.Text = (sender as Button).Text;
+                this.FirstPressNumber = false;
+            }
+            else
             eMontantPayer.Text = string.Concat(this.eMontantPayer.Text, (sender as Button).Text);
-            //  this.EntryNbCouvert.Text =
+
         }
 
         void Click_Split(object sender, EventArgs e)
@@ -255,6 +264,7 @@ namespace YamaCaisse.Pages
             {
                 if (this.IdTypePaiement != 0)
                 {
+                    this.FirstPressNumber = true;
                     var paiement = new PaiementTicket()
                     {
                         FK_TIK_ID = this.TikId,
@@ -272,7 +282,7 @@ namespace YamaCaisse.Pages
                         this.MontantTotal = 0;
                         if (this._maintTicketPage != null)
                             _maintTicketPage.loadData();
-                        //  await PopupNavigation.PopAsync(false);
+                       //  await PopupNavigation.PopAsync(false);
                     }
                     else
                     {
