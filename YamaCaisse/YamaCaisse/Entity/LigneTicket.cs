@@ -127,6 +127,13 @@ namespace YamaCaisse.Entity
             }
         }
 
+        public void RefreshListProperty()
+        {
+            OnPropertyChanged(nameof(LIST_COMPLEMENT));
+            OnPropertyChanged(nameof(VisibleComplement));
+            OnPropertyChanged(nameof(SizeUnderList));
+        }
+
         public bool? VisibleComplement
         {
             get
@@ -152,15 +159,6 @@ namespace YamaCaisse.Entity
                     return 20 * this._LIST_COMPLEMENT.Count;
             }
         }
-    //private List<LigneTicket> _LIST_COMPLEMENT;
-    //public List<LigneTicket> LIST_COMPLEMENT
-    //{
-    //    get { return _LIST_COMPLEMENT;}
-    //    set{
-    //        _LIST_COMPLEMENT = value;
-    //        OnPropertyChanged(nameof(LIST_COMPLEMENT));
-    //    }
-    //}
 
     public event PropertyChangedEventHandler PropertyChanged;
 

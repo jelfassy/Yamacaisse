@@ -51,5 +51,39 @@ namespace YamaCaisse.Services.RapportServices
                 throw ex;
             }
         }
+
+        public async Task<bool> GetRapportCouvert()
+        {
+            try
+            {
+                bool res = false;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Couvert/", ConfigViewModel.Current.Printer.PRT_ID));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetRapportJour" }
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetRapportJour" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
     }
 }

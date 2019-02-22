@@ -24,7 +24,6 @@ namespace YamaCaisse.View
             InitializeComponent();
             this.switchcolor = false;
             BindingContext = this;
-            this.ticketViewModel = App.TicketViewModel;
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
         }
@@ -36,21 +35,9 @@ namespace YamaCaisse.View
         public ListView ListligneTicket
         {
             get { return this.E_listligneTicket; }
-            set { E_listligneTicket = value; }
+            set { E_listligneTicket = value;}
         }
 
-        private TicketViewModel _ticketViewModel;
-
-
-        public TicketViewModel ticketViewModel
-        {
-            get { return _ticketViewModel; }
-            set
-            {
-                _ticketViewModel = value;
-                OnPropertyChanged(nameof(ticketViewModel));
-            }
-        }
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new PopupCouvert());

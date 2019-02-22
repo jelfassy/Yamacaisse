@@ -28,7 +28,6 @@ namespace YamaCaisse.ViewModel
         {
             OnPropertyChanged(nameof(MontantTotal));
             OnPropertyChanged(nameof(ListLigneTicket));
-
         }
 
         public void Clear()

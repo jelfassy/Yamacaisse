@@ -105,3 +105,7 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupQuantite.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/ReservationPage.xaml.g.cs
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Plugin.SimpleAudioPlayer.Abstractions.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Plugin.SimpleAudioPlayer.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Plugin.SimpleAudioPlayer.Abstractions.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Plugin.SimpleAudioPlayer.pdb

@@ -29,6 +29,7 @@ namespace YamaCaisse.View
 
         public bool? Autoclose { get; set; }
 
+        public bool? IsFormulePage { get; set; }
 
         public ProduitListView()
         {
@@ -50,6 +51,7 @@ namespace YamaCaisse.View
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             var Lpage =  await _pageDataServices.GetPageList();
             var page = Lpage.SingleOrDefault(c => c.PAG_ID == this.IdPage);
+            this.IsFormulePage = page.PAG_MENU;
             this.Autoclose = page.PAG_AUTOCLOSE;
             lstProduitPage = new List<Produit>();
 
@@ -73,11 +75,7 @@ namespace YamaCaisse.View
                         // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                        
                     };
-                    //if (!string.IsNullOrEmpty(item.PGPD_COLOR))
-                    //{
-                    //    button.BorderColor = Color.FromHex(item.PGPD_COLOR);
-                    //    button.TextColor = Color.FromHex(item.PGPD_COLOR);
-                    //}
+
                     if (!string.IsNullOrEmpty(item.PGPD_COLOR))
                     {
                         button.TextColor = Color.WhiteSmoke;
@@ -85,9 +83,6 @@ namespace YamaCaisse.View
                         button.BorderColor = Color.FromHex(item.PGPD_COLOR);
                     }
 
-                    //if (item.T_PRODUIT.PDT_Designation.Contains(" "))
-                    //    button.Text = item.T_PRODUIT.PDT_Designation.Replace(" ", "\r\n");
-                    //else
                     button.Text = item.T_PRODUIT.PDT_Designation;
                     button.WidthRequest = 70;
                     button.HeightRequest = 70;
@@ -114,7 +109,7 @@ namespace YamaCaisse.View
             var prod = pageprod.T_PRODUIT;
             if (prod.PDT_INFO_BT != true)
             {
-                if (prod.PDT_Prix != null)
+                if (prod.PDT_Prix != null && IsFormulePage != true)
                     TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal + (decimal)prod.PDT_Prix * Number;
 
                 var ligneTicket = new LigneTicket()
@@ -122,7 +117,6 @@ namespace YamaCaisse.View
                     FK_EMP_ID = App.UserId,
                     FK_PDT_ID = idpoduit,
                     T_PRODUIT = prod,
-                    LTK_SOMME = prod.PDT_Prix.HasValue ? prod.PDT_Prix * Number : 0,
                     LTK_QTE = 1,
                     LTK_DATE = DateTime.Now,
                     FK_TVA_ID = prod.FK_TVA_ID.HasValue ? prod.FK_TVA_ID.Value : 0,
@@ -131,24 +125,37 @@ namespace YamaCaisse.View
                     T_TVA = prod.T_TVA,
                 };
 
-                if (prod.PDT_Prix.HasValue && prod.T_TVA != null)
+                if(this.IsFormulePage != true)
                 {
-                    var HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
+                    if (prod.PDT_Prix.HasValue && prod.T_TVA != null)
+                    {
+                        ligneTicket.LTK_SOMME = prod.PDT_Prix.HasValue ? prod.PDT_Prix * Number : 0;
 
-                    ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_Prix.Value - HT), 2);
+                        var HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
+
+                        ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_Prix.Value - HT), 2);
+                    }
+                }
+                else
+                {
+                    ligneTicket.LTK_SOMME = 0;
+                    ligneTicket.LTK_MNT_TVA = 0;
                 }
 
 
                 if (TicketViewModel.Current.NbElemCommand == null)
                     TicketViewModel.Current.NbElemCommand = 0;
 
-                if (TicketViewModel.Current.SelectedligneTicket != null && prod.PDT_COMPLEMENT == true)
+                if ((TicketViewModel.Current.SelectedligneTicket != null 
+                                    && prod.PDT_COMPLEMENT == true) || this.IsFormulePage == true)
                 {
-                    if (TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c == TicketViewModel.Current.SelectedligneTicket).LIST_COMPLEMENT == null)
-                        TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c == TicketViewModel.Current.SelectedligneTicket).LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
+                    TicketViewModel.Current.ListLigneTicket.Remove(TicketViewModel.Current.SelectedligneTicket);
+                    if (TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT == null)
+                        TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
 
-                    TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c == TicketViewModel.Current.SelectedligneTicket).LIST_COMPLEMENT.Add(ligneTicket);
-                    TicketViewModel.Current.RefreshListProperty();
+                    TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT.Add(ligneTicket);
+
+                    TicketViewModel.Current.ListLigneTicket.Add(TicketViewModel.Current.SelectedligneTicket);
                 }
                 else
                 {
@@ -163,6 +170,7 @@ namespace YamaCaisse.View
                         TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);
                     }
                 }
+
                 TicketViewModel.Current.RefreshListProperty();
                 if (pageprod.PAG_ADD_ID != null)
                 {

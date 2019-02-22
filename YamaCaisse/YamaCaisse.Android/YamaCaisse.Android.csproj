@@ -157,6 +157,12 @@
     <Reference Include="Microsoft.AppCenter.Crashes">
       <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.13.0\lib\MonoAndroid403\Microsoft.AppCenter.Crashes.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.3.0\lib\MonoAndroid10\Plugin.SimpleAudioPlayer.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.3.0\lib\MonoAndroid10\Plugin.SimpleAudioPlayer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -173,6 +179,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\Bip.mp3" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

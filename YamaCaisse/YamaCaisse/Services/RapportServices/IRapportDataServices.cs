@@ -5,5 +5,6 @@ namespace YamaCaisse.Services.RapportServices
     public interface IRapportDataServices
     {
         Task<bool> GetRapportJour();
+        Task<bool> GetRapportCouvert();
     }
 }

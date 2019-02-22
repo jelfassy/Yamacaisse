@@ -23,14 +23,15 @@ namespace YamaCaisse.Pages
         private List<Production> listProduction;
         private CancellationTokenSource cancellation;
         private List<Table> listTable;
-        public List<LigneTicket> listRecap; 
+        public List<LigneTicket> listRecap;
+        private int LastBon;
         public ProductionPage()
         {
 
             InitializeComponent();
             StartActivityIndicateur(true);
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
-            LoadTable();  
+            LoadTable();
             LoadData(true);
             StartActivityIndicateur(false);
             this.cancellation = new CancellationTokenSource();
@@ -50,7 +51,7 @@ namespace YamaCaisse.Pages
             });
         }
 
-         void Click_Current(object sender, EventArgs e)
+        void Click_Current(object sender, EventArgs e)
         {
             btcurrent.BackgroundColor = Color.Green;
             bthisto.BackgroundColor = Color.Blue;
@@ -59,9 +60,9 @@ namespace YamaCaisse.Pages
             this.startTimer();
         }
 
-         void Click_Histo(object sender, EventArgs e)
+        void Click_Histo(object sender, EventArgs e)
         {
-          
+
             this.cancellation.Cancel();
             LoadData(false);
             btcurrent.BackgroundColor = Color.Blue;
@@ -70,9 +71,17 @@ namespace YamaCaisse.Pages
 
         async void Printer_Clicked(object sender, System.EventArgs e)
         {
+            PlaySound();
             await PopupNavigation.Instance.PushAsync(new PopupPinter());
 
         }
+
+        async void Click_Deconnexion(object sender, EventArgs e)
+        {
+            TicketViewModel.Current.Clear();
+            await Navigation.PushModalAsync(new YamaCaisse.MainPage());
+        }
+
 
         void StartActivityIndicateur(bool value)
         {
@@ -83,7 +92,7 @@ namespace YamaCaisse.Pages
 
         public async Task<List<Table>> LoadTable()
         {
-            if(listTable == null)
+            if (listTable == null)
             {
                 _tableDataServices = DependencyService.Get<ITableDataServices>();
                 listTable = await _tableDataServices.GetTableList();
@@ -110,21 +119,23 @@ namespace YamaCaisse.Pages
                 recapView.ProductionPage = this;
                 recapView.BonProduction = new BonProduction()
                 {
-                    Bon_DATE_DEBUT = DateTime.Now, 
-                    
+                    Bon_DATE_DEBUT = DateTime.Now,
+
                 };
 
                 GdListBon.Children.Clear();
-              
-                foreach (var item in listBon.Take(16))
+
+                foreach (var item in listBon)
                 {
+                    if (item.BON_ID > LastBon)
+                        PlaySound();
                     var bprod = new BonProductionView();
                     bprod.ProductionPage = this;
                     bprod.ListTable = await LoadTable();
                     bprod.BonProduction = item;
                     bprod.LoadData();
-                    GdListBon.Children.Add(bprod,column,row);
-                    if(column == 5)
+                    GdListBon.Children.Add(bprod, column, row);
+                    if (column == 5)
                     {
                         row++;
                         column = 0;
@@ -135,7 +146,9 @@ namespace YamaCaisse.Pages
 
                     }
                 }
-               await CreateRecap();
+                if(listBon.LastOrDefault() != null)
+                    LastBon = listBon.LastOrDefault().BON_ID;
+                await CreateRecap();
             }
             catch (Exception ex)
             {
@@ -145,16 +158,16 @@ namespace YamaCaisse.Pages
         }
 
 
-        public  async Task CreateRecap()
+        public async Task CreateRecap()
         {
             List<BonProduction> ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
 
             List<LigneTicket> list = new List<LigneTicket>();
-            foreach (var BligneTicket in ListAll.Select(c=>c.T_BON_LIGNE_TICKET.Select(d=>d.T_LIGNE_TICKET)))
+            foreach (var BligneTicket in ListAll.Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
             {
-                foreach(var ligne in BligneTicket)
+                foreach (var ligne in BligneTicket)
                 {
-                    if(list.Select(c=>c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
+                    if (list.Select(c => c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
                     {
                         if (ligne.LIST_COMPLEMENT.Count == 0 || list.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
                             list.SingleOrDefault(c => c.T_PRODUIT.PDT_Designation == ligne.T_PRODUIT.PDT_Designation).LTK_QTE += ligne.LTK_QTE;
@@ -162,7 +175,7 @@ namespace YamaCaisse.Pages
                             list.Add(ligne);
                     }
                     else
-                    list.Add(ligne);
+                        list.Add(ligne);
                 }
             }
             this.ListRecapToDo.ItemsSource = list;
@@ -171,6 +184,14 @@ namespace YamaCaisse.Pages
         public void RemoveBonProduction(BonProductionView view)
         {
             GdListBon.Children.Remove(view);
+        }
+
+
+        public void PlaySound()
+        {
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Bip.mp3");
+            player.Play();
         }
 
     }

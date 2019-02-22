@@ -147,6 +147,7 @@
     <BundleResource Include="Resources\Tab2_rond_220.png" />
     <BundleResource Include="Resources\Tab4_carre_90.png" />
     <BundleResource Include="Resources\Tab4_rond_90.png" />
+    <BundleResource Include="Resources\Bip.mp3" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -204,6 +205,12 @@
     <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
       <HintPath>..\..\packages\Microsoft.AppCenter.Crashes.1.13.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.3.0\lib\Xamarin.iOS10\Plugin.SimpleAudioPlayer.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.3.0\lib\Xamarin.iOS10\Plugin.SimpleAudioPlayer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

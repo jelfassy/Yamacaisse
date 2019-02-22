@@ -170,3 +170,7 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csproj.CopyComplete
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.exe
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.Abstractions.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.Abstractions.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.xml

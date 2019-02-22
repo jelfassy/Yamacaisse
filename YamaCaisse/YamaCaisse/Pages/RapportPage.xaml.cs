@@ -22,9 +22,9 @@ namespace YamaCaisse.Pages
             var rs = await _rapportDataServices.GetRapportJour();
         }
 
-        void RapportCouvert_Clicked(object sender, System.EventArgs e)
+        async void RapportCouvert_Clicked(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            var rs = await _rapportDataServices.GetRapportCouvert();
         }
     }
 }
