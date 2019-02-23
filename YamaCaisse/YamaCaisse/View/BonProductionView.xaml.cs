@@ -42,6 +42,7 @@ namespace YamaCaisse.View
 
             var grouped = new ObservableCollection<GroupReclameModel>();
 
+            //IsGroupingEnabled="true" GroupDisplayBinding="{Binding TxtReclame}" GroupShortNameBinding="" 
             SetColorView(DateTime.Now - BonProduction.Bon_DATE_DEBUT);
             var list = new List<GroupReclameModel>();
             GroupReclameModel group;

@@ -17,7 +17,7 @@
             <Label x:Name="lblTimer" Text="" Grid.Row="0" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
             <Label x:Name="lblServeur" Text="" Grid.Row="1" Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
         </Grid>
-        <ListView x:Name="E_listligneTicket" IsGroupingEnabled="true" GroupDisplayBinding="{Binding TxtReclame}" GroupShortNameBinding="" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" HasUnevenRows="true" ItemsSource="" SeparatorVisibility="None" ItemAppearing="listLigne_ItemAppearing">
+        <ListView x:Name="E_listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" HasUnevenRows="true" ItemsSource="" SeparatorVisibility="None" ItemAppearing="listLigne_ItemAppearing">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Appearing="Cell_OnAppearing">
