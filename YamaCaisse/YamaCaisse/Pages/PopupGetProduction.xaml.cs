@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AppCenter.Crashes;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -49,12 +50,23 @@ namespace YamaCaisse.Pages
 
         private async void Click_Production(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            int idProduction = int.Parse(btn.ClassId);
+            try
+            {
+                Button btn = (Button)sender;
+                int idProduction = int.Parse(btn.ClassId);
 
-            ConfigViewModel.Current.Production = listProduction.SingleOrDefault(c => c.PROD_ID == idProduction);
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.ProductionPage());
-            await PopupNavigation.PopAsync(false);
+                ConfigViewModel.Current.Production = listProduction.SingleOrDefault(c => c.PROD_ID == idProduction);
+                await Navigation.PushModalAsync(new YamaCaisse.Pages.ProductionPage());
+                await PopupNavigation.PopAsync(false);
+            }catch(Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"production","Open"}
+                };
+                Crashes.TrackError(ex, property);
+            }
+
 
 
         }
