@@ -49,6 +49,11 @@ namespace YamaCaisse.View
               await PopupNavigation.Instance.PushAsync(new PopupTable(this));
         }
 
+        async void Click_Menu(object sender, System.EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupTable(this));
+        }
+
 
         void listLigne_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
         {

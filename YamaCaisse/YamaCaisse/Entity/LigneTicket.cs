@@ -156,7 +156,7 @@ namespace YamaCaisse.Entity
                 else if (this._LIST_COMPLEMENT.Count == 0)
                     return 0;
                 else
-                    return 20 * this._LIST_COMPLEMENT.Count;
+                    return 10 * this._LIST_COMPLEMENT.Count;
             }
         }
 

@@ -13,6 +13,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="2" />
+                    <RowDefinition Height="{Binding HeightRownMenu,Source={x:Static local:TicketViewModel.Current}}" />
                     <RowDefinition Height="8*" />
                     <RowDefinition Height="2" />
                     <RowDefinition Height="1*" />
@@ -23,7 +24,11 @@
                 <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
                 <Button Clicked="Click_NbCouvert" Grid.Row="0" Grid.Column="4" Text="{Binding NbCouvert,Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
                 <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-                <ListView x:Name="E_listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" HasUnevenRows="true" ItemsSource="{Binding ListLigneTicket,Source={x:Static local:TicketViewModel.Current}}" SeparatorVisibility="None" ItemAppearing="listLigne_ItemAppearing" >
+               
+                <Button Clicked="Click_Menu" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Text="Menu" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding HaveMenuInTicket,Source={x:Static local:TicketViewModel.Current}}" />
+          
+                
+                <ListView x:Name="E_listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" HasUnevenRows="true" ItemsSource="{Binding ListLigneTicket,Source={x:Static local:TicketViewModel.Current}}" SeparatorVisibility="None" ItemAppearing="listLigne_ItemAppearing" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell Appearing="Cell_OnAppearing">
@@ -78,8 +83,8 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <BoxView Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-                <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5">
+                <BoxView Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+                <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />

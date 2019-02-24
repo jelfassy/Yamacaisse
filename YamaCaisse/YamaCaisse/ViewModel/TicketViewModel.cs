@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -134,7 +135,8 @@ namespace YamaCaisse.ViewModel
         public decimal? ResteAPayer
         {
             get { return _resteAPayer; }
-            set {
+            set
+            {
                 _resteAPayer = value;
                 OnPropertyChanged(nameof(ResteAPayer));
             }
@@ -151,6 +153,38 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+        public int HeightRownMenu
+        {
+            get
+            {
+                if (this.HaveMenuInTicket)
+                    return 30;
+                return 0;
+
+            }
+        }
+
+        public bool HaveMenuInTicket
+        {
+            get
+            {
+                if (ListLigneTicket == null)
+                    return false;
+                if (ListLigneTicket.Count > 0)
+                {
+                    var rs = ListLigneTicket.Select(c => c.T_PRODUIT).Where(c => c.Pdt_IsMenu == true);
+                    return rs.Any();
+                }
+                return false;
+            }
+        }
+
+        public List<Produit> GetListOpenFormule()
+        {
+            var rs = ListLigneTicket.Select(c => c.T_PRODUIT).Where(c => c.Pdt_IsMenu == true);
+            return rs.ToList();
+        }
+
         private ObservableCollection<LigneTicket> _listLigneTicket;
 
         public ObservableCollection<LigneTicket> ListLigneTicket
@@ -164,7 +198,8 @@ namespace YamaCaisse.ViewModel
         }
 
         private ObservableCollection<PaiementTicket> _listPaiementTicket;
-        public ObservableCollection<PaiementTicket> ListPaiementTicket{
+        public ObservableCollection<PaiementTicket> ListPaiementTicket
+        {
             get { return _listPaiementTicket; }
             set
             {
@@ -185,7 +220,7 @@ namespace YamaCaisse.ViewModel
                 TIK_NB_COUVERT = this.NbCouvert,
                 T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
                 FK_JOU_ID = App.JourId,
-               
+
             };
             if (App.ConfigViewModel.Printer != null)
                 ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
@@ -224,12 +259,12 @@ namespace YamaCaisse.ViewModel
                 ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
             if (ListLigneTicket == null)
                 ListLigneTicket = new ObservableCollection<LigneTicket>();
-            foreach (var ligne in ListLigneTicket.Where(c=>c.LTK_SEND != true))
+            foreach (var ligne in ListLigneTicket.Where(c => c.LTK_SEND != true))
             {
                 ligne.T_PRODUIT = null;
                 ligne.T_RECLAME = null;
                 ligne.T_TVA = null;
-                ligne.T_EMPLOYE = null; 
+                ligne.T_EMPLOYE = null;
                 ticket.T_LIGNE_TICKET.Add(ligne);
                 if (ligne.LIST_COMPLEMENT?.Count > 0)
                 {
@@ -256,7 +291,7 @@ namespace YamaCaisse.ViewModel
             if (ticket.TIK_ID != 0)
             {
 
-                                this.SetTicket(ticket);
+                this.SetTicket(ticket);
             }
             else
             {
@@ -286,20 +321,20 @@ namespace YamaCaisse.ViewModel
         public void ComprTicket()
         {
             var newlist = new ObservableCollection<LigneTicket>();
-            foreach(var item in TicketViewModel.Current.ListLigneTicket)
+            foreach (var item in TicketViewModel.Current.ListLigneTicket)
             {
                 var inlist = newlist.SingleOrDefault(c => c.T_PRODUIT == item.T_PRODUIT && c.LIST_COMPLEMENT == item.LIST_COMPLEMENT && c.T_RECLAME == item.T_RECLAME);
-                if(inlist != null)
+                if (inlist != null)
                 {
-                        inlist.LTK_QTE += item.LTK_QTE;
-                        inlist.LTK_MNT_TVA += item.LTK_MNT_TVA;
-                        inlist.LTK_SOMME += item.LTK_SOMME; 
+                    inlist.LTK_QTE += item.LTK_QTE;
+                    inlist.LTK_MNT_TVA += item.LTK_MNT_TVA;
+                    inlist.LTK_SOMME += item.LTK_SOMME;
                 }
                 else
                 {
                     newlist.Add(item);
                 }
-        
+
             }
             TicketViewModel.Current.ListLigneTicket = newlist;
         }
