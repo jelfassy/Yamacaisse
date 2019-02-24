@@ -164,6 +164,9 @@
       <DependentUpon>ReservationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\GroupReclameModel.cs" />
+    <Compile Include="Pages\PopupFormule.xaml.cs">
+      <DependentUpon>PopupFormule.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -262,6 +265,10 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\ReservationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PopupFormule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
