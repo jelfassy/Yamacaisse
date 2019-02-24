@@ -26,6 +26,8 @@ namespace YamaCaisse.Pages
 
         public MainTicketPage _maintTicketPage { get; set; }
 
+        public MainTablePage _mainTabkePage { get; set; }
+
         private decimal _montantTotal;
 
         public decimal MontantTotal
@@ -111,8 +113,9 @@ namespace YamaCaisse.Pages
             TicketViewModel.Current.SetTicket(ticket);
             if (ticket.T_PAIEMENT_TICKET != null)
                 ListPaiementEncaisser = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
-            MontantTotal = (decimal)TicketViewModel.Current.ListLigneTicket.Sum(c => c.LTK_SOMME);
-
+            MontantTotal = (decimal)TicketViewModel.Current.ListLigneTicket.Where(c=>c.FK_PATI_ID == null).Sum(c => c.LTK_SOMME);
+            if(MontantTotal == 0)
+                await PopupNavigation.PopAsync(false);
         }
 
 
@@ -161,6 +164,7 @@ namespace YamaCaisse.Pages
                 {
                     ListSelectedLigneTicket.Add(ligne);
                     TicketViewModel.Current.ListLigneTicket.Remove(ligne);
+                    TicketViewModel.Current.MontantTotal -= ligne.LTK_SOMME.Value;
                     MontantTotal = MontantTotal + ligne.LTK_SOMME.Value;
                 }
                 else
@@ -186,6 +190,7 @@ namespace YamaCaisse.Pages
                 var ligne = e.Item as LigneTicket;
                 ListSelectedLigneTicket.Remove(ligne);
                 TicketViewModel.Current.ListLigneTicket.Add(ligne);
+                TicketViewModel.Current.MontantTotal += ligne.LTK_SOMME.Value;
                 // eMontantPayer.Text = ((decimal.Parse(eMontantPayer.Text) - ligne.LTK_SOMME).ToString());
                 MontantTotal = MontantTotal - ligne.LTK_SOMME.Value;
                 if (ListSelectedLigneTicket.Count == 0)
@@ -217,7 +222,7 @@ namespace YamaCaisse.Pages
             }
             else
             {
-                MontantTotal = 0;
+                MontantTotal = TicketViewModel.Current.MontantTotal;
 
             }
             stkBtSplit.IsVisible = false;
@@ -255,7 +260,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Fiche(object sender, EventArgs e)
         {
-            await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
+            await _ticketDataServices.PrintFiche((int)TicketViewModel.Current.TKT_ID);
         }
 
         async void Click_Encaisser(object sender, EventArgs e)
@@ -280,9 +285,12 @@ namespace YamaCaisse.Pages
                     {
                         // si le traitement est ok
                         this.MontantTotal = 0;
+                        this.ListSelectedLigneTicket.Clear();
                         if (this._maintTicketPage != null)
                             _maintTicketPage.loadData();
-                       //  await PopupNavigation.PopAsync(false);
+                        if(this._mainTabkePage != null)
+                            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
+                        //  await PopupNavigation.PopAsync(false);
                     }
                     else
                     {

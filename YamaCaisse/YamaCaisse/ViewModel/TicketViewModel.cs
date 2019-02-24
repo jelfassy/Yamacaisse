@@ -53,7 +53,7 @@ namespace YamaCaisse.ViewModel
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
                 this.TableName = ticket?.T_TABLE?.TAB_NOM;
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
-                this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET.Where(c=>c.FK_PATI_ID == null));
+                this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
                 this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
             }
         }

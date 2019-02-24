@@ -65,8 +65,9 @@ namespace YamaCaisse.View
                 grouped.Add(ll);
             this.lblnbPlat.Text = nbPlat.ToString();
 
-            // this.E_listligneTicket.ItemsSource = grouped; 
-            this.E_listligneTicket.ItemsSource = BonProduction.T_BON_LIGNE_TICKET;
+
+            this.E_listligneTicket.ItemsSource = grouped; 
+            //this.E_listligneTicket.ItemsSource = BonProduction.T_BON_LIGNE_TICKET;
         }
 
         private void SetColorView(TimeSpan? timeSpan)
