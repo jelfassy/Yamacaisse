@@ -44,6 +44,10 @@ namespace YamaCaisse
         {
             try
             {
+                if (this.AdresseServeur.Text.StartsWith("192"))
+                    this.typeconnection = "http://";
+                else
+                    this.typeconnection = "https://"
                 App.UrlGateway = typeconnection + this.AdresseServeur.Text + "/";
                 Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
                 _userDataServices = DependencyService.Get<IUserDataServices>();

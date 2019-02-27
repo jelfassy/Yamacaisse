@@ -13,7 +13,7 @@ namespace YamaCaisse.Pages
         public PopupFormule()
         {
             InitializeComponent();
-            this.IdPage = TicketViewModel.Current.GetListOpenFormule().FirstOrDefault().PDT_PageFormule;
+            this.IdPage = TicketViewModel.Current.GetListOpenFormule().FirstOrDefault().PDT_PageFormule.Value;
             this.PageProduitControl.InitProduitButton(this.IdPage);
         }
 

@@ -46,7 +46,7 @@ namespace YamaCaisse.Entity
 
         public bool? Pdt_IsMenu { get; set; }
 
-        public int PDT_PageFormule { get; set; }
+        public int? PDT_PageFormule { get; set; }
 
         public Reclame T_RECLAME
         {
