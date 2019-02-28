@@ -5,6 +5,7 @@ using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Services.ReclameServices;
+using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
@@ -56,7 +57,7 @@ namespace YamaCaisse.Pages
         {
             Button btn = (Button)sender;
             int idRec = int.Parse(btn.ClassId);
-            await _reclameDataServices.CallReclame(this.IdTable, idRec);
+            await _reclameDataServices.CallReclame(TicketViewModel.Current.TKT_ID, idRec);
             await PopupNavigation.PopAsync(false);
         }
     }

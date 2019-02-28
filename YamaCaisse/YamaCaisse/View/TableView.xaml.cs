@@ -171,6 +171,8 @@ namespace YamaCaisse.View
                     row = row + 1;
                     col = 0;
                 }
+                if (row == 6)
+                    break;
             }
 
             StkTableList.Children.Add(grid);
