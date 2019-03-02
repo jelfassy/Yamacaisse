@@ -181,6 +181,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\values\Bip.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInPackage>true</IncludeInPackage>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_carre_V.png" />
     <AndroidResource Include="Resources\drawable\Tab4_rond_90.png" />
