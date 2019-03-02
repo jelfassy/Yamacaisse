@@ -173,16 +173,16 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="Resources\Bip.mp3">
+      <IncludeInPackage>true</IncludeInPackage>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\values\Bip.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInPackage>true</IncludeInPackage>
-    </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_carre_V.png" />
     <AndroidResource Include="Resources\drawable\Tab4_rond_90.png" />
     <AndroidResource Include="Resources\drawable\Tab4_rond.png" />
