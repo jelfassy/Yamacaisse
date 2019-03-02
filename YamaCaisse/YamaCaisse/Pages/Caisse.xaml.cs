@@ -57,7 +57,10 @@ namespace YamaCaisse.Pages
 
             firstLoad = false;
 
+          //  StkPageList.SizeChanged += StkPageList_SizeChanged;
+
         }
+
 
 
         public void ResetTicket()
@@ -166,26 +169,7 @@ namespace YamaCaisse.Pages
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        void Click_AddOne(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            var newlist = new ObservableCollection<LigneTicket>();
-            decimal? prixU;
-
-            foreach (var item in TicketViewModel.Current.ListLigneTicket)
-            {
-                if (item == this.ligneTicketSelected)
-                {
-                    prixU = item.LTK_SOMME / item.LTK_QTE;
-                    item.LTK_QTE = item.LTK_QTE + 1;
-                    item.LTK_SOMME = prixU * item.LTK_QTE;
-                    TicketViewModel.Current.MontantTotal = ((decimal)TicketViewModel.Current.MontantTotal) + (decimal)prixU;
-                }
-                newlist.Add(item);
-            }
-            TicketViewModel.Current.ListLigneTicket = newlist;
-        }
-
+    
 
 
         void Click_Compr(object sender, EventArgs e)

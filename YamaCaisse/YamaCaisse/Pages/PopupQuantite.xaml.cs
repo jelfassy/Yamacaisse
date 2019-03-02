@@ -16,21 +16,20 @@ namespace YamaCaisse.Pages
 
         void Click_Number(object sender, EventArgs e)
         {
-            this.EntryNbCouvert.Text = string.Concat(this.EntryNbCouvert.Text, (sender as Button).Text);
+            this.EntryNb.Text = string.Concat(this.EntryNb.Text, (sender as Button).Text);
         }
 
         void Click_Back(object sender, EventArgs e)
         {
-            if (this.EntryNbCouvert.Text != "")
-                this.EntryNbCouvert.Text = this.EntryNbCouvert.Text.Remove(this.EntryNbCouvert.Text.Length - 1);
+            if (this.EntryNb.Text != "")
+                this.EntryNb.Text = this.EntryNb.Text.Remove(this.EntryNb.Text.Length - 1);
         }
 
-        async void Click_Couvert(object sender, EventArgs e)
+        async void Click_Quantites(object sender, EventArgs e)
         {
 
-            TicketViewModel.Current.SelectedligneTicket.LTK_QTE = int.Parse(this.EntryNbCouvert.Text);
-
-           await PopupNavigation.PopAsync(false);
+            TicketViewModel.Current.ChangeLigneQuantite(int.Parse(this.EntryNb.Text));
+            await PopupNavigation.PopAsync(false);
         }
     }
 }

@@ -9,6 +9,7 @@ using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
 using System.Linq;
 using YamaCaisse.Services.PageServices;
+using System.Collections.ObjectModel;
 
 namespace YamaCaisse.View
 {
@@ -28,7 +29,7 @@ namespace YamaCaisse.View
             _tableDataServices = DependencyService.Get<ITableDataServices>();
         }
 
-      
+
 
         private bool switchcolor;
 

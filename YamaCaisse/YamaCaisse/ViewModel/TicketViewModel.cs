@@ -355,6 +355,19 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.ListLigneTicket = newlist;
         }
 
+        public void ChangeLigneQuantite(int quantite)
+        {
+            var newlist = new ObservableCollection<LigneTicket>();
+            foreach (var item in TicketViewModel.Current.ListLigneTicket)
+            {
+                if (item == Current.SelectedligneTicket)
+                {
+                    item.LTK_QTE = quantite;
+                }
+                newlist.Add(item);
+            }
+            TicketViewModel.Current.ListLigneTicket = newlist;
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

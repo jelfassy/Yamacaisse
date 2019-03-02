@@ -118,10 +118,10 @@ namespace YamaCaisse.View
                     return parent.Y + double.Parse(rr.SALTAB_LONGITUDE);
                 }), Constraint.RelativeToParent((parent) =>
                 {
-                    return 30;
+                    return 60;
                 }), Constraint.RelativeToParent((parent) =>
                 {
-                    return 30;
+                    return 60;
                 }));
 
             }
@@ -229,6 +229,7 @@ namespace YamaCaisse.View
 
         public async void Click_SelectTable(object sender, EventArgs e)
         {
+            UnSelectAllTable();
             var button = (Button)sender;
             button.BorderColor = Color.BlueViolet;
 
@@ -246,6 +247,19 @@ namespace YamaCaisse.View
                 CurrentPopupTable.ClosePopup();
              
         }
+
+        public void UnSelectAllTable()
+        {
+            var layout = StkTableList.Children.SingleOrDefault(c => c.GetType() == typeof(RelativeLayout));
+            //if(layout != null)
+            //{
+            //    for (int i = 0; i < layout.(); i++)
+            //    {
+            //        View child = relativeLayout.getChildAt(i);
+            //        // your processing...
+            //    }
+            //}       
+            }
 
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {

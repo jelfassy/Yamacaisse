@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
-             xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
-             x:Class="YamaCaisse.Pages.Caisse">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse" x:Class="YamaCaisse.Pages.Caisse">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
     </ContentPage.Padding>
@@ -20,12 +16,12 @@
                     </Grid.ColumnDefinitions>
                     <StackLayout x:Name="StkNumberList" Grid.Column="0" Orientation="Vertical">
                     </StackLayout>
-                    <StackLayout x:Name="StkPageList" Grid.Column="0" Orientation="Vertical">
-                    </StackLayout>
-                    <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="1"/>
-
+                    <ScrollView>
+                        <StackLayout x:Name="StkPageList" Grid.Column="0" Orientation="Vertical">
+                        </StackLayout>
+                    </ScrollView>
+                    <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="1" />
                     <localView:TicketView x:Name="ticketControl" Grid.Column="2" />
-     
                 </Grid>
                 <!-- Boutons de bas de pages -->
                 <Grid HorizontalOptions="StartAndExpand">
