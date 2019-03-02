@@ -189,9 +189,10 @@ namespace YamaCaisse.Pages
 
         public void PlaySound()
         {
-            //var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-            //player.Load("Bip.mp3");
-            //player.Play();
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load("Bip.mp3");
+            player.Play();
+
         }
 
     }
