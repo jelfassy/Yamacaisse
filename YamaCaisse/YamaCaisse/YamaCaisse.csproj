@@ -167,6 +167,7 @@
     <Compile Include="Pages\PopupFormule.xaml.cs">
       <DependentUpon>PopupFormule.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Behavior\AutoSizeBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -340,6 +341,7 @@
     <Folder Include="Services\BonProductionServices\" />
     <Folder Include="Services\PrinterServices\" />
     <Folder Include="Services\RapportServices\" />
+    <Folder Include="Behavior\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />

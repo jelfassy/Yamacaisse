@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="YamaCaisse.View.BonProductionView">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              xmlns:xf="clr-namespace:Xamarin.Forms"
+             x:Class="YamaCaisse.View.BonProductionView">
     <StackLayout Orientation="Vertical" Margin="0,10,10,10" BackgroundColor="White" MinimumWidthRequest="200" WidthRequest="200">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -22,9 +25,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Appearing="Cell_OnAppearing">
+                        <StackLayout Orientation="Vertical">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="50" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
@@ -33,12 +36,16 @@
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" Text="{Binding T_LIGNE_TICKET.LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                             <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" Text="{Binding T_LIGNE_TICKET.T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                            <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical"  Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1">
-                                <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding T_LIGNE_TICKET.VisibleComplement}" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" ItemsSource="{Binding T_LIGNE_TICKET.LIST_COMPLEMENT}">
+                           </Grid>
+                            <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical">
+                                <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding T_LIGNE_TICKET.VisibleComplement}" SeparatorVisibility="None" ItemsSource="{Binding T_LIGNE_TICKET.LIST_COMPLEMENT}">
+                                    <ListView.Behaviors>
+                                        <xf:AutoSizeBehavior />
+                                    </ListView.Behaviors>
                                     <ListView.ItemTemplate>
                                         <DataTemplate>
                                             <ViewCell x:Name="T_LIGNE_TICKET.UnderViewCell">
-                                                <ViewCell.View>
+                                                <ViewCell.View> 
                                                     <Grid>
                                                         <Grid.ColumnDefinitions>
                                                             <ColumnDefinition Width="5*" />
@@ -53,7 +60,7 @@
                                     </ListView.ItemTemplate>
                                 </ListView>
                             </StackLayout>
-                        </Grid>
+                            </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
