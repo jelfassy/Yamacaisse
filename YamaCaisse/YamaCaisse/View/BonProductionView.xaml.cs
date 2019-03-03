@@ -89,6 +89,7 @@ namespace YamaCaisse.View
         public void Cell_OnAppearing(object sender, EventArgs e)
         {
             var viewCell = (ViewCell)sender;
+           // viewCell.ForceUpdateSize();
         }
 
         async void Envoye_Clicked(object sender, System.EventArgs e)

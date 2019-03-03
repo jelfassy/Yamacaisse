@@ -58,7 +58,8 @@
                                     
                                     <Label Grid.Row="0" Grid.Column="2" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding T_PRODUIT.PDT_Prix,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                    <ListView x:Name="ListUnder" Margin="10,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="Start" HasUnevenRows="true" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LIST_COMPLEMENT}">
+                                     <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical"  Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1">
+                                    <ListView x:Name="ListUnder" Margin="10,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="Start" HasUnevenRows="true" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" ItemsSource="{Binding LIST_COMPLEMENT}">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <ViewCell Appearing="CellUnder_OnAppearing" x:Name="UnderViewCell">
@@ -79,6 +80,7 @@
                                             </DataTemplate>
                                         </ListView.ItemTemplate>
                                     </ListView>
+                                        </StackLayout>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

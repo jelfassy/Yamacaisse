@@ -3,7 +3,6 @@
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 20, 0, 0" WinPhone="0, 20, 0, 0" />
     </ContentPage.Padding>
-    
     <ContentPage.Content>
         <StackLayout x:Name="StkList" BackgroundColor="Gray" VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="0,10,0,0">
             <ActivityIndicator x:Name="actInd" Color="Blue" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" IsRunning="False" IsEnabled="False" />
@@ -18,59 +17,61 @@
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
-                     <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
                 <Button x:Name="btcurrent" Grid.Column="0" Grid.Row="1" Text="En Cours" Clicked="Click_Current" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 <Button x:Name="bthisto" Grid.Column="1" Grid.Row="1" Text="Historique" Clicked="Click_Histo" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 <Button x:Name="btPrinter" Grid.Column="2" Grid.Row="1" BackgroundColor="red" TextColor="White" Clicked="Printer_Clicked" Text="{Binding Printer.PRT_NAME, Source={x:Static localvm:ConfigViewModel.Current}}" />
-                <Button Grid.Column="3" Grid.Row="1"  Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="Red" TextColor="{StaticResource TextIconeColor}" />
+                <Button Grid.Column="3" Grid.Row="1" Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="Red" TextColor="{StaticResource TextIconeColor}" />
                 <BoxView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="4*" />
                 </Grid.ColumnDefinitions>
-                <ListView x:Name="ListRecapToDo" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White">
-                <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*" />
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1*" />
-                                <ColumnDefinition Width="4*" />
-                            </Grid.ColumnDefinitions>
-                            <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" Margin="10,0,0,0" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                            <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                        <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="Start" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LIST_COMPLEMENT}">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell x:Name="T_LIGNE_TICKET.UnderViewCell">
-                                                    <ViewCell.View>
-                                                        <Grid>
-                                                            <Grid.RowDefinitions>
-                                                                <RowDefinition Height="25" />
-                                                            </Grid.RowDefinitions>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="5*" />
-                                                                <ColumnDefinition Width="1*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_PRODUIT.PDT_Prix ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                                        </Grid>
-                                                    </ViewCell.View>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
+                <ListView x:Name="ListRecapToDo" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="White" HasUnevenRows="true">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Appearing="Handle_Appearing">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*" />
+                                        <ColumnDefinition Width="4*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" Margin="10,0,0,0" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                    <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                    <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1">
+                                        <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding VisibleComplement}" SeparatorVisibility="None"  ItemsSource="{Binding LIST_COMPLEMENT}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell x:Name="T_LIGNE_TICKET.UnderViewCell">
+                                                        <ViewCell.View>
+                                                            <Grid>
+                                                                <Grid.RowDefinitions>
+                                                                    <RowDefinition Height="*" />
+                                                                </Grid.RowDefinitions>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="5*" />
+                                                                    <ColumnDefinition Width="1*" />
+                                                                </Grid.ColumnDefinitions>
+                                                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
+                                                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_PRODUIT.PDT_Prix ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                                            </Grid>
+                                                        </ViewCell.View>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackLayout>
                                 </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
                 <Grid x:Name="GdListBon" Grid.Column="1">
                     <Grid.ColumnDefinitions>

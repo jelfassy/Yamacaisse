@@ -40,6 +40,12 @@ namespace YamaCaisse.Pages
 
         }
 
+        void Handle_Appearing(object sender, System.EventArgs e)
+        {
+            var viewCell = (ViewCell)sender;
+            viewCell.ForceUpdateSize();
+        }
+
         void startTimer()
         {
             Device.StartTimer(TimeSpan.FromSeconds(10), () =>
@@ -192,7 +198,6 @@ namespace YamaCaisse.Pages
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load("Bip.mp3");
             player.Play();
-
         }
 
     }
