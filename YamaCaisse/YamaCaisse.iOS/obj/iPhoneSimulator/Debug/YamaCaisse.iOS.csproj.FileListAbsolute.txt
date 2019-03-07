@@ -86,6 +86,8 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/device-builds/ipad4.2-12.1/optimized/
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/YamaCaisse.iOS.exe
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/YamaCaisse.iOS.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.Abstractions.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
@@ -97,6 +99,8 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.xml
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.Abstractions.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.xml
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
@@ -170,7 +174,3 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csproj.CopyComplete
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.exe
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.pdb
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.Abstractions.dll
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.dll
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.Abstractions.pdb
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Plugin.SimpleAudioPlayer.xml

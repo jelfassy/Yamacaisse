@@ -43,7 +43,7 @@ namespace YamaCaisse.Pages
         void Handle_Appearing(object sender, System.EventArgs e)
         {
             var viewCell = (ViewCell)sender;
-            viewCell.ForceUpdateSize();
+            //viewCell.ForceUpdateSize();
         }
 
         void startTimer()
@@ -136,6 +136,7 @@ namespace YamaCaisse.Pages
                     if (item.BON_ID > LastBon)
                         PlaySound();
                     var bprod = new BonProductionView();
+                    bprod.MinimumWidthRequest = 200;
                     bprod.ProductionPage = this;
                     bprod.ListTable = await LoadTable();
                     bprod.BonProduction = item;

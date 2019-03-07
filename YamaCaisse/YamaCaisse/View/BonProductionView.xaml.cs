@@ -42,23 +42,11 @@ namespace YamaCaisse.View
 
             var grouped = new ObservableCollection<GroupReclameModel>();
 
-            //IsGroupingEnabled="true" GroupDisplayBinding="{Binding TxtReclame}" GroupShortNameBinding="" 
             SetColorView(DateTime.Now - BonProduction.Bon_DATE_DEBUT);
             var list = new List<GroupReclameModel>();
-            GroupReclameModel group;
+           // GroupReclameModel group;
             foreach (var ligne in BonProduction.T_BON_LIGNE_TICKET.OrderBy(r => r.T_LIGNE_TICKET.FK_REC_ID))
             {
-                if (!list.Select(c => c.TxtReclame).Contains(ligne.T_LIGNE_TICKET.T_RECLAME.REC_NAME))
-                {
-                    group = new GroupReclameModel()
-                    {
-                        TxtReclame = ligne.T_LIGNE_TICKET.T_RECLAME.REC_NAME,
-                        ReclameId = ligne.T_LIGNE_TICKET.T_RECLAME.REC_ID
-                    };
-                    list.Add(group);
-                }
-                list.SingleOrDefault(c => c.TxtReclame == ligne.T_LIGNE_TICKET.T_RECLAME.REC_NAME).Add(ligne);
-
                 nbPlat = nbPlat + (int)ligne.T_LIGNE_TICKET.LTK_QTE;
             }
             foreach (var ll in list)
@@ -66,8 +54,8 @@ namespace YamaCaisse.View
             this.lblnbPlat.Text = nbPlat.ToString();
 
 
-            this.E_listligneTicket.ItemsSource = grouped; 
-            //this.E_listligneTicket.ItemsSource = BonProduction.T_BON_LIGNE_TICKET;
+            //this.E_listligneTicket.ItemsSource = grouped; 
+            this.E_listligneTicket.ItemsSource = BonProduction.T_BON_LIGNE_TICKET.Select(c => c.T_LIGNE_TICKET);
         }
 
         private void SetColorView(TimeSpan? timeSpan)
@@ -86,10 +74,10 @@ namespace YamaCaisse.View
         {
         }
 
-        public void Cell_OnAppearing(object sender, EventArgs e)
+        void Handle_Appearing(object sender, System.EventArgs e)
         {
             var viewCell = (ViewCell)sender;
-           // viewCell.ForceUpdateSize();
+            //viewCell.ForceUpdateSize();
         }
 
         async void Envoye_Clicked(object sender, System.EventArgs e)
@@ -100,6 +88,11 @@ namespace YamaCaisse.View
             var rs = await _bonProductionDataServices.PutBonProduction(this.idBon, this.BonProduction);
             await this.ProductionPage.CreateRecap();
             this.ProductionPage.RemoveBonProduction(this);
+        }
+
+        async void Print_Clicked(object sender,System.EventArgs e)
+        {
+            var 
         }
     }
 }
