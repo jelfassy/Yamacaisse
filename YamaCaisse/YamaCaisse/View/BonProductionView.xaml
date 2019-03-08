@@ -63,7 +63,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button BackgroundColor="Teal" TextColor="White" Text="Imprimer" Clicked="Print_Clicked" />
+<!--        <Button BackgroundColor="Teal" TextColor="White" Text="Imprimer" Clicked="Print_Clicked" />-->
         <Button BackgroundColor="Blue" TextColor="White" Text="Envoyé" Clicked="Envoye_Clicked" />
     </StackLayout>
 </ContentView>

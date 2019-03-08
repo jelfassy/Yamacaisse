@@ -6,7 +6,7 @@
                  x:Class="YamaCaisse.Pages.PopupFormule">
     <StackLayout x:Name="stkContent" Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" 
                  VerticalOptions="Center" Orientation="Vertical">
-        <StackLayout x:Name="stkCurFormule">
+        <StackLayout x:Name="stkCurFormule" Orientation="Horizontal">
             
         </StackLayout>
         <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="1" />

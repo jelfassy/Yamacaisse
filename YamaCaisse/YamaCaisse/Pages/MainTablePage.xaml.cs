@@ -65,7 +65,7 @@ namespace YamaCaisse.Pages
         {
             var caisse = new YamaCaisse.Pages.Caisse();
             TicketViewModel.Current.ListLigneTicket.Clear();
-           await Navigation.PushModalAsync(caisse);
+            await Navigation.PushModalAsync(caisse);
         }
 
 

@@ -90,9 +90,9 @@ namespace YamaCaisse.View
             this.ProductionPage.RemoveBonProduction(this);
         }
 
-        async void Print_Clicked(object sender,System.EventArgs e)
-        {
-            var 
-        }
+        //async void Print_Clicked(object sender,System.EventArgs e)
+        //{
+        //    var 
+        //}
     }
 }

@@ -42,6 +42,7 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.SelectedligneTicket = null;
             TicketViewModel.Current.NbElemCommand = null;
             TicketViewModel.Current.ResteAPayer = null;
+            TicketViewModel.Current.ListCurrentFormule = null;
             TicketViewModel.Current.ListPaiementTicket.Clear();
         }
 
@@ -55,6 +56,7 @@ namespace YamaCaisse.ViewModel
                 this.TableName = ticket?.T_TABLE?.TAB_NOM;
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
+                this.ListCurrentFormule = ticket.T_LIGNE_TICKET.Where(c => c.T_PRODUIT.Pdt_IsMenu == true).ToList();
                 this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
             }
         }
@@ -115,6 +117,14 @@ namespace YamaCaisse.ViewModel
         }
 
 
+        private List<LigneTicket> _listCurrentFormule;
+
+        public List<LigneTicket> ListCurrentFormule {
+            get { return _listCurrentFormule; }
+            set { _listCurrentFormule = value;
+                OnPropertyChanged(nameof(ListCurrentFormule)); }
+        }
+
         private int? _nbElemCommand;
         /// <summary>
         /// Nombre d'element commander 
@@ -158,7 +168,7 @@ namespace YamaCaisse.ViewModel
             get
             {
                 if (this.HaveMenuInTicket)
-                    return 30;
+                    return 60;
                 return 0;
 
             }
@@ -181,7 +191,7 @@ namespace YamaCaisse.ViewModel
 
         public List<Produit> GetListOpenFormule()
         {
-            var rs = ListLigneTicket.Select(c => c.T_PRODUIT).Where(c => c.Pdt_IsMenu == true);
+            var rs = this.ListCurrentFormule.Select(c=>c.T_PRODUIT);
             return rs.ToList();
         }
 

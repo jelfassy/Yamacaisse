@@ -15,6 +15,8 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             this.IdPage = TicketViewModel.Current.GetListOpenFormule().FirstOrDefault().PDT_PageFormule.Value;
             this.PageProduitControl.InitProduitButton(this.IdPage);
+            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListCurrentFormule.SingleOrDefault(c => c.T_PRODUIT.Pdt_IsMenu == true && c.T_PRODUIT.PDT_PageFormule == this.IdPage);
+            CreateHeaderFormule();
         }
 
         public void CreateHeaderFormule()
@@ -45,6 +47,7 @@ namespace YamaCaisse.Pages
         {
             Button btn = (Button)sender;
             this.IdPage = int.Parse(btn.ClassId);
+            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c.T_PRODUIT.Pdt_IsMenu == true && c.T_PRODUIT.PDT_PageFormule == this.IdPage);
             this.PageProduitControl.InitProduitButton(this.IdPage);
         }
 
