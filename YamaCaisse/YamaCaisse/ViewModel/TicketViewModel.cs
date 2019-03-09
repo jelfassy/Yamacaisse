@@ -373,10 +373,14 @@ namespace YamaCaisse.ViewModel
                 if (item == Current.SelectedligneTicket)
                 {
                     item.LTK_QTE = quantite;
+                    item.LTK_SOMME = item.T_PRODUIT.PDT_Prix * quantite;
+                    item.LTK_MNT_TVA = item.LTK_SOMME * item.T_TVA.TVA_Tx;
                 }
                 newlist.Add(item);
             }
             TicketViewModel.Current.ListLigneTicket = newlist;
+            TicketViewModel.Current.MontantTotal = (decimal)newlist.Select(c => c.LTK_SOMME).Sum();
+
         }
 
 
