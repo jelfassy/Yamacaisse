@@ -26,7 +26,7 @@ namespace YamaCaisse.Pages
 
         public MainTicketPage _maintTicketPage { get; set; }
 
-        public MainTablePage _mainTabkePage { get; set; }
+        public MainTablePage _mainTablePage { get; set; }
 
         private decimal _montantTotal;
 
@@ -283,12 +283,14 @@ namespace YamaCaisse.Pages
                     LoadData();
                     if (rs)
                     {
+                        if(this.ListSelectedLigneTicket.Count == 0)
+                            await PopupNavigation.PopAsync(false);
                         // si le traitement est ok
                         this.MontantTotal = 0;
                         this.ListSelectedLigneTicket.Clear();
                         if (this._maintTicketPage != null)
                             _maintTicketPage.loadData();
-                        if(this._mainTabkePage != null)
+                        if(this._mainTablePage != null)
                             await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
                         //  await PopupNavigation.PopAsync(false);
                     }
