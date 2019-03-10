@@ -28,6 +28,14 @@ namespace YamaCaisse.Pages
         }
 
 
+        public PopupTable(TicketView tv,bool Move)
+        {
+            InitializeComponent();
+            // this.tableListControl._ticketView = tv;
+            this.tableListControl.CurrentPopupTable = this;
+            this.tableListControl.Move = Move;
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
