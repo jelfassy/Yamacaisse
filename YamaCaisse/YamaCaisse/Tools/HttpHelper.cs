@@ -12,7 +12,7 @@ namespace YamaCaisse.Tools
 {
     class HttpHelper
     {
-        private static Policy retryPolicy = createRetryPolicy();
+        private static Polly.Retry.AsyncRetryPolicy retryPolicy = createRetryPolicy();
         private static HttpClient client = createClient();
 
         /// <summary>
@@ -235,7 +235,7 @@ return res;
         /// </summary>
         /// <param name="uriString">Uri to call</param>
         /// <returns>Task -> JObject </returns>
-        private static Policy createRetryPolicy()
+        private static Polly.Retry.AsyncRetryPolicy createRetryPolicy()
         {
             return Policy
                 .Handle<HttpRequestException>()

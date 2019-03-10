@@ -109,3 +109,6 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.csproj.CopyComplete
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.csprojAssemblyReference.cache
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/System.ValueTuple.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/System.ValueTuple.xml
