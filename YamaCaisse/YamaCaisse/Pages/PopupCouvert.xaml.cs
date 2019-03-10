@@ -33,7 +33,10 @@ namespace YamaCaisse.Pages
         async void Click_Couvert(object sender, EventArgs e)
         {
 
-            TicketViewModel.Current.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
+            int nb;
+            var rs = int.TryParse(this.EntryNb.Text, out nb);
+            if (rs == true)
+                TicketViewModel.Current.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
 
 
             await PopupNavigation.PopAsync(false);

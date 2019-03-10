@@ -115,7 +115,7 @@ namespace YamaCaisse.Pages
                 ListPaiementEncaisser = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
             if(MontantTotal == (decimal)TicketViewModel.Current.ListLigneTicket.Where(c => c.FK_PATI_ID == null).Sum(c => c.LTK_SOMME))
                 await PopupNavigation.PopAsync(false);
-            MontantTotal = 0;
+            //MontantTotal = 0;
         }
 
 

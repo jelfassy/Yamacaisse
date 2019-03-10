@@ -27,9 +27,19 @@ namespace YamaCaisse.Pages
 
         async void Click_Quantites(object sender, EventArgs e)
         {
+            try
+            {
+                int nb;
+                var rs = int.TryParse(this.EntryNb.Text,out nb);
+                if(rs == true)
+                    TicketViewModel.Current.ChangeLigneQuantite(nb);
+                await PopupNavigation.PopAsync(false);
 
-            TicketViewModel.Current.ChangeLigneQuantite(int.Parse(this.EntryNb.Text));
-            await PopupNavigation.PopAsync(false);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
