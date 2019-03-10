@@ -323,8 +323,8 @@ C:/Users/jonat/source/repos/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/a
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/uploadflags.txt
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/bin/Debug/Microsoft.AppCenter.xml
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/bin/Debug/Microsoft.AppCenter.Analytics.xml
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/packages/Polly.7.0.3/lib/netstandard2.0/Polly.dll
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/packages/Rg.Plugins.Popup.1.1.5.188/lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/bin/Debug/Polly.dll.mdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/bin/Debug/Rg.Plugins.Popup.Droid.dll.mdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/bin/Debug/Mono.Android.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/YamaCaisse.Android.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/FormsViewGroup.pdb
@@ -336,8 +336,6 @@ C:/Users/jonat/source/repos/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/a
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Xamarin.Forms.Platform.Android.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Xamarin.Forms.Xaml.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/YamaCaisse.pdb
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/bin/Debug/Polly.dll.mdb
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/bin/Debug/Rg.Plugins.Popup.Droid.dll.mdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Plugin.SimpleAudioPlayer.dll.mdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Polly.dll.mdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/Rg.Plugins.Popup.Droid.dll.mdb

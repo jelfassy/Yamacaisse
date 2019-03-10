@@ -34,7 +34,7 @@ namespace YamaCaisse.Pages
         {
 
             int nb;
-            var rs = int.TryParse(this.EntryNb.Text, out nb);
+            var rs = int.TryParse(this.EntryNbCouvert.Text, out nb);
             if (rs == true)
                 TicketViewModel.Current.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
 
