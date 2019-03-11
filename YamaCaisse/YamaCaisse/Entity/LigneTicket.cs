@@ -109,6 +109,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public bool? LTK_ATTENTE
+        {
+            get;
+            set;
+        }
+
         public int? TIK_MOVE_TIK { get; set; }
 
         public Employe T_EMPLOYE { get; set; }
@@ -160,7 +166,18 @@ namespace YamaCaisse.Entity
             }
         }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+        public string LigneEnAttente
+        {
+            get
+            {
+                if (this.LTK_ATTENTE == true)
+                    return "#00BCD4";
+                else
+                    return "#FFFFFF";
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
     protected virtual void OnPropertyChanged(string propertyName)
     {

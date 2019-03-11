@@ -35,6 +35,7 @@
                             <ViewCell Appearing="Cell_OnAppearing">
                                 <ViewCell.ContextActions>
                                     <MenuItem Clicked="Click_Quantite" CommandParameter="{Binding .}" Text="Qte" />
+                                    <MenuItem Clicked="Click_Attente" CommandParameter="{Binding .}" Text="En Attente" />
                                     <MenuItem Clicked="Click_ChangeReclame" CommandParameter="{Binding .}" Text="Suite" />
                                     <MenuItem Clicked="Message_Clicked" CommandParameter="{Binding .}" Text="Change" />
                                     <MenuItem Clicked="Supprimer_Clicked" CommandParameter="{Binding .}" Text="Supprimer" IsDestructive="true" />
@@ -50,6 +51,7 @@
                                         <ColumnDefinition Width="5*" />
                                         <ColumnDefinition Width="1*" />
                                     </Grid.ColumnDefinitions>
+                                    <BoxView x:Name="backgdligne" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding LigneEnAttente}" />
                                     <BoxView Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding T_RECLAME.REC_COLOR}" />
                                     <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding T_RECLAME.REC_NAME}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
                                        

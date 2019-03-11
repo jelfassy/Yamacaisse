@@ -154,7 +154,7 @@ return res;
                         }
                     }
                     var content = await response.Content.ReadAsStringAsync();
-                    content = CheckContent(response, content);
+                                content = CheckContent(response, content);
                     return JObject.Parse(content);
                 });
             }

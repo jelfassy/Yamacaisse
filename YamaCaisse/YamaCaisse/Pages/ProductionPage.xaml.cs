@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AppCenter.Crashes;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
@@ -159,7 +160,12 @@ namespace YamaCaisse.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                var property = new Dictionary<string, string>
+                {
+                    {"Production","LoadData"}
+                };
+                Crashes.TrackError(ex, property);
+                await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
             }
             StartActivityIndicateur(false);
         }

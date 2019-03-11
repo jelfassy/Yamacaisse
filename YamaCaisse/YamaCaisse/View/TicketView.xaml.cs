@@ -95,6 +95,15 @@ namespace YamaCaisse.View
             TicketViewModel.Current.RemoveLigneTicket(ligneTicket);
         }
 
+        void Click_Attente(object sender,System.EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var ligneTicket = (LigneTicket)mi.CommandParameter;
+            var bxView = (BoxView)mi.FindByName("backgdligne");
+            bxView.BackgroundColor = Color.FromHex("#00BCD4");
+            ligneTicket.LTK_ATTENTE = true;
+        }
+
         /// <summary>
         /// Cells the underlist on appearing.
         /// </summary>

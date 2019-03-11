@@ -42,13 +42,19 @@ namespace YamaCaisse.View
 
             var grouped = new ObservableCollection<GroupReclameModel>();
 
-            SetColorView(DateTime.Now - BonProduction.Bon_DATE_DEBUT);
             var list = new List<GroupReclameModel>();
-           // GroupReclameModel group;
+            // GroupReclameModel group;
+            bool allEnAttente = false;
             foreach (var ligne in BonProduction.T_BON_LIGNE_TICKET.OrderBy(r => r.T_LIGNE_TICKET.FK_REC_ID))
             {
                 nbPlat = nbPlat + (int)ligne.T_LIGNE_TICKET.LTK_QTE;
+                if (ligne.T_LIGNE_TICKET.LTK_ATTENTE == true)
+                    allEnAttente = true;
+                else
+                    allEnAttente = false;
             }
+            SetColorView(DateTime.Now - BonProduction.Bon_DATE_DEBUT, allEnAttente);
+
             foreach (var ll in list)
                 grouped.Add(ll);
             this.lblnbPlat.Text = nbPlat.ToString();
@@ -58,16 +64,21 @@ namespace YamaCaisse.View
             this.E_listligneTicket.ItemsSource = BonProduction.T_BON_LIGNE_TICKET.Select(c => c.T_LIGNE_TICKET);
         }
 
-        private void SetColorView(TimeSpan? timeSpan)
+        private void SetColorView(TimeSpan? timeSpan, bool attente)
         {
             var timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
             this.lblTimer.Text = timer;
-            if (timeSpan.Value.TotalMinutes < 10)
-                this.bxViewColor.BackgroundColor = Color.Green;
-            else if (timeSpan.Value.TotalMinutes < 20)
-                this.bxViewColor.BackgroundColor = Color.Orange;
+            if (attente == true)
+                this.bxViewColor.BackgroundColor = Color.FromHex("#00BCD4");
             else
-                this.bxViewColor.BackgroundColor = Color.Red;
+            {
+                if (timeSpan.Value.TotalMinutes < 10)
+                    this.bxViewColor.BackgroundColor = Color.Green;
+                else if (timeSpan.Value.TotalMinutes < 20)
+                    this.bxViewColor.BackgroundColor = Color.Orange;
+                else
+                    this.bxViewColor.BackgroundColor = Color.Red;
+            }
         }
 
         void listLigne_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
@@ -96,3 +107,4 @@ namespace YamaCaisse.View
         //}
     }
 }
+
