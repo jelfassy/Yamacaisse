@@ -119,10 +119,14 @@ namespace YamaCaisse.ViewModel
 
         private List<LigneTicket> _listCurrentFormule;
 
-        public List<LigneTicket> ListCurrentFormule {
+        public List<LigneTicket> ListCurrentFormule
+        {
             get { return _listCurrentFormule; }
-            set { _listCurrentFormule = value;
-                OnPropertyChanged(nameof(ListCurrentFormule)); }
+            set
+            {
+                _listCurrentFormule = value;
+                OnPropertyChanged(nameof(ListCurrentFormule));
+            }
         }
 
         private int? _nbElemCommand;
@@ -191,7 +195,7 @@ namespace YamaCaisse.ViewModel
 
         public List<Produit> GetListOpenFormule()
         {
-            var rs = this.ListCurrentFormule.Select(c=>c.T_PRODUIT);
+            var rs = this.ListCurrentFormule.Select(c => c.T_PRODUIT);
             return rs.ToList();
         }
 
@@ -323,7 +327,8 @@ namespace YamaCaisse.ViewModel
         public void RemoveLigneTicket(LigneTicket ligneTicket)
         {
             TicketViewModel.Current.ListLigneTicket.Remove(ligneTicket);
-            TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal - (decimal)ligneTicket.LTK_SOMME;
+            if (ligneTicket.LTK_SOMME != null)
+                TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal - (decimal)ligneTicket.LTK_SOMME;
             TicketViewModel.Current.SelectedligneTicket = null;
         }
 

@@ -77,7 +77,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Addition(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current .TKT_ID));
+            await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current.TKT_ID));
 
         }
 

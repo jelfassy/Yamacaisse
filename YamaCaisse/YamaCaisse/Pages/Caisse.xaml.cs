@@ -213,6 +213,7 @@ namespace YamaCaisse.Pages
         void Click_Clear(object sender, System.EventArgs e)
         {
             TicketViewModel.Current.ListLigneTicket.Clear();
+
         }
     }
 }
