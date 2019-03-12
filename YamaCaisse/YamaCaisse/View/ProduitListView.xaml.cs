@@ -160,7 +160,8 @@ namespace YamaCaisse.View
                 if ((TicketViewModel.Current.SelectedligneTicket != null 
                                     && prod.PDT_COMPLEMENT == true) || this.IsFormulePage == true)
                 {
-                   // 
+                    TicketViewModel.Current.ListLigneTicket.Remove(TicketViewModel.Current.SelectedligneTicket);
+
                     if (TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT == null)
                         TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
 
