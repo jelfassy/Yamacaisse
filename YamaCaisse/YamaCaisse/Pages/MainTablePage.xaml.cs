@@ -81,9 +81,16 @@ namespace YamaCaisse.Pages
 
         }
 
+        /// <summary>
+        /// Action de deplacement de table
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
         async void Click_Move(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketView));
+            await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketView,true));
+            this.tableListControl.Refresh();
+
         }
 
         public TicketView GetTicketView()

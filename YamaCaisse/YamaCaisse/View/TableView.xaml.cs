@@ -49,10 +49,17 @@ namespace YamaCaisse.View
             this.Move = move;
         }
 
+        public void Refresh()
+        {
+            InitGridTable(CurrentPage);
+            InitListSalle();
+        }
+
         private async void InitListSalle()
         {
             try
             {
+                StkPageList.Children.Clear();
                 StkPageList.Children.Add(CreateButtonSalles("Grille", "Grille"));
                 StkPageList.Children.Add(CreateButtonSalles("Ouvert", "Ouvert"));
 
@@ -96,6 +103,7 @@ namespace YamaCaisse.View
 
         private async void InitMapSalle(int id)
         {
+            StkTableList.Children.Clear();
             _SalleTableDataServices = DependencyService.Get<ISalleTableDataServices>();
 
 
@@ -132,18 +140,18 @@ namespace YamaCaisse.View
 
         private async void InitGridTable(string type)
         {
-
+            StkTableList.Children.Clear();
             var grid = new Grid();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
 
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
 
             // 5 column
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
@@ -151,8 +159,8 @@ namespace YamaCaisse.View
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+           // grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+          //  grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
 
             var list = await _tableDataServices.GetTableList();
             if (type == "Ouvert")
@@ -166,13 +174,11 @@ namespace YamaCaisse.View
                 //var label = new Label { Text = table.TAB_NOM};
                 grid.Children.Add(button, col, row);
                 col = col + 1;
-                if (col == 6)
+                if (col == 5)
                 {
                     row = row + 1;
                     col = 0;
                 }
-                if (row == 6)
-                    break;
             }
 
             StkTableList.Children.Add(grid);
@@ -218,8 +224,12 @@ namespace YamaCaisse.View
                 TextColor = Color.White,
                 BorderColor = tab.TAB_UTILISE == true ? Color.Green : Color.Blue,
                 BackgroundColor = tab.TAB_UTILISE == true ? Color.Green : (Color)Application.Current.Resources["DividerColor"],
-                ClassId =  tab.TAB_ID.ToString()
+                ClassId = tab.TAB_ID.ToString()
             };
+            button.HorizontalOptions = LayoutOptions.FillAndExpand;
+            button.VerticalOptions = LayoutOptions.FillAndExpand;
+            button.HeightRequest = 70;
+            button.FontSize = 16;
             // button.Image = tab.T_TABLE_ICONE.ICT_name + ".png";
             button.Clicked +=Click_SelectTable;
             return button;
@@ -232,11 +242,11 @@ namespace YamaCaisse.View
             UnSelectAllTable();
             var button = (Button)sender;
             button.BorderColor = Color.BlueViolet;
-
             if (this.Move == true)
             {
                 var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, int.Parse(button.ClassId));
-
+                TicketViewModel.Current.Clear();
+                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
             }
             else
             {

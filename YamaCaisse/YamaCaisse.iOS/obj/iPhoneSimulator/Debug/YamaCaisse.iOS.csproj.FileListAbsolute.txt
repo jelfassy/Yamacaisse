@@ -174,3 +174,7 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.IOS.csproj.CopyComplete
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.exe
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/YamaCaisse.iOS.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Rg.Plugins.Popup.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Rg.Plugins.Popup.IOS.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Rg.Plugins.Popup.pdb
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/Rg.Plugins.Popup.IOS.pdb

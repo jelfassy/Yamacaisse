@@ -132,7 +132,7 @@ namespace YamaCaisse.Pages
 
                 GdListBon.Children.Clear();
 
-                foreach (var item in listBon)
+                foreach (var item in listBon.OrderBy(c=>c.Bon_DATE_DEBUT))
                 {
                     if (item.BON_ID > LastBon)
                         PlaySound();

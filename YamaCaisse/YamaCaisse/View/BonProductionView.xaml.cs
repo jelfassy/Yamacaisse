@@ -30,6 +30,8 @@ namespace YamaCaisse.View
             set;
         }
 
+        public string Timer { get; set; }
+
         public List<Table> ListTable { get; set; }
 
         public void LoadData()
@@ -66,8 +68,8 @@ namespace YamaCaisse.View
 
         private void SetColorView(TimeSpan? timeSpan, bool attente)
         {
-            var timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
-            this.lblTimer.Text = timer;
+            Timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
+            this.lblTimer.Text = Timer;
             if (attente == true)
                 this.bxViewColor.BackgroundColor = Color.FromHex("#00BCD4");
             else
