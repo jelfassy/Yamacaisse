@@ -22,10 +22,10 @@ namespace YamaCaisse
         public MainPage()
         {
             InitializeComponent();
-          // this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
-           //this.AdresseServeur.Text = "192.168.1.25:63058";
-            if (Application.Current.Properties.ContainsKey("ServeurAdress"))
-              this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
+           //this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
+           this.AdresseServeur.Text = "192.168.1.27:63058";
+          //  if (Application.Current.Properties.ContainsKey("ServeurAdress"))
+            //  this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
         }
 
 
@@ -36,7 +36,7 @@ namespace YamaCaisse
 
         void Click_Back(object sender, EventArgs e)
         {
-            if (this.CodeUser.Text != "")
+            if (!string.IsNullOrEmpty(this.CodeUser.Text))
             this.CodeUser.Text = this.CodeUser.Text.Remove(this.CodeUser.Text.Length - 1);
         }
 

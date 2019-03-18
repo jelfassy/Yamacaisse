@@ -71,14 +71,18 @@ namespace YamaCaisse.Pages
 
         async void Click_Reclame(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupReclameBon(TicketViewModel.Current.TKT_ID));
-
+            if (TicketViewModel.Current.TKT_ID != 0)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopupReclameBon(TicketViewModel.Current.TKT_ID));
+            }
         }
 
         async void Click_Addition(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current.TKT_ID));
-
+            if (TicketViewModel.Current.TKT_ID != 0)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current.TKT_ID));
+            }
         }
 
         /// <summary>
@@ -88,9 +92,11 @@ namespace YamaCaisse.Pages
         /// <param name="e">E.</param>
         async void Click_Move(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketView,true));
-            this.tableListControl.Refresh();
-
+            if (TicketViewModel.Current.IdTable != null)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketView, true));
+                this.tableListControl.Refresh();
+            }
         }
 
         public TicketView GetTicketView()
