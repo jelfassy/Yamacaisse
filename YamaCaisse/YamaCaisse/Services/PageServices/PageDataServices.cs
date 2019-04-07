@@ -10,15 +10,27 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.PageServices.PageDataServices))]
 namespace YamaCaisse.Services.PageServices
 {
- 
+ /// <summary>
+ /// Page data services.
+ /// </summary>
     public class PageDataServices : IPageDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Page/";
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:YamaCaisse.Services.PageServices.PageDataServices"/> class.
+        /// </summary>
         public PageDataServices()
         {
         }
 
+        /// <summary>
+        /// Gets the page list.
+        /// </summary>
+        /// <returns>The page list.</returns>
         public async Task<List<oPage>> GetPageList()
         {
           try

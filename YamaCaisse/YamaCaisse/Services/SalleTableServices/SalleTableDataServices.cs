@@ -10,17 +10,31 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.SalleTableServices.SalleTableDataServices))]
 namespace YamaCaisse.Services.SalleTableServices
 {
+    /// <summary>
+    /// Salle table data services.
+    /// </summary>
     public class SalleTableDataServices : ISalleTableDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/SalleTable/";
 
+        /// <summary>
+        /// Initializes a new instance of the
+        /// <see cref="T:YamaCaisse.Services.SalleTableServices.SalleTableDataServices"/> class.
+        /// </summary>
         public SalleTableDataServices()
         {
         }
 
      
 
-
+        /// <summary>
+        /// Salles the tablesby identifier salle.
+        /// </summary>
+        /// <returns>The tablesby identifier salle.</returns>
+        /// <param name="id">Identifier.</param>
         public async Task<List<SalleTable>> SalleTablesbyIdSalle(int id)
         {
             try

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Control;
 using YamaCaisse.Pages;
 using YamaCaisse.Services.JourServices;
 using YamaCaisse.Services.UserServices;
@@ -23,9 +24,9 @@ namespace YamaCaisse
         {
             InitializeComponent();
            //this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
-           this.AdresseServeur.Text = "192.168.1.27:63058";
-          //  if (Application.Current.Properties.ContainsKey("ServeurAdress"))
-            //  this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
+           //this.AdresseServeur.Text = "192.168.1.28:63058";
+            if (Application.Current.Properties.ContainsKey("ServeurAdress"))
+              this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
         }
 
 
@@ -44,6 +45,8 @@ namespace YamaCaisse
         {
             try
             {
+                IDevice device = DependencyService.Get<IDevice>();
+                 App.DeviceIdentifier = device.GetIdentifier();
                 if (this.AdresseServeur.Text.StartsWith("192"))
                     this.typeconnection = "http://";
                 else

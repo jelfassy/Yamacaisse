@@ -55,6 +55,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public string TIK_TPV
+        {
+            get;
+            set;
+        }
+
         public List<LigneTicket> T_LIGNE_TICKET
         {
             get;

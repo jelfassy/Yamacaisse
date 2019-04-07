@@ -9,15 +9,24 @@ using YamaCaisse.ViewModel;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.RapportServices.RapportDataServices))]
 namespace YamaCaisse.Services.RapportServices
 {
+    /// <summary>
+    /// Rapport data services.
+    /// </summary>
     public class RapportDataServices : IRapportDataServices
     {
-
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Rapport/";
 
         public RapportDataServices()
         {
         }
 
+        /// <summary>
+        /// Gets the rapport jour.
+        /// </summary>
+        /// <returns>The rapport jour.</returns>
         public async Task<bool> GetRapportJour()
         {
             try
@@ -52,6 +61,10 @@ namespace YamaCaisse.Services.RapportServices
             }
         }
 
+        /// <summary>
+        /// Gets the rapport couvert.
+        /// </summary>
+        /// <returns>The rapport couvert.</returns>
         public async Task<bool> GetRapportCouvert()
         {
             try

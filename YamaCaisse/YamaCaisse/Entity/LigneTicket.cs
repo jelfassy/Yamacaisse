@@ -88,6 +88,36 @@ namespace YamaCaisse.Entity
             get;
             set;
         }
+
+        /// <summary>
+        /// Gets or sets the ltk designation produit.
+        /// </summary>
+        /// <value>The ltk designation produit.</value>
+        public string LTK_DESIGNATION_PRODUIT
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Gets or sets the tpvt.
+        /// </summary>
+        /// <value>The ltk tpvt.</value>
+        public string LTK_TPVT { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ltk prix unitaire.
+        /// </summary>
+        /// <value>The ltk prix unitaire.</value>
+        public decimal? LTK_PRIX_UNITAIRE { get; set; }
+
+
+        public decimal? LTK_TOTAL_HT
+        {
+            get;
+            set;
+        }
+
         /// <summary>
         /// Gets or sets the t produit.
         /// </summary>

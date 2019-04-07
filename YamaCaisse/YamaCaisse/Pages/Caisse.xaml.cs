@@ -122,7 +122,7 @@ namespace YamaCaisse.Pages
                 };
                 button.WidthRequest = 45;
                 button.HeightRequest = 45;
-                button.FontSize = 24;
+                button.FontSize = 20;
                 button.ClassId = page.PAG_ID.ToString();
                 button.Clicked += Click_Page;
 

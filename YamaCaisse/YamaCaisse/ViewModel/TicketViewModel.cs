@@ -267,6 +267,7 @@ namespace YamaCaisse.ViewModel
                 TIK_NB_COUVERT = this.NbCouvert,
                 T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
                 FK_JOU_ID = App.JourId,
+                TIK_TPV = App.DeviceIdentifier
 
             };
             if (App.ConfigViewModel.Printer != null)

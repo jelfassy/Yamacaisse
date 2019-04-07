@@ -99,10 +99,11 @@ namespace YamaCaisse.View
         {
             var mi = ((MenuItem)sender);
             var ligneTicket = (LigneTicket)mi.CommandParameter;
-            var bxView = (BoxView)mi.FindByName("backgdligne");
+            var bxView = mi.FindByName<BoxView>("backgdligne");
             bxView.BackgroundColor = Color.FromHex("#00BCD4");
             ligneTicket.LTK_ATTENTE = true;
         }
+
 
         /// <summary>
         /// Cells the underlist on appearing.

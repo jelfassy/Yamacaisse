@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Microsoft.AppCenter.Crashes;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -37,7 +38,7 @@ namespace YamaCaisse.View
 
         }
 
-         public async void InitProduitButton(int idPage)
+        public async void InitProduitButton(int idPage)
         {
             this.IdPage = idPage;
 
@@ -49,7 +50,7 @@ namespace YamaCaisse.View
             listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.IdPage);
 
             _pageDataServices = DependencyService.Get<IPageDataServices>();
-            var Lpage =  await _pageDataServices.GetPageList();
+            var Lpage = await _pageDataServices.GetPageList();
             var page = Lpage.SingleOrDefault(c => c.PAG_ID == this.IdPage);
             this.IsFormulePage = page.PAG_MENU;
             this.Autoclose = page.PAG_AUTOCLOSE;
@@ -62,7 +63,7 @@ namespace YamaCaisse.View
                 var bnMaxCol = listPageProduit.Select(cw => cw.PGPD_POS_VERTICALE).Max();
 
                 for (int i = 0; i < nbMaxRow; i++)
-                    gridProduit.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
+                    gridProduit.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Auto) });
                 for (int i = 0; i < bnMaxCol; i++)
                     gridProduit.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
 
@@ -71,9 +72,9 @@ namespace YamaCaisse.View
                 {
                     var button = new Button
                     {
-                        BorderWidth= 2.5,
+                        BorderWidth = 2.5,
                         // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                       
+
                     };
 
                     if (!string.IsNullOrEmpty(item.PGPD_COLOR))
@@ -100,106 +101,119 @@ namespace YamaCaisse.View
 
         private async void Click_Produit(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            int idpgpd = int.Parse(btn.ClassId);
-            btn.TextColor = Color.FromHex("#212121");
-            int Number = 1;
-            var pageprod = listPageProduit.SingleOrDefault(c => c.PGPD_ID == idpgpd);
-            int idpoduit = pageprod.FK_PDT_ID;
-            var prod = pageprod.T_PRODUIT;
-            if (prod.PDT_INFO_BT != true)
+            try
             {
-                if (prod.PDT_Prix != null && IsFormulePage != true)
-                    TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal + (decimal)prod.PDT_Prix * Number;
 
-                var ligneTicket = new LigneTicket()
+                Button btn = (Button)sender;
+                int idpgpd = int.Parse(btn.ClassId);
+                btn.TextColor = Color.FromHex("#212121");
+                int Number = 1;
+                var pageprod = listPageProduit.SingleOrDefault(c => c.PGPD_ID == idpgpd);
+                int idpoduit = pageprod.FK_PDT_ID;
+                var prod = pageprod.T_PRODUIT;
+                if (prod.PDT_INFO_BT != true)
                 {
-                    FK_EMP_ID = App.UserId,
-                    FK_PDT_ID = idpoduit,
-                    T_PRODUIT = prod,
-                    LTK_QTE = 1,
-                    LTK_DATE = DateTime.Now,
-                    FK_TVA_ID = prod.FK_TVA_ID.HasValue ? prod.FK_TVA_ID.Value : 0,
-                    FK_REC_ID = prod.FK_REC_ID.HasValue ? prod.FK_REC_ID.Value : 1,
-                    T_RECLAME = prod.T_RECLAME,
-                    T_TVA = prod.T_TVA,
+                    if (prod.PDT_Prix != null && IsFormulePage != true)
+                        TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal + (decimal)prod.PDT_Prix * Number;
+
+                    var ligneTicket = new LigneTicket()
+                    {
+                        FK_EMP_ID = App.UserId,
+                        FK_PDT_ID = idpoduit,
+                        T_PRODUIT = prod,
+                        LTK_QTE = 1,
+                        LTK_DATE = DateTime.Now,
+                        FK_TVA_ID = prod.FK_TVA_ID.HasValue ? prod.FK_TVA_ID.Value : 0,
+                        FK_REC_ID = prod.FK_REC_ID.HasValue ? prod.FK_REC_ID.Value : 1,
+                        T_RECLAME = prod.T_RECLAME,
+                        T_TVA = prod.T_TVA,
+                        LTK_TPVT = App.DeviceIdentifier,
+                        LTK_PRIX_UNITAIRE = prod.PDT_Prix,
+                        LTK_TOTAL_HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx)
                 };
 
-                if(this.IsFormulePage != true)
-                {
-                    if (prod.PDT_Prix.HasValue && prod.T_TVA != null)
+                    if (this.IsFormulePage != true)
                     {
-                        ligneTicket.LTK_SOMME = prod.PDT_Prix.HasValue ? prod.PDT_Prix * Number : 0;
+                        if (prod.PDT_Prix.HasValue && prod.T_TVA != null)
+                        {
+                            ligneTicket.LTK_SOMME = prod.PDT_Prix.HasValue ? prod.PDT_Prix * Number : 0;
 
-                        var HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
+                            var HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
 
-                        ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_Prix.Value - HT), 2);
-                    }
-                }
-                else
-                {
-                    ligneTicket.LTK_SOMME = 0;
-                    ligneTicket.LTK_MNT_TVA = 0;
-                    prod.PDT_Prix = 0;
-                }
-
-
-                if (TicketViewModel.Current.NbElemCommand == null)
-                    TicketViewModel.Current.NbElemCommand = 0;
-
-                if ((TicketViewModel.Current.SelectedligneTicket != null 
-                                    && prod.PDT_COMPLEMENT == true))
-                {
-                    TicketViewModel.Current.ListLigneTicket.Remove(TicketViewModel.Current.SelectedligneTicket);
-
-                    if (TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT == null)
-                        TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
-
-                    TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT.Add(ligneTicket);
-
-                    TicketViewModel.Current.ListLigneTicket.Add(TicketViewModel.Current.SelectedligneTicket);
-                }
-                else
-                {
-                    TicketViewModel.Current.NbElemCommand = TicketViewModel.Current.NbElemCommand + 1;
-                    if (TicketViewModel.Current.ListLigneTicket != null)
-                    {
-                        TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);
+                            ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_Prix.Value - HT), 2);
+                        }
                     }
                     else
                     {
-                        TicketViewModel.Current.ListLigneTicket = new ObservableCollection<LigneTicket>();
-                        TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);
+                        ligneTicket.LTK_SOMME = 0;
+                        ligneTicket.LTK_MNT_TVA = 0;
+                        prod.PDT_Prix = 0;
                     }
-                }
 
-                TicketViewModel.Current.RefreshListProperty();
-                if (pageprod.PAG_ADD_ID != null)
+
+                    if (TicketViewModel.Current.NbElemCommand == null)
+                        TicketViewModel.Current.NbElemCommand = 0;
+
+                    if ((TicketViewModel.Current.SelectedligneTicket != null
+                                        && prod.PDT_COMPLEMENT == true))
+                    {
+                        TicketViewModel.Current.ListLigneTicket.Remove(TicketViewModel.Current.SelectedligneTicket);
+
+                        if (TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT == null)
+                            TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
+
+                        TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT.Add(ligneTicket);
+
+                        TicketViewModel.Current.ListLigneTicket.Add(TicketViewModel.Current.SelectedligneTicket);
+                    }
+                    else
+                    {
+                        TicketViewModel.Current.NbElemCommand = TicketViewModel.Current.NbElemCommand + 1;
+                        if (TicketViewModel.Current.ListLigneTicket != null)
+                        {
+                            TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);
+                        }
+                        else
+                        {
+                            TicketViewModel.Current.ListLigneTicket = new ObservableCollection<LigneTicket>();
+                            TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);
+                        }
+                    }
+
+                    TicketViewModel.Current.RefreshListProperty();
+                    if (pageprod.PAG_ADD_ID != null)
+                    {
+                        TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+                        if (this.Autoclose == true)
+                        {
+                            await PopupNavigation.PopAsync(false);
+                        }
+                        await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
+                        return;
+                    }
+                    if (this.Autoclose == true)
+                    {
+                        await PopupNavigation.PopAsync(false);
+                    }
+
+                }
+                else
                 {
-                    TicketViewModel.Current.SelectedligneTicket = ligneTicket;
                     if (this.Autoclose == true)
                     {
                         await PopupNavigation.PopAsync(false);
                     }
                     await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
                 }
-                if (this.Autoclose == true)
-                {
-                    await PopupNavigation.PopAsync(false);
-                }
-
             }
-            else
+            catch (Exception ex)
             {
-                if (this.Autoclose == true)
+                var property = new Dictionary<string, string>
                 {
-                    await PopupNavigation.PopAsync(false);
-                }
-                await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
+                    {"Produit list","Click_produit"}
+                };
+                Crashes.TrackError(ex, property);
             }
-
-
-
 
         }
     }

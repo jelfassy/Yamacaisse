@@ -10,14 +10,22 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.SalleServices.SalleDataServices))]
 namespace YamaCaisse.Services.SalleServices
 {
+    /// <summary>
+    /// Salle data services.
+    /// </summary>
     public class SalleDataServices : ISalleDataServices
     {
-
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Salle/";
         public SalleDataServices()
         {
         }
-
+        /// <summary>
+        /// Gets the salles.
+        /// </summary>
+        /// <returns>The salles.</returns>
         public async Task<List<Salle>> GetSalles()
         {
             try

@@ -9,11 +9,20 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.TypePaiementServices.TypePaiementDataServices))]
 namespace YamaCaisse.Services.TypePaiementServices
 {
+    /// <summary>
+    /// Type paiement data services.
+    /// </summary>
     public class TypePaiementDataServices : ITypePaiementDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/TypePaiement/";
 
-
+        /// <summary>
+        /// Gets the type paiements.
+        /// </summary>
+        /// <returns>The type paiements.</returns>
         public async Task<List<TypePaiement>> GetTypePaiements()
         {
             try

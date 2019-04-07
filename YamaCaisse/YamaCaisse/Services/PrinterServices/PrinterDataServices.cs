@@ -10,15 +10,23 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.PrinterServices.PrinterDataServices))]
 namespace YamaCaisse.Services.PrinterServices
 {
+    /// <summary>
+    /// Printer data services.
+    /// </summary>
     public class PrinterDataServices : IPrinterDataServices
     {
-
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Printer/";
 
         public PrinterDataServices()
         {
         }
-
+        /// <summary>
+        /// Gets the printer list.
+        /// </summary>
+        /// <returns>The printer list.</returns>
         public async Task<List<Printer>> GetPrinterList()
         {
             try

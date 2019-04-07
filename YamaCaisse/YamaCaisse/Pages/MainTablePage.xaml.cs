@@ -13,6 +13,7 @@ using YamaCaisse.Services.SalleTableServices;
 using YamaCaisse.Services.TableServices;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
+using Microsoft.AppCenter.Crashes;
 
 namespace YamaCaisse.Pages
 {
@@ -45,9 +46,21 @@ namespace YamaCaisse.Pages
 
         public void Click_SelectTable(object sender, EventArgs e)
         {
-            var button = (Button)sender;
-            TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
-        }
+            try
+            {
+                var button = (Button)sender;
+                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
+
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"Table","SelectTable"}
+                };
+                Crashes.TrackError(ex, property);
+            }
+          }
 
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {

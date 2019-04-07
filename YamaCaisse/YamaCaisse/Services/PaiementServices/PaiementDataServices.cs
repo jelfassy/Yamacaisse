@@ -10,24 +10,42 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.PaiementServices.PaiementDataServices))]
 namespace YamaCaisse.Services.PaiementServices
 {
+    /// <summary>
+    /// Paiement data services.
+    /// </summary>
     public class PaiementDataServices : IPaiementDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Paiement/";
 
         public PaiementDataServices()
         {
         }
-
+        /// <summary>
+        /// Gets the paiement.
+        /// </summary>
+        /// <returns>The paiement.</returns>
         public Task<List<PaiementTicket>> GetPaiement()
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Gets the paiement.
+        /// </summary>
+        /// <returns>The paiement.</returns>
+        /// <param name="id">Identifier.</param>
         public Task<Ticket> GetPaiement(int id)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Posts the paiement.
+        /// </summary>
+        /// <returns>The paiement.</returns>
+        /// <param name="paiement">Paiement.</param>
         public async Task<bool> PostPaiement(PaiementTicket paiement)
         {
             try
@@ -64,6 +82,12 @@ namespace YamaCaisse.Services.PaiementServices
             }
         }
 
+        /// <summary>
+        /// Puts the paiement.
+        /// </summary>
+        /// <returns>The paiement.</returns>
+        /// <param name="id">Identifier.</param>
+        /// <param name="paiement">Paiement.</param>
         public Task<bool> PutPaiement(int id, PaiementTicket paiement)
         {
             throw new NotImplementedException();

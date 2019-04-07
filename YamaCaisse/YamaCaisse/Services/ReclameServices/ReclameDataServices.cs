@@ -10,14 +10,23 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.ReclameServices.ReclameDataServices))]
 namespace YamaCaisse.Services.ReclameServices
 {
+    /// <summary>
+    /// Reclame data services.
+    /// </summary>
     public class ReclameDataServices : IReclameDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Reclame/";
 
         public ReclameDataServices()
         {
         }
-
+        /// <summary>
+        /// Gets the reclame list.
+        /// </summary>
+        /// <returns>The reclame list.</returns>
         public async Task<List<Reclame>> GetReclameList(){
             try
             {
@@ -51,7 +60,12 @@ namespace YamaCaisse.Services.ReclameServices
             }
         }
 
-
+        /// <summary>
+        /// Calls the reclame.
+        /// </summary>
+        /// <returns>The reclame.</returns>
+        /// <param name="idTicket">Identifier ticket.</param>
+        /// <param name="idReclame">Identifier reclame.</param>
         public async Task<bool>CallReclame(int idTicket, int idReclame)
         {
             try

@@ -13,14 +13,23 @@ using YamaCaisse.ViewModel;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.TicketServices.TicketDataServices))]
 namespace YamaCaisse.Services.TicketServices
 {
+    /// <summary>
+    /// Ticket data services.
+    /// </summary>
     public class TicketDataServices : ITicketDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Ticket/";
 
         public TicketDataServices()
         {
         }
-
+        /// <summary>
+        /// Gets the tickets.
+        /// </summary>
+        /// <returns>The tickets.</returns>
         public async Task<List<Ticket>> GetTickets()
         {
             try
@@ -54,7 +63,11 @@ namespace YamaCaisse.Services.TicketServices
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Gets the ticket.
+        /// </summary>
+        /// <returns>The ticket.</returns>
+        /// <param name="id">Identifier.</param>
         public async Task<Ticket> GetTicket(int id)
         {
             try
@@ -91,7 +104,11 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
-
+        /// <summary>
+        /// Prints the table.
+        /// </summary>
+        /// <returns>The table.</returns>
+        /// <param name="idTable">Identifier table.</param>
         public async Task<bool>PrintTable(int idTable)
         {
             try
@@ -128,7 +145,11 @@ namespace YamaCaisse.Services.TicketServices
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Prints the fiche.
+        /// </summary>
+        /// <returns>The fiche.</returns>
+        /// <param name="idTicket">Identifier ticket.</param>
         public async Task<bool> PrintFiche(int idTicket)
         {
             try
@@ -207,6 +228,11 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
+        /// <summary>
+        /// Posts the ticket.
+        /// </summary>
+        /// <returns>The ticket.</returns>
+        /// <param name="ticket">Ticket.</param>
         public async Task<bool> PostTicket(Ticket ticket)
         {
             try
@@ -243,6 +269,12 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
+        /// <summary>
+        /// Puts the ticket.
+        /// </summary>
+        /// <returns>The ticket.</returns>
+        /// <param name="id">Identifier.</param>
+        /// <param name="ticket">Ticket.</param>
         public async Task<bool> PutTicket(int id, Ticket ticket)
         {
             try

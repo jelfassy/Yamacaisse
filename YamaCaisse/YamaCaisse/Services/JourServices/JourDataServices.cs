@@ -10,12 +10,20 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.JourServices.JourDataServices))]
 namespace YamaCaisse.Services.JourServices
 {
+    /// <summary>
+    /// Jour data services.
+    /// </summary>
     public class JourDataServices : IJourDataServices
     {
-        
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Jour/";
 
-
+        /// <summary>
+        /// Gets the current jour identifier.
+        /// </summary>
+        /// <returns>The current jour identifier.</returns>
         public async Task<Jour> GetCurrentJourId()
         {
             try

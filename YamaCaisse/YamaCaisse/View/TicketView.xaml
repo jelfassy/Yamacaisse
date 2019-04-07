@@ -51,7 +51,7 @@
                                         <ColumnDefinition Width="5*" />
                                         <ColumnDefinition Width="1*" />
                                     </Grid.ColumnDefinitions>
-                                    <BoxView x:Name="backgdligne" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding LigneEnAttente}" />
+                                    <BoxView x:Name="backgdligne" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="4" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
                                     <BoxView Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding T_RECLAME.REC_COLOR}" />
                                     <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding T_RECLAME.REC_NAME}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
                                        

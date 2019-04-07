@@ -11,12 +11,23 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.BonProductionServices.BonProductionDataServices))]
 namespace YamaCaisse.Services.BonProductionServices
 {
+    /// <summary>
+    /// Bon production data services.
+    /// </summary>
     public class BonProductionDataServices : IBonProductionDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/BonProduction/";
 
 
-
+        /// <summary>
+        /// obtenir les bons de production.
+        /// </summary>
+        /// <returns>The bon production.</returns>
+        /// <param name="idProd">Identifier production.</param>
+        /// <param name="encours">Si valeur à <c>true</c> encours.</param>
         public async Task<List<BonProduction>> GetBonProduction(int idProd,bool encours)
         {
             try
@@ -52,6 +63,12 @@ namespace YamaCaisse.Services.BonProductionServices
             }
         }
 
+        /// <summary>
+        /// Puts the bon production.
+        /// </summary>
+        /// <returns>The bon production.</returns>
+        /// <param name="id">Identifier.</param>
+        /// <param name="bonProduction">Bon production.</param>
         public async Task<bool> PutBonProduction(int id, BonProduction bonProduction)
         {
             try

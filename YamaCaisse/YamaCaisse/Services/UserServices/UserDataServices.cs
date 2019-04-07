@@ -10,9 +10,20 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.UserServices.UserDataServices))]
 namespace YamaCaisse.Services.UserServices
 {
+    /// <summary>
+    /// User data services.
+    /// </summary>
     class UserDataServices : IUserDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Employe/";
+        /// <summary>
+        /// Gets the userby code.
+        /// </summary>
+        /// <returns>The userby code.</returns>
+        /// <param name="code">Code.</param>
         public async Task<Employe> GetUserbyCode(string code)
         {
             try

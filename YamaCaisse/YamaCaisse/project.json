@@ -1,8 +1,9 @@
 ﻿{
   "dependencies": {
-    "Microsoft.AppCenter": "1.13.2",
-    "Microsoft.AppCenter.Analytics": "1.13.2",
-    "Microsoft.AppCenter.Crashes": "1.13.2",
+    "Microsoft.AppCenter": "1.14.0",
+    "Microsoft.AppCenter.Analytics": "1.14.0",
+    "Microsoft.AppCenter.Crashes": "1.14.0",
+    "Microsoft.AppCenter.Distribute": "1.14.0",
     "Microsoft.NETCore.Platforms": "2.2.0",
     "Microsoft.NETCore.Targets": "2.1.0",
     "Newtonsoft.Json": "12.0.1",

@@ -10,15 +10,24 @@ using YamaCaisse.Tools;
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.ProductionServices.ProductionDataServices))]
 namespace YamaCaisse.Services.ProductionServices
 {
+    /// <summary>
+    /// Production data services.
+    /// </summary>
     public class ProductionDataServices : IProductionDataServices
     {
+        /// <summary>
+        /// The baseurl.
+        /// </summary>
         private string Baseurl = "api/Production/";
 
         public ProductionDataServices()
         {
         }
 
-
+        /// <summary>
+        /// Gets the production list.
+        /// </summary>
+        /// <returns>The production list.</returns>
         public async Task<List<Production>> GetProductionList()
         {
             try
@@ -53,24 +62,5 @@ namespace YamaCaisse.Services.ProductionServices
             }
         }
 
-
-        //public async Task<> GetCurrentBon(int idProduction)
-        //{
-        //    try
-        //    {
-        //        List<BonProduction> res = new List<BonProduction>();
-        //        JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, idProduction.ToString()));
-        //        await Task.Run(() =>
-        //        {
-        //            JToken token = o.SelectToken("data");
-        //            var res = token.Select((JToken s) => s.ToObject<BonProduction>()).ToList();
-        //        });
-        //        return res;
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //    }
-        //}
     }
 }
