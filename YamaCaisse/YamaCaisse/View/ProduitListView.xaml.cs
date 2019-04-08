@@ -85,8 +85,8 @@ namespace YamaCaisse.View
                     }
 
                     button.Text = item.T_PRODUIT.PDT_Designation;
-                    button.WidthRequest = 70;
-                    button.HeightRequest = 70;
+                    button.MinimumWidthRequest = 50;
+                    button.MinimumHeightRequest = 50;
                     button.HorizontalOptions = LayoutOptions.FillAndExpand;
                     button.VerticalOptions = LayoutOptions.FillAndExpand;
                     button.FontSize = 14;
