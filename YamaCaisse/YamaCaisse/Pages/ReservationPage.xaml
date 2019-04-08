@@ -29,7 +29,7 @@
                     Format="D"
                     Margin="30, 0, 0, 30" />
                 <Entry x:Name="Table" WidthRequest="*" Grid.Row="0" Grid.Column="0"/>
-               *
+               
             </Grid>
         </Grid>
     </ContentPage.Content>
