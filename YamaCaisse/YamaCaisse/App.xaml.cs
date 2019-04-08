@@ -51,9 +51,9 @@ namespace YamaCaisse
         protected override void OnStart()
         {
             // Handle when your app starts
-            AppCenter.Start("ios=c6223d07-92e2-4560-bff6-ac595603d365;" +
+            AppCenter.Start("ios=a34b4b00-7405-4672-8ac5-4fc0c4857e87;" +
                   "uwp={Your UWP App secret here};" +
-                            "android=eaa259cf-bce2-4495-92e9-e1d531c309b2;",
+                            "android=a5becd59-b6a2-4a12-aaf4-1f264204ed9f;",
                             typeof(Analytics), typeof(Crashes),typeof(Distribute));
         }
 
