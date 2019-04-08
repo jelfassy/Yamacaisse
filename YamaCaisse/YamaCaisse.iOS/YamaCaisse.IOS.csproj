@@ -110,6 +110,7 @@
     <CodesignProvision>YamaCaisse Appstore</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IOSDevice.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
