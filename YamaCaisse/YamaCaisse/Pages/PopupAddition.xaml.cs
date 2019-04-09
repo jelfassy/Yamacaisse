@@ -134,11 +134,11 @@ namespace YamaCaisse.Pages
                     TextColor = (Color)Application.Current.Resources["TextIconeColor"]
                 };
                 button.Text = item.TPA_LIBELLE;
-                button.WidthRequest = 150;
+               // button.WidthRequest = 150;
                 button.HeightRequest = 60;
                 button.HorizontalOptions = LayoutOptions.Fill;
                 button.VerticalOptions = LayoutOptions.Fill;
-                button.FontSize = 20;
+                //button.FontSize = 20;
                 button.ClassId = item.TPA_ID.ToString();
                 button.Clicked += Click_SelectTypePaiement;
                 gdTypePaiment.Children.Add(button, column, ligne);
