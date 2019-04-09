@@ -163,39 +163,39 @@
                 <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                     <Grid HorizontalOptions="Center">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
-                            <RowDefinition Height="1*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
-                        <Button Text="1" MinimumHeightRequest="60" Grid.Column="0" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="1" HeightRequest="100" Grid.Column="0" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="2"  MinimumHeightRequest="60" FontSize="Medium" Grid.Column="1" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="2"  HeightRequest="100" FontSize="Medium" Grid.Column="1" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="3"  MinimumHeightRequest="60" FontSize="Medium" Grid.Column="2" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="3"  HeightRequest="100" FontSize="Medium" Grid.Column="2" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="4"  MinimumHeightRequest="60" Grid.Column="0" FontSize="Medium" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="4"  HeightRequest="100" Grid.Column="0" FontSize="Medium" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="5"  MinimumHeightRequest="60" Grid.Column="1" FontSize="Medium" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="5"  HeightRequest="100" Grid.Column="1" FontSize="Medium" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="6"  MinimumHeightRequest="60" Grid.Column="2" FontSize="Medium" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="6"  HeightRequest="100" Grid.Column="2" FontSize="Medium" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="7"  MinimumHeightRequest="60" Grid.Column="0" FontSize="Medium" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="7"  HeightRequest="100" Grid.Column="0" FontSize="Medium" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="8"  MinimumHeightRequest="60" Grid.Column="1" FontSize="Medium" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="8"  HeightRequest="100" Grid.Column="1" FontSize="Medium" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="9"  MinimumHeightRequest="60" Grid.Column="2" FontSize="Medium" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="9"  HeightRequest="60" Grid.Column="2" FontSize="Medium" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button x:Name="Backspace"  MinimumHeightRequest="60" Text="retour" FontSize="Medium" Grid.Column="0" Grid.Row="3" Clicked="Click_Back" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button x:Name="Backspace"  HeightRequest="100" Text="retour" FontSize="Medium" Grid.Column="0" Grid.Row="3" Clicked="Click_Back" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button Text="0"   MinimumHeightRequest="60" Grid.Column="1" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button Text="0" HeightRequest="100" Grid.Column="1" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
-                        <Button x:Name="virgule"  MinimumHeightRequest="60" Text="," FontSize="Medium" Grid.Column="2" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                        <Button x:Name="virgule"  HeightRequest="100" Text="," FontSize="Medium" Grid.Column="2" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                         </Button>
                     </Grid>
                 </StackLayout>
