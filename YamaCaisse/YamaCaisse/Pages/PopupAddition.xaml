@@ -161,7 +161,7 @@
                     </Grid.ColumnDefinitions>
                 </Grid>
                 <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                    <Grid HorizontalOptions="Center">
+                    <Grid HorizontalOptions="Center" VerticalOptions="FillAndExpand">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />

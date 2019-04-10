@@ -66,7 +66,7 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Text="Payer" Clicked="Click_Payer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button x:Name="btPayer" Grid.Column="0" Text="Payer" Clicked="Click_Payer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 <Button Grid.Column="1" Text="ReImprimer" Clicked="Click_Reprint" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
             </Grid>
         </StackLayout>

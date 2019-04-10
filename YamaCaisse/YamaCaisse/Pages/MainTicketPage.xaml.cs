@@ -39,7 +39,10 @@ namespace YamaCaisse.Pages
             var reslistTicket = await _ticketDataServices.GetTickets();
 
             if (IsEcranTicket == true)
+            {
                 reslistTicket = reslistTicket.Where(c => c.TIK_PAYER == true).ToList();
+                this.btPayer.IsVisible = false;
+            }
             else
                 reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true).ToList();
             
