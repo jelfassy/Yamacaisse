@@ -183,7 +183,10 @@ namespace YamaCaisse.View
                     TicketViewModel.Current.RefreshListProperty();
                     if (pageprod.PAG_ADD_ID != null)
                     {
-                        TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+                        if(prod.PDT_COMPLEMENT != true)
+                        {
+                            TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+                        }
                         if (this.Autoclose == true)
                         {
                             await PopupNavigation.PopAsync(false);

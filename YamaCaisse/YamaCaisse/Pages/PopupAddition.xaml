@@ -156,7 +156,7 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
-                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="3*" />
                         <RowDefinition Height="3*" />
                     </Grid.RowDefinitions>
                     <Label x:Name="eMontantPayer" Grid.Row="0" Text="{Binding MontantTotal,StringFormat='{0:0.00}'}" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
