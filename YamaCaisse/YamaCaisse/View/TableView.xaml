@@ -6,8 +6,10 @@
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="7*" />
             </Grid.ColumnDefinitions>
-            <StackLayout x:Name="StkPageList" Grid.Column="0" Orientation="Vertical">
-            </StackLayout>
+            <ScrollView Orientation="Vertical" Grid.Column="0">
+                <StackLayout x:Name="StkPageList" Orientation="Vertical">
+                </StackLayout>
+            </ScrollView>
             <ScrollView Orientation="Vertical" Grid.Column="1">
                 <StackLayout x:Name="StkTableList" Grid.Column="1" MinimumHeightRequest="400" MinimumWidthRequest="400" BackgroundColor="White">
                 </StackLayout>
