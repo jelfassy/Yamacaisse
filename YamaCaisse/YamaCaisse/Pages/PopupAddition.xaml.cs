@@ -138,6 +138,7 @@ namespace YamaCaisse.Pages
                 // button.WidthRequest = 150;
                 button.MinimumHeightRequest = 50;
                 button.HeightRequest = 60;
+                button.FontSize = 15;
                 button.HorizontalOptions = LayoutOptions.FillAndExpand;
                 button.VerticalOptions = LayoutOptions.FillAndExpand;
                 //button.FontSize = 20;
