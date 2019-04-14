@@ -195,7 +195,7 @@ namespace YamaCaisse.View
                 WidthRequest = 250,
                 Aspect = Aspect.AspectFill,
             };
-
+            image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile(tab.T_TABLE_ICONE.ICT_name + ".png") : ImageSource.FromFile("Images/" + tab.T_TABLE_ICONE.ICT_name + ".png");
             var button = new Button
             {
                 Text = tab.TAB_NOM,
