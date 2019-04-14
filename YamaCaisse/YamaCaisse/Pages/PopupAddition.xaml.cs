@@ -125,6 +125,7 @@ namespace YamaCaisse.Pages
             int nbligne = listPaiement.Count / 2;
             int ligne = 0;
             int column = 0;
+
             foreach (var item in listPaiement)
             {
                 var button = new Button
@@ -134,10 +135,11 @@ namespace YamaCaisse.Pages
                     TextColor = (Color)Application.Current.Resources["TextIconeColor"]
                 };
                 button.Text = item.TPA_LIBELLE;
-               // button.WidthRequest = 150;
+                // button.WidthRequest = 150;
+                button.MinimumHeightRequest = 50;
                 button.HeightRequest = 60;
-                button.HorizontalOptions = LayoutOptions.Fill;
-                button.VerticalOptions = LayoutOptions.Fill;
+                button.HorizontalOptions = LayoutOptions.FillAndExpand;
+                button.VerticalOptions = LayoutOptions.FillAndExpand;
                 //button.FontSize = 20;
                 button.ClassId = item.TPA_ID.ToString();
                 button.Clicked += Click_SelectTypePaiement;
