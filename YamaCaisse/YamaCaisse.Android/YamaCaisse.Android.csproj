@@ -196,51 +196,141 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable\Tab2_carre_220.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_carre_220.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_carre_45.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_carre_45.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_carre_H.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_carre_H.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_carre_V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_carre_V.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_rond_220.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_rond_220.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_rond_45.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_rond_45.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_rond_H.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_rond_H.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab2_rond_V.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_rond_H.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab4_carre.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab4_carre.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab4_carre_90.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab2_carre_90.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab4_rond.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <LogicalName>YamaCaisse.Tab4_rond.png</LogicalName>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab4_rond_90.png">
-      <LogicalName>YamaCaisse.Tab4_rond_90.png</LogicalName>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_carre_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_carre_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_carre_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_carre_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_rond_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_rond_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_rond_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab2_rond_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab4_carre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab4_carre_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab4_rond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\Tab4_rond_90.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_carre_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_carre_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_carre_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_carre_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_rond_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_rond_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_rond_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab2_rond_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab4_carre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab4_carre_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab4_rond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xhdpi\Tab4_rond_90.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_carre_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_carre_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_carre_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_carre_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_rond_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_rond_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_rond_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab2_rond_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab4_carre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab4_carre_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab4_rond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\Tab4_rond_90.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
