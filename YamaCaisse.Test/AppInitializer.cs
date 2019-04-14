@@ -25,17 +25,21 @@ namespace YamaCaisse.Test
             {
                 return ConfigureApp
                     .Android
+                    .EnableLocalScreenshots()
                     // TODO: Update this path to point to your Android app and uncomment the
                     // code if the app is not included in the solution.
                     //.ApkFile ("../../../Droid/bin/Debug/xamarinforms.apk")
                     .StartApp();
             }
 
+            //return ConfigureApp.iOS.InstalledApp("com.xamarin.example.creditcardvalidator").StartApp();
+
             return ConfigureApp
                 .iOS
+                .EnableLocalScreenshots()
                 // TODO: Update this path to point to your iOS app and uncomment the
                 // code if the app is not included in the solution.
-                //.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")
+                .AppBundle ("../../../YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/device-builds/ipad8.1-12.1/YamaCaisse.iOS.app")
                 .StartApp();
         }
     }

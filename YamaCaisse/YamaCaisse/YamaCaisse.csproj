@@ -172,6 +172,13 @@
       <DependentUpon>PopupFormule.xaml</DependentUpon>
     </Compile>
     <Compile Include="Behavior\AutoSizeBehavior.cs" />
+    <EmbeddedResource Include="Pages\PopupFiche.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="Pages\PopupFiche.xaml.cs">
+      <DependentUpon>PopupFiche.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
