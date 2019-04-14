@@ -296,6 +296,55 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Properties\Tab2_carre_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_carre_220.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab2_carre_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_carre_45.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab2_carre_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_carre_H.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab2_carre_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_carre_V.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab2_rond_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_rond_220.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab2_rond_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_rond_45.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab2_rond_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_rond_H.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab2_rond_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_rond_H.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab4_carre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab4_carre.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab4_carre_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab2_carre_90.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab4_rond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>YamaCaisse.Tab4_rond.png</LogicalName>
+    </AndroidResource>
+    <AndroidResource Include="Properties\Tab4_rond_90.png">
+      <LogicalName>YamaCaisse.Tab4_rond_90.png</LogicalName>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />
 </Project>
