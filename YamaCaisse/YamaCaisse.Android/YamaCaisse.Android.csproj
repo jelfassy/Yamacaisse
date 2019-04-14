@@ -194,18 +194,40 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_carre_V.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\Tab4_rond_90.png" />
-    <AndroidResource Include="Resources\drawable\Tab4_rond.png" />
-    <AndroidResource Include="Resources\drawable\Tab4_carre_90.png" />
-    <AndroidResource Include="Resources\drawable\Tab4_carre.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_rond_V.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_rond_H.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_rond_45.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_rond_220.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_carre_H.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_carre_220.png" />
-    <AndroidResource Include="Resources\drawable\Tab2_carre_45.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_rond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab4_carre_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab4_carre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_rond_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_rond_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_rond_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_rond_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_carre_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_carre_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_carre_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

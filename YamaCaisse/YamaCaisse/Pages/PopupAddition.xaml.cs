@@ -136,9 +136,9 @@ namespace YamaCaisse.Pages
                 };
                 button.Text = item.TPA_LIBELLE;
                 // button.WidthRequest = 150;
-                button.MinimumHeightRequest = 50;
+                button.MinimumHeightRequest = 60;
                 button.HeightRequest = 60;
-                button.FontSize = 15;
+                button.FontSize = 14;
                 button.HorizontalOptions = LayoutOptions.FillAndExpand;
                 button.VerticalOptions = LayoutOptions.FillAndExpand;
                 //button.FontSize = 20;

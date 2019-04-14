@@ -138,18 +138,42 @@
     <BundleResource Include="Resources\Icon-Small%402x.png" />
     <BundleResource Include="Resources\Icon-Small%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <BundleResource Include="Resources\Tab2_carre_H.png" />
-    <BundleResource Include="Resources\Tab2_carre_V.png" />
-    <BundleResource Include="Resources\Tab2_rond_H.png" />
-    <BundleResource Include="Resources\Tab2_rond_V.png" />
-    <BundleResource Include="Resources\Tab4_carre.png" />
-    <BundleResource Include="Resources\Tab4_rond.png" />
-    <BundleResource Include="Resources\Tab2_carre_45.png" />
-    <BundleResource Include="Resources\Tab2_carre_220.png" />
-    <BundleResource Include="Resources\Tab2_rond_45.png" />
-    <BundleResource Include="Resources\Tab2_rond_220.png" />
-    <BundleResource Include="Resources\Tab4_carre_90.png" />
-    <BundleResource Include="Resources\Tab4_rond_90.png" />
+    <BundleResource Include="Resources\Tab2_carre_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab2_carre_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab2_rond_H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab2_rond_V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab4_carre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab4_rond.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab2_carre_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab2_carre_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab2_rond_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab2_rond_220.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab4_carre_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Tab4_rond_90.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
     <BundleResource Include="Resources\Bip.mp3" />
   </ItemGroup>
   <ItemGroup>

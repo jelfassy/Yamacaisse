@@ -107,9 +107,6 @@
     <Compile Include="ViewModel\IBaseCaisse.cs" />
     <Compile Include="Entity\TableIcone.cs" />
     <Compile Include="ViewModel\TicketViewModel.cs" />
-    <Compile Include="Pages\PopupAddition.xaml.cs">
-      <DependentUpon>PopupAddition.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Services\PaiementServices\IPaiementDataServices.cs" />
     <Compile Include="Services\PaiementServices\PaiementDataServices.cs" />
     <Compile Include="Services\TypePaiementServices\TypePaiementDataServices.cs" />
@@ -178,6 +175,11 @@
     </EmbeddedResource>
     <Compile Include="Pages\PopupFiche.xaml.cs">
       <DependentUpon>PopupFiche.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PopupAddition.xaml.cs">
+      <DependentUpon>PopupAddition.xaml</DependentUpon>
+      <LogicalName>YamaCaisse.Pages.PopupAddition.xaml.cs</LogicalName>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
   <ItemGroup>
