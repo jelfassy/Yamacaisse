@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using YamaCaisse.View;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
+using Microsoft.AppCenter.Crashes;
 
 namespace YamaCaisse.Pages
 {
@@ -32,13 +33,26 @@ namespace YamaCaisse.Pages
 
         async void Click_Couvert(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrEmpty(this.EntryNbCouvert.Text))
+                {
+                    int nb;
+                    var rs = int.TryParse(this.EntryNbCouvert.Text, out nb);
+                    if (rs == true)
+                        TicketViewModel.Current.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
+                }
 
-            int nb;
-            var rs = int.TryParse(this.EntryNbCouvert.Text, out nb);
-            if (rs == true)
-                TicketViewModel.Current.NbCouvert = int.Parse(this.EntryNbCouvert.Text);
-
-
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"Click_Couvert"}
+                };
+                Crashes.TrackError(ex, property);
+            }
+   
             await PopupNavigation.PopAsync(false);
         }
 

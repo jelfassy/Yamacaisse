@@ -263,7 +263,9 @@ namespace YamaCaisse.Pages
 
         async void Click_Fiche(object sender, EventArgs e)
         {
-            await _ticketDataServices.PrintFiche((int)TicketViewModel.Current.TKT_ID);
+            await PopupNavigation.Instance.PushAsync(new PopupFiche());
+
+           // await _ticketDataServices.PrintFiche((int)TicketViewModel.Current.TKT_ID);
         }
 
         async void Click_Encaisser(object sender, EventArgs e)

@@ -23,7 +23,7 @@ namespace YamaCaisse
         public MainPage()
         {
             InitializeComponent();
-           this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
+          // this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
            //this.AdresseServeur.Text = "192.168.1.28:63058";
             if (Application.Current.Properties.ContainsKey("ServeurAdress"))
               this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);

@@ -39,5 +39,21 @@ namespace YamaCaisse.Pages
 
             }
         }
+
+        void Click_Back(object sender, EventArgs e)
+        {
+            if (this.Current == "Couvert")
+            {
+                if (this.EntryNbCouvert.Text != "")
+                    this.EntryNbCouvert.Text = this.EntryNbCouvert.Text.Remove(this.EntryNbCouvert.Text.Length - 1);
+            }
+            else
+            {
+                if (this.EntryMontant.Text != "")
+                    this.EntryMontant.Text = this.EntryMontant.Text.Remove(this.EntryMontant.Text.Length - 1);
+
+            }
+        }
+
     }
 }

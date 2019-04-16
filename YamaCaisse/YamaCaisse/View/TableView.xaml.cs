@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
+using YamaCaisse.Pages;
 using YamaCaisse.Services.SalleServices;
 using YamaCaisse.Services.SalleTableServices;
 using YamaCaisse.Services.TableServices;
-using System.Linq;
-using System.Threading.Tasks;
-using YamaCaisse.Pages;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.View
@@ -23,10 +22,10 @@ namespace YamaCaisse.View
 
         public PopupTable CurrentPopupTable { get; set; }
 
-       
-      
+
+
         private string CurrentPage;
-    
+
         public int TableId
         {
             get;
@@ -116,14 +115,33 @@ namespace YamaCaisse.View
             {
                 var buton = CreateButtonImageTable(rr.T_TABLE);
 
+                int lattitude;
+                int longitude;
+                if (rr.SALTAB_LATTITUDE.IndexOf('.', 0) != -1)
+                {
+                    lattitude = int.Parse(rr.SALTAB_LATTITUDE.Substring(0, rr.SALTAB_LATTITUDE.IndexOf('.', 0)));
+                }
+                else
+                {
+                    lattitude = int.Parse(rr.SALTAB_LATTITUDE);
+                }
+
+                if (rr.SALTAB_LONGITUDE.IndexOf('.', 0) != -1)
+                {
+                    longitude = int.Parse(rr.SALTAB_LONGITUDE.Substring(0, rr.SALTAB_LONGITUDE.IndexOf('.', 0)));
+                }
+                else
+                {
+                    longitude = int.Parse(rr.SALTAB_LONGITUDE);
+                }
                 // buton.HeightRequest = 30;
                 //buton.WidthRequest = 30;
                 layout.Children.Add(buton, Constraint.RelativeToParent((parent) =>
                 {
-                    return parent.X + double.Parse(rr.SALTAB_LATTITUDE);
+                    return parent.X + lattitude;
                 }), Constraint.RelativeToParent((parent) =>
                 {
-                    return parent.Y + double.Parse(rr.SALTAB_LONGITUDE);
+                    return parent.Y + longitude;
                 }), Constraint.RelativeToParent((parent) =>
                 {
                     return 60;
@@ -159,8 +177,8 @@ namespace YamaCaisse.View
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-           // grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-          //  grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+            // grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+            //  grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
 
             var list = await _tableDataServices.GetTableList();
             if (type == "Ouvert")
@@ -187,19 +205,15 @@ namespace YamaCaisse.View
         private Grid CreateButtonImageTable(Table tab)
         {
             var grid = new Grid();
-
-            var image = new Image()
+            grid.HorizontalOptions = LayoutOptions.Center;
+            grid.VerticalOptions = LayoutOptions.Center;
+            //image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile(tab.T_TABLE_ICONE.ICT_name + ".png") : ImageSource.FromFile("Images/" + tab.T_TABLE_ICONE.ICT_name + ".png");
+            var button = new ImageButton
             {
+                // Text = tab.TAB_NOM,
+                // TextColor = Color.White,
+                // Image = tab.T_TABLE_ICONE.ICT_name + ".png",
                 Source = tab.T_TABLE_ICONE.ICT_name + ".png",
-                HeightRequest = 250,
-                WidthRequest = 250,
-                Aspect = Aspect.AspectFill,
-            };
-            image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile(tab.T_TABLE_ICONE.ICT_name + ".png") : ImageSource.FromFile("Images/" + tab.T_TABLE_ICONE.ICT_name + ".png");
-            var button = new Button
-            {
-                Text = tab.TAB_NOM,
-                TextColor = Color.White,
                 WidthRequest = 250,
                 HeightRequest = 250,
                 MinimumHeightRequest = 100,
@@ -209,9 +223,16 @@ namespace YamaCaisse.View
                 // BackgroundColor = (Color)Application.Current.Resources["DividerColor"],
                 ClassId = tab.TAB_ID.ToString(),
             };
+            var label = new Label()
+            {
+                Text = tab.TAB_NOM,
+                TextColor = Color.White,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
+            };
             button.Clicked += Click_SelectTable;
-            grid.Children.Add(image);
             grid.Children.Add(button);
+            grid.Children.Add(label);
             return grid;
         }
 
@@ -231,7 +252,7 @@ namespace YamaCaisse.View
             button.HeightRequest = 70;
             button.FontSize = 16;
             // button.Image = tab.T_TABLE_ICONE.ICT_name + ".png";
-            button.Clicked +=Click_SelectTable;
+            button.Clicked += Click_SelectTable;
             return button;
         }
 
@@ -255,7 +276,7 @@ namespace YamaCaisse.View
             }
             if (CurrentPopupTable != null)
                 CurrentPopupTable.ClosePopup();
-             
+
         }
 
         public void UnSelectAllTable()
@@ -269,7 +290,7 @@ namespace YamaCaisse.View
             //        // your processing...
             //    }
             //}       
-            }
+        }
 
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {
