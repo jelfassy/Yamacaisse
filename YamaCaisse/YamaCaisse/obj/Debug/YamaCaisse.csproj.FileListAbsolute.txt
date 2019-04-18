@@ -101,10 +101,12 @@ C:/Dev/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/RapportPage.xaml.g.cs
 C:/Dev/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupQuantite.xaml.g.cs
 C:/Dev/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/ReservationPage.xaml.g.cs
 C:/Dev/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupFormule.xaml.g.cs
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/Pages/PopupAddition.xaml.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/bin/Debug/YamaCaisse.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.AppResources.resources
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.csproj.GenerateResource.cache
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupFiche.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/MainPage.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/App.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/Caisse.xaml.g.cs
@@ -135,4 +137,4 @@ C:/Dev/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupFormule.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.pdb
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.csprojAssemblyReference.cache
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupFiche.xaml.g.cs
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupPaiement.xaml.g.cs

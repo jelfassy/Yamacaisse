@@ -13,7 +13,9 @@ using YamaCaisse.Pages;
 using YamaCaisse.ViewModel;
 using Newtonsoft.Json.Linq;
 using Microsoft.AppCenter.Distribute;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace YamaCaisse
 {
     public partial class App : Application
