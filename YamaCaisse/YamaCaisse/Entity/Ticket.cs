@@ -95,5 +95,6 @@ namespace YamaCaisse.Entity
             set;
         }
 
+
     }
 }

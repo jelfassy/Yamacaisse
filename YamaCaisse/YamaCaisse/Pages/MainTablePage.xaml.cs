@@ -19,7 +19,7 @@ namespace YamaCaisse.Pages
 {
     public partial class MainTablePage : ContentPage, IBaseCaisse
     {
-        private ITicketDataServices _TicketDataServices;
+        private ITicketDataServices _ticketDataServices;
 
         public MainTablePage()
         {
@@ -28,7 +28,7 @@ namespace YamaCaisse.Pages
                 this.BindingContext = this;
                 InitializeComponent();
                  
-                _TicketDataServices = DependencyService.Get<ITicketDataServices>();
+                _ticketDataServices = DependencyService.Get<ITicketDataServices>();
 
             }
             catch (Exception ex)
@@ -93,6 +93,16 @@ namespace YamaCaisse.Pages
         async void Click_Addition(object sender, System.EventArgs e)
         {
             if (TicketViewModel.Current.TKT_ID != 0)
+            {
+                await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
+                this.tableListControl.Refresh();
+                await PopupNavigation.Instance.PushAsync(new PopupPaiement(TicketViewModel.Current.Ticket));
+            }
+        }
+
+        async void Click_Eclater(object sender,System.EventArgs e)
+        {
+            if(TicketViewModel.Current.TKT_ID != 0)
             {
                 await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current.TKT_ID));
             }

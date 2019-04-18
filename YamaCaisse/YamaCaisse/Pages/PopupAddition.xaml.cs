@@ -18,10 +18,10 @@ namespace YamaCaisse.Pages
 {
     public partial class PopupAddition : PopupPage
     {
-        private ITypePaiementDataServices _typePaiementServices;
+       
         private ITableDataServices _tableDataServices;
         private ITicketDataServices _ticketDataServices;
-        private IPaiementDataServices _paiementDataServices;
+       
 
 
         public MainTicketPage _maintTicketPage { get; set; }
@@ -43,13 +43,7 @@ namespace YamaCaisse.Pages
             }
         }
 
-        public bool FirstPressNumber { get; set; }
 
-        public int IdTypePaiement
-        {
-            get;
-            set;
-        }
 
         public int TikId
         {
@@ -91,10 +85,9 @@ namespace YamaCaisse.Pages
             this.BindingContext = this;
             // this.ticketControl = ((MainTablePage)parent).TicketControl;
             InitializeComponent();
-            _typePaiementServices = DependencyService.Get<ITypePaiementDataServices>();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
-            _paiementDataServices = DependencyService.Get<IPaiementDataServices>();
+           
             this.ListSelectedLigneTicket = new ObservableCollection<LigneTicket>();
             ListPaiementEncaisser = new ObservableCollection<PaiementTicket>();
             TikId = ticketId;
@@ -102,12 +95,10 @@ namespace YamaCaisse.Pages
             LoadData();
             stkBtSplit.IsVisible = true;
             StkplitDetail.IsVisible = false;
-            FirstPressNumber = true;
         }
 
         public async void LoadData()
         {
-            LoadBouttonTypePaiement();
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
             TicketViewModel.Current.Clear();
             TicketViewModel.Current.SetTicket(ticket);
@@ -116,44 +107,6 @@ namespace YamaCaisse.Pages
             MontantTotal = (decimal)TicketViewModel.Current.ListLigneTicket.Where(c=>c.FK_PATI_ID == null).Sum(c => c.LTK_SOMME);
             if(MontantTotal == 0)
                 await PopupNavigation.PopAsync(false);
-        }
-
-
-        public async void LoadBouttonTypePaiement()
-        {
-            var listPaiement = await _typePaiementServices.GetTypePaiements();
-            int nbligne = listPaiement.Count / 2;
-            int ligne = 0;
-            int column = 0;
-
-            foreach (var item in listPaiement)
-            {
-                var button = new Button
-                {
-                    BorderColor = Color.Gray,
-                    BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    TextColor = (Color)Application.Current.Resources["TextIconeColor"]
-                };
-                button.Text = item.TPA_LIBELLE;
-                // button.WidthRequest = 150;
-                button.MinimumHeightRequest = 60;
-                button.HeightRequest = 60;
-                button.FontSize = 14;
-                button.HorizontalOptions = LayoutOptions.FillAndExpand;
-                button.VerticalOptions = LayoutOptions.FillAndExpand;
-                //button.FontSize = 20;
-                button.ClassId = item.TPA_ID.ToString();
-                button.Clicked += Click_SelectTypePaiement;
-                gdTypePaiment.Children.Add(button, column, ligne);
-
-                column = column + 1;
-                if (column > 1)
-                {
-                    column = 0;
-                    ligne = ligne + 1;
-                }
-
-            }
         }
 
         void TappedItemcurrentList(object sender, ItemTappedEventArgs e)
@@ -205,18 +158,6 @@ namespace YamaCaisse.Pages
 
         }
 
-        void Click_Number(object sender, EventArgs e)
-        {
-            if (this.FirstPressNumber)
-            {
-                eMontantPayer.Text = (sender as Button).Text;
-                this.FirstPressNumber = false;
-            }
-            else
-            eMontantPayer.Text = string.Concat(this.eMontantPayer.Text, (sender as Button).Text);
-
-        }
-
         void Click_Split(object sender, EventArgs e)
         {
             if (ListSelectedLigneTicket.Count > 0)
@@ -232,94 +173,14 @@ namespace YamaCaisse.Pages
             StkplitDetail.IsVisible = true;
         }
 
-
-        void Click_SelectTypePaiement(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            foreach (var btng in gdTypePaiment.Children)
-            {
-                if (btng.GetType() == typeof(Button))
-                {
-                    btng.BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"];
-                }
-            }
-
-            IdTypePaiement = int.Parse(btn.ClassId);
-            btn.BackgroundColor = Color.Green;
-
-        }
-
-        void Click_Back(object sender, EventArgs e)
-        {
-            if (this.eMontantPayer.Text != "")
-                this.eMontantPayer.Text = this.eMontantPayer.Text.Remove(this.eMontantPayer.Text.Length - 1);
-        }
-
-
         async void Click_Print(object sender, EventArgs e)
         {
             await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
         }
 
-        async void Click_Fiche(object sender, EventArgs e)
-        {
-            await PopupNavigation.Instance.PushAsync(new PopupFiche());
 
-           // await _ticketDataServices.PrintFiche((int)TicketViewModel.Current.TKT_ID);
-        }
 
-        async void Click_Encaisser(object sender, EventArgs e)
-        {
-            try
-            {
-                if (this.IdTypePaiement != 0)
-                {
-                    this.FirstPressNumber = true;
-                    var paiement = new PaiementTicket()
-                    {
-                        FK_TIK_ID = this.TikId,
-                        FK_TPA_ID = this.IdTypePaiement,
-                        Montant = this.MontantTotal
-                    };
-                    paiement.T_LIGNE_TICKET = ListSelectedLigneTicket.ToList();
-                    foreach (var ligne in paiement.T_LIGNE_TICKET)
-                        ligne.TIK_MOVE_TIK = this.TikId;
-                    var rs = await this._paiementDataServices.PostPaiement(paiement);
-                    LoadData();
-                    if (rs)
-                    {
-                        if(this.ListSelectedLigneTicket.Count == 0)
-                            await PopupNavigation.PopAsync(false);
-                        // si le traitement est ok
-                        this.MontantTotal = 0;
-                        this.ListSelectedLigneTicket.Clear();
-                        if (this._maintTicketPage != null)
-                            _maintTicketPage.loadData();
-                        if(this._mainTablePage != null)
-                            await Navigation.PushModalAsync(new YamaCaisse.Pages.MainTablePage());
-                        //  await PopupNavigation.PopAsync(false);
-                    }
-                    else
-                    {
-                        await DisplayAlert("Encaisser", "Merci de reessayer !", "OK");
-                    }
-                }
-                else
-                {
-                    await DisplayAlert("Payer", "Selectionner un type de paiement", "OK");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                var property = new Dictionary<string, string>
-                {
-                    {this.GetType().Name,"Click_Encaisser"}
-                };
-                Crashes.TrackError(ex, property);
-            }
-
-        }
+      
 
         async void Click_closed(object sender, EventArgs e)
         {

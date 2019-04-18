@@ -15,7 +15,7 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The ticket.</returns>
         /// <param name="ticket">Ticket.</param>
-        Task<bool> PostTicket(Ticket ticket);
+        Task<Ticket> PostTicket(Ticket ticket);
         /// <summary>
         /// Gets the tickets.
         /// </summary>
@@ -51,6 +51,6 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The fiche.</returns>
         /// <param name="idTicket">Identifier ticket.</param>
-        Task<bool> PrintFiche(int idTicket);
+        Task<bool> PrintFiche(int nbcouvert,decimal Montant);
     }
 }

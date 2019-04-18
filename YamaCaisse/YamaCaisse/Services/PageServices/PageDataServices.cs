@@ -36,11 +36,21 @@ namespace YamaCaisse.Services.PageServices
           try
             {
                 List<oPage> res = new List<oPage>();
-                    var jsonPage = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
-                await Task.Run(() => {
-                    JToken token = jsonPage.SelectToken("data");
+                if(App.JsonPage == null)
+                {
+                    App.JsonPage = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+                    await Task.Run(() => {
+                        JToken token = App.JsonPage.SelectToken("data");
+                        res = token.Select((JToken s) => s.ToObject<oPage>()).ToList();
+                    });
+
+                }
+                else
+                {
+                    JToken token = App.JsonPage.SelectToken("data");
                     res = token.Select((JToken s) => s.ToObject<oPage>()).ToList();
-                });
+                }
+               
 
                 return res;
             }

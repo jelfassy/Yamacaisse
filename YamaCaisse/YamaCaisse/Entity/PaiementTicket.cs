@@ -37,5 +37,9 @@ namespace YamaCaisse.Entity
 
         public int? EMP_ID { get; set; }
 
+        public DateTime? PATI_DATE { get; set; }
+
+        public TypePaiement T_TYPE_PAIEMENT { get; set; }
+
     }
 }

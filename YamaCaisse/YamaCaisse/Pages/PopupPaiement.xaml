@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns:rlocal="clr-namespace:YamaCaisse.Renderer;assembly=YamaCaisse" x:Class="YamaCaisse.Pages.PopupPaiement">
+    <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="350">
+        <StackLayout x:Name="stkPaiement">
+            <Label x:Name="eMontantPayer" Text="" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+            <Grid x:Name="gdTypePaiment" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Button Text="1" HeightRequest="40" Grid.Column="0" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="2" HeightRequest="40" Grid.Column="1" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="3" HeightRequest="40" Grid.Column="2" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="4" HeightRequest="40" Grid.Column="0" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="5" HeightRequest="40" Grid.Column="1" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="6" HeightRequest="40" Grid.Column="2" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="7" HeightRequest="40" Grid.Column="0" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="8" HeightRequest="40" Grid.Column="1" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="9" HeightRequest="40" Grid.Column="2" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button x:Name="Backspace" HeightRequest="40" Text="retour" FontSize="Medium" Grid.Column="0" Grid.Row="3" Clicked="Click_Back" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="0" HeightRequest="40" Grid.Column="1" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button x:Name="virgule" HeightRequest="40" Text="." Grid.Column="2" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                </Grid>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Clicked="Click_Encaisser" Text="Encaisser" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
+                <Button Clicked="Click_ListPaiement" Text="Liste" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" />
+            </StackLayout>
+        </StackLayout>
+        <StackLayout x:Name="stkListHisto" Orientation="Vertical">
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Text="Restant due" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                    <Label Grid.Row="1" Grid.Column="0" x:Name="eMntDue" Text="" HorizontalOptions="FillAndExpand" FontSize="Medium" BackgroundColor="White" HorizontalTextAlignment="Center" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="Montant Payé" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                    <Label Grid.Row="1" Grid.Column="1" x:Name="eMntPaye" Text="" HorizontalOptions="FillAndExpand" FontSize="Medium" BackgroundColor="White" HorizontalTextAlignment="Center" />
+                </Grid>
+            </StackLayout>
+            <ListView x:Name="listViewPaiement" HorizontalOptions="StartAndExpand" RowHeight="40" SeparatorVisibility="Default" ItemSelected="Ligne_ItemSelected" HeightRequest="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Appearing="Cell_OnAppearing">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40">
+                                    </RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding PATI_DATE,StringFormat='{0:HH:mm}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_TYPE_PAIEMENT.TPA_LIBELLE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="2" Text="{Binding Montant,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Clicked="Click_back" Text="Retour" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" />
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

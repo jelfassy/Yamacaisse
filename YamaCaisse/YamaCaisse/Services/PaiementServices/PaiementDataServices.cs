@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
@@ -23,19 +24,46 @@ namespace YamaCaisse.Services.PaiementServices
         public PaiementDataServices()
         {
         }
+
         /// <summary>
-        /// Gets the paiement.
+        /// Gets the list paiement.
         /// </summary>
-        /// <returns>The paiement.</returns>
-        public Task<List<PaiementTicket>> GetPaiement()
+        /// <returns>The list paiement.</returns>
+        /// <param name="id">Identifier. of ticket</param>
+        public async Task<List<PaiementTicket>> GetListPaiement(int id)
         {
-            throw new NotImplementedException();
+            List<PaiementTicket> res = new List<PaiementTicket>();
+            try
+            {
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, id));
+                JToken token = o.SelectToken("data");
+                res = token.Select((JToken s) => s.ToObject<PaiementTicket>()).ToList();
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetListPaiement" + id}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetListPaiement" + id}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
         }
         /// <summary>
         /// Gets the paiement.
         /// </summary>
         /// <returns>The paiement.</returns>
-        /// <param name="id">Identifier.</param>
+        /// <param name="id">Identifier of ticket.</param>
         public Task<Ticket> GetPaiement(int id)
         {
             throw new NotImplementedException();

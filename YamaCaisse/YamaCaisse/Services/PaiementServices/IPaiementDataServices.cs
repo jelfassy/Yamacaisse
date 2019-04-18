@@ -20,7 +20,7 @@ namespace YamaCaisse.Services.PaiementServices
         /// Gets the paiement.
         /// </summary>
         /// <returns>The paiement.</returns>
-        Task<List<PaiementTicket>> GetPaiement();
+        Task<List<PaiementTicket>> GetListPaiement(int id);
         /// <summary>
         /// Gets the paiement.
         /// </summary>

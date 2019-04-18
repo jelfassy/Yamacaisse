@@ -57,7 +57,7 @@ namespace YamaCaisse.Pages
 
             firstLoad = false;
 
-          //  StkPageList.SizeChanged += StkPageList_SizeChanged;
+            //  StkPageList.SizeChanged += StkPageList_SizeChanged;
 
         }
 
@@ -169,7 +169,7 @@ namespace YamaCaisse.Pages
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-    
+
 
 
         void Click_Compr(object sender, EventArgs e)
@@ -184,23 +184,24 @@ namespace YamaCaisse.Pages
                 if (TicketViewModel.Current.ListLigneTicket.Count > 0)
                 {
                     TicketViewModel.Current.ComprTicket();
+
                     if (TicketViewModel.Current.TKT_ID == 0)
                     {
 
                         var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current.GetTicketToSend());
-                        //   await PopupNavigation.Instance.PushAsync(new PopupAddition(this));
+                        if (TicketViewModel.Current.IdTable == null)
+                            await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
                     }
                     else
                     {
-                        var rs = await _ticketDataServices.PutTicket(TicketViewModel.Current.TKT_ID, TicketViewModel.Current.GetTicketToSend());
+                        var rsb = await _ticketDataServices.PutTicket(TicketViewModel.Current.TKT_ID, TicketViewModel.Current.GetTicketToSend());
                     }
-
-
                     ResetTicket();
                 }
             }
             catch (Exception ex)
             {
+
                 var property = new Dictionary<string, string>
                 {
                     {"Caisse","Click_Envoi"}

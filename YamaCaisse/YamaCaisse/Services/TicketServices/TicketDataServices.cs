@@ -150,12 +150,12 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The fiche.</returns>
         /// <param name="idTicket">Identifier ticket.</param>
-        public async Task<bool> PrintFiche(int idTicket)
+        public async Task<bool> PrintFiche(int nbcouvert, decimal Montant)
         {
             try
             {
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/", idTicket.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/", nbcouvert.ToString()));
 
                 await Task.Run(() =>
                 {
@@ -171,7 +171,7 @@ namespace YamaCaisse.Services.TicketServices
             {
                 var property = new Dictionary<string, string>
                 {
-                    {this.GetType().Name,"PrintFiche" + idTicket}
+                    {this.GetType().Name,"PrintFiche"}
                 };
                 Crashes.TrackError(Iex, property);
                 throw Iex;
@@ -180,7 +180,7 @@ namespace YamaCaisse.Services.TicketServices
             {
                 var property = new Dictionary<string, string>
                 {
-                    {this.GetType().Name,"PrintFiche" + idTicket }
+                    {this.GetType().Name,"PrintFiche" }
                 };
                 Crashes.TrackError(ex, property);
                 throw ex;
@@ -233,10 +233,11 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The ticket.</returns>
         /// <param name="ticket">Ticket.</param>
-        public async Task<bool> PostTicket(Ticket ticket)
+        public async Task<Ticket> PostTicket(Ticket ticket)
         {
             try
             {
+                Ticket res = null;
                 var js = JsonConvert.SerializeObject(ticket, new JsonSerializerSettings()
                 {
                     NullValueHandling = NullValueHandling.Ignore
@@ -246,8 +247,12 @@ namespace YamaCaisse.Services.TicketServices
  
                 JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl),js);
 
-                return true;
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<Ticket>();
 
+                });
+                return res;
             }
             catch (InvalidOperationException Iex)
             {
@@ -256,7 +261,7 @@ namespace YamaCaisse.Services.TicketServices
                     {this.GetType().Name,"IOE_PostTicket"}
                 };
                 Crashes.TrackError(Iex, property);
-                return false;
+                return null;
             }
             catch (Exception ex)
             {
@@ -265,7 +270,7 @@ namespace YamaCaisse.Services.TicketServices
                     {this.GetType().Name,"PostTicket" }
                 };
                 Crashes.TrackError(ex, property);
-                return false;
+                return null;
             }
         }
 

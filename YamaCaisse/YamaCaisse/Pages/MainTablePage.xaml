@@ -34,7 +34,8 @@
                     <Button Grid.Column="1" Grid.Row="1" Text="Prendre" Clicked="Click_Take" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="2" Grid.Row="1" Text="Move" Clicked="Click_Move" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="3" Grid.Row="1" Text="Addition" Clicked="Click_Addition" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-                    <Button Grid.Column="4" Grid.Row="1" Text="Reclame" Clicked="Click_Reclame" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Grid.Column="4" Grid.Row="1" Text="Eclater" Clicked="Click_Eclater" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Grid.Column="5" Grid.Row="1" Text="Reclame" Clicked="Click_Reclame" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 </Grid>
             </StackLayout>
         </AbsoluteLayout>
