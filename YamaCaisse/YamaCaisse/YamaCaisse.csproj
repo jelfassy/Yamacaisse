@@ -100,9 +100,6 @@
     <Compile Include="Pages\MainTicketPage.xaml.cs">
       <DependentUpon>MainTicketPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TicketDetailPage.xaml.cs">
-      <DependentUpon>TicketDetailPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Entity\Tva.cs" />
     <Compile Include="ViewModel\IBaseCaisse.cs" />
     <Compile Include="Entity\TableIcone.cs" />
@@ -235,10 +232,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\MainTicketPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pages\TicketDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

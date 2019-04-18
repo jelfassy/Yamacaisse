@@ -10,7 +10,7 @@ namespace YamaCaisse.Pages
         public ReservationPage()
         {
             InitializeComponent();
-            DatePicker.MinimumDate = DateTime.Now;
+            //DatePicker.MinimumDate = DateTime.Now;
         }
     }
 }

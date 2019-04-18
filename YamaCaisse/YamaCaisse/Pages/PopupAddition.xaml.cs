@@ -178,9 +178,14 @@ namespace YamaCaisse.Pages
             await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
         }
 
+        async void Click_Fiche(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupFiche());
+
+            // await _ticketDataServices.PrintFiche((int)TicketViewModel.Current.TKT_ID);
+        }
 
 
-      
 
         async void Click_closed(object sender, EventArgs e)
         {

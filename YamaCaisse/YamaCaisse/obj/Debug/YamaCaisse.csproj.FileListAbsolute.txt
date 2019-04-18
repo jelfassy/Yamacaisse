@@ -117,7 +117,6 @@ C:/Dev/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupFormule.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupTable.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupCouvert.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/MainTicketPage.xaml.g.cs
-/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/TicketDetailPage.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupAddition.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/ProductionPage.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupReclameBon.xaml.g.cs
