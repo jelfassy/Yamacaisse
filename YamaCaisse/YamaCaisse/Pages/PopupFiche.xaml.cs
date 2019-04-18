@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AppCenter.Crashes;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Services.TicketServices;
+using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
@@ -31,6 +33,8 @@ namespace YamaCaisse.Pages
                     Current = "Couvert";
                 })
             });
+
+            this.LblMontant.Text = TicketViewModel.Current.MontantTotal.ToString("0.00");
         }
 
     
@@ -65,11 +69,35 @@ namespace YamaCaisse.Pages
 
         async void Click_Fiche(object sender, EventArgs e)
         {
-            decimal Montant;
-            if (this.LblMontant.Text != "")
-                Montant = decimal.Parse(this.LblMontant.Text);
+            try
+            {
+                decimal Montant;
+                int nbrepas;
+                if (this.LblMontant.Text != "" && LblNbCouvert.Text != "!")
+                {
+                    Montant = decimal.Parse(this.LblMontant.Text);
+                    nbrepas = int.Parse(this.LblNbCouvert.Text);
+                    await _ticketDataServices.PrintFiche(TicketViewModel.Current.Ticket, nbrepas, Montant);
 
-               //  await _ticketDataServices.PrintFiche();
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Merci de saisir un Montant et un nombre de repas.", "OK");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"Fiche","Click_Fiche"}
+                };
+                Crashes.TrackError(ex, property);
+                await DisplayAlert("Error", "Une erreur c'est produit", "OK");
+
+            }
+
+
         }
         async void Click_Close(object sender, EventArgs e)
         {

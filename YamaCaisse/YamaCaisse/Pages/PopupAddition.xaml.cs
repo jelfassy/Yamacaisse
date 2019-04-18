@@ -93,8 +93,7 @@ namespace YamaCaisse.Pages
             TikId = ticketId;
             MontantTotal = 0;
             LoadData();
-            stkBtSplit.IsVisible = true;
-            StkplitDetail.IsVisible = false;
+            StkplitDetail.IsVisible = true;
         }
 
         public async void LoadData()
@@ -132,8 +131,8 @@ namespace YamaCaisse.Pages
                     ListSelectedLigneTicket.Add(ligne);
                     MontantTotal = MontantTotal + ligne.LTK_SOMME.Value;
                 }
-                stkBtSplit.IsVisible = false;
-                StkplitDetail.IsVisible = true;
+               // stkBtSplit.IsVisible = false;
+               // StkplitDetail.IsVisible = true;
 
             }
 
@@ -151,8 +150,8 @@ namespace YamaCaisse.Pages
                 MontantTotal = MontantTotal - ligne.LTK_SOMME.Value;
                 if (ListSelectedLigneTicket.Count == 0)
                 {
-                    stkBtSplit.IsVisible = true;
-                    StkplitDetail.IsVisible = false;
+                   // stkBtSplit.IsVisible = true;
+                   // StkplitDetail.IsVisible = false;
                 }
             }
 
@@ -169,22 +168,44 @@ namespace YamaCaisse.Pages
                 MontantTotal = TicketViewModel.Current.MontantTotal;
 
             }
-            stkBtSplit.IsVisible = false;
-            StkplitDetail.IsVisible = true;
+            
         }
 
-        async void Click_Print(object sender, EventArgs e)
+        async void Click_Envoi(object sender, EventArgs e)
         {
-            await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
+            if (this.ListSelectedLigneTicket.Count > 0)
+            {
+                var ticket = new Ticket()
+                {
+                    FK_EMP_ID = App.UserId,
+                    // FK_TAB_ID = this.IdTable,
+                    TIK_DATE = DateTime.Now,
+                    TIK_MNT_TOTAL = this.MontantTotal,
+                    // TIK_NB_COUVERT = this.NbCouvert,
+                    T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
+                    FK_JOU_ID = App.JourId,
+                    TIK_TPV = App.DeviceIdentifier
+
+                };
+                if (App.ConfigViewModel.Printer != null)
+                    ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
+
+                ticket.T_LIGNE_TICKET = this.ListSelectedLigneTicket.ToList();
+
+                foreach (var ligne in ticket.T_LIGNE_TICKET)
+                {
+                    ligne.T_TVA = null;
+                    ligne.T_RECLAME = null;
+                    ligne.T_EMPLOYE = null;
+                    ligne.T_PRODUIT = null;
+                    ligne.FK_LTK_ID = null;
+                    ligne.TIK_MOVE_TIK = TicketViewModel.Current.TKT_ID;
+                }
+                var rs = await _ticketDataServices.PostTicket(ticket);
+                await PopupNavigation.PopAsync(false);
+                await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
+            }
         }
-
-        async void Click_Fiche(object sender, EventArgs e)
-        {
-            await PopupNavigation.Instance.PushAsync(new PopupFiche());
-
-            // await _ticketDataServices.PrintFiche((int)TicketViewModel.Current.TKT_ID);
-        }
-
 
 
         async void Click_closed(object sender, EventArgs e)

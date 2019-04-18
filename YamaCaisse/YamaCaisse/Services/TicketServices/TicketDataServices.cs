@@ -150,12 +150,14 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The fiche.</returns>
         /// <param name="idTicket">Identifier ticket.</param>
-        public async Task<bool> PrintFiche(int nbcouvert, decimal Montant)
+        public async Task<bool> PrintFiche(Ticket ticket, int nbcouvert, decimal Montant)
         {
             try
             {
+
+                int mnt = (int)(Montant * 100);
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/", nbcouvert.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/",ticket.TIK_ID,"/", nbcouvert.ToString(),"/",mnt));
 
                 await Task.Run(() =>
                 {

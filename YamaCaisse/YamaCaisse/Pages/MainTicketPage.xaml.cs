@@ -111,12 +111,11 @@ namespace YamaCaisse.Pages
         {
             await PopupNavigation.Instance.PushAsync(new PopupFiche());
 
-            // await _ticketDataServices.PrintFiche((int)TicketViewModel.Current.TKT_ID);
         }
 
         async void Click_Reprint(object sender, EventArgs e)
         {
-            //  await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
+            await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
         }
 
     }

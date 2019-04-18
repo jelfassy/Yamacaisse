@@ -260,8 +260,7 @@ namespace YamaCaisse.View
 
         public async void Click_SelectTable(object sender, EventArgs e)
         {
-            UnSelectAllTable();
-            var button = (Button)sender;
+            UnSelectAllTable();            var button = (Button)sender;
             button.BorderColor = Color.BlueViolet;
             if (this.Move == true)
             {
@@ -281,15 +280,11 @@ namespace YamaCaisse.View
 
         public void UnSelectAllTable()
         {
-            var layout = StkTableList.Children.SingleOrDefault(c => c.GetType() == typeof(RelativeLayout));
-            //if(layout != null)
-            //{
-            //    for (int i = 0; i < layout.(); i++)
-            //    {
-            //        View child = relativeLayout.getChildAt(i);
-            //        // your processing...
-            //    }
-            //}       
+            if (TicketViewModel.Current.IdTable != null)
+            {
+
+
+            }
         }
 
         async void Click_NbCouvert(object sender, System.EventArgs e)
