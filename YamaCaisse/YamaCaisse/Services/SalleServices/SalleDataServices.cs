@@ -30,15 +30,21 @@ namespace YamaCaisse.Services.SalleServices
         {
             try
             {
-                List<Salle> res = new List<Salle>();
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
-
-                await Task.Run(() =>
+                if (App.ListSalle == null)
                 {
-                    JToken token = o.SelectToken("data");
-                    res = token.Select((JToken s) => s.ToObject<Salle>()).ToList();
-                });
-                return res;
+                    App.ListSalle = new List<Salle>();
+                    JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+
+                    await Task.Run(() =>
+                    {
+                        JToken token = o.SelectToken("data");
+                        App.ListSalle = token.Select((JToken s) => s.ToObject<Salle>()).ToList();
+                    });
+                    return App.ListSalle;
+                }
+                else
+                    return App.ListSalle;
+              
             }
             catch (InvalidOperationException Iex)
             {

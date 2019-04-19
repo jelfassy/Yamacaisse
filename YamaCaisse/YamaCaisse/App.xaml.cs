@@ -36,11 +36,14 @@ namespace YamaCaisse
 
         public static JObject JsonPage { get; set; }
         public static Dictionary<int, JObject> JsonPageProduit { get; set; }
+        public static List<Salle> ListSalle { get; set; }
+
 
         public static string CurrentPage { get; set; }
 
         public static string DeviceIdentifier { get; set; }
 
+            
         public App()
         {
             InitializeComponent();

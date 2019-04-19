@@ -94,6 +94,7 @@ namespace YamaCaisse.Pages
         {
             TicketViewModel.Current.Clear();
             App.JsonPageProduit.Clear();
+            App.ListSalle = null;
             await Navigation.PushModalAsync(new YamaCaisse.MainPage());
         }
 
