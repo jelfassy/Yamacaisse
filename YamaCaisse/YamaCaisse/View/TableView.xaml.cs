@@ -230,7 +230,7 @@ namespace YamaCaisse.View
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center
             };
-            button.Clicked += Click_SelectTable;
+            button.Clicked += Click_SelectTableImage;
             grid.Children.Add(button);
             grid.Children.Add(label);
             return grid;
@@ -260,7 +260,29 @@ namespace YamaCaisse.View
 
         public async void Click_SelectTable(object sender, EventArgs e)
         {
-            UnSelectAllTable();            var button = (Button)sender;
+            UnSelectAllTable();            
+            var button = (Button)sender;
+            button.BorderColor = Color.BlueViolet;
+            if (this.Move == true)
+            {
+                var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, int.Parse(button.ClassId));
+                TicketViewModel.Current.Clear();
+                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
+            }
+            else
+            {
+                TicketViewModel.Current.Clear();
+                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
+            }
+            if (CurrentPopupTable != null)
+                CurrentPopupTable.ClosePopup();
+
+        }
+
+        public async void Click_SelectTableImage(object sender, EventArgs e)
+        {
+            UnSelectAllTable();
+            var button = (ImageButton)sender;
             button.BorderColor = Color.BlueViolet;
             if (this.Move == true)
             {
