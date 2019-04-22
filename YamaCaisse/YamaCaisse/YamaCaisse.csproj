@@ -186,6 +186,13 @@
       <DependentUpon>PopupPaiement.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\TicketPaiementViewModel.cs" />
+    <EmbeddedResource Include="Pages\ActivityIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="Pages\ActivityIndicator.xaml.cs">
+      <DependentUpon>ActivityIndicator.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

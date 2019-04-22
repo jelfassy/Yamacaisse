@@ -18,10 +18,10 @@ namespace YamaCaisse.View
         private ISalleDataServices _salleDataServices;
         private ISalleTableDataServices _SalleTableDataServices;
 
-
+        public int PageNumber { get; set; }
+        public int NbByPage { get; set; }
 
         public PopupTable CurrentPopupTable { get; set; }
-
 
 
         private string CurrentPage;
@@ -45,6 +45,8 @@ namespace YamaCaisse.View
             CurrentPage = "Grille";
             InitGridTable(CurrentPage);
             InitListSalle();
+            PageNumber = 1;
+            NbByPage = 25;
             this.Move = move;
         }
 
@@ -184,9 +186,11 @@ namespace YamaCaisse.View
             if (type == "Ouvert")
                 list = list.Where(cw => cw.TAB_UTILISE == true).ToList();
             int row = 0;
+            var nbTable = list.Count();
+
 
             int col = 0;
-            foreach (var table in list)
+            foreach (var table in list.Skip(NbByPage * (PageNumber - 1)).Take(NbByPage))
             {
                 var button = CreateButtonTable(table);
                 //var label = new Label { Text = table.TAB_NOM};
@@ -199,6 +203,20 @@ namespace YamaCaisse.View
                 }
             }
 
+            var nbPage = Math.Ceiling((decimal)nbTable / NbByPage);
+            row = row + 1;
+            Grid gdpage = new Grid();
+            gdpage.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+
+            for (int i = 1; i <= nbPage;i++)
+            {
+                gdpage.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
+                var bt = CreateButtonPage(i);
+
+                gdpage.Children.Add(bt, i - 1, 0);
+            }
+            grid.Children.Add(gdpage,0, row);
+            Grid.SetColumnSpan(gdpage, 5);
             StkTableList.Children.Add(grid);
         }
 
@@ -253,10 +271,40 @@ namespace YamaCaisse.View
             button.FontSize = 16;
             // button.Image = tab.T_TABLE_ICONE.ICT_name + ".png";
             button.Clicked += Click_SelectTable;
+            //MinimumHeightRequest = "400" MinimumWidthRequest = "400"
             return button;
         }
 
+        private Button CreateButtonPage(int nb)
+        {
+            var button = new Button
+            {
+                Text = nb.ToString(),
+                BorderWidth = 1,
+                TextColor = Color.White,
+               //BackgroundColor = tab.TAB_UTILISE == true ? Color.Green : (Color)Application.Current.Resources["DividerColor"],
+                ClassId = nb.ToString()
+            };
+            button.HorizontalOptions = LayoutOptions.FillAndExpand;
+            button.VerticalOptions = LayoutOptions.FillAndExpand;
+            button.HeightRequest = 70;
+            button.FontSize = 16;
+            // button.Image = tab.T_TABLE_ICONE.ICT_name + ".png";
+            button.Clicked += Click_SelectPage;
+            if(PageNumber == nb)
+            {
+                button.BackgroundColor = Color.SeaGreen;
+            }
+            return button;
+        }
 
+        public async void Click_SelectPage(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var curpage = int.Parse(button.ClassId);
+            this.PageNumber = curpage;
+            InitGridTable(CurrentPage);
+        }
 
         public async void Click_SelectTable(object sender, EventArgs e)
         {

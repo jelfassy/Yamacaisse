@@ -556,3 +556,5 @@ C:/Users/jonat/source/repos/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/a
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/System.Xml.ReaderWriter.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/android/assets/System.ComponentModel.dll
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/android/assets/System.Xml.ReaderWriter.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/linksrc/System.Linq.Expressions.dll
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/android/assets/System.Linq.Expressions.dll

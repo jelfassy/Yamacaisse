@@ -23,7 +23,8 @@ namespace YamaCaisse
         public MainPage()
         {
             InitializeComponent();
-          
+            BindingContext = this;
+            this.IsBusy = false;
             if (Application.Current.Properties.ContainsKey("ServeurAdress"))
               this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
             //this.AdresseServeur.Text = "192.168.1.25:63058";
@@ -47,6 +48,7 @@ namespace YamaCaisse
         {
             try
             {
+                this.IsBusy = true;
                 IDevice device = DependencyService.Get<IDevice>();
                  App.DeviceIdentifier = device.GetIdentifier();
                 if (this.AdresseServeur.Text.StartsWith("192"))
@@ -75,9 +77,11 @@ namespace YamaCaisse
                     await PopupNavigation.Instance.PushAsync(new PopupPinter());
                     await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
                 }
+                this.IsBusy = false;
             }
             catch (Exception ex)
             {
+                this.IsBusy = false;
                 var property = new Dictionary<string, string>
                 {
                     {"Caisse","Click_Connexion"}

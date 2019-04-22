@@ -10,10 +10,8 @@
                 <StackLayout x:Name="StkPageList" Orientation="Vertical">
                 </StackLayout>
             </ScrollView>
-            <ScrollView Orientation="Both" Grid.Column="1">
-                <StackLayout x:Name="StkTableList" Grid.Column="1" MinimumHeightRequest="400" MinimumWidthRequest="400" BackgroundColor="White">
-                </StackLayout>
-            </ScrollView>
+            <StackLayout x:Name="StkTableList" Grid.Column="1" BackgroundColor="White">
+            </StackLayout>
         </Grid>
     </ContentView.Content>
 </ContentView>
