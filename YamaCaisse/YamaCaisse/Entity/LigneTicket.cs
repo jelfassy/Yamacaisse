@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace YamaCaisse.Entity
 {
@@ -169,9 +170,15 @@ namespace YamaCaisse.Entity
         /// <value>The ltk attente.</value>
         public bool? LTK_ATTENTE
         {
-            get;
-            set;
+            get {
+                return this._lTK_ATTENTE;
+            }
+            set {
+                _lTK_ATTENTE = value;
+                OnPropertyChanged(nameof(LigneEnAttente));
+            }
         }
+        private bool? _lTK_ATTENTE;
         /// <summary>
         /// Gets or sets the tik movetik.
         /// </summary>
@@ -249,17 +256,18 @@ namespace YamaCaisse.Entity
         /// Gets the ligne en attente string color.
         /// </summary>
         /// <value>The ligne en attente.</value>
-        public string LigneEnAttente
+        private Color _ligneEnAttente;
+        public Color LigneEnAttente
         {
             get
             {
-                var result = string.Empty;
+               
                 if (this.LTK_ATTENTE == true)
-                    result = "#00BCD4";
+                    _ligneEnAttente = Color.FromHex("#00BCD4");
                 else
-                    result = "#FFFFFF";
-                OnPropertyChanged(nameof(LigneEnAttente));
-                return result;
+                    _ligneEnAttente = Color.FromHex("#FFFFFF");
+               // OnPropertyChanged(nameof(LigneEnAttente));
+                return _ligneEnAttente;
             }
         }
 

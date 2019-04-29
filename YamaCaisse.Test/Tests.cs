@@ -29,6 +29,8 @@ namespace YamaCaisse.Test
         public void AppLaunches()
         {
             app.Screenshot("First screen.");
+            app.WaitForElement(c => c.Text("Login"));
+            app.Screenshot("Main");
         }
     }
 }

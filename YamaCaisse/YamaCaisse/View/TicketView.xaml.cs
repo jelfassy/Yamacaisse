@@ -99,8 +99,10 @@ namespace YamaCaisse.View
         {
             var mi = ((MenuItem)sender);
             var ligneTicket = (LigneTicket)mi.CommandParameter;
-            var bxView = mi.FindByName<BoxView>("backgdligne");
-            bxView.BackgroundColor = Color.FromHex("#00BCD4");
+
+
+          //  var bxView = mi.FindByName<BoxView>("backgdligne");
+          //  bxView.BackgroundColor = Color.FromHex("#00BCD4");
             ligneTicket.LTK_ATTENTE = true;
         }
 

@@ -128,9 +128,14 @@ namespace YamaCaisse.View
                         T_RECLAME = prod.T_RECLAME,
                         T_TVA = prod.T_TVA,
                         LTK_TPVT = App.DeviceIdentifier,
-                        LTK_PRIX_UNITAIRE = prod.PDT_Prix,
-                        LTK_TOTAL_HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx)
+
                 };
+
+                    if(prod.PDT_Prix != null && prod.T_TVA != null)
+                    {
+                        ligneTicket.LTK_PRIX_UNITAIRE = prod.PDT_Prix;
+                        ligneTicket.LTK_TOTAL_HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
+                    }
 
                     if (this.IsFormulePage != true)
                     {
