@@ -134,6 +134,7 @@ namespace YamaCaisse.Pages
 
         void Click_Page(object sender, EventArgs e)
         {
+            this.IsBusy = true;
             Button btn = (Button)sender;
 
             var oldPageBtn = StkPageList.Children.SingleOrDefault(c => c.ClassId == this.idPage.ToString());
@@ -142,6 +143,7 @@ namespace YamaCaisse.Pages
             this.idPage = int.Parse(btn.ClassId);
             btn.BackgroundColor = Color.Moccasin;
             this.PageProduitControl.InitProduitButton(this.idPage);
+            this.IsBusy = false;
         }
 
 
@@ -181,8 +183,10 @@ namespace YamaCaisse.Pages
         {
             try
             {
+               
                 if (TicketViewModel.Current.ListLigneTicket.Count > 0)
                 {
+                    this.IsBusy = true;
                     TicketViewModel.Current.ComprTicket();
 
                     if (TicketViewModel.Current.TKT_ID == 0)
@@ -197,6 +201,7 @@ namespace YamaCaisse.Pages
                         var rsb = await _ticketDataServices.PutTicket(TicketViewModel.Current.TKT_ID, TicketViewModel.Current.GetTicketToSend());
                     }
                     ResetTicket();
+                    this.IsBusy = false;
                 }
             }
             catch (Exception ex)
@@ -206,7 +211,9 @@ namespace YamaCaisse.Pages
                 {
                     {"Caisse","Click_Envoi"}
                 };
+                this.IsBusy = false;
                 Crashes.TrackError(ex, property);
+                await DisplayAlert("Error", "Une erreur c'est produites !!", "OK");
             }
 
         }

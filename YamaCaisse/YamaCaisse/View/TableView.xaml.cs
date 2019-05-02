@@ -8,6 +8,7 @@ using YamaCaisse.Pages;
 using YamaCaisse.Services.SalleServices;
 using YamaCaisse.Services.SalleTableServices;
 using YamaCaisse.Services.TableServices;
+using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.View
@@ -17,6 +18,7 @@ namespace YamaCaisse.View
         private ITableDataServices _tableDataServices;
         private ISalleDataServices _salleDataServices;
         private ISalleTableDataServices _SalleTableDataServices;
+        private ITicketDataServices _TicketDataServices;
 
         public int PageNumber { get; set; }
         public int NbByPage { get; set; }
@@ -33,6 +35,10 @@ namespace YamaCaisse.View
         }
 
         public bool Move { get; set; }
+       
+        public bool FromCommande { get; set; }
+
+        public bool RetourTable { get; set; }
 
         public TableView() : this(false)
         {
@@ -48,6 +54,7 @@ namespace YamaCaisse.View
             PageNumber = 1;
             NbByPage = 25;
             this.Move = move;
+            this.RetourTable = false;
         }
 
         public void Refresh()
@@ -282,14 +289,14 @@ namespace YamaCaisse.View
                 Text = nb.ToString(),
                 BorderWidth = 1,
                 TextColor = Color.White,
-               //BackgroundColor = tab.TAB_UTILISE == true ? Color.Green : (Color)Application.Current.Resources["DividerColor"],
+                BackgroundColor = Color.Navy,
                 ClassId = nb.ToString()
             };
             button.HorizontalOptions = LayoutOptions.FillAndExpand;
             button.VerticalOptions = LayoutOptions.FillAndExpand;
             button.HeightRequest = 70;
             button.FontSize = 16;
-            // button.Image = tab.T_TABLE_ICONE.ICT_name + ".png";
+            //button.Image = tab.T_TABLE_ICONE.ICT_name + ".png";
             button.Clicked += Click_SelectPage;
             if(PageNumber == nb)
             {
@@ -311,17 +318,7 @@ namespace YamaCaisse.View
             UnSelectAllTable();            
             var button = (Button)sender;
             button.BorderColor = Color.BlueViolet;
-            if (this.Move == true)
-            {
-                var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, int.Parse(button.ClassId));
-                TicketViewModel.Current.Clear();
-                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
-            }
-            else
-            {
-                TicketViewModel.Current.Clear();
-                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
-            }
+            SetTable(int.Parse(button.ClassId));
             if (CurrentPopupTable != null)
                 CurrentPopupTable.ClosePopup();
 
@@ -332,20 +329,32 @@ namespace YamaCaisse.View
             UnSelectAllTable();
             var button = (ImageButton)sender;
             button.BorderColor = Color.BlueViolet;
+            SetTable(int.Parse(button.ClassId));
+            if (CurrentPopupTable != null)
+                CurrentPopupTable.ClosePopup();
+
+        }
+
+        public async void SetTable(int SelectedTableId)
+        {
             if (this.Move == true)
             {
-                var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, int.Parse(button.ClassId));
+                var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, SelectedTableId);
                 TicketViewModel.Current.Clear();
-                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
+                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId);
+            }
+            else if(this.RetourTable)
+            {
+                _TicketDataServices = DependencyService.Get<ITicketDataServices>();
+                var rs = await _TicketDataServices.RetourTable(SelectedTableId, TicketViewModel.Current.Ticket);
+                TicketViewModel.Current.Clear();
+                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId);
             }
             else
             {
                 TicketViewModel.Current.Clear();
-                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
+                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId);
             }
-            if (CurrentPopupTable != null)
-                CurrentPopupTable.ClosePopup();
-
         }
 
         public void UnSelectAllTable()

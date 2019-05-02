@@ -20,6 +20,15 @@ namespace YamaCaisse.ViewModel
             set;
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="T:YamaCaisse.ViewModel.ConfigViewModel"/> couvert requis.
+        /// </summary>
+        /// <value><c>true</c> if couvert requis; otherwise, <c>false</c>.</value>
+        public bool CouvertRequis
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Default printer

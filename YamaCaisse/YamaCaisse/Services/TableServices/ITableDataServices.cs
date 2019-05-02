@@ -30,5 +30,6 @@ namespace YamaCaisse.Services.TableServices
         /// <param name="idCurrentTable">Identifier current table.</param>
         /// <param name="idNewTable">Identifier new table.</param>
         Task<bool> MoveTable(int idCurrentTable, int idNewTable);
+
     }
 }

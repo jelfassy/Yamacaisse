@@ -28,12 +28,20 @@ namespace YamaCaisse.Services.TypePaiementServices
             try
             {
                 List<TypePaiement> res = new List<TypePaiement>();
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
-                                                      await Task.Run(() => {
-                    JToken token = o.SelectToken("data");
+                if (App.JsonTypePaiement == null)
+                {
+                    App.JsonTypePaiement = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+                    await Task.Run(() =>
+                    {
+                        JToken token = App.JsonTypePaiement.SelectToken("data");
+                        res = token.Select((JToken s) => s.ToObject<TypePaiement>()).ToList();
+                    });
+                }
+                else
+                {
+                    JToken token = App.JsonTypePaiement.SelectToken("data");
                     res = token.Select((JToken s) => s.ToObject<TypePaiement>()).ToList();
-                });
-
+                }
                 return res;
             }
             catch (InvalidOperationException Iex)

@@ -8,6 +8,7 @@ using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Control;
 using YamaCaisse.Pages;
+using YamaCaisse.Services.ConfigServices;
 using YamaCaisse.Services.JourServices;
 using YamaCaisse.Services.UserServices;
 using YamaCaisse.ViewModel;
@@ -18,6 +19,7 @@ namespace YamaCaisse
     {
         private IUserDataServices _userDataServices;
         private IJourDataServices _jourDataServices;
+        private IConfigDataServices _configDataServices;
 
         private string typeconnection = "http://";
         public MainPage()
@@ -27,7 +29,7 @@ namespace YamaCaisse
             this.IsBusy = false;
             if (Application.Current.Properties.ContainsKey("ServeurAdress"))
               this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
-            //this.AdresseServeur.Text = "192.168.1.25:63058";
+            this.AdresseServeur.Text = "192.168.1.25:63058";
            // this.AdresseServeur.Text = "yamacaisseweb.azurewebsites.net";
 
         }
@@ -61,18 +63,26 @@ namespace YamaCaisse
                 var user = await _userDataServices.GetUserbyCode(this.CodeUser.Text);
                 if (user == null)
                 {
+
                     this.CodeUser.Text = "";
                     await DisplayAlert("Login", "Code Invalid", "OK");
+                    this.IsBusy = false;
                 }
                 else
                 {
                     App.User = user;
                     App.UserId = user.EMP_ID;
+
                     _jourDataServices = DependencyService.Get<IJourDataServices>();
                     var jour = await _jourDataServices.GetCurrentJourId();
                     if (jour == null)
                         throw new Exception("Probleme de jour");
                     App.JourId = jour.JOU_ID;
+
+                    _configDataServices = DependencyService.Get<IConfigDataServices>();
+                    var couvert = await _configDataServices.CouvertRequis();
+                    ConfigViewModel.Current.CouvertRequis = couvert;
+
                     ConfigViewModel.Current.Profil = user.T_USER_PROFIL.USP_NAME;
                     await PopupNavigation.Instance.PushAsync(new PopupPinter());
                     await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
@@ -95,6 +105,10 @@ namespace YamaCaisse
 
         async void Click_Production(object sender,EventArgs e)
         {
+            if (this.AdresseServeur.Text.StartsWith("192"))
+                this.typeconnection = "http://";
+            else
+                this.typeconnection = "https://";
             App.UrlGateway = typeconnection + this.AdresseServeur.Text + "/";
             Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
             await PopupNavigation.Instance.PushAsync(new PopupGetProduction());

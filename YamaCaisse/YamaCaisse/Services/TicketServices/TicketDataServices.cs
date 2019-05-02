@@ -315,6 +315,81 @@ namespace YamaCaisse.Services.TicketServices
 
         }
 
+        public async Task<bool> RetourTable(int idTable, Ticket ticket)
+        {
+            try
+            {
+            
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "RetourTable/", idTable,"/", ticket.TIK_ID));
 
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RetourTable"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RetourTable" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
+        public async Task<bool> AnnulerTicker(Ticket ticket)
+        {
+            try
+            {
+                bool res = false;
+                var js = JsonConvert.SerializeObject(ticket, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"AnnulerTicket"), js);
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<bool>();
+
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_AnnulerTicker"}
+                };
+                Crashes.TrackError(Iex, property);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"AnnulerTicker" }
+                };
+                Crashes.TrackError(ex, property);
+                return false;
+            }
+        }
     }
 }

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:YamaCaisse"
-             xmlns:lx="clr-namespace:YamaCaisse.Pages"
-             x:Class="YamaCaisse.MainPage">
+             xmlns:local="clr-namespace:YamaCaisse" 
+             xmlns:lx="clr-namespace:YamaCaisse.Pages" x:Class="YamaCaisse.MainPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
     </ContentPage.Padding>
-    <ContentPage.Content>
-        <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}">
-<!--            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.33}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.28}" />-->
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <!--            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.33}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.28}" />-->
             <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
                 <Label WidthRequest="90" Text="Serveur adresse" Grid.Row="0" FontSize="20" TextColor="{StaticResource TextIconeColor}">
                 </Label>
@@ -60,10 +59,11 @@
                 </Grid>
             </StackLayout>
             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="End">
-                  <Button Text="Ecran de Bon" WidthRequest="100" Clicked="Click_Production" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
-                    </Button>
+                <Button Text="Ecran de Bon" WidthRequest="100" Clicked="Click_Production" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
             </StackLayout>
-
+            <!--            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" -->
         </StackLayout>
-    </ContentPage.Content>
+        <lx:ActivityIndicator IsBusy="{Binding IsBusy}" />
+    </AbsoluteLayout>
 </ContentPage>

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse" x:Class="YamaCaisse.Pages.Caisse">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
+              xmlns:lx="clr-namespace:YamaCaisse.Pages"
+             xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
+             x:Class="YamaCaisse.Pages.Caisse">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
     </ContentPage.Padding>
-    <ContentPage.Content>
-        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
-            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
                 <local:HeaderBar />
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -44,6 +48,6 @@
                     <Button Grid.Column="2" Clicked="Click_Clear" Grid.Row="1" Text="Efface Tout" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 </Grid>
             </StackLayout>
+           <lx:ActivityIndicator IsBusy="{Binding IsBusy}" />
         </AbsoluteLayout>
-    </ContentPage.Content>
 </ContentPage>

@@ -53,5 +53,8 @@ namespace YamaCaisse.Services.TicketServices
         /// <param name="idTicket">Identifier ticket.</param>
         Task<bool> PrintFiche(Ticket ticket, int nbcouvert,decimal Montant);
 
+        Task<bool> RetourTable(int idTable, Ticket ticket);
+
+        Task<bool> AnnulerTicker(Ticket ticket);
     }
 }

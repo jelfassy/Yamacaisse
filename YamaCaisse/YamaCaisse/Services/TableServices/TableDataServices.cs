@@ -143,5 +143,7 @@ namespace YamaCaisse.Services.TableServices
                 throw ex;
             }
         }
+
+       
     }
 }

@@ -36,6 +36,25 @@ namespace YamaCaisse.Pages
             this.tableListControl.Move = Move;
         }
 
+        public PopupTable(TicketView tv, bool Move,bool fromCommande)
+        {
+            InitializeComponent();
+            // this.tableListControl._ticketView = tv;
+            this.tableListControl.CurrentPopupTable = this;
+            this.tableListControl.Move = Move;
+            this.tableListControl.FromCommande = fromCommande;
+        }
+
+        public PopupTable(TicketView tv, bool Move, bool fromCommande,bool retourTable)
+        {
+            InitializeComponent();
+            // this.tableListControl._ticketView = tv;
+            this.tableListControl.CurrentPopupTable = this;
+            this.tableListControl.Move = Move;
+            this.tableListControl.FromCommande = fromCommande;
+            this.tableListControl.RetourTable = retourTable;
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();

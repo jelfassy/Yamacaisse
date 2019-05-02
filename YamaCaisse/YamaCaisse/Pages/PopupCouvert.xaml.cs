@@ -35,7 +35,7 @@ namespace YamaCaisse.Pages
         {
             try
             {
-                if (string.IsNullOrEmpty(this.EntryNbCouvert.Text))
+                if (!string.IsNullOrEmpty(this.EntryNbCouvert.Text))
                 {
                     int nb;
                     var rs = int.TryParse(this.EntryNbCouvert.Text, out nb);

@@ -36,6 +36,7 @@ namespace YamaCaisse
 
         public static JObject JsonPage { get; set; }
         public static Dictionary<int, JObject> JsonPageProduit { get; set; }
+        public static JObject JsonTypePaiement { get; set; }
         public static List<Salle> ListSalle { get; set; }
 
 

@@ -47,7 +47,7 @@ namespace YamaCaisse.View
 
         async void Click_SelectTable(object sender, System.EventArgs e)
         {
-              await PopupNavigation.Instance.PushAsync(new PopupTable(this));
+              await PopupNavigation.Instance.PushAsync(new PopupTable(this,false,true));
         }
 
         async void Click_Menu(object sender, System.EventArgs e)

@@ -193,6 +193,8 @@
     <Compile Include="Pages\ActivityIndicator.xaml.cs">
       <DependentUpon>ActivityIndicator.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\ConfigServices\IConfigDataServices.cs" />
+    <Compile Include="Services\ConfigServices\ConfigDataServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -306,6 +308,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />
+    <Folder Include="Services\ConfigServices\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />

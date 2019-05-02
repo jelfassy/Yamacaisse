@@ -5,7 +5,8 @@
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     x:Class="YamaCaisse.Pages.PopupCouvert">
      <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
-        <Entry x:Name="EntryNbCouvert" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
+        
+        <Entry x:Name="EntryNbCouvert" Placeholder="Couvert" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
           <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="300">
                 <Grid HorizontalOptions="Center">
                     <Grid.ColumnDefinitions>

@@ -193,6 +193,17 @@ namespace YamaCaisse.Pages
 
         }
 
+        async void Supprimer_Clicked(Object sender,EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var lignePaiement = (PaiementTicket)mi.CommandParameter;
+            var action = await DisplayAlert("Supprimer?", "Etes-vous sure de vouloir supprimer ce paiement ?", "Yes", "No");
+            if(action)
+            {
+
+            }
+        }
+
         async void Click_Close(object sender, EventArgs e)
         {
             if (this._maintTicketPage != null)

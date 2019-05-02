@@ -118,5 +118,13 @@ namespace YamaCaisse.Pages
             await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
         }
 
+
+        async void Click_RetourTable(object sender,EventArgs e)
+        {
+            if (TicketViewModel.Current.TKT_ID != 0)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketControl,false,false,true));
+            }
+        }
     }
 }
