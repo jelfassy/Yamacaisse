@@ -330,6 +330,16 @@ namespace YamaCaisse.ViewModel
 
         public void RemoveLigneTicket(LigneTicket ligneTicket)
         {
+            if (ligneTicket.LIST_COMPLEMENT != null)
+            {
+                foreach (var subligne in ligneTicket.LIST_COMPLEMENT)
+                {
+                    if (subligne.LTK_SOMME != null)
+                    {
+                        TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal - subligne.LTK_SOMME.Value;
+                    }
+                }
+            }
             TicketViewModel.Current.ListLigneTicket.Remove(ligneTicket);
             if (ligneTicket.LTK_SOMME != null)
                 TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal - (decimal)ligneTicket.LTK_SOMME;
@@ -377,18 +387,36 @@ namespace YamaCaisse.ViewModel
         public void ChangeLigneQuantite(int quantite)
         {
             var newlist = new ObservableCollection<LigneTicket>();
+
             foreach (var item in TicketViewModel.Current.ListLigneTicket)
             {
                 if (item == Current.SelectedligneTicket)
                 {
+                    if (item.LIST_COMPLEMENT != null)
+                    {
+                        foreach (var subligne in item.LIST_COMPLEMENT)
+                        {
+                            if (subligne.LTK_SOMME != null)
+                            {
+                                TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal - subligne.LTK_SOMME.Value;
+                                subligne.LTK_QTE = quantite;
+                                subligne.LTK_SOMME = subligne.LTK_PRIX_UNITAIRE * quantite;
+                                subligne.LTK_MNT_TVA = subligne.LTK_SOMME * item.T_TVA.TVA_Tx;
+                                TicketViewModel.Current.MontantTotal += subligne.LTK_SOMME.Value;
+                            }
+                        }
+                    }
+                    TicketViewModel.Current.MontantTotal -= (item.LTK_PRIX_UNITAIRE.Value * item.LTK_QTE.Value);
                     item.LTK_QTE = quantite;
-                    item.LTK_SOMME = item.T_PRODUIT.PDT_Prix * quantite;
+                    item.LTK_SOMME = item.LTK_PRIX_UNITAIRE * quantite;
                     item.LTK_MNT_TVA = item.LTK_SOMME * item.T_TVA.TVA_Tx;
+                    TicketViewModel.Current.MontantTotal += item.LTK_SOMME.Value;
                 }
                 newlist.Add(item);
             }
             TicketViewModel.Current.ListLigneTicket = newlist;
-            TicketViewModel.Current.MontantTotal = (decimal)newlist.Select(c => c.LTK_SOMME).Sum();
+           
+            //TicketViewModel.Current.MontantTotal = (decimal)newlist.Select(c => c.LTK_SOMME).Sum();
 
         }
 

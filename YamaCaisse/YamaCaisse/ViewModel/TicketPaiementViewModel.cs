@@ -1,4 +1,5 @@
 ﻿using System;
+using Xamarin.Forms;
 using YamaCaisse.Entity;
 
 namespace YamaCaisse.ViewModel
@@ -36,6 +37,38 @@ namespace YamaCaisse.ViewModel
         {
             get;
             set;
+        }
+
+        public bool? TIK_ANNUL
+        {
+            get;set;
+        }
+
+
+        public TextDecorations TextDecorations
+        {
+            get
+            {
+                if (this.TIK_ANNUL == true)
+                    return TextDecorations.Strikethrough;
+                else
+                    return TextDecorations.None;
+            }
+        }
+
+        private Color _LigneAnnule;
+        public Color LigneAnnule
+        {
+            get
+            {
+
+                if (this.TIK_ANNUL == true)
+                    _LigneAnnule = Color.Red;
+                else
+                    _LigneAnnule = Color.Transparent;
+                // OnPropertyChanged(nameof(LigneEnAttente));
+                return _LigneAnnule;
+            }
         }
     }
 }

@@ -27,7 +27,7 @@
                     <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0" Grid.Column="0" Text="Motif Annulation" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
-                <Entry Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Entry x:Name="eMotif" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
             </Grid>
         </StackLayout>
          <StackLayout Orientation="Horizontal">

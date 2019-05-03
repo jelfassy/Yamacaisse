@@ -40,7 +40,7 @@ namespace YamaCaisse.Pages
 
             if (IsEcranTicket == true)
             {
-                reslistTicket = reslistTicket.Where(c => c.TIK_PAYER == true).ToList();
+                reslistTicket = reslistTicket.Where(c => c.TIK_PAYER == true || c.TIK_ANNUL == true).ToList();
                 this.btPayer.IsVisible = false;
                 this.btAnnuler.IsVisible = true;
             }
@@ -49,12 +49,12 @@ namespace YamaCaisse.Pages
                 this.btAnnuler.IsVisible = true;
                 if (ConfigViewModel.Current.Profil == "Manager" || ConfigViewModel.Current.Profil == "Admin")
                 {
-                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true).ToList();
+                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true || c.TIK_ANNUL != true).ToList();
                     this.btAnnuler.IsVisible = true;
                 }
                 else
                 {
-                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true && c.FK_EMP_ID == App.UserId).ToList();
+                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true && c.FK_EMP_ID == App.UserId && c.TIK_ANNUL != true).ToList();
 
                 }
             }
@@ -65,8 +65,8 @@ namespace YamaCaisse.Pages
                 TIK_MNT_TOTAL = c.TIK_MNT_TOTAL,
                 T_EMPLOYE = c.T_EMPLOYE,
                 T_TABLE = c.T_TABLE,
-                RestantDue = c.TIK_MNT_TOTAL - c.T_PAIEMENT_TICKET.Sum(m => m.Montant)
-
+                RestantDue = c.TIK_MNT_TOTAL - c.T_PAIEMENT_TICKET.Sum(m => m.Montant),
+                 TIK_ANNUL = c.TIK_ANNUL
             }));
             listViewTicket.ItemsSource = ListTicket;
         }
@@ -131,10 +131,12 @@ namespace YamaCaisse.Pages
         }
         async void Click_Annuler(object sender, EventArgs e)
         {
-            //if (TicketViewModel.Current.TKT_ID != 0)
-            //{
-            //    await _ticketDataServices.AnnulerTicker()
-            //}
+            if (TicketViewModel.Current.TKT_ID != 0)
+            {
+                var popupAnn = new PopupAnnuler();
+                popupAnn._maintTicketPage = this;
+                await PopupNavigation.Instance.PushAsync(popupAnn);
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace YamaCaisse.Entity
 {
@@ -94,6 +95,10 @@ namespace YamaCaisse.Entity
             get;
             set;
         }
+
+        public bool? TIK_ANNUL { get; set; }
+
+        public string TIK_MOTIF_ANNUL { get; set; }
 
 
     }
