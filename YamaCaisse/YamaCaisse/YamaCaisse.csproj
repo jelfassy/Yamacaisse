@@ -195,6 +195,13 @@
     </Compile>
     <Compile Include="Services\ConfigServices\IConfigDataServices.cs" />
     <Compile Include="Services\ConfigServices\ConfigDataServices.cs" />
+    <EmbeddedResource Include="Pages\PopupAnnuler.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="Pages\PopupAnnuler.xaml.cs">
+      <DependentUpon>PopupAnnuler.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

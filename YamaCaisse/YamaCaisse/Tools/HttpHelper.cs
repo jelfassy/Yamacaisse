@@ -258,7 +258,7 @@ namespace YamaCaisse.Tools
         {
             return Policy
                 .Handle<HttpRequestException>()
-                .WaitAndRetryAsync(4, retryAttempt =>
+                .WaitAndRetryAsync(1, retryAttempt =>
                     TimeSpan.FromSeconds(retryAttempt));
         }
 

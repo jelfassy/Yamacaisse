@@ -138,3 +138,4 @@ C:/Dev/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupFormule.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/YamaCaisse.csprojAssemblyReference.cache
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupPaiement.xaml.g.cs
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/ActivityIndicator.xaml.g.cs
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse/obj/Debug/Pages/PopupAnnuler.xaml.g.cs

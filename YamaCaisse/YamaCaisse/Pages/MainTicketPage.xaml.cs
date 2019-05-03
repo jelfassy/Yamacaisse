@@ -42,12 +42,15 @@ namespace YamaCaisse.Pages
             {
                 reslistTicket = reslistTicket.Where(c => c.TIK_PAYER == true).ToList();
                 this.btPayer.IsVisible = false;
+                this.btAnnuler.IsVisible = true;
             }
             else
             {
+                this.btAnnuler.IsVisible = true;
                 if (ConfigViewModel.Current.Profil == "Manager" || ConfigViewModel.Current.Profil == "Admin")
                 {
                     reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true).ToList();
+                    this.btAnnuler.IsVisible = true;
                 }
                 else
                 {
@@ -125,6 +128,13 @@ namespace YamaCaisse.Pages
             {
                 await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketControl,false,false,true));
             }
+        }
+        async void Click_Annuler(object sender, EventArgs e)
+        {
+            //if (TicketViewModel.Current.TKT_ID != 0)
+            //{
+            //    await _ticketDataServices.AnnulerTicker()
+            //}
         }
     }
 }
