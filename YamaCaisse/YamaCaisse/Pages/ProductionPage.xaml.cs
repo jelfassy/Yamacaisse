@@ -173,25 +173,39 @@ namespace YamaCaisse.Pages
 
         public async Task CreateRecap()
         {
-            List<BonProduction> ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
-
-            List<LigneTicket> list = new List<LigneTicket>();
-            foreach (var BligneTicket in ListAll.Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
+            try
             {
-                foreach (var ligne in BligneTicket)
+                List<BonProduction> ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+
+                List<LigneTicket> list = new List<LigneTicket>();
+                foreach (var BligneTicket in ListAll.Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
                 {
-                    if (list.Select(c => c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
+                    foreach (var ligne in BligneTicket)
                     {
-                        if (ligne.LIST_COMPLEMENT.Count == 0 || list.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
-                            list.SingleOrDefault(c => c.T_PRODUIT.PDT_Designation == ligne.T_PRODUIT.PDT_Designation).LTK_QTE += ligne.LTK_QTE;
+                        if (list.Select(c => c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
+                        {
+                            if (ligne.LIST_COMPLEMENT.Count == 0 || list.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
+                                list.SingleOrDefault(c => c.T_PRODUIT.PDT_Designation == ligne.T_PRODUIT.PDT_Designation).LTK_QTE += ligne.LTK_QTE;
+                            else
+                                list.Add(ligne);
+                        }
                         else
                             list.Add(ligne);
                     }
-                    else
-                        list.Add(ligne);
                 }
+                this.ListRecapToDo.ItemsSource = list;
             }
-            this.ListRecapToDo.ItemsSource = list;
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"CreateRecap","recap"}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+               // await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
+            }
+          
         }
 
         public void RemoveBonProduction(BonProductionView view)
