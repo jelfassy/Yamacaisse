@@ -49,7 +49,7 @@ namespace YamaCaisse.Pages
                 this.btAnnuler.IsVisible = true;
                 if (ConfigViewModel.Current.Profil == "Manager" || ConfigViewModel.Current.Profil == "Admin")
                 {
-                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true || c.TIK_ANNUL != true).ToList();
+                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true && c.TIK_ANNUL != true).ToList();
                     this.btAnnuler.IsVisible = true;
                 }
                 else
