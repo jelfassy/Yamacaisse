@@ -118,7 +118,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Reprint(object sender, EventArgs e)
         {
-            await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID);
+            await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID);
         }
 
 

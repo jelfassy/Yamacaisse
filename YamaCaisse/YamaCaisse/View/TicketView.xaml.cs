@@ -107,53 +107,5 @@ namespace YamaCaisse.View
         }
 
 
-        /// <summary>
-        /// Cells the underlist on appearing.
-        /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
-        public void CellUnder_OnAppearing(object sender,EventArgs e)
-        {
-            var viewCell = (ViewCell)sender;
-
-            if (!switchcolor)
-            {
-                viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
-
-            }
-            else
-            {
-                viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
-            }
-        }
-
-        public void Cell_OnAppearing(object sender, EventArgs e)
-        {
-            var viewCell = (ViewCell)sender;
-
-            if (viewCell.View != null)
-            {
-
-                if (viewCell.View.BackgroundColor != null
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorDark"])
-                   && !viewCell.View.BackgroundColor.Equals((Color)Application.Current.Resources["ListcolorLight"]))
-                {
-                    if (switchcolor)
-                    {
-                        switchcolor = false;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorLight"];
-
-                    }
-                    else
-                    {
-                        switchcolor = true;
-                        viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
-                    }
-                }
-
-            }
-        }
-
-
     }
 }

@@ -45,7 +45,7 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The table.</returns>
         /// <param name="idTable">Identifier table.</param>
-        Task<bool> PrintTable(int idTable);
+        Task<bool> PrintTable(int idTable,int idPrinter);
         /// <summary>
         /// Prints the fiche.
         /// </summary>

@@ -109,12 +109,12 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The table.</returns>
         /// <param name="idTable">Identifier table.</param>
-        public async Task<bool>PrintTable(int idTable)
+        public async Task<bool>PrintTable(int idTable, int idPrinter)
         {
             try
             {
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Print/", idTable.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Print/", idTable.ToString(),"/",idPrinter.ToString()));
 
                 await Task.Run(() =>
                 {
