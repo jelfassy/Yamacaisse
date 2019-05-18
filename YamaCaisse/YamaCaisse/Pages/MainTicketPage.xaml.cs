@@ -40,7 +40,7 @@ namespace YamaCaisse.Pages
 
             if (IsEcranTicket == true)
             {
-                reslistTicket = reslistTicket.Where(c => c.Annuler == true).ToList();
+                reslistTicket = reslistTicket.ToList();
                 this.btPayer.IsVisible = false;
                 this.btAnnuler.IsVisible = true;
             }
