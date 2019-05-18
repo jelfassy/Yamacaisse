@@ -26,5 +26,10 @@ namespace YamaCaisse.Pages
         {
             var rs = await _rapportDataServices.GetRapportCouvert();
         }
+
+        async void RapportServeur_Clicked(object sender, System.EventArgs e)
+        {
+           // var rs = await _rapportDataServices.GetRapportServeur();
+        }
     }
 }

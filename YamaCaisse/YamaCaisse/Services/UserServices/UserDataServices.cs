@@ -41,5 +41,26 @@ namespace YamaCaisse.Services.UserServices
                 throw ex;
             }
         }
+
+
+        public async Task<List<Employe>> GetListUser(string code)
+        {
+            try
+            {
+                List<Employe> res = new List<Employe>();
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+                await Task.Run(() => {
+                    JToken token = App.JsonPage.SelectToken("data");
+                    res = token.Select((JToken s) => s.ToObject<Employe>()).ToList(); 
+                });
+               
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

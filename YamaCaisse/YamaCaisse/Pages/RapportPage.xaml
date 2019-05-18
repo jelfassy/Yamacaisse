@@ -18,7 +18,10 @@
                     </Grid.RowDefinitions>
                     <Button Grid.Column="0" Grid.Row="0" Clicked="RapportJour_Clicked" Text="Rapport jour"  BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="0" Grid.Row="1" Clicked="RapportCouvert_Clicked" Text="Rapport couvert" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
-<!--                    <Button Grid.Column="0" Grid.Row="2" Text="Annulation" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />-->
+                    <Button Grid.Column="0" Grid.Row="2" Clicked="RapportServeur_Clicked" Text="Rapport Serveur" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
+
+                    
+<!--                <Button Grid.Column="0" Grid.Row="2" Text="Annulation" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />-->
                    </Grid>
             </StackLayout>
         </AbsoluteLayout>

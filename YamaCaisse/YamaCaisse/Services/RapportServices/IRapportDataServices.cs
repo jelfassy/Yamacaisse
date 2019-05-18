@@ -17,5 +17,7 @@ namespace YamaCaisse.Services.RapportServices
         /// </summary>
         /// <returns>The rapport couvert.</returns>
         Task<bool> GetRapportCouvert();
+
+        Task<bool> GetRapportServeur(int idServeur);
     }
 }

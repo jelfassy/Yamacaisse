@@ -18,5 +18,6 @@ namespace YamaCaisse.Services.UserServices
         /// <returns>The userby code.</returns>
         /// <param name="code">Code.</param>
         Task<Employe> GetUserbyCode(string code);
+        Task<List<Employe>> GetListUser(string code);
     }
 }

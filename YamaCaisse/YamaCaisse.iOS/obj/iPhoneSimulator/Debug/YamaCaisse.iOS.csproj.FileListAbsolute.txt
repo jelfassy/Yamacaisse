@@ -195,3 +195,7 @@
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/optimized/Tab4_carre_90.png
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/optimized/Tab4_rond_90.png
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/optimized/EntrePlat.png
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/optimized/Supprimer.png
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/optimized/Message.png
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.iOS/obj/iPhoneSimulator/Debug/optimized/Sablier.png
