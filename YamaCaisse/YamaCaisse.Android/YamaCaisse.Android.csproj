@@ -343,10 +343,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxhdpi\Tab4_rond_90.png" />
-    <AndroidResource Include="Resources\drawable\EntrePlat.png" />
-    <AndroidResource Include="Resources\drawable\Supprimer.png" />
-    <AndroidResource Include="Resources\drawable\Message.png" />
-    <AndroidResource Include="Resources\drawable\Sablier.png" />
+    <AndroidResource Include="Resources\drawable\EntrePlat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Supprimer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Message.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Sablier.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
