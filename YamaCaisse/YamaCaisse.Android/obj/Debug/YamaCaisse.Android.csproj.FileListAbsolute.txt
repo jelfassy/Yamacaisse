@@ -572,3 +572,7 @@ C:/Users/jonat/source/repos/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/a
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/android/assets/machine.config
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/stamp/_GeneratePackageManagerJava.stamp
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/res/drawable/entreplat.png
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/res/drawable/supprimer.png
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/res/drawable/message.png
+/Users/jonathanelfassy/Projects/FullResto/_git/YamaCaisse/YamaCaisse/YamaCaisse.Android/obj/Debug/res/drawable/sablier.png

@@ -70,7 +70,7 @@ namespace YamaCaisse.Pages
         }
 
         #region Number
-        private void InitNumberList()
+        public void InitNumberList()
         {
             for (int i = 1; i < 10; i++)
             {
@@ -88,7 +88,9 @@ namespace YamaCaisse.Pages
                 button.Clicked += Click_Number;
 
                 if (TicketViewModel.Current.Number == i)
-                    btn.BackgroundColor = Color.Orange;
+                {
+                    button.BackgroundColor = Color.Orange;
+                }
                 StkNumberList.Children.Add(button);
             }
         }
@@ -98,9 +100,18 @@ namespace YamaCaisse.Pages
             Number = int.Parse(btn.ClassId);
             btn.BackgroundColor = Color.Orange;
             TicketViewModel.Current.Number = Number;
-            //TicketViewModel.Current.ChangeLigneQuantite(Number);
-           // await PopupNavigation.Instance.PushAsync(new PopupReclame());
-        }
+            for (int i = 1; i < 10; i++)
+            {
+                if (TicketViewModel.Current.Number != i)
+                {
+                    var button = this.StkNumberList.Children[i - 1];
+                    button.BackgroundColor = (Color)Application.Current.Resources["LightPrimaryColor"];
+                }
+
+            }
+                //TicketViewModel.Current.ChangeLigneQuantite(Number);
+                // await PopupNavigation.Instance.PushAsync(new PopupReclame());
+            }
         #endregion
 
         #region Page

@@ -22,6 +22,8 @@ namespace YamaCaisse.View
         private List<PageProduit> listPageProduit;
         private List<Produit> lstProduitPage;
 
+        public Caisse _mainCaisse { get; set; }
+
         public int IdPage
         {
             get;
@@ -31,6 +33,7 @@ namespace YamaCaisse.View
         public bool? Autoclose { get; set; }
 
         public bool? IsFormulePage { get; set; }
+
 
         public ProduitListView()
         {
@@ -155,7 +158,10 @@ namespace YamaCaisse.View
                         prod.PDT_Prix = 0;
                     }
 
-
+                    if(_mainCaisse != null)
+                    {
+                        _mainCaisse.InitNumberList();
+                    }
                     if (TicketViewModel.Current.NbElemCommand == null)
                         TicketViewModel.Current.NbElemCommand = 0;
 
