@@ -319,7 +319,7 @@ namespace YamaCaisse.ViewModel
                     this.IdTable = ticket.FK_TAB_ID;
                     this.NbCouvert = ticket.TIK_NB_COUVERT;
                     this.TableName = ticket?.T_TABLE?.TAB_NOM;
-                    this.MontantTotal = ticket.TIK_MNT_TOTAL + ticket.T_LIGNE_TICKET.Sum(c => c.LTK_SOMME.Value);
+                    this.MontantTotal = ticket.T_LIGNE_TICKET.Sum(c => c.LTK_SOMME.Value);
                 }
             }
             else

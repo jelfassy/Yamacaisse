@@ -39,7 +39,7 @@ namespace YamaCaisse.Test
                 .EnableLocalScreenshots()
                 // TODO: Update this path to point to your iOS app and uncomment the
                 // code if the app is not included in the solution.
-                .AppBundle ("../../../YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/device-builds/ipad8.1-12.1/YamaCaisse.iOS.app")
+                .AppBundle ("../../../YamaCaisse/YamaCaisse.iOS/bin/iPhoneSimulator/Debug/YamaCaisse.iOS.app")
                 .StartApp();
         }
     }
