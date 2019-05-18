@@ -53,6 +53,7 @@ namespace YamaCaisse.Pages
 
             InitPageButton(firstLoad);
             this.Number = 1;
+            TicketViewModel.Current.Number = Number;
             InitNumberList();
             firstLoad = false;
 
@@ -86,6 +87,8 @@ namespace YamaCaisse.Pages
                 button.ClassId = i.ToString();
                 button.Clicked += Click_Number;
 
+                if (TicketViewModel.Current.Number == i)
+                    btn.BackgroundColor = Color.Orange;
                 StkNumberList.Children.Add(button);
             }
         }
