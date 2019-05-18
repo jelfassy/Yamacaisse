@@ -182,24 +182,35 @@ namespace YamaCaisse.Pages
 
         async void Click_EntPlat(object sender, EventArgs e)
         {
+            if(TicketViewModel.Current.SelectedligneTicket != null)
             await PopupNavigation.Instance.PushAsync(new PopupReclame());
         }
 
         async void Click_Message(object sender, EventArgs e)
         {
-            var listPages = await _pageDataServices.GetPageList();
-            var page = listPages.SingleOrDefault(cw => cw.PAG_NAME == "Message");
-            await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID));
+            if (TicketViewModel.Current.SelectedligneTicket != null)
+            {
+                var listPages = await _pageDataServices.GetPageList();
+                var page = listPages.SingleOrDefault(cw => cw.PAG_NAME == "Message");
+                await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID));
+
+            }
         }
 
         void Click_Supp(object sender, EventArgs e)
         {
-            TicketViewModel.Current.RemoveLigneTicket(TicketViewModel.Current.SelectedligneTicket);
+            if (TicketViewModel.Current.SelectedligneTicket != null)
+            {
+                TicketViewModel.Current.RemoveLigneTicket(TicketViewModel.Current.SelectedligneTicket);
+            }
         }
 
         void Click_Attente(object sender, EventArgs e)
         {
-            TicketViewModel.Current.SelectedligneTicket.LTK_ATTENTE = true;
+            if (TicketViewModel.Current.SelectedligneTicket != null)
+            {
+                TicketViewModel.Current.SelectedligneTicket.LTK_ATTENTE = true;
+            }
         }
         /// <summary>
         /// Methode d'ajout d'une ligne :
