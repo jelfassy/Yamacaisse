@@ -49,7 +49,7 @@ namespace YamaCaisse.Pages
             try
             {
                 var button = (Button)sender;
-                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId));
+                TicketViewModel.Current.LoadDataTicketbyTable(int.Parse(button.ClassId),false);
 
             }
             catch (Exception ex)

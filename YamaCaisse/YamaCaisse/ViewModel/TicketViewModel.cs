@@ -55,7 +55,7 @@ namespace YamaCaisse.ViewModel
                 this.IdTable = ticket.FK_TAB_ID;
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
                 this.TableName = ticket?.T_TABLE?.TAB_NOM;
-                this.MontantTotal = ticket.TIK_MNT_TOTAL;
+                this.MontantTotal  = ticket.TIK_MNT_TOTAL;
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
                 this.ListCurrentFormule = ticket.T_LIGNE_TICKET.Where(c => c.T_PRODUIT.Pdt_IsMenu == true).ToList();
                 this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
@@ -63,7 +63,11 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+
+
         public Ticket Ticket { get; set; }
+
+        public int Number { get; set; }
 
         public int TKT_ID
         {
@@ -294,7 +298,6 @@ namespace YamaCaisse.ViewModel
                         ssligne.T_EMPLOYE = null;
                     }
                 }
-
             }
             if (ListPaiementTicket == null)
                 ListPaiementTicket = new ObservableCollection<PaiementTicket>();
@@ -302,14 +305,22 @@ namespace YamaCaisse.ViewModel
             return ticket;
         }
 
-        public async void LoadDataTicketbyTable(int idTable)
+        public async void LoadDataTicketbyTable(int idTable,bool fromCommande)
         {
             this.IdTable = idTable;
             var ticket = await _ticketDataServices.GetCurrentTableTicket((int)this.IdTable);
             if (ticket.TIK_ID != 0)
             {
-
-                this.SetTicket(ticket);
+                if(fromCommande != true)
+                    this.SetTicket(ticket);
+                else
+                {
+                    this.TKT_ID = ticket.TIK_ID;
+                    this.IdTable = ticket.FK_TAB_ID;
+                    this.NbCouvert = ticket.TIK_NB_COUVERT;
+                    this.TableName = ticket?.T_TABLE?.TAB_NOM;
+                    this.MontantTotal = ticket.TIK_MNT_TOTAL + ticket.T_LIGNE_TICKET.Sum(c => c.LTK_SOMME.Value);
+                }
             }
             else
             {

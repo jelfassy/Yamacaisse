@@ -36,11 +36,11 @@ namespace YamaCaisse.Pages
 
         public async void loadData()
         {
-            var reslistTicket = await _ticketDataServices.GetTickets();
+            var reslistTicket = await _ticketDataServices.GetTickets(IsEcranTicket);
 
             if (IsEcranTicket == true)
             {
-                reslistTicket = reslistTicket.Where(c => c.TIK_PAYER == true || c.TIK_ANNUL == true).ToList();
+                reslistTicket = reslistTicket.Where(c => c.Annuler == true).ToList();
                 this.btPayer.IsVisible = false;
                 this.btAnnuler.IsVisible = true;
             }
@@ -49,24 +49,24 @@ namespace YamaCaisse.Pages
                 this.btAnnuler.IsVisible = true;
                 if (ConfigViewModel.Current.Profil == "Manager" || ConfigViewModel.Current.Profil == "Admin")
                 {
-                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true && c.TIK_ANNUL != true).ToList();
+                    reslistTicket = reslistTicket.Where(c =>c.Annuler != true).ToList();
                     this.btAnnuler.IsVisible = true;
                 }
                 else
                 {
-                    reslistTicket = reslistTicket.Where(c => c.TIK_PAYER != true && c.FK_EMP_ID == App.UserId && c.TIK_ANNUL != true).ToList();
+                    reslistTicket = reslistTicket.Where(c => c.Employe == App.User.EMP_NOM && c.Annuler != true).ToList();
 
                 }
             }
             var ListTicket = new ObservableCollection<TicketPaiementViewModel>(reslistTicket.Select(c => new TicketPaiementViewModel()
             {
-                TIK_ID = c.TIK_ID,
-                TIK_DATE = c.TIK_DATE,
-                TIK_MNT_TOTAL = c.TIK_MNT_TOTAL,
-                T_EMPLOYE = c.T_EMPLOYE,
-                T_TABLE = c.T_TABLE,
-                RestantDue = c.TIK_MNT_TOTAL - c.T_PAIEMENT_TICKET.Sum(m => m.Montant),
-                 TIK_ANNUL = c.TIK_ANNUL
+                TIK_ID = c.IdTicket,
+                TIK_DATE = c.Date,
+                TIK_MNT_TOTAL = c.Montant,
+                Employe = c.Employe,
+                Table = c.NumTable,
+                RestantDue = c.RestantDue,
+                 TIK_ANNUL = c.Annuler
             }));
             listViewTicket.ItemsSource = ListTicket;
         }

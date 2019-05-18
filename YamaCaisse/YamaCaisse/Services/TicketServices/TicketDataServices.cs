@@ -30,17 +30,17 @@ namespace YamaCaisse.Services.TicketServices
         /// Gets the tickets.
         /// </summary>
         /// <returns>The tickets.</returns>
-        public async Task<List<Ticket>> GetTickets()
+        public async Task<List<TicketforList>> GetTickets(bool isTicket)
         {
             try
             {
-                List<Ticket> res = new List<Ticket>();
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
+                List<TicketforList> res = new List<TicketforList>();
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"List/", isTicket));
 
                 await Task.Run(() =>
                 {
                     JToken token = o.SelectToken("data");
-                    res = token.Select((JToken s) => s.ToObject<Ticket>()).ToList();
+                    res = token.Select((JToken s) => s.ToObject<TicketforList>()).ToList();
                 });
                 return res;
             }

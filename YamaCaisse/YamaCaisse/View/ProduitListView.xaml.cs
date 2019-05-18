@@ -89,7 +89,7 @@ namespace YamaCaisse.View
                     button.MinimumHeightRequest = 50;
                     button.HorizontalOptions = LayoutOptions.FillAndExpand;
                     button.VerticalOptions = LayoutOptions.FillAndExpand;
-                    button.FontSize = 14;
+                   // button.FontSize = 14;
                     button.ClassId = item.PGPD_ID.ToString();
                     button.Clicked += Click_Produit;
                     gridProduit.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);
@@ -107,7 +107,7 @@ namespace YamaCaisse.View
                 Button btn = (Button)sender;
                 int idpgpd = int.Parse(btn.ClassId);
                 btn.TextColor = Color.FromHex("#212121");
-                int Number = 1;
+                int Number = TicketViewModel.Current.Number;
                 var pageprod = listPageProduit.SingleOrDefault(c => c.PGPD_ID == idpgpd);
                 int idpoduit = pageprod.FK_PDT_ID;
                 var prod = pageprod.T_PRODUIT;
@@ -121,7 +121,7 @@ namespace YamaCaisse.View
                         FK_EMP_ID = App.UserId,
                         FK_PDT_ID = idpoduit,
                         T_PRODUIT = prod,
-                        LTK_QTE = 1,
+                        LTK_QTE = Number,
                         LTK_DATE = DateTime.Now,
                         FK_TVA_ID = prod.FK_TVA_ID.HasValue ? prod.FK_TVA_ID.Value : 0,
                         FK_REC_ID = prod.FK_REC_ID.HasValue ? prod.FK_REC_ID.Value : 1,

@@ -18,8 +18,7 @@ namespace YamaCaisse.ViewModel
             set;
         }
 
-        public decimal? RestantDue
-        { get; set; }
+        public decimal? RestantDue { get; set; }
 
         public DateTime TIK_DATE
         {
@@ -27,13 +26,13 @@ namespace YamaCaisse.ViewModel
             set;
         }
 
-        public Employe T_EMPLOYE
+        public string Employe
         {
             get;
             set;
         }
 
-        public Table T_TABLE
+        public string Table
         {
             get;
             set;

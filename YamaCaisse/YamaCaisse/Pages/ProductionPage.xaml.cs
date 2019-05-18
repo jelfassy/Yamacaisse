@@ -11,6 +11,7 @@ using YamaCaisse.Entity;
 using YamaCaisse.Services.BonProductionServices;
 using YamaCaisse.Services.ProductionServices;
 using YamaCaisse.Services.TableServices;
+using YamaCaisse.Tools;
 using YamaCaisse.View;
 using YamaCaisse.ViewModel;
 
@@ -26,6 +27,9 @@ namespace YamaCaisse.Pages
         private List<Table> listTable;
         public List<LigneTicket> listRecap;
         private int LastBon;
+
+        public SignalRClient SignalRClient = new SignalRClient("ws://" + Application.Current.Properties["ServeurAdress"] + "/Notify/");
+
         public ProductionPage()
         {
 
@@ -34,10 +38,27 @@ namespace YamaCaisse.Pages
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
             LoadTable();
             LoadData(true);
-            StartActivityIndicateur(false);
+            //StartActivityIndicateur(false);
             this.cancellation = new CancellationTokenSource();
-            this.startTimer();
+            //this.startTimer();
             listRecap = new List<LigneTicket>();
+
+            SignalRClient.Start().ContinueWith(task =>
+            {
+                if (task.IsFaulted)
+                    DisplayAlert("Error", "Impossible de se connecter au serveur SignalR" + task.Exception.InnerExceptions[0].Message, "Ok");
+            });
+
+            Device.StartTimer(TimeSpan.FromSeconds(10),() => {
+                if (!SignalRClient.IsConnectedOrConnecting)
+                    SignalRClient.Start();
+                return true;
+            });
+
+            SignalRClient.onMessageReceived += (message) =>
+            {
+                DisplayAlert("Receive", "Receive Message", "Ok");
+            };
 
         }
 

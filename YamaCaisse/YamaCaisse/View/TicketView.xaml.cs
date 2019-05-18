@@ -107,5 +107,10 @@ namespace YamaCaisse.View
         }
 
 
+        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            var item = (LigneTicket)e.SelectedItem;
+            TicketViewModel.Current.SelectedligneTicket = item;
+        }
     }
 }

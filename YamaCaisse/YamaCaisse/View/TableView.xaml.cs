@@ -341,19 +341,23 @@ namespace YamaCaisse.View
             {
                 var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, SelectedTableId);
                 TicketViewModel.Current.Clear();
-                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId);
+                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId,false);
             }
             else if(this.RetourTable)
             {
                 _TicketDataServices = DependencyService.Get<ITicketDataServices>();
                 var rs = await _TicketDataServices.RetourTable(SelectedTableId, TicketViewModel.Current.Ticket);
                 TicketViewModel.Current.Clear();
-                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId);
+                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId,false);
+            }
+            else if(this.FromCommande)
+            {
+                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId,true);
             }
             else
             {
                 TicketViewModel.Current.Clear();
-                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId);
+                TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId,false);
             }
         }
 

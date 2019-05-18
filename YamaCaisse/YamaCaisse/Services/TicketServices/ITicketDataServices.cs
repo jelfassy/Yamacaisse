@@ -20,7 +20,7 @@ namespace YamaCaisse.Services.TicketServices
         /// Gets the tickets.
         /// </summary>
         /// <returns>The tickets.</returns>
-        Task<List<Ticket>> GetTickets();
+        Task<List<TicketforList>> GetTickets(bool isTicket);
         /// <summary>
         /// Gets the ticket.
         /// </summary>

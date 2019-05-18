@@ -1,53 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
-              xmlns:lx="clr-namespace:YamaCaisse.Pages"
-             xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
-             x:Class="YamaCaisse.Pages.Caisse">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" xmlns:lx="clr-namespace:YamaCaisse.Pages" xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse" x:Class="YamaCaisse.Pages.Caisse">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
     </ContentPage.Padding>
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1"
-                     BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
-                <local:HeaderBar />
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*" />
-                        <ColumnDefinition Width="10*" />
-                        <ColumnDefinition Width="6*" />
-                        <ColumnDefinition Width="10" />
-                    </Grid.ColumnDefinitions>
-                    <StackLayout x:Name="StkNumberList" Grid.Column="0" Orientation="Vertical">
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
+            <local:HeaderBar />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="6*" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="StkNumberList" Grid.Column="0" Orientation="Vertical">
+                </StackLayout>
+                <ScrollView Grid.Column="1">
+                    <StackLayout x:Name="StkPageList" Orientation="Vertical">
                     </StackLayout>
-                    <ScrollView>
-                        <StackLayout x:Name="StkPageList" Grid.Column="0" Orientation="Vertical">
-                        </StackLayout>
-                    </ScrollView>
-                    <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="1" />
-                    <localView:TicketView x:Name="ticketControl" Grid.Column="2" />
-                </Grid>
-                <!-- Boutons de bas de pages -->
-                <Grid HorizontalOptions="StartAndExpand">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="1" />
-                        <RowDefinition Height="70" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-                    <Button Grid.Column="1" Clicked="Click_Envoi" Grid.Row="1" Text="Envoi" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-                    <Button Grid.Column="2" Clicked="Click_Clear" Grid.Row="1" Text="Efface Tout" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-                </Grid>
-            </StackLayout>
-           <lx:ActivityIndicator IsBusy="{Binding IsBusy}" />
-        </AbsoluteLayout>
+                </ScrollView>
+                <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="2" />
+                <localView:TicketView x:Name="ticketControl" Grid.Column="3" />
+                <StackLayout x:Name="stkxtra" Grid.Column="5">
+                    <Button Clicked="Click_Attente" Text="En Attente" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Clicked="Click_EntPlat"  Text="Ent/Plat" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Clicked="Click_Message" Text="Message" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Grid.Column="1" Clicked="Click_Supp" Text="Supprimer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                </StackLayout>
+            </Grid>
+            <!-- Boutons de bas de pages -->
+            <Grid HorizontalOptions="StartAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+                <Button Grid.Column="1" Clicked="Click_Envoi" Grid.Row="1" Text="Envoi" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Grid.Column="2" Clicked="Click_Clear" Grid.Row="1" Text="Efface Tout" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            </Grid>
+        </StackLayout>
+        <lx:ActivityIndicator IsBusy="{Binding IsBusy}" />
+    </AbsoluteLayout>
 </ContentPage>

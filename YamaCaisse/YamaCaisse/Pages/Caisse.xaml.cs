@@ -23,7 +23,6 @@ namespace YamaCaisse.Pages
         private IPageProduitDataServices _pageProduitDataServices;
         private ITicketDataServices _ticketDataServices;
 
-
         public TicketView TicketControl
         {
             get { return this.ticketControl; }
@@ -54,7 +53,7 @@ namespace YamaCaisse.Pages
 
             InitPageButton(firstLoad);
             this.Number = 1;
-
+            InitNumberList();
             firstLoad = false;
 
             //  StkPageList.SizeChanged += StkPageList_SizeChanged;
@@ -95,6 +94,9 @@ namespace YamaCaisse.Pages
             Button btn = (Button)sender;
             Number = int.Parse(btn.ClassId);
             btn.BackgroundColor = Color.Orange;
+            TicketViewModel.Current.Number = Number;
+            //TicketViewModel.Current.ChangeLigneQuantite(Number);
+           // await PopupNavigation.Instance.PushAsync(new PopupReclame());
         }
         #endregion
 
@@ -122,7 +124,7 @@ namespace YamaCaisse.Pages
                 };
                 button.WidthRequest = 45;
                 button.HeightRequest = 45;
-                button.FontSize = 20;
+                //button.FontSize = 20;
                 button.ClassId = page.PAG_ID.ToString();
                 button.Clicked += Click_Page;
 
@@ -164,15 +166,36 @@ namespace YamaCaisse.Pages
         #endregion
 
 
+        async void Click_EntPlat(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupReclame());
+        }
 
+        async void Click_Message(object sender, EventArgs e)
+        {
+            var listPages = await _pageDataServices.GetPageList();
+            var page = listPages.SingleOrDefault(cw => cw.PAG_NAME == "Message");
+            await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID));
+        }
+
+        void Click_Supp(object sender, EventArgs e)
+        {
+            TicketViewModel.Current.RemoveLigneTicket(TicketViewModel.Current.SelectedligneTicket);
+        }
+
+        void Click_Attente(object sender, EventArgs e)
+        {
+            TicketViewModel.Current.SelectedligneTicket.LTK_ATTENTE = true;
+        }
         /// <summary>
         /// Methode d'ajout d'une ligne :
         /// ajoute une quantite a la ligne select
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-
-
+        /// 
+        /// 
+        /// 
 
         void Click_Compr(object sender, EventArgs e)
         {
