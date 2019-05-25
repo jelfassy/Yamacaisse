@@ -140,7 +140,7 @@ namespace YamaCaisse.Pages
                     SetMontantToNewTicket(curToAdd);
                 }
                 E_listligneTicket.ItemsSource = null;
-                E_listligneTicket.ItemsSource = TicketViewModel.Current.ListLigneCompr;
+                E_listligneTicket.ItemsSource = TicketViewModel.Current.ListLigneTicket;
                 // stkBtSplit.IsVisible = false;
                 // StkplitDetail.IsVisible = true;
 
