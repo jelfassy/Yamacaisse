@@ -204,6 +204,13 @@
     </Compile>
     <Compile Include="Tools\SignalRClient.cs" />
     <Compile Include="Entity\TicketforList.cs" />
+    <EmbeddedResource Include="Pages\PopupEmployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="Pages\PopupEmployer.xaml.cs">
+      <DependentUpon>PopupEmployer.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

@@ -92,12 +92,25 @@ namespace YamaCaisse.View
                     button.MinimumHeightRequest = 50;
                     button.HorizontalOptions = LayoutOptions.FillAndExpand;
                     button.VerticalOptions = LayoutOptions.FillAndExpand;
-                   // button.FontSize = 14;
+                    // button.FontSize = 14;
                     button.ClassId = item.PGPD_ID.ToString();
                     button.Clicked += Click_Produit;
                     gridProduit.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);
                     if (lstProduitPage.SingleOrDefault(c => c.PDT_ID == item.T_PRODUIT.PDT_ID) == null)
                         lstProduitPage.Add(item.T_PRODUIT);
+
+                    //if (TicketViewModel.Current.ListLigneTicket != null)
+                    //{
+                    //    var count = TicketViewModel.Current.ListLigneTicket.Where(c => c.FK_PDT_ID == item.FK_PDT_ID).Sum(c => c.LTK_QTE);
+                    //    if (count > 0)
+                    //    {
+                    //        Label lbcnt = new Label()
+                    //        {
+                    //            Text = count.ToString()
+                    //        };
+                    //        gridProduit.Children.Add(lbcnt, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);
+                    //    }
+                    //}
                 }
             }
         }
@@ -106,7 +119,6 @@ namespace YamaCaisse.View
         {
             try
             {
-
                 Button btn = (Button)sender;
                 int idpgpd = int.Parse(btn.ClassId);
                 btn.TextColor = Color.FromHex("#212121");
@@ -129,12 +141,14 @@ namespace YamaCaisse.View
                         FK_TVA_ID = prod.FK_TVA_ID.HasValue ? prod.FK_TVA_ID.Value : 0,
                         FK_REC_ID = prod.FK_REC_ID.HasValue ? prod.FK_REC_ID.Value : 1,
                         T_RECLAME = prod.T_RECLAME,
+                        LTK_DESIGNATION_PRODUIT = prod.PDT_Designation,
+                        LTK_PRIX_UNITAIRE = prod.PDT_Prix,
                         T_TVA = prod.T_TVA,
                         LTK_TPVT = App.DeviceIdentifier,
+                        LIST_COMPLEMENT = new ObservableCollection<LigneTicket>()
+                    };
 
-                };
-
-                    if(prod.PDT_Prix != null && prod.T_TVA != null)
+                    if (prod.PDT_Prix != null && prod.T_TVA != null)
                     {
                         ligneTicket.LTK_PRIX_UNITAIRE = prod.PDT_Prix;
                         ligneTicket.LTK_TOTAL_HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
@@ -148,7 +162,7 @@ namespace YamaCaisse.View
 
                             var HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
 
-                            ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_Prix.Value - HT), 2);
+                            ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_Prix.Value * Number - HT), 2);
                         }
                     }
                     else
@@ -158,7 +172,7 @@ namespace YamaCaisse.View
                         prod.PDT_Prix = 0;
                     }
 
-                    if(_mainCaisse != null)
+                    if (_mainCaisse != null)
                     {
                         _mainCaisse.InitNumberList();
                     }
@@ -194,7 +208,7 @@ namespace YamaCaisse.View
                     TicketViewModel.Current.RefreshListProperty();
                     if (pageprod.PAG_ADD_ID != null)
                     {
-                        if(prod.PDT_COMPLEMENT != true)
+                        if (prod.PDT_COMPLEMENT != true)
                         {
                             TicketViewModel.Current.SelectedligneTicket = ligneTicket;
                         }

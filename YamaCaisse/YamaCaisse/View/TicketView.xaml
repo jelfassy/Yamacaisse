@@ -40,7 +40,7 @@
                                 </ViewCell.ContextActions>
                                 <Grid>
                                     <Grid.RowDefinitions>
-                                        <RowDefinition Height="40" />
+                                        <RowDefinition Height="30" />
                                         <RowDefinition Height="{Binding SizeUnderList}" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>

@@ -47,7 +47,7 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.Ticket = null;
         }
 
-        public void SetTicket(Ticket ticket)
+        public void SetTicket(Ticket ticket, bool isAddition = false)
         {
             if (ticket != null)
             {
@@ -55,11 +55,13 @@ namespace YamaCaisse.ViewModel
                 this.IdTable = ticket.FK_TAB_ID;
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
                 this.TableName = ticket?.T_TABLE?.TAB_NOM;
-                this.MontantTotal  = ticket.TIK_MNT_TOTAL;
+                this.MontantTotal = ticket.TIK_MNT_TOTAL;
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
+                this.ListLigneCompr = new ObservableCollection<LigneTicket>();
                 this.ListCurrentFormule = ticket.T_LIGNE_TICKET.Where(c => c.T_PRODUIT.Pdt_IsMenu == true).ToList();
                 this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
                 this.Ticket = ticket;
+                this.ComprTicket(isAddition);
             }
         }
 
@@ -218,6 +220,18 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+        private ObservableCollection<LigneTicket> _listLigneCompr;
+
+        public ObservableCollection<LigneTicket> ListLigneCompr
+        {
+            get { return _listLigneCompr; }
+            set
+            {
+                _listLigneCompr = value;
+                OnPropertyChanged(nameof(ListLigneCompr));
+            }
+        }
+
         private ObservableCollection<PaiementTicket> _listPaiementTicket;
         public ObservableCollection<PaiementTicket> ListPaiementTicket
         {
@@ -305,13 +319,13 @@ namespace YamaCaisse.ViewModel
             return ticket;
         }
 
-        public async void LoadDataTicketbyTable(int idTable,bool fromCommande)
+        public async void LoadDataTicketbyTable(int idTable, bool fromCommande)
         {
             this.IdTable = idTable;
             var ticket = await _ticketDataServices.GetCurrentTableTicket((int)this.IdTable);
             if (ticket.TIK_ID != 0)
             {
-                if(fromCommande != true)
+                if (fromCommande != true)
                     this.SetTicket(ticket);
                 else
                 {
@@ -320,6 +334,7 @@ namespace YamaCaisse.ViewModel
                     this.NbCouvert = ticket.TIK_NB_COUVERT;
                     this.TableName = ticket?.T_TABLE?.TAB_NOM;
                     this.MontantTotal = ticket.T_LIGNE_TICKET.Sum(c => c.LTK_SOMME.Value);
+
                 }
             }
             else
@@ -359,12 +374,15 @@ namespace YamaCaisse.ViewModel
         }
 
 
-        public void ComprTicket()
+        public void ComprTicket(bool isAddition = false)
         {
             var newlist = new ObservableCollection<LigneTicket>();
             foreach (var item in TicketViewModel.Current.ListLigneTicket)
             {
-                var inlist = newlist.SingleOrDefault(c => c.T_PRODUIT == item.T_PRODUIT && c.LIST_COMPLEMENT == item.LIST_COMPLEMENT && c.T_RECLAME == item.T_RECLAME);
+                var inlist = newlist.SingleOrDefault(d => 
+                    d.LTK_DESIGNATION_PRODUIT == item.LTK_DESIGNATION_PRODUIT
+                        && d.FK_REC_ID == item.FK_REC_ID 
+                        && d.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID).SequenceEqual(item.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID)));
                 if (inlist != null)
                 {
                     inlist.LTK_QTE += item.LTK_QTE;
@@ -373,11 +391,16 @@ namespace YamaCaisse.ViewModel
                 }
                 else
                 {
-                    newlist.Add(item);
+                    newlist.Add(item.Clone());
                 }
-
             }
-            TicketViewModel.Current.ListLigneTicket = newlist;
+            if (isAddition == true)
+            {
+                TicketViewModel.Current.ListLigneCompr = newlist;
+            }
+            else
+                TicketViewModel.Current.ListLigneTicket = newlist;
+            //
         }
 
 
@@ -427,7 +450,7 @@ namespace YamaCaisse.ViewModel
                 newlist.Add(item);
             }
             TicketViewModel.Current.ListLigneTicket = newlist;
-           
+
             //TicketViewModel.Current.MontantTotal = (decimal)newlist.Select(c => c.LTK_SOMME).Sum();
 
         }

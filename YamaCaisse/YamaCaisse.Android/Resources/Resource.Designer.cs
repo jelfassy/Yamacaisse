@@ -4352,26 +4352,26 @@ namespace YamaCaisse.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020140
-			public const int avd_hide_password_1 = 2130837824;
+			// aapt resource value: 0x7f020158
+			public const int avd_hide_password_1 = 2130837848;
 			
-			// aapt resource value: 0x7f020141
-			public const int avd_hide_password_2 = 2130837825;
+			// aapt resource value: 0x7f020159
+			public const int avd_hide_password_2 = 2130837849;
 			
-			// aapt resource value: 0x7f020142
-			public const int avd_hide_password_3 = 2130837826;
+			// aapt resource value: 0x7f02015a
+			public const int avd_hide_password_3 = 2130837850;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020143
-			public const int avd_show_password_1 = 2130837827;
+			// aapt resource value: 0x7f02015b
+			public const int avd_show_password_1 = 2130837851;
 			
-			// aapt resource value: 0x7f020144
-			public const int avd_show_password_2 = 2130837828;
+			// aapt resource value: 0x7f02015c
+			public const int avd_show_password_2 = 2130837852;
 			
-			// aapt resource value: 0x7f020145
-			public const int avd_show_password_3 = 2130837829;
+			// aapt resource value: 0x7f02015d
+			public const int avd_show_password_3 = 2130837853;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -5018,11 +5018,11 @@ namespace YamaCaisse.Droid
 			// aapt resource value: 0x7f02012b
 			public const int notification_icon_background = 2130837803;
 			
-			// aapt resource value: 0x7f02013e
-			public const int notification_template_icon_bg = 2130837822;
+			// aapt resource value: 0x7f020156
+			public const int notification_template_icon_bg = 2130837846;
 			
-			// aapt resource value: 0x7f02013f
-			public const int notification_template_icon_low_bg = 2130837823;
+			// aapt resource value: 0x7f020157
+			public const int notification_template_icon_low_bg = 2130837847;
 			
 			// aapt resource value: 0x7f02012c
 			public const int notification_tile_bg = 2130837804;
@@ -5040,43 +5040,115 @@ namespace YamaCaisse.Droid
 			public const int Tab2_carre_220 = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int Tab2_carre_45 = 2130837809;
+			public const int Tab2_carre_220_Blue = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int Tab2_carre_H = 2130837810;
+			public const int Tab2_carre_220_Green = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int Tab2_carre_V = 2130837811;
+			public const int Tab2_carre_45 = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int Tab2_rond_220 = 2130837812;
+			public const int Tab2_carre_45_Blue = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int Tab2_rond_45 = 2130837813;
+			public const int Tab2_carre_45_Green = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int Tab2_rond_H = 2130837814;
+			public const int Tab2_carre_H = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int Tab2_rond_V = 2130837815;
+			public const int Tab2_carre_H_Blue = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int Tab4_carre = 2130837816;
+			public const int Tab2_carre_H_Green = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int Tab4_carre_90 = 2130837817;
+			public const int Tab2_carre_V = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int Tab4_rond = 2130837818;
+			public const int Tab2_carre_V_Blue = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int Tab4_rond_90 = 2130837819;
+			public const int Tab2_carre_V_Green = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int tooltip_frame_dark = 2130837820;
+			public const int Tab2_rond_220 = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int tooltip_frame_light = 2130837821;
+			public const int Tab2_rond_220_Blue = 2130837821;
+			
+			// aapt resource value: 0x7f02013e
+			public const int Tab2_rond_220_Green = 2130837822;
+			
+			// aapt resource value: 0x7f02013f
+			public const int Tab2_rond_45 = 2130837823;
+			
+			// aapt resource value: 0x7f020140
+			public const int Tab2_rond_45_Blue = 2130837824;
+			
+			// aapt resource value: 0x7f020141
+			public const int Tab2_rond_45_Green = 2130837825;
+			
+			// aapt resource value: 0x7f020142
+			public const int Tab2_rond_H = 2130837826;
+			
+			// aapt resource value: 0x7f020143
+			public const int Tab2_rond_H_Blue = 2130837827;
+			
+			// aapt resource value: 0x7f020144
+			public const int Tab2_rond_H_Green = 2130837828;
+			
+			// aapt resource value: 0x7f020145
+			public const int Tab2_rond_V = 2130837829;
+			
+			// aapt resource value: 0x7f020146
+			public const int Tab2_rond_V_Blue = 2130837830;
+			
+			// aapt resource value: 0x7f020147
+			public const int Tab2_rond_V_Green = 2130837831;
+			
+			// aapt resource value: 0x7f020148
+			public const int Tab4_carre = 2130837832;
+			
+			// aapt resource value: 0x7f020149
+			public const int Tab4_carre_90 = 2130837833;
+			
+			// aapt resource value: 0x7f02014a
+			public const int Tab4_carre_90_Blue = 2130837834;
+			
+			// aapt resource value: 0x7f02014b
+			public const int Tab4_carre_90_Green = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int Tab4_carre_Blue = 2130837836;
+			
+			// aapt resource value: 0x7f02014d
+			public const int Tab4_carre_Green = 2130837837;
+			
+			// aapt resource value: 0x7f02014e
+			public const int Tab4_rond = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int Tab4_rond_90 = 2130837839;
+			
+			// aapt resource value: 0x7f020150
+			public const int Tab4_rond_90_Blue = 2130837840;
+			
+			// aapt resource value: 0x7f020151
+			public const int Tab4_rond_90_Green = 2130837841;
+			
+			// aapt resource value: 0x7f020152
+			public const int Tab4_rond_Blue = 2130837842;
+			
+			// aapt resource value: 0x7f020153
+			public const int Tab4_rond_Green = 2130837843;
+			
+			// aapt resource value: 0x7f020154
+			public const int tooltip_frame_dark = 2130837844;
+			
+			// aapt resource value: 0x7f020155
+			public const int tooltip_frame_light = 2130837845;
 			
 			static Drawable()
 			{

@@ -187,6 +187,30 @@
     <BundleResource Include="Resources\Sablier.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <BundleResource Include="Resources\Tab2_rond_V_Green.png" />
+    <BundleResource Include="Resources\Tab4_carre_90_Blue.png" />
+    <BundleResource Include="Resources\Tab4_carre_90_Green.png" />
+    <BundleResource Include="Resources\Tab4_carre_Blue.png" />
+    <BundleResource Include="Resources\Tab4_carre_Green.png" />
+    <BundleResource Include="Resources\Tab4_rond_90_Blue.png" />
+    <BundleResource Include="Resources\Tab4_rond_90_Green.png" />
+    <BundleResource Include="Resources\Tab4_rond_Blue.png" />
+    <BundleResource Include="Resources\Tab4_rond_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_45_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_45_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_220_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_220_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_H_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_H_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_V_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_V_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_45_Blue.png" />
+    <BundleResource Include="Resources\Tab2_rond_45_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_220_Blue.png" />
+    <BundleResource Include="Resources\Tab2_rond_220_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_H_Blue.png" />
+    <BundleResource Include="Resources\Tab2_rond_H_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_V_Blue.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.AppCenter, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">

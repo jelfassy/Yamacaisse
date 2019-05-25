@@ -19,5 +19,7 @@ namespace YamaCaisse.Services.RapportServices
         Task<bool> GetRapportCouvert();
 
         Task<bool> GetRapportServeur(int idServeur);
+
+        Task<bool> GetRapportAnnuler();
     }
 }

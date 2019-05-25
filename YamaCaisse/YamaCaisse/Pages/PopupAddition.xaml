@@ -30,7 +30,7 @@
                     <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
                     <Button Grid.Row="0" Grid.Column="4" Text="{Binding NbCouvert,Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
                     <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
-                    <ListView x:Name="E_listligneTicket" Grid.Row="1" Grid.ColumnSpan="5" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HasUnevenRows="true" ItemsSource="{Binding ListLigneTicket,Source={x:Static local:TicketViewModel.Current}}" SeparatorVisibility="None" ItemTapped="TappedItemcurrentList">
+                    <ListView x:Name="E_listligneTicket" Grid.Row="1" Grid.ColumnSpan="5" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HasUnevenRows="true" ItemsSource="{Binding ListLigneCompr,Source={x:Static local:TicketViewModel.Current}}" SeparatorVisibility="None" ItemTapped="TappedItemcurrentList">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>

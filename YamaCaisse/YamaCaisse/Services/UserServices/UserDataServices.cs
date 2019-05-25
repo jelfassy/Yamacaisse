@@ -1,9 +1,8 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 using YamaCaisse.Entity;
 using YamaCaisse.Tools;
 
@@ -43,14 +42,14 @@ namespace YamaCaisse.Services.UserServices
         }
 
 
-        public async Task<List<Employe>> GetListUser(string code)
+        public async Task<List<Employe>> GetListUser()
         {
             try
             {
                 List<Employe> res = new List<Employe>();
                 JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl));
                 await Task.Run(() => {
-                    JToken token = App.JsonPage.SelectToken("data");
+                    JToken token = o.SelectToken("data");
                     res = token.Select((JToken s) => s.ToObject<Employe>()).ToList(); 
                 });
                

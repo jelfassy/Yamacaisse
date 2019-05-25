@@ -87,9 +87,8 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
-           
+
             this.ListSelectedLigneTicket = new ObservableCollection<LigneTicket>();
-            ListPaiementEncaisser = new ObservableCollection<PaiementTicket>();
             TikId = ticketId;
             MontantTotal = 0;
             LoadData();
@@ -100,12 +99,9 @@ namespace YamaCaisse.Pages
         {
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
             TicketViewModel.Current.Clear();
-            TicketViewModel.Current.SetTicket(ticket);
+            TicketViewModel.Current.SetTicket(ticket,true);
             if (ticket.T_PAIEMENT_TICKET != null)
                 ListPaiementEncaisser = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
-            MontantTotal = (decimal)TicketViewModel.Current.ListLigneTicket.Where(c=>c.FK_PATI_ID == null).Sum(c => c.LTK_SOMME);
-            if(MontantTotal == 0)
-                await PopupNavigation.PopAsync(false);
         }
 
         void TappedItemcurrentList(object sender, ItemTappedEventArgs e)
@@ -118,23 +114,35 @@ namespace YamaCaisse.Pages
                 if (ligne.LTK_QTE == 1)
                 {
                     ListSelectedLigneTicket.Add(ligne);
-                    TicketViewModel.Current.ListLigneTicket.Remove(ligne);
-                    TicketViewModel.Current.MontantTotal -= ligne.LTK_SOMME.Value;
-                    MontantTotal = MontantTotal + ligne.LTK_SOMME.Value;
+                    TicketViewModel.Current.ListLigneCompr.Remove(ligne);
+                    var curToAdd = TicketViewModel.Current.ListLigneTicket.FirstOrDefault(d =>
+                    d.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
+                    && d.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID)));
+
+                    SetMontantToNewTicket(curToAdd);
                 }
                 else
                 {
-                    //ligne.LTK_QTE = ligne.LTK_QTE - 1;
-                    TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c.LTK_ID == ligne.LTK_ID).LTK_QTE = ligne.LTK_QTE - 1;
-                    this.E_listligneTicket.ItemsSource = TicketViewModel.Current.ListLigneTicket;
+                    var curToAdd = TicketViewModel.Current.ListLigneTicket.FirstOrDefault(d =>
+                    d.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
+                        && d.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID)));
 
-                    TicketViewModel.Current.MontantTotal -= ligne.LTK_SOMME.Value;
-                    ligne.LTK_SOMME = ligne.T_PRODUIT.PDT_Prix * ligne.LTK_QTE;
-                    ListSelectedLigneTicket.Add(ligne);
-                    MontantTotal = MontantTotal + ligne.LTK_SOMME.Value;
+
+                    var current = TicketViewModel.Current.ListLigneCompr.FirstOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
+                      && c.LIST_COMPLEMENT.Select(m => m.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(x => x.FK_PDT_ID)));
+                  
+                    current.LTK_SOMME -= current.LTK_PRIX_UNITAIRE;
+                    current.LTK_MNT_TVA -= (current.LTK_MNT_TVA / current.LTK_QTE);
+                    current.LTK_TOTAL_HT -= (current.LTK_TOTAL_HT / current.LTK_QTE);
+                    current.LTK_QTE -= 1;
+
+                    ListSelectedLigneTicket.Add(curToAdd);
+                    SetMontantToNewTicket(curToAdd);
                 }
-               // stkBtSplit.IsVisible = false;
-               // StkplitDetail.IsVisible = true;
+                E_listligneTicket.ItemsSource = null;
+                E_listligneTicket.ItemsSource = TicketViewModel.Current.ListLigneCompr;
+                // stkBtSplit.IsVisible = false;
+                // StkplitDetail.IsVisible = true;
 
             }
 
@@ -147,16 +155,36 @@ namespace YamaCaisse.Pages
                 var ligne = e.Item as LigneTicket;
                 ListSelectedLigneTicket.Remove(ligne);
                 TicketViewModel.Current.ListLigneTicket.Add(ligne);
-                TicketViewModel.Current.MontantTotal += ligne.LTK_SOMME.Value;
-                // eMontantPayer.Text = ((decimal.Parse(eMontantPayer.Text) - ligne.LTK_SOMME).ToString());
-                MontantTotal = MontantTotal - ligne.LTK_SOMME.Value;
-                if (ListSelectedLigneTicket.Count == 0)
-                {
-                   // stkBtSplit.IsVisible = true;
-                   // StkplitDetail.IsVisible = false;
-                }
+                ReturnToOldTicket(ligne);
             }
 
+        }
+
+
+        private void SetMontantToNewTicket(LigneTicket ligne)
+        {
+            TicketViewModel.Current.MontantTotal -= ligne.LTK_SOMME.Value;
+            TicketViewModel.Current.ListLigneTicket.Remove(ligne);
+            MontantTotal = MontantTotal + ligne.LTK_SOMME.Value;
+            foreach (var ssligne in ligne.LIST_COMPLEMENT.Where(c => c.LTK_SOMME != 0))
+            {
+                MontantTotal = MontantTotal + ssligne.LTK_SOMME.Value;
+                TicketViewModel.Current.MontantTotal -= ssligne.LTK_SOMME.Value;
+            }
+        }
+
+        private void ReturnToOldTicket(LigneTicket ligne)
+        {
+            TicketViewModel.Current.MontantTotal += ligne.LTK_SOMME.Value;
+            TicketViewModel.Current.ListLigneTicket.Add(ligne);
+            TicketViewModel.Current.ListLigneCompr.Add(ligne);
+            MontantTotal = MontantTotal - ligne.LTK_SOMME.Value;
+            foreach (var ssligne in ligne.LIST_COMPLEMENT.Where(c => c.LTK_SOMME != 0))
+            {
+                MontantTotal = MontantTotal - ssligne.LTK_SOMME.Value;
+                TicketViewModel.Current.MontantTotal += ssligne.LTK_SOMME.Value;
+            }
+         //   TicketViewModel.Current.ComprTicket(true);
         }
 
         void Click_Split(object sender, EventArgs e)

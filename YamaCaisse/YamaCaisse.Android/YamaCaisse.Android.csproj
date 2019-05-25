@@ -355,6 +355,30 @@
     <AndroidResource Include="Resources\drawable\Sablier.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\Tab2_rond_V_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_carre_90_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_carre_90_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_carre_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_carre_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_rond_90_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_rond_90_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_rond_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab4_rond_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_45_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_45_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_220_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_220_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_H_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_H_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_V_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_carre_V_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_rond_45_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_rond_45_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_rond_220_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_rond_220_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_rond_H_Blue.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_rond_H_Green.png" />
+    <AndroidResource Include="Resources\drawable\Tab2_rond_V_Blue.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

@@ -248,7 +248,7 @@ namespace YamaCaisse.Entity
                 else if (this._LIST_COMPLEMENT.Count == 0)
                     return 0;
                 else
-                    return (40 * this._LIST_COMPLEMENT.Count);
+                    return (20 * this._LIST_COMPLEMENT.Count);
             }
         }
 
@@ -296,5 +296,9 @@ namespace YamaCaisse.Entity
         PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
     }
 
-}
+        public LigneTicket Clone()
+        {
+            return (LigneTicket)this.MemberwiseClone();
+        }
+    }
 }

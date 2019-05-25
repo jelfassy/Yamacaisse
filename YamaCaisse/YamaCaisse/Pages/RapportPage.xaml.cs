@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Services.RapportServices;
 
@@ -29,7 +29,13 @@ namespace YamaCaisse.Pages
 
         async void RapportServeur_Clicked(object sender, System.EventArgs e)
         {
-           // var rs = await _rapportDataServices.GetRapportServeur();
+            await PopupNavigation.Instance.PushAsync(new PopupEmployer());
+
+        }
+
+        async void RapportAnnuler_Clicked(object sender, System.EventArgs e)
+        {
+            var rs = await _rapportDataServices.GetRapportAnnuler();
         }
     }
 }
