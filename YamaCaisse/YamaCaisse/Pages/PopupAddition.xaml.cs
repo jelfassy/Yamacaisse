@@ -115,7 +115,7 @@ namespace YamaCaisse.Pages
                 {
                     ListSelectedLigneTicket.Add(ligne);
                     TicketViewModel.Current.ListLigneCompr.Remove(ligne);
-                    var curToAdd = TicketViewModel.Current.ListLigneTicket.FirstOrDefault(d =>
+                    var curToAdd = TicketViewModel.Current.ListLigneTicket.FirstOrDefault(d => d.LTK_ID == ligne.LTK_ID && 
                     d.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
                     && d.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID)));
 
