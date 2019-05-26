@@ -72,7 +72,7 @@ namespace YamaCaisse.Pages
         async void Click_Paiement(object sender, EventArgs e)
         {
             TicketViewModel.Current.Clear();
-            var tmv = new YamaCaisse.Pages.MainTicketPage();
+            var tmv = new YamaCaisse.Pages.MainTicketPage(false);
             tmv.IsEcranTicket = false;
             await Navigation.PushModalAsync(tmv);
         }
@@ -80,8 +80,7 @@ namespace YamaCaisse.Pages
         async void Click_Ticket(object sender, EventArgs e)
         {
             TicketViewModel.Current.Clear();
-            var tmv = new YamaCaisse.Pages.MainTicketPage();
-            tmv.IsEcranTicket = true;
+            var tmv = new YamaCaisse.Pages.MainTicketPage(true);
             await Navigation.PushModalAsync(tmv);
         }
 

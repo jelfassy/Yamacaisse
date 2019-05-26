@@ -74,7 +74,7 @@ namespace YamaCaisse.View
                 _salleDataServices = DependencyService.Get<ISalleDataServices>();
 
                 var list = await _salleDataServices.GetSalles();
-                foreach (var pg in list)
+                foreach (var pg in list.OrderBy(c=>c.SAL_ORDER))
                 {
                     StkPageList.Children.Add(CreateButtonSalles(pg.SAL_ID.ToString(), pg.SAL_NOM));
                 }

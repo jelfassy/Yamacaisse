@@ -27,10 +27,11 @@ namespace YamaCaisse.Pages
         private bool switchcolor;
 
 
-        public MainTicketPage()
+        public MainTicketPage(bool isTicket)
         {
             InitializeComponent();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            IsEcranTicket = isTicket;
             loadData();
         }
 
@@ -66,7 +67,7 @@ namespace YamaCaisse.Pages
                 Employe = c.Employe,
                 Table = c.NumTable,
                 RestantDue = c.RestantDue,
-                 TIK_ANNUL = c.Annuler
+                TIK_ANNUL = c.Annuler
             }));
             listViewTicket.ItemsSource = ListTicket;
         }

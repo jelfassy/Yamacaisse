@@ -35,7 +35,7 @@ namespace YamaCaisse.Services.TicketServices
             try
             {
                 List<TicketforList> res = new List<TicketforList>();
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"List/", isTicket));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"List/", isTicket.ToString()));
 
                 await Task.Run(() =>
                 {
