@@ -6,6 +6,14 @@
    <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
         <StackLayout x:Name="stkemployer">
             <Label Text="Serveur" />
+            <Grid x:Name="gdEmploye">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+             </Grid>
         </StackLayout>
     </StackLayout>
 </pages:PopupPage>

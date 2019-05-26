@@ -33,9 +33,13 @@ namespace YamaCaisse.Pages
 
             ListEmploye = await _userDataServices.GetListUser();
 
-
+            int num = 0;
+            int row = 0;
             foreach (var employe in ListEmploye.OrderBy(c => c.EMP_NOM))
             {
+                if(num == 0)
+                    gdEmploye.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Auto) });
+
                 var button = new Button
                 {
                     Text = employe.EMP_NOM,
@@ -47,7 +51,14 @@ namespace YamaCaisse.Pages
                 button.FontSize = 24;
                 button.ClassId = employe.EMP_ID.ToString();
                 button.Clicked += Click_SelectEmploye;
-                stkemployer.Children.Add(button);
+                gdEmploye.Children.Add(button, num, row);
+                num = num + 1;
+                if (num > 3)
+                {
+                    num = 0;
+                    row = row + 1;
+                
+                }
             }
         }
 
