@@ -18,10 +18,10 @@ namespace YamaCaisse.Pages
 {
     public partial class PopupAddition : PopupPage
     {
-       
+
         private ITableDataServices _tableDataServices;
         private ITicketDataServices _ticketDataServices;
-       
+
 
 
         public MainTicketPage _maintTicketPage { get; set; }
@@ -97,11 +97,11 @@ namespace YamaCaisse.Pages
 
         public async void LoadData()
         {
+            this.IsBusy = true;
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
             TicketViewModel.Current.Clear();
-            TicketViewModel.Current.SetTicket(ticket,true);
-            if (ticket.T_PAIEMENT_TICKET != null)
-                ListPaiementEncaisser = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
+            TicketViewModel.Current.SetTicket(ticket, true);
+               
         }
 
         void TappedItemcurrentList(object sender, ItemTappedEventArgs e)
@@ -115,7 +115,7 @@ namespace YamaCaisse.Pages
                 {
                     ListSelectedLigneTicket.Add(ligne);
                     TicketViewModel.Current.ListLigneCompr.Remove(ligne);
-                    var curToAdd = TicketViewModel.Current.ListLigneTicket.FirstOrDefault(d => d.LTK_ID == ligne.LTK_ID && 
+                    var curToAdd = TicketViewModel.Current.ListLigneTicket.FirstOrDefault(d => d.LTK_ID == ligne.LTK_ID &&
                     d.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
                     && d.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(c => c.FK_PDT_ID)));
 
@@ -130,7 +130,7 @@ namespace YamaCaisse.Pages
 
                     var current = TicketViewModel.Current.ListLigneCompr.FirstOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
                       && c.LIST_COMPLEMENT.Select(m => m.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(x => x.FK_PDT_ID)));
-                  
+
                     current.LTK_SOMME -= current.LTK_PRIX_UNITAIRE;
                     current.LTK_MNT_TVA -= (current.LTK_MNT_TVA / current.LTK_QTE);
                     current.LTK_TOTAL_HT -= (current.LTK_TOTAL_HT / current.LTK_QTE);
@@ -184,7 +184,8 @@ namespace YamaCaisse.Pages
                 MontantTotal = MontantTotal - ssligne.LTK_SOMME.Value;
                 TicketViewModel.Current.MontantTotal += ssligne.LTK_SOMME.Value;
             }
-         //   TicketViewModel.Current.ComprTicket(true);
+
+            //   TicketViewModel.Current.ComprTicket(true);
         }
 
         void Click_Split(object sender, EventArgs e)
@@ -198,7 +199,7 @@ namespace YamaCaisse.Pages
                 MontantTotal = TicketViewModel.Current.MontantTotal;
 
             }
-            
+
         }
 
         async void Click_Envoi(object sender, EventArgs e)

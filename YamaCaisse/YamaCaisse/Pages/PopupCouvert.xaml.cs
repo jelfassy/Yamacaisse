@@ -27,8 +27,11 @@ namespace YamaCaisse.Pages
 
         void Click_Back(object sender, EventArgs e)
         {
-            if (this.EntryNbCouvert.Text != "")
-                this.EntryNbCouvert.Text = this.EntryNbCouvert.Text.Remove(this.EntryNbCouvert.Text.Length - 1);
+            if (this.EntryNbCouvert.Text != null)
+            {
+                if (this.EntryNbCouvert.Text != "")
+                    this.EntryNbCouvert.Text = this.EntryNbCouvert.Text.Remove(this.EntryNbCouvert.Text.Length - 1);
+            }
         }
 
         async void Click_Couvert(object sender, EventArgs e)

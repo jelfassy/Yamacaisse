@@ -61,7 +61,15 @@ namespace YamaCaisse.ViewModel
                 this.ListCurrentFormule = ticket.T_LIGNE_TICKET.Where(c => c.T_PRODUIT.Pdt_IsMenu == true).ToList();
                 this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
                 this.Ticket = ticket;
-                this.ComprTicket(isAddition);
+                if(!isAddition)
+                {
+                    this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
+                    this.ComprTicket(isAddition);
+                }
+                else
+                {
+                    this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET.Where(c=>c.LTK_SOMME > 0));
+                }
             }
         }
 
@@ -396,11 +404,13 @@ namespace YamaCaisse.ViewModel
             }
             if (isAddition == true)
             {
+               
                 TicketViewModel.Current.ListLigneCompr = newlist;
             }
             else
+            {
                 TicketViewModel.Current.ListLigneTicket = newlist;
-            //
+            }
         }
 
 

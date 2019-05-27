@@ -13,33 +13,40 @@ namespace YamaCaisse.Pages
         public PopupFormule()
         {
             InitializeComponent();
+       
             this.IdPage = TicketViewModel.Current.GetListOpenFormule().FirstOrDefault().PDT_PageFormule.Value;
             this.PageProduitControl.InitProduitButton(this.IdPage);
-            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListCurrentFormule.SingleOrDefault(c => c.T_PRODUIT.Pdt_IsMenu == true && c.T_PRODUIT.PDT_PageFormule == this.IdPage);
+            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListCurrentFormule.FirstOrDefault(c => c.T_PRODUIT.Pdt_IsMenu == true && c.T_PRODUIT.PDT_PageFormule == this.IdPage);
             CreateHeaderFormule();
         }
 
         public void CreateHeaderFormule()
         {
-            foreach(var formule in TicketViewModel.Current.GetListOpenFormule())
+            List<int> listin = new List<int>();
+            var listFormule = TicketViewModel.Current.GetListOpenFormule();
+            foreach (var formule in listFormule)
             {
-                var button = new Button
+                if (!listin.Contains(formule.PDT_ID))
                 {
-                    BorderWidth = 2.5,
-                    // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                    listin.Add(formule.PDT_ID);
+                    var button = new Button
+                    {
+                        BorderWidth = 2.5,
+                        // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
 
-                };
-                button.BackgroundColor = Color.Gray;
-                button.TextColor = Color.Blue;
-                button.Text = formule.PDT_Designation;
-                button.WidthRequest = 70;
-                button.HeightRequest = 70;
-                button.HorizontalOptions = LayoutOptions.FillAndExpand;
-                button.VerticalOptions = LayoutOptions.FillAndExpand;
-                button.FontSize = 14;
-                button.ClassId = formule.PDT_PageFormule.ToString();
-                button.Clicked += SelectFormule;
-                stkCurFormule.Children.Add(button);
+                    };
+                    button.BackgroundColor = Color.Gray;
+                    button.TextColor = Color.Blue;
+                    button.Text = formule.PDT_Designation;
+                    button.WidthRequest = 70;
+                    button.HeightRequest = 70;
+                    button.HorizontalOptions = LayoutOptions.FillAndExpand;
+                    button.VerticalOptions = LayoutOptions.FillAndExpand;
+                    button.FontSize = 14;
+                    button.ClassId = formule.PDT_PageFormule.ToString();
+                    button.Clicked += SelectFormule;
+                    stkCurFormule.Children.Add(button);
+                }
             }
         }
 
