@@ -157,7 +157,7 @@ namespace YamaCaisse.Services.TicketServices
 
                 int mnt = (int)(Montant * 100);
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/",ticket.TIK_ID,"/", nbcouvert.ToString(),"/",mnt));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/",ConfigViewModel.Current.Printer.PRT_ID,"/",ticket.TIK_ID,"/", nbcouvert.ToString(),"/",mnt));
 
                 await Task.Run(() =>
                 {

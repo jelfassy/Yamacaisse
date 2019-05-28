@@ -86,6 +86,15 @@ namespace YamaCaisse.Pages
                 }
 
             }
+            catch (FormatException ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"Click_Fiche"}
+                };
+                Crashes.TrackError(ex, property);
+                await DisplayAlert("Montant", "Le Montant est invalid !", "OK");
+            }
             catch (Exception ex)
             {
                 var property = new Dictionary<string, string>

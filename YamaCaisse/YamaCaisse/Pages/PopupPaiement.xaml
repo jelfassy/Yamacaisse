@@ -91,6 +91,7 @@
                                 <Label Grid.Row="0" Grid.Column="0" Text="{Binding PATI_DATE,StringFormat='{0:HH:mm}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                 <Label Grid.Row="0" Grid.Column="1" Text="{Binding T_TYPE_PAIEMENT.TPA_LIBELLE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                 <Label Grid.Row="0" Grid.Column="2" Text="{Binding Montant,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                            
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
