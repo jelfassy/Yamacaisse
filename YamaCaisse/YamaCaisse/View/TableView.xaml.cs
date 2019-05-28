@@ -74,7 +74,7 @@ namespace YamaCaisse.View
                 _salleDataServices = DependencyService.Get<ISalleDataServices>();
 
                 var list = await _salleDataServices.GetSalles();
-                foreach (var pg in list.OrderBy(c=>c.SAL_ORDER))
+                foreach (var pg in list.OrderBy(c => c.SAL_ORDER))
                 {
                     StkPageList.Children.Add(CreateButtonSalles(pg.SAL_ID.ToString(), pg.SAL_NOM));
                 }
@@ -251,6 +251,7 @@ namespace YamaCaisse.View
                 // BackgroundColor = (Color)Application.Current.Resources["DividerColor"],
                 ClassId = tab.TAB_ID.ToString(),
             };
+
             var label = new Label()
             {
                 Text = tab.TAB_NOM,
@@ -259,6 +260,10 @@ namespace YamaCaisse.View
                 VerticalOptions = LayoutOptions.Center,
                 ClassId = tab.TAB_ID.ToString()
             };
+            var tapGesture = new TapGestureRecognizer();
+            tapGesture.Tapped += (s, e) => Click_SelectTableLabel(s, e);
+            label.GestureRecognizers.Add(tapGesture);
+
             button.Clicked += Click_SelectTableImage;
             grid.Children.Add(button);
             grid.Children.Add(label);
@@ -319,9 +324,9 @@ namespace YamaCaisse.View
 
         public async void Click_SelectTable(object sender, EventArgs e)
         {
-            UnSelectAllTable();
             var button = (Button)sender;
             button.BorderColor = Color.BlueViolet;
+            UnSelectAllTable(int.Parse(button.ClassId));
             SetTable(int.Parse(button.ClassId));
             if (CurrentPopupTable != null)
                 CurrentPopupTable.ClosePopup();
@@ -330,9 +335,10 @@ namespace YamaCaisse.View
 
         public async void Click_SelectTableImage(object sender, EventArgs e)
         {
-            UnSelectAllTable();
+
             var button = (ImageButton)sender;
             button.BorderColor = Color.BlueViolet;
+            UnSelectAllTable(int.Parse(button.ClassId));
             SetTable(int.Parse(button.ClassId));
             if (CurrentPopupTable != null)
                 CurrentPopupTable.ClosePopup();
@@ -340,10 +346,10 @@ namespace YamaCaisse.View
 
         public async void Click_SelectTableLabel(object sender, EventArgs e)
         {
-            UnSelectAllTable();
+
             var label = (Label)sender;
-            var button = (ImageButton)StkTableList.Children.SingleOrDefault(c => c.GetType() == typeof(ImageButton) && c.ClassId == label.ClassId);
-            button.BorderColor = Color.BlueViolet;
+            var button = (Label)StkTableList.Children.SingleOrDefault(c => c.GetType() == typeof(Label) && c.ClassId == label.ClassId);
+            UnSelectAllTable(int.Parse(label.ClassId));
             SetTable(int.Parse(label.ClassId));
             if (CurrentPopupTable != null)
                 CurrentPopupTable.ClosePopup();
@@ -378,15 +384,30 @@ namespace YamaCaisse.View
             }
         }
 
-        public void UnSelectAllTable()
+        public void UnSelectAllTable(int SelectedTableId)
         {
-            foreach (var imgButton in StkTableList.Children)
+            var rellayout = StkTableList.Children.FirstOrDefault();
+
+            if (rellayout.GetType() == typeof(RelativeLayout))
             {
-                if(imgButton.GetType() == typeof(ImageButton))
+                foreach (Grid grid in ((RelativeLayout)rellayout).Children)
                 {
-                    ((ImageButton)imgButton).BorderColor = Color.Transparent;
+                    ImageButton imageButton = (ImageButton)grid.Children.FirstOrDefault(c => c.GetType() == typeof(ImageButton));
+                    if (SelectedTableId == int.Parse(imageButton.ClassId))
+                    {
+                        imageButton.BorderColor = Color.BlueViolet;
+                        imageButton.BorderWidth = 5;
+                    }
+                    else
+                    {
+
+                        imageButton.BorderColor = Color.Transparent;
+                        imageButton.BorderWidth = 0;
+                    }
                 }
+
             }
+
         }
 
         async void Click_NbCouvert(object sender, System.EventArgs e)

@@ -24,9 +24,21 @@ namespace YamaCaisse.Pages
             set;
         }
 
+        public bool TriId { get; set; }
+
+        public bool TriEmploye { get; set; }
+
+        public bool TriDate { get; set; }
+
+        public bool TriMontant { get; set; }
+
+        public bool TriRestantDue { get; set; }
+
+        public bool TriTable { get; set; }
+
         private bool switchcolor;
 
-
+        public ObservableCollection<TicketPaiementViewModel> ListTicket { get; set; }
         public MainTicketPage(bool isTicket)
         {
             InitializeComponent();
@@ -59,7 +71,7 @@ namespace YamaCaisse.Pages
 
                 }
             }
-            var ListTicket = new ObservableCollection<TicketPaiementViewModel>(reslistTicket.Select(c => new TicketPaiementViewModel()
+            ListTicket = new ObservableCollection<TicketPaiementViewModel>(reslistTicket.Select(c => new TicketPaiementViewModel()
             {
                 TIK_ID = c.IdTicket,
                 TIK_DATE = c.Date,
@@ -103,6 +115,70 @@ namespace YamaCaisse.Pages
         }
 
 
+
+        void onTap_TriStaff(object sender, EventArgs args)
+        {
+            if (TriEmploye)
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.Employe));
+            else
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.Employe));
+            TriEmploye = !TriEmploye;
+            listViewTicket.ItemsSource = ListTicket;
+        }
+
+
+        void onTap_TriIdTicket(object sender, EventArgs args)
+        {
+            if (TriId)
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.TIK_ID));
+            else
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.TIK_ID));
+            TriId = !TriId;
+            listViewTicket.ItemsSource = ListTicket;
+        }
+
+        void onTap_TriDate(object sender, EventArgs args)
+        {
+            if (TriDate)
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.TIK_DATE));
+            else
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.TIK_DATE));
+            TriDate = !TriDate;
+            listViewTicket.ItemsSource = ListTicket;
+        }
+
+        void onTap_TriMontant(object sender, EventArgs args)
+        {
+            if (TriMontant)
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.TIK_DATE));
+            else
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.TIK_DATE));
+            TriMontant = !TriMontant;
+            listViewTicket.ItemsSource = ListTicket;
+        }
+
+        void onTap_TriRestantDue(object sender, EventArgs args)
+        {
+            if (TriRestantDue)
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.RestantDue));
+            else
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.RestantDue));
+            TriRestantDue = !TriRestantDue;
+            listViewTicket.ItemsSource = ListTicket;
+        }
+
+
+        void onTap_TriTable(object sender, EventArgs args)
+        {
+            if (TriTable)
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.Table));
+            else
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.Table));
+            TriTable = !TriTable;
+            listViewTicket.ItemsSource = ListTicket;
+        }
+
+
         async void Click_Payer(object sender, EventArgs e)
         {
             //await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
@@ -139,5 +215,8 @@ namespace YamaCaisse.Pages
                 await PopupNavigation.Instance.PushAsync(popupAnn);
             }
         }
+
+
+
     }
 }

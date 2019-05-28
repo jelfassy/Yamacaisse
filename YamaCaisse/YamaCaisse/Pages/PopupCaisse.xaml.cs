@@ -14,11 +14,23 @@ namespace YamaCaisse.Pages
             get;
             set;
         }
+
+        public Caisse _mainCaisse { get; set; }
+
         public PopupCaisse(int idPage)
         {
             InitializeComponent();
             this.IdPage = idPage;
             this.PageProduitControl.InitProduitButton(this.IdPage);
+        }
+
+        public PopupCaisse(int idPage,Caisse mainCaisse)
+        {
+            InitializeComponent();
+            this.IdPage = idPage;
+            this.PageProduitControl._mainCaisse = mainCaisse;
+            this.PageProduitControl.InitProduitButton(this.IdPage);
+            _mainCaisse = mainCaisse;
         }
 
         async void  Closed_Clicked(object sender, System.EventArgs e)

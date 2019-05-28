@@ -72,6 +72,8 @@ namespace YamaCaisse.Pages
         #region Number
         public void InitNumberList()
         {
+            TicketViewModel.Current.Number = 1;
+            StkNumberList.Children.Clear();
             for (int i = 1; i < 10; i++)
             {
                 var button = new Button
@@ -126,6 +128,7 @@ namespace YamaCaisse.Pages
                 {
                     this.idPage = page.PAG_ID;
                     isfirst = false;
+                    this.PageProduitControl._mainCaisse = this;
                     this.PageProduitControl.InitProduitButton(this.idPage);
                 }
 
@@ -167,9 +170,6 @@ namespace YamaCaisse.Pages
         #region Ticket
 
 
-
-
-
         void Ligne_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
             var list = sender as ListView;
@@ -192,7 +192,7 @@ namespace YamaCaisse.Pages
             {
                 var listPages = await _pageDataServices.GetPageList();
                 var page = listPages.SingleOrDefault(cw => cw.PAG_NAME == "Message");
-                await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID));
+                await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID,this));
 
             }
         }

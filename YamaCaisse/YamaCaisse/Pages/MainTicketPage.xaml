@@ -24,11 +24,31 @@
                                      <ColumnDefinition Width="2*" />
                                     <ColumnDefinition Width="2*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.Row="0" Grid.Column="0" Text="Numéro" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                <Label Grid.Row="0" Grid.Column="1" Text="Date" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                <Label Grid.Row="0" Grid.Column="2" Text="Montant" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                <Label Grid.Row="0" Grid.Column="3" Text="Reste due" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" /> 
-                                <Label Grid.Row="0" Grid.Column="4" Text="Staff" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="0" Text="Numéro" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                      <Label.GestureRecognizers>
+                                         <TapGestureRecognizer Tapped="onTap_TriIdTicket"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Date" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                      <Label.GestureRecognizers>
+                                         <TapGestureRecognizer Tapped="onTap_TriDate"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="2" Text="Montant" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                  <Label.GestureRecognizers>
+                                         <TapGestureRecognizer Tapped="onTap_TriMontant"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="3" Text="Reste due" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                     <Label.GestureRecognizers>
+                                         <TapGestureRecognizer Tapped="onTap_TriStaff"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="4" Text="Staff" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                                    <Label.GestureRecognizers>
+                                         <TapGestureRecognizer Tapped="onTap_TriStaff"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
                                 <Label Grid.Row="0" Grid.Column="5" Text="Table" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                             </Grid>
                         </ListView.Header>
