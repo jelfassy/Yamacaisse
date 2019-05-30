@@ -72,12 +72,12 @@ namespace YamaCaisse.Tools
                     return res;
                 });
             }
-            catch (HttpRequestException)
+            catch (HttpRequestException ex)
             {
                 throw new InvalidOperationException("ErrorMessageAccesReseau");
             }
-            catch (Exception)
-            {
+            catch (Exception ex)
+            { 
                 throw new InvalidOperationException("ErrorMessageProblemeFonctionnement");
             }
 

@@ -234,9 +234,31 @@ namespace YamaCaisse.Pages
                
                 if (TicketViewModel.Current.ListLigneTicket.Count > 0)
                 {
+                    if (TicketViewModel.Current.IdTable != null)
+                    {
+                        var idTick = await TicketViewModel.Current.TicketExistantSurTable();
+                        if (idTick != 0)
+                        {
+                            if (idTick != TicketViewModel.Current.TKT_ID)
+                            {
+                                bool reponse = await DisplayAlert("Table en cours !", "Voullez vous rajouter cette commande a La table en cour ?", "Oui", "Non");
+                                if (reponse)
+                                {
+                                    TicketViewModel.Current.TKT_ID = idTick;
+                                }
+                                else
+                                {
+                                    await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketControl, false, true));
+                                }
+                            }
+                        }
+                    }
+
+
                     this.IsBusy = true;
                     TicketViewModel.Current.ComprTicket();
 
+                    //TODO : Control que la table n'a pas deja un ticket en cour
                     if (TicketViewModel.Current.TKT_ID == 0)
                     {
 

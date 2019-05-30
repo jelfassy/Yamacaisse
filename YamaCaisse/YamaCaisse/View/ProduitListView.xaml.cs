@@ -187,6 +187,7 @@ namespace YamaCaisse.View
                         if (TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT == null)
                             TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
 
+                        if(TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT.SingleOrDefault(c=>c.FK_PDT_ID == ligneTicket.FK_PDT_ID)== null)
                         TicketViewModel.Current.SelectedligneTicket.LIST_COMPLEMENT.Add(ligneTicket);
 
                         TicketViewModel.Current.ListLigneTicket.Add(TicketViewModel.Current.SelectedligneTicket);

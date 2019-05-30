@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.TableServices;
@@ -326,6 +327,17 @@ namespace YamaCaisse.ViewModel
 
             return ticket;
         }
+
+        public async Task<int> TicketExistantSurTable()
+        {
+            var ticket = await _ticketDataServices.GetCurrentTableTicket((int)this.IdTable);
+            if (ticket == null)
+                return 0;
+            else
+                return ticket.TIK_ID;
+        }
+
+
 
         public async void LoadDataTicketbyTable(int idTable, bool fromCommande)
         {
