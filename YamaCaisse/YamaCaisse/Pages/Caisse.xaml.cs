@@ -29,6 +29,7 @@ namespace YamaCaisse.Pages
             set { this.ticketControl = value; }
         }
 
+        public bool IsEnable { get; set; }
 
         private int Number;
         private int idPage;
@@ -50,7 +51,7 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
-
+            IsEnable = true;
             InitPageButton(firstLoad);
             this.Number = 1;
             TicketViewModel.Current.Number = Number;
@@ -231,7 +232,8 @@ namespace YamaCaisse.Pages
         {
             try
             {
-               
+                this.IsBusy = true;
+                this.IsEnable = false;
                 if (TicketViewModel.Current.ListLigneTicket.Count > 0)
                 {
                     if (TicketViewModel.Current.IdTable != null)
@@ -241,6 +243,8 @@ namespace YamaCaisse.Pages
                         {
                             if (idTick != TicketViewModel.Current.TKT_ID)
                             {
+
+                                this.IsBusy = false;
                                 bool reponse = await DisplayAlert("Table en cours !", "Voullez vous rajouter cette commande a La table en cour ?", "Oui", "Non");
                                 if (reponse)
                                 {
@@ -271,8 +275,9 @@ namespace YamaCaisse.Pages
                         var rsb = await _ticketDataServices.PutTicket(TicketViewModel.Current.TKT_ID, TicketViewModel.Current.GetTicketToSend());
                     }
                     ResetTicket();
-                    this.IsBusy = false;
                 }
+                this.IsEnable = true;
+                this.IsBusy = false;
             }
             catch (Exception ex)
             {
@@ -282,6 +287,7 @@ namespace YamaCaisse.Pages
                     {"Caisse","Click_Envoi"}
                 };
                 this.IsBusy = false;
+                this.IsEnable = true;
                 Crashes.TrackError(ex, property);
                 await DisplayAlert("Error", "Une erreur c'est produites !!", "OK");
             }
