@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.RapportServices;
 using YamaCaisse.Services.UserServices;
+using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.Pages
 {
@@ -67,7 +68,7 @@ namespace YamaCaisse.Pages
             Button btn = (Button)sender;
             int idemploye = int.Parse(btn.ClassId);
             var rs = await _rapportDataServices.GetRapportServeur(idemploye);
-            await PopupNavigation.PopAsync(false);
+            await Navigation.PopPopupAsync();
         }
 
     }

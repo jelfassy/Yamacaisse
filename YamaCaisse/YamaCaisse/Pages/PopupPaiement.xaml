@@ -44,7 +44,7 @@
                     </Button>
                     <Button Text="0" HeightRequest="40" Grid.Column="1" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                     </Button>
-                    <Button x:Name="virgule" HeightRequest="40" Text="." Grid.Column="2" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    <Button x:Name="virgule" HeightRequest="40" Text="." Grid.Column="2" Grid.Row="3" Clicked="Click_virgule" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                     </Button>
                 </Grid>
             </StackLayout>

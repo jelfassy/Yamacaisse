@@ -11,6 +11,7 @@ using YamaCaisse.Pages;
 using YamaCaisse.Services.PageProduitServices;
 using YamaCaisse.Services.PageServices;
 using YamaCaisse.ViewModel;
+using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.View
 {
@@ -215,14 +216,14 @@ namespace YamaCaisse.View
                         }
                         if (this.Autoclose == true)
                         {
-                            await PopupNavigation.PopAsync(false);
+                            await Navigation.PopPopupAsync();
                         }
                         await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
                         return;
                     }
                     if (this.Autoclose == true)
                     {
-                        await PopupNavigation.PopAsync(false);
+                        await Navigation.PopPopupAsync();
                     }
 
                 }
@@ -230,7 +231,7 @@ namespace YamaCaisse.View
                 {
                     if (this.Autoclose == true)
                     {
-                        await PopupNavigation.PopAsync(false);
+                        await Navigation.PopPopupAsync();
                     }
                     await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID,_mainCaisse));
                 }

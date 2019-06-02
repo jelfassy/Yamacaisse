@@ -97,11 +97,20 @@ namespace YamaCaisse.Pages
 
         public async void LoadData()
         {
-            this.IsBusy = true;
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
             TicketViewModel.Current.Clear();
             TicketViewModel.Current.SetTicket(ticket, true);
-               
+
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            this.IsBusy = true;
+            LoadData();
+            this.IsBusy = false;
+
         }
 
         void TappedItemcurrentList(object sender, ItemTappedEventArgs e)
