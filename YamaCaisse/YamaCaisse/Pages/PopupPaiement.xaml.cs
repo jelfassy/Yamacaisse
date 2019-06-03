@@ -171,7 +171,7 @@ namespace YamaCaisse.Pages
                         EMP_ID = App.UserId,
                         FK_TIK_ID = this._ticket.TIK_ID,
                         FK_TPA_ID = this.IdTypePaiement,
-                        Montant = decimal.Parse(eMontantPayer.Text),
+                        Montant = decimal.Parse(eMontantPayer.Text.Replace(",",".")),
                         PATI_DATE = DateTime.Now
                     };
                     await _paiementDataServices.PostPaiement(paiementtick);

@@ -75,7 +75,7 @@ namespace YamaCaisse.Pages
                 int nbrepas;
                 if (this.LblMontant.Text != "" && LblNbCouvert.Text != "!")
                 {
-                    Montant = decimal.Parse(this.LblMontant.Text);
+                    Montant = decimal.Parse(LblMontant.Text.Replace(",", ".")));
                     nbrepas = int.Parse(this.LblNbCouvert.Text);
                     await _ticketDataServices.PrintFiche(TicketViewModel.Current.Ticket, nbrepas, Montant);
 
