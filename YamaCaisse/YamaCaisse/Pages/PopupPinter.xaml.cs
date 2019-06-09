@@ -28,11 +28,18 @@ namespace YamaCaisse.Pages
 
         public async void LoadData()
         {
+            int num = 0;
+            int row = 0;
+
             _printerDataServices = DependencyService.Get<PrinterDataServices>();
             var listPrint = await _printerDataServices.GetPrinterList();
 
             foreach(var item in listPrint)
             {
+                if (num == 0)
+                    gdPrinter.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Auto) });
+
+
                 var button = new Button
                 {
                     BorderColor = Color.Gray,
@@ -47,7 +54,14 @@ namespace YamaCaisse.Pages
                 button.FontSize = 20;
                 button.ClassId = item.PRT_ID.ToString();
                 button.Clicked += Click_Printer;
-                stkPrinter.Children.Add(button);
+                gdPrinter.Children.Add(button, num, row);
+                num = num + 1;
+                if (num > 2)
+                {
+                    num = 0;
+                    row = row + 1;
+
+                }
             }
         }
 

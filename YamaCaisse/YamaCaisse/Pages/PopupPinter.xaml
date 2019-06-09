@@ -5,7 +5,14 @@
                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
                 x:Class="YamaCaisse.Pages.PopupPinter">
       <StackLayout x:Name="stkPrinter" Margin="12" Padding="24" Spacing="24" BackgroundColor="White" Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
-
+       <Label Text="Imprimante" />
+            <Grid x:Name="gdPrinter">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+             </Grid>
 
     </StackLayout>
 </pages:PopupPage>

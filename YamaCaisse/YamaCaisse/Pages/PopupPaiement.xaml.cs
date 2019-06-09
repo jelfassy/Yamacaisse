@@ -55,7 +55,7 @@ namespace YamaCaisse.Pages
             FirstPressNumber = true;
             LoadBouttonTypePaiement();
             MontantTotal = _ticket.TIK_MNT_TOTAL - _ticket.T_PAIEMENT_TICKET.Sum(c=>c.Montant.Value);
-            eMontantPayer.Text = MontantTotal.ToString("0.00");
+            eMontantPayer.Text = MontantTotal.ToString("0,00");
             eMontantPayer.TextColor = Color.Gray;
             //eMontantPayer.Placeholder = _ticket.TIK_MNT_TOTAL.ToString("0.00");
         }
@@ -84,7 +84,7 @@ namespace YamaCaisse.Pages
                 this.FirstPressNumber = false;
             }
             else
-                eMontantPayer.Text = string.Concat(this.eMontantPayer.Text, ".");
+                eMontantPayer.Text = string.Concat(this.eMontantPayer.Text, ",");
 
         }
         void Click_Back(object sender, EventArgs e)
@@ -94,14 +94,14 @@ namespace YamaCaisse.Pages
                 this.eMontantPayer.Text = this.eMontantPayer.Text.Remove(this.eMontantPayer.Text.Length - 1);
                 if (this.eMontantPayer.Text == "")
                 {
-                    eMontantPayer.Text = MontantTotal.ToString("0.00");
+                    eMontantPayer.Text = MontantTotal.ToString("0,00");
                     eMontantPayer.TextColor = Color.Gray;
                     this.FirstPressNumber = true;
                 }
             }
             else
             {
-                eMontantPayer.Text = MontantTotal.ToString("0.00");
+                eMontantPayer.Text = MontantTotal.ToString("0,00");
                 eMontantPayer.TextColor = Color.Gray;
             }
         }
@@ -176,7 +176,7 @@ namespace YamaCaisse.Pages
                     };
                     await _paiementDataServices.PostPaiement(paiementtick);
                     MontantTotal = MontantTotal - decimal.Parse(eMontantPayer.Text);
-                    eMontantPayer.Text = MontantTotal.ToString("0.00");
+                    eMontantPayer.Text = MontantTotal.ToString("0,00");
                     eMontantPayer.TextColor = Color.Gray;
                     this.FirstPressNumber = true;
                     this.IdTypePaiement = 0;

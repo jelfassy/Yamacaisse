@@ -45,7 +45,8 @@ namespace YamaCaisse.Pages
                 {
                     Text = employe.EMP_NOM,
                     BorderColor = Color.Gray,
-                    BackgroundColor = Color.FromHex(employe.EMP_COULEUR)
+                    BackgroundColor = Color.FromHex(employe.EMP_COULEUR),
+                    TextColor = Color.White
                 };
                 button.WidthRequest = 100;
                 button.HeightRequest = 70;
