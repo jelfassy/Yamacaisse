@@ -34,7 +34,7 @@ namespace YamaCaisse.Pages
                 })
             });
 
-            this.LblMontant.Text = TicketViewModel.Current.MontantTotal.ToString("0,00");
+            this.LblMontant.Text = TicketViewModel.Current.MontantTotal.ToString("C");
         }
 
     
