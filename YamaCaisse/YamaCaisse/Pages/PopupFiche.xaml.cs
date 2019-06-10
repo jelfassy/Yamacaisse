@@ -13,10 +13,11 @@ namespace YamaCaisse.Pages
     {
         private ITicketDataServices _ticketDataServices;
         public string Current { get; set; }
-
+        private bool firstMontant;
         public PopupFiche()
         {
             InitializeComponent();
+            firstMontant = true;
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
             this.Current = "Couvert";
             LblMontant.GestureRecognizers.Add(new TapGestureRecognizer()
@@ -47,6 +48,11 @@ namespace YamaCaisse.Pages
             }
             else
             {
+                if (this.firstMontant)
+                {
+                    this.LblMontant.Text = string.Empty;
+                    this.firstMontant = false;
+                }
                 this.LblMontant.Text = string.Concat(this.LblMontant.Text, (sender as Button).Text);
 
             }
