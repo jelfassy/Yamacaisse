@@ -77,7 +77,7 @@ namespace YamaCaisse.Tools
                 throw new InvalidOperationException("ErrorMessageAccesReseau");
             }
             catch (Exception ex)
-            { 
+            {
                 throw new InvalidOperationException("ErrorMessageProblemeFonctionnement");
             }
 
@@ -100,7 +100,7 @@ namespace YamaCaisse.Tools
 
                     if (!response.IsSuccessStatusCode)
                     {
-                        
+
                         int code = (int)response.StatusCode;
 
                         if (code == 403)
@@ -146,26 +146,23 @@ namespace YamaCaisse.Tools
 
                 HttpContent bodyPost = new StringContent(body, Encoding.UTF8, "application/json");
 
-                return await retryPolicy.ExecuteAsync(async () =>
-                {
-                    HttpResponseMessage response = await client.PutAsync(uri, bodyPost);
+                HttpResponseMessage response = await client.PutAsync(uri, bodyPost);
 
-                    if (!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode)
+                {
+                    int code = (int)response.StatusCode;
+                    if (code == 403)
                     {
-                        int code = (int)response.StatusCode;
-                        if (code == 403)
-                        {
-                            throw new Exception("Timeout");
-                        }
-                        else if (code != 500 && code != 404)
-                        {
-                            response.EnsureSuccessStatusCode();
-                        }
+                        throw new Exception("Timeout");
                     }
-                    var content = await response.Content.ReadAsStringAsync();
-                                content = CheckContent(response, content);
-                    return JObject.Parse(content);
-                });
+                    else if (code != 500 && code != 404)
+                    {
+                        response.EnsureSuccessStatusCode();
+                    }
+                }
+                var content = await response.Content.ReadAsStringAsync();
+                content = CheckContent(response, content);
+                return JObject.Parse(content);
             }
             catch (HttpRequestException)
             {
@@ -182,7 +179,7 @@ namespace YamaCaisse.Tools
         /// <returns>The async.</returns>
         /// <param name="uriString">URI string.</param>
         /// <param name="body">Body.</param>
-        public static async Task<JObject> PostAsync(string uriString,string body)
+        public static async Task<JObject> PostAsync(string uriString, string body)
         {
             try
             {
@@ -233,7 +230,7 @@ namespace YamaCaisse.Tools
 
             List<T> objectlist = new List<T>();
 
-            foreach(var item in array)
+            foreach (var item in array)
             {
                 try
                 {

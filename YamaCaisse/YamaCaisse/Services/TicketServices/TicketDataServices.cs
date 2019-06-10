@@ -155,9 +155,18 @@ namespace YamaCaisse.Services.TicketServices
             try
             {
 
-                int mnt = (int)(Montant * 100);
+               
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche/",ConfigViewModel.Current.Printer.PRT_ID,"/",ticket.TIK_ID,"/", nbcouvert.ToString(),"/",mnt));
+                var js = JsonConvert.SerializeObject(new {
+                    idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    idticket = ticket.TIK_ID,
+                    nbCouvert = nbcouvert,
+                    Montant = Montant
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche"),js);
 
                 await Task.Run(() =>
                 {

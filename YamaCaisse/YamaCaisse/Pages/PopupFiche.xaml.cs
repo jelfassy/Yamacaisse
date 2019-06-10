@@ -34,7 +34,7 @@ namespace YamaCaisse.Pages
                 })
             });
 
-            this.LblMontant.Text = TicketViewModel.Current.MontantTotal.ToString("C");
+            this.LblMontant.Text = TicketViewModel.Current.MontantTotal.ToString("N2");
         }
 
     
@@ -78,7 +78,7 @@ namespace YamaCaisse.Pages
                     Montant = decimal.Parse(LblMontant.Text.Replace(".", ","));
                     nbrepas = int.Parse(this.LblNbCouvert.Text);
                     await _ticketDataServices.PrintFiche(TicketViewModel.Current.Ticket, nbrepas, Montant);
-
+                    await PopupNavigation.PopAsync(false);
                 }
                 else
                 {

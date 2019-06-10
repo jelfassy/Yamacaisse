@@ -11,10 +11,10 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Text="Nombre de Repas" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
-            <Label Grid.Row="0" Grid.Column="1" x:Name="LblNbCouvert" BackgroundColor="{StaticResource DividerColor}" FontSize="Medium" HorizontalOptions="FillAndExpand"/>
+            <Label Grid.Row="0" Grid.Column="1" x:Name="LblNbCouvert" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
  
             <Label Grid.Row="1" Grid.Column="0" Text="Montant" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
-            <Label Grid.Row="1" Grid.Column="1" BackgroundColor="{StaticResource DividerColor}" x:Name="LblMontant" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+            <Label Grid.Row="1" Grid.Column="1" BackgroundColor="{StaticResource DividerColor}" x:Name="LblMontant" FontSize="Large" HorizontalOptions="FillAndExpand" />
         </Grid>
        
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="300">
