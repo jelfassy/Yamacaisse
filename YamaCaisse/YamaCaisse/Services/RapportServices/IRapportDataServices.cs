@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace YamaCaisse.Services.RapportServices
 {
@@ -11,15 +12,15 @@ namespace YamaCaisse.Services.RapportServices
         /// Gets the rapport jour.
         /// </summary>
         /// <returns>The rapport jour.</returns>
-        Task<bool> GetRapportJour();
+        Task<bool> GetRapportJour(DateTime date);
         /// <summary>
         /// Gets the rapport couvert.
         /// </summary>
         /// <returns>The rapport couvert.</returns>
-        Task<bool> GetRapportCouvert();
+        Task<bool> GetRapportCouvert(DateTime date);
 
-        Task<bool> GetRapportServeur(int idServeur);
+        Task<bool> GetRapportServeur(int idServeur, DateTime date);
 
-        Task<bool> GetRapportAnnuler();
+        Task<bool> GetRapportAnnuler(DateTime date);
     }
 }

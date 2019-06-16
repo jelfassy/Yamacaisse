@@ -19,11 +19,13 @@ namespace YamaCaisse.Pages
 
         private List<Employe> ListEmploye;
 
-        public PopupEmployer()
+        public DateTime date { get; set; }
+        public PopupEmployer(DateTime datea)
         {
             InitializeComponent();
             _rapportDataServices = DependencyService.Get<RapportDataServices>();
 
+            date = datea;
             LoadListEmployer();
         }
 
@@ -68,7 +70,7 @@ namespace YamaCaisse.Pages
         {
             Button btn = (Button)sender;
             int idemploye = int.Parse(btn.ClassId);
-            var rs = await _rapportDataServices.GetRapportServeur(idemploye);
+            var rs = await _rapportDataServices.GetRapportServeur(idemploye,date);
             await Navigation.PopPopupAsync();
         }
 

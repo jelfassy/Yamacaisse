@@ -17,25 +17,33 @@ namespace YamaCaisse.Pages
             _rapportDataServices = DependencyService.Get<RapportDataServices>();
         }
 
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            DtPicker.Date = DateTime.Today;
+            DtPicker.MaximumDate = DateTime.Today;
+        }
+
         async void RapportJour_Clicked(object sender, System.EventArgs e)
         {
-            var rs = await _rapportDataServices.GetRapportJour();
+            var rs = await _rapportDataServices.GetRapportJour(DtPicker.Date);
         }
 
         async void RapportCouvert_Clicked(object sender, System.EventArgs e)
         {
-            var rs = await _rapportDataServices.GetRapportCouvert();
+            var rs = await _rapportDataServices.GetRapportCouvert(DtPicker.Date);
         }
 
         async void RapportServeur_Clicked(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupEmployer());
+            await PopupNavigation.Instance.PushAsync(new PopupEmployer(DtPicker.Date));
 
         }
 
         async void RapportAnnuler_Clicked(object sender, System.EventArgs e)
         {
-            var rs = await _rapportDataServices.GetRapportAnnuler();
+            var rs = await _rapportDataServices.GetRapportAnnuler(DtPicker.Date);
         }
     }
 }

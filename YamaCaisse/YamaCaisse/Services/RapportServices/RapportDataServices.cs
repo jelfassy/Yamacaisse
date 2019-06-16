@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using YamaCaisse.Tools;
 using YamaCaisse.ViewModel;
@@ -27,12 +28,21 @@ namespace YamaCaisse.Services.RapportServices
         /// Gets the rapport jour.
         /// </summary>
         /// <returns>The rapport jour.</returns>
-        public async Task<bool> GetRapportJour()
+        public async Task<bool> GetRapportJour(DateTime date)
         {
             try
             {
                 bool res = false;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"Jour/", ConfigViewModel.Current.Printer.PRT_ID));
+                var js = JsonConvert.SerializeObject(new
+                {
+                    Idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    Date = date
+
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Jour"), js);
 
                 await Task.Run(() =>
                 {
@@ -61,12 +71,22 @@ namespace YamaCaisse.Services.RapportServices
             }
         }
 
-        public async Task<bool> GetRapportServeur(int idServeur)
+        public async Task<bool> GetRapportServeur(int idServeur, DateTime date)
         {
             try
             {
                 bool res = false;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Serveur/", ConfigViewModel.Current.Printer.PRT_ID, "/", idServeur));
+                var js = JsonConvert.SerializeObject(new
+                {
+                    Idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    Date = date,
+                    IdServeur = idServeur
+
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Serveur"), js);
 
                 await Task.Run(() =>
                 {
@@ -99,12 +119,21 @@ namespace YamaCaisse.Services.RapportServices
         /// Gets the rapport couvert.
         /// </summary>
         /// <returns>The rapport couvert.</returns>
-        public async Task<bool> GetRapportCouvert()
+        public async Task<bool> GetRapportCouvert(DateTime date)
         {
             try
             {
                 bool res = false;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Couvert/", ConfigViewModel.Current.Printer.PRT_ID));
+                var js = JsonConvert.SerializeObject(new
+                {
+                    Idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    Date = date
+
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Couvert"), js);
 
                 await Task.Run(() =>
                 {
@@ -137,12 +166,21 @@ namespace YamaCaisse.Services.RapportServices
         /// Gets the rapport annuler.
         /// </summary>
         /// <returns>The rapport annuler.</returns>
-        public async Task<bool> GetRapportAnnuler()
+        public async Task<bool> GetRapportAnnuler(DateTime date)
         {
             try
             {
                 bool res = false;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Annuler/", ConfigViewModel.Current.Printer.PRT_ID));
+                var js = JsonConvert.SerializeObject(new
+                {
+                    Idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    Date = date
+
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Annuler"), js);
 
                 await Task.Run(() =>
                 {
