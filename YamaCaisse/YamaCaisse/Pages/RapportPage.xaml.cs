@@ -27,23 +27,23 @@ namespace YamaCaisse.Pages
 
         async void RapportJour_Clicked(object sender, System.EventArgs e)
         {
-            var rs = await _rapportDataServices.GetRapportJour(DtPicker.Date);
+            var rs = await _rapportDataServices.GetRapportJour(DtPicker.Date.ToLocalTime());
         }
 
         async void RapportCouvert_Clicked(object sender, System.EventArgs e)
         {
-            var rs = await _rapportDataServices.GetRapportCouvert(DtPicker.Date);
+            var rs = await _rapportDataServices.GetRapportCouvert(DtPicker.Date.ToLocalTime());
         }
 
         async void RapportServeur_Clicked(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupEmployer(DtPicker.Date));
+            await PopupNavigation.Instance.PushAsync(new PopupEmployer(DtPicker.Date.ToLocalTime()));
 
         }
 
         async void RapportAnnuler_Clicked(object sender, System.EventArgs e)
         {
-            var rs = await _rapportDataServices.GetRapportAnnuler(DtPicker.Date);
+            var rs = await _rapportDataServices.GetRapportAnnuler(DtPicker.Date.ToLocalTime());
         }
     }
 }

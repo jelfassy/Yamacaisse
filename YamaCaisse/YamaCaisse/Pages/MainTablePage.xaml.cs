@@ -106,7 +106,7 @@ namespace YamaCaisse.Pages
         {
             if(TicketViewModel.Current.TKT_ID != 0)
             {
-                await PopupNavigation.Instance.PushAsync(new PopupAddition(TicketViewModel.Current.TKT_ID));
+                await PopupNavigation.Instance.PushAsync(new PopupEclater(TicketViewModel.Current.TKT_ID));
             }
         }
 

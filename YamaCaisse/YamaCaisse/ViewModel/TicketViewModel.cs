@@ -359,7 +359,8 @@ namespace YamaCaisse.ViewModel
             }
             else
             {
-                TicketViewModel.Current.Clear();
+                if(!fromCommande)
+                    TicketViewModel.Current.Clear();
                 var listTable = await _tableDataServices.GetTableList();
                 this.TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == idTable).TAB_NOM;
                 this.IdTable = idTable;
