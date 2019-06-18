@@ -21,8 +21,8 @@ namespace YamaCaisse.Pages
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            DtPicker.Date = DateTime.Today;
-            DtPicker.MaximumDate = DateTime.Today;
+            DtPicker.Date = DateTime.Today.ToLocalTime();
+            DtPicker.MaximumDate = DateTime.Today.ToLocalTime();
         }
 
         async void RapportJour_Clicked(object sender, System.EventArgs e)
