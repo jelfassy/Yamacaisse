@@ -211,6 +211,13 @@
     <Compile Include="Pages\PopupEmployer.xaml.cs">
       <DependentUpon>PopupEmployer.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pages\PopupEclater.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="Pages\PopupEclater.xaml.cs">
+      <DependentUpon>PopupEclater.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

@@ -15,7 +15,7 @@ using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.View
 {
-    public partial class ProduitListView : ContentView
+    public partial class ProduitListView : Grid
     {
 
         private IPageProduitDataServices _pageProduitDataServices;
@@ -46,9 +46,9 @@ namespace YamaCaisse.View
         {
             this.IdPage = idPage;
 
-            gridProduit.Children.Clear();
-            gridProduit.RowDefinitions.Clear();
-            gridProduit.ColumnDefinitions.Clear();
+            this.Children.Clear();
+            this.RowDefinitions.Clear();
+            this.ColumnDefinitions.Clear();
 
             _pageProduitDataServices = DependencyService.Get<IPageProduitDataServices>();
             listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.IdPage);
@@ -67,9 +67,9 @@ namespace YamaCaisse.View
                 var bnMaxCol = listPageProduit.Select(cw => cw.PGPD_POS_VERTICALE).Max();
 
                 for (int i = 0; i < nbMaxRow; i++)
-                    gridProduit.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Auto) });
+                    this.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Auto) });
                 for (int i = 0; i < bnMaxCol; i++)
-                    gridProduit.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
+                    this.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
 
                 //
                 foreach (var item in listPageProduit)
@@ -96,7 +96,7 @@ namespace YamaCaisse.View
                     // button.FontSize = 14;
                     button.ClassId = item.PGPD_ID.ToString();
                     button.Clicked += Click_Produit;
-                    gridProduit.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);
+                    this.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);
                     if (lstProduitPage.SingleOrDefault(c => c.PDT_ID == item.T_PRODUIT.PDT_ID) == null)
                         lstProduitPage.Add(item.T_PRODUIT);
 
