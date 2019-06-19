@@ -102,6 +102,11 @@ namespace YamaCaisse.Pages
             }
         }
 
+        /// <summary>
+        /// Clicks the eclater.
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
         async void Click_Eclater(object sender,System.EventArgs e)
         {
             if(TicketViewModel.Current.TKT_ID != 0)
