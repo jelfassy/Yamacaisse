@@ -22,5 +22,9 @@ namespace YamaCaisse.Entity
         public string NumTable { get; set; }
 
         public decimal? RestantDue { get; set; }
+
+        public bool? TableEnCours { get; set; }
+
+        public bool? PaiementEnCours { get; set; }
     }
 }

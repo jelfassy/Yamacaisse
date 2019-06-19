@@ -2,6 +2,7 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse" xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse" x:Class="YamaCaisse.View.TicketView">
     <ContentView.Content>
         <StackLayout x:Name="StkList" Grid.Column="2" BackgroundColor="White" VerticalOptions="StartAndExpand">
+               <Label Text="{Binding MotifAnnulation,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Red" />
             <Grid VerticalOptions="StartAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
@@ -94,13 +95,14 @@
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
+                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Grid.Column="0" Text="nb Element" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding NbElemCommand,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="0" Grid.Column="1" Text="Reste A Payer" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding ResteAPayer,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="nb Element" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="2" Grid.Column="0" Text="{Binding NbElemCommand,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="Reste A Payer" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding ResteAPayer,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                 </Grid>
             </Grid>
         </StackLayout>

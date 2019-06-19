@@ -46,6 +46,7 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.ListCurrentFormule = null;
             TicketViewModel.Current.ListPaiementTicket.Clear();
             TicketViewModel.Current.Ticket = null;
+            TicketViewModel.Current.MotifAnnulation = null;
         }
 
         public void SetTicket(Ticket ticket, bool isAddition = false)
@@ -62,6 +63,7 @@ namespace YamaCaisse.ViewModel
                 this.ListCurrentFormule = ticket.T_LIGNE_TICKET.Where(c => c.T_PRODUIT.Pdt_IsMenu == true).ToList();
                 this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
                 this.Ticket = ticket;
+                this.MotifAnnulation = ticket.TIK_MOTIF_ANNUL;
                 if(!isAddition)
                 {
                     this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
@@ -75,6 +77,19 @@ namespace YamaCaisse.ViewModel
         }
 
 
+        private string _MotifAnnulation;
+        public string MotifAnnulation
+        {
+            get
+            {
+                return _MotifAnnulation;
+            }
+            set
+            {
+                _MotifAnnulation = value;
+                OnPropertyChanged(nameof(MotifAnnulation));
+            }
+        }
 
         public Ticket Ticket { get; set; }
 
