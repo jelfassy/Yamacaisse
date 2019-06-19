@@ -11,6 +11,7 @@ using YamaCaisse.Entity;
 using YamaCaisse.Services.BonProductionServices;
 using YamaCaisse.Services.ProductionServices;
 using YamaCaisse.Services.TableServices;
+//using YamaCaisse.Services.WebSocketProdServices;
 using YamaCaisse.Tools;
 using YamaCaisse.View;
 using YamaCaisse.ViewModel;
@@ -28,7 +29,7 @@ namespace YamaCaisse.Pages
         public List<LigneTicket> listRecap;
         private int LastBon;
 
-        public SignalRClient SignalRClient = new SignalRClient("ws://" + Application.Current.Properties["ServeurAdress"] + "/Notify/");
+  //      private IWebSocketProdServices _webSocketProdServices;
 
         public ProductionPage()
         {
@@ -36,29 +37,16 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             StartActivityIndicateur(true);
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
-            LoadTable();
-            LoadData(true);
+         //   _webSocketProdServices = DependencyService.Get<WebSocketProdServices>();
+            //  LoadTable();
+            // LoadData(true);
             //StartActivityIndicateur(false);
             this.cancellation = new CancellationTokenSource();
             //this.startTimer();
             listRecap = new List<LigneTicket>();
 
-            SignalRClient.Start().ContinueWith(task =>
-            {
-                if (task.IsFaulted)
-                    DisplayAlert("Error", "Impossible de se connecter au serveur SignalR" + task.Exception.InnerExceptions[0].Message, "Ok");
-            });
-
-            Device.StartTimer(TimeSpan.FromSeconds(10),() => {
-                if (!SignalRClient.IsConnectedOrConnecting)
-                    SignalRClient.Start();
-                return true;
-            });
-
-            SignalRClient.onMessageReceived += (message) =>
-            {
-                DisplayAlert("Receive", "Receive Message", "Ok");
-            };
+          
+          
 
         }
 
@@ -153,7 +141,7 @@ namespace YamaCaisse.Pages
 
                 GdListBon.Children.Clear();
 
-                foreach (var item in listBon.OrderBy(c=>c.Bon_DATE_DEBUT))
+                foreach (var item in listBon.OrderBy(c => c.Bon_DATE_DEBUT))
                 {
                     if (item.BON_ID > LastBon)
                         PlaySound();
@@ -175,7 +163,7 @@ namespace YamaCaisse.Pages
 
                     }
                 }
-                if(listBon.LastOrDefault() != null)
+                if (listBon.LastOrDefault() != null)
                     LastBon = listBon.LastOrDefault().BON_ID;
                 await CreateRecap();
             }
@@ -224,9 +212,9 @@ namespace YamaCaisse.Pages
                 };
                 Crashes.TrackError(ex, property);
                 throw ex;
-               // await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
+                // await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
             }
-          
+
         }
 
         public void RemoveBonProduction(BonProductionView view)

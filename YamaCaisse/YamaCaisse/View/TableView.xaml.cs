@@ -195,7 +195,6 @@ namespace YamaCaisse.View
             int row = 0;
             var nbTable = list.Count();
 
-
             int col = 0;
             foreach (var table in list.Skip(NbByPage * (PageNumber - 1)).Take(NbByPage))
             {

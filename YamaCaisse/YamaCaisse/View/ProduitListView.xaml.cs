@@ -67,9 +67,9 @@ namespace YamaCaisse.View
                 var bnMaxCol = listPageProduit.Select(cw => cw.PGPD_POS_VERTICALE).Max();
 
                 for (int i = 0; i < nbMaxRow; i++)
-                    this.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Auto) });
-                for (int i = 0; i < bnMaxCol; i++)
-                    this.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
+                    this.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1,GridUnitType.Star) });
+                //for (int i = 0; i < bnMaxCol; i++)
+                    //this.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
 
                 //
                 foreach (var item in listPageProduit)
@@ -89,11 +89,13 @@ namespace YamaCaisse.View
                     }
 
                     button.Text = item.T_PRODUIT.PDT_Designation;
-                    button.MinimumWidthRequest = 50;
-                    button.MinimumHeightRequest = 50;
+                    button.FontAttributes = FontAttributes.Bold;
+                   // button.
+                    //button.MinimumWidthRequest = 50;
+                    //button.MinimumHeightRequest = 50;
                     button.HorizontalOptions = LayoutOptions.FillAndExpand;
                     button.VerticalOptions = LayoutOptions.FillAndExpand;
-                    // button.FontSize = 14;
+                    button.FontSize = 14;
                     button.ClassId = item.PGPD_ID.ToString();
                     button.Clicked += Click_Produit;
                     this.Children.Add(button, item.PGPD_POS_VERTICALE - 1, item.PGPD_POS_HORIZONTALE - 1);

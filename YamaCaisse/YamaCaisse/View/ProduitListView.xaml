@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Grid x:Name="gridProduit" RowSpacing="0" ColumnSpacing="0" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" BackgroundColor="{StaticResource LightPrimaryColor}" x:Class="YamaCaisse.View.ProduitListView">
+<Grid x:Name="gridProduit" RowSpacing="0" ColumnSpacing="0" 
+      xmlns="http://xamarin.com/schemas/2014/forms" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+      BackgroundColor="{StaticResource LightPrimaryColor}" 
+      x:Class="YamaCaisse.View.ProduitListView">
     <Grid.RowDefinitions>
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
-        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="1*" />
