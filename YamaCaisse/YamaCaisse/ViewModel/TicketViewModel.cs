@@ -35,9 +35,8 @@ namespace YamaCaisse.ViewModel
         /// <summary>
         /// Clear the specified annul.
         /// </summary>
-        public void Clear(bool annul = false)
+        public void Clear()
         {
-            if(annul == true)
             TicketViewModel.Current.IdTable = null;
             TicketViewModel.Current.MontantTotal = 0;
             TicketViewModel.Current.NbCouvert = null;

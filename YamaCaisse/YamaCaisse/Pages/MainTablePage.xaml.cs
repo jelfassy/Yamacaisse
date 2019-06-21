@@ -77,9 +77,8 @@ namespace YamaCaisse.Pages
         {
             var caisse = new YamaCaisse.Pages.Caisse();
             TicketViewModel.Current.ListLigneTicket.Clear();
-            if (TicketViewModel.Current.MotifAnnulation != string.Empty)
-                TicketViewModel.Current.Clear(true);
-            if(ConfigViewModel.Current.CouvertRequis && TicketViewModel.Current.NbCouvert == null)
+            TicketViewModel.Current.MotifAnnulation = null;
+            if (ConfigViewModel.Current.CouvertRequis && TicketViewModel.Current.NbCouvert == null)
                 await PopupNavigation.Instance.PushAsync(new PopupCouvert());
             await Navigation.PushModalAsync(caisse);
         }
