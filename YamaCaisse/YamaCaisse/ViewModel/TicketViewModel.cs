@@ -32,8 +32,12 @@ namespace YamaCaisse.ViewModel
             OnPropertyChanged(nameof(ListLigneTicket));
         }
 
-        public void Clear()
+        /// <summary>
+        /// Clear the specified annul.
+        /// </summary>
+        public void Clear(bool annul = false)
         {
+            if(annul == true)
             TicketViewModel.Current.IdTable = null;
             TicketViewModel.Current.MontantTotal = 0;
             TicketViewModel.Current.NbCouvert = null;
