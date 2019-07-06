@@ -218,6 +218,16 @@
     <Compile Include="Pages\PopupEclater.xaml.cs">
       <DependentUpon>PopupEclater.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Services\CompteServices\CompteDataServices.cs" />
+    <Compile Include="Services\CompteServices\ICompteDataServices.cs" />
+    <Compile Include="Entity\Compte.cs" />
+    <EmbeddedResource Include="Pages\PopupCompte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <Compile Include="Pages\PopupCompte.xaml.cs">
+      <DependentUpon>PopupCompte.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -332,6 +342,7 @@
   <ItemGroup>
     <Folder Include="Renderer\" />
     <Folder Include="Services\ConfigServices\" />
+    <Folder Include="Services\CompteServices\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.3.1.0.697729\build\netstandard1.0\Xamarin.Forms.targets')" />
