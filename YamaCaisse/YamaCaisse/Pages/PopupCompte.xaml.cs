@@ -71,7 +71,9 @@ namespace YamaCaisse.Pages
                     FK_TIK_ID = TicketViewModel.Current.TKT_ID,
                     FK_TPA_ID = this._idTypePaiement,
                     PATI_DATE = DateTime.Now,
-                    FK_CMP_ID = idCompte
+                    FK_CMP_ID = idCompte,
+                    Montant = TicketViewModel.Current.MontantTotal
+
                 };
                 await _paiementDataServices.PostPaiement(paiementtick);
 
