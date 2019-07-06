@@ -28,6 +28,7 @@ namespace YamaCaisse.Pages
         }
 
 
+
         public PopupTable(TicketView tv,bool Move)
         {
             InitializeComponent();

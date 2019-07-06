@@ -113,7 +113,6 @@ namespace YamaCaisse.Pages
             int nbligne = listPaiement.Count / 2;
             int ligne = 0;
             int column = 0;
-
             foreach (var item in listPaiement)
             {
                 var button = new Button
@@ -132,7 +131,11 @@ namespace YamaCaisse.Pages
                 //button.FontSize = 20;
                 button.ClassId = item.TPA_ID.ToString();
                 button.Clicked += Click_SelectTypePaiement;
-                gdTypePaiment.Children.Add(button, column, ligne);
+
+                  gdTypePaiment.Children.Add(button, column, ligne);
+
+                if (item.TPA_ID == 7)
+                    Grid.SetColumnSpan(button, 2);
 
                 column = column + 1;
                 if (column > 1)
@@ -144,7 +147,7 @@ namespace YamaCaisse.Pages
             }
         }
 
-        void Click_SelectTypePaiement(object sender, EventArgs e)
+        async void Click_SelectTypePaiement(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             foreach (var btng in gdTypePaiment.Children)
@@ -157,7 +160,10 @@ namespace YamaCaisse.Pages
 
             IdTypePaiement = int.Parse(btn.ClassId);
             btn.BackgroundColor = Color.Green;
-
+            if(IdTypePaiement ==7)
+            {
+                await PopupNavigation.Instance.PushAsync(new PopupCompte(IdTypePaiement));
+            }
         }
 
         async void Click_Encaisser(object sender, EventArgs e)
@@ -187,6 +193,7 @@ namespace YamaCaisse.Pages
                             btng.BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"];
                         }
                     }
+
 
                 }
                 else

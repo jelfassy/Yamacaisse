@@ -29,6 +29,8 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public int? FK_CMP_ID { get; set; }
+
         public List<LigneTicket> T_LIGNE_TICKET
         {
             get;

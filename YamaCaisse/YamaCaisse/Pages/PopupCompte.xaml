@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 x:Class="YamaCaisse.Pages.PopupCompte">
+ <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout x:Name="stkCompteH" Orientation="Horizontal">
+            <Label Text="Compte" />
+             <Button x:Name="btAjouter" Text="Ajouter" Clicked="Click_Ajouter" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
+        </StackLayout>
+        <StackLayout >
+            <Entry x:Name="eCompte" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+           <Button x:Name="btSave" Text="Enregistrer" Clicked="Click_Save" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
+
+        </StackLayout>
+          <StackLayout x:Name="stkCompte" >
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>
