@@ -31,6 +31,7 @@ namespace YamaCaisse.Pages
             btSave.IsVisible = false;
             _compteDataServices = DependencyService.Get<ICompteDataServices>();
             _paiementDataServices = DependencyService.Get<IPaiementDataServices>();
+            LoadListCompte();
         }
 
 
