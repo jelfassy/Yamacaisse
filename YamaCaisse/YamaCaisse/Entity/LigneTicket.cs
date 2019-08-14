@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace YamaCaisse.Entity
 {
@@ -232,6 +233,119 @@ namespace YamaCaisse.Entity
                     return false;
                 else
                     return true;
+            }
+        }
+
+
+        public string CmplLigne1
+        {
+            get { var rs = this.LIST_COMPLEMENT.FirstOrDefault() != null ? 
+                     this.LIST_COMPLEMENT.FirstOrDefault().LTK_DESIGNATION_PRODUIT : 
+                     string.Empty;
+                return rs;
+            }
+        }
+
+        public decimal? MntCmplLigne1
+        {
+            get { var  rs =this.LIST_COMPLEMENT.FirstOrDefault() != null ? 
+                     this.LIST_COMPLEMENT.FirstOrDefault().LTK_SOMME :  0;
+                return rs; }
+           
+        }
+
+        public string CmplLigne2
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(1).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(1).FirstOrDefault().LTK_DESIGNATION_PRODUIT :
+                  string.Empty;
+                return rs;
+            }
+
+        }
+
+        public decimal? MntCmplLigne2
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(1).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(1).FirstOrDefault().LTK_SOMME :
+                  0;
+                return rs;
+            }
+
+        }
+
+        public string CmplLigne3
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(2).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(2).FirstOrDefault().LTK_DESIGNATION_PRODUIT :
+                  string.Empty;
+                return rs;
+            }
+
+        }
+
+        public decimal? MntCmplLigne3
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(2).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(2).FirstOrDefault().LTK_SOMME :
+                  0;
+                return rs;
+            }
+
+        }
+
+        public string CmplLigne4
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(3).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(3).FirstOrDefault().LTK_DESIGNATION_PRODUIT :
+                  string.Empty;
+                return rs;
+            }
+        }
+
+        public decimal? MntCmplLigne4
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(3).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(3).FirstOrDefault().LTK_SOMME :
+                  0;
+                return rs;
+            }
+
+
+        }
+
+        public string CmplLigne5
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(4).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(4).FirstOrDefault().LTK_DESIGNATION_PRODUIT :
+                  string.Empty;
+                return rs;
+            }
+
+        }
+
+        public decimal? MntCmplLigne5
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(4).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(4).FirstOrDefault().LTK_SOMME :
+                  0;
+                return rs;
             }
         }
 
