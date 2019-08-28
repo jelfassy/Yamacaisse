@@ -202,7 +202,6 @@
     <Compile Include="Pages\PopupAnnuler.xaml.cs">
       <DependentUpon>PopupAnnuler.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tools\SignalRClient.cs" />
     <Compile Include="Entity\TicketforList.cs" />
     <EmbeddedResource Include="Pages\PopupEmployer.xaml">
       <SubType>Designer</SubType>

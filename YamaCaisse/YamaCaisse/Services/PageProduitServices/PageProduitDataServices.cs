@@ -47,8 +47,8 @@ namespace YamaCaisse.Services.PageProduitServices
                     {
 
                         JToken token = o.SelectToken("data");
-                        if(!App.JsonPageProduit.ContainsKey(idPage))
-                        App.JsonPageProduit.Add(idPage, o);
+                       // if(!App.JsonPageProduit.ContainsKey(idPage))
+                       // App.JsonPageProduit.Add(idPage, o);
                         res = token.Select((JToken s) => s.ToObject<PageProduit>()).ToList();
                     });
                 }
