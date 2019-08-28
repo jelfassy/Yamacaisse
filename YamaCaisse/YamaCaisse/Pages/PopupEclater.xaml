@@ -47,27 +47,31 @@
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="2" Text="{Binding LTK_DESIGNATION_PRODUIT}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding LTK_SOMME,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                    <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="Start" HorizontalOptions="StartAndExpand" SeparatorVisibility="None" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" ItemsSource="{Binding LIST_COMPLEMENT}">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell x:Name="UnderViewCell">
-                                                    <ViewCell.View>
-                                                        <Grid>
-                                                            <Grid.RowDefinitions>
-                                                                <RowDefinition Height="25" />
-                                                            </Grid.RowDefinitions>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="5*" />
-                                                                <ColumnDefinition Width="1*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding LTK_DESIGNATION_PRODUIT}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_SOMME ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                                        </Grid>
-                                                    </ViewCell.View>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
+                                      <StackLayout Margin="20,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1">
+                                        <Grid Margin="20,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="5*" />
+                                                <ColumnDefinition Width="1*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding CmplLigne1}" VerticalTextAlignment="Center" FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement1}" />
+                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding MntCmplLigne1,StringFormat='{0:0.00}'}" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement1}"/>
+                                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding CmplLigne2}" VerticalTextAlignment="Center"  FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement2}"/>
+                                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding MntCmplLigne2,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement2}"/>
+                                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding CmplLigne3}" VerticalTextAlignment="Center"  FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement3}"/>
+                                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding MntCmplLigne3,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement3}"/>
+                                            <Label Grid.Row="3" Grid.Column="0" Text="{Binding CmplLigne4}" VerticalTextAlignment="Center"  FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}"/>
+                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding MntCmplLigne4,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}"/>
+                                            <Label Grid.Row="4" Grid.Column="0" Text="{Binding CmplLigne5}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}"/>
+                                            <Label Grid.Row="4" Grid.Column="1" Text="{Binding MntCmplLigne5,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}"/>
+                                        </Grid>
+                                    </StackLayout>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
@@ -113,25 +117,31 @@
                                     <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="2" Text="{Binding LTK_DESIGNATION_PRODUIT}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding LTK_SOMME,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                    <ListView x:Name="E_listligneTickettopay" Grid.Row="1" Grid.ColumnSpan="5" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="true" ItemsSource="{Binding ListSelectedLigneTicket}" ItemTapped="TappedItemListtopay" SeparatorVisibility="None">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell>
-                                                    <Grid>
-                                                        <Grid.RowDefinitions>
-                                                            <RowDefinition Height="25" />
-                                                        </Grid.RowDefinitions>
-                                                        <Grid.ColumnDefinitions>
-                                                            <ColumnDefinition Width="5*" />
-                                                            <ColumnDefinition Width="1*" />
-                                                        </Grid.ColumnDefinitions>
-                                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding  LTK_DESIGNATION_PRODUIT}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding LTK_SOMME ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                                    </Grid>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
+                                      <StackLayout Margin="20,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1">
+                                        <Grid Margin="20,0,0,0" IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="5*" />
+                                                <ColumnDefinition Width="1*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                                <RowDefinition Height="15" />
+                                            </Grid.RowDefinitions>
+                                            <Label Grid.Row="0" Grid.Column="0" Text="{Binding CmplLigne1}" VerticalTextAlignment="Center" FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement1}" />
+                                            <Label Grid.Row="0" Grid.Column="1" Text="{Binding MntCmplLigne1,StringFormat='{0:0.00}'}" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement1}"/>
+                                            <Label Grid.Row="1" Grid.Column="0" Text="{Binding CmplLigne2}" VerticalTextAlignment="Center"  FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement2}"/>
+                                            <Label Grid.Row="1" Grid.Column="1" Text="{Binding MntCmplLigne2,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement2}"/>
+                                            <Label Grid.Row="2" Grid.Column="0" Text="{Binding CmplLigne3}" VerticalTextAlignment="Center"  FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement3}"/>
+                                            <Label Grid.Row="2" Grid.Column="1" Text="{Binding MntCmplLigne3,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement3}"/>
+                                            <Label Grid.Row="3" Grid.Column="0" Text="{Binding CmplLigne4}" VerticalTextAlignment="Center"  FontSize="Small" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}"/>
+                                            <Label Grid.Row="3" Grid.Column="1" Text="{Binding MntCmplLigne4,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}"/>
+                                            <Label Grid.Row="4" Grid.Column="0" Text="{Binding CmplLigne5}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}"/>
+                                            <Label Grid.Row="4" Grid.Column="1" Text="{Binding MntCmplLigne5,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}"/>
+                                         </Grid>
+                                    </StackLayout>
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

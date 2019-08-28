@@ -254,6 +254,17 @@ namespace YamaCaisse.Entity
            
         }
 
+        public bool? VisibleComplement1
+        {
+            get
+            {
+                if(CmplLigne1 == string.Empty)
+                    return false;
+                else
+                    return true;
+            }
+        }
+
         public string CmplLigne2
         {
             get
@@ -276,6 +287,17 @@ namespace YamaCaisse.Entity
                 return rs;
             }
 
+        }
+
+        public bool? VisibleComplement2
+        {
+            get
+            {
+                if (CmplLigne2 == string.Empty)
+                    return false;
+                else
+                    return true;
+            }
         }
 
         public string CmplLigne3
@@ -301,6 +323,16 @@ namespace YamaCaisse.Entity
             }
 
         }
+        public bool? VisibleComplement3
+        {
+            get
+            {
+                if (CmplLigne3 == string.Empty)
+                    return false;
+                else
+                    return true;
+            }
+        }
 
         public string CmplLigne4
         {
@@ -325,6 +357,16 @@ namespace YamaCaisse.Entity
 
 
         }
+        public bool? VisibleComplement4
+        {
+            get
+            {
+                if (CmplLigne4 == string.Empty)
+                    return false;
+                else
+                    return true;
+            }
+        }
 
         public string CmplLigne5
         {
@@ -346,6 +388,17 @@ namespace YamaCaisse.Entity
                   this.LIST_COMPLEMENT.Skip(4).FirstOrDefault().LTK_SOMME :
                   0;
                 return rs;
+            }
+        }
+
+        public bool? VisibleComplement5
+        {
+            get
+            {
+                if (CmplLigne5 == string.Empty)
+                    return false;
+                else
+                    return true;
             }
         }
 
