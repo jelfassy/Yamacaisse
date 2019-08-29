@@ -81,6 +81,7 @@
                                             <Label Grid.Row="3" Grid.Column="1" Text="{Binding MntCmplLigne4,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                             <Label Grid.Row="4" Grid.Column="0" Text="{Binding CmplLigne5,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                             <Label Grid.Row="4" Grid.Column="1" Text="{Binding MntCmplLigne5,StringFormat='{0:0.00}'}"  FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+
                                         </Grid>
                                     </StackLayout>
                                 </Grid>

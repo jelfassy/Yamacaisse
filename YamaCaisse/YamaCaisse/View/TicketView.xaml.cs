@@ -15,8 +15,6 @@ namespace YamaCaisse.View
 {
     public partial class TicketView : ContentView
     {
-
-
         private ITableDataServices _tableDataServices;
         private IPageDataServices _pageDataServices;
 
