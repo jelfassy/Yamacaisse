@@ -5,9 +5,7 @@
     "Microsoft.AppCenter.Crashes": "2.1.1",
     "Microsoft.AppCenter.Distribute": "2.1.1",
     "Microsoft.NETCore.Platforms": "2.2.2",
-    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
     "Microsoft.NETCore.Targets": "2.1.0",
-    "NETStandard.Library": "2.0.3",
     "Newtonsoft.Json": "12.0.2",
     "Polly": "7.1.0",
     "Rg.Plugins.Popup": "1.1.5.188",
@@ -46,6 +44,6 @@
     "Xamarin.Forms": "4.2.0.709249"
   },
   "frameworks": {
-    "netstandard1.5": {}
+    ".NETPortable,Version=v4.5,Profile=Profile111": {}
   }
 }
