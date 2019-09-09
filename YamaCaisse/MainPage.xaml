@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:YamaCaisse" 
+             xmlns:lx="clr-namespace:YamaCaisse.Pages" 
+             mc:Ignorable="d"
+             x:Class="YamaCaisse.MainPage">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" Android="0, 0, 0, 0" WinPhone="0, 0, 0, 0" />
+    </ContentPage.Padding>
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <!--            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.33}" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,&#xA;                                    Property=Height,&#xA;                                    Factor=0.28}" />-->
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+                <Label WidthRequest="90" Text="Serveur adresse" Grid.Row="0" FontSize="20" TextColor="{StaticResource TextIconeColor}">
+                </Label>
+                <Entry BackgroundColor="White" Opacity="1" x:Name="AdresseServeur" Placeholder="192.168.1.15:63058" WidthRequest="150" />
+            </StackLayout>
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+                <Label WidthRequest="90" Text="Login" Grid.Row="0" FontSize="50" TextColor="{StaticResource TextIconeColor}">
+                </Label>
+                <Entry IsPassword="true" BackgroundColor="White" Opacity="1" x:Name="CodeUser" Placeholder="----" WidthRequest="150" />
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="300">
+                <Grid HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Button Text="1" WidthRequest="100" HeightRequest="100" Grid.Column="0" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="2" WidthRequest="100" HeightRequest="100" Grid.Column="1" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="3" WidthRequest="100" HeightRequest="100" Grid.Column="2" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="4" WidthRequest="100" HeightRequest="100" Grid.Column="0" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="5" WidthRequest="100" HeightRequest="100" Grid.Column="1" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="6" WidthRequest="100" HeightRequest="100" Grid.Column="2" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="7" WidthRequest="100" HeightRequest="100" Grid.Column="0" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="8" WidthRequest="100" HeightRequest="100" Grid.Column="1" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button Text="9" WidthRequest="100" HeightRequest="100" Grid.Column="2" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button WidthRequest="100" HeightRequest="100" x:Name="Backspace" Text="retour" Grid.Column="0" Grid.Row="3" Clicked="Click_Back" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button WidthRequest="100" HeightRequest="100" Text="0" Grid.Column="1" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                    <Button WidthRequest="100" HeightRequest="100" Text="Enter" Grid.Column="2" Grid.Row="3" Clicked="Click_Connexion" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                    </Button>
+                </Grid>
+            </StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="End">
+                <Button Text="Ecran de Bon" WidthRequest="100" Clicked="Click_Production" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+            </StackLayout>
+            <!--            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" -->
+        </StackLayout>
+        <lx:ActivityIndicator IsBusy="{Binding IsBusy}" />
+    </AbsoluteLayout>
+</ContentPage>
