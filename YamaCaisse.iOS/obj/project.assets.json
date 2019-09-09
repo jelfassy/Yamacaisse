@@ -1722,11 +1722,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
+      "projectUniqueName": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
       "projectName": "YamaCaisse.iOS",
-      "projectPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
+      "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
       "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-      "outputPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse.iOS/obj/",
+      "outputPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1741,8 +1741,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
-              "projectPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj"
+            "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
+              "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj"
             }
           }
         }

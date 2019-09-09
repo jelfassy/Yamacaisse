@@ -45,9 +45,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>iOS Team Provisioning Profile: *</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -169,5 +170,46 @@
       <Project>{C66E107A-6496-4F63-9DB9-2C18C456B0F2}</Project>
       <Name>YamaCaisse</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Tab4_rond_Green.png" />
+    <BundleResource Include="Resources\Tab4_rond_Blue.png" />
+    <BundleResource Include="Resources\Tab4_rond_90_Green.png" />
+    <BundleResource Include="Resources\Tab4_rond_90_Blue.png" />
+    <BundleResource Include="Resources\Tab4_rond_90.png" />
+    <BundleResource Include="Resources\Tab4_rond.png" />
+    <BundleResource Include="Resources\Tab4_carre_Green.png" />
+    <BundleResource Include="Resources\Tab4_carre_Blue.png" />
+    <BundleResource Include="Resources\Tab4_carre_90_Green.png" />
+    <BundleResource Include="Resources\Tab4_carre_90_Blue.png" />
+    <BundleResource Include="Resources\Tab4_carre_90.png" />
+    <BundleResource Include="Resources\Tab4_carre.png" />
+    <BundleResource Include="Resources\Tab2_rond_V_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_V_Blue.png" />
+    <BundleResource Include="Resources\Tab2_rond_V.png" />
+    <BundleResource Include="Resources\Tab2_rond_H_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_H_Blue.png" />
+    <BundleResource Include="Resources\Tab2_rond_H.png" />
+    <BundleResource Include="Resources\Tab2_rond_45_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_45_Blue.png" />
+    <BundleResource Include="Resources\Tab2_rond_45.png" />
+    <BundleResource Include="Resources\Tab2_rond_220_Green.png" />
+    <BundleResource Include="Resources\Tab2_rond_220_Blue.png" />
+    <BundleResource Include="Resources\Tab2_rond_220.png" />
+    <BundleResource Include="Resources\Tab2_carre_V_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_V_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_V.png" />
+    <BundleResource Include="Resources\Tab2_carre_H_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_H_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_H.png" />
+    <BundleResource Include="Resources\Tab2_carre_45_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_45_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_45.png" />
+    <BundleResource Include="Resources\Tab2_carre_220_Green.png" />
+    <BundleResource Include="Resources\Tab2_carre_220_Blue.png" />
+    <BundleResource Include="Resources\Tab2_carre_220.png" />
+    <BundleResource Include="Resources\Supprimer.png" />
+    <BundleResource Include="Resources\Sablier.png" />
+    <BundleResource Include="Resources\Message.png" />
   </ItemGroup>
 </Project>
