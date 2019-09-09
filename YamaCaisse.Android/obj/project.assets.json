@@ -2519,11 +2519,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse.Android/YamaCaisse.Android.csproj",
+      "projectUniqueName": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/YamaCaisse.Android.csproj",
       "projectName": "YamaCaisse.Android",
-      "projectPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse.Android/YamaCaisse.Android.csproj",
+      "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/YamaCaisse.Android.csproj",
       "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-      "outputPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse.Android/obj/",
+      "outputPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -2538,8 +2538,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
-              "projectPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj"
+            "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
+              "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {}
+    "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {}
   },
   "projects": {
-    "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
+    "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectUniqueName": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
         "projectName": "YamaCaisse",
-        "projectPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
         "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-        "outputPath": "/Users/jonathanelfassy/Projects/net/YamaCaisse/YamaCaisse/obj/",
+        "outputPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

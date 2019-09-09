@@ -20,7 +20,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{84AD39EC-FE78-4BE4-AE94-79C380719DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{84AD39EC-FE78-4BE4-AE94-79C380719DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84AD39EC-FE78-4BE4-AE94-79C380719DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84AD39EC-FE78-4BE4-AE94-79C380719DE5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{84AD39EC-FE78-4BE4-AE94-79C380719DE5}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
