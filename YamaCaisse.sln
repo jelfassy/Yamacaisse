@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamaCaisse.Android", "YamaC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamaCaisse.iOS", "YamaCaisse.iOS\YamaCaisse.iOS.csproj", "{FB6C67C9-4B2D-4A63-ADF6-D81F1F904D69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamaCaisse.UITests", "YamaCaisse.UITests\YamaCaisse.UITests.csproj", "{0040FE5F-052C-4111-9F45-3803F1DFFEE0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamaCaisse", "YamaCaisse\YamaCaisse.csproj", "{C66E107A-6496-4F63-9DB9-2C18C456B0F2}"
 EndProject
 Global
@@ -42,18 +40,6 @@ Global
 		{FB6C67C9-4B2D-4A63-ADF6-D81F1F904D69}.Debug|iPhone.Build.0 = Debug|iPhone
 		{FB6C67C9-4B2D-4A63-ADF6-D81F1F904D69}.Release|iPhone.ActiveCfg = Release|iPhone
 		{FB6C67C9-4B2D-4A63-ADF6-D81F1F904D69}.Release|iPhone.Build.0 = Release|iPhone
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{0040FE5F-052C-4111-9F45-3803F1DFFEE0}.Release|iPhone.Build.0 = Release|Any CPU
 		{C66E107A-6496-4F63-9DB9-2C18C456B0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C66E107A-6496-4F63-9DB9-2C18C456B0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C66E107A-6496-4F63-9DB9-2C18C456B0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
