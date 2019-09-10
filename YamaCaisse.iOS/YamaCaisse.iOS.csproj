@@ -61,6 +61,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+<DeviceSpecificBuild>true</DeviceSpecificBuild>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
