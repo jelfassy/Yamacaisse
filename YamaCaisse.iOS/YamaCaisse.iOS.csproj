@@ -61,10 +61,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Distribution: jonathan el fassy (ZFL7473G29)</CodesignKey>
+    <CodesignKey>iPhone Developer: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
 <DeviceSpecificBuild>true</DeviceSpecificBuild>
-<CodesignProvision>dev iPad all + jojo</CodesignProvision>
+<CodesignProvision>VS: YamaCaisse.IOS.app Development</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
