@@ -64,6 +64,7 @@
     <CodesignKey>iPhone Distribution: jonathan el fassy (ZFL7473G29)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
 <DeviceSpecificBuild>true</DeviceSpecificBuild>
+<CodesignProvision>Automatic:AdHoc</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
