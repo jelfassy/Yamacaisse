@@ -33,7 +33,7 @@ namespace YamaCaisse
             this.IsBusy = false;
             if (Application.Current.Properties.ContainsKey("ServeurAdress"))
               this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
-             this.AdresseServeur.Text = "192.168.1.25:63058";
+            // this.AdresseServeur.Text = "192.168.1.25:63058";
         }
 
            void Click_Number(object sender, EventArgs e)

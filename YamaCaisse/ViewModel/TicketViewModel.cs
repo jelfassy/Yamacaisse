@@ -218,14 +218,22 @@ namespace YamaCaisse.ViewModel
         {
             get
             {
-                if (ListLigneTicket == null)
-                    return false;
-                if (ListLigneTicket.Count > 0)
+                try
                 {
-                    var rs = ListLigneTicket.Select(c => c.T_PRODUIT).Where(c => c.Pdt_IsMenu == true);
-                    return rs.Any();
+                    if (ListLigneTicket == null)
+                        return false;
+                    if (ListLigneTicket.Count > 0)
+                    {
+                        var rs = ListLigneTicket.Select(c => c.T_PRODUIT).Where(c => c.Pdt_IsMenu == true);
+                        return rs.Any();
+                    }
+                    return false;
                 }
-                return false;
+                catch (Exception ex)
+                {
+                    return false;
+                }
+               
             }
         }
 
