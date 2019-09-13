@@ -218,5 +218,6 @@
     <BundleResource Include="Resources\Supprimer.png" />
     <BundleResource Include="Resources\Sablier.png" />
     <BundleResource Include="Resources\Message.png" />
+    <BundleResource Include="Resources\EntrePlat.png" />
   </ItemGroup>
 </Project>
