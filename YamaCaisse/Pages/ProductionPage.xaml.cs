@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.AspNet.SignalR.Client;
+using Newtonsoft.Json;
 using Rg.Plugins.Popup.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.BonProductionServices;
-using YamaCaisse.Services.ProductionServices;
 using YamaCaisse.Services.TableServices;
-//using YamaCaisse.Services.WebSocketProdServices;
-using YamaCaisse.Tools;
 using YamaCaisse.View;
 using YamaCaisse.ViewModel;
 
@@ -20,52 +21,229 @@ namespace YamaCaisse.Pages
 {
     public partial class ProductionPage : ContentPage, INotifyPropertyChanged
     {
-
-        private ITableDataServices _tableDataServices;
+        private HubConnection hubConnection;
+        private IHubProxy hubProxy;
+        bool connected;
         private IBonProductionDataServices _bonProductionDataServices;
-        private List<Production> listProduction;
-        private CancellationTokenSource cancellation;
+        private ITableDataServices _tableDataServices;
+        public List<BonProduction> ListAll { get; set; }
         private List<Table> listTable;
-        public List<LigneTicket> listRecap;
-        private int LastBon;
+        private CancellationTokenSource cancellation;
+        private List<string> list;
 
-  //      private IWebSocketProdServices _webSocketProdServices;
+        public ObservableCollection<LigneTicket> ListRecap { get; set; }
+
+        int column = 0;
+        int row = 0;
+
 
         public ProductionPage()
         {
-
             InitializeComponent();
-            StartActivityIndicateur(true);
+            list = new List<string>();
+            ListAll = new List<BonProduction>();
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
-         //   _webSocketProdServices = DependencyService.Get<WebSocketProdServices>();
-            //  LoadTable();
-            // LoadData(true);
-            //StartActivityIndicateur(false);
-            this.cancellation = new CancellationTokenSource();
-            //this.startTimer();
-            listRecap = new List<LigneTicket>();
 
-          
-          
+            ExecuteLoad();
 
         }
 
-        void Handle_Appearing(object sender, System.EventArgs e)
+        protected override void OnAppearing()
         {
-            var viewCell = (ViewCell)sender;
-            //viewCell.ForceUpdateSize();
-        }
-
-        void startTimer()
-        {
-            Device.StartTimer(TimeSpan.FromSeconds(10), () =>
+            base.OnAppearing();
+            hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
+            hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
+            LoadData(true);
+            hubProxy.On<int, string>("NewBon", (production, bonProduction) =>
             {
-                // Do something
-                if (this.cancellation.IsCancellationRequested) return false;
-                LoadData(true);
-                return true; // True = Repeat again, False = Stop the timer
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    var bon = JsonConvert.DeserializeObject<BonProduction>(bonProduction);
+                    if (!ListAll.Contains(bon))
+                        ListAll.Add(bon);
+                    {
+                        this.CreateMiniBonProductionView(bon);
+
+                        CreateRecap();
+                    }
+                });
             });
+
+            hubConnection.Closed += () =>
+            {
+                connected = false;
+                while (!connected)
+                {
+                    System.Threading.Thread.Sleep(2000);
+                    hubConnection.Start().Wait();
+                    connected = true;
+                }
+            };
+            }
+
+        async void ExecuteLoad()
+        {
+            if (IsBusy)
+                return;
+            IsBusy = true;
+
+            try
+            {
+                if (!connected)
+                    await hubConnection.Start();
+                connected = true;
+
+                await DisplayAlert("Serveur", "connection etablie", "ok");
+                ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+                CreateRecap();
+                this.LoadData(true);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
+
+
+
+
+
+        public async void CreateRecap()
+        {
+            try
+            {
+                ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+
+                var listligneRecap = new List<LigneTicket>();
+
+                foreach (var BligneTicket in ListAll.Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
+                {
+                    foreach (var ligne in BligneTicket)
+                    {
+                        if (listligneRecap.Select(c => c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
+                        {
+                            if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecap.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
+                                listligneRecap.SingleOrDefault(c => c.T_PRODUIT.PDT_Designation == ligne.T_PRODUIT.PDT_Designation).LTK_QTE += ligne.LTK_QTE;
+                            else
+                                listligneRecap.Add(ligne);
+                        }
+                        else
+                            listligneRecap.Add(ligne);
+                    }
+                }
+                this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecap);
+                this.ListRecapToDo.ItemsSource = this.ListRecap;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"CreateRecap","recap"}
+                };
+                Crashes.TrackError(ex, property);
+                // throw ex;
+                // await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
+            }
+
+        }
+
+
+        public async void LoadData(bool current)
+        {
+            try
+            {
+                // StartActivityIndicateur(true);
+                var listBon = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, current);
+                var rs = listBon;
+
+                //Ajout de l'ecran de recap
+
+                var recapView = new BonProductionView();
+                recapView.ProductionPage = this;
+                recapView.BonProduction = new BonProduction()
+                {
+                    Bon_DATE_DEBUT = DateTime.Now,
+
+                };
+
+                GdListBon.Children.Clear();
+                bool first = true;
+                foreach (var item in listBon.OrderBy(c => c.Bon_DATE_DEBUT))
+                {
+                    if (first)
+                    {
+                        await this.CreateBonProductionView(item);
+                        first = false;
+                    }
+                    //if (item.BON_ID > LastBon)
+                    //    PlaySound();
+                    await CreateMiniBonProductionView(item);
+                }
+                CreateRecap();
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"Production","LoadData"}
+                };
+                Crashes.TrackError(ex, property);
+                await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
+            }
+            // StartActivityIndicateur(false);
+        }
+
+
+        public async Task CreateBonProductionView(BonProduction item)
+        {
+            try
+            {
+                var bprod = new BonProductionView();
+                bprod.MinimumWidthRequest = 200;
+                bprod.ProductionPage = this;
+                bprod.ListTable = await LoadTable();
+                bprod.BonProduction = item;
+                bprod.LoadData();
+                ShowBon.Children.Clear();
+                ShowBon.Children.Add(bprod);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private async Task CreateMiniBonProductionView(BonProduction item)
+        {
+            try
+            {
+                var firstLigne = item.T_BON_LIGNE_TICKET.FirstOrDefault();
+                listTable = await LoadTable();
+                string tabNom = listTable.FirstOrDefault(c => c.TAB_ID == firstLigne.FK_TABLE_ID)?.TAB_NOM;
+                int nbPlat = 0;
+                bool allEnAttente = false;
+                foreach (var ligne in item.T_BON_LIGNE_TICKET.OrderBy(r => r.T_LIGNE_TICKET.FK_REC_ID))
+                {
+                    nbPlat = nbPlat + (int)ligne.T_LIGNE_TICKET.LTK_QTE;
+                    if (ligne.T_LIGNE_TICKET.LTK_ATTENTE == true)
+                        allEnAttente = true;
+                    else
+                        allEnAttente = false;
+                }
+                var bprod = new MiniBonProduction(item.BON_ID % 100, tabNom, nbPlat, item.Bon_DATE_DEBUT.Value, allEnAttente, this, item);
+
+                GdListBon.Children.Add(bprod);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        #region HeaderButton
 
         void Click_Current(object sender, EventArgs e)
         {
@@ -73,13 +251,12 @@ namespace YamaCaisse.Pages
             bthisto.BackgroundColor = Color.Blue;
 
             LoadData(true);
-            this.startTimer();
+            // this.startTimer();
         }
 
         void Click_Histo(object sender, EventArgs e)
         {
 
-            this.cancellation.Cancel();
             LoadData(false);
             btcurrent.BackgroundColor = Color.Blue;
             bthisto.BackgroundColor = Color.Green;
@@ -94,17 +271,26 @@ namespace YamaCaisse.Pages
 
         async void Click_Deconnexion(object sender, EventArgs e)
         {
-            TicketViewModel.Current.Clear();
-            await Navigation.PushModalAsync(new YamaCaisse.MainPage());
+            await Navigation.PushModalAsync(new MainPage());
         }
 
 
-        void StartActivityIndicateur(bool value)
+        public void PlaySound()
         {
-            actInd.IsVisible = value;
-            actInd.IsEnabled = value;
-            actInd.IsRunning = value;
+            //var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            //player.Load("Bip.mp3");
+            //player.Play();
         }
+
+
+        public void RemoveBonProduction(BonProductionView view)
+        {
+            var miniBon = GdListBon.Children.Where(c => c.StyleId == view.StyleId);
+            ShowBon.Children.Remove(view);
+            CreateRecap();
+        }
+
+
 
         public async Task<List<Table>> LoadTable()
         {
@@ -119,116 +305,6 @@ namespace YamaCaisse.Pages
                 return listTable;
             }
         }
-
-        public async void LoadData(bool current)
-        {
-            try
-            {
-                StartActivityIndicateur(true);
-                var listBon = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, current);
-                var rs = listBon;
-                int column = 0;
-                int row = 0;
-                //Ajout de l'ecran de recap
-
-                var recapView = new BonProductionView();
-                recapView.ProductionPage = this;
-                recapView.BonProduction = new BonProduction()
-                {
-                    Bon_DATE_DEBUT = DateTime.Now,
-
-                };
-
-                GdListBon.Children.Clear();
-
-                foreach (var item in listBon.OrderBy(c => c.Bon_DATE_DEBUT))
-                {
-                    if (item.BON_ID > LastBon)
-                        PlaySound();
-                    var bprod = new BonProductionView();
-                    bprod.MinimumWidthRequest = 200;
-                    bprod.ProductionPage = this;
-                    bprod.ListTable = await LoadTable();
-                    bprod.BonProduction = item;
-                    bprod.LoadData();
-                    GdListBon.Children.Add(bprod, column, row);
-                    if (column == 5)
-                    {
-                        row++;
-                        column = 0;
-                    }
-                    else
-                    {
-                        column = column + 1;
-
-                    }
-                }
-                if (listBon.LastOrDefault() != null)
-                    LastBon = listBon.LastOrDefault().BON_ID;
-                await CreateRecap();
-            }
-            catch (Exception ex)
-            {
-                var property = new Dictionary<string, string>
-                {
-                    {"Production","LoadData"}
-                };
-                Crashes.TrackError(ex, property);
-                await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
-            }
-            StartActivityIndicateur(false);
-        }
-
-
-        public async Task CreateRecap()
-        {
-            try
-            {
-                List<BonProduction> ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
-
-                List<LigneTicket> list = new List<LigneTicket>();
-                foreach (var BligneTicket in ListAll.Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
-                {
-                    foreach (var ligne in BligneTicket)
-                    {
-                        if (list.Select(c => c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
-                        {
-                            if (ligne.LIST_COMPLEMENT.Count == 0 || list.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
-                                list.SingleOrDefault(c => c.T_PRODUIT.PDT_Designation == ligne.T_PRODUIT.PDT_Designation).LTK_QTE += ligne.LTK_QTE;
-                            else
-                                list.Add(ligne);
-                        }
-                        else
-                            list.Add(ligne);
-                    }
-                }
-                this.ListRecapToDo.ItemsSource = list;
-            }
-            catch (Exception ex)
-            {
-                var property = new Dictionary<string, string>
-                {
-                    {"CreateRecap","recap"}
-                };
-                Crashes.TrackError(ex, property);
-                throw ex;
-                // await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
-            }
-
-        }
-
-        public void RemoveBonProduction(BonProductionView view)
-        {
-            GdListBon.Children.Remove(view);
-        }
-
-
-        public void PlaySound()
-        {
-            //var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-           // player.Load("Bip.mp3");
-           // player.Play();
-        }
-
+        #endregion
     }
 }

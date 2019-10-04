@@ -36,11 +36,12 @@ namespace YamaCaisse.View
 
         public void LoadData()
         {
+            this.StyleId = (BonProduction.BON_ID % 100).ToString();
             int nbPlat = 0;
-            this.idBon = BonProduction.BON_ID;
+            this.idBon = BonProduction.BON_ID%100;
             var firstLigne = BonProduction.T_BON_LIGNE_TICKET.FirstOrDefault();
             this.lblNumTable.Text = ListTable.FirstOrDefault(c => c.TAB_ID == firstLigne.FK_TABLE_ID)?.TAB_NOM;
-            this.lblServeur.Text = firstLigne.T_LIGNE_TICKET.T_EMPLOYE.EMP_NOM;
+            this.lblServeur.Text = firstLigne.T_LIGNE_TICKET?.T_EMPLOYE?.EMP_NOM;
 
             var grouped = new ObservableCollection<GroupReclameModel>();
 
@@ -99,10 +100,12 @@ namespace YamaCaisse.View
             this.BonProduction.BON_DATE_FIN = DateTime.Now;
 
             var rs = await _bonProductionDataServices.PutBonProduction(this.idBon, this.BonProduction);
-            await this.ProductionPage.CreateRecap();
+            this.ProductionPage.CreateRecap();
             this.ProductionPage.RemoveBonProduction(this);
+            this.ProductionPage.ListAll.Remove(this.BonProduction);
         }
 
+      
         //async void Print_Clicked(object sender,System.EventArgs e)
         //{
         //    var 

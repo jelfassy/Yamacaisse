@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:xf="clr-namespace:Xamarin.Forms" x:Class="YamaCaisse.View.BonProductionView">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xf="clr-namespace:Xamarin.Forms" x:Class="YamaCaisse.View.BonProductionView">
     <StackLayout Orientation="Vertical" Margin="0,10,10,10" BackgroundColor="White" MinimumWidthRequest="200" WidthRequest="200" MinimumHeightRequest="200">
         <Grid>
             <Grid.ColumnDefinitions>
