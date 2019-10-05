@@ -218,14 +218,20 @@ namespace YamaCaisse.View
                         }
                         if (this.Autoclose == true)
                         {
-                            await Navigation.PopPopupAsync();
+                            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                            {
+                                await Navigation.PopPopupAsync();
+                            }
                         }
-                        await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
+                        await Navigation.PushPopupAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID));
                         return;
                     }
                     if (this.Autoclose == true)
                     {
-                        await Navigation.PopPopupAsync();
+                        if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                        {
+                            await Navigation.PopPopupAsync();
+                        }
                     }
 
                 }
@@ -233,9 +239,12 @@ namespace YamaCaisse.View
                 {
                     if (this.Autoclose == true)
                     {
-                        await Navigation.PopPopupAsync();
+                        if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                        {
+                            await Navigation.PopPopupAsync();
+                        }
                     }
-                    await PopupNavigation.Instance.PushAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID,_mainCaisse));
+                    await Navigation.PushPopupAsync(new PopupCaisse((int)pageprod.PAG_ADD_ID, _mainCaisse));
                 }
             }
             catch (Exception ex)

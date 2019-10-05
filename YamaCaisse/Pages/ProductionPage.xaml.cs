@@ -44,7 +44,7 @@ namespace YamaCaisse.Pages
             ListAll = new List<BonProduction>();
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
 
-            ExecuteLoad();
+
 
         }
 
@@ -79,7 +79,8 @@ namespace YamaCaisse.Pages
                     connected = true;
                 }
             };
-            }
+            ExecuteLoad();
+        }
 
         async void ExecuteLoad()
         {

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -35,7 +37,18 @@ namespace YamaCaisse.Pages
 
         async void  Closed_Clicked(object sender, System.EventArgs e)
         {
-            await PopupNavigation.PopAsync(false);
+            try
+            {
+                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                {
+                    await Navigation.PopPopupAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        
         }
     }
 }
