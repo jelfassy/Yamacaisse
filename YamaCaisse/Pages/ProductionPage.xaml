@@ -72,10 +72,11 @@
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-                <StackLayout x:Name="GdListBon" Orientation="Vertical" Grid.Column="1">
+                <ScrollView Orientation="Vertical" Grid.Column="1">
+                <StackLayout x:Name="GdListBon" Orientation="Vertical" >
 
                 </StackLayout>
-
+                    </ScrollView>
                 <StackLayout x:Name="ShowBon" Orientation="Vertical" Grid.Column="2">
 
                 </StackLayout>

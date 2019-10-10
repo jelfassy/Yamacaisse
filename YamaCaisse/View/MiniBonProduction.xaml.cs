@@ -25,11 +25,12 @@ namespace YamaCaisse.View
             this.StyleId = Numero.ToString();
             this.ProdPage = prodPage;
             this.lblNumBon.Text = Numero.ToString();
-            this.lblNumTable.Text = Table;
-            this.lblnbPlat.Text = nbPlat.ToString();
+            this.lblNumTable.Text = "Table N°: " + Table;
+            this.lblnbPlat.Text = "Nb Plat : " + nbPlat.ToString();
             this.HeureCommande = hcommande;
             this.Attente = attente;
             this.BonProduction = bonProduction;
+            SetColorView(DateTime.Now - HeureCommande);
             this.startTimer();
             var tgr = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
             tgr.Tapped += (sender, args) => {

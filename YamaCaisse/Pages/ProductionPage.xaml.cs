@@ -43,9 +43,6 @@ namespace YamaCaisse.Pages
             list = new List<string>();
             ListAll = new List<BonProduction>();
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
-
-
-
         }
 
         protected override void OnAppearing()
@@ -58,13 +55,16 @@ namespace YamaCaisse.Pages
             {
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
-                    var bon = JsonConvert.DeserializeObject<BonProduction>(bonProduction);
-                    if (!ListAll.Contains(bon))
-                        ListAll.Add(bon);
+                    if (production == ConfigViewModel.Current.Production.PROD_ID)
                     {
-                        this.CreateMiniBonProductionView(bon);
+                        var bon = JsonConvert.DeserializeObject<BonProduction>(bonProduction);
+                        if (!ListAll.Contains(bon))
+                            ListAll.Add(bon);
+                        {
+                            this.CreateMiniBonProductionView(bon);
 
-                        CreateRecap();
+                            CreateRecap();
+                        }
                     }
                 });
             });
@@ -101,7 +101,11 @@ namespace YamaCaisse.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                var property = new Dictionary<string, string>
+                {
+                    {"ExecuteLoad","recap"}
+                };
+                Crashes.TrackError(ex, property);
             }
         }
 
@@ -211,7 +215,11 @@ namespace YamaCaisse.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                var property = new Dictionary<string, string>
+                {
+                    {"CreateBonProductionView","Production"}
+                };
+                Crashes.TrackError(ex, property);
             }
         }
 
@@ -239,7 +247,11 @@ namespace YamaCaisse.Pages
             }
             catch (Exception ex)
             {
-                throw ex;
+                var property = new Dictionary<string, string>
+                {
+                    {"CreateMiniBonProductionView","Production"}
+                };
+                Crashes.TrackError(ex, property);
             }
         }
 
@@ -286,8 +298,9 @@ namespace YamaCaisse.Pages
 
         public void RemoveBonProduction(BonProductionView view)
         {
-            var miniBon = GdListBon.Children.Where(c => c.StyleId == view.StyleId);
+            var miniBon = GdListBon.Children.FirstOrDefault(c => c.StyleId == view.StyleId);
             ShowBon.Children.Remove(view);
+            GdListBon.Children.Remove(miniBon);
             CreateRecap();
         }
 

@@ -39,8 +39,9 @@ namespace YamaCaisse.View
             this.StyleId = (BonProduction.BON_ID % 100).ToString();
             int nbPlat = 0;
             this.idBon = BonProduction.BON_ID%100;
+            this.lblNumBon.Text = this.idBon.ToString();
             var firstLigne = BonProduction.T_BON_LIGNE_TICKET.FirstOrDefault();
-            this.lblNumTable.Text = ListTable.FirstOrDefault(c => c.TAB_ID == firstLigne.FK_TABLE_ID)?.TAB_NOM;
+            this.lblNumTable.Text = "Table N°: " + ListTable.FirstOrDefault(c => c.TAB_ID == firstLigne.FK_TABLE_ID)?.TAB_NOM;
             this.lblServeur.Text = firstLigne.T_LIGNE_TICKET?.T_EMPLOYE?.EMP_NOM;
 
             var grouped = new ObservableCollection<GroupReclameModel>();
@@ -60,7 +61,7 @@ namespace YamaCaisse.View
 
             foreach (var ll in list)
                 grouped.Add(ll);
-            this.lblnbPlat.Text = nbPlat.ToString();
+            this.lblnbPlat.Text = "Nb Plat : " + nbPlat.ToString();
 
 
             //this.E_listligneTicket.ItemsSource = grouped; 
@@ -99,7 +100,7 @@ namespace YamaCaisse.View
             var button = (Button)sender;
             this.BonProduction.BON_DATE_FIN = DateTime.Now;
 
-            var rs = await _bonProductionDataServices.PutBonProduction(this.idBon, this.BonProduction);
+            var rs = await _bonProductionDataServices.PutBonProduction(this.BonProduction.BON_ID, this.BonProduction);
             this.ProductionPage.CreateRecap();
             this.ProductionPage.RemoveBonProduction(this);
             this.ProductionPage.ListAll.Remove(this.BonProduction);

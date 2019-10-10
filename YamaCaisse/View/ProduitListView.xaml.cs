@@ -12,6 +12,7 @@ using YamaCaisse.Services.PageProduitServices;
 using YamaCaisse.Services.PageServices;
 using YamaCaisse.ViewModel;
 using Rg.Plugins.Popup.Extensions;
+using YamaCaisse.Behavior;
 
 namespace YamaCaisse.View
 {
@@ -74,11 +75,11 @@ namespace YamaCaisse.View
                 //
                 foreach (var item in listPageProduit)
                 {
-                    var button = new Button
+                    var button = new PdButton
                     {
                         BorderWidth = 2.5,
                         // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-
+                         
                     };
 
                     if (!string.IsNullOrEmpty(item.PGPD_COLOR))
@@ -87,7 +88,7 @@ namespace YamaCaisse.View
                         button.BackgroundColor = Color.FromHex(item.PGPD_COLOR);
                         button.BorderColor = Color.FromHex(item.PGPD_COLOR);
                     }
-
+                    
                     button.Text = item.T_PRODUIT.PDT_Designation;
                     button.FontAttributes = FontAttributes.Bold;
                    // button.
