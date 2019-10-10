@@ -23,5 +23,13 @@ namespace YamaCaisse.Services.BonProductionServices
         /// <param name="id">Identifier.</param>
         /// <param name="bonProduction">Bon production.</param>
         Task<bool> PutBonProduction(int id, BonProduction bonProduction);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idProduction"></param>
+        /// <param name="numBon"></param>
+        /// <returns></returns>
+        Task<bool> PurgeBonProduction(int idProduction, int numBon);
     }
 }

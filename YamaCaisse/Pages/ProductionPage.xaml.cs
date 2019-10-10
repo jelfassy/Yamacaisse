@@ -282,6 +282,11 @@ namespace YamaCaisse.Pages
 
         }
 
+        async void Click_Purger(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupPurger());
+        }
+
         async void Click_Deconnexion(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new MainPage());

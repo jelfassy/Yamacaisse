@@ -102,5 +102,42 @@ namespace YamaCaisse.Services.BonProductionServices
 
         }
 
+        /// <summary>
+        /// Gets the current jour identifier.
+        /// </summary>
+        /// <returns>The current jour identifier.</returns>
+        public async Task<bool> PurgeBonProduction(int idProduction,int numBon)
+        {
+            try
+            {
+                bool res = false;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"Purger/",idProduction, "/",numBon));
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<bool>();
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_PurgeProduction"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PurgeProduction"}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
     }
 }

@@ -22,7 +22,8 @@
                 <Button x:Name="btcurrent" Grid.Column="0" Grid.Row="1" Text="En Cours" Clicked="Click_Current" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 <Button x:Name="bthisto" Grid.Column="1" Grid.Row="1" Text="Historique" Clicked="Click_Histo" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
                 <Button x:Name="btPrinter" Grid.Column="2" Grid.Row="1" BackgroundColor="red" TextColor="White" Clicked="Printer_Clicked" Text="{Binding Printer.PRT_NAME, Source={x:Static local:ConfigViewModel.Current}}" />
-                <Button Grid.Column="3" Grid.Row="1" Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="Red" TextColor="{StaticResource TextIconeColor}" />
+                <Button Grid.Column="3" Grid.Row="1" Text="Purger" Clicked="Click_Purger" BackgroundColor="Orange" TextColor="{StaticResource TextIconeColor}" />
+                <Button Grid.Column="4" Grid.Row="1" Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="Red" TextColor="{StaticResource TextIconeColor}" />
                 <BoxView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
             </Grid>
             <Grid>

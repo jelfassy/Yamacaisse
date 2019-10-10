@@ -7,6 +7,7 @@ using YamaCaisse.View;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
 using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.Pages
 {
@@ -55,8 +56,8 @@ namespace YamaCaisse.Pages
                 };
                 Crashes.TrackError(ex, property);
             }
-   
-            await PopupNavigation.PopAsync(false);
+
+            await Navigation.PopPopupAsync();
         }
 
     }
