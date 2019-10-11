@@ -14,6 +14,7 @@ using YamaCaisse.Services.TableServices;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
 using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.Pages
 {
@@ -63,7 +64,7 @@ namespace YamaCaisse.Pages
 
         async void Click_NbCouvert(object sender, System.EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupCouvert());
+            await Navigation.PushPopupAsync(new PopupCouvert());
             // NbCouvert = App.CurrentTicket.TIK_NB_COUVERT;
         }
 
@@ -79,7 +80,7 @@ namespace YamaCaisse.Pages
             TicketViewModel.Current.ListLigneTicket.Clear();
             TicketViewModel.Current.MotifAnnulation = null;
             if (ConfigViewModel.Current.CouvertRequis && TicketViewModel.Current.NbCouvert == null)
-                await PopupNavigation.Instance.PushAsync(new PopupCouvert());
+                await Navigation.PushPopupAsync(new PopupCouvert());
             await Navigation.PushModalAsync(caisse);
         }
 
@@ -88,7 +89,7 @@ namespace YamaCaisse.Pages
         {
             if (TicketViewModel.Current.TKT_ID != 0)
             {
-                await PopupNavigation.Instance.PushAsync(new PopupReclameBon(TicketViewModel.Current.TKT_ID));
+                await Navigation.PushPopupAsync(new PopupReclameBon(TicketViewModel.Current.TKT_ID));
             }
         }
 
@@ -98,7 +99,7 @@ namespace YamaCaisse.Pages
             {
                 await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID,App.UserId);
                 this.tableListControl.Refresh();
-                await PopupNavigation.Instance.PushAsync(new PopupPaiement(TicketViewModel.Current.Ticket));
+                await Navigation.PushPopupAsync(new PopupPaiement(TicketViewModel.Current.Ticket));
             }
         }
 
@@ -111,7 +112,7 @@ namespace YamaCaisse.Pages
         {
             if(TicketViewModel.Current.TKT_ID != 0)
             {
-                await PopupNavigation.Instance.PushAsync(new PopupEclater(TicketViewModel.Current.TKT_ID));
+                await Navigation.PushPopupAsync(new PopupEclater(TicketViewModel.Current.TKT_ID));
             }
         }
 
@@ -124,7 +125,7 @@ namespace YamaCaisse.Pages
         {
             if (TicketViewModel.Current.IdTable != null)
             {
-                await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketView, true));
+                await Navigation.PushPopupAsync(new PopupTable(this.ticketView, true));
                 this.tableListControl.Refresh();
             }
         }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -205,7 +206,10 @@ namespace YamaCaisse.Pages
         {
             if (this._maintTicketPage != null)
                 _maintTicketPage.loadData();
-            await PopupNavigation.PopAsync(false);
+            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
 
     }

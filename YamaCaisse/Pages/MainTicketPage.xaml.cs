@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
@@ -184,12 +185,12 @@ namespace YamaCaisse.Pages
             //await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
             var popupAdd = new PopupPaiement(TicketViewModel.Current.Ticket);
             popupAdd._maintTicketPage = this;
-            await PopupNavigation.Instance.PushAsync(popupAdd);
+            await Navigation.PushPopupAsync(popupAdd);
         }
 
         async void Click_Fiche(object sender, EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupFiche());
+            await Navigation.PushPopupAsync(new PopupFiche());
 
         }
 
@@ -203,7 +204,7 @@ namespace YamaCaisse.Pages
         {
             if (TicketViewModel.Current.TKT_ID != 0)
             {
-                await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketControl,false,false,true));
+                await Navigation.PushPopupAsync(new PopupTable(this.ticketControl,false,false,true));
             }
         }
         async void Click_Annuler(object sender, EventArgs e)
@@ -212,7 +213,7 @@ namespace YamaCaisse.Pages
             {
                 var popupAnn = new PopupAnnuler();
                 popupAnn._maintTicketPage = this;
-                await PopupNavigation.Instance.PushAsync(popupAnn);
+                await Navigation.PushPopupAsync(popupAnn);
             }
         }
 

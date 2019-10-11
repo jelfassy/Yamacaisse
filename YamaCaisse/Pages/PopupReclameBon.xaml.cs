@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -58,7 +59,10 @@ namespace YamaCaisse.Pages
             Button btn = (Button)sender;
             int idRec = int.Parse(btn.ClassId);
             await _reclameDataServices.CallReclame(TicketViewModel.Current.TKT_ID, idRec);
-            await PopupNavigation.PopAsync(false);
+            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
     }
 }

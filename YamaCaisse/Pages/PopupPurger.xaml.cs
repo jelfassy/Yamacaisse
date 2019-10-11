@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
@@ -43,11 +44,14 @@ namespace YamaCaisse.Pages
                         await DisplayAlert("Purge", "Purge Effectué !", "ok");
                 }
 
-                await Navigation.PopPopupAsync();
+                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                {
+                    await Navigation.PopPopupAsync();
+                }
             }
             catch (Exception ex)
             {
-                await Navigation.PopPopupAsync();
+               // await Navigation.PopPopupAsync();
             }
         }
 

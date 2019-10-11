@@ -13,6 +13,7 @@ using YamaCaisse.Entity;
 using Rg.Plugins.Popup.Services;
 using YamaCaisse.Services.PaiementServices;
 using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.Pages
 {
@@ -242,8 +243,11 @@ namespace YamaCaisse.Pages
                     ligne.TIK_MOVE_TIK = TicketViewModel.Current.TKT_ID;
                 }
                 var rs = await _ticketDataServices.PostTicket(ticket);
-                await PopupNavigation.PopAsync(false);
-                await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
+                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                {
+                    await Navigation.PopPopupAsync();
+                }
+                await Navigation.PushPopupAsync(new PopupPaiement(rs));
             }
         }
 
@@ -252,7 +256,10 @@ namespace YamaCaisse.Pages
         {
             if (this._maintTicketPage != null)
                 _maintTicketPage.loadData();
-            await PopupNavigation.PopAsync(false);
+            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
 
 

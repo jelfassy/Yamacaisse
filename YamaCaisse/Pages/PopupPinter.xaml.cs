@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using YamaCaisse.Services.PrinterServices;
 using System.Linq;
 using YamaCaisse.ViewModel;
+using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.Pages
 {
@@ -73,7 +74,10 @@ namespace YamaCaisse.Pages
             var listPrint = await _printerDataServices.GetPrinterList();
 
             ConfigViewModel.Current.Printer = listPrint.SingleOrDefault(c=>c.PRT_ID == idprinter);
-            await PopupNavigation.PopAsync(false);
+            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
     }
 }

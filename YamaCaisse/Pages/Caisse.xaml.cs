@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
@@ -184,7 +185,7 @@ namespace YamaCaisse.Pages
         async void Click_EntPlat(object sender, EventArgs e)
         {
             if(TicketViewModel.Current.SelectedligneTicket != null)
-            await PopupNavigation.Instance.PushAsync(new PopupReclame());
+            await Navigation.PushPopupAsync(new PopupReclame());
         }
 
         async void Click_Message(object sender, EventArgs e)
@@ -193,7 +194,7 @@ namespace YamaCaisse.Pages
             {
                 var listPages = await _pageDataServices.GetPageList();
                 var page = listPages.SingleOrDefault(cw => cw.PAG_NAME == "Message");
-                await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID,this));
+                await Navigation.PushPopupAsync(new PopupCaisse(page.PAG_ID,this));
 
             }
         }
@@ -252,7 +253,7 @@ namespace YamaCaisse.Pages
                                 }
                                 else
                                 {
-                                    await PopupNavigation.Instance.PushAsync(new PopupTable(this.ticketControl, false, true));
+                                    await Navigation.PushPopupAsync(new PopupTable(this.ticketControl, false, true));
                                 }
                             }
                         }
@@ -268,7 +269,7 @@ namespace YamaCaisse.Pages
 
                         var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current.GetTicketToSend());
                         if (TicketViewModel.Current.IdTable == null)
-                            await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
+                            await Navigation.PushPopupAsync(new PopupPaiement(rs));
                     }
                     else
                     {

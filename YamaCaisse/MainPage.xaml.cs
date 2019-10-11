@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Control;
@@ -85,7 +86,7 @@ namespace YamaCaisse
                     ConfigViewModel.Current.CouvertRequis = couvert;
 
                     ConfigViewModel.Current.Profil = user.T_USER_PROFIL.USP_NAME;
-                    await PopupNavigation.Instance.PushAsync(new PopupPinter());
+                    await Navigation.PushPopupAsync(new PopupPinter());
                     await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
                 }
                 this.IsBusy = false;
@@ -113,7 +114,7 @@ namespace YamaCaisse
             App.UrlGateway = typeconnection + this.AdresseServeur.Text + "/";
             Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
 
-            await PopupNavigation.Instance.PushAsync(new PopupGetProduction());
+            await Navigation.PushPopupAsync(new PopupGetProduction());
            
         }
 

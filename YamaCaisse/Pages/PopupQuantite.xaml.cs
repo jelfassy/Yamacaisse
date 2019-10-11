@@ -5,6 +5,7 @@ using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.ViewModel;
 using Rg.Plugins.Popup.Extensions;
+using System.Linq;
 
 namespace YamaCaisse.Pages
 {
@@ -34,7 +35,10 @@ namespace YamaCaisse.Pages
                 var rs = int.TryParse(this.EntryNb.Text,out nb);
                 if(rs == true)
                     TicketViewModel.Current.ChangeLigneQuantite(nb);
-                await Navigation.PopPopupAsync();
+                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                {
+                    await Navigation.PopPopupAsync();
+                }
 
             }
             catch (Exception ex)

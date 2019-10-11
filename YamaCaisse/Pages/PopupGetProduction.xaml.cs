@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -57,8 +58,12 @@ namespace YamaCaisse.Pages
 
                 ConfigViewModel.Current.Production = listProduction.SingleOrDefault(c => c.PROD_ID == idProduction);
                 await Navigation.PushModalAsync(new YamaCaisse.Pages.ProductionPage());
-                await PopupNavigation.PopAsync(false);
-            }catch(Exception ex)
+                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                {
+                    await Navigation.PopPopupAsync();
+                }
+            }
+            catch(Exception ex)
             {
                 var property = new Dictionary<string, string>
                 {

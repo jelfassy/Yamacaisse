@@ -7,6 +7,7 @@ using YamaCaisse.Services.ReclameServices;
 using Rg.Plugins.Popup.Services;
 using YamaCaisse.Entity;
 using YamaCaisse.ViewModel;
+using Rg.Plugins.Popup.Extensions;
 
 namespace YamaCaisse.Pages
 {
@@ -54,7 +55,10 @@ namespace YamaCaisse.Pages
             Button btn = (Button)sender;
             int idRec = int.Parse(btn.ClassId);
             TicketViewModel.Current.ChangeLigneReclame(ListReclames.SingleOrDefault(c => c.REC_ID == idRec));
-            await PopupNavigation.PopAsync(false);
+            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
     }
 }

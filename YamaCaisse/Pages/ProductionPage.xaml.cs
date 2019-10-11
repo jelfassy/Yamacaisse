@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AspNet.SignalR.Client;
 using Newtonsoft.Json;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -67,6 +68,15 @@ namespace YamaCaisse.Pages
                         }
                     }
                 });
+            });
+
+            hubProxy.On<int, string>("BonSended", (production, bonProduction) =>
+            {
+                if (production == ConfigViewModel.Current.Production.PROD_ID)
+                {
+                    var bon = JsonConvert.DeserializeObject<BonProduction>(bonProduction);
+                    this.RemoveBonProductionFromServeur(bon);
+                }
             });
 
             hubConnection.Closed += () =>
@@ -278,13 +288,13 @@ namespace YamaCaisse.Pages
         async void Printer_Clicked(object sender, System.EventArgs e)
         {
             PlaySound();
-            await PopupNavigation.Instance.PushAsync(new PopupPinter());
+            await Navigation.PushPopupAsync(new PopupPinter());
 
         }
 
         async void Click_Purger(object sender, EventArgs e)
         {
-            await PopupNavigation.Instance.PushAsync(new PopupPurger());
+            await Navigation.PushPopupAsync(new PopupPurger());
         }
 
         async void Click_Deconnexion(object sender, EventArgs e)
@@ -307,9 +317,21 @@ namespace YamaCaisse.Pages
             ShowBon.Children.Remove(view);
             GdListBon.Children.Remove(miniBon);
             CreateRecap();
+
         }
 
+        public void RemoveBonProductionFromServeur(BonProduction bprod)
+        {
+            int bonId = (bprod.BON_ID % 100);
+            var bon = ShowBon.Children.FirstOrDefault(c => c.StyleId == bonId.ToString());
+            var miniBon = GdListBon.Children.FirstOrDefault(c => c.StyleId == bonId.ToString());
+            if(bon != null)
+                ShowBon.Children.Clear();
+            if(miniBon != null)
+                GdListBon.Children.Remove(miniBon);
+            CreateRecap();
 
+        }
 
         public async Task<List<Table>> LoadTable()
         {

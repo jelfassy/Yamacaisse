@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AppCenter.Crashes;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -84,7 +86,10 @@ namespace YamaCaisse.Pages
                     Montant = decimal.Parse(LblMontant.Text.Replace(".", ","));
                     nbrepas = int.Parse(this.LblNbCouvert.Text);
                     await _ticketDataServices.PrintFiche(TicketViewModel.Current.Ticket, nbrepas, Montant);
-                    await PopupNavigation.PopAsync(false);
+                    if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                    {
+                        await Navigation.PopPopupAsync();
+                    }
                 }
                 else
                 {
@@ -116,7 +121,10 @@ namespace YamaCaisse.Pages
         }
         async void Click_Close(object sender, EventArgs e)
         {
-            await PopupNavigation.PopAsync(false);
+            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
     }
 }

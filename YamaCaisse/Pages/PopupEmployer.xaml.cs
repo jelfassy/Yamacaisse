@@ -71,7 +71,10 @@ namespace YamaCaisse.Pages
             Button btn = (Button)sender;
             int idemploye = int.Parse(btn.ClassId);
             var rs = await _rapportDataServices.GetRapportServeur(idemploye,date);
-            await Navigation.PopPopupAsync();
+            if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+            {
+                await Navigation.PopPopupAsync();
+            }
         }
 
     }
