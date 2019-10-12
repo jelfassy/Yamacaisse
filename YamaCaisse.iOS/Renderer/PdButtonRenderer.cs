@@ -13,7 +13,10 @@ namespace YamaCaisse.iOS.Renderer
         {
             base.OnElementChanged(e);
             if (Control != null)
+            {
                 Control.TitleLabel.LineBreakMode = UIKit.UILineBreakMode.WordWrap;
+            }
+        
         }
     }
 }
