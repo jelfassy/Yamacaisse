@@ -75,7 +75,7 @@ namespace YamaCaisse.View
                 //
                 foreach (var item in listPageProduit)
                 {
-                    var button = new PdButton
+                    var button = new ProdButton
                     {
                         BorderWidth = 2.5,
                         // BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],

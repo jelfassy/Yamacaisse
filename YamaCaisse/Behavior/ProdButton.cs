@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace YamaCaisse.Behavior
 {
-    public class PdButton :  Button
+    public class ProdButton :  Button
     {
-        public PdButton()
+        public ProdButton()
         {
         }
     }
