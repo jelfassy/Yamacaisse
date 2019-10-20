@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Timers;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Pages;
@@ -50,19 +51,31 @@ namespace YamaCaisse.View
 
         private void SetColorView(TimeSpan? timeSpan)
         {
-            Timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
-            this.lblTimer.Text = Timer;
-            if (Attente == true)
-                this.bxViewColor.BackgroundColor = Color.FromHex("#00BCD4");
-            else
+            try
             {
-                if (timeSpan.Value.TotalMinutes < 10)
-                    this.bxViewColor.BackgroundColor = Color.Green;
-                else if (timeSpan.Value.TotalMinutes < 20)
-                    this.bxViewColor.BackgroundColor = Color.Orange;
+                Timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
+                this.lblTimer.Text = Timer;
+                if (Attente == true)
+                    this.bxViewColor.BackgroundColor = Color.FromHex("#00BCD4");
                 else
-                    this.bxViewColor.BackgroundColor = Color.Red;
+                {
+                    if (timeSpan.Value.TotalMinutes < 10)
+                        this.bxViewColor.BackgroundColor = Color.Green;
+                    else if (timeSpan.Value.TotalMinutes < 20)
+                        this.bxViewColor.BackgroundColor = Color.Orange;
+                    else
+                        this.bxViewColor.BackgroundColor = Color.Red;
+                }
             }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"MiniBonProduction","SetColorView"}
+                };
+                Crashes.TrackError(ex, property);
+            }
+          
         }
 
         async void Show_Clicked(object sender, System.EventArgs e)
