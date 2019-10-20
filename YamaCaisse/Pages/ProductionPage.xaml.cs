@@ -167,6 +167,8 @@ namespace YamaCaisse.Pages
         {
             try
             {
+                GdListBon.Children.Clear();
+                ShowBon.Children.Clear();
                 // StartActivityIndicateur(true);
                 var listBon = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, current);
                 var rs = listBon;
@@ -295,6 +297,8 @@ namespace YamaCaisse.Pages
         async void Click_Purger(object sender, EventArgs e)
         {
             await Navigation.PushPopupAsync(new PopupPurger());
+            LoadData(true);
+
         }
 
         async void Click_Deconnexion(object sender, EventArgs e)

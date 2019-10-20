@@ -2,7 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse"
+             xmlns:converters="clr-namespace:YamaCaisse.Tools;assembly=YamaCaisse"
              x:Class="YamaCaisse.Pages.ProductionPage">
+          <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:BoolToGridRowHeightConverter x:Key="BoolToGridRowHeightConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
     <ContentPage.Content>
         <StackLayout x:Name="StkList" BackgroundColor="Gray" VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="0,10,0,0">
             <Grid BackgroundColor="Purple">
@@ -47,37 +53,43 @@
                                 <Label Grid.Row="0" Grid.Column="0" FontSize="Large" Margin="10,0,0,0" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                 <Label Grid.Row="0" Grid.Column="1" FontSize="Large" Text="{Binding LTK_DESIGNATION_PRODUIT}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                 <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" HeightRequest="{Binding SizeUnderList}">
-                                    <ListView x:Name="ListUnder" Margin="15,0,0,0" IsVisible="{Binding VisibleComplement}" SeparatorVisibility="None" ItemsSource="{Binding LIST_COMPLEMENT}">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell x:Name="T_LIGNE_TICKET.UnderViewCell">
-                                                    <ViewCell.View>
-                                                        <Grid>
-                                                            <Grid.RowDefinitions>
-                                                                <RowDefinition Height="Auto" />
-                                                            </Grid.RowDefinitions>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="5*" />
-                                                                <ColumnDefinition Width="1*" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <Label Grid.Row="0" Grid.Column="0" FontSize="Large" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
-                                                            <Label Grid.Row="0" Grid.Column="1" FontSize="Large" Text="{Binding T_PRODUIT.PDT_Prix ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                                        </Grid>
-                                                    </ViewCell.View>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="{Binding VisibleComplement1, Converter={StaticResource BoolToGridRowHeightConverter}}" />
+                                            <RowDefinition Height="{Binding VisibleComplement2, Converter={StaticResource BoolToGridRowHeightConverter}}" />
+                                            <RowDefinition Height="{Binding VisibleComplement3, Converter={StaticResource BoolToGridRowHeightConverter}}" />
+                                            <RowDefinition Height="{Binding VisibleComplement4, Converter={StaticResource BoolToGridRowHeightConverter}}" />
+                                            <RowDefinition Height="{Binding VisibleComplement5, Converter={StaticResource BoolToGridRowHeightConverter}}" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="4*" />
+                                            <ColumnDefinition Width="1*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding CmplLigne1}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement1}" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding MntCmplLigne1 ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement1}" />
+
+                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding CmplLigne2}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement2}" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding MntCmplLigne2 ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement2}" />
+
+                                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding CmplLigne3}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement3}" />
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding MntCmplLigne3 ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement3}" />
+
+                                        <Label Grid.Row="3" Grid.Column="0" Text="{Binding CmplLigne4}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}" />
+                                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding MntCmplLigne4 ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}" />
+
+                                        <Label Grid.Row="4" Grid.Column="0" Text="{Binding CmplLigne5}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}" />
+                                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding MntCmplLigne5 ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}" />
+                                    </Grid>
                                 </StackLayout>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
                 <ScrollView Orientation="Vertical" Grid.Column="1">
-                <StackLayout x:Name="GdListBon" Orientation="Vertical" >
+                    <StackLayout x:Name="GdListBon" Orientation="Vertical">
 
-                </StackLayout>
-                    </ScrollView>
+                    </StackLayout>
+                </ScrollView>
                 <StackLayout x:Name="ShowBon" Orientation="Vertical" Grid.Column="2">
 
                 </StackLayout>
