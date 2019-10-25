@@ -20,8 +20,10 @@ namespace YamaCaisse.View
         {
             InitializeComponent();
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
+            this.Send = false;
         }
 
+        public bool Send { get; set; }
         public int idBon { get; set; }
 
         public BonProduction BonProduction
@@ -72,16 +74,23 @@ namespace YamaCaisse.View
         {
             Timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
             this.lblTimer.Text = Timer;
-            if (attente == true)
-                this.bxViewColor.BackgroundColor = Color.FromHex("#00BCD4");
+            if (this.Send)
+            {
+                this.bxViewColor.BackgroundColor = Color.Gray;
+            }
             else
             {
-                if (timeSpan.Value.TotalMinutes < 10)
-                    this.bxViewColor.BackgroundColor = Color.Green;
-                else if (timeSpan.Value.TotalMinutes < 20)
-                    this.bxViewColor.BackgroundColor = Color.Orange;
+                if (attente == true)
+                    this.bxViewColor.BackgroundColor = Color.FromHex("#00BCD4");
                 else
-                    this.bxViewColor.BackgroundColor = Color.Red;
+                {
+                    if (timeSpan.Value.TotalMinutes < 10)
+                        this.bxViewColor.BackgroundColor = Color.Green;
+                    else if (timeSpan.Value.TotalMinutes < 20)
+                        this.bxViewColor.BackgroundColor = Color.Orange;
+                    else
+                        this.bxViewColor.BackgroundColor = Color.Red;
+                }
             }
         }
 
@@ -99,7 +108,8 @@ namespace YamaCaisse.View
         {
             var button = (Button)sender;
             this.BonProduction.BON_DATE_FIN = DateTime.Now;
-
+            this.Send = true;
+            this.bxViewColor.BackgroundColor = Color.Gray;
             var rs = await _bonProductionDataServices.PutBonProduction(this.BonProduction.BON_ID, this.BonProduction);
             this.ProductionPage.CreateRecap();
             this.ProductionPage.RemoveBonProduction(this);

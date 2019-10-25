@@ -25,6 +25,7 @@ namespace YamaCaisse.Pages
         private HubConnection hubConnection;
         private IHubProxy hubProxy;
         bool connected;
+        bool exit;
         private IBonProductionDataServices _bonProductionDataServices;
         private ITableDataServices _tableDataServices;
         public List<BonProduction> ListAll { get; set; }
@@ -48,6 +49,7 @@ namespace YamaCaisse.Pages
 
         protected override void OnAppearing()
         {
+            exit = false;
             base.OnAppearing();
             hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
             hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
@@ -81,18 +83,22 @@ namespace YamaCaisse.Pages
 
             hubConnection.Closed += () =>
             {
-                connected = false;
-                while (!connected)
+                if (exit == false)
                 {
-                    System.Threading.Thread.Sleep(2000);
-                    hubConnection.Start().Wait();
-                    connected = true;
+                    connected = false;
+                    while (!connected)
+                    {
+                        System.Threading.Thread.Sleep(2000);
+                        hubConnection.Start().Wait();
+                        connected = true;
+                    }
+
                 }
             };
             ExecuteLoad();
         }
 
-        async void ExecuteLoad()
+        public async void ExecuteLoad()
         {
             if (IsBusy)
                 return;
@@ -106,8 +112,9 @@ namespace YamaCaisse.Pages
 
                 await DisplayAlert("Serveur", "connection etablie", "ok");
                 ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
-                CreateRecap();
-                this.LoadData(true);
+                LoadData(true);
+                
+
             }
             catch (Exception ex)
             {
@@ -118,9 +125,6 @@ namespace YamaCaisse.Pages
                 Crashes.TrackError(ex, property);
             }
         }
-
-
-
 
 
         public async void CreateRecap()
@@ -296,13 +300,15 @@ namespace YamaCaisse.Pages
 
         async void Click_Purger(object sender, EventArgs e)
         {
-            await Navigation.PushPopupAsync(new PopupPurger());
-            LoadData(true);
+            await Navigation.PushPopupAsync(new PopupPurger(this));
+             LoadData(true);
 
         }
 
         async void Click_Deconnexion(object sender, EventArgs e)
         {
+            exit = true;
+            hubConnection.Stop();
             await Navigation.PushModalAsync(new MainPage());
         }
 
@@ -318,7 +324,7 @@ namespace YamaCaisse.Pages
         public void RemoveBonProduction(BonProductionView view)
         {
             var miniBon = GdListBon.Children.FirstOrDefault(c => c.StyleId == view.StyleId);
-            ShowBon.Children.Remove(view);
+            ShowBon.Children.Clear();
             GdListBon.Children.Remove(miniBon);
             CreateRecap();
 
@@ -327,11 +333,10 @@ namespace YamaCaisse.Pages
         public void RemoveBonProductionFromServeur(BonProduction bprod)
         {
             int bonId = (bprod.BON_ID % 100);
-            var bon = ShowBon.Children.FirstOrDefault(c => c.StyleId == bonId.ToString());
+            //var bon = ShowBon.Children.FirstOrDefault(c => c.StyleId == bonId.ToString());
             var miniBon = GdListBon.Children.FirstOrDefault(c => c.StyleId == bonId.ToString());
-            if(bon != null)
                 ShowBon.Children.Clear();
-            if(miniBon != null)
+            if (miniBon != null)
                 GdListBon.Children.Remove(miniBon);
             CreateRecap();
 

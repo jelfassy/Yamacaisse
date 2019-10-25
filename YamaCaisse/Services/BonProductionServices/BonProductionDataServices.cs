@@ -115,7 +115,8 @@ namespace YamaCaisse.Services.BonProductionServices
 
                 await Task.Run(() =>
                 {
-                    res = o.ToObject<bool>();
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
                 });
                 return res;
             }

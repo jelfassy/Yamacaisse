@@ -11,10 +11,12 @@ namespace YamaCaisse.Pages
 {
     public partial class PopupPurger : PopupPage
     {
-        public PopupPurger()
+        private ProductionPage _productionPage;
+        public PopupPurger(ProductionPage main)
         {
             InitializeComponent();
             _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
+            _productionPage = main;
         }
         private IBonProductionDataServices _bonProductionDataServices;
 
@@ -41,7 +43,11 @@ namespace YamaCaisse.Pages
                 {
                     var rs = await this._bonProductionDataServices.PurgeBonProduction(ConfigViewModel.Current.Production.PROD_ID, int.Parse(EntryNumBon.Text));
                     if (rs == true)
+                    {
                         await DisplayAlert("Purge", "Purge Effectué !", "ok");
+                        await Navigation.PopPopupAsync();
+                        _productionPage.LoadData(true);
+                    }
                 }
 
                 if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
@@ -51,6 +57,7 @@ namespace YamaCaisse.Pages
             }
             catch (Exception ex)
             {
+                var exep = ex;
                // await Navigation.PopPopupAsync();
             }
         }

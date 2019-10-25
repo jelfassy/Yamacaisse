@@ -204,7 +204,7 @@ namespace YamaCaisse.Pages
                 {
                     ticket.FK_TAB_ID = this.TableId;
                     ticketcur = await _ticketDataServices.GetCurrentTableTicket((int)this.TableId);
-                    if (ticketcur == null)
+                    if (ticketcur.TIK_ID == 0)
                         TableInUse = false;
                     else
                         TableInUse = true;
