@@ -198,7 +198,7 @@ namespace YamaCaisse.View
                     }
                     else
                     {
-                        TicketViewModel.Current.NbElemCommand = TicketViewModel.Current.NbElemCommand + 1;
+                        TicketViewModel.Current.NbElemCommand = TicketViewModel.Current.NbElemCommand + ligneTicket.LTK_QTE;
                         if (TicketViewModel.Current.ListLigneTicket != null)
                         {
                             TicketViewModel.Current.ListLigneTicket.Add(ligneTicket);

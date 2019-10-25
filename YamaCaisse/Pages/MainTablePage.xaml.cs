@@ -43,7 +43,10 @@ namespace YamaCaisse.Pages
         {
         }
 
-
+        public void Refresh()
+        {
+            this.tableListControl.Refresh();
+        }
 
         public void Click_SelectTable(object sender, EventArgs e)
         {
@@ -112,7 +115,7 @@ namespace YamaCaisse.Pages
         {
             if(TicketViewModel.Current.TKT_ID != 0)
             {
-                await Navigation.PushPopupAsync(new PopupEclater(TicketViewModel.Current.TKT_ID));
+                await Navigation.PushPopupAsync(new PopupEclater(this,TicketViewModel.Current.TKT_ID));
             }
         }
 

@@ -135,10 +135,10 @@
                         <RowDefinition Height="*" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="1" Grid.Column="0" Text="nb Element" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="2" Grid.Column="0" Text="{Binding NbElemCommand,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="1" Grid.Column="1" Text="Reste A Payer" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding ResteAPayer,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="nb Element" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding NbElemCommand,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <!--<Label Grid.Row="1" Grid.Column="1" Text="Reste A Payer" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding ResteAPayer,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />-->
                 </Grid>
             </Grid>
         </StackLayout>

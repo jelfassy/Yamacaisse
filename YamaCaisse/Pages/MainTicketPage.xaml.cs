@@ -45,7 +45,17 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
             IsEcranTicket = isTicket;
+           
             loadData();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (ConfigViewModel.Current.Profil != "Admin")
+            {
+                btAnnuler.IsVisible = false;
+            }
         }
 
         public async void loadData()

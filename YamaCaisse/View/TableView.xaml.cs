@@ -40,6 +40,8 @@ namespace YamaCaisse.View
 
         public bool RetourTable { get; set; }
 
+        public bool FromEclater { get; set; }
+
         public TableView() : this(false)
         {
 
@@ -375,6 +377,13 @@ namespace YamaCaisse.View
             else if (this.FromCommande)
             {
                 TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId, true);
+            }
+            else if(this.FromEclater)
+            {
+
+                this.TableId = SelectedTableId;
+
+                this.CurrentPopupTable.popupEclater.TableId = SelectedTableId;
             }
             else
             {

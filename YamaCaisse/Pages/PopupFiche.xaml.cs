@@ -22,13 +22,7 @@ namespace YamaCaisse.Pages
             firstMontant = true;
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
             this.Current = "Couvert";
-            LblMontant.GestureRecognizers.Add(new TapGestureRecognizer()
-            {
-                Command = new Command(() =>
-                {
-                    Current = "Montant";
-                })
-            });
+         
             LblNbCouvert.GestureRecognizers.Add(new TapGestureRecognizer()
             {
                 Command = new Command(() =>
@@ -81,7 +75,7 @@ namespace YamaCaisse.Pages
             {
                 decimal Montant;
                 int nbrepas;
-                if (this.LblMontant.Text != "" && LblNbCouvert.Text != "!")
+                if (this.LblMontant.Text != "" && LblNbCouvert.Text != "")
                 {
                     Montant = decimal.Parse(LblMontant.Text.Replace(".", ","));
                     nbrepas = int.Parse(this.LblNbCouvert.Text);

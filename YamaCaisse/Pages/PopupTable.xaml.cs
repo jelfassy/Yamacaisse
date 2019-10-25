@@ -20,6 +20,9 @@ namespace YamaCaisse.Pages
 
         private TaskCompletionSource<int> task;
 
+        public int  TableId { get; set; }
+
+        public PopupEclater popupEclater { get; set; }
         public PopupTable(TicketView tv)
         {
             InitializeComponent();
@@ -57,6 +60,13 @@ namespace YamaCaisse.Pages
             this.tableListControl.RetourTable = retourTable;
         }
 
+        public PopupTable(PopupEclater pop, bool fromEclater)
+        {
+            InitializeComponent();
+            this.tableListControl.CurrentPopupTable = this;
+            this.popupEclater = pop;
+            this.tableListControl.FromEclater = true;
+        }
         protected override void OnAppearing()
         {
             base.OnAppearing();

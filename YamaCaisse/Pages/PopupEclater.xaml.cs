@@ -23,6 +23,20 @@ namespace YamaCaisse.Pages
 
         public MainTablePage _mainTablePage { get; set; }
 
+        private int tableId;
+
+        public int TableId
+        {
+            get
+            {
+                return tableId;
+            }
+            set
+            {
+                this.tableId = value;
+                SetTable();
+            }
+        }
 
         private decimal _montantTotal;
 
@@ -78,20 +92,23 @@ namespace YamaCaisse.Pages
         }
 
 
-        public PopupEclater(int ticketId)
+        public PopupEclater(MainTablePage main,int ticketId)
         {
             InitializeComponent();
+            this._mainTablePage = main;
             _tableDataServices = DependencyService.Get<ITableDataServices>();
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
             this.BindingContext = this;
             this.ListSelectedLigneTicket = new ObservableCollection<LigneTicket>();
             TikId = ticketId;
-            MontantTotal = 0;
+          
 
         }
 
         protected override void OnAppearing()
         {
+            this.IsBusy = true;
+            MontantTotal = 0;
             LoadData();
         }
 
@@ -102,6 +119,7 @@ namespace YamaCaisse.Pages
             TicketViewModel.Current.Clear();
             TicketViewModel.Current.SetTicket(ticket, true);
             this.listLigneTicket = TicketViewModel.Current.ListLigneTicket;
+            this.IsBusy = false;
         }
 
 
@@ -167,12 +185,13 @@ namespace YamaCaisse.Pages
 
         async void Click_Envoi(object sender, EventArgs e)
         {
+            bool TableInUse = false;
+            Ticket ticketcur = null;
             if (this.ListSelectedLigneTicket.Count > 0)
             {
                 var ticket = new Ticket()
                 {
                     FK_EMP_ID = App.UserId,
-                    // FK_TAB_ID = this.IdTable,
                     TIK_DATE = DateTime.Now,
                     TIK_MNT_TOTAL = this.MontantTotal,
                     // TIK_NB_COUVERT = this.NbCouvert,
@@ -181,6 +200,15 @@ namespace YamaCaisse.Pages
                     TIK_TPV = App.DeviceIdentifier
 
                 };
+                if (this.TableId != 0)
+                {
+                    ticket.FK_TAB_ID = this.TableId;
+                    ticketcur = await _ticketDataServices.GetCurrentTableTicket((int)this.TableId);
+                    if (ticketcur == null)
+                        TableInUse = false;
+                    else
+                        TableInUse = true;
+                }
                 if (App.ConfigViewModel.Printer != null)
                     ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
 
@@ -196,11 +224,35 @@ namespace YamaCaisse.Pages
                     ligne.TIK_MOVE_TIK = TicketViewModel.Current.TKT_ID;
                 }
                 var rs = await _ticketDataServices.PostTicket(ticket);
-                await PopupNavigation.PopAsync(false);
-                await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
+                await Navigation.PopPopupAsync();
+                if (this.TableId == 0)
+                {
+                    await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
+                }
+                else
+                {
+                    _mainTablePage.Refresh();
+                }
             }
         }
 
+
+        async void btTable_clicked(object sender, EventArgs e)
+        {
+            var popTable = new PopupTable(this, true);
+            await PopupNavigation.Instance.PushAsync(popTable);
+
+        }
+
+        public async void SetTable()
+        {
+            if (this.TableId != 0)
+            {
+                var listTable = await _tableDataServices.GetTableList();
+                string TableName = listTable.SingleOrDefault(cw => cw.TAB_ID == TableId).TAB_NOM;
+                btTableDest.Text = TableName;
+            }
+        }
 
         async void Click_closed(object sender, EventArgs e)
         {
@@ -214,4 +266,3 @@ namespace YamaCaisse.Pages
 
     }
 }
- 

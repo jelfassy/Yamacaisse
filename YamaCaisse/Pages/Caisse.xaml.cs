@@ -263,7 +263,7 @@ namespace YamaCaisse.Pages
                     this.IsBusy = true;
                     TicketViewModel.Current.ComprTicket();
 
-                    //TODO : Control que la table n'a pas deja un ticket en cour
+                    // Control que la table n'a pas deja un ticket en cour
                     if (TicketViewModel.Current.TKT_ID == 0)
                     {
 
