@@ -45,5 +45,10 @@ namespace YamaCaisse.Pages
         {
             var rs = await _rapportDataServices.GetRapportAnnuler(DtPicker.Date.ToLocalTime());
         }
+
+        async void RapportShowVente_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new BordPage(DtPicker.Date.ToLocalTime()));
+        }
     }
 }

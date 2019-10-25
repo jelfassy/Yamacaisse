@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using YamaCaisse.Entity;
 using YamaCaisse.Tools;
 using YamaCaisse.ViewModel;
 
@@ -203,6 +205,79 @@ namespace YamaCaisse.Services.RapportServices
                 var property = new Dictionary<string, string>
                 {
                     {this.GetType().Name,"GetRapportJour" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
+
+        public async Task<List<GraphiqueModel>> GetListGraphique()
+        {
+            try
+            {
+                List<GraphiqueModel> res = new List<GraphiqueModel>();
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"GetListGraphique"));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.Select((JToken s) => s.ToObject<GraphiqueModel>()).ToList();
+                });
+
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetListGraphique"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetListGraphique"}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
+
+        public async Task<List<GraphiqueDataModel>> GetGraphiqueData(DateTime date,int idGraphique)
+        {
+            try
+            {
+                int intdate = date.Year * 10000 + date.Month * 100 + date.Day;
+                List<GraphiqueDataModel> res = new List<GraphiqueDataModel>();
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetDataGraphique/",intdate,"/",idGraphique));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.Select((JToken s) => s.ToObject<GraphiqueDataModel>()).ToList();
+                });
+
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetGraphiqueData"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetGraphiqueData"}
                 };
                 Crashes.TrackError(ex, property);
                 throw ex;

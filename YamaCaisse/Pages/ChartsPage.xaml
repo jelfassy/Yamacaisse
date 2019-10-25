@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="YamaCaisse.Pages.ChartsPage" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}">
+    <Grid x:Name="GridFull" Margin="0,0,0,25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
+        <local:HeaderBar Grid.Row="0"/>
+        <Label x:Name="lbNomGraphique" FontSize="Subtitle" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        <microcharts:ChartView x:Name="chartView" Grid.Row="2" />
+
+        <ListView x:Name="listTopView" ItemsSource="{Binding oListData}" Grid.Row="2">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Appearing="Cell_OnAppearing">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+                            <Label FontSize="Large" Grid.Row="0" Grid.Column="0" Text="{Binding Name}" />
+                            <Label FontSize="Large" Grid.Row="0" Grid.Column="1" Text="{Binding value}"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</ContentView>

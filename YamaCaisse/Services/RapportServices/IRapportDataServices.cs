@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using YamaCaisse.Entity;
 
 namespace YamaCaisse.Services.RapportServices
 {
@@ -22,5 +24,9 @@ namespace YamaCaisse.Services.RapportServices
         Task<bool> GetRapportServeur(int idServeur, DateTime date);
 
         Task<bool> GetRapportAnnuler(DateTime date);
-    }
+
+        Task<List<GraphiqueDataModel>> GetGraphiqueData(DateTime date, int idGraphique);
+
+        Task<List<GraphiqueModel>> GetListGraphique();
+        }
 }
