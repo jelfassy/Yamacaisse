@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Microcharts;
+using Microsoft.AppCenter.Crashes;
 using SkiaSharp;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
@@ -22,14 +23,27 @@ namespace YamaCaisse.Pages
 
         public ChartsPage(GraphiqueModel model,DateTime date)
         {
-            InitializeComponent();
-            this.CurrentDate = date;
-            _rapportDataServices = DependencyService.Get<RapportDataServices>();
-            InitColor();
-            IsCharts = true;
-            IsList = false;
-            Model = model;
-            load();
+            try
+            {
+                InitializeComponent();
+                this.CurrentDate = date;
+                _rapportDataServices = DependencyService.Get<RapportDataServices>();
+                InitColor();
+                IsCharts = true;
+                IsList = false;
+                Model = model;
+                load();
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"Graphique : " + model.GPG_ID}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+           
         }
 
        
