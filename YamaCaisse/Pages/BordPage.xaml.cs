@@ -23,7 +23,7 @@ namespace YamaCaisse.Pages
         {
             var ListGraphique = await _rapportDataServices.GetListGraphique();
 
-            foreach (var graphique in ListGraphique.Where(c=> c.GPG_ID != 1 && c.GPG_ID != 3))// || c.GPG_ID == 4 || c.GPG_ID == 5))
+            foreach (var graphique in ListGraphique)// || c.GPG_ID == 4 || c.GPG_ID == 5))
             {
                 var contentSample1 = new ContentPage
                 {
