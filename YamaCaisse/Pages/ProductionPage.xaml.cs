@@ -323,10 +323,22 @@ namespace YamaCaisse.Pages
 
         public void RemoveBonProduction(BonProductionView view)
         {
-            var miniBon = GdListBon.Children.FirstOrDefault(c => c.StyleId == view.StyleId);
-            ShowBon.Children.Clear();
-            GdListBon.Children.Remove(miniBon);
-            CreateRecap();
+            try
+            {
+                var miniBon = GdListBon.Children.FirstOrDefault(c => c.StyleId == view.StyleId);
+                ShowBon.Children.Clear();
+                GdListBon.Children.Remove(miniBon);
+                CreateRecap();
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"RemoveBonProduction","Production"}
+                };
+                Crashes.TrackError(ex, property);
+            }
+            
 
         }
 
