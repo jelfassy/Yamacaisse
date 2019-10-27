@@ -72,7 +72,7 @@ namespace YamaCaisse.View
 
         private void SetColorView(TimeSpan? timeSpan, bool attente)
         {
-            Timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
+            Timer = timeSpan.Value.TotalMinutes.ToString();
             this.lblTimer.Text = Timer;
             if (this.Send)
             {
