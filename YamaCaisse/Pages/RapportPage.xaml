@@ -22,6 +22,7 @@
                     <Button Grid.Column="0" Grid.Row="1" Clicked="RapportServeur_Clicked" Text="Rapport Serveur" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="1" Grid.Row="1" Clicked="RapportAnnuler_Clicked" Text="Rapport Annuler" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Clicked="RapportShowVente_Clicked" Text="Statistiques" BackgroundColor="DarkGreen" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" x:Name="btwallstreet" Clicked="ShowWallStreet_Clicked" Text="Voir WallStreet" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                 </Grid>
             </StackLayout>
         </AbsoluteLayout>

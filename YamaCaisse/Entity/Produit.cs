@@ -44,6 +44,9 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public decimal? PDT_PRIX_COURRANT_WS { get; set; }
+
+
         public bool? Pdt_IsMenu { get; set; }
 
         public int? PDT_PageFormule { get; set; }

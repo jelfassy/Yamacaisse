@@ -51,5 +51,79 @@ namespace YamaCaisse.Services.ConfigServices
                 throw ex;
             }
         }
+
+        public async Task<bool> ModeWallStreet()
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "ModeWallStreet"));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"ModeWallStreet"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"ModeWallStreet" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
+        public async Task<int> TimerWallStreet()
+        {
+            try
+            {
+                int res = 0;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "TimerWallStreet"));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<int>();
+                });
+                if (res == 0)
+                    return 0;
+
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"TimerWallStreet"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"TimerWallStreet" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Services.ConfigServices;
 using YamaCaisse.Services.RapportServices;
 
 namespace YamaCaisse.Pages
@@ -10,11 +11,13 @@ namespace YamaCaisse.Pages
     {
 
         private IRapportDataServices _rapportDataServices;
+        private IConfigDataServices _configDataServices;
 
         public RapportPage()
         {
             InitializeComponent();
             _rapportDataServices = DependencyService.Get<RapportDataServices>();
+            _configDataServices = DependencyService.Get<ConfigDataServices>();
         }
 
 
@@ -23,6 +26,16 @@ namespace YamaCaisse.Pages
             base.OnAppearing();
             DtPicker.Date = DateTime.Today.ToLocalTime();
             DtPicker.MaximumDate = DateTime.Today.ToLocalTime();
+            loadMode();
+        }
+
+        async void loadMode()
+        {
+            var modewallstreet = await _configDataServices.ModeWallStreet();
+            if (modewallstreet == true)
+                btwallstreet.IsVisible = true;
+            else
+                btwallstreet.IsVisible = false;
         }
 
         async void RapportJour_Clicked(object sender, System.EventArgs e)
@@ -50,5 +63,11 @@ namespace YamaCaisse.Pages
         {
             await Navigation.PushModalAsync(new BordPage(DtPicker.Date.ToLocalTime()));
         }
+
+        async void ShowWallStreet_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new WallStreetPage());
+        }
+        
     }
 }
