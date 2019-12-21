@@ -67,17 +67,24 @@ namespace YamaCaisse.Pages
             int row = 2;
             Color col = Color.White;
             GdList.Children.Clear();
-            foreach (var produit in listProduit.OrderByDescending(c=>(c.PDT_Prix - c.PDT_PRIX_COURRANT_WS )))
+            foreach (var produit in listProduit.OrderByDescending(c => (c.PDT_Prix - c.PDT_PRIX_COURRANT_WS)))
             {
-                if(oldPrice.ContainsKey(produit.PDT_ID))
+                var imgFleche = new Image() {  HorizontalOptions = LayoutOptions.Fill };
+                if (oldPrice.ContainsKey(produit.PDT_ID))
                 {
                     var mntPrecedent = oldPrice[produit.PDT_ID];
                     if (mntPrecedent.Value > produit.PDT_PRIX_COURRANT_WS)
+                    {
                         col = Color.Green;
+                        imgFleche.Source = "FlecheMoin.png";
+                    }
                     else if (mntPrecedent.Value < produit.PDT_PRIX_COURRANT_WS)
+                    {
                         col = Color.Red;
+                        imgFleche.Source = "FlechePlus.png";
+                    }
                     else
-                        col = Color.White;
+                    { col = Color.White; }
                     oldPrice[produit.PDT_ID] = produit.PDT_PRIX_COURRANT_WS;
                 }
                 else
@@ -88,25 +95,28 @@ namespace YamaCaisse.Pages
 
                 GdList.Children.Add(new Label()
                 {
-                    Text = produit.PDT_Designation,
-                     FontSize = 25,
+                    Text = produit.PDT_Designation ,
+                    FontSize = 25,
                     TextColor = col
-                },column,row);
+                }, column, row);
 
                 GdList.Children.Add(new Label()
                 {
-                    Text = produit.PDT_PRIX_COURRANT_WS == null ? produit.PDT_Prix.ToString() : produit.PDT_PRIX_COURRANT_WS.ToString(),
+                    Text = (produit.PDT_PRIX_COURRANT_WS == null ? produit.PDT_Prix.ToString() : produit.PDT_PRIX_COURRANT_WS.ToString()) + "€",
                     FontSize = 25,
                     TextColor = col
-                }, column + 1, row) ;
+                }, column + 1, row);
+
+                GdList.Children.Add(imgFleche, column + 2, row);
+
                 GdList.Children.Add(new Label()
                 {
-                    Text = (produit.PDT_PRIX_COURRANT_WS.Value - produit.PDT_Prix.Value).ToString(),
+                    Text = (produit.PDT_PRIX_COURRANT_WS.Value - produit.PDT_Prix.Value).ToString() + "€",
                     FontSize = 25,
                     TextColor = col
                 }, column + 3, row);
-                column = column + 4;
-                if (column > 5)
+                column = column + 5;
+                if (column > 6)
                 {
                     row = row + 1;
                     column = 0;

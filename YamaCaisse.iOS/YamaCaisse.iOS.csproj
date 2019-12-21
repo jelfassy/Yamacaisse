@@ -233,4 +233,8 @@
   <ItemGroup>
     <Folder Include="Renderer\" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\FlecheMoin.png" />
+    <AndroidResource Include="Resources\FlechePlus.png" />
+  </ItemGroup>
 </Project>

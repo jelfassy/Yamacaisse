@@ -14,22 +14,24 @@
             <Label Text="" x:Name="lbChrono" FontSize="30" TextColor="Yellow" Grid.Row="1" HorizontalTextAlignment="Center"/>
         <Grid x:Name="GdList" Grid.Row="2" Margin="15,0,0,15">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
@@ -47,7 +49,6 @@
                HeightRequest="1"
                Grid.Column="5"
                Color="White"/>
-
         </Grid>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand" Grid.Row="3">
             <Label Text="Tarifs au moment de la commande !" TextColor="Orange" FontSize="30" HorizontalTextAlignment="Center"/>
