@@ -6,8 +6,8 @@
     <Grid>
          <Grid.RowDefinitions>
                 <RowDefinition Height="3*"/>
-                <RowDefinition Height="1*" />
-                <RowDefinition Height="8*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
                 <RowDefinition Height="1*" />
              </Grid.RowDefinitions>
             <Image x:Name="ImageLogo"  HorizontalOptions="Fill" Grid.Row="0" />
