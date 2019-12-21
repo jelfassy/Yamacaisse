@@ -5,9 +5,9 @@
              x:Class="YamaCaisse.Pages.WallStreetPage">
     <Grid>
          <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
                 <RowDefinition Height="1*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="10*" />
                 <RowDefinition Height="1*" />
              </Grid.RowDefinitions>
             <Image x:Name="ImageLogo"  HorizontalOptions="Fill" Grid.Row="0" />
