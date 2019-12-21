@@ -67,7 +67,7 @@ namespace YamaCaisse.Pages
             int row = 2;
             Color col = Color.White;
             GdList.Children.Clear();
-            foreach (var produit in listProduit.OrderByDescending(c=>(c.PDT_PRIX_COURRANT_WS- c.PDT_Prix))))
+            foreach (var produit in listProduit.OrderByDescending(c=>(c.PDT_PRIX_COURRANT_WS- c.PDT_Prix)))
             {
                 if(oldPrice.ContainsKey(produit.PDT_ID))
                 {
