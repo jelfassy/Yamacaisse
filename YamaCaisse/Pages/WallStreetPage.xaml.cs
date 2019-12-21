@@ -104,7 +104,7 @@ namespace YamaCaisse.Pages
                     Text = (produit.PDT_PRIX_COURRANT_WS.Value - produit.PDT_Prix.Value).ToString(),
                     FontSize = 25,
                     TextColor = col
-                }, column + 2, row);
+                }, column + 3, row);
                 column = column + 4;
                 if (column > 5)
                 {
