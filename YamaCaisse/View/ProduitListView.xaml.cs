@@ -13,6 +13,7 @@ using YamaCaisse.Services.PageServices;
 using YamaCaisse.ViewModel;
 using Rg.Plugins.Popup.Extensions;
 using YamaCaisse.Behavior;
+using YamaCaisse.Services.WallStreetServices;
 
 namespace YamaCaisse.View
 {
@@ -20,6 +21,8 @@ namespace YamaCaisse.View
     {
 
         private IPageProduitDataServices _pageProduitDataServices;
+        private IWallStreetDataServices _wallStreetDataServices;
+
         private IPageDataServices _pageDataServices;
         private List<PageProduit> listPageProduit;
         private List<Produit> lstProduitPage;
@@ -33,6 +36,8 @@ namespace YamaCaisse.View
         }
 
         public bool? Autoclose { get; set; }
+
+        public bool? IsWallStreet { get; set; }
 
         public bool? IsFormulePage { get; set; }
 
@@ -53,12 +58,14 @@ namespace YamaCaisse.View
 
             _pageProduitDataServices = DependencyService.Get<IPageProduitDataServices>();
             listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.IdPage);
+            _wallStreetDataServices = DependencyService.Get<WallStreetDataServices>();
 
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             var Lpage = await _pageDataServices.GetPageList();
             var page = Lpage.SingleOrDefault(c => c.PAG_ID == this.IdPage);
             this.IsFormulePage = page.PAG_MENU;
             this.Autoclose = page.PAG_AUTOCLOSE;
+            this.IsWallStreet = page.PAG_WALLSTREET;
             lstProduitPage = new List<Produit>();
 
             //Ajout des lignes et columns 
@@ -129,7 +136,16 @@ namespace YamaCaisse.View
                 int Number = TicketViewModel.Current.Number;
                 var pageprod = listPageProduit.SingleOrDefault(c => c.PGPD_ID == idpgpd);
                 int idpoduit = pageprod.FK_PDT_ID;
-                var prod = pageprod.T_PRODUIT;
+                Produit prod;
+                if (IsWallStreet == true)
+                {
+                    var lsProd = await _wallStreetDataServices.GetProduit();
+                    prod = lsProd.SingleOrDefault(c => c.PDT_ID == pageprod.FK_PDT_ID);
+                }
+                else
+                {
+                    prod = pageprod.T_PRODUIT;
+                }
                 if (prod.PDT_INFO_BT != true)
                 {
                     if (prod.PDT_Prix != null && IsFormulePage != true)
@@ -158,6 +174,7 @@ namespace YamaCaisse.View
                         ligneTicket.LTK_TOTAL_HT = (prod.PDT_Prix * Number) / (1 + prod.T_TVA.TVA_Tx);
                     }
 
+                
                     if (this.IsFormulePage != true)
                     {
                         if (prod.PDT_Prix.HasValue && prod.T_TVA != null)
@@ -174,6 +191,15 @@ namespace YamaCaisse.View
                         ligneTicket.LTK_SOMME = 0;
                         ligneTicket.LTK_MNT_TVA = 0;
                         prod.PDT_Prix = 0;
+                    }
+
+                    if (this.IsWallStreet == true)
+                    {
+                        ligneTicket.LTK_PRIX_UNITAIRE = prod.PDT_PRIX_COURRANT_WS;
+                        ligneTicket.LTK_TOTAL_HT = (prod.PDT_PRIX_COURRANT_WS * Number) / (1 + prod.T_TVA.TVA_Tx);
+                        var HT = (prod.PDT_PRIX_COURRANT_WS * Number) / (1 + prod.T_TVA.TVA_Tx);
+                        ligneTicket.LTK_MNT_TVA = Math.Round((decimal)(prod.PDT_PRIX_COURRANT_WS.Value * Number - HT), 2);
+                        ligneTicket.LTK_SOMME = prod.PDT_PRIX_COURRANT_WS.HasValue ? prod.PDT_PRIX_COURRANT_WS * Number : 0;
                     }
 
                     if (_mainCaisse != null)
