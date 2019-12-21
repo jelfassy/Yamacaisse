@@ -5,31 +5,27 @@
              x:Class="YamaCaisse.Pages.WallStreetPage">
     <Grid>
          <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="10*" />
                 <RowDefinition Height="1*" />
              </Grid.RowDefinitions>
             <Image x:Name="ImageLogo"  HorizontalOptions="Fill" Grid.Row="0" />
-            <Label Text="" x:Name="lbChrono" FontSize="40" TextColor="Yellow" Grid.Row="1" HorizontalTextAlignment="Center"/>
-        <Grid x:Name="GdList" Grid.Row="2" Margin="15,0,0,15" VerticalOptions="StartAndExpand" >
+            <Label Text="" x:Name="lbChrono" FontSize="40" TextColor="Yellow" Grid.Row="1" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+        <Grid x:Name="GdList" Grid.Row="2" Margin=",0,0,15" VerticalOptions="StartAndExpand" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                <RowDefinition Height="30" />
-                 <RowDefinition Height="30" />
-                 <RowDefinition Height="30" />
-                 <RowDefinition Height="30" />
-                 <RowDefinition Height="30" />
-                 <RowDefinition Height="30" />
-                 <RowDefinition Height="30" />
-                 <RowDefinition Height="30" />
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                 <RowDefinition Height="25" />
+                 <RowDefinition Height="25" />
+                 <RowDefinition Height="25" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*" />
