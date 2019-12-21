@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 using Xamarin.Forms;
 using YamaCaisse.Services.ConfigServices;
 using YamaCaisse.Services.WallStreetServices;
@@ -67,7 +67,7 @@ namespace YamaCaisse.Pages
             int row = 2;
             Color col = Color.White;
             GdList.Children.Clear();
-            foreach (var produit in listProduit)
+            foreach (var produit in listProduit.OrderByDescending(c=>(c.PDT_PRIX_COURRANT_WS- c.PDT_Prix))))
             {
                 if(oldPrice.ContainsKey(produit.PDT_ID))
                 {
@@ -99,6 +99,12 @@ namespace YamaCaisse.Pages
                     FontSize = 25,
                     TextColor = col
                 }, column + 1, row) ;
+                GdList.Children.Add(new Label()
+                {
+                    Text = (produit.PDT_PRIX_COURRANT_WS.Value - produit.PDT_Prix.Value).ToString(),
+                    FontSize = 25,
+                    TextColor = col
+                }, column + 2, row);
                 column = column + 3;
                 if (column > 5)
                 {
