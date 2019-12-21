@@ -95,5 +95,42 @@ namespace YamaCaisse.Services.WallStreetServices
                 throw ex;
             }
         }
+
+        public async Task<bool> Crash(int idproduit)
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "CrackBoursier/",idproduit.ToString()));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RefreshPrice"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RefreshPrice" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
     }
 }

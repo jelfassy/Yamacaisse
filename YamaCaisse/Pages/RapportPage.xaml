@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-              xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
-             x:Class="YamaCaisse.Pages.RapportPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" x:Class="YamaCaisse.Pages.RapportPage">
     <ContentPage.Content>
-             <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
             <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
                 <local:HeaderBar />
-                <DatePicker x:Name="DtPicker"/>
+                <DatePicker x:Name="DtPicker" />
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    <Button Grid.Column="0" Grid.Row="0" Clicked="RapportJour_Clicked" Text="Rapport jour"  BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
+                    <Button Grid.Column="0" Grid.Row="0" Clicked="RapportJour_Clicked" Text="Rapport jour" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="1" Grid.Row="0" Clicked="RapportCouvert_Clicked" Text="Rapport couvert" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="0" Grid.Row="1" Clicked="RapportServeur_Clicked" Text="Rapport Serveur" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="1" Grid.Row="1" Clicked="RapportAnnuler_Clicked" Text="Rapport Annuler" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Clicked="RapportShowVente_Clicked" Text="Statistiques" BackgroundColor="DarkGreen" TextColor="{StaticResource TextIconeColor}" />
                     <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" x:Name="btwallstreet" Clicked="ShowWallStreet_Clicked" Text="Voir WallStreet" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
+                    <Grid Grid.Column="0" Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Picker x:Name="pkListProduit" Title="Select Produit" Grid.Column="0" />
+                        <Button Grid.Column="1" x:Name="btCrash" Clicked="btCrash_Clicked" Text="Crash WallStreet" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
+                    </Grid>
                 </Grid>
             </StackLayout>
         </AbsoluteLayout>

@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Entity;
 using YamaCaisse.Services.ConfigServices;
 using YamaCaisse.Services.RapportServices;
+using YamaCaisse.Services.WallStreetServices;
+using System.Linq;
 
 namespace YamaCaisse.Pages
 {
@@ -12,12 +15,16 @@ namespace YamaCaisse.Pages
 
         private IRapportDataServices _rapportDataServices;
         private IConfigDataServices _configDataServices;
+        private IWallStreetDataServices _wallStreetDataServices;
+
+        private List<Produit> listProduit = new List<Produit>();
 
         public RapportPage()
         {
             InitializeComponent();
             _rapportDataServices = DependencyService.Get<RapportDataServices>();
             _configDataServices = DependencyService.Get<ConfigDataServices>();
+            _wallStreetDataServices = DependencyService.Get<WallStreetDataServices>();
         }
 
 
@@ -33,9 +40,30 @@ namespace YamaCaisse.Pages
         {
             var modewallstreet = await _configDataServices.ModeWallStreet();
             if (modewallstreet == true)
+            {
                 btwallstreet.IsVisible = true;
+                LoadPickerData();
+
+            }
             else
                 btwallstreet.IsVisible = false;
+        }
+
+        async void LoadPickerData()
+        {
+            listProduit = await _wallStreetDataServices.GetProduit();
+
+            foreach (var prod in listProduit)
+            {
+                pkListProduit.Items.Add(prod.PDT_Designation);
+            }
+        }
+
+        async void btCrash_Clicked(object sender, System.EventArgs e)
+        {
+            var produit = listProduit.SingleOrDefault(c => c.PDT_Designation == pkListProduit.SelectedItem.ToString());
+
+            var rs = _wallStreetDataServices.Crash(produit.PDT_ID);
         }
 
         async void RapportJour_Clicked(object sender, System.EventArgs e)

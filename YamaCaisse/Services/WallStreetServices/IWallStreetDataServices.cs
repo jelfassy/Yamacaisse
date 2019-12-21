@@ -9,5 +9,6 @@ namespace YamaCaisse.Services.WallStreetServices
     {
         Task<bool> RefreshPrice();
         Task<List<Produit>> GetProduit();
+        Task<bool> Crash(int idproduit);
     }
 }
