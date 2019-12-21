@@ -89,18 +89,18 @@ namespace YamaCaisse.Pages
                 GdList.Children.Add(new Label()
                 {
                     Text = produit.PDT_Designation,
-                     FontSize = 35,
+                     FontSize = 25,
                     TextColor = col
                 },column,row);
 
                 GdList.Children.Add(new Label()
                 {
                     Text = produit.PDT_PRIX_COURRANT_WS == null ? produit.PDT_Prix.ToString() : produit.PDT_PRIX_COURRANT_WS.ToString(),
-                    FontSize = 35,
+                    FontSize = 25,
                     TextColor = col
                 }, column + 1, row) ;
                 column = column + 3;
-                if (column > 8)
+                if (column > 5)
                 {
                     row = row + 1;
                     column = 0;
