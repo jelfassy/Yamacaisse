@@ -42,11 +42,17 @@ namespace YamaCaisse.Pages
             if (modewallstreet == true)
             {
                 btwallstreet.IsVisible = true;
+                btwallstreet.IsVisible = false;
+                btCrash.IsVisible = false;
                 LoadPickerData();
 
             }
             else
+            {
+                pkListProduit.IsVisible = false;
                 btwallstreet.IsVisible = false;
+                btCrash.IsVisible = false;
+            }
         }
 
         async void LoadPickerData()
