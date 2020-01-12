@@ -50,7 +50,7 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-                <Button Clicked="Click_Encaisser" Text="Encaisser" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
+                <Button x:Name="btEncaisser" Clicked="Click_Encaisser" Text="Encaisser" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
                 <Button Clicked="Click_ListPaiement" Text="Liste" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" />
             </StackLayout>
         </StackLayout>

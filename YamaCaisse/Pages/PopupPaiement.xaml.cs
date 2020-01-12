@@ -163,7 +163,9 @@ namespace YamaCaisse.Pages
             btn.BackgroundColor = Color.Green;
             if(IdTypePaiement ==7)
             {
-                await PopupNavigation.Instance.PushAsync(new PopupCompte(IdTypePaiement));
+                btEncaisser.IsEnabled = false;
+                btEncaisser.BackgroundColor = Color.Gray;
+                await PopupNavigation.Instance.PushAsync(new PopupCompte(IdTypePaiement, this._ticket.TIK_ID, decimal.Parse(eMontantPayer.Text)));
             }
         }
 
@@ -194,8 +196,6 @@ namespace YamaCaisse.Pages
                             btng.BackgroundColor = (Color)Application.Current.Resources["PrimaryColor"];
                         }
                     }
-
-
                 }
                 else
                 {

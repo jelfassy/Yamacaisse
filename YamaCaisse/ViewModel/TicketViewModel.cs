@@ -428,7 +428,7 @@ namespace YamaCaisse.ViewModel
             {
                 var inlist = newlist.SingleOrDefault(d => 
                     d.LTK_DESIGNATION_PRODUIT == item.LTK_DESIGNATION_PRODUIT
-                        && d.LTK_SOMME == item.LTK_SOMME
+                       // && d.LTK_SOMME == item.LTK_SOMME
                         && d.FK_REC_ID == item.FK_REC_ID 
                         && d.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID).SequenceEqual(item.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID)));
                 if (inlist != null)

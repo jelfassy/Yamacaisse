@@ -21,13 +21,19 @@ namespace YamaCaisse.Pages
 
         private int _idTypePaiement;
 
+        private int _idTicket;
+
+        private decimal _montant;
+
         private IPaiementDataServices _paiementDataServices;
 
 
-        public PopupCompte(int IdTypePaiement)
+        public PopupCompte(int IdTypePaiement, int idTicket,decimal montant)
         {
             InitializeComponent();
             this._idTypePaiement = IdTypePaiement;
+            this._idTicket = idTicket;
+            this._montant = montant;
             eCompte.IsVisible = false;
             btSave.IsVisible = false;
             _compteDataServices = DependencyService.Get<ICompteDataServices>();
@@ -69,11 +75,11 @@ namespace YamaCaisse.Pages
                 PaiementTicket paiementtick = new PaiementTicket()
                 {
                     EMP_ID = App.UserId,
-                    FK_TIK_ID = TicketViewModel.Current.TKT_ID,
+                    FK_TIK_ID = this._idTicket,
                     FK_TPA_ID = this._idTypePaiement,
                     PATI_DATE = DateTime.Now,
                     FK_CMP_ID = idCompte,
-                    Montant = TicketViewModel.Current.MontantTotal
+                    Montant = this._montant
 
                 };
                 await _paiementDataServices.PostPaiement(paiementtick);
