@@ -71,8 +71,8 @@ namespace YamaCaisse.Pages
         {
             var produit = listProduit.SingleOrDefault(c => c.PDT_Designation == pkListProduit.SelectedItem.ToString());
 
-            var rs = _wallStreetDataServices.Crash(produit.PDT_ID);
-            if (rs.Result == true)
+            var rs =await _wallStreetDataServices.Crash(produit.PDT_ID);
+            if (rs == true)
                 await DisplayAlert("Crack ok", "Le produit a ete cracker", "OK");
         }
 
@@ -80,8 +80,8 @@ namespace YamaCaisse.Pages
         {
             var produit = listProduit.SingleOrDefault(c => c.PDT_Designation == pkListProduit.SelectedItem.ToString());
 
-            var rs = _wallStreetDataServices.ReinitBoursier(produit.PDT_ID);
-            if (rs.Result == true)
+            var rs =await _wallStreetDataServices.ReinitBoursier(produit.PDT_ID);
+            if (rs == true)
                 await DisplayAlert("Reinit ok", "Le produit a ete reinit", "OK");
         }
 

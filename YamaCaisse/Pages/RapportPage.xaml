@@ -22,7 +22,7 @@
                     <Button Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" x:Name="btwallstreet" Clicked="ShowWallStreet_Clicked" Text="Voir WallStreet" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     <Grid Grid.Column="0" Grid.Row="4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="4*" />
                             <ColumnDefinition Width="3*" />
                             <ColumnDefinition Width="3*" />
                         </Grid.ColumnDefinitions>
