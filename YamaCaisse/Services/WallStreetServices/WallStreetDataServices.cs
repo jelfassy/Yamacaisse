@@ -132,5 +132,47 @@ namespace YamaCaisse.Services.WallStreetServices
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Method qui reset le prix apres un crack
+        /// </summary>
+        /// <param name="idproduit">id du produit</param>
+        /// <returns>boolean</returns>
+        public async Task<bool> ReinitBoursier(int idproduit)
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "ReinitBoursier/", idproduit.ToString()));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RefreshPrice"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RefreshPrice" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
     }
 }
