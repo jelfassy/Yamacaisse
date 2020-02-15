@@ -23,10 +23,12 @@
                     <Grid Grid.Column="0" Grid.Row="4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="3*" />
                         </Grid.ColumnDefinitions>
                         <Picker x:Name="pkListProduit" Title="Select Produit" Grid.Column="0" />
                         <Button Grid.Column="1" x:Name="btCrash" Clicked="btCrash_Clicked" Text="Crash WallStreet" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
+                        <Button Grid.Column="2" x:Name="btReinit" Clicked="btReinit_Clicked" Text="Reinit Produit WallStreet" BackgroundColor="Purple" TextColor="{StaticResource TextIconeColor}" />
                     </Grid>
                 </Grid>
             </StackLayout>

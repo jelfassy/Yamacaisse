@@ -72,6 +72,17 @@ namespace YamaCaisse.Pages
             var produit = listProduit.SingleOrDefault(c => c.PDT_Designation == pkListProduit.SelectedItem.ToString());
 
             var rs = _wallStreetDataServices.Crash(produit.PDT_ID);
+            if (rs.Result == true)
+                await DisplayAlert("Crack ok", "Le produit a ete cracker", "OK");
+        }
+
+        async void btReinit_Clicked(object sender,System.EventArgs e)
+        {
+            var produit = listProduit.SingleOrDefault(c => c.PDT_Designation == pkListProduit.SelectedItem.ToString());
+
+            var rs = _wallStreetDataServices.ReinitBoursier(produit.PDT_ID);
+            if (rs.Result == true)
+                await DisplayAlert("Reinit ok", "Le produit a ete reinit", "OK");
         }
 
         async void RapportJour_Clicked(object sender, System.EventArgs e)
