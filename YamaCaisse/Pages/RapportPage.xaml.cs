@@ -22,6 +22,8 @@ namespace YamaCaisse.Pages
         public RapportPage()
         {
             InitializeComponent();
+            BindingContext = this;
+            this.IsBusy = false;
             _rapportDataServices = DependencyService.Get<RapportDataServices>();
             _configDataServices = DependencyService.Get<ConfigDataServices>();
             _wallStreetDataServices = DependencyService.Get<WallStreetDataServices>();
@@ -87,7 +89,9 @@ namespace YamaCaisse.Pages
 
         async void RapportJour_Clicked(object sender, System.EventArgs e)
         {
+            this.IsBusy = true;
             var rs = await _rapportDataServices.GetRapportJour(DtPicker.Date.ToLocalTime());
+            this.IsBusy = false;
         }
 
         async void RapportCouvert_Clicked(object sender, System.EventArgs e)

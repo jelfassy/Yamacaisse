@@ -44,7 +44,7 @@ namespace YamaCaisse.View
         {
             Device.StartTimer(TimeSpan.FromSeconds(5), () =>
             {
-                SetColorView(DateTime.Now - HeureCommande);
+                SetColorView(HeureCommande - DateTime.Now);
                 return true;
             });
         }
@@ -53,7 +53,7 @@ namespace YamaCaisse.View
         {
             try
             {
-                Timer = new DateTime(timeSpan.Value.Ticks).ToString("HH:mm");
+                Timer = Convert.ToDateTime(timeSpan.Value.ToString()).ToString("HH:mm");
                 this.lblTimer.Text = Timer;
                 if (Attente == true)
                     this.bxViewColor.BackgroundColor = Color.FromHex("#00BCD4");

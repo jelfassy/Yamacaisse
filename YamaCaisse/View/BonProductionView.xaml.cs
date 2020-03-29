@@ -59,7 +59,7 @@ namespace YamaCaisse.View
                 else
                     allEnAttente = false;
             }
-            SetColorView(DateTime.Now - BonProduction.Bon_DATE_DEBUT, allEnAttente);
+            SetColorView( BonProduction.Bon_DATE_DEBUT - DateTime.Now, allEnAttente);
 
             foreach (var ll in list)
                 grouped.Add(ll);
@@ -72,7 +72,7 @@ namespace YamaCaisse.View
 
         private void SetColorView(TimeSpan? timeSpan, bool attente)
         {
-            Timer = timeSpan.Value.TotalMinutes.ToString();
+            Timer = Convert.ToDateTime(timeSpan.Value.ToString()).ToString("HH:mm");
             this.lblTimer.Text = Timer;
             if (this.Send)
             {

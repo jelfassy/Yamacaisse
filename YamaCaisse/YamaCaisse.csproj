@@ -27,5 +27,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\WallStreetServices\" />
+    <Folder Include="Services\ReservationServices\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\PopupReservation.cs" />
   </ItemGroup>
 </Project>

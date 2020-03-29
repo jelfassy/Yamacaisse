@@ -36,6 +36,18 @@ namespace YamaCaisse.Pages
 
             ListReclames = await _reclameDataServices.GetReclameList();
 
+            var btattente = new Button
+            {
+                Text = "Attente",
+                BorderColor = Color.Gray,
+                BackgroundColor = Color.Red
+            };
+            btattente.WidthRequest = 100;
+            btattente.HeightRequest = 70;
+            btattente.FontSize = 24;
+            btattente.ClassId = "0";
+            btattente.Clicked += Click_SelectReclame;
+            stkReclame.Children.Add(btattente);
 
             foreach (var reclame in ListReclames.OrderBy(c => c.REC_ORDER))
             {
