@@ -35,9 +35,9 @@
                                     <ColumnDefinition Width="3*" />
                                 </Grid.ColumnDefinitions>
                         <Label Grid.Row="0" Grid.Column="0" Text="Heure" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
-                            <Label.GestureRecognizers>
+                            <!--<Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="onTap_TriHeure" />
-                            </Label.GestureRecognizers>
+                            </Label.GestureRecognizers>-->
                         </Label>
                         <Label Grid.Row="0" Grid.Column="1" Text="Nom" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
                             <Label.GestureRecognizers>
