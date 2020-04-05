@@ -23,6 +23,9 @@ namespace YamaCaisse.Pages {
         private global::Xamarin.Forms.StackLayout StkplitDetail;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button btTableDest;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ListView E_listligneTickettopay;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -30,6 +33,7 @@ namespace YamaCaisse.Pages {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(PopupEclater));
             E_listligneTicket = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "E_listligneTicket");
             StkplitDetail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "StkplitDetail");
+            btTableDest = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btTableDest");
             E_listligneTickettopay = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "E_listligneTickettopay");
         }
     }

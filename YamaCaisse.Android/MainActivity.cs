@@ -19,7 +19,7 @@ namespace YamaCaisse.Droid
 
             base.OnCreate(savedInstanceState);
             Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+           // Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
@@ -27,7 +27,7 @@ namespace YamaCaisse.Droid
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+         //    Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
