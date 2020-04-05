@@ -114,6 +114,7 @@ namespace YamaCaisse.Pages
                     {
                         switchcolor = true;
                         viewCell.View.BackgroundColor = (Color)Application.Current.Resources["ListcolorDark"];
+
                     }
                 }
             }

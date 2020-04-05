@@ -52,11 +52,6 @@ namespace YamaCaisse.Pages
             set;
         }
 
-        async void Click_Reservation(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new YamaCaisse.Pages.ReservationPage());
-        }
-
         async void Click_Table(object sender, EventArgs e)
         {
                 App.CurrentPage = nameof(MainTablePage);
