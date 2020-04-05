@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {}
+    "/Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {}
   },
   "projects": {
-    "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
+    "/Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectUniqueName": "/Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
         "projectName": "YamaCaisse",
-        "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
         "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-        "outputPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/",
+        "outputPath": "/Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -39,25 +39,33 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microcharts": {
+              "target": "Package",
+              "version": "[0.7.1, )"
+            },
+            "Microcharts.Forms": {
+              "target": "Package",
+              "version": "[0.7.1, )"
+            },
             "Microsoft.AppCenter": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.AppCenter.Crashes": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.AppCenter.Distribute": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.AppCenter.Push": {
               "target": "Package",
-              "version": "[2.1.1, )"
+              "version": "[3.1.0, )"
             },
             "Microsoft.AspNet.SignalR.Client": {
               "target": "Package",
@@ -71,23 +79,27 @@
             },
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[12.0.2, )"
+              "version": "[12.0.3, )"
             },
             "Polly": {
               "target": "Package",
-              "version": "[7.1.1, )"
+              "version": "[7.2.0, )"
             },
             "Rg.Plugins.Popup": {
               "target": "Package",
-              "version": "[1.1.5.188, )"
+              "version": "[1.2.0.223, )"
+            },
+            "SkiaSharp.Views.Forms": {
+              "target": "Package",
+              "version": "[1.68.1.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.3.1, )"
+              "version": "[1.5.2, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.2.0.815419, )"
+              "version": "[4.5.0.530, )"
             }
           },
           "imports": [
@@ -100,7 +112,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
         }
       }
     }
