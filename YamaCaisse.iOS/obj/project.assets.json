@@ -529,6 +529,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Essentials/1.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "OpenTK-1.0",
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
       "Xamarin.Forms/4.5.0.530": {
         "type": "package",
         "compile": {
@@ -675,6 +688,7 @@
           "Polly": "7.2.0",
           "Rg.Plugins.Popup": "1.2.0.223",
           "SkiaSharp.Views.Forms": "1.68.1.1",
+          "Xamarin.Essentials": "1.5.2",
           "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
@@ -1191,6 +1205,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Essentials/1.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "OpenTK-1.0",
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
       "Xamarin.Forms/4.5.0.530": {
         "type": "package",
         "compile": {
@@ -1337,6 +1364,7 @@
           "Polly": "7.2.0",
           "Rg.Plugins.Popup": "1.2.0.223",
           "SkiaSharp.Views.Forms": "1.68.1.1",
+          "Xamarin.Essentials": "1.5.2",
           "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
@@ -1856,6 +1884,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Essentials/1.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "OpenTK-1.0",
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
       "Xamarin.Forms/4.5.0.530": {
         "type": "package",
         "compile": {
@@ -2002,6 +2043,7 @@
           "Polly": "7.2.0",
           "Rg.Plugins.Popup": "1.2.0.223",
           "SkiaSharp.Views.Forms": "1.68.1.1",
+          "Xamarin.Essentials": "1.5.2",
           "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
@@ -2521,6 +2563,19 @@
           "lib/xamarinios10/_._": {}
         }
       },
+      "Xamarin.Essentials/1.5.2": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "OpenTK-1.0",
+          "System.Drawing.Common.dll"
+        ],
+        "compile": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        },
+        "runtime": {
+          "lib/xamarinios10/Xamarin.Essentials.dll": {}
+        }
+      },
       "Xamarin.Forms/4.5.0.530": {
         "type": "package",
         "compile": {
@@ -2667,6 +2722,7 @@
           "Polly": "7.2.0",
           "Rg.Plugins.Popup": "1.2.0.223",
           "SkiaSharp.Views.Forms": "1.68.1.1",
+          "Xamarin.Essentials": "1.5.2",
           "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
@@ -3676,6 +3732,54 @@
         "version.txt"
       ]
     },
+    "Xamarin.Essentials/1.5.2": {
+      "sha512": "qHxkrkx5jIC0X/qWhxCPZ3MuuOJm8bfCzAoUtlpOBSE4oV0JhrkTezK0A+IV+k/MeJ3zKc8FexaIXah9rlCTIw==",
+      "type": "package",
+      "path": "xamarin.essentials/1.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/monoandroid10.0/Xamarin.Essentials.dll",
+        "lib/monoandroid10.0/Xamarin.Essentials.pdb",
+        "lib/monoandroid10.0/Xamarin.Essentials.xml",
+        "lib/monoandroid80/Xamarin.Essentials.dll",
+        "lib/monoandroid80/Xamarin.Essentials.pdb",
+        "lib/monoandroid80/Xamarin.Essentials.xml",
+        "lib/monoandroid81/Xamarin.Essentials.dll",
+        "lib/monoandroid81/Xamarin.Essentials.pdb",
+        "lib/monoandroid81/Xamarin.Essentials.xml",
+        "lib/monoandroid90/Xamarin.Essentials.dll",
+        "lib/monoandroid90/Xamarin.Essentials.pdb",
+        "lib/monoandroid90/Xamarin.Essentials.xml",
+        "lib/netstandard1.0/Xamarin.Essentials.dll",
+        "lib/netstandard1.0/Xamarin.Essentials.pdb",
+        "lib/netstandard1.0/Xamarin.Essentials.xml",
+        "lib/netstandard2.0/Xamarin.Essentials.dll",
+        "lib/netstandard2.0/Xamarin.Essentials.pdb",
+        "lib/netstandard2.0/Xamarin.Essentials.xml",
+        "lib/tizen40/Xamarin.Essentials.dll",
+        "lib/tizen40/Xamarin.Essentials.pdb",
+        "lib/tizen40/Xamarin.Essentials.xml",
+        "lib/uap10.0.16299/Xamarin.Essentials.dll",
+        "lib/uap10.0.16299/Xamarin.Essentials.pdb",
+        "lib/uap10.0.16299/Xamarin.Essentials.pri",
+        "lib/uap10.0.16299/Xamarin.Essentials.xml",
+        "lib/xamarinios10/Xamarin.Essentials.dll",
+        "lib/xamarinios10/Xamarin.Essentials.pdb",
+        "lib/xamarinios10/Xamarin.Essentials.xml",
+        "lib/xamarintvos10/Xamarin.Essentials.dll",
+        "lib/xamarintvos10/Xamarin.Essentials.pdb",
+        "lib/xamarintvos10/Xamarin.Essentials.xml",
+        "lib/xamarinwatchos10/Xamarin.Essentials.dll",
+        "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
+        "lib/xamarinwatchos10/Xamarin.Essentials.xml",
+        "readme.txt",
+        "xamarin.essentials.1.5.2.nupkg.sha512",
+        "xamarin.essentials.nuspec"
+      ]
+    },
     "Xamarin.Forms/4.5.0.530": {
       "sha512": "ViHc4HlMUQEt3bR+PpDebHRXAuRCg67XC8UJ/JgQ0CJ11CiB35WT+NBJHipr0cGyHxGwoBhTwA/rKbQtIAy7eg==",
       "type": "package",
@@ -4021,6 +4125,7 @@
       "Polly >= 7.2.0",
       "Rg.Plugins.Popup >= 1.2.0.223",
       "SkiaSharp.Views.Forms >= 1.68.1.1",
+      "Xamarin.Essentials >= 1.5.2",
       "Xamarin.Forms >= 4.5.0.530",
       "Xamarin.TestCloud.Agent >= 0.21.9",
       "YamaCaisse >= 1.0.0"
@@ -4104,6 +4209,10 @@
           "SkiaSharp.Views.Forms": {
             "target": "Package",
             "version": "[1.68.1.1, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.5.2, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
