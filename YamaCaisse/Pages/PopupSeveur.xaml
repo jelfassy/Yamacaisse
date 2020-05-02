@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+                  x:Class="YamaCaisse.Pages.PopupSeveur">
+    <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="350">
+
+        <Label x:Name="SeveurTitle" Text="Seveur" HorizontalOptions="FillAndExpand"
+                         FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" TextColor="Blue" />
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                 <Label x:Name="lblNomServeur" Text="Etablissement"  FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Column="0" Grid.Row="0"/>
+                <Entry BackgroundColor="White" Opacity="1" x:Name="NomServeur" Placeholder="Family" WidthRequest="150"  Grid.Column="1" Grid.Row="0"/>
+
+                <Label x:Name="lblServeur" Text="Adresse"  FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Column="0" Grid.Row="1"/>
+                <Entry BackgroundColor="White" Opacity="1" x:Name="AdresseServeur" Placeholder="192.168.1.15:63058" WidthRequest="150"  Grid.Column="1" Grid.Row="1"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End" Spacing="10" Margin="0,0,10,15" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+                    <Label Text="Authentification" FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End"/>
+                    <Switch x:Name="AuthentSwitch" IsToggled="False" Toggled="OnToggled"  />
+                </StackLayout>
+
+                <Grid x:Name="stauthentwin" HorizontalOptions="Center"
+                      VerticalOptions="FillAndExpand" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" IsVisible="false">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label Text="Login" FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Row="0" Grid.Column="0" />
+                    <Entry BackgroundColor="White" Opacity="1" x:Name="eloginwindows"
+                                  WidthRequest="150" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="Mot de passe" FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Row="1" Grid.Column="0" />
+                    <Entry BackgroundColor="White" Opacity="1" x:Name="ePasswindows"
+                                  WidthRequest="150" Grid.Row="1" Grid.Column="1"/>
+
+                </Grid>
+                   <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" Grid.Column="0" Grid.Row="4"/>
+                   <Button Clicked="Click_ajouter" Text="Ajouter" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="4"/>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>
