@@ -4,8 +4,10 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.AspNet.SignalR.Client;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.PageProduitServices;
@@ -45,6 +47,10 @@ namespace YamaCaisse.Pages
 
         private List<PageProduit> listPageProduit;
 
+        private HubConnection hubConnection;
+        private IHubProxy hubProxy;
+        bool connected;
+
         public Caisse()
         {
             this.BindingContext = this;
@@ -64,6 +70,33 @@ namespace YamaCaisse.Pages
         }
 
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
+            hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
+
+            hubProxy.On<int, string>("Logout", (production, bonProduction) =>
+            {
+                MainThread.BeginInvokeOnMainThread(async () =>
+                {
+                    TicketViewModel.Current.Clear();
+                    App.JsonPageProduit.Clear();
+                    App.ListSalle = null;
+                    App.JsonPage = null;
+                    await Navigation.PushModalAsync(new YamaCaisse.MainPage());
+
+                });
+            });
+        }
+
+
+        protected override void OnDisappearing()
+        {
+           
+            base.OnDisappearing();
+        }
 
         public void ResetTicket()
         {

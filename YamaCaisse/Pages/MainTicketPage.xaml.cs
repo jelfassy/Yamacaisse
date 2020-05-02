@@ -58,6 +58,13 @@ namespace YamaCaisse.Pages
             }
         }
 
+        void OnTextChanged(object sender, EventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)sender;
+            listViewTicket.ItemsSource = ListTicket.Where(c => c.TIK_ID.ToString().Contains(searchBar.Text)
+                                                    || c.TIK_MNT_TOTAL.ToString().Contains(searchBar.Text));
+        }
+
         public async void loadData()
         {
             var reslistTicket = await _ticketDataServices.GetTickets(IsEcranTicket);

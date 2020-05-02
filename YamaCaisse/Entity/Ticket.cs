@@ -56,6 +56,11 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public int? FK_CLI_ID
+        {
+            get;
+            set;
+        }
         public string TIK_TPV
         {
             get;
@@ -89,6 +94,11 @@ namespace YamaCaisse.Entity
         public Table T_TABLE {
             get;
             set;
+        }
+
+        public Client T_CLIENT
+        {
+            get;set;
         }
 
         public int? FK_PRT_ID

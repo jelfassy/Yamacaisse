@@ -13,6 +13,8 @@
     <ContentView.Content>
         <StackLayout x:Name="StkList" Grid.Column="2" BackgroundColor="White" VerticalOptions="StartAndExpand">
             <Label Text="{Binding MotifAnnulation,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Red" />
+             <Button x:Name="btClient" Text="Client" FontSize="Large" WidthRequest="100" Clicked="Click_Client" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+             </Button>
             <Grid VerticalOptions="StartAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
@@ -37,6 +39,7 @@
                 <BoxView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
                 <BoxView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5" BackgroundColor="{StaticResource DividerColor}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsVisible="{Binding HaveMenuInTicket,Source={x:Static local:TicketViewModel.Current}}" />
                 <Button Clicked="Click_Menu" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" FontSize="Large" Text="Menu" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding HaveMenuInTicket,Source={x:Static local:TicketViewModel.Current}}" />
+               
                 <ListView x:Name="E_listligneTicket" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" HasUnevenRows="true" ItemsSource="{Binding ListLigneTicket,Source={x:Static local:TicketViewModel.Current}}" SeparatorVisibility="Default" ItemAppearing="listLigne_ItemAppearing" ItemSelected="Handle_ItemSelected" SelectionMode="Single">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -136,9 +139,13 @@
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="nb Element" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="1" Grid.Column="0" Text="{Binding NbElemCommand,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <!--<Label Grid.Row="1" Grid.Column="1" Text="Reste A Payer" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding ResteAPayer,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />-->
+                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding NbElemCommand,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Orientation="Horizontal">
+                   <Label Text="{Binding Client.CLI_NOM,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                   <Label Text="{Binding Client.CLI_PRENOM,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                   <Label Text="{Binding Client.CLI_TELEPHONE,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                   <Label Text="{Binding Promotion.PROM_NOM,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    </StackLayout>
                 </Grid>
             </Grid>
         </StackLayout>

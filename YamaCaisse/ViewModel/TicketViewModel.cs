@@ -50,6 +50,8 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.ListPaiementTicket.Clear();
             TicketViewModel.Current.Ticket = null;
             TicketViewModel.Current.MotifAnnulation = null;
+            TicketViewModel.Current.Client = null;
+            TicketViewModel.Current.Promotion = null;
         }
 
         public void SetTicket(Ticket ticket, bool isAddition = false)
@@ -67,6 +69,7 @@ namespace YamaCaisse.ViewModel
                 this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
                 this.Ticket = ticket;
                 this.MotifAnnulation = ticket.TIK_MOTIF_ANNUL;
+                this.Client = ticket.T_CLIENT;
                 if(!isAddition)
                 {
                     this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
@@ -127,6 +130,7 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+
         public int? _nbCouvert { get; set; }
         public int? NbCouvert
         {
@@ -137,6 +141,29 @@ namespace YamaCaisse.ViewModel
                 OnPropertyChanged(nameof(NbCouvert));
             }
         }
+
+        private Client _Client;
+        public Client Client
+        {
+            get { return _Client; }
+            set
+            {
+                _Client = value;
+                OnPropertyChanged(nameof(Client));
+            }
+        }
+
+        private Promotion _Promotion;
+        public Promotion Promotion
+        {
+            get { return _Promotion; }
+            set
+            {
+                _Promotion = value;
+                OnPropertyChanged(nameof(Promotion));
+            }
+        }
+
         public bool switchcolor;
 
 
@@ -347,6 +374,11 @@ namespace YamaCaisse.ViewModel
                         ssligne.T_EMPLOYE = null;
                     }
                 }
+            }
+            if(this.Client != null)
+            {
+                ticket.FK_CLI_ID = Client.CLI_ID;
+                ticket.T_CLIENT = Client;
             }
             if (ListPaiementTicket == null)
                 ListPaiementTicket = new ObservableCollection<PaiementTicket>();

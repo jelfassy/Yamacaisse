@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 x:Class="YamaCaisse.Pages.PopupClient">
+    <AbsoluteLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="12" >
+        <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}"
+                     AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+
+                <SearchBar Placeholder="Rechercher ..."
+                       TextChanged="OnTextChanged"
+                        CancelButtonColor="Orange"
+                        PlaceholderColor="Orange"
+                        TextColor="Orange"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Medium"
+                        FontAttributes="Italic" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10*" />
+                    <ColumnDefinition Width="6*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="14*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <ListView x:Name="ListClient" Grid.Column="0" Grid.Row="0" ItemTapped="Client_Tapped">
+                    <ListView.Header>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60">
+                                </RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="Nom" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                            </Label>
+                            <Label Grid.Row="0" Grid.Column="1" Text="Prenom" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                            </Label>
+                            <Label Grid.Row="0" Grid.Column="2" Text="Telephone" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                            </Label>
+                            <Label Grid.Row="0" Grid.Column="3" Text="Mail" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                            </Label>
+                            <Label Grid.Row="0" Grid.Column="4" Text="Promotion" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                            </Label>
+                         </Grid>
+                    </ListView.Header>
+                     <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Appearing="Cell_OnAppearing">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="70">
+                                        </RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <BoxView x:Name="backgdligne" Grid.Column="0" Grid.Row="0" BackgroundColor="{Binding Bgcolor}" Grid.ColumnSpan="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding CLI_NOM}" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding CLI_PRENOM}" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}" />
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding CLI_TELEPHONE}" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}" />
+                                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding CLI_MAIL}" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}" />
+                                    <Label Grid.Row="0" Grid.Column="4" Text="{Binding T_PROMOTION.PROM_NOM}" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}" />
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Grid Grid.Column="1" VerticalOptions="Center" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Label x:Name="lbIdcli" Text="" IsVisible="false"/>
+                    <Label x:Name="lblNom" Text="Nom"  FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Column="0" Grid.Row="0"/>
+                    <Entry BackgroundColor="White" Opacity="1" x:Name="eNom" WidthRequest="150"  Grid.Column="1" Grid.Row="0"/>
+
+                    <Label x:Name="lblpNom" Text="Prénom"  FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Column="0" Grid.Row="1"/>
+                    <Entry BackgroundColor="White" Opacity="1" x:Name="eprenom" WidthRequest="150"  Grid.Column="1" Grid.Row="1"/>
+
+                    <Label x:Name="lblTel" Text="Télephone"  FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Column="0" Grid.Row="2"/>
+                    <Entry BackgroundColor="White" Opacity="1" x:Name="eTel" WidthRequest="150"  Grid.Column="1" Grid.Row="2"/>
+
+                    <Label x:Name="lblMail" Text="Mail"  FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Column="0" Grid.Row="3"/>
+                    <Entry BackgroundColor="White" Opacity="1" x:Name="eMail" WidthRequest="150"  Grid.Column="1" Grid.Row="3"/>
+
+                    <Label x:Name="lblReduction" Text="Reduction"  FontAttributes="Bold"
+                              FontSize="Medium" VerticalTextAlignment="End" Grid.Column="0" Grid.Row="4"/>
+                      <Picker x:Name="pkListPromotion" Title="Select Promotion" Grid.Column="1" Grid.Row="4"/>
+
+                    <Button x:Name="btAjouter" Clicked="Click_ajouter" Text="Ajouter" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
+                    <Button x:Name="btModifier" Clicked="Click_Modifier" Text="Modifier" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
+                    <Button x:Name="btSelect" Clicked="Click_select" Text="Selectionner" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
+
+                </Grid>
+                    <Button Clicked="Click_close" Text="Fermer" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="2"/>
+            </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
+</pages:PopupPage>

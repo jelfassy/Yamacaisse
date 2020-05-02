@@ -52,6 +52,43 @@ namespace YamaCaisse.Services.ConfigServices
             }
         }
 
+        public async Task<bool> ModePressing()
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "ModePressing"));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"ModePressing"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"ModePressing" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
         public async Task<bool> ModeWallStreet()
         {
             try

@@ -10,6 +10,14 @@
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 <StackLayout x:Name="StkTicketList" Grid.Column="0" Orientation="Vertical" Margin="10,0,0,0">
+                     <SearchBar Placeholder="Rechercher ..."
+                       TextChanged="OnTextChanged"
+                        CancelButtonColor="Orange"
+                        PlaceholderColor="Orange"
+                        TextColor="Orange"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Medium"
+                        FontAttributes="Italic" />
                     <ListView x:Name="listViewTicket" HorizontalOptions="StartAndExpand" RowHeight="60" ItemsSource="{Binding ListTicket}" SeparatorVisibility="Default" ItemSelected="Ligne_ItemSelected">
                         <ListView.Header>
                             <Grid>

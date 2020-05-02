@@ -4,9 +4,11 @@ using Polly;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace YamaCaisse.Tools
 {
@@ -25,8 +27,21 @@ namespace YamaCaisse.Tools
         {
             try
             {
-                HttpClient client = new HttpClient();
+                HttpClient client;
+                if ((bool)Application.Current.Properties["Authent"])
+                {
+                    string username = (Application.Current.Properties["UserName"] as string);
+                    string password = (Application.Current.Properties["Password"] as string);
 
+                    var authData = string.Format("{0}:{1}", username, password);
+                    var authHeaderValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(authData));
+                    client = new HttpClient();
+                    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", authHeaderValue);
+                }
+                else
+                {
+                    client = new HttpClient();
+                }
                 return client;
             }
             catch (Exception)

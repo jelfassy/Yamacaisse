@@ -25,6 +25,11 @@ namespace YamaCaisse.View
             BindingContext = this;
             _pageDataServices = DependencyService.Get<IPageDataServices>();
             _tableDataServices = DependencyService.Get<ITableDataServices>();
+
+            if (ConfigViewModel.Current.ModePressing)
+                btClient.IsVisible = true;
+            else
+                btClient.IsVisible = false;
         }
 
 
@@ -42,7 +47,6 @@ namespace YamaCaisse.View
             await PopupNavigation.Instance.PushAsync(new PopupCouvert());
         }
 
-
         async void Click_SelectTable(object sender, System.EventArgs e)
         {
               await PopupNavigation.Instance.PushAsync(new PopupTable(this,false,true));
@@ -53,6 +57,10 @@ namespace YamaCaisse.View
             await PopupNavigation.Instance.PushAsync(new PopupFormule());
         }
 
+        async void Click_Client(object sender, System.EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(new PopupClient());
+        }
 
         void listLigne_ItemAppearing(object sender, Xamarin.Forms.ItemVisibilityEventArgs e)
         {
