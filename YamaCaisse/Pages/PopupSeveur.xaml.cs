@@ -46,12 +46,13 @@ namespace YamaCaisse.Pages
                 PassWindows = this.ePasswindows.Text
             };
             if (Application.Current.Properties.ContainsKey("ServeurList"))
-                list = (List<ServeurCnx>)Application.Current.Properties["ServeurList"];
+                list = Application.Current.Properties["ServeurList"] as List<ServeurCnx>;
             else
                 list = new List<ServeurCnx>();
             list.Add(cn);
 
-            Application.Current.Properties["ServeurList"] = list;
+            App.Current.Properties.Add("ServeurList", list);
+            await App.Current.SavePropertiesAsync();
 
             if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
             {
