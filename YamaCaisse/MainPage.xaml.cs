@@ -14,6 +14,7 @@ using YamaCaisse.Pages;
 using YamaCaisse.Services.ConfigServices;
 using YamaCaisse.Services.JourServices;
 using YamaCaisse.Services.UserServices;
+using YamaCaisse.Tools;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse
@@ -62,6 +63,7 @@ namespace YamaCaisse
 
         public async void LoadPickerData()
         {
+            pkListServeur.Items.Clear();
             List<ServeurCnx> listServeur = new List<ServeurCnx>();
             if (Application.Current.Properties.ContainsKey("ServeurList"))
                 listServeur = (List<ServeurCnx>)Application.Current.Properties["ServeurList"];
