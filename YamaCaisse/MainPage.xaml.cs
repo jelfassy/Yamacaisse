@@ -66,7 +66,7 @@ namespace YamaCaisse
             pkListServeur.Items.Clear();
             List<ServeurCnx> listServeur = new List<ServeurCnx>();
             if (Application.Current.Properties.ContainsKey("ServeurList"))
-                listServeur = (List<ServeurCnx>)Application.Current.Properties["ServeurList"];
+                listServeur = Application.Current.Properties["ServeurList"] as List<ServeurCnx>;
             foreach (var serv in listServeur)
             {
                 pkListServeur.Items.Add(serv.SeveurName);
@@ -95,7 +95,7 @@ namespace YamaCaisse
                     await DisplayAlert("Serveur Indisponible", "Ajouter un Serveur", "OK");
                     return;
                 }
-                List<ServeurCnx> listServeur = (List<ServeurCnx>)Application.Current.Properties["ServeurList"];
+                List<ServeurCnx> listServeur = Application.Current.Properties["ServeurList"] as List<ServeurCnx>;
                 var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
                 Application.Current.Properties["Authent"] = serveur.AuthentWindows;
                 Application.Current.Properties["UserName"] = serveur.UserWindows;
