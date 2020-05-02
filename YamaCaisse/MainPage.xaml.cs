@@ -36,7 +36,7 @@ namespace YamaCaisse
             //  if (Application.Current.Properties.ContainsKey("ServeurAdress"))
             //  this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
             //this.AdresseServeur.Text = "192.168.1.37:63058";
-            List<ServeurCnx> listServeur = new List<ServeurCnx>();
+           // List<ServeurCnx> listServeur = new List<ServeurCnx>();
             //ServeurCnx cn = new ServeurCnx()
             //{
             //    SeveurName = "Debug",
@@ -46,7 +46,7 @@ namespace YamaCaisse
             //    PassWindows = "1234"
             //};
             //listServeur.Add(cn);
-            Application.Current.Properties["ServeurList"] = listServeur;
+           // Application.Current.Properties["ServeurList"] = listServeur;
         }
 
         void Click_Number(object sender, EventArgs e)
