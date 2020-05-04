@@ -63,6 +63,10 @@ namespace YamaCaisse
 
         public async void LoadPickerData()
         {
+            try
+            {
+
+        
             pkListServeur.Items.Clear();
             List<ServeurCnx> listServeur = new List<ServeurCnx>();
             if (Application.Current.Properties.ContainsKey("ServeurList"))
@@ -71,7 +75,18 @@ namespace YamaCaisse
             {
                 pkListServeur.Items.Add(serv.SeveurName);
             }
-            pkListServeur.SelectedIndex = 0;
+           if(pkListServeur.Items.Count > 0)
+                    pkListServeur.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                this.IsBusy = false;
+                var property = new Dictionary<string, string>
+                {
+                    {"Caisse","Load Picker"}
+                };
+                Crashes.TrackError(ex, property);
+            }
         }
 
         void Click_Back(object sender, EventArgs e)
