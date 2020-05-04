@@ -66,7 +66,7 @@ namespace YamaCaisse
             pkListServeur.Items.Clear();
             List<ServeurCnx> listServeur = new List<ServeurCnx>();
             if (Application.Current.Properties.ContainsKey("ServeurList"))
-                listServeur = Application.Current.Properties["ServeurList"] as List<ServeurCnx>;
+                 listServeur = (List<ServeurCnx>)HttpHelper.DeserializeToList<ServeurCnx>(Application.Current.Properties["ServeurList"].ToString());
             foreach (var serv in listServeur)
             {
                 pkListServeur.Items.Add(serv.SeveurName);
