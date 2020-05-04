@@ -239,7 +239,7 @@ namespace YamaCaisse.Tools
         /// <returns>The to list.</returns>
         /// <param name="JsonString">Json string.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        private static List<T> DeserializeToList<T>(string JsonString)
+        public static List<T> DeserializeToList<T>(string JsonString)
         {
             var array = JArray.Parse(JsonString);
 

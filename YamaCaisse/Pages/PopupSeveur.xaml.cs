@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
+using YamaCaisse.Tools;
 
 namespace YamaCaisse.Pages
 {
@@ -46,12 +48,12 @@ namespace YamaCaisse.Pages
                 PassWindows = this.ePasswindows.Text
             };
             if (Application.Current.Properties.ContainsKey("ServeurList"))
-                list = Application.Current.Properties["ServeurList"] as List<ServeurCnx>;
+                list = (List<ServeurCnx>)HttpHelper.DeserializeToList<ServeurCnx>(Application.Current.Properties["ServeurList"].ToString());
             else
                 list = new List<ServeurCnx>();
             list.Add(cn);
-
-            App.Current.Properties.Add("ServeurList", list);
+            var jsonValueToSave = JsonConvert.SerializeObject(list);
+            App.Current.Properties.Add("ServeurList", jsonValueToSave);
             await App.Current.SavePropertiesAsync();
 
             if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
