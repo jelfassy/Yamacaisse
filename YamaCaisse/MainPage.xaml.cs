@@ -95,7 +95,7 @@ namespace YamaCaisse
                     await DisplayAlert("Serveur Indisponible", "Ajouter un Serveur", "OK");
                     return;
                 }
-                List<ServeurCnx> listServeur = Application.Current.Properties["ServeurList"] as List<ServeurCnx>;
+                List<ServeurCnx> listServeur = (List<ServeurCnx>)HttpHelper.DeserializeToList<ServeurCnx>(Application.Current.Properties["ServeurList"].ToString());
                 var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
                 Application.Current.Properties["Authent"] = serveur.AuthentWindows;
                 Application.Current.Properties["UserName"] = serveur.UserWindows;
