@@ -21,6 +21,8 @@
                  <Picker x:Name="pkListServeur" Title="Select Serveur" />
                  <Button Text="Ajouter Serveur" Clicked="Click_Serveur" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                 </Button>
+                   <Button Text="Supprimer Serveur" Clicked="Click_SuppServeur" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
             </StackLayout>
             <Image x:Name="logo" Source="YamaCaisse_1024x1024.png" WidthRequest="200" HeightRequest="200"/>
             <StackLayout VerticalOptions="Start" HorizontalOptions="Center">

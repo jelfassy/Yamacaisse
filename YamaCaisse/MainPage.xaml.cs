@@ -101,6 +101,24 @@ namespace YamaCaisse
             await Navigation.PushPopupAsync(new PopupSeveur(this));
             LoadPickerData();
         }
+        async void Click_SuppServeur(object sender, EventArgs e)
+        {
+            List<ServeurCnx> listServeur = new List<ServeurCnx>();
+            if (Application.Current.Properties.ContainsKey("ServeurList"))
+            {
+                listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
+
+                var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
+
+                listServeur.Remove(serveur);
+                var jsonValueToSave = JsonConvert.SerializeObject(listServeur);
+
+                App.Current.Properties["ServeurList"] = jsonValueToSave;
+                await App.Current.SavePropertiesAsync();
+            }
+
+            LoadPickerData();
+        }
 
         async void Click_Connexion(object sender, EventArgs e)
         {

@@ -53,7 +53,11 @@ namespace YamaCaisse.Pages
                 list = new List<ServeurCnx>();
             list.Add(cn);
             var jsonValueToSave = JsonConvert.SerializeObject(list);
-            App.Current.Properties.Add("ServeurList", jsonValueToSave);
+            if (!Application.Current.Properties.ContainsKey("ServeurList"))
+                App.Current.Properties.Add("ServeurList", jsonValueToSave);
+            else
+                App.Current.Properties["ServeurList"] = jsonValueToSave;
+           
             await App.Current.SavePropertiesAsync();
 
             if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
