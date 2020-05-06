@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
@@ -69,8 +70,8 @@ namespace YamaCaisse
         
             pkListServeur.Items.Clear();
             List<ServeurCnx> listServeur = new List<ServeurCnx>();
-            if (Application.Current.Properties.ContainsKey("ServeurList"))
-                 listServeur = (List<ServeurCnx>)HttpHelper.DeserializeToList<ServeurCnx>(Application.Current.Properties["ServeurList"].ToString());
+                if (Application.Current.Properties.ContainsKey("ServeurList"))
+                    listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
             foreach (var serv in listServeur)
             {
                 pkListServeur.Items.Add(serv.SeveurName);
@@ -109,8 +110,9 @@ namespace YamaCaisse
                 {
                     await DisplayAlert("Serveur Indisponible", "Ajouter un Serveur", "OK");
                     return;
-                }
-                List<ServeurCnx> listServeur = (List<ServeurCnx>)HttpHelper.DeserializeToList<ServeurCnx>(Application.Current.Properties["ServeurList"].ToString());
+                } 
+                List<ServeurCnx> listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
+
                 var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
                 Application.Current.Properties["Authent"] = serveur.AuthentWindows;
                 Application.Current.Properties["UserName"] = serveur.UserWindows;

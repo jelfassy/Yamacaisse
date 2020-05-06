@@ -48,7 +48,7 @@ namespace YamaCaisse.Pages
                 PassWindows = this.ePasswindows.Text
             };
             if (Application.Current.Properties.ContainsKey("ServeurList"))
-                list = (List<ServeurCnx>)HttpHelper.DeserializeToList<ServeurCnx>(Application.Current.Properties["ServeurList"].ToString());
+                list = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
             else
                 list = new List<ServeurCnx>();
             list.Add(cn);
