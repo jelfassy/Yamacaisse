@@ -5,6 +5,7 @@ namespace YamaCaisse.Services.ConfigServices
 {
     public interface IConfigDataServices
     {
+        Task<bool> TestPing();
         Task<bool> CouvertRequis();
         Task<bool> ModePressing();
         Task<bool> ModeWallStreet();

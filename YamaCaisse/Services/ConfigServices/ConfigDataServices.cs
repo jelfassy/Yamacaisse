@@ -14,6 +14,42 @@ namespace YamaCaisse.Services.ConfigServices
         public ConfigDataServices()
         {
         }
+        public async Task<bool> TestPing()
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "ping"));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"CouvertRequis"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"CouvertRequis" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
 
         public async Task<bool> CouvertRequis()
         {

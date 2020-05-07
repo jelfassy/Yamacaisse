@@ -6,6 +6,7 @@ using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
+using YamaCaisse.Services.ConfigServices;
 using YamaCaisse.Tools;
 
 namespace YamaCaisse.Pages
@@ -13,6 +14,7 @@ namespace YamaCaisse.Pages
     public partial class PopupSeveur : PopupPage
     {
         public MainPage _mainpage { get; set; }
+        private IConfigDataServices _configDataServices;
         public PopupSeveur(MainPage mainPage)
         {
             InitializeComponent();
@@ -27,6 +29,43 @@ namespace YamaCaisse.Pages
                 this.stauthentwin.IsVisible = true;
         }
 
+        async void Click_TEST(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+            ServeurCnx serveur = new ServeurCnx()
+            {
+                SeveurName = this.NomServeur.Text,
+                ServeurAdresse = this.AdresseServeur.Text,
+                AuthentWindows = this.AuthentSwitch.IsToggled,
+                UserWindows = this.eloginwindows.Text,
+                PassWindows = this.ePasswindows.Text
+            };
+            Application.Current.Properties["Authent"] = serveur.AuthentWindows;
+            Application.Current.Properties["UserName"] = serveur.UserWindows;
+            Application.Current.Properties["Password"] = serveur.PassWindows;
+            App.UrlGateway = "http://" + serveur.ServeurAdresse + "/";
+            Application.Current.Properties["ServeurAdress"] = serveur.ServeurAdresse;
+            _configDataServices = DependencyService.Get<IConfigDataServices>();
+            var rs = await _configDataServices.TestPing();
+            if (rs == true)
+                await DisplayAlert("Test serveur", "Connexion ok", "ok");
+            else
+                await DisplayAlert("Test serveur", "Connexion invalid", "ok");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("error", Application.Current.Properties["ServeurAdress"].ToString() + " - " +
+                                            Application.Current.Properties["UserName"].ToString() + "-" +
+                                            Application.Current.Properties["Password"].ToString() +
+                                                ex.ToString() + ex.InnerException, "ok");
+            }
+
+        }
+
+
         async void Click_Close(object sender, EventArgs e)
         {
             if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
@@ -35,6 +74,9 @@ namespace YamaCaisse.Pages
                 await Navigation.PopPopupAsync();
             }
         }
+
+
+
 
         async void Click_ajouter(object sender, EventArgs e)
         {

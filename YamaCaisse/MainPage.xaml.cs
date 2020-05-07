@@ -124,26 +124,7 @@ namespace YamaCaisse
         {
             try
             {
-                if (!Application.Current.Properties.ContainsKey("ServeurList"))
-                {
-                    await DisplayAlert("Serveur Indisponible", "Ajouter un Serveur", "OK");
-                    return;
-                } 
-                List<ServeurCnx> listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
-
-                var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
-                Application.Current.Properties["Authent"] = serveur.AuthentWindows;
-                Application.Current.Properties["UserName"] = serveur.UserWindows;
-                Application.Current.Properties["Password"] = serveur.PassWindows;
-                this.IsBusy = true;
-                IDevice device = DependencyService.Get<IDevice>();
-                 App.DeviceIdentifier = device.GetIdentifier();
-                if (serveur.ServeurAdresse.StartsWith("192"))
-                    this.typeconnection = "http://";
-                else
-                    this.typeconnection = "https://";
-                App.UrlGateway = typeconnection + serveur.ServeurAdresse + "/";
-                Application.Current.Properties["ServeurAdress"] = serveur.ServeurAdresse;
+                SetServeurAdresse();
                 _userDataServices = DependencyService.Get<IUserDataServices>();
                 var user = await _userDataServices.GetUserbyCode(this.CodeUser.Text);
                 if (user == null)
@@ -191,18 +172,36 @@ namespace YamaCaisse
            
         }
 
+        async void SetServeurAdresse()
+        {
+            if (!Application.Current.Properties.ContainsKey("ServeurList"))
+            {
+                await DisplayAlert("Serveur Indisponible", "Ajouter un Serveur", "OK");
+                return;
+            }
+            List<ServeurCnx> listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
+
+            var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
+            Application.Current.Properties["Authent"] = serveur.AuthentWindows;
+            Application.Current.Properties["UserName"] = serveur.UserWindows;
+            Application.Current.Properties["Password"] = serveur.PassWindows;
+            this.IsBusy = true;
+            IDevice device = DependencyService.Get<IDevice>();
+            App.DeviceIdentifier = device.GetIdentifier();
+            if (serveur.ServeurAdresse.StartsWith("192"))
+                this.typeconnection = "http://";
+            else
+                this.typeconnection = "https://";
+            App.UrlGateway = typeconnection + serveur.ServeurAdresse + "/";
+            Application.Current.Properties["ServeurAdress"] = serveur.ServeurAdresse;
+        }
 
         async void Click_Production(object sender,EventArgs e)
         {
-            //if (this.AdresseServeur.Text.StartsWith("192"))
-            //    this.typeconnection = "http://";
-            //else
-            //    this.typeconnection = "https://";
-            //App.UrlGateway = typeconnection + this.AdresseServeur.Text + "/";
-            //Application.Current.Properties["ServeurAdress"] = this.AdresseServeur.Text;
+            SetServeurAdresse();
+            
+            await Navigation.PushPopupAsync(new PopupGetProduction());
 
-            //await Navigation.PushPopupAsync(new PopupGetProduction());
-           
         }
 
     }

@@ -66,11 +66,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
 <DeviceSpecificBuild>true</DeviceSpecificBuild>
-<CodesignProvision>VS: YamaCaisse.IOS.app Development</CodesignProvision>
 <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+<CodesignProvision>YamaCaisse AppStore</CodesignProvision>
+<MtouchFloat32>true</MtouchFloat32>
+<MtouchEnableSGenConc>false</MtouchEnableSGenConc>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -106,6 +108,28 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_76x76.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_152x152.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_167x167.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_120x120-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_180x180-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_58x58-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_87x87-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_80x80-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_55x55.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_88x88.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_100x100.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_172x172.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_196x196.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_216x216.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_16x16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_32x32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_32x32-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_64x64.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_256x256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_256x256-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_48x48.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_128x128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_512x512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_512x512-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_1024x1024-2.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_1024x1024.png" />
   </ItemGroup>
   <ItemGroup>

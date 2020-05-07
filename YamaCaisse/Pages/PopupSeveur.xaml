@@ -57,8 +57,9 @@
                                   WidthRequest="150" Grid.Row="1" Grid.Column="1"/>
 
                 </Grid>
-                   <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" Grid.Column="0" Grid.Row="4"/>
-                   <Button Clicked="Click_ajouter" Text="Ajouter" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="4"/>
+                   <Button Clicked="Click_TEST" Text="TEST" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" Grid.Column="0" Grid.Row="4"/>
+                   <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" Grid.Column="0" Grid.Row="5"/>
+                   <Button Clicked="Click_ajouter" Text="Ajouter" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
             </Grid>
         </StackLayout>
     </StackLayout>
