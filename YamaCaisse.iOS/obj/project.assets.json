@@ -30,7 +30,7 @@
           "lib/netstandard1.4/Microcharts.Forms.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.1.0": {
+      "Microsoft.AppCenter/3.2.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -41,10 +41,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.1.0": {
+      "Microsoft.AppCenter.Analytics/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -55,10 +55,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.1.0": {
+      "Microsoft.AppCenter.Crashes/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -69,10 +69,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.1.0": {
+      "Microsoft.AppCenter.Distribute/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -83,10 +83,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.1.0": {
+      "Microsoft.AppCenter.Push/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -346,7 +346,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Polly/7.2.0": {
+      "Polly/7.2.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Polly.dll": {}
@@ -355,27 +355,25 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/1.2.0.223": {
+      "Rg.Plugins.Popup/2.0.0.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.121934"
+          "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.1.1": {
+      "SkiaSharp/1.68.2.1": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtimeTargets": {
           "runtimes/osx/native/libSkiaSharp.dylib": {
@@ -400,30 +398,30 @@
           }
         }
       },
-      "SkiaSharp.Views/1.68.1.1": {
+      "SkiaSharp.Views/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1"
+          "SkiaSharp": "1.68.2.1"
         },
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.1.1": {
+      "SkiaSharp.Views.Forms/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1",
-          "SkiaSharp.Views": "1.68.1.1",
-          "Xamarin.Forms": "4.0.0.540366"
+          "SkiaSharp": "1.68.2.1",
+          "SkiaSharp.Views": "1.68.2.1",
+          "Xamarin.Forms": "4.4.0.991757"
         },
         "compile": {
-          "ref/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -529,7 +527,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.2": {
+      "Xamarin.Essentials/1.5.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -542,7 +540,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.5.0.530": {
+      "Xamarin.Forms/4.6.0.726": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -678,18 +676,18 @@
         "dependencies": {
           "Microcharts": "0.7.1",
           "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.1.0",
-          "Microsoft.AppCenter.Analytics": "3.1.0",
-          "Microsoft.AppCenter.Crashes": "3.1.0",
-          "Microsoft.AppCenter.Distribute": "3.1.0",
-          "Microsoft.AppCenter.Push": "3.1.0",
+          "Microsoft.AppCenter": "3.2.1",
+          "Microsoft.AppCenter.Analytics": "3.2.1",
+          "Microsoft.AppCenter.Crashes": "3.2.1",
+          "Microsoft.AppCenter.Distribute": "3.2.1",
+          "Microsoft.AppCenter.Push": "3.2.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
-          "Polly": "7.2.0",
-          "Rg.Plugins.Popup": "1.2.0.223",
-          "SkiaSharp.Views.Forms": "1.68.1.1",
-          "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.530"
+          "Polly": "7.2.1",
+          "Rg.Plugins.Popup": "2.0.0.2",
+          "SkiaSharp.Views.Forms": "1.68.2.1",
+          "Xamarin.Essentials": "1.5.3.1",
+          "Xamarin.Forms": "4.6.0.726"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -728,7 +726,7 @@
           "lib/netstandard1.4/Microcharts.Forms.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.1.0": {
+      "Microsoft.AppCenter/3.2.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -739,10 +737,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.1.0": {
+      "Microsoft.AppCenter.Analytics/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -753,10 +751,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.1.0": {
+      "Microsoft.AppCenter.Crashes/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -767,10 +765,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.1.0": {
+      "Microsoft.AppCenter.Distribute/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -781,10 +779,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.1.0": {
+      "Microsoft.AppCenter.Push/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -1044,7 +1042,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Polly/7.2.0": {
+      "Polly/7.2.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Polly.dll": {}
@@ -1053,53 +1051,51 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/1.2.0.223": {
+      "Rg.Plugins.Popup/2.0.0.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.121934"
+          "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.1.1": {
+      "SkiaSharp/1.68.2.1": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         }
       },
-      "SkiaSharp.Views/1.68.1.1": {
+      "SkiaSharp.Views/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1"
+          "SkiaSharp": "1.68.2.1"
         },
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.1.1": {
+      "SkiaSharp.Views.Forms/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1",
-          "SkiaSharp.Views": "1.68.1.1",
-          "Xamarin.Forms": "4.0.0.540366"
+          "SkiaSharp": "1.68.2.1",
+          "SkiaSharp.Views": "1.68.2.1",
+          "Xamarin.Forms": "4.4.0.991757"
         },
         "compile": {
-          "ref/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -1205,7 +1201,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.2": {
+      "Xamarin.Essentials/1.5.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -1218,7 +1214,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.5.0.530": {
+      "Xamarin.Forms/4.6.0.726": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1354,18 +1350,18 @@
         "dependencies": {
           "Microcharts": "0.7.1",
           "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.1.0",
-          "Microsoft.AppCenter.Analytics": "3.1.0",
-          "Microsoft.AppCenter.Crashes": "3.1.0",
-          "Microsoft.AppCenter.Distribute": "3.1.0",
-          "Microsoft.AppCenter.Push": "3.1.0",
+          "Microsoft.AppCenter": "3.2.1",
+          "Microsoft.AppCenter.Analytics": "3.2.1",
+          "Microsoft.AppCenter.Crashes": "3.2.1",
+          "Microsoft.AppCenter.Distribute": "3.2.1",
+          "Microsoft.AppCenter.Push": "3.2.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
-          "Polly": "7.2.0",
-          "Rg.Plugins.Popup": "1.2.0.223",
-          "SkiaSharp.Views.Forms": "1.68.1.1",
-          "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.530"
+          "Polly": "7.2.1",
+          "Rg.Plugins.Popup": "2.0.0.2",
+          "SkiaSharp.Views.Forms": "1.68.2.1",
+          "Xamarin.Essentials": "1.5.3.1",
+          "Xamarin.Forms": "4.6.0.726"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -1404,7 +1400,7 @@
           "lib/netstandard1.4/Microcharts.Forms.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.1.0": {
+      "Microsoft.AppCenter/3.2.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -1415,10 +1411,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.1.0": {
+      "Microsoft.AppCenter.Analytics/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -1429,10 +1425,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.1.0": {
+      "Microsoft.AppCenter.Crashes/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -1443,10 +1439,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.1.0": {
+      "Microsoft.AppCenter.Distribute/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -1457,10 +1453,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.1.0": {
+      "Microsoft.AppCenter.Push/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -1720,7 +1716,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Polly/7.2.0": {
+      "Polly/7.2.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Polly.dll": {}
@@ -1729,56 +1725,54 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/1.2.0.223": {
+      "Rg.Plugins.Popup/2.0.0.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.121934"
+          "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.1.1": {
+      "SkiaSharp/1.68.2.1": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "native": {
           "runtimes/win-x64/native/libSkiaSharp.dll": {}
         }
       },
-      "SkiaSharp.Views/1.68.1.1": {
+      "SkiaSharp.Views/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1"
+          "SkiaSharp": "1.68.2.1"
         },
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.1.1": {
+      "SkiaSharp.Views.Forms/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1",
-          "SkiaSharp.Views": "1.68.1.1",
-          "Xamarin.Forms": "4.0.0.540366"
+          "SkiaSharp": "1.68.2.1",
+          "SkiaSharp.Views": "1.68.2.1",
+          "Xamarin.Forms": "4.4.0.991757"
         },
         "compile": {
-          "ref/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -1884,7 +1878,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.2": {
+      "Xamarin.Essentials/1.5.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -1897,7 +1891,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.5.0.530": {
+      "Xamarin.Forms/4.6.0.726": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2033,18 +2027,18 @@
         "dependencies": {
           "Microcharts": "0.7.1",
           "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.1.0",
-          "Microsoft.AppCenter.Analytics": "3.1.0",
-          "Microsoft.AppCenter.Crashes": "3.1.0",
-          "Microsoft.AppCenter.Distribute": "3.1.0",
-          "Microsoft.AppCenter.Push": "3.1.0",
+          "Microsoft.AppCenter": "3.2.1",
+          "Microsoft.AppCenter.Analytics": "3.2.1",
+          "Microsoft.AppCenter.Crashes": "3.2.1",
+          "Microsoft.AppCenter.Distribute": "3.2.1",
+          "Microsoft.AppCenter.Push": "3.2.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
-          "Polly": "7.2.0",
-          "Rg.Plugins.Popup": "1.2.0.223",
-          "SkiaSharp.Views.Forms": "1.68.1.1",
-          "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.530"
+          "Polly": "7.2.1",
+          "Rg.Plugins.Popup": "2.0.0.2",
+          "SkiaSharp.Views.Forms": "1.68.2.1",
+          "Xamarin.Essentials": "1.5.3.1",
+          "Xamarin.Forms": "4.6.0.726"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -2083,7 +2077,7 @@
           "lib/netstandard1.4/Microcharts.Forms.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.1.0": {
+      "Microsoft.AppCenter/3.2.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -2094,10 +2088,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.1.0": {
+      "Microsoft.AppCenter.Analytics/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -2108,10 +2102,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.1.0": {
+      "Microsoft.AppCenter.Crashes/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -2122,10 +2116,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.1.0": {
+      "Microsoft.AppCenter.Distribute/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -2136,10 +2130,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.1.0": {
+      "Microsoft.AppCenter.Push/3.2.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.1.0"
+          "Microsoft.AppCenter": "3.2.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -2399,7 +2393,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Polly/7.2.0": {
+      "Polly/7.2.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Polly.dll": {}
@@ -2408,56 +2402,54 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/1.2.0.223": {
+      "Rg.Plugins.Popup/2.0.0.2": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.121934"
+          "Xamarin.Forms": "4.5.0.530"
         },
         "compile": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll": {},
-          "lib/Xamarin.IOS/Rg.Plugins.Popup.dll": {}
+          "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.1.1": {
+      "SkiaSharp/1.68.2.1": {
         "type": "package",
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "native": {
           "runtimes/win-x86/native/libSkiaSharp.dll": {}
         }
       },
-      "SkiaSharp.Views/1.68.1.1": {
+      "SkiaSharp.Views/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1"
+          "SkiaSharp": "1.68.2.1"
         },
         "compile": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.1.1": {
+      "SkiaSharp.Views.Forms/1.68.2.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.1.1",
-          "SkiaSharp.Views": "1.68.1.1",
-          "Xamarin.Forms": "4.0.0.540366"
+          "SkiaSharp": "1.68.2.1",
+          "SkiaSharp.Views": "1.68.2.1",
+          "Xamarin.Forms": "4.4.0.991757"
         },
         "compile": {
-          "ref/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll": {}
+          "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -2563,7 +2555,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.2": {
+      "Xamarin.Essentials/1.5.3.1": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -2576,7 +2568,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.5.0.530": {
+      "Xamarin.Forms/4.6.0.726": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2712,18 +2704,18 @@
         "dependencies": {
           "Microcharts": "0.7.1",
           "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.1.0",
-          "Microsoft.AppCenter.Analytics": "3.1.0",
-          "Microsoft.AppCenter.Crashes": "3.1.0",
-          "Microsoft.AppCenter.Distribute": "3.1.0",
-          "Microsoft.AppCenter.Push": "3.1.0",
+          "Microsoft.AppCenter": "3.2.1",
+          "Microsoft.AppCenter.Analytics": "3.2.1",
+          "Microsoft.AppCenter.Crashes": "3.2.1",
+          "Microsoft.AppCenter.Distribute": "3.2.1",
+          "Microsoft.AppCenter.Push": "3.2.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
-          "Polly": "7.2.0",
-          "Rg.Plugins.Popup": "1.2.0.223",
-          "SkiaSharp.Views.Forms": "1.68.1.1",
-          "Xamarin.Essentials": "1.5.2",
-          "Xamarin.Forms": "4.5.0.530"
+          "Polly": "7.2.1",
+          "Rg.Plugins.Popup": "2.0.0.2",
+          "SkiaSharp.Views.Forms": "1.68.2.1",
+          "Xamarin.Essentials": "1.5.3.1",
+          "Xamarin.Forms": "4.6.0.726"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -2767,10 +2759,10 @@
         "microcharts.forms.nuspec"
       ]
     },
-    "Microsoft.AppCenter/3.1.0": {
-      "sha512": "CHGMZIvOQxfiupheTAGEr1NeYRWtdy92iItG48l2rXI0bjRtSn34Tqtu7pR+IGKpBA5wIAgDSPFfyhFB4QxofA==",
+    "Microsoft.AppCenter/3.2.1": {
+      "sha512": "3t2lTMEbhDNPEXCurKBS8wRag4xtloGm9E7F4DpLIRhJtTCYgcIwvajPYj3WE0LjSzhrMKEn9tCaORHDAsdmaw==",
       "type": "package",
-      "path": "microsoft.appcenter/3.1.0",
+      "path": "microsoft.appcenter/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2788,14 +2780,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.xml",
         "lib/uap10.0/Microsoft.AppCenter.dll",
         "lib/uap10.0/Microsoft.AppCenter.xml",
-        "microsoft.appcenter.3.1.0.nupkg.sha512",
+        "microsoft.appcenter.3.2.1.nupkg.sha512",
         "microsoft.appcenter.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Analytics/3.1.0": {
-      "sha512": "txNI5dJ6qK9wL/aYt7GJa7CChm6QmYxln10p7mOpiC5nC+Pq5ca1MtK+AQzA0PG1Txuy1L1o87YpAzfLmSPOMw==",
+    "Microsoft.AppCenter.Analytics/3.2.1": {
+      "sha512": "38HJ5GxKMI3Hyy32SiPxcZfOEL8aBKcV2MR/BLCKR9VlNt4ZpbdJLU/4yoFi/n8zkyFkJykVSA8ADtOjekYseA==",
       "type": "package",
-      "path": "microsoft.appcenter.analytics/3.1.0",
+      "path": "microsoft.appcenter.analytics/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2813,14 +2805,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Analytics.xml",
         "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
         "lib/uap10.0/Microsoft.AppCenter.Analytics.xml",
-        "microsoft.appcenter.analytics.3.1.0.nupkg.sha512",
+        "microsoft.appcenter.analytics.3.2.1.nupkg.sha512",
         "microsoft.appcenter.analytics.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Crashes/3.1.0": {
-      "sha512": "cHpcpoXpIiqKWeGR8NipTQb7ffuD3AMal2wiLtrbWM3C3p8BCwhy3xck8eOutS4CoE5uM9380EKWrEEQ0PWQqg==",
+    "Microsoft.AppCenter.Crashes/3.2.1": {
+      "sha512": "T3nFFv+Zq0oGHawKkqo6x6Aox+dITbKxsTuDMtuyTStTEhKuwXuIx08xoViMF0oDHjYk0NHSZICOVKoUjwuBzQ==",
       "type": "package",
-      "path": "microsoft.appcenter.crashes/3.1.0",
+      "path": "microsoft.appcenter.crashes/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2838,14 +2830,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Crashes.xml",
         "lib/uap10.0/Microsoft.AppCenter.Crashes.dll",
         "lib/uap10.0/Microsoft.AppCenter.Crashes.xml",
-        "microsoft.appcenter.crashes.3.1.0.nupkg.sha512",
+        "microsoft.appcenter.crashes.3.2.1.nupkg.sha512",
         "microsoft.appcenter.crashes.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Distribute/3.1.0": {
-      "sha512": "IcvhszwyrIfjTfcco8ka3+IIS4JNb5NBwFraHgZFvQsJUhbrLbISPkFSnYZ/7+8JuBYw7Uhx+wJ9PzIRl71+lQ==",
+    "Microsoft.AppCenter.Distribute/3.2.1": {
+      "sha512": "Dk7ItzG3M0q4YwAuKbvL1pBtBdvelFS1DfGCN/FYPPWkkmv6LBsgv8IrEaIJUW+u2AlEXGXsbfhJglfa/5QgfQ==",
       "type": "package",
-      "path": "microsoft.appcenter.distribute/3.1.0",
+      "path": "microsoft.appcenter.distribute/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2857,14 +2849,14 @@
         "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.xml",
         "lib/netstandard1.0/Microsoft.AppCenter.Distribute.dll",
         "lib/netstandard1.0/Microsoft.AppCenter.Distribute.xml",
-        "microsoft.appcenter.distribute.3.1.0.nupkg.sha512",
+        "microsoft.appcenter.distribute.3.2.1.nupkg.sha512",
         "microsoft.appcenter.distribute.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Push/3.1.0": {
-      "sha512": "AgqbbHTYchvTD7ZXRvh1Aa5uQW4CbY7L108S7lXUzK8lL8HGTICJDo6tOHFTov19k0/gsOam2qGKe3QUzYcEFQ==",
+    "Microsoft.AppCenter.Push/3.2.1": {
+      "sha512": "Qp8Bv7lhJy6slYu0yRuZr6a6b26Jmrf6mQ9wBM+8roVftKPm33mu1+567r/l0CQRskLwy9oK+YB6L7Z/0pSjvA==",
       "type": "package",
-      "path": "microsoft.appcenter.push/3.1.0",
+      "path": "microsoft.appcenter.push/3.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2878,7 +2870,7 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Push.xml",
         "lib/uap10.0/Microsoft.AppCenter.Push.dll",
         "lib/uap10.0/Microsoft.AppCenter.Push.xml",
-        "microsoft.appcenter.push.3.1.0.nupkg.sha512",
+        "microsoft.appcenter.push.3.2.1.nupkg.sha512",
         "microsoft.appcenter.push.nuspec"
       ]
     },
@@ -3232,10 +3224,10 @@
         "packageIcon.png"
       ]
     },
-    "Polly/7.2.0": {
-      "sha512": "fbtSRyqVSd5AS7O4Pm2Mnw7zKKJk7Z3rOfNnKSTfPkTxM8Z1JJFZzzjqLAOTG6AyUkormSWMO2AhdlygF/384Q==",
+    "Polly/7.2.1": {
+      "sha512": "Od8SnPlpQr+PuAS0YzY3jgtzaDNknlIuAaldN2VEIyTvm/wCg22C5nUkUV1BEG8rIsub5RFMoV/NEQ0tM/+7Uw==",
       "type": "package",
-      "path": "polly/7.2.0",
+      "path": "polly/7.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3251,70 +3243,96 @@
         "lib/netstandard2.0/Polly.dll",
         "lib/netstandard2.0/Polly.pdb",
         "lib/netstandard2.0/Polly.xml",
-        "polly.7.2.0.nupkg.sha512",
+        "polly.7.2.1.nupkg.sha512",
         "polly.nuspec"
       ]
     },
-    "Rg.Plugins.Popup/1.2.0.223": {
-      "sha512": "0ruzj7EedYRUhhsk327z7ymaHzf9E/n6Slg2ZJfOYqtZ14tX1dtWbyNRSmGEnWxLyN1qSq4Od4U6vYupHRpdtw==",
+    "Rg.Plugins.Popup/2.0.0.2": {
+      "sha512": "UExzgLevcih/oDokftGPKRqaefS65ByAOeaFzfr1Qy2opeyv9+eR0hDWotGb0hPI5JFHD7NJv5aK6NbTM3WuLw==",
       "type": "package",
-      "path": "rg.plugins.popup/1.2.0.223",
+      "path": "rg.plugins.popup/2.0.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll",
-        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.pdb",
-        "lib/MonoAndroid/Rg.Plugins.Popup.dll",
-        "lib/MonoAndroid/Rg.Plugins.Popup.pdb",
-        "lib/MonoTouch/Rg.Plugins.Popup.IOS.dll",
-        "lib/MonoTouch/Rg.Plugins.Popup.IOS.pdb",
-        "lib/MonoTouch/Rg.Plugins.Popup.dll",
-        "lib/MonoTouch/Rg.Plugins.Popup.pdb",
-        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll",
-        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.pdb",
-        "lib/Xamarin.IOS/Rg.Plugins.Popup.dll",
-        "lib/Xamarin.IOS/Rg.Plugins.Popup.pdb",
-        "lib/netstandard1.0/Rg.Plugins.Popup.dll",
-        "lib/netstandard1.0/Rg.Plugins.Popup.pdb",
-        "lib/uap10.0/Rg.Plugins.Popup.UWP.dll",
-        "lib/uap10.0/Rg.Plugins.Popup.UWP.pdb",
-        "lib/uap10.0/Rg.Plugins.Popup.dll",
-        "lib/uap10.0/Rg.Plugins.Popup.pdb",
+        "LICENSE.md",
+        "icon.png",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.dll",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.pdb",
+        "lib/monoandroid10.0/Rg.Plugins.Popup.xml",
+        "lib/monoandroid90/Rg.Plugins.Popup.dll",
+        "lib/monoandroid90/Rg.Plugins.Popup.pdb",
+        "lib/monoandroid90/Rg.Plugins.Popup.xml",
+        "lib/net472/Rg.Plugins.Popup.dll",
+        "lib/net472/Rg.Plugins.Popup.pdb",
+        "lib/net472/Rg.Plugins.Popup.xml",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.dll",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.pdb",
+        "lib/netcoreapp3.1/Rg.Plugins.Popup.xml",
+        "lib/netstandard2.0/Rg.Plugins.Popup.dll",
+        "lib/netstandard2.0/Rg.Plugins.Popup.pdb",
+        "lib/netstandard2.0/Rg.Plugins.Popup.xml",
+        "lib/tizen40/Rg.Plugins.Popup.dll",
+        "lib/tizen40/Rg.Plugins.Popup.pdb",
+        "lib/tizen40/Rg.Plugins.Popup.xml",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.dll",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.pdb",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.pri",
+        "lib/uap10.0.17763/Rg.Plugins.Popup.xml",
+        "lib/xamarinios10/Rg.Plugins.Popup.dll",
+        "lib/xamarinios10/Rg.Plugins.Popup.pdb",
+        "lib/xamarinios10/Rg.Plugins.Popup.xml",
+        "lib/xamarinmac20/Rg.Plugins.Popup.dll",
+        "lib/xamarinmac20/Rg.Plugins.Popup.pdb",
+        "lib/xamarinmac20/Rg.Plugins.Popup.xml",
+        "lib/xamarintvos10/Rg.Plugins.Popup.dll",
+        "lib/xamarintvos10/Rg.Plugins.Popup.pdb",
+        "lib/xamarintvos10/Rg.Plugins.Popup.xml",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.dll",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.pdb",
+        "lib/xamarinwatchos10/Rg.Plugins.Popup.xml",
         "readme.txt",
-        "rg.plugins.popup.1.2.0.223.nupkg.sha512",
+        "rg.plugins.popup.2.0.0.2.nupkg.sha512",
         "rg.plugins.popup.nuspec"
       ]
     },
-    "SkiaSharp/1.68.1.1": {
-      "sha512": "fJteGIKAMmLD9tSQgdvZqLqECub6B55pK1MH5QyanLOr8JQ8uUMKKcrAcpocNnmIS/YsUJOL4AD7dO6mAwP7mQ==",
+    "SkiaSharp/1.68.2.1": {
+      "sha512": "ecEdDOeukBHW4bjvk6MZrGIAh3TyPyY1ImBKobuPs7PukKKkkZtiPxe35u2UXO9E68ulX4iMTNj/PmEaawPsRQ==",
       "type": "package",
-      "path": "skiasharp/1.68.1.1",
+      "path": "skiasharp/1.68.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "THIRD-PARTY-NOTICES.txt",
         "build/net45/SkiaSharp.targets",
+        "build/net462/SkiaSharp.targets",
         "build/tizen40/SkiaSharp.targets",
         "buildTransitive/net45/SkiaSharp.targets",
-        "lib/MonoAndroid/SkiaSharp.dll",
-        "lib/MonoAndroid/SkiaSharp.xml",
-        "lib/Xamarin.Mac20/SkiaSharp.dll",
-        "lib/Xamarin.Mac20/SkiaSharp.xml",
-        "lib/Xamarin.TVOS/SkiaSharp.dll",
-        "lib/Xamarin.TVOS/SkiaSharp.xml",
-        "lib/Xamarin.WatchOS/SkiaSharp.dll",
-        "lib/Xamarin.WatchOS/SkiaSharp.xml",
-        "lib/Xamarin.iOS/SkiaSharp.dll",
-        "lib/Xamarin.iOS/SkiaSharp.xml",
+        "buildTransitive/net462/SkiaSharp.targets",
+        "lib/monoandroid1.0/SkiaSharp.dll",
+        "lib/monoandroid1.0/SkiaSharp.xml",
         "lib/net45/SkiaSharp.dll",
         "lib/net45/SkiaSharp.xml",
+        "lib/net462/SkiaSharp.dll",
+        "lib/net462/SkiaSharp.xml",
         "lib/netstandard1.3/SkiaSharp.dll",
         "lib/netstandard1.3/SkiaSharp.xml",
+        "lib/netstandard2.0/SkiaSharp.dll",
+        "lib/netstandard2.0/SkiaSharp.xml",
         "lib/tizen40/SkiaSharp.dll",
         "lib/tizen40/SkiaSharp.xml",
-        "lib/uap10.0/SkiaSharp.dll",
-        "lib/uap10.0/SkiaSharp.xml",
+        "lib/uap10.0.10240/SkiaSharp.dll",
+        "lib/uap10.0.10240/SkiaSharp.xml",
+        "lib/uap10.0.16299/SkiaSharp.dll",
+        "lib/uap10.0.16299/SkiaSharp.xml",
+        "lib/xamarinios1.0/SkiaSharp.dll",
+        "lib/xamarinios1.0/SkiaSharp.xml",
+        "lib/xamarinmac2.0/SkiaSharp.dll",
+        "lib/xamarinmac2.0/SkiaSharp.xml",
+        "lib/xamarintvos1.0/SkiaSharp.dll",
+        "lib/xamarintvos1.0/SkiaSharp.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.xml",
         "runtimes/osx/native/libSkiaSharp.dylib",
         "runtimes/tizen-armel/native/libSkiaSharp.so",
         "runtimes/tizen-x86/native/libSkiaSharp.so",
@@ -3329,69 +3347,71 @@
         "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
-        "skiasharp.1.68.1.1.nupkg.sha512",
+        "skiasharp.1.68.2.1.nupkg.sha512",
         "skiasharp.nuspec",
         "xamarin.interactive/SkiaSharp.Workbooks.dll"
       ]
     },
-    "SkiaSharp.Views/1.68.1.1": {
-      "sha512": "qpRPbhLFwR6DjxUwzdqWw8BMgKFQ7MMdQdxUt2K0DvsFBiklK6vBBjIkOh58yPLYix1LPXgfD7M6KFO/G4T7OA==",
+    "SkiaSharp.Views/1.68.2.1": {
+      "sha512": "jdiW8bysLbe9icIrRkSu0nr4y6x/N3SZA9nAZWqvbr3dY5uGFTOZVortcX6FvwS8AQGjWEWQB81b4DfWq6ijxg==",
       "type": "package",
-      "path": "skiasharp.views/1.68.1.1",
+      "path": "skiasharp.views/1.68.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "lib/MonoAndroid/SkiaSharp.Views.Android.dll",
-        "lib/MonoAndroid/SkiaSharp.Views.Android.xml",
-        "lib/Xamarin.Mac20/SkiaSharp.Views.Mac.dll",
-        "lib/Xamarin.Mac20/SkiaSharp.Views.Mac.xml",
-        "lib/Xamarin.TVOS/SkiaSharp.Views.tvOS.dll",
-        "lib/Xamarin.TVOS/SkiaSharp.Views.tvOS.xml",
-        "lib/Xamarin.WatchOS/SkiaSharp.Views.watchOS.dll",
-        "lib/Xamarin.WatchOS/SkiaSharp.Views.watchOS.xml",
-        "lib/Xamarin.iOS/SkiaSharp.Views.iOS.dll",
-        "lib/Xamarin.iOS/SkiaSharp.Views.iOS.xml",
+        "lib/monoandroid1.0/SkiaSharp.Views.Android.dll",
+        "lib/monoandroid1.0/SkiaSharp.Views.Android.xml",
         "lib/net45/SkiaSharp.Views.Desktop.dll",
         "lib/net45/SkiaSharp.Views.Desktop.xml",
         "lib/tizen40/SkiaSharp.Views.Tizen.dll",
         "lib/tizen40/SkiaSharp.Views.Tizen.xml",
         "lib/uap10.0/SkiaSharp.Views.UWP.dll",
         "lib/uap10.0/SkiaSharp.Views.UWP.xml",
+        "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll",
+        "lib/xamarinios1.0/SkiaSharp.Views.iOS.xml",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Mac.dll",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Mac.xml",
+        "lib/xamarintvos1.0/SkiaSharp.Views.tvOS.dll",
+        "lib/xamarintvos1.0/SkiaSharp.Views.tvOS.xml",
+        "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.dll",
+        "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.xml",
         "runtimes/win10-arm/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
-        "skiasharp.views.1.68.1.1.nupkg.sha512",
+        "skiasharp.views.1.68.2.1.nupkg.sha512",
         "skiasharp.views.nuspec"
       ]
     },
-    "SkiaSharp.Views.Forms/1.68.1.1": {
-      "sha512": "ahwhImos0hRa4iGQY2M0HZLcvJZNFVe3KFaod2tn1/hPevGOplPReWykfodMLksRzfm1SmxU7hxd121XupPCHw==",
+    "SkiaSharp.Views.Forms/1.68.2.1": {
+      "sha512": "BnYevJcOEJUKBOpPyEA2zmFDcQqhqy8KDiKzkKF209AuX0RhymgojTM/K4nnI6RIWO2U06uOYH6bnWME/LjUzg==",
       "type": "package",
-      "path": "skiasharp.views.forms/1.68.1.1",
+      "path": "skiasharp.views.forms/1.68.2.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "build/net45/SkiaSharp.Views.Forms.targets",
-        "lib/MonoAndroid/SkiaSharp.Views.Forms.dll",
-        "lib/Xamarin.Mac20/SkiaSharp.Views.Forms.dll",
-        "lib/Xamarin.iOS/SkiaSharp.Views.Forms.dll",
+        "lib/monoandroid1.0/SkiaSharp.Views.Forms.dll",
         "lib/tizen40/SkiaSharp.Views.Forms.dll",
         "lib/uap10.0/SkiaSharp.Views.Forms.dll",
-        "ref/MonoAndroid/SkiaSharp.Views.Forms.dll",
-        "ref/MonoAndroid/SkiaSharp.Views.Forms.xml",
-        "ref/Xamarin.Mac20/SkiaSharp.Views.Forms.dll",
-        "ref/Xamarin.Mac20/SkiaSharp.Views.Forms.xml",
-        "ref/Xamarin.iOS/SkiaSharp.Views.Forms.dll",
-        "ref/Xamarin.iOS/SkiaSharp.Views.Forms.xml",
+        "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
+        "ref/monoandroid1.0/SkiaSharp.Views.Forms.dll",
+        "ref/monoandroid1.0/SkiaSharp.Views.Forms.xml",
         "ref/netstandard1.3/SkiaSharp.Views.Forms.dll",
         "ref/netstandard1.3/SkiaSharp.Views.Forms.xml",
+        "ref/netstandard2.0/SkiaSharp.Views.Forms.dll",
+        "ref/netstandard2.0/SkiaSharp.Views.Forms.xml",
         "ref/tizen40/SkiaSharp.Views.Forms.dll",
         "ref/tizen40/SkiaSharp.Views.Forms.xml",
         "ref/uap10.0/SkiaSharp.Views.Forms.dll",
         "ref/uap10.0/SkiaSharp.Views.Forms.xml",
-        "skiasharp.views.forms.1.68.1.1.nupkg.sha512",
+        "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll",
+        "ref/xamarinios1.0/SkiaSharp.Views.Forms.xml",
+        "ref/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
+        "ref/xamarinmac2.0/SkiaSharp.Views.Forms.xml",
+        "skiasharp.views.forms.1.68.2.1.nupkg.sha512",
         "skiasharp.views.forms.nuspec"
       ]
     },
@@ -3732,10 +3752,10 @@
         "version.txt"
       ]
     },
-    "Xamarin.Essentials/1.5.2": {
-      "sha512": "qHxkrkx5jIC0X/qWhxCPZ3MuuOJm8bfCzAoUtlpOBSE4oV0JhrkTezK0A+IV+k/MeJ3zKc8FexaIXah9rlCTIw==",
+    "Xamarin.Essentials/1.5.3.1": {
+      "sha512": "6sE3kGMhES7dsR8ll+ar+roEIFobjPfDskKNMsU4FF6cV27ZsdArGZHxe1QqPPJcMT6PzJsGvA3l5PNMZgw5ng==",
       "type": "package",
-      "path": "xamarin.essentials/1.5.2",
+      "path": "xamarin.essentials/1.5.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3776,14 +3796,14 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.5.2.nupkg.sha512",
+        "xamarin.essentials.1.5.3.1.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.5.0.530": {
-      "sha512": "ViHc4HlMUQEt3bR+PpDebHRXAuRCg67XC8UJ/JgQ0CJ11CiB35WT+NBJHipr0cGyHxGwoBhTwA/rKbQtIAy7eg==",
+    "Xamarin.Forms/4.6.0.726": {
+      "sha512": "NI7iL5NnrQN/gCyoHLlexcDndNin67hFV7ObG8QQU2zbEi15B1SRaAsuiNeXVYAHfXg3/amqryqzGd+3R6lyZQ==",
       "type": "package",
-      "path": "xamarin.forms/4.5.0.530",
+      "path": "xamarin.forms/4.6.0.726",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4046,8 +4066,8 @@
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/Themes/generic.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PageControlStyle.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Resources.xaml",
-        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/StepperControl.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xaml",
@@ -4078,6 +4098,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Microsoft.UI.Xaml/Themes/generic.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PageControlStyle.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Resources.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
@@ -4088,7 +4109,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.5.0.530.nupkg.sha512",
+        "xamarin.forms.4.6.0.726.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -4115,18 +4136,18 @@
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "Microcharts.Forms >= 0.7.1",
-      "Microsoft.AppCenter >= 3.1.0",
-      "Microsoft.AppCenter.Analytics >= 3.1.0",
-      "Microsoft.AppCenter.Crashes >= 3.1.0",
-      "Microsoft.AppCenter.Distribute >= 3.1.0",
-      "Microsoft.AppCenter.Push >= 3.1.0",
+      "Microsoft.AppCenter >= 3.2.1",
+      "Microsoft.AppCenter.Analytics >= 3.2.1",
+      "Microsoft.AppCenter.Crashes >= 3.2.1",
+      "Microsoft.AppCenter.Distribute >= 3.2.1",
+      "Microsoft.AppCenter.Push >= 3.2.1",
       "Microsoft.AspNetCore.SignalR.Client >= 3.1.3",
       "Newtonsoft.Json >= 12.0.3",
-      "Polly >= 7.2.0",
-      "Rg.Plugins.Popup >= 1.2.0.223",
-      "SkiaSharp.Views.Forms >= 1.68.1.1",
-      "Xamarin.Essentials >= 1.5.2",
-      "Xamarin.Forms >= 4.5.0.530",
+      "Polly >= 7.2.1",
+      "Rg.Plugins.Popup >= 2.0.0.2",
+      "SkiaSharp.Views.Forms >= 1.68.2.1",
+      "Xamarin.Essentials >= 1.5.3.1",
+      "Xamarin.Forms >= 4.6.0.726",
       "Xamarin.TestCloud.Agent >= 0.21.9",
       "YamaCaisse >= 1.0.0"
     ]
@@ -4172,23 +4193,23 @@
           },
           "Microsoft.AppCenter": {
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[3.2.1, )"
           },
           "Microsoft.AppCenter.Analytics": {
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[3.2.1, )"
           },
           "Microsoft.AppCenter.Crashes": {
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[3.2.1, )"
           },
           "Microsoft.AppCenter.Distribute": {
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[3.2.1, )"
           },
           "Microsoft.AppCenter.Push": {
             "target": "Package",
-            "version": "[3.1.0, )"
+            "version": "[3.2.1, )"
           },
           "Microsoft.AspNetCore.SignalR.Client": {
             "target": "Package",
@@ -4200,23 +4221,23 @@
           },
           "Polly": {
             "target": "Package",
-            "version": "[7.2.0, )"
+            "version": "[7.2.1, )"
           },
           "Rg.Plugins.Popup": {
             "target": "Package",
-            "version": "[1.2.0.223, )"
+            "version": "[2.0.0.2, )"
           },
           "SkiaSharp.Views.Forms": {
             "target": "Package",
-            "version": "[1.68.1.1, )"
+            "version": "[1.68.2.1, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.5.2, )"
+            "version": "[1.5.3.1, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.5.0.530, )"
+            "version": "[4.6.0.726, )"
           },
           "Xamarin.TestCloud.Agent": {
             "target": "Package",

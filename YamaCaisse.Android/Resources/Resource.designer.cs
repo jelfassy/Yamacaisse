@@ -211,6 +211,5156 @@ namespace YamaCaisse.Droid
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem;
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_color = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem_android_color;
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_offset = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_in = global::YamaCaisse.Droid.Resource.Animation.abc_fade_in;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_out = global::YamaCaisse.Droid.Resource.Animation.abc_fade_out;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_grow_fade_in_from_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_popup_enter = global::YamaCaisse.Droid.Resource.Animation.abc_popup_enter;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_popup_exit = global::YamaCaisse.Droid.Resource.Animation.abc_popup_exit;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_shrink_fade_out_from_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_slide_in_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_slide_in_top = global::YamaCaisse.Droid.Resource.Animation.abc_slide_in_top;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_slide_out_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_slide_out_top = global::YamaCaisse.Droid.Resource.Animation.abc_slide_out_top;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_tooltip_enter = global::YamaCaisse.Droid.Resource.Animation.abc_tooltip_enter;
+			global::Rg.Plugins.Popup.Resource.Animation.abc_tooltip_exit = global::YamaCaisse.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Rg.Plugins.Popup.Resource.Animation.design_bottom_sheet_slide_in = global::YamaCaisse.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Rg.Plugins.Popup.Resource.Animation.design_bottom_sheet_slide_out = global::YamaCaisse.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Rg.Plugins.Popup.Resource.Animation.design_snackbar_in = global::YamaCaisse.Droid.Resource.Animation.design_snackbar_in;
+			global::Rg.Plugins.Popup.Resource.Animation.design_snackbar_out = global::YamaCaisse.Droid.Resource.Animation.design_snackbar_out;
+			global::Rg.Plugins.Popup.Resource.Animation.EnterFromLeft = global::YamaCaisse.Droid.Resource.Animation.EnterFromLeft;
+			global::Rg.Plugins.Popup.Resource.Animation.EnterFromRight = global::YamaCaisse.Droid.Resource.Animation.EnterFromRight;
+			global::Rg.Plugins.Popup.Resource.Animation.ExitToLeft = global::YamaCaisse.Droid.Resource.Animation.ExitToLeft;
+			global::Rg.Plugins.Popup.Resource.Animation.ExitToRight = global::YamaCaisse.Droid.Resource.Animation.ExitToRight;
+			global::Rg.Plugins.Popup.Resource.Animator.design_appbar_state_list_animator = global::YamaCaisse.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Rg.Plugins.Popup.Resource.Animator.design_fab_hide_motion_spec = global::YamaCaisse.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::Rg.Plugins.Popup.Resource.Animator.design_fab_show_motion_spec = global::YamaCaisse.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_btn_state_list_anim = global::YamaCaisse.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::YamaCaisse.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_chip_state_list_anim = global::YamaCaisse.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_fab_hide_motion_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_fab_show_motion_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Rg.Plugins.Popup.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarDivider = global::YamaCaisse.Droid.Resource.Attribute.actionBarDivider;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarItemBackground = global::YamaCaisse.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarPopupTheme = global::YamaCaisse.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarSize = global::YamaCaisse.Droid.Resource.Attribute.actionBarSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarSplitStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarTabBarStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarTabStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarTabTextStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarTheme = global::YamaCaisse.Droid.Resource.Attribute.actionBarTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionBarWidgetTheme = global::YamaCaisse.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.actionButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionDropDownStyle = global::YamaCaisse.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionLayout = global::YamaCaisse.Droid.Resource.Attribute.actionLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionMenuTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionMenuTextColor = global::YamaCaisse.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeBackground = global::YamaCaisse.Droid.Resource.Attribute.actionModeBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeCloseButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeCloseDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeCopyDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeCutDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeFindDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModePasteDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModePopupWindowStyle = global::YamaCaisse.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeSelectAllDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeShareDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeSplitBackground = global::YamaCaisse.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeStyle = global::YamaCaisse.Droid.Resource.Attribute.actionModeStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionModeWebSearchDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionOverflowButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionOverflowMenuStyle = global::YamaCaisse.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionProviderClass = global::YamaCaisse.Droid.Resource.Attribute.actionProviderClass;
+			global::Rg.Plugins.Popup.Resource.Attribute.actionViewClass = global::YamaCaisse.Droid.Resource.Attribute.actionViewClass;
+			global::Rg.Plugins.Popup.Resource.Attribute.activityChooserViewStyle = global::YamaCaisse.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.alertDialogButtonGroupStyle = global::YamaCaisse.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.alertDialogCenterButtons = global::YamaCaisse.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Rg.Plugins.Popup.Resource.Attribute.alertDialogStyle = global::YamaCaisse.Droid.Resource.Attribute.alertDialogStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.alertDialogTheme = global::YamaCaisse.Droid.Resource.Attribute.alertDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.allowStacking = global::YamaCaisse.Droid.Resource.Attribute.allowStacking;
+			global::Rg.Plugins.Popup.Resource.Attribute.alpha = global::YamaCaisse.Droid.Resource.Attribute.alpha;
+			global::Rg.Plugins.Popup.Resource.Attribute.alphabeticModifiers = global::YamaCaisse.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Rg.Plugins.Popup.Resource.Attribute.arrowHeadLength = global::YamaCaisse.Droid.Resource.Attribute.arrowHeadLength;
+			global::Rg.Plugins.Popup.Resource.Attribute.arrowShaftLength = global::YamaCaisse.Droid.Resource.Attribute.arrowShaftLength;
+			global::Rg.Plugins.Popup.Resource.Attribute.autoCompleteTextViewStyle = global::YamaCaisse.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.autoSizeMaxTextSize = global::YamaCaisse.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.autoSizeMinTextSize = global::YamaCaisse.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.autoSizePresetSizes = global::YamaCaisse.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Rg.Plugins.Popup.Resource.Attribute.autoSizeStepGranularity = global::YamaCaisse.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Rg.Plugins.Popup.Resource.Attribute.autoSizeTextType = global::YamaCaisse.Droid.Resource.Attribute.autoSizeTextType;
+			global::Rg.Plugins.Popup.Resource.Attribute.background = global::YamaCaisse.Droid.Resource.Attribute.background;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundSplit = global::YamaCaisse.Droid.Resource.Attribute.backgroundSplit;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundStacked = global::YamaCaisse.Droid.Resource.Attribute.backgroundStacked;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundTint = global::YamaCaisse.Droid.Resource.Attribute.backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.backgroundTintMode = global::YamaCaisse.Droid.Resource.Attribute.backgroundTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.barLength = global::YamaCaisse.Droid.Resource.Attribute.barLength;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_autoHide = global::YamaCaisse.Droid.Resource.Attribute.behavior_autoHide;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_fitToContents = global::YamaCaisse.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_hideable = global::YamaCaisse.Droid.Resource.Attribute.behavior_hideable;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_overlapTop = global::YamaCaisse.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_peekHeight = global::YamaCaisse.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.behavior_skipCollapsed = global::YamaCaisse.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Rg.Plugins.Popup.Resource.Attribute.borderlessButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.borderWidth = global::YamaCaisse.Droid.Resource.Attribute.borderWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.bottomAppBarStyle = global::YamaCaisse.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.bottomNavigationStyle = global::YamaCaisse.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.bottomSheetDialogTheme = global::YamaCaisse.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.bottomSheetStyle = global::YamaCaisse.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxBackgroundColor = global::YamaCaisse.Droid.Resource.Attribute.boxBackgroundColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxBackgroundMode = global::YamaCaisse.Droid.Resource.Attribute.boxBackgroundMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxCollapsedPaddingTop = global::YamaCaisse.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxCornerRadiusBottomEnd = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxCornerRadiusBottomStart = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxCornerRadiusTopEnd = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxCornerRadiusTopStart = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxStrokeColor = global::YamaCaisse.Droid.Resource.Attribute.boxStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.boxStrokeWidth = global::YamaCaisse.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarNegativeButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarNeutralButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarPositiveButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonBarStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonGravity = global::YamaCaisse.Droid.Resource.Attribute.buttonGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonIconDimen = global::YamaCaisse.Droid.Resource.Attribute.buttonIconDimen;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonPanelSideLayout = global::YamaCaisse.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonStyleSmall = global::YamaCaisse.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonTint = global::YamaCaisse.Droid.Resource.Attribute.buttonTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.buttonTintMode = global::YamaCaisse.Droid.Resource.Attribute.buttonTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardBackgroundColor = global::YamaCaisse.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.cardCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardElevation = global::YamaCaisse.Droid.Resource.Attribute.cardElevation;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardMaxElevation = global::YamaCaisse.Droid.Resource.Attribute.cardMaxElevation;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardPreventCornerOverlap = global::YamaCaisse.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardUseCompatPadding = global::YamaCaisse.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.cardViewStyle = global::YamaCaisse.Droid.Resource.Attribute.cardViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkboxStyle = global::YamaCaisse.Droid.Resource.Attribute.checkboxStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkedChip = global::YamaCaisse.Droid.Resource.Attribute.checkedChip;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkedIcon = global::YamaCaisse.Droid.Resource.Attribute.checkedIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkedIconEnabled = global::YamaCaisse.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkedIconVisible = global::YamaCaisse.Droid.Resource.Attribute.checkedIconVisible;
+			global::Rg.Plugins.Popup.Resource.Attribute.checkedTextViewStyle = global::YamaCaisse.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipBackgroundColor = global::YamaCaisse.Droid.Resource.Attribute.chipBackgroundColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.chipCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipEndPadding = global::YamaCaisse.Droid.Resource.Attribute.chipEndPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipGroupStyle = global::YamaCaisse.Droid.Resource.Attribute.chipGroupStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipIcon = global::YamaCaisse.Droid.Resource.Attribute.chipIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipIconEnabled = global::YamaCaisse.Droid.Resource.Attribute.chipIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipIconSize = global::YamaCaisse.Droid.Resource.Attribute.chipIconSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipIconTint = global::YamaCaisse.Droid.Resource.Attribute.chipIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipIconVisible = global::YamaCaisse.Droid.Resource.Attribute.chipIconVisible;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipMinHeight = global::YamaCaisse.Droid.Resource.Attribute.chipMinHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipSpacing = global::YamaCaisse.Droid.Resource.Attribute.chipSpacing;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipSpacingHorizontal = global::YamaCaisse.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipSpacingVertical = global::YamaCaisse.Droid.Resource.Attribute.chipSpacingVertical;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipStandaloneStyle = global::YamaCaisse.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipStartPadding = global::YamaCaisse.Droid.Resource.Attribute.chipStartPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipStrokeColor = global::YamaCaisse.Droid.Resource.Attribute.chipStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipStrokeWidth = global::YamaCaisse.Droid.Resource.Attribute.chipStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.chipStyle = global::YamaCaisse.Droid.Resource.Attribute.chipStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeIcon = global::YamaCaisse.Droid.Resource.Attribute.closeIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeIconEnabled = global::YamaCaisse.Droid.Resource.Attribute.closeIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeIconEndPadding = global::YamaCaisse.Droid.Resource.Attribute.closeIconEndPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeIconSize = global::YamaCaisse.Droid.Resource.Attribute.closeIconSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeIconStartPadding = global::YamaCaisse.Droid.Resource.Attribute.closeIconStartPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeIconTint = global::YamaCaisse.Droid.Resource.Attribute.closeIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeIconVisible = global::YamaCaisse.Droid.Resource.Attribute.closeIconVisible;
+			global::Rg.Plugins.Popup.Resource.Attribute.closeItemLayout = global::YamaCaisse.Droid.Resource.Attribute.closeItemLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.collapseContentDescription = global::YamaCaisse.Droid.Resource.Attribute.collapseContentDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.collapsedTitleGravity = global::YamaCaisse.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.collapsedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.collapseIcon = global::YamaCaisse.Droid.Resource.Attribute.collapseIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.color = global::YamaCaisse.Droid.Resource.Attribute.color;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorAccent = global::YamaCaisse.Droid.Resource.Attribute.colorAccent;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorBackgroundFloating = global::YamaCaisse.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorButtonNormal = global::YamaCaisse.Droid.Resource.Attribute.colorButtonNormal;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorControlActivated = global::YamaCaisse.Droid.Resource.Attribute.colorControlActivated;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorControlHighlight = global::YamaCaisse.Droid.Resource.Attribute.colorControlHighlight;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorControlNormal = global::YamaCaisse.Droid.Resource.Attribute.colorControlNormal;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorError = global::YamaCaisse.Droid.Resource.Attribute.colorError;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorPrimary = global::YamaCaisse.Droid.Resource.Attribute.colorPrimary;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorPrimaryDark = global::YamaCaisse.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorSecondary = global::YamaCaisse.Droid.Resource.Attribute.colorSecondary;
+			global::Rg.Plugins.Popup.Resource.Attribute.colorSwitchThumbNormal = global::YamaCaisse.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Rg.Plugins.Popup.Resource.Attribute.commitIcon = global::YamaCaisse.Droid.Resource.Attribute.commitIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentDescription = global::YamaCaisse.Droid.Resource.Attribute.contentDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentInsetEnd = global::YamaCaisse.Droid.Resource.Attribute.contentInsetEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentInsetEndWithActions = global::YamaCaisse.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentInsetLeft = global::YamaCaisse.Droid.Resource.Attribute.contentInsetLeft;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentInsetRight = global::YamaCaisse.Droid.Resource.Attribute.contentInsetRight;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentInsetStart = global::YamaCaisse.Droid.Resource.Attribute.contentInsetStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentInsetStartWithNavigation = global::YamaCaisse.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentPadding = global::YamaCaisse.Droid.Resource.Attribute.contentPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentPaddingBottom = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentPaddingLeft = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentPaddingRight = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingRight;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentPaddingTop = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingTop;
+			global::Rg.Plugins.Popup.Resource.Attribute.contentScrim = global::YamaCaisse.Droid.Resource.Attribute.contentScrim;
+			global::Rg.Plugins.Popup.Resource.Attribute.controlBackground = global::YamaCaisse.Droid.Resource.Attribute.controlBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.coordinatorLayoutStyle = global::YamaCaisse.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.cornerRadius = global::YamaCaisse.Droid.Resource.Attribute.cornerRadius;
+			global::Rg.Plugins.Popup.Resource.Attribute.counterEnabled = global::YamaCaisse.Droid.Resource.Attribute.counterEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.counterMaxLength = global::YamaCaisse.Droid.Resource.Attribute.counterMaxLength;
+			global::Rg.Plugins.Popup.Resource.Attribute.counterOverflowTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.counterTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.counterTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.customNavigationLayout = global::YamaCaisse.Droid.Resource.Attribute.customNavigationLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.defaultQueryHint = global::YamaCaisse.Droid.Resource.Attribute.defaultQueryHint;
+			global::Rg.Plugins.Popup.Resource.Attribute.dialogCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.dialogCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Attribute.dialogPreferredPadding = global::YamaCaisse.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.dialogTheme = global::YamaCaisse.Droid.Resource.Attribute.dialogTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.displayOptions = global::YamaCaisse.Droid.Resource.Attribute.displayOptions;
+			global::Rg.Plugins.Popup.Resource.Attribute.divider = global::YamaCaisse.Droid.Resource.Attribute.divider;
+			global::Rg.Plugins.Popup.Resource.Attribute.dividerHorizontal = global::YamaCaisse.Droid.Resource.Attribute.dividerHorizontal;
+			global::Rg.Plugins.Popup.Resource.Attribute.dividerPadding = global::YamaCaisse.Droid.Resource.Attribute.dividerPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.dividerVertical = global::YamaCaisse.Droid.Resource.Attribute.dividerVertical;
+			global::Rg.Plugins.Popup.Resource.Attribute.drawableSize = global::YamaCaisse.Droid.Resource.Attribute.drawableSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.drawerArrowStyle = global::YamaCaisse.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.dropdownListPreferredItemHeight = global::YamaCaisse.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.dropDownListViewStyle = global::YamaCaisse.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.editTextBackground = global::YamaCaisse.Droid.Resource.Attribute.editTextBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.editTextColor = global::YamaCaisse.Droid.Resource.Attribute.editTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.editTextStyle = global::YamaCaisse.Droid.Resource.Attribute.editTextStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.elevation = global::YamaCaisse.Droid.Resource.Attribute.elevation;
+			global::Rg.Plugins.Popup.Resource.Attribute.enforceMaterialTheme = global::YamaCaisse.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.enforceTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.errorEnabled = global::YamaCaisse.Droid.Resource.Attribute.errorEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.errorTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.errorTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandActivityOverflowButtonDrawable = global::YamaCaisse.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.expanded = global::YamaCaisse.Droid.Resource.Attribute.expanded;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleGravity = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleMargin = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleMarginBottom = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleMarginEnd = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleMarginStart = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleMarginTop = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Rg.Plugins.Popup.Resource.Attribute.expandedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.fabAlignmentMode = global::YamaCaisse.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.fabCradleMargin = global::YamaCaisse.Droid.Resource.Attribute.fabCradleMargin;
+			global::Rg.Plugins.Popup.Resource.Attribute.fabCradleRoundedCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Attribute.fabCradleVerticalOffset = global::YamaCaisse.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::Rg.Plugins.Popup.Resource.Attribute.fabCustomSize = global::YamaCaisse.Droid.Resource.Attribute.fabCustomSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.fabSize = global::YamaCaisse.Droid.Resource.Attribute.fabSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.fastScrollEnabled = global::YamaCaisse.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.fastScrollVerticalThumbDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.fastScrollVerticalTrackDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.firstBaselineToTopHeight = global::YamaCaisse.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.floatingActionButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.font = global::YamaCaisse.Droid.Resource.Attribute.font;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontFamily = global::YamaCaisse.Droid.Resource.Attribute.fontFamily;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontProviderAuthority = global::YamaCaisse.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontProviderCerts = global::YamaCaisse.Droid.Resource.Attribute.fontProviderCerts;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontProviderFetchStrategy = global::YamaCaisse.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontProviderFetchTimeout = global::YamaCaisse.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontProviderPackage = global::YamaCaisse.Droid.Resource.Attribute.fontProviderPackage;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontProviderQuery = global::YamaCaisse.Droid.Resource.Attribute.fontProviderQuery;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontStyle = global::YamaCaisse.Droid.Resource.Attribute.fontStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontVariationSettings = global::YamaCaisse.Droid.Resource.Attribute.fontVariationSettings;
+			global::Rg.Plugins.Popup.Resource.Attribute.fontWeight = global::YamaCaisse.Droid.Resource.Attribute.fontWeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.foregroundInsidePadding = global::YamaCaisse.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.gapBetweenBars = global::YamaCaisse.Droid.Resource.Attribute.gapBetweenBars;
+			global::Rg.Plugins.Popup.Resource.Attribute.goIcon = global::YamaCaisse.Droid.Resource.Attribute.goIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.headerLayout = global::YamaCaisse.Droid.Resource.Attribute.headerLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.height = global::YamaCaisse.Droid.Resource.Attribute.height;
+			global::Rg.Plugins.Popup.Resource.Attribute.helperText = global::YamaCaisse.Droid.Resource.Attribute.helperText;
+			global::Rg.Plugins.Popup.Resource.Attribute.helperTextEnabled = global::YamaCaisse.Droid.Resource.Attribute.helperTextEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.helperTextTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.hideMotionSpec = global::YamaCaisse.Droid.Resource.Attribute.hideMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Attribute.hideOnContentScroll = global::YamaCaisse.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Rg.Plugins.Popup.Resource.Attribute.hideOnScroll = global::YamaCaisse.Droid.Resource.Attribute.hideOnScroll;
+			global::Rg.Plugins.Popup.Resource.Attribute.hintAnimationEnabled = global::YamaCaisse.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.hintEnabled = global::YamaCaisse.Droid.Resource.Attribute.hintEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.hintTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.hintTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.homeAsUpIndicator = global::YamaCaisse.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Rg.Plugins.Popup.Resource.Attribute.homeLayout = global::YamaCaisse.Droid.Resource.Attribute.homeLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.hoveredFocusedTranslationZ = global::YamaCaisse.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Rg.Plugins.Popup.Resource.Attribute.icon = global::YamaCaisse.Droid.Resource.Attribute.icon;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconEndPadding = global::YamaCaisse.Droid.Resource.Attribute.iconEndPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconGravity = global::YamaCaisse.Droid.Resource.Attribute.iconGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconifiedByDefault = global::YamaCaisse.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconPadding = global::YamaCaisse.Droid.Resource.Attribute.iconPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconSize = global::YamaCaisse.Droid.Resource.Attribute.iconSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconStartPadding = global::YamaCaisse.Droid.Resource.Attribute.iconStartPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconTint = global::YamaCaisse.Droid.Resource.Attribute.iconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.iconTintMode = global::YamaCaisse.Droid.Resource.Attribute.iconTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.imageButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.imageButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.indeterminateProgressStyle = global::YamaCaisse.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.initialActivityCount = global::YamaCaisse.Droid.Resource.Attribute.initialActivityCount;
+			global::Rg.Plugins.Popup.Resource.Attribute.insetForeground = global::YamaCaisse.Droid.Resource.Attribute.insetForeground;
+			global::Rg.Plugins.Popup.Resource.Attribute.isLightTheme = global::YamaCaisse.Droid.Resource.Attribute.isLightTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemBackground = global::YamaCaisse.Droid.Resource.Attribute.itemBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemHorizontalPadding = global::YamaCaisse.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemHorizontalTranslationEnabled = global::YamaCaisse.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemIconPadding = global::YamaCaisse.Droid.Resource.Attribute.itemIconPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemIconSize = global::YamaCaisse.Droid.Resource.Attribute.itemIconSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemIconTint = global::YamaCaisse.Droid.Resource.Attribute.itemIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemPadding = global::YamaCaisse.Droid.Resource.Attribute.itemPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemSpacing = global::YamaCaisse.Droid.Resource.Attribute.itemSpacing;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.itemTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemTextAppearanceActive = global::YamaCaisse.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemTextAppearanceInactive = global::YamaCaisse.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::Rg.Plugins.Popup.Resource.Attribute.itemTextColor = global::YamaCaisse.Droid.Resource.Attribute.itemTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.keylines = global::YamaCaisse.Droid.Resource.Attribute.keylines;
+			global::Rg.Plugins.Popup.Resource.Attribute.labelVisibilityMode = global::YamaCaisse.Droid.Resource.Attribute.labelVisibilityMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.lastBaselineToBottomHeight = global::YamaCaisse.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout = global::YamaCaisse.Droid.Resource.Attribute.layout;
+			global::Rg.Plugins.Popup.Resource.Attribute.layoutManager = global::YamaCaisse.Droid.Resource.Attribute.layoutManager;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_anchor = global::YamaCaisse.Droid.Resource.Attribute.layout_anchor;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_anchorGravity = global::YamaCaisse.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_behavior = global::YamaCaisse.Droid.Resource.Attribute.layout_behavior;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_collapseMode = global::YamaCaisse.Droid.Resource.Attribute.layout_collapseMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_collapseParallaxMultiplier = global::YamaCaisse.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_dodgeInsetEdges = global::YamaCaisse.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_insetEdge = global::YamaCaisse.Droid.Resource.Attribute.layout_insetEdge;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_keyline = global::YamaCaisse.Droid.Resource.Attribute.layout_keyline;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_scrollFlags = global::YamaCaisse.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Rg.Plugins.Popup.Resource.Attribute.layout_scrollInterpolator = global::YamaCaisse.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Rg.Plugins.Popup.Resource.Attribute.liftOnScroll = global::YamaCaisse.Droid.Resource.Attribute.liftOnScroll;
+			global::Rg.Plugins.Popup.Resource.Attribute.lineHeight = global::YamaCaisse.Droid.Resource.Attribute.lineHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.lineSpacing = global::YamaCaisse.Droid.Resource.Attribute.lineSpacing;
+			global::Rg.Plugins.Popup.Resource.Attribute.listChoiceBackgroundIndicator = global::YamaCaisse.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Rg.Plugins.Popup.Resource.Attribute.listDividerAlertDialog = global::YamaCaisse.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Rg.Plugins.Popup.Resource.Attribute.listItemLayout = global::YamaCaisse.Droid.Resource.Attribute.listItemLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.listLayout = global::YamaCaisse.Droid.Resource.Attribute.listLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.listMenuViewStyle = global::YamaCaisse.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.listPopupWindowStyle = global::YamaCaisse.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.listPreferredItemHeight = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.listPreferredItemHeightLarge = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Rg.Plugins.Popup.Resource.Attribute.listPreferredItemHeightSmall = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Rg.Plugins.Popup.Resource.Attribute.listPreferredItemPaddingLeft = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Rg.Plugins.Popup.Resource.Attribute.listPreferredItemPaddingRight = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Rg.Plugins.Popup.Resource.Attribute.logo = global::YamaCaisse.Droid.Resource.Attribute.logo;
+			global::Rg.Plugins.Popup.Resource.Attribute.logoDescription = global::YamaCaisse.Droid.Resource.Attribute.logoDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.materialButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.materialCardViewStyle = global::YamaCaisse.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.maxActionInlineWidth = global::YamaCaisse.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.maxButtonHeight = global::YamaCaisse.Droid.Resource.Attribute.maxButtonHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.maxImageSize = global::YamaCaisse.Droid.Resource.Attribute.maxImageSize;
+			global::Rg.Plugins.Popup.Resource.Attribute.measureWithLargestChild = global::YamaCaisse.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Rg.Plugins.Popup.Resource.Attribute.menu = global::YamaCaisse.Droid.Resource.Attribute.menu;
+			global::Rg.Plugins.Popup.Resource.Attribute.multiChoiceItemLayout = global::YamaCaisse.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.navigationContentDescription = global::YamaCaisse.Droid.Resource.Attribute.navigationContentDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.navigationIcon = global::YamaCaisse.Droid.Resource.Attribute.navigationIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.navigationMode = global::YamaCaisse.Droid.Resource.Attribute.navigationMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.navigationViewStyle = global::YamaCaisse.Droid.Resource.Attribute.navigationViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.numericModifiers = global::YamaCaisse.Droid.Resource.Attribute.numericModifiers;
+			global::Rg.Plugins.Popup.Resource.Attribute.overlapAnchor = global::YamaCaisse.Droid.Resource.Attribute.overlapAnchor;
+			global::Rg.Plugins.Popup.Resource.Attribute.paddingBottomNoButtons = global::YamaCaisse.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Rg.Plugins.Popup.Resource.Attribute.paddingEnd = global::YamaCaisse.Droid.Resource.Attribute.paddingEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.paddingStart = global::YamaCaisse.Droid.Resource.Attribute.paddingStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.paddingTopNoTitle = global::YamaCaisse.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.panelBackground = global::YamaCaisse.Droid.Resource.Attribute.panelBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.panelMenuListTheme = global::YamaCaisse.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.panelMenuListWidth = global::YamaCaisse.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleContentDescription = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleDrawable = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleEnabled = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleTint = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.passwordToggleTintMode = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.popupMenuStyle = global::YamaCaisse.Droid.Resource.Attribute.popupMenuStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.popupTheme = global::YamaCaisse.Droid.Resource.Attribute.popupTheme;
+			global::Rg.Plugins.Popup.Resource.Attribute.popupWindowStyle = global::YamaCaisse.Droid.Resource.Attribute.popupWindowStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.preserveIconSpacing = global::YamaCaisse.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Rg.Plugins.Popup.Resource.Attribute.pressedTranslationZ = global::YamaCaisse.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Rg.Plugins.Popup.Resource.Attribute.progressBarPadding = global::YamaCaisse.Droid.Resource.Attribute.progressBarPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.progressBarStyle = global::YamaCaisse.Droid.Resource.Attribute.progressBarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.queryBackground = global::YamaCaisse.Droid.Resource.Attribute.queryBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.queryHint = global::YamaCaisse.Droid.Resource.Attribute.queryHint;
+			global::Rg.Plugins.Popup.Resource.Attribute.radioButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.radioButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.ratingBarStyle = global::YamaCaisse.Droid.Resource.Attribute.ratingBarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.ratingBarStyleIndicator = global::YamaCaisse.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Rg.Plugins.Popup.Resource.Attribute.ratingBarStyleSmall = global::YamaCaisse.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Rg.Plugins.Popup.Resource.Attribute.reverseLayout = global::YamaCaisse.Droid.Resource.Attribute.reverseLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.rippleColor = global::YamaCaisse.Droid.Resource.Attribute.rippleColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.scrimAnimationDuration = global::YamaCaisse.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Rg.Plugins.Popup.Resource.Attribute.scrimBackground = global::YamaCaisse.Droid.Resource.Attribute.scrimBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.scrimVisibleHeightTrigger = global::YamaCaisse.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Rg.Plugins.Popup.Resource.Attribute.searchHintIcon = global::YamaCaisse.Droid.Resource.Attribute.searchHintIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.searchIcon = global::YamaCaisse.Droid.Resource.Attribute.searchIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.searchViewStyle = global::YamaCaisse.Droid.Resource.Attribute.searchViewStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.seekBarStyle = global::YamaCaisse.Droid.Resource.Attribute.seekBarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.selectableItemBackground = global::YamaCaisse.Droid.Resource.Attribute.selectableItemBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.selectableItemBackgroundBorderless = global::YamaCaisse.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Rg.Plugins.Popup.Resource.Attribute.showAsAction = global::YamaCaisse.Droid.Resource.Attribute.showAsAction;
+			global::Rg.Plugins.Popup.Resource.Attribute.showDividers = global::YamaCaisse.Droid.Resource.Attribute.showDividers;
+			global::Rg.Plugins.Popup.Resource.Attribute.showMotionSpec = global::YamaCaisse.Droid.Resource.Attribute.showMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Attribute.showText = global::YamaCaisse.Droid.Resource.Attribute.showText;
+			global::Rg.Plugins.Popup.Resource.Attribute.showTitle = global::YamaCaisse.Droid.Resource.Attribute.showTitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.singleChoiceItemLayout = global::YamaCaisse.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.singleLine = global::YamaCaisse.Droid.Resource.Attribute.singleLine;
+			global::Rg.Plugins.Popup.Resource.Attribute.singleSelection = global::YamaCaisse.Droid.Resource.Attribute.singleSelection;
+			global::Rg.Plugins.Popup.Resource.Attribute.snackbarButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.snackbarStyle = global::YamaCaisse.Droid.Resource.Attribute.snackbarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.spanCount = global::YamaCaisse.Droid.Resource.Attribute.spanCount;
+			global::Rg.Plugins.Popup.Resource.Attribute.spinBars = global::YamaCaisse.Droid.Resource.Attribute.spinBars;
+			global::Rg.Plugins.Popup.Resource.Attribute.spinnerDropDownItemStyle = global::YamaCaisse.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.spinnerStyle = global::YamaCaisse.Droid.Resource.Attribute.spinnerStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.splitTrack = global::YamaCaisse.Droid.Resource.Attribute.splitTrack;
+			global::Rg.Plugins.Popup.Resource.Attribute.srcCompat = global::YamaCaisse.Droid.Resource.Attribute.srcCompat;
+			global::Rg.Plugins.Popup.Resource.Attribute.stackFromEnd = global::YamaCaisse.Droid.Resource.Attribute.stackFromEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.state_above_anchor = global::YamaCaisse.Droid.Resource.Attribute.state_above_anchor;
+			global::Rg.Plugins.Popup.Resource.Attribute.state_collapsed = global::YamaCaisse.Droid.Resource.Attribute.state_collapsed;
+			global::Rg.Plugins.Popup.Resource.Attribute.state_collapsible = global::YamaCaisse.Droid.Resource.Attribute.state_collapsible;
+			global::Rg.Plugins.Popup.Resource.Attribute.state_liftable = global::YamaCaisse.Droid.Resource.Attribute.state_liftable;
+			global::Rg.Plugins.Popup.Resource.Attribute.state_lifted = global::YamaCaisse.Droid.Resource.Attribute.state_lifted;
+			global::Rg.Plugins.Popup.Resource.Attribute.statusBarBackground = global::YamaCaisse.Droid.Resource.Attribute.statusBarBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.statusBarScrim = global::YamaCaisse.Droid.Resource.Attribute.statusBarScrim;
+			global::Rg.Plugins.Popup.Resource.Attribute.strokeColor = global::YamaCaisse.Droid.Resource.Attribute.strokeColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.strokeWidth = global::YamaCaisse.Droid.Resource.Attribute.strokeWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.subMenuArrow = global::YamaCaisse.Droid.Resource.Attribute.subMenuArrow;
+			global::Rg.Plugins.Popup.Resource.Attribute.submitBackground = global::YamaCaisse.Droid.Resource.Attribute.submitBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.subtitle = global::YamaCaisse.Droid.Resource.Attribute.subtitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.subtitleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.subtitleTextColor = global::YamaCaisse.Droid.Resource.Attribute.subtitleTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.subtitleTextStyle = global::YamaCaisse.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.suggestionRowLayout = global::YamaCaisse.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Rg.Plugins.Popup.Resource.Attribute.switchMinWidth = global::YamaCaisse.Droid.Resource.Attribute.switchMinWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.switchPadding = global::YamaCaisse.Droid.Resource.Attribute.switchPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.switchStyle = global::YamaCaisse.Droid.Resource.Attribute.switchStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.switchTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.switchTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabBackground = global::YamaCaisse.Droid.Resource.Attribute.tabBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabContentStart = global::YamaCaisse.Droid.Resource.Attribute.tabContentStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabGravity = global::YamaCaisse.Droid.Resource.Attribute.tabGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIconTint = global::YamaCaisse.Droid.Resource.Attribute.tabIconTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIconTintMode = global::YamaCaisse.Droid.Resource.Attribute.tabIconTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIndicator = global::YamaCaisse.Droid.Resource.Attribute.tabIndicator;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIndicatorAnimationDuration = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIndicatorColor = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIndicatorFullWidth = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIndicatorGravity = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabIndicatorHeight = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabInlineLabel = global::YamaCaisse.Droid.Resource.Attribute.tabInlineLabel;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabMaxWidth = global::YamaCaisse.Droid.Resource.Attribute.tabMaxWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabMinWidth = global::YamaCaisse.Droid.Resource.Attribute.tabMinWidth;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabMode = global::YamaCaisse.Droid.Resource.Attribute.tabMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabPadding = global::YamaCaisse.Droid.Resource.Attribute.tabPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabPaddingBottom = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabPaddingEnd = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabPaddingStart = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabPaddingTop = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingTop;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabRippleColor = global::YamaCaisse.Droid.Resource.Attribute.tabRippleColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabSelectedTextColor = global::YamaCaisse.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabStyle = global::YamaCaisse.Droid.Resource.Attribute.tabStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.tabTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabTextColor = global::YamaCaisse.Droid.Resource.Attribute.tabTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.tabUnboundedRipple = global::YamaCaisse.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAllCaps = global::YamaCaisse.Droid.Resource.Attribute.textAllCaps;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceBody1 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceBody1;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceBody2 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceBody2;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceButton = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceButton;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceCaption = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceCaption;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline1 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline2 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline3 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline4 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline5 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceHeadline6 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceLargePopupMenu = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceListItem = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceListItemSecondary = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceListItemSmall = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceOverline = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceOverline;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearancePopupMenuHeader = global::YamaCaisse.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceSearchResultSubtitle = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceSearchResultTitle = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceSmallPopupMenu = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceSubtitle1 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::Rg.Plugins.Popup.Resource.Attribute.textAppearanceSubtitle2 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::Rg.Plugins.Popup.Resource.Attribute.textColorAlertDialogListItem = global::YamaCaisse.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Rg.Plugins.Popup.Resource.Attribute.textColorSearchUrl = global::YamaCaisse.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Rg.Plugins.Popup.Resource.Attribute.textEndPadding = global::YamaCaisse.Droid.Resource.Attribute.textEndPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.textInputStyle = global::YamaCaisse.Droid.Resource.Attribute.textInputStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.textStartPadding = global::YamaCaisse.Droid.Resource.Attribute.textStartPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.theme = global::YamaCaisse.Droid.Resource.Attribute.theme;
+			global::Rg.Plugins.Popup.Resource.Attribute.thickness = global::YamaCaisse.Droid.Resource.Attribute.thickness;
+			global::Rg.Plugins.Popup.Resource.Attribute.thumbTextPadding = global::YamaCaisse.Droid.Resource.Attribute.thumbTextPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.thumbTint = global::YamaCaisse.Droid.Resource.Attribute.thumbTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.thumbTintMode = global::YamaCaisse.Droid.Resource.Attribute.thumbTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.tickMark = global::YamaCaisse.Droid.Resource.Attribute.tickMark;
+			global::Rg.Plugins.Popup.Resource.Attribute.tickMarkTint = global::YamaCaisse.Droid.Resource.Attribute.tickMarkTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.tickMarkTintMode = global::YamaCaisse.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.tint = global::YamaCaisse.Droid.Resource.Attribute.tint;
+			global::Rg.Plugins.Popup.Resource.Attribute.tintMode = global::YamaCaisse.Droid.Resource.Attribute.tintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.title = global::YamaCaisse.Droid.Resource.Attribute.title;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleEnabled = global::YamaCaisse.Droid.Resource.Attribute.titleEnabled;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleMargin = global::YamaCaisse.Droid.Resource.Attribute.titleMargin;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleMarginBottom = global::YamaCaisse.Droid.Resource.Attribute.titleMarginBottom;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleMarginEnd = global::YamaCaisse.Droid.Resource.Attribute.titleMarginEnd;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleMargins = global::YamaCaisse.Droid.Resource.Attribute.titleMargins;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleMarginStart = global::YamaCaisse.Droid.Resource.Attribute.titleMarginStart;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleMarginTop = global::YamaCaisse.Droid.Resource.Attribute.titleMarginTop;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.titleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleTextColor = global::YamaCaisse.Droid.Resource.Attribute.titleTextColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.titleTextStyle = global::YamaCaisse.Droid.Resource.Attribute.titleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.toolbarId = global::YamaCaisse.Droid.Resource.Attribute.toolbarId;
+			global::Rg.Plugins.Popup.Resource.Attribute.toolbarNavigationButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.toolbarStyle = global::YamaCaisse.Droid.Resource.Attribute.toolbarStyle;
+			global::Rg.Plugins.Popup.Resource.Attribute.tooltipForegroundColor = global::YamaCaisse.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Rg.Plugins.Popup.Resource.Attribute.tooltipFrameBackground = global::YamaCaisse.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Rg.Plugins.Popup.Resource.Attribute.tooltipText = global::YamaCaisse.Droid.Resource.Attribute.tooltipText;
+			global::Rg.Plugins.Popup.Resource.Attribute.track = global::YamaCaisse.Droid.Resource.Attribute.track;
+			global::Rg.Plugins.Popup.Resource.Attribute.trackTint = global::YamaCaisse.Droid.Resource.Attribute.trackTint;
+			global::Rg.Plugins.Popup.Resource.Attribute.trackTintMode = global::YamaCaisse.Droid.Resource.Attribute.trackTintMode;
+			global::Rg.Plugins.Popup.Resource.Attribute.ttcIndex = global::YamaCaisse.Droid.Resource.Attribute.ttcIndex;
+			global::Rg.Plugins.Popup.Resource.Attribute.useCompatPadding = global::YamaCaisse.Droid.Resource.Attribute.useCompatPadding;
+			global::Rg.Plugins.Popup.Resource.Attribute.viewInflaterClass = global::YamaCaisse.Droid.Resource.Attribute.viewInflaterClass;
+			global::Rg.Plugins.Popup.Resource.Attribute.voiceIcon = global::YamaCaisse.Droid.Resource.Attribute.voiceIcon;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowActionBar = global::YamaCaisse.Droid.Resource.Attribute.windowActionBar;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowActionBarOverlay = global::YamaCaisse.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowActionModeOverlay = global::YamaCaisse.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowFixedHeightMajor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowFixedHeightMinor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowFixedWidthMajor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowFixedWidthMinor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowMinWidthMajor = global::YamaCaisse.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowMinWidthMinor = global::YamaCaisse.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Rg.Plugins.Popup.Resource.Attribute.windowNoTitle = global::YamaCaisse.Droid.Resource.Attribute.windowNoTitle;
+			global::Rg.Plugins.Popup.Resource.Boolean.abc_action_bar_embed_tabs = global::YamaCaisse.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Rg.Plugins.Popup.Resource.Boolean.abc_allow_stacked_button_bar = global::YamaCaisse.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Rg.Plugins.Popup.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::YamaCaisse.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Rg.Plugins.Popup.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::YamaCaisse.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Rg.Plugins.Popup.Resource.Color.abc_background_cache_hint_selector_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.abc_background_cache_hint_selector_material_light = global::YamaCaisse.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.abc_btn_colored_borderless_text_material = global::YamaCaisse.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Rg.Plugins.Popup.Resource.Color.abc_btn_colored_text_material = global::YamaCaisse.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Rg.Plugins.Popup.Resource.Color.abc_color_highlight_material = global::YamaCaisse.Droid.Resource.Color.abc_color_highlight_material;
+			global::Rg.Plugins.Popup.Resource.Color.abc_hint_foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.abc_hint_foreground_material_light = global::YamaCaisse.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.abc_input_method_navigation_guard = global::YamaCaisse.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Rg.Plugins.Popup.Resource.Color.abc_primary_text_disable_only_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.abc_primary_text_disable_only_material_light = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.abc_primary_text_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.abc_primary_text_material_light = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.abc_search_url_text = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text;
+			global::Rg.Plugins.Popup.Resource.Color.abc_search_url_text_normal = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Rg.Plugins.Popup.Resource.Color.abc_search_url_text_pressed = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Rg.Plugins.Popup.Resource.Color.abc_search_url_text_selected = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Rg.Plugins.Popup.Resource.Color.abc_secondary_text_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.abc_secondary_text_material_light = global::YamaCaisse.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.abc_tint_btn_checkable = global::YamaCaisse.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Rg.Plugins.Popup.Resource.Color.abc_tint_default = global::YamaCaisse.Droid.Resource.Color.abc_tint_default;
+			global::Rg.Plugins.Popup.Resource.Color.abc_tint_edittext = global::YamaCaisse.Droid.Resource.Color.abc_tint_edittext;
+			global::Rg.Plugins.Popup.Resource.Color.abc_tint_seek_thumb = global::YamaCaisse.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Rg.Plugins.Popup.Resource.Color.abc_tint_spinner = global::YamaCaisse.Droid.Resource.Color.abc_tint_spinner;
+			global::Rg.Plugins.Popup.Resource.Color.abc_tint_switch_track = global::YamaCaisse.Droid.Resource.Color.abc_tint_switch_track;
+			global::Rg.Plugins.Popup.Resource.Color.accent_material_dark = global::YamaCaisse.Droid.Resource.Color.accent_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.accent_material_light = global::YamaCaisse.Droid.Resource.Color.accent_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.background_floating_material_dark = global::YamaCaisse.Droid.Resource.Color.background_floating_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.background_floating_material_light = global::YamaCaisse.Droid.Resource.Color.background_floating_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.background_material_dark = global::YamaCaisse.Droid.Resource.Color.background_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.background_material_light = global::YamaCaisse.Droid.Resource.Color.background_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.bright_foreground_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.bright_foreground_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.bright_foreground_inverse_material_dark = global::YamaCaisse.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.bright_foreground_inverse_material_light = global::YamaCaisse.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.bright_foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.bright_foreground_material_light = global::YamaCaisse.Droid.Resource.Color.bright_foreground_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.browser_actions_bg_grey = global::YamaCaisse.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Rg.Plugins.Popup.Resource.Color.browser_actions_divider_color = global::YamaCaisse.Droid.Resource.Color.browser_actions_divider_color;
+			global::Rg.Plugins.Popup.Resource.Color.browser_actions_text_color = global::YamaCaisse.Droid.Resource.Color.browser_actions_text_color;
+			global::Rg.Plugins.Popup.Resource.Color.browser_actions_title_color = global::YamaCaisse.Droid.Resource.Color.browser_actions_title_color;
+			global::Rg.Plugins.Popup.Resource.Color.button_material_dark = global::YamaCaisse.Droid.Resource.Color.button_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.button_material_light = global::YamaCaisse.Droid.Resource.Color.button_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.cardview_dark_background = global::YamaCaisse.Droid.Resource.Color.cardview_dark_background;
+			global::Rg.Plugins.Popup.Resource.Color.cardview_light_background = global::YamaCaisse.Droid.Resource.Color.cardview_light_background;
+			global::Rg.Plugins.Popup.Resource.Color.cardview_shadow_end_color = global::YamaCaisse.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Rg.Plugins.Popup.Resource.Color.cardview_shadow_start_color = global::YamaCaisse.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_bottom_navigation_shadow_color = global::YamaCaisse.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_primary = global::YamaCaisse.Droid.Resource.Color.design_default_color_primary;
+			global::Rg.Plugins.Popup.Resource.Color.design_default_color_primary_dark = global::YamaCaisse.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Rg.Plugins.Popup.Resource.Color.design_error = global::YamaCaisse.Droid.Resource.Color.design_error;
+			global::Rg.Plugins.Popup.Resource.Color.design_fab_shadow_end_color = global::YamaCaisse.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_fab_shadow_mid_color = global::YamaCaisse.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_fab_shadow_start_color = global::YamaCaisse.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_fab_stroke_end_inner_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_fab_stroke_end_outer_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_fab_stroke_top_inner_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_fab_stroke_top_outer_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_snackbar_background_color = global::YamaCaisse.Droid.Resource.Color.design_snackbar_background_color;
+			global::Rg.Plugins.Popup.Resource.Color.design_tint_password_toggle = global::YamaCaisse.Droid.Resource.Color.design_tint_password_toggle;
+			global::Rg.Plugins.Popup.Resource.Color.dim_foreground_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.dim_foreground_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.dim_foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.dim_foreground_material_light = global::YamaCaisse.Droid.Resource.Color.dim_foreground_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.error_color_material_dark = global::YamaCaisse.Droid.Resource.Color.error_color_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.error_color_material_light = global::YamaCaisse.Droid.Resource.Color.error_color_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.foreground_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.foreground_material_light = global::YamaCaisse.Droid.Resource.Color.foreground_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.highlighted_text_material_dark = global::YamaCaisse.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.highlighted_text_material_light = global::YamaCaisse.Droid.Resource.Color.highlighted_text_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.material_blue_grey_800 = global::YamaCaisse.Droid.Resource.Color.material_blue_grey_800;
+			global::Rg.Plugins.Popup.Resource.Color.material_blue_grey_900 = global::YamaCaisse.Droid.Resource.Color.material_blue_grey_900;
+			global::Rg.Plugins.Popup.Resource.Color.material_blue_grey_950 = global::YamaCaisse.Droid.Resource.Color.material_blue_grey_950;
+			global::Rg.Plugins.Popup.Resource.Color.material_deep_teal_200 = global::YamaCaisse.Droid.Resource.Color.material_deep_teal_200;
+			global::Rg.Plugins.Popup.Resource.Color.material_deep_teal_500 = global::YamaCaisse.Droid.Resource.Color.material_deep_teal_500;
+			global::Rg.Plugins.Popup.Resource.Color.material_grey_100 = global::YamaCaisse.Droid.Resource.Color.material_grey_100;
+			global::Rg.Plugins.Popup.Resource.Color.material_grey_300 = global::YamaCaisse.Droid.Resource.Color.material_grey_300;
+			global::Rg.Plugins.Popup.Resource.Color.material_grey_50 = global::YamaCaisse.Droid.Resource.Color.material_grey_50;
+			global::Rg.Plugins.Popup.Resource.Color.material_grey_600 = global::YamaCaisse.Droid.Resource.Color.material_grey_600;
+			global::Rg.Plugins.Popup.Resource.Color.material_grey_800 = global::YamaCaisse.Droid.Resource.Color.material_grey_800;
+			global::Rg.Plugins.Popup.Resource.Color.material_grey_850 = global::YamaCaisse.Droid.Resource.Color.material_grey_850;
+			global::Rg.Plugins.Popup.Resource.Color.material_grey_900 = global::YamaCaisse.Droid.Resource.Color.material_grey_900;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::YamaCaisse.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_bottom_nav_item_tint = global::YamaCaisse.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_bg_color_disabled = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_bg_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_stroke_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_text_btn_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_text_color_disabled = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_text_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_btn_transparent_bg_color = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_background_color = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_background_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_close_icon_tint = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_chip_text_color = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_fab_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_scrim_color = global::YamaCaisse.Droid.Resource.Color.mtrl_scrim_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_tabs_colored_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_tabs_icon_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_tabs_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_default_box_stroke_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_disabled_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Rg.Plugins.Popup.Resource.Color.mtrl_text_btn_text_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Rg.Plugins.Popup.Resource.Color.notification_action_color_filter = global::YamaCaisse.Droid.Resource.Color.notification_action_color_filter;
+			global::Rg.Plugins.Popup.Resource.Color.notification_icon_bg_color = global::YamaCaisse.Droid.Resource.Color.notification_icon_bg_color;
+			global::Rg.Plugins.Popup.Resource.Color.notification_material_background_media_default_color = global::YamaCaisse.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Rg.Plugins.Popup.Resource.Color.primary_dark_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_dark_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.primary_dark_material_light = global::YamaCaisse.Droid.Resource.Color.primary_dark_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.primary_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.primary_material_light = global::YamaCaisse.Droid.Resource.Color.primary_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.primary_text_default_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.primary_text_default_material_light = global::YamaCaisse.Droid.Resource.Color.primary_text_default_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.primary_text_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.primary_text_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.ripple_material_dark = global::YamaCaisse.Droid.Resource.Color.ripple_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.ripple_material_light = global::YamaCaisse.Droid.Resource.Color.ripple_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.secondary_text_default_material_dark = global::YamaCaisse.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.secondary_text_default_material_light = global::YamaCaisse.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.secondary_text_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.secondary_text_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_material_dark = global::YamaCaisse.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_material_light = global::YamaCaisse.Droid.Resource.Color.switch_thumb_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_normal_material_dark = global::YamaCaisse.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Rg.Plugins.Popup.Resource.Color.switch_thumb_normal_material_light = global::YamaCaisse.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Rg.Plugins.Popup.Resource.Color.tooltip_background_dark = global::YamaCaisse.Droid.Resource.Color.tooltip_background_dark;
+			global::Rg.Plugins.Popup.Resource.Color.tooltip_background_light = global::YamaCaisse.Droid.Resource.Color.tooltip_background_light;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_content_inset_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_default_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_default_padding_end_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_default_padding_start_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_elevation_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_stacked_max_height = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_button_min_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_button_min_width_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_action_button_min_width_overflow_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_alert_dialog_button_bar_height = global::YamaCaisse.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_alert_dialog_button_dimen = global::YamaCaisse.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_button_inset_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_button_inset_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_button_padding_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_button_padding_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::YamaCaisse.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_config_prefDialogWidth = global::YamaCaisse.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_control_corner_material = global::YamaCaisse.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_control_inset_material = global::YamaCaisse.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_control_padding_material = global::YamaCaisse.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_corner_radius_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_fixed_height_major = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_fixed_height_minor = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_fixed_width_major = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_fixed_width_minor = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_min_width_major = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_min_width_minor = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_padding_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_padding_top_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dialog_title_divider_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_disabled_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_disabled_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dropdownitem_icon_width = global::YamaCaisse.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dropdownitem_text_padding_left = global::YamaCaisse.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_dropdownitem_text_padding_right = global::YamaCaisse.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_edit_text_inset_bottom_material = global::YamaCaisse.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_edit_text_inset_top_material = global::YamaCaisse.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_floating_window_z = global::YamaCaisse.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_list_item_padding_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_panel_menu_list_width = global::YamaCaisse.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_progress_bar_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_search_view_preferred_height = global::YamaCaisse.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_search_view_preferred_width = global::YamaCaisse.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_seekbar_track_background_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_seekbar_track_progress_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_select_dialog_padding_start_material = global::YamaCaisse.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_switch_padding = global::YamaCaisse.Droid.Resource.Dimension.abc_switch_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_body_1_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_body_2_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_button_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_caption_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_display_1_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_display_2_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_display_3_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_display_4_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_headline_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_large_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_medium_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_menu_header_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_menu_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_small_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_subhead_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_title_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.abc_text_size_title_material_toolbar = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Rg.Plugins.Popup.Resource.Dimension.browser_actions_context_menu_max_width = global::YamaCaisse.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.browser_actions_context_menu_min_padding = global::YamaCaisse.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.cardview_compat_inset_shadow = global::YamaCaisse.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Rg.Plugins.Popup.Resource.Dimension.cardview_default_elevation = global::YamaCaisse.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.cardview_default_radius = global::YamaCaisse.Droid.Resource.Dimension.cardview_default_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.compat_button_inset_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.compat_button_inset_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.compat_button_padding_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.compat_button_padding_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.compat_control_corner_material = global::YamaCaisse.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Rg.Plugins.Popup.Resource.Dimension.compat_notification_large_icon_max_height = global::YamaCaisse.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.compat_notification_large_icon_max_width = global::YamaCaisse.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_appbar_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_active_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_height = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_icon_size = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_item_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_item_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_margin = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_shadow_height = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_navigation_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_sheet_modal_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_bottom_sheet_peek_height_min = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_border_width = global::YamaCaisse.Droid.Resource.Dimension.design_fab_border_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_fab_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_image_size = global::YamaCaisse.Droid.Resource.Dimension.design_fab_image_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_size_mini = global::YamaCaisse.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_size_normal = global::YamaCaisse.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_translation_z_hovered_focused = global::YamaCaisse.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_fab_translation_z_pressed = global::YamaCaisse.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_icon_size = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_item_horizontal_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_item_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_padding_bottom = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_navigation_separator_vertical_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_action_inline_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_background_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_padding_horizontal = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_padding_vertical = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_snackbar_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_tab_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_tab_max_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_tab_scrollable_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_tab_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_tab_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_tab_text_size_2line = global::YamaCaisse.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Rg.Plugins.Popup.Resource.Dimension.design_textinput_caption_translate_y = global::YamaCaisse.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Rg.Plugins.Popup.Resource.Dimension.disabled_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Rg.Plugins.Popup.Resource.Dimension.disabled_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Rg.Plugins.Popup.Resource.Dimension.fastscroll_default_thickness = global::YamaCaisse.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Rg.Plugins.Popup.Resource.Dimension.fastscroll_margin = global::YamaCaisse.Droid.Resource.Dimension.fastscroll_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.fastscroll_minimum_range = global::YamaCaisse.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Rg.Plugins.Popup.Resource.Dimension.highlight_alpha_material_colored = global::YamaCaisse.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Rg.Plugins.Popup.Resource.Dimension.highlight_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Rg.Plugins.Popup.Resource.Dimension.highlight_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Rg.Plugins.Popup.Resource.Dimension.hint_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Rg.Plugins.Popup.Resource.Dimension.hint_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Rg.Plugins.Popup.Resource.Dimension.hint_pressed_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Rg.Plugins.Popup.Resource.Dimension.hint_pressed_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Rg.Plugins.Popup.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::YamaCaisse.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Rg.Plugins.Popup.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::YamaCaisse.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Rg.Plugins.Popup.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::YamaCaisse.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_bottomappbar_height = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_disabled_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_disabled_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_focused_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_hovered_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_inset = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_letter_spacing = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_padding_bottom = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_padding_left = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_padding_right = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_padding_top = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_pressed_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_stroke_size = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_text_size = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_btn_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_card_spacing = global::YamaCaisse.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_chip_pressed_translation_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_chip_text_size = global::YamaCaisse.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_fab_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::YamaCaisse.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_fab_translation_z_pressed = global::YamaCaisse.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_navigation_item_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_snackbar_margin = global::YamaCaisse.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_padding_end = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.mtrl_toolbar_default_height = global::YamaCaisse.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_action_icon_size = global::YamaCaisse.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_action_text_size = global::YamaCaisse.Droid.Resource.Dimension.notification_action_text_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_big_circle_margin = global::YamaCaisse.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_content_margin_start = global::YamaCaisse.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_large_icon_height = global::YamaCaisse.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_large_icon_width = global::YamaCaisse.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_main_column_padding_top = global::YamaCaisse.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_media_narrow_margin = global::YamaCaisse.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_right_icon_size = global::YamaCaisse.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_right_side_padding_top = global::YamaCaisse.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_small_icon_background_padding = global::YamaCaisse.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_small_icon_size_as_large = global::YamaCaisse.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_subtext_size = global::YamaCaisse.Droid.Resource.Dimension.notification_subtext_size;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_top_pad = global::YamaCaisse.Droid.Resource.Dimension.notification_top_pad;
+			global::Rg.Plugins.Popup.Resource.Dimension.notification_top_pad_large_text = global::YamaCaisse.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Rg.Plugins.Popup.Resource.Dimension.subtitle_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.subtitle_outline_width = global::YamaCaisse.Droid.Resource.Dimension.subtitle_outline_width;
+			global::Rg.Plugins.Popup.Resource.Dimension.subtitle_shadow_offset = global::YamaCaisse.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.subtitle_shadow_radius = global::YamaCaisse.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_horizontal_padding = global::YamaCaisse.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_margin = global::YamaCaisse.Droid.Resource.Dimension.tooltip_margin;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::YamaCaisse.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_precise_anchor_threshold = global::YamaCaisse.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_vertical_padding = global::YamaCaisse.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_y_offset_non_touch = global::YamaCaisse.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Rg.Plugins.Popup.Resource.Dimension.tooltip_y_offset_touch = global::YamaCaisse.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_action_bar_item_background_material = global::YamaCaisse.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_borderless_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_check_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_colored_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_default_mtrl_shape = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_radio_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_cab_background_internal_bg = global::YamaCaisse.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_cab_background_top_material = global::YamaCaisse.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_control_background_material = global::YamaCaisse.Droid.Resource.Drawable.abc_control_background_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_dialog_material_background = global::YamaCaisse.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_edit_text_material = global::YamaCaisse.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_ab_back_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_clear_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_go_search_api_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_menu_overflow_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_search_api_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_star_black_16dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_star_black_36dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_star_black_48dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_star_half_black_16dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_star_half_black_36dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_star_half_black_48dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ic_voice_search_api_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_item_background_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_item_background_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_divider_material = global::YamaCaisse.Droid.Resource.Drawable.abc_list_divider_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_divider_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_focused_holo = global::YamaCaisse.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_longpressed_holo = global::YamaCaisse.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_pressed_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_pressed_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_selector_disabled_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_selector_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_list_selector_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::YamaCaisse.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_popup_background_mtrl_mult = global::YamaCaisse.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ratingbar_indicator_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ratingbar_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_ratingbar_small_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_seekbar_thumb_material = global::YamaCaisse.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_seekbar_tick_mark_material = global::YamaCaisse.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_seekbar_track_material = global::YamaCaisse.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_spinner_textfield_background_material = global::YamaCaisse.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_switch_thumb_material = global::YamaCaisse.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_switch_track_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_tab_indicator_material = global::YamaCaisse.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_textfield_search_material = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_text_cursor_material = global::YamaCaisse.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Rg.Plugins.Popup.Resource.Drawable.abc_vector_test = global::YamaCaisse.Droid.Resource.Drawable.abc_vector_test;
+			global::Rg.Plugins.Popup.Resource.Drawable.avd_hide_password = global::YamaCaisse.Droid.Resource.Drawable.avd_hide_password;
+			global::Rg.Plugins.Popup.Resource.Drawable.avd_show_password = global::YamaCaisse.Droid.Resource.Drawable.avd_show_password;
+			global::Rg.Plugins.Popup.Resource.Drawable.design_bottom_navigation_item_background = global::YamaCaisse.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.design_fab_background = global::YamaCaisse.Droid.Resource.Drawable.design_fab_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.design_ic_visibility = global::YamaCaisse.Droid.Resource.Drawable.design_ic_visibility;
+			global::Rg.Plugins.Popup.Resource.Drawable.design_ic_visibility_off = global::YamaCaisse.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Rg.Plugins.Popup.Resource.Drawable.design_password_eye = global::YamaCaisse.Droid.Resource.Drawable.design_password_eye;
+			global::Rg.Plugins.Popup.Resource.Drawable.design_snackbar_background = global::YamaCaisse.Droid.Resource.Drawable.design_snackbar_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.ic_mtrl_chip_checked_black = global::YamaCaisse.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Rg.Plugins.Popup.Resource.Drawable.ic_mtrl_chip_checked_circle = global::YamaCaisse.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Rg.Plugins.Popup.Resource.Drawable.ic_mtrl_chip_close_circle = global::YamaCaisse.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_snackbar_background = global::YamaCaisse.Droid.Resource.Drawable.mtrl_snackbar_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.mtrl_tabs_default_indicator = global::YamaCaisse.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Rg.Plugins.Popup.Resource.Drawable.navigation_empty_icon = global::YamaCaisse.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_action_background = global::YamaCaisse.Droid.Resource.Drawable.notification_action_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_bg;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_bg_low = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_low;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_bg_low_normal = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_bg_low_pressed = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_bg_normal = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_normal;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_bg_normal_pressed = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_icon_background = global::YamaCaisse.Droid.Resource.Drawable.notification_icon_background;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_template_icon_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_template_icon_low_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Rg.Plugins.Popup.Resource.Drawable.notification_tile_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_tile_bg;
+			global::Rg.Plugins.Popup.Resource.Drawable.notify_panel_notification_icon_bg = global::YamaCaisse.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Rg.Plugins.Popup.Resource.Drawable.tooltip_frame_dark = global::YamaCaisse.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Rg.Plugins.Popup.Resource.Drawable.tooltip_frame_light = global::YamaCaisse.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Rg.Plugins.Popup.Resource.Id.action0 = global::YamaCaisse.Droid.Resource.Id.action0;
+			global::Rg.Plugins.Popup.Resource.Id.actions = global::YamaCaisse.Droid.Resource.Id.actions;
+			global::Rg.Plugins.Popup.Resource.Id.action_bar = global::YamaCaisse.Droid.Resource.Id.action_bar;
+			global::Rg.Plugins.Popup.Resource.Id.action_bar_activity_content = global::YamaCaisse.Droid.Resource.Id.action_bar_activity_content;
+			global::Rg.Plugins.Popup.Resource.Id.action_bar_container = global::YamaCaisse.Droid.Resource.Id.action_bar_container;
+			global::Rg.Plugins.Popup.Resource.Id.action_bar_root = global::YamaCaisse.Droid.Resource.Id.action_bar_root;
+			global::Rg.Plugins.Popup.Resource.Id.action_bar_spinner = global::YamaCaisse.Droid.Resource.Id.action_bar_spinner;
+			global::Rg.Plugins.Popup.Resource.Id.action_bar_subtitle = global::YamaCaisse.Droid.Resource.Id.action_bar_subtitle;
+			global::Rg.Plugins.Popup.Resource.Id.action_bar_title = global::YamaCaisse.Droid.Resource.Id.action_bar_title;
+			global::Rg.Plugins.Popup.Resource.Id.action_container = global::YamaCaisse.Droid.Resource.Id.action_container;
+			global::Rg.Plugins.Popup.Resource.Id.action_context_bar = global::YamaCaisse.Droid.Resource.Id.action_context_bar;
+			global::Rg.Plugins.Popup.Resource.Id.action_divider = global::YamaCaisse.Droid.Resource.Id.action_divider;
+			global::Rg.Plugins.Popup.Resource.Id.action_image = global::YamaCaisse.Droid.Resource.Id.action_image;
+			global::Rg.Plugins.Popup.Resource.Id.action_menu_divider = global::YamaCaisse.Droid.Resource.Id.action_menu_divider;
+			global::Rg.Plugins.Popup.Resource.Id.action_menu_presenter = global::YamaCaisse.Droid.Resource.Id.action_menu_presenter;
+			global::Rg.Plugins.Popup.Resource.Id.action_mode_bar = global::YamaCaisse.Droid.Resource.Id.action_mode_bar;
+			global::Rg.Plugins.Popup.Resource.Id.action_mode_bar_stub = global::YamaCaisse.Droid.Resource.Id.action_mode_bar_stub;
+			global::Rg.Plugins.Popup.Resource.Id.action_mode_close_button = global::YamaCaisse.Droid.Resource.Id.action_mode_close_button;
+			global::Rg.Plugins.Popup.Resource.Id.action_text = global::YamaCaisse.Droid.Resource.Id.action_text;
+			global::Rg.Plugins.Popup.Resource.Id.activity_chooser_view_content = global::YamaCaisse.Droid.Resource.Id.activity_chooser_view_content;
+			global::Rg.Plugins.Popup.Resource.Id.add = global::YamaCaisse.Droid.Resource.Id.add;
+			global::Rg.Plugins.Popup.Resource.Id.alertTitle = global::YamaCaisse.Droid.Resource.Id.alertTitle;
+			global::Rg.Plugins.Popup.Resource.Id.all = global::YamaCaisse.Droid.Resource.Id.all;
+			global::Rg.Plugins.Popup.Resource.Id.ALT = global::YamaCaisse.Droid.Resource.Id.ALT;
+			global::Rg.Plugins.Popup.Resource.Id.always = global::YamaCaisse.Droid.Resource.Id.always;
+			global::Rg.Plugins.Popup.Resource.Id.async = global::YamaCaisse.Droid.Resource.Id.async;
+			global::Rg.Plugins.Popup.Resource.Id.auto = global::YamaCaisse.Droid.Resource.Id.auto;
+			global::Rg.Plugins.Popup.Resource.Id.beginning = global::YamaCaisse.Droid.Resource.Id.beginning;
+			global::Rg.Plugins.Popup.Resource.Id.blocking = global::YamaCaisse.Droid.Resource.Id.blocking;
+			global::Rg.Plugins.Popup.Resource.Id.bottom = global::YamaCaisse.Droid.Resource.Id.bottom;
+			global::Rg.Plugins.Popup.Resource.Id.bottomtab_navarea = global::YamaCaisse.Droid.Resource.Id.bottomtab_navarea;
+			global::Rg.Plugins.Popup.Resource.Id.bottomtab_tabbar = global::YamaCaisse.Droid.Resource.Id.bottomtab_tabbar;
+			global::Rg.Plugins.Popup.Resource.Id.browser_actions_header_text = global::YamaCaisse.Droid.Resource.Id.browser_actions_header_text;
+			global::Rg.Plugins.Popup.Resource.Id.browser_actions_menu_items = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_items;
+			global::Rg.Plugins.Popup.Resource.Id.browser_actions_menu_item_icon = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Rg.Plugins.Popup.Resource.Id.browser_actions_menu_item_text = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Rg.Plugins.Popup.Resource.Id.browser_actions_menu_view = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_view;
+			global::Rg.Plugins.Popup.Resource.Id.buttonPanel = global::YamaCaisse.Droid.Resource.Id.buttonPanel;
+			global::Rg.Plugins.Popup.Resource.Id.cancel_action = global::YamaCaisse.Droid.Resource.Id.cancel_action;
+			global::Rg.Plugins.Popup.Resource.Id.center = global::YamaCaisse.Droid.Resource.Id.center;
+			global::Rg.Plugins.Popup.Resource.Id.center_horizontal = global::YamaCaisse.Droid.Resource.Id.center_horizontal;
+			global::Rg.Plugins.Popup.Resource.Id.center_vertical = global::YamaCaisse.Droid.Resource.Id.center_vertical;
+			global::Rg.Plugins.Popup.Resource.Id.checkbox = global::YamaCaisse.Droid.Resource.Id.checkbox;
+			global::Rg.Plugins.Popup.Resource.Id.chronometer = global::YamaCaisse.Droid.Resource.Id.chronometer;
+			global::Rg.Plugins.Popup.Resource.Id.clip_horizontal = global::YamaCaisse.Droid.Resource.Id.clip_horizontal;
+			global::Rg.Plugins.Popup.Resource.Id.clip_vertical = global::YamaCaisse.Droid.Resource.Id.clip_vertical;
+			global::Rg.Plugins.Popup.Resource.Id.collapseActionView = global::YamaCaisse.Droid.Resource.Id.collapseActionView;
+			global::Rg.Plugins.Popup.Resource.Id.container = global::YamaCaisse.Droid.Resource.Id.container;
+			global::Rg.Plugins.Popup.Resource.Id.content = global::YamaCaisse.Droid.Resource.Id.content;
+			global::Rg.Plugins.Popup.Resource.Id.contentPanel = global::YamaCaisse.Droid.Resource.Id.contentPanel;
+			global::Rg.Plugins.Popup.Resource.Id.coordinator = global::YamaCaisse.Droid.Resource.Id.coordinator;
+			global::Rg.Plugins.Popup.Resource.Id.CTRL = global::YamaCaisse.Droid.Resource.Id.CTRL;
+			global::Rg.Plugins.Popup.Resource.Id.custom = global::YamaCaisse.Droid.Resource.Id.custom;
+			global::Rg.Plugins.Popup.Resource.Id.customPanel = global::YamaCaisse.Droid.Resource.Id.customPanel;
+			global::Rg.Plugins.Popup.Resource.Id.decor_content_parent = global::YamaCaisse.Droid.Resource.Id.decor_content_parent;
+			global::Rg.Plugins.Popup.Resource.Id.default_activity_button = global::YamaCaisse.Droid.Resource.Id.default_activity_button;
+			global::Rg.Plugins.Popup.Resource.Id.design_bottom_sheet = global::YamaCaisse.Droid.Resource.Id.design_bottom_sheet;
+			global::Rg.Plugins.Popup.Resource.Id.design_menu_item_action_area = global::YamaCaisse.Droid.Resource.Id.design_menu_item_action_area;
+			global::Rg.Plugins.Popup.Resource.Id.design_menu_item_action_area_stub = global::YamaCaisse.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Rg.Plugins.Popup.Resource.Id.design_menu_item_text = global::YamaCaisse.Droid.Resource.Id.design_menu_item_text;
+			global::Rg.Plugins.Popup.Resource.Id.design_navigation_view = global::YamaCaisse.Droid.Resource.Id.design_navigation_view;
+			global::Rg.Plugins.Popup.Resource.Id.disableHome = global::YamaCaisse.Droid.Resource.Id.disableHome;
+			global::Rg.Plugins.Popup.Resource.Id.edit_query = global::YamaCaisse.Droid.Resource.Id.edit_query;
+			global::Rg.Plugins.Popup.Resource.Id.end = global::YamaCaisse.Droid.Resource.Id.end;
+			global::Rg.Plugins.Popup.Resource.Id.end_padder = global::YamaCaisse.Droid.Resource.Id.end_padder;
+			global::Rg.Plugins.Popup.Resource.Id.enterAlways = global::YamaCaisse.Droid.Resource.Id.enterAlways;
+			global::Rg.Plugins.Popup.Resource.Id.enterAlwaysCollapsed = global::YamaCaisse.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Rg.Plugins.Popup.Resource.Id.exitUntilCollapsed = global::YamaCaisse.Droid.Resource.Id.exitUntilCollapsed;
+			global::Rg.Plugins.Popup.Resource.Id.expanded_menu = global::YamaCaisse.Droid.Resource.Id.expanded_menu;
+			global::Rg.Plugins.Popup.Resource.Id.expand_activities_button = global::YamaCaisse.Droid.Resource.Id.expand_activities_button;
+			global::Rg.Plugins.Popup.Resource.Id.fill = global::YamaCaisse.Droid.Resource.Id.fill;
+			global::Rg.Plugins.Popup.Resource.Id.filled = global::YamaCaisse.Droid.Resource.Id.filled;
+			global::Rg.Plugins.Popup.Resource.Id.fill_horizontal = global::YamaCaisse.Droid.Resource.Id.fill_horizontal;
+			global::Rg.Plugins.Popup.Resource.Id.fill_vertical = global::YamaCaisse.Droid.Resource.Id.fill_vertical;
+			global::Rg.Plugins.Popup.Resource.Id.@fixed = global::YamaCaisse.Droid.Resource.Id.@fixed;
+			global::Rg.Plugins.Popup.Resource.Id.flyoutcontent_appbar = global::YamaCaisse.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Rg.Plugins.Popup.Resource.Id.flyoutcontent_recycler = global::YamaCaisse.Droid.Resource.Id.flyoutcontent_recycler;
+			global::Rg.Plugins.Popup.Resource.Id.forever = global::YamaCaisse.Droid.Resource.Id.forever;
+			global::Rg.Plugins.Popup.Resource.Id.FUNCTION = global::YamaCaisse.Droid.Resource.Id.FUNCTION;
+			global::Rg.Plugins.Popup.Resource.Id.ghost_view = global::YamaCaisse.Droid.Resource.Id.ghost_view;
+			global::Rg.Plugins.Popup.Resource.Id.group_divider = global::YamaCaisse.Droid.Resource.Id.group_divider;
+			global::Rg.Plugins.Popup.Resource.Id.home = global::YamaCaisse.Droid.Resource.Id.home;
+			global::Rg.Plugins.Popup.Resource.Id.homeAsUp = global::YamaCaisse.Droid.Resource.Id.homeAsUp;
+			global::Rg.Plugins.Popup.Resource.Id.icon = global::YamaCaisse.Droid.Resource.Id.icon;
+			global::Rg.Plugins.Popup.Resource.Id.icon_group = global::YamaCaisse.Droid.Resource.Id.icon_group;
+			global::Rg.Plugins.Popup.Resource.Id.ifRoom = global::YamaCaisse.Droid.Resource.Id.ifRoom;
+			global::Rg.Plugins.Popup.Resource.Id.image = global::YamaCaisse.Droid.Resource.Id.image;
+			global::Rg.Plugins.Popup.Resource.Id.info = global::YamaCaisse.Droid.Resource.Id.info;
+			global::Rg.Plugins.Popup.Resource.Id.italic = global::YamaCaisse.Droid.Resource.Id.italic;
+			global::Rg.Plugins.Popup.Resource.Id.item_touch_helper_previous_elevation = global::YamaCaisse.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Rg.Plugins.Popup.Resource.Id.labeled = global::YamaCaisse.Droid.Resource.Id.labeled;
+			global::Rg.Plugins.Popup.Resource.Id.largeLabel = global::YamaCaisse.Droid.Resource.Id.largeLabel;
+			global::Rg.Plugins.Popup.Resource.Id.left = global::YamaCaisse.Droid.Resource.Id.left;
+			global::Rg.Plugins.Popup.Resource.Id.line1 = global::YamaCaisse.Droid.Resource.Id.line1;
+			global::Rg.Plugins.Popup.Resource.Id.line3 = global::YamaCaisse.Droid.Resource.Id.line3;
+			global::Rg.Plugins.Popup.Resource.Id.listMode = global::YamaCaisse.Droid.Resource.Id.listMode;
+			global::Rg.Plugins.Popup.Resource.Id.list_item = global::YamaCaisse.Droid.Resource.Id.list_item;
+			global::Rg.Plugins.Popup.Resource.Id.main_appbar = global::YamaCaisse.Droid.Resource.Id.main_appbar;
+			global::Rg.Plugins.Popup.Resource.Id.main_tablayout = global::YamaCaisse.Droid.Resource.Id.main_tablayout;
+			global::Rg.Plugins.Popup.Resource.Id.main_toolbar = global::YamaCaisse.Droid.Resource.Id.main_toolbar;
+			global::Rg.Plugins.Popup.Resource.Id.main_viewpager = global::YamaCaisse.Droid.Resource.Id.main_viewpager;
+			global::Rg.Plugins.Popup.Resource.Id.masked = global::YamaCaisse.Droid.Resource.Id.masked;
+			global::Rg.Plugins.Popup.Resource.Id.media_actions = global::YamaCaisse.Droid.Resource.Id.media_actions;
+			global::Rg.Plugins.Popup.Resource.Id.message = global::YamaCaisse.Droid.Resource.Id.message;
+			global::Rg.Plugins.Popup.Resource.Id.META = global::YamaCaisse.Droid.Resource.Id.META;
+			global::Rg.Plugins.Popup.Resource.Id.middle = global::YamaCaisse.Droid.Resource.Id.middle;
+			global::Rg.Plugins.Popup.Resource.Id.mini = global::YamaCaisse.Droid.Resource.Id.mini;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_child_content_container = global::YamaCaisse.Droid.Resource.Id.mtrl_child_content_container;
+			global::Rg.Plugins.Popup.Resource.Id.mtrl_internal_children_alpha_tag = global::YamaCaisse.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Rg.Plugins.Popup.Resource.Id.multiply = global::YamaCaisse.Droid.Resource.Id.multiply;
+			global::Rg.Plugins.Popup.Resource.Id.navigation_header_container = global::YamaCaisse.Droid.Resource.Id.navigation_header_container;
+			global::Rg.Plugins.Popup.Resource.Id.never = global::YamaCaisse.Droid.Resource.Id.never;
+			global::Rg.Plugins.Popup.Resource.Id.none = global::YamaCaisse.Droid.Resource.Id.none;
+			global::Rg.Plugins.Popup.Resource.Id.normal = global::YamaCaisse.Droid.Resource.Id.normal;
+			global::Rg.Plugins.Popup.Resource.Id.notification_background = global::YamaCaisse.Droid.Resource.Id.notification_background;
+			global::Rg.Plugins.Popup.Resource.Id.notification_main_column = global::YamaCaisse.Droid.Resource.Id.notification_main_column;
+			global::Rg.Plugins.Popup.Resource.Id.notification_main_column_container = global::YamaCaisse.Droid.Resource.Id.notification_main_column_container;
+			global::Rg.Plugins.Popup.Resource.Id.outline = global::YamaCaisse.Droid.Resource.Id.outline;
+			global::Rg.Plugins.Popup.Resource.Id.parallax = global::YamaCaisse.Droid.Resource.Id.parallax;
+			global::Rg.Plugins.Popup.Resource.Id.parentPanel = global::YamaCaisse.Droid.Resource.Id.parentPanel;
+			global::Rg.Plugins.Popup.Resource.Id.parent_matrix = global::YamaCaisse.Droid.Resource.Id.parent_matrix;
+			global::Rg.Plugins.Popup.Resource.Id.pin = global::YamaCaisse.Droid.Resource.Id.pin;
+			global::Rg.Plugins.Popup.Resource.Id.progress_circular = global::YamaCaisse.Droid.Resource.Id.progress_circular;
+			global::Rg.Plugins.Popup.Resource.Id.progress_horizontal = global::YamaCaisse.Droid.Resource.Id.progress_horizontal;
+			global::Rg.Plugins.Popup.Resource.Id.radio = global::YamaCaisse.Droid.Resource.Id.radio;
+			global::Rg.Plugins.Popup.Resource.Id.right = global::YamaCaisse.Droid.Resource.Id.right;
+			global::Rg.Plugins.Popup.Resource.Id.right_icon = global::YamaCaisse.Droid.Resource.Id.right_icon;
+			global::Rg.Plugins.Popup.Resource.Id.right_side = global::YamaCaisse.Droid.Resource.Id.right_side;
+			global::Rg.Plugins.Popup.Resource.Id.save_image_matrix = global::YamaCaisse.Droid.Resource.Id.save_image_matrix;
+			global::Rg.Plugins.Popup.Resource.Id.save_non_transition_alpha = global::YamaCaisse.Droid.Resource.Id.save_non_transition_alpha;
+			global::Rg.Plugins.Popup.Resource.Id.save_scale_type = global::YamaCaisse.Droid.Resource.Id.save_scale_type;
+			global::Rg.Plugins.Popup.Resource.Id.screen = global::YamaCaisse.Droid.Resource.Id.screen;
+			global::Rg.Plugins.Popup.Resource.Id.scroll = global::YamaCaisse.Droid.Resource.Id.scroll;
+			global::Rg.Plugins.Popup.Resource.Id.scrollable = global::YamaCaisse.Droid.Resource.Id.scrollable;
+			global::Rg.Plugins.Popup.Resource.Id.scrollIndicatorDown = global::YamaCaisse.Droid.Resource.Id.scrollIndicatorDown;
+			global::Rg.Plugins.Popup.Resource.Id.scrollIndicatorUp = global::YamaCaisse.Droid.Resource.Id.scrollIndicatorUp;
+			global::Rg.Plugins.Popup.Resource.Id.scrollView = global::YamaCaisse.Droid.Resource.Id.scrollView;
+			global::Rg.Plugins.Popup.Resource.Id.search_badge = global::YamaCaisse.Droid.Resource.Id.search_badge;
+			global::Rg.Plugins.Popup.Resource.Id.search_bar = global::YamaCaisse.Droid.Resource.Id.search_bar;
+			global::Rg.Plugins.Popup.Resource.Id.search_button = global::YamaCaisse.Droid.Resource.Id.search_button;
+			global::Rg.Plugins.Popup.Resource.Id.search_close_btn = global::YamaCaisse.Droid.Resource.Id.search_close_btn;
+			global::Rg.Plugins.Popup.Resource.Id.search_edit_frame = global::YamaCaisse.Droid.Resource.Id.search_edit_frame;
+			global::Rg.Plugins.Popup.Resource.Id.search_go_btn = global::YamaCaisse.Droid.Resource.Id.search_go_btn;
+			global::Rg.Plugins.Popup.Resource.Id.search_mag_icon = global::YamaCaisse.Droid.Resource.Id.search_mag_icon;
+			global::Rg.Plugins.Popup.Resource.Id.search_plate = global::YamaCaisse.Droid.Resource.Id.search_plate;
+			global::Rg.Plugins.Popup.Resource.Id.search_src_text = global::YamaCaisse.Droid.Resource.Id.search_src_text;
+			global::Rg.Plugins.Popup.Resource.Id.search_voice_btn = global::YamaCaisse.Droid.Resource.Id.search_voice_btn;
+			global::Rg.Plugins.Popup.Resource.Id.selected = global::YamaCaisse.Droid.Resource.Id.selected;
+			global::Rg.Plugins.Popup.Resource.Id.select_dialog_listview = global::YamaCaisse.Droid.Resource.Id.select_dialog_listview;
+			global::Rg.Plugins.Popup.Resource.Id.shellcontent_appbar = global::YamaCaisse.Droid.Resource.Id.shellcontent_appbar;
+			global::Rg.Plugins.Popup.Resource.Id.shellcontent_toolbar = global::YamaCaisse.Droid.Resource.Id.shellcontent_toolbar;
+			global::Rg.Plugins.Popup.Resource.Id.SHIFT = global::YamaCaisse.Droid.Resource.Id.SHIFT;
+			global::Rg.Plugins.Popup.Resource.Id.shortcut = global::YamaCaisse.Droid.Resource.Id.shortcut;
+			global::Rg.Plugins.Popup.Resource.Id.showCustom = global::YamaCaisse.Droid.Resource.Id.showCustom;
+			global::Rg.Plugins.Popup.Resource.Id.showHome = global::YamaCaisse.Droid.Resource.Id.showHome;
+			global::Rg.Plugins.Popup.Resource.Id.showTitle = global::YamaCaisse.Droid.Resource.Id.showTitle;
+			global::Rg.Plugins.Popup.Resource.Id.smallLabel = global::YamaCaisse.Droid.Resource.Id.smallLabel;
+			global::Rg.Plugins.Popup.Resource.Id.snackbar_action = global::YamaCaisse.Droid.Resource.Id.snackbar_action;
+			global::Rg.Plugins.Popup.Resource.Id.snackbar_text = global::YamaCaisse.Droid.Resource.Id.snackbar_text;
+			global::Rg.Plugins.Popup.Resource.Id.snap = global::YamaCaisse.Droid.Resource.Id.snap;
+			global::Rg.Plugins.Popup.Resource.Id.snapMargins = global::YamaCaisse.Droid.Resource.Id.snapMargins;
+			global::Rg.Plugins.Popup.Resource.Id.spacer = global::YamaCaisse.Droid.Resource.Id.spacer;
+			global::Rg.Plugins.Popup.Resource.Id.split_action_bar = global::YamaCaisse.Droid.Resource.Id.split_action_bar;
+			global::Rg.Plugins.Popup.Resource.Id.src_atop = global::YamaCaisse.Droid.Resource.Id.src_atop;
+			global::Rg.Plugins.Popup.Resource.Id.src_in = global::YamaCaisse.Droid.Resource.Id.src_in;
+			global::Rg.Plugins.Popup.Resource.Id.src_over = global::YamaCaisse.Droid.Resource.Id.src_over;
+			global::Rg.Plugins.Popup.Resource.Id.start = global::YamaCaisse.Droid.Resource.Id.start;
+			global::Rg.Plugins.Popup.Resource.Id.status_bar_latest_event_content = global::YamaCaisse.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Rg.Plugins.Popup.Resource.Id.stretch = global::YamaCaisse.Droid.Resource.Id.stretch;
+			global::Rg.Plugins.Popup.Resource.Id.submenuarrow = global::YamaCaisse.Droid.Resource.Id.submenuarrow;
+			global::Rg.Plugins.Popup.Resource.Id.submit_area = global::YamaCaisse.Droid.Resource.Id.submit_area;
+			global::Rg.Plugins.Popup.Resource.Id.SYM = global::YamaCaisse.Droid.Resource.Id.SYM;
+			global::Rg.Plugins.Popup.Resource.Id.tabMode = global::YamaCaisse.Droid.Resource.Id.tabMode;
+			global::Rg.Plugins.Popup.Resource.Id.tag_transition_group = global::YamaCaisse.Droid.Resource.Id.tag_transition_group;
+			global::Rg.Plugins.Popup.Resource.Id.tag_unhandled_key_event_manager = global::YamaCaisse.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Rg.Plugins.Popup.Resource.Id.tag_unhandled_key_listeners = global::YamaCaisse.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Rg.Plugins.Popup.Resource.Id.text = global::YamaCaisse.Droid.Resource.Id.text;
+			global::Rg.Plugins.Popup.Resource.Id.text2 = global::YamaCaisse.Droid.Resource.Id.text2;
+			global::Rg.Plugins.Popup.Resource.Id.textinput_counter = global::YamaCaisse.Droid.Resource.Id.textinput_counter;
+			global::Rg.Plugins.Popup.Resource.Id.textinput_error = global::YamaCaisse.Droid.Resource.Id.textinput_error;
+			global::Rg.Plugins.Popup.Resource.Id.textinput_helper_text = global::YamaCaisse.Droid.Resource.Id.textinput_helper_text;
+			global::Rg.Plugins.Popup.Resource.Id.textSpacerNoButtons = global::YamaCaisse.Droid.Resource.Id.textSpacerNoButtons;
+			global::Rg.Plugins.Popup.Resource.Id.textSpacerNoTitle = global::YamaCaisse.Droid.Resource.Id.textSpacerNoTitle;
+			global::Rg.Plugins.Popup.Resource.Id.textStart = global::YamaCaisse.Droid.Resource.Id.textStart;
+			global::Rg.Plugins.Popup.Resource.Id.text_input_password_toggle = global::YamaCaisse.Droid.Resource.Id.text_input_password_toggle;
+			global::Rg.Plugins.Popup.Resource.Id.time = global::YamaCaisse.Droid.Resource.Id.time;
+			global::Rg.Plugins.Popup.Resource.Id.title = global::YamaCaisse.Droid.Resource.Id.title;
+			global::Rg.Plugins.Popup.Resource.Id.titleDividerNoCustom = global::YamaCaisse.Droid.Resource.Id.titleDividerNoCustom;
+			global::Rg.Plugins.Popup.Resource.Id.title_template = global::YamaCaisse.Droid.Resource.Id.title_template;
+			global::Rg.Plugins.Popup.Resource.Id.top = global::YamaCaisse.Droid.Resource.Id.top;
+			global::Rg.Plugins.Popup.Resource.Id.topPanel = global::YamaCaisse.Droid.Resource.Id.topPanel;
+			global::Rg.Plugins.Popup.Resource.Id.touch_outside = global::YamaCaisse.Droid.Resource.Id.touch_outside;
+			global::Rg.Plugins.Popup.Resource.Id.transition_current_scene = global::YamaCaisse.Droid.Resource.Id.transition_current_scene;
+			global::Rg.Plugins.Popup.Resource.Id.transition_layout_save = global::YamaCaisse.Droid.Resource.Id.transition_layout_save;
+			global::Rg.Plugins.Popup.Resource.Id.transition_position = global::YamaCaisse.Droid.Resource.Id.transition_position;
+			global::Rg.Plugins.Popup.Resource.Id.transition_scene_layoutid_cache = global::YamaCaisse.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Rg.Plugins.Popup.Resource.Id.transition_transform = global::YamaCaisse.Droid.Resource.Id.transition_transform;
+			global::Rg.Plugins.Popup.Resource.Id.uniform = global::YamaCaisse.Droid.Resource.Id.uniform;
+			global::Rg.Plugins.Popup.Resource.Id.unlabeled = global::YamaCaisse.Droid.Resource.Id.unlabeled;
+			global::Rg.Plugins.Popup.Resource.Id.up = global::YamaCaisse.Droid.Resource.Id.up;
+			global::Rg.Plugins.Popup.Resource.Id.useLogo = global::YamaCaisse.Droid.Resource.Id.useLogo;
+			global::Rg.Plugins.Popup.Resource.Id.view_offset_helper = global::YamaCaisse.Droid.Resource.Id.view_offset_helper;
+			global::Rg.Plugins.Popup.Resource.Id.visible = global::YamaCaisse.Droid.Resource.Id.visible;
+			global::Rg.Plugins.Popup.Resource.Id.withText = global::YamaCaisse.Droid.Resource.Id.withText;
+			global::Rg.Plugins.Popup.Resource.Id.wrap_content = global::YamaCaisse.Droid.Resource.Id.wrap_content;
+			global::Rg.Plugins.Popup.Resource.Integer.abc_config_activityDefaultDur = global::YamaCaisse.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Rg.Plugins.Popup.Resource.Integer.abc_config_activityShortDur = global::YamaCaisse.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Rg.Plugins.Popup.Resource.Integer.app_bar_elevation_anim_duration = global::YamaCaisse.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Rg.Plugins.Popup.Resource.Integer.bottom_sheet_slide_duration = global::YamaCaisse.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Rg.Plugins.Popup.Resource.Integer.cancel_button_image_alpha = global::YamaCaisse.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Rg.Plugins.Popup.Resource.Integer.config_tooltipAnimTime = global::YamaCaisse.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Rg.Plugins.Popup.Resource.Integer.design_snackbar_text_max_lines = global::YamaCaisse.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Rg.Plugins.Popup.Resource.Integer.design_tab_indicator_anim_duration_ms = global::YamaCaisse.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Rg.Plugins.Popup.Resource.Integer.hide_password_duration = global::YamaCaisse.Droid.Resource.Integer.hide_password_duration;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_btn_anim_delay_ms = global::YamaCaisse.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_btn_anim_duration_ms = global::YamaCaisse.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_chip_anim_duration = global::YamaCaisse.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::Rg.Plugins.Popup.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::YamaCaisse.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Rg.Plugins.Popup.Resource.Integer.show_password_duration = global::YamaCaisse.Droid.Resource.Integer.show_password_duration;
+			global::Rg.Plugins.Popup.Resource.Integer.status_bar_notification_info_maxnum = global::YamaCaisse.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Rg.Plugins.Popup.Resource.Interpolator.mtrl_fast_out_linear_in = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Rg.Plugins.Popup.Resource.Interpolator.mtrl_fast_out_slow_in = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Rg.Plugins.Popup.Resource.Interpolator.mtrl_linear = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_linear;
+			global::Rg.Plugins.Popup.Resource.Interpolator.mtrl_linear_out_slow_in = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_action_bar_title_item = global::YamaCaisse.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_action_bar_up_container = global::YamaCaisse.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_action_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_action_menu_layout = global::YamaCaisse.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_action_mode_bar = global::YamaCaisse.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_action_mode_close_item_material = global::YamaCaisse.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_activity_chooser_view = global::YamaCaisse.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_activity_chooser_view_list_item = global::YamaCaisse.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_alert_dialog_button_bar_material = global::YamaCaisse.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_alert_dialog_material = global::YamaCaisse.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_alert_dialog_title_material = global::YamaCaisse.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_cascading_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_dialog_title_material = global::YamaCaisse.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_expanded_menu_layout = global::YamaCaisse.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_list_menu_item_checkbox = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_list_menu_item_icon = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_list_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_list_menu_item_radio = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_popup_menu_header_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_popup_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_screen_content_include = global::YamaCaisse.Droid.Resource.Layout.abc_screen_content_include;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_screen_simple = global::YamaCaisse.Droid.Resource.Layout.abc_screen_simple;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_screen_simple_overlay_action_mode = global::YamaCaisse.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_screen_toolbar = global::YamaCaisse.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_search_dropdown_item_icons_2line = global::YamaCaisse.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_search_view = global::YamaCaisse.Droid.Resource.Layout.abc_search_view;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_select_dialog_material = global::YamaCaisse.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Rg.Plugins.Popup.Resource.Layout.abc_tooltip = global::YamaCaisse.Droid.Resource.Layout.abc_tooltip;
+			global::Rg.Plugins.Popup.Resource.Layout.BottomTabLayout = global::YamaCaisse.Droid.Resource.Layout.BottomTabLayout;
+			global::Rg.Plugins.Popup.Resource.Layout.browser_actions_context_menu_page = global::YamaCaisse.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Rg.Plugins.Popup.Resource.Layout.browser_actions_context_menu_row = global::YamaCaisse.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Rg.Plugins.Popup.Resource.Layout.design_bottom_navigation_item = global::YamaCaisse.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Rg.Plugins.Popup.Resource.Layout.design_bottom_sheet_dialog = global::YamaCaisse.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Rg.Plugins.Popup.Resource.Layout.design_layout_snackbar = global::YamaCaisse.Droid.Resource.Layout.design_layout_snackbar;
+			global::Rg.Plugins.Popup.Resource.Layout.design_layout_snackbar_include = global::YamaCaisse.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Rg.Plugins.Popup.Resource.Layout.design_layout_tab_icon = global::YamaCaisse.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Rg.Plugins.Popup.Resource.Layout.design_layout_tab_text = global::YamaCaisse.Droid.Resource.Layout.design_layout_tab_text;
+			global::Rg.Plugins.Popup.Resource.Layout.design_menu_item_action_area = global::YamaCaisse.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_item = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item;
+			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_item_header = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item_header;
+			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_item_separator = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_item_subheader = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_menu = global::YamaCaisse.Droid.Resource.Layout.design_navigation_menu;
+			global::Rg.Plugins.Popup.Resource.Layout.design_navigation_menu_item = global::YamaCaisse.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Rg.Plugins.Popup.Resource.Layout.design_text_input_password_icon = global::YamaCaisse.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Rg.Plugins.Popup.Resource.Layout.FlyoutContent = global::YamaCaisse.Droid.Resource.Layout.FlyoutContent;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_layout_snackbar = global::YamaCaisse.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::Rg.Plugins.Popup.Resource.Layout.mtrl_layout_snackbar_include = global::YamaCaisse.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_action = global::YamaCaisse.Droid.Resource.Layout.notification_action;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_action_tombstone = global::YamaCaisse.Droid.Resource.Layout.notification_action_tombstone;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_media_action = global::YamaCaisse.Droid.Resource.Layout.notification_media_action;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_media_cancel_action = global::YamaCaisse.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_big_media = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_big_media_custom = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_big_media_narrow = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_big_media_narrow_custom = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_custom_big = global::YamaCaisse.Droid.Resource.Layout.notification_template_custom_big;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_icon_group = global::YamaCaisse.Droid.Resource.Layout.notification_template_icon_group;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_lines_media = global::YamaCaisse.Droid.Resource.Layout.notification_template_lines_media;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_media = global::YamaCaisse.Droid.Resource.Layout.notification_template_media;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_media_custom = global::YamaCaisse.Droid.Resource.Layout.notification_template_media_custom;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_part_chronometer = global::YamaCaisse.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Rg.Plugins.Popup.Resource.Layout.notification_template_part_time = global::YamaCaisse.Droid.Resource.Layout.notification_template_part_time;
+			global::Rg.Plugins.Popup.Resource.Layout.RootLayout = global::YamaCaisse.Droid.Resource.Layout.RootLayout;
+			global::Rg.Plugins.Popup.Resource.Layout.select_dialog_item_material = global::YamaCaisse.Droid.Resource.Layout.select_dialog_item_material;
+			global::Rg.Plugins.Popup.Resource.Layout.select_dialog_multichoice_material = global::YamaCaisse.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Rg.Plugins.Popup.Resource.Layout.select_dialog_singlechoice_material = global::YamaCaisse.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Rg.Plugins.Popup.Resource.Layout.ShellContent = global::YamaCaisse.Droid.Resource.Layout.ShellContent;
+			global::Rg.Plugins.Popup.Resource.Layout.support_simple_spinner_dropdown_item = global::YamaCaisse.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Rg.Plugins.Popup.Resource.String.abc_action_bar_home_description = global::YamaCaisse.Droid.Resource.String.abc_action_bar_home_description;
+			global::Rg.Plugins.Popup.Resource.String.abc_action_bar_up_description = global::YamaCaisse.Droid.Resource.String.abc_action_bar_up_description;
+			global::Rg.Plugins.Popup.Resource.String.abc_action_menu_overflow_description = global::YamaCaisse.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Rg.Plugins.Popup.Resource.String.abc_action_mode_done = global::YamaCaisse.Droid.Resource.String.abc_action_mode_done;
+			global::Rg.Plugins.Popup.Resource.String.abc_activitychooserview_choose_application = global::YamaCaisse.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Rg.Plugins.Popup.Resource.String.abc_activity_chooser_view_see_all = global::YamaCaisse.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Rg.Plugins.Popup.Resource.String.abc_capital_off = global::YamaCaisse.Droid.Resource.String.abc_capital_off;
+			global::Rg.Plugins.Popup.Resource.String.abc_capital_on = global::YamaCaisse.Droid.Resource.String.abc_capital_on;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_body_1_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_body_2_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_button_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_button_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_caption_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_caption_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_display_1_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_display_2_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_display_3_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_display_4_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_headline_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_headline_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_menu_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_menu_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_subhead_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_font_family_title_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_title_material;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_alt_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_ctrl_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_delete_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_enter_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_function_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_meta_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_shift_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_space_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_menu_sym_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_prepend_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::Rg.Plugins.Popup.Resource.String.abc_searchview_description_clear = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_clear;
+			global::Rg.Plugins.Popup.Resource.String.abc_searchview_description_query = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_query;
+			global::Rg.Plugins.Popup.Resource.String.abc_searchview_description_search = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_search;
+			global::Rg.Plugins.Popup.Resource.String.abc_searchview_description_submit = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_submit;
+			global::Rg.Plugins.Popup.Resource.String.abc_searchview_description_voice = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_voice;
+			global::Rg.Plugins.Popup.Resource.String.abc_search_hint = global::YamaCaisse.Droid.Resource.String.abc_search_hint;
+			global::Rg.Plugins.Popup.Resource.String.abc_shareactionprovider_share_with = global::YamaCaisse.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Rg.Plugins.Popup.Resource.String.abc_shareactionprovider_share_with_application = global::YamaCaisse.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Rg.Plugins.Popup.Resource.String.abc_toolbar_collapse_description = global::YamaCaisse.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Rg.Plugins.Popup.Resource.String.appbar_scrolling_view_behavior = global::YamaCaisse.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Rg.Plugins.Popup.Resource.String.bottom_sheet_behavior = global::YamaCaisse.Droid.Resource.String.bottom_sheet_behavior;
+			global::Rg.Plugins.Popup.Resource.String.character_counter_content_description = global::YamaCaisse.Droid.Resource.String.character_counter_content_description;
+			global::Rg.Plugins.Popup.Resource.String.character_counter_pattern = global::YamaCaisse.Droid.Resource.String.character_counter_pattern;
+			global::Rg.Plugins.Popup.Resource.String.fab_transformation_scrim_behavior = global::YamaCaisse.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::Rg.Plugins.Popup.Resource.String.fab_transformation_sheet_behavior = global::YamaCaisse.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Rg.Plugins.Popup.Resource.String.hide_bottom_view_on_scroll_behavior = global::YamaCaisse.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Rg.Plugins.Popup.Resource.String.mtrl_chip_close_icon_content_description = global::YamaCaisse.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Rg.Plugins.Popup.Resource.String.password_toggle_content_description = global::YamaCaisse.Droid.Resource.String.password_toggle_content_description;
+			global::Rg.Plugins.Popup.Resource.String.path_password_eye = global::YamaCaisse.Droid.Resource.String.path_password_eye;
+			global::Rg.Plugins.Popup.Resource.String.path_password_eye_mask_strike_through = global::YamaCaisse.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Rg.Plugins.Popup.Resource.String.path_password_eye_mask_visible = global::YamaCaisse.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Rg.Plugins.Popup.Resource.String.path_password_strike_through = global::YamaCaisse.Droid.Resource.String.path_password_strike_through;
+			global::Rg.Plugins.Popup.Resource.String.search_menu_title = global::YamaCaisse.Droid.Resource.String.search_menu_title;
+			global::Rg.Plugins.Popup.Resource.String.status_bar_notification_info_overflow = global::YamaCaisse.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Rg.Plugins.Popup.Resource.Style.AlertDialog_AppCompat = global::YamaCaisse.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.AlertDialog_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Animation_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Animation_AppCompat_DropDownUp = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Rg.Plugins.Popup.Resource.Style.Animation_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Rg.Plugins.Popup.Resource.Style.Animation_Design_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_AlertDialog_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_AlertDialog_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Animation_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Animation_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Rg.Plugins.Popup.Resource.Style.Base_CardView = global::YamaCaisse.Droid.Resource.Style.Base_CardView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_DialogWindowTitle_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Large = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Small = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V22_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V22_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V23_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V23_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V26_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V26_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V28_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V28_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::YamaCaisse.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Rg.Plugins.Popup.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionButton = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActionMode = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Button_Small = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_EditText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ImageButton = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ListView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_RatingBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_SearchView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_SeekBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Spinner = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_Design_TabLayout = global::YamaCaisse.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_Chip = global::YamaCaisse.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Rg.Plugins.Popup.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::YamaCaisse.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Rg.Plugins.Popup.Resource.Style.CardView = global::YamaCaisse.Droid.Resource.Style.CardView;
+			global::Rg.Plugins.Popup.Resource.Style.CardView_Dark = global::YamaCaisse.Droid.Resource.Style.CardView_Dark;
+			global::Rg.Plugins.Popup.Resource.Style.CardView_Light = global::YamaCaisse.Droid.Resource.Style.CardView_Light;
+			global::Rg.Plugins.Popup.Resource.Style.collectionViewStyle = global::YamaCaisse.Droid.Resource.Style.collectionViewStyle;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_ThemeOverlay_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::YamaCaisse.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_V21_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_V21_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_V25_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_V25_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Platform_Widget_AppCompat_Spinner = global::YamaCaisse.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Rg.Plugins.Popup.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Rg.Plugins.Popup.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::YamaCaisse.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Body1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Body2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Caption = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Display1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Display2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Display3 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Display4 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Headline = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Large = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Medium = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Menu = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Small = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Subhead = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Info = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Time = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Counter = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Counter_Overflow = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Error = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_HelperText = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Hint = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Snackbar_Message = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Design_Tab = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Button = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Caption = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Chip = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Overline = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_MaterialComponents_Tab = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Rg.Plugins.Popup.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Dark = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Rg.Plugins.Popup.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_AppCompat_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_Design = global::YamaCaisse.Droid.Resource.Style.Theme_Design;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_Design_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_Design_Light = global::YamaCaisse.Droid.Resource.Style.Theme_Design_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_Design_Light_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_Design_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActionMode = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ActivityChooserView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ButtonBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Button_Borderless = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Button_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Button_Small = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_EditText = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ImageButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_SearchView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ListMenuView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ListPopupWindow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ListView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ListView_DropDown = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ListView_Menu = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_PopupWindow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ProgressBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_RatingBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_RatingBar_Small = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_SearchView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_SeekBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Spinner = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Compat_NotificationActionContainer = global::YamaCaisse.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Compat_NotificationActionText = global::YamaCaisse.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_AppBarLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_BottomNavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_BottomSheet_Modal = global::YamaCaisse.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_CollapsingToolbar = global::YamaCaisse.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_FloatingActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_NavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_Snackbar = global::YamaCaisse.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_TabLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Design_TextInputLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_CardView = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_ChipGroup = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Action = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_NavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Snackbar = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TabLayout = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_MaterialComponents_Toolbar = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Rg.Plugins.Popup.Resource.Style.Widget_Support_CoordinatorLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar = global::YamaCaisse.Droid.Resource.Styleable.ActionBar;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBarLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionBarLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::YamaCaisse.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_background = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_background;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_backgroundSplit = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_backgroundStacked = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_contentInsetEnd = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_contentInsetLeft = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_contentInsetRight = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_contentInsetStart = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_customNavigationLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_displayOptions = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_divider = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_divider;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_elevation = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_height = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_height;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_hideOnContentScroll = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_homeAsUpIndicator = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_homeLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_icon = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_icon;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_itemPadding = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_logo = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_logo;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_navigationMode = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_popupTheme = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_progressBarPadding = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_progressBarStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_subtitle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_subtitleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_title = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_title;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionBar_titleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMenuItemView = global::YamaCaisse.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMenuItemView_android_minWidth = global::YamaCaisse.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMenuView = global::YamaCaisse.Droid.Resource.Styleable.ActionMenuView;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMode = global::YamaCaisse.Droid.Resource.Styleable.ActionMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMode_background = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_background;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMode_backgroundSplit = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMode_closeItemLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMode_height = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_height;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMode_subtitleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActionMode_titleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActivityChooserView = global::YamaCaisse.Droid.Resource.Styleable.ActivityChooserView;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::YamaCaisse.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.ActivityChooserView_initialActivityCount = global::YamaCaisse.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_android_layout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_buttonIconDimen = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_listItemLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_listLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_showTitle = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableCompat = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableItem = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableTransition = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Rg.Plugins.Popup.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayoutStates = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayoutStates_state_liftable = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayoutStates_state_lifted = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_android_background = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_elevation = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_expanded = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_Layout = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppBarLayout_liftOnScroll = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView_android_src = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView_srcCompat = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView_tint = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatImageView_tintMode = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatSeekBar = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatSeekBar_android_thumb = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatSeekBar_tickMark = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_fontFamily = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_lineHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTextView_textAllCaps = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarDivider = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarSize = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_buttonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_checkboxStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorAccent = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorControlActivated = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorControlNormal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorError = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorPrimary = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_controlBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_dialogTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_dividerVertical = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_editTextBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_editTextColor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_editTextStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_panelBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_searchViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_seekBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_spinnerStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_switchStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_toolbarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowActionBar = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Rg.Plugins.Popup.Resource.Styleable.AppCompatTheme_windowNoTitle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabCradleMargin = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomAppBar_hideOnScroll = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_elevation = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemBackground = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemIconSize = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemIconTint = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_itemTextColor = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomNavigationView_menu = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Rg.Plugins.Popup.Resource.Styleable.ButtonBarLayout = global::YamaCaisse.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ButtonBarLayout_allowStacking = global::YamaCaisse.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView = global::YamaCaisse.Droid.Resource.Styleable.CardView;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_android_minHeight = global::YamaCaisse.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_android_minWidth = global::YamaCaisse.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_cardBackgroundColor = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_cardCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_cardElevation = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_cardMaxElevation = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_cardPreventCornerOverlap = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_cardUseCompatPadding = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_contentPadding = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_contentPaddingBottom = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_contentPaddingLeft = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_contentPaddingRight = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.CardView_contentPaddingTop = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip = global::YamaCaisse.Droid.Resource.Styleable.Chip;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_checkedChip = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_chipSpacing = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_chipSpacingVertical = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_singleLine = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::Rg.Plugins.Popup.Resource.Styleable.ChipGroup_singleSelection = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_checkable = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_checkable;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_ellipsize = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_text = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_text;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_checkedIcon = global::YamaCaisse.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_checkedIconEnabled = global::YamaCaisse.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_checkedIconVisible = global::YamaCaisse.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipBackgroundColor = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipIcon = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipIconEnabled = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipIconSize = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipIconTint = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipIconVisible = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipMinHeight = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipStrokeColor = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_chipStrokeWidth = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIcon = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconEnabled = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconSize = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconTint = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_closeIconVisible = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_hideMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_iconEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_iconStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_rippleColor = global::YamaCaisse.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_showMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_textEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.Chip_textStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_Layout = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_title = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Rg.Plugins.Popup.Resource.Styleable.ColorStateListItem = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.ColorStateListItem_alpha = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Rg.Plugins.Popup.Resource.Styleable.ColorStateListItem_android_alpha = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Rg.Plugins.Popup.Resource.Styleable.ColorStateListItem_android_color = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Rg.Plugins.Popup.Resource.Styleable.CompoundButton = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.CompoundButton_android_button = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Rg.Plugins.Popup.Resource.Styleable.CompoundButton_buttonTint = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.CompoundButton_buttonTintMode = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_keylines = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Rg.Plugins.Popup.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.DesignTheme = global::YamaCaisse.Droid.Resource.Styleable.DesignTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::YamaCaisse.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.DesignTheme_bottomSheetStyle = global::YamaCaisse.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_barLength = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_color = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_drawableSize = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_spinBars = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Rg.Plugins.Popup.Resource.Styleable.DrawerArrowToggle_thickness = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_borderWidth = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_elevation = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_fabCustomSize = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_fabSize = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_maxImageSize = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_rippleColor = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_showMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Rg.Plugins.Popup.Resource.Styleable.FloatingActionButton_useCompatPadding = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.FlowLayout = global::YamaCaisse.Droid.Resource.Styleable.FlowLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.FlowLayout_itemSpacing = global::YamaCaisse.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Rg.Plugins.Popup.Resource.Styleable.FlowLayout_lineSpacing = global::YamaCaisse.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamily = global::YamaCaisse.Droid.Resource.Styleable.FontFamily;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_android_font = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_android_fontStyle = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_android_fontWeight = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_font = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_fontStyle = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_fontWeight = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamilyFont_ttcIndex = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamily_fontProviderAuthority = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamily_fontProviderCerts = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamily_fontProviderPackage = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Rg.Plugins.Popup.Resource.Styleable.FontFamily_fontProviderQuery = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Rg.Plugins.Popup.Resource.Styleable.ForegroundLinearLayout = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Rg.Plugins.Popup.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColorItem = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColorItem_android_color = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColorItem_android_offset = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_centerColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_centerX = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_centerY = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_endColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_endX = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_endY = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_gradientRadius = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_startColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_startX = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_startY = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_tileMode = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.GradientColor_android_type = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_android_gravity = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_android_orientation = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_divider = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_Layout = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Rg.Plugins.Popup.Resource.Styleable.LinearLayoutCompat_showDividers = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Rg.Plugins.Popup.Resource.Styleable.ListPopupWindow = global::YamaCaisse.Droid.Resource.Styleable.ListPopupWindow;
+			global::Rg.Plugins.Popup.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::YamaCaisse.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Rg.Plugins.Popup.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::YamaCaisse.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_insetBottom = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_insetLeft = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_insetRight = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_android_insetTop = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_backgroundTintMode = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_cornerRadius = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_icon = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_icon;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconGravity = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconPadding = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconSize = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconTint = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_iconTintMode = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_rippleColor = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_strokeColor = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialButton_strokeWidth = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView = global::YamaCaisse.Droid.Resource.Styleable.MaterialCardView;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_strokeColor = global::YamaCaisse.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialCardView_strokeWidth = global::YamaCaisse.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::Rg.Plugins.Popup.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_checkableBehavior = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_enabled = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_id = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_menuCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_orderInCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuGroup_android_visible = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem = global::YamaCaisse.Droid.Resource.Styleable.MenuItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_actionLayout = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_actionProviderClass = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_actionViewClass = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_alphabeticModifiers = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_checkable = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_checked = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_enabled = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_icon = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_id = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_menuCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_numericShortcut = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_onClick = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_orderInCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_title = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_titleCondensed = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_android_visible = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_contentDescription = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_iconTint = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_iconTintMode = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_numericModifiers = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_showAsAction = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuItem_tooltipText = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView = global::YamaCaisse.Droid.Resource.Styleable.MenuView;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_android_headerBackground = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_android_horizontalDivider = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_android_itemBackground = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_android_itemTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_android_verticalDivider = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_android_windowAnimationStyle = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_preserveIconSpacing = global::YamaCaisse.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Rg.Plugins.Popup.Resource.Styleable.MenuView_subMenuArrow = global::YamaCaisse.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView = global::YamaCaisse.Droid.Resource.Styleable.NavigationView;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_android_background = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_elevation = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_headerLayout = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemBackground = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemHorizontalPadding = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemIconPadding = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemIconTint = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_itemTextColor = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.NavigationView_menu = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_menu;
+			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindow = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow;
+			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindowBackgroundState = global::YamaCaisse.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::YamaCaisse.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindow_android_popupBackground = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.PopupWindow_overlapAnchor = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecycleListView = global::YamaCaisse.Droid.Resource.Styleable.RecycleListView;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::YamaCaisse.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::YamaCaisse.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_android_descendantFocusability = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_android_orientation = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_fastScrollEnabled = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_layoutManager = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_reverseLayout = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_spanCount = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Rg.Plugins.Popup.Resource.Styleable.RecyclerView_stackFromEnd = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.ScrimInsetsFrameLayout = global::YamaCaisse.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::YamaCaisse.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Rg.Plugins.Popup.Resource.Styleable.ScrollingViewBehavior_Layout = global::YamaCaisse.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::YamaCaisse.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView = global::YamaCaisse.Droid.Resource.Styleable.SearchView;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_android_focusable = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_android_imeOptions = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_android_inputType = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_closeIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_commitIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_defaultQueryHint = global::YamaCaisse.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_goIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_iconifiedByDefault = global::YamaCaisse.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_layout = global::YamaCaisse.Droid.Resource.Styleable.SearchView_layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_queryBackground = global::YamaCaisse.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_queryHint = global::YamaCaisse.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_searchHintIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_searchIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_submitBackground = global::YamaCaisse.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_suggestionRowLayout = global::YamaCaisse.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.SearchView_voiceIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.Snackbar = global::YamaCaisse.Droid.Resource.Styleable.Snackbar;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_elevation = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Rg.Plugins.Popup.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.Snackbar_snackbarButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.Snackbar_snackbarStyle = global::YamaCaisse.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.Spinner = global::YamaCaisse.Droid.Resource.Styleable.Spinner;
+			global::Rg.Plugins.Popup.Resource.Styleable.Spinner_android_dropDownWidth = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.Spinner_android_entries = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Rg.Plugins.Popup.Resource.Styleable.Spinner_android_popupBackground = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.Spinner_android_prompt = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Rg.Plugins.Popup.Resource.Styleable.Spinner_popupTheme = global::YamaCaisse.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawableItem = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawableItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawableItem_android_drawable = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_constantSize = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_dither = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_variablePadding = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.StateListDrawable_android_visible = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_android_textOff = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_android_textOn = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_android_thumb = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_showText = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_splitTrack = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_switchMinWidth = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_switchPadding = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_switchTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_thumbTextPadding = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_thumbTint = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_thumbTintMode = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_track = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_trackTint = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.SwitchCompat_trackTintMode = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabItem = global::YamaCaisse.Droid.Resource.Styleable.TabItem;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabItem_android_icon = global::YamaCaisse.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabItem_android_layout = global::YamaCaisse.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabItem_android_text = global::YamaCaisse.Droid.Resource.Styleable.TabItem_android_text;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout = global::YamaCaisse.Droid.Resource.Styleable.TabLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabBackground = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabContentStart = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabGravity = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIconTint = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIconTintMode = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIndicator = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIndicatorColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIndicatorGravity = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabIndicatorHeight = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabInlineLabel = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabMaxWidth = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabMinWidth = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabMode = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabPadding = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabPaddingBottom = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabPaddingEnd = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabPaddingStart = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabPaddingTop = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabRippleColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabSelectedTextColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabTextColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TabLayout_tabUnboundedRipple = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_fontFamily = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_shadowColor = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_shadowDx = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_shadowDy = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_shadowRadius = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_textColor = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_textColorHint = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_textColorLink = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_textSize = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_textStyle = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_android_typeface = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_fontFamily = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextAppearance_textAllCaps = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_android_hint = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_android_textColorHint = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxStrokeColor = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterMaxLength = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_counterTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_errorTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_helperText = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_helperTextEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_hintEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_hintTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleTint = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.ThemeEnforcement = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement;
+			global::Rg.Plugins.Popup.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar = global::YamaCaisse.Droid.Resource.Styleable.Toolbar;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_android_gravity = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_android_minHeight = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_buttonGravity = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_collapseContentDescription = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_collapseIcon = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_contentInsetEnd = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_contentInsetLeft = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_contentInsetRight = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_contentInsetStart = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_logo = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_logo;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_logoDescription = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_maxButtonHeight = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_navigationContentDescription = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_navigationIcon = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_popupTheme = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_subtitle = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_subtitleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_subtitleTextColor = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_title = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_title;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleMargin = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleMarginBottom = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleMarginEnd = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleMargins = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleMarginStart = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleMarginTop = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Rg.Plugins.Popup.Resource.Styleable.Toolbar_titleTextColor = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Rg.Plugins.Popup.Resource.Styleable.View = global::YamaCaisse.Droid.Resource.Styleable.View;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper_android_background = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewStubCompat = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewStubCompat_android_id = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewStubCompat_android_inflatedId = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Rg.Plugins.Popup.Resource.Styleable.ViewStubCompat_android_layout = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Rg.Plugins.Popup.Resource.Styleable.View_android_focusable = global::YamaCaisse.Droid.Resource.Styleable.View_android_focusable;
+			global::Rg.Plugins.Popup.Resource.Styleable.View_android_theme = global::YamaCaisse.Droid.Resource.Styleable.View_android_theme;
+			global::Rg.Plugins.Popup.Resource.Styleable.View_paddingEnd = global::YamaCaisse.Droid.Resource.Styleable.View_paddingEnd;
+			global::Rg.Plugins.Popup.Resource.Styleable.View_paddingStart = global::YamaCaisse.Droid.Resource.Styleable.View_paddingStart;
+			global::Rg.Plugins.Popup.Resource.Styleable.View_theme = global::YamaCaisse.Droid.Resource.Styleable.View_theme;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_in = global::YamaCaisse.Droid.Resource.Animation.abc_fade_in;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_fade_out = global::YamaCaisse.Droid.Resource.Animation.abc_fade_out;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_grow_fade_in_from_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_popup_enter = global::YamaCaisse.Droid.Resource.Animation.abc_popup_enter;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_popup_exit = global::YamaCaisse.Droid.Resource.Animation.abc_popup_exit;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_shrink_fade_out_from_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_slide_in_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_slide_in_top = global::YamaCaisse.Droid.Resource.Animation.abc_slide_in_top;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_slide_out_bottom = global::YamaCaisse.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_slide_out_top = global::YamaCaisse.Droid.Resource.Animation.abc_slide_out_top;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_tooltip_enter = global::YamaCaisse.Droid.Resource.Animation.abc_tooltip_enter;
+			global::SkiaSharp.Views.Forms.Resource.Animation.abc_tooltip_exit = global::YamaCaisse.Droid.Resource.Animation.abc_tooltip_exit;
+			global::SkiaSharp.Views.Forms.Resource.Animation.design_bottom_sheet_slide_in = global::YamaCaisse.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::SkiaSharp.Views.Forms.Resource.Animation.design_bottom_sheet_slide_out = global::YamaCaisse.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::SkiaSharp.Views.Forms.Resource.Animation.design_snackbar_in = global::YamaCaisse.Droid.Resource.Animation.design_snackbar_in;
+			global::SkiaSharp.Views.Forms.Resource.Animation.design_snackbar_out = global::YamaCaisse.Droid.Resource.Animation.design_snackbar_out;
+			global::SkiaSharp.Views.Forms.Resource.Animation.EnterFromLeft = global::YamaCaisse.Droid.Resource.Animation.EnterFromLeft;
+			global::SkiaSharp.Views.Forms.Resource.Animation.EnterFromRight = global::YamaCaisse.Droid.Resource.Animation.EnterFromRight;
+			global::SkiaSharp.Views.Forms.Resource.Animation.ExitToLeft = global::YamaCaisse.Droid.Resource.Animation.ExitToLeft;
+			global::SkiaSharp.Views.Forms.Resource.Animation.ExitToRight = global::YamaCaisse.Droid.Resource.Animation.ExitToRight;
+			global::SkiaSharp.Views.Forms.Resource.Animator.design_appbar_state_list_animator = global::YamaCaisse.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::SkiaSharp.Views.Forms.Resource.Animator.design_fab_hide_motion_spec = global::YamaCaisse.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::SkiaSharp.Views.Forms.Resource.Animator.design_fab_show_motion_spec = global::YamaCaisse.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::SkiaSharp.Views.Forms.Resource.Animator.mtrl_btn_state_list_anim = global::YamaCaisse.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::SkiaSharp.Views.Forms.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::YamaCaisse.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::SkiaSharp.Views.Forms.Resource.Animator.mtrl_chip_state_list_anim = global::YamaCaisse.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::SkiaSharp.Views.Forms.Resource.Animator.mtrl_fab_hide_motion_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::SkiaSharp.Views.Forms.Resource.Animator.mtrl_fab_show_motion_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::SkiaSharp.Views.Forms.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::SkiaSharp.Views.Forms.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::YamaCaisse.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarDivider = global::YamaCaisse.Droid.Resource.Attribute.actionBarDivider;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarItemBackground = global::YamaCaisse.Droid.Resource.Attribute.actionBarItemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarPopupTheme = global::YamaCaisse.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarSize = global::YamaCaisse.Droid.Resource.Attribute.actionBarSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarSplitStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarTabBarStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarTabStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarTabStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarTabTextStyle = global::YamaCaisse.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarTheme = global::YamaCaisse.Droid.Resource.Attribute.actionBarTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionBarWidgetTheme = global::YamaCaisse.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.actionButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionDropDownStyle = global::YamaCaisse.Droid.Resource.Attribute.actionDropDownStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionLayout = global::YamaCaisse.Droid.Resource.Attribute.actionLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionMenuTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionMenuTextColor = global::YamaCaisse.Droid.Resource.Attribute.actionMenuTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeBackground = global::YamaCaisse.Droid.Resource.Attribute.actionModeBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeCloseButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeCloseDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeCopyDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeCutDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeFindDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModePasteDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModePopupWindowStyle = global::YamaCaisse.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeSelectAllDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeShareDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeSplitBackground = global::YamaCaisse.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeStyle = global::YamaCaisse.Droid.Resource.Attribute.actionModeStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionModeWebSearchDrawable = global::YamaCaisse.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionOverflowButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionOverflowMenuStyle = global::YamaCaisse.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionProviderClass = global::YamaCaisse.Droid.Resource.Attribute.actionProviderClass;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.actionViewClass = global::YamaCaisse.Droid.Resource.Attribute.actionViewClass;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.activityChooserViewStyle = global::YamaCaisse.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.alertDialogButtonGroupStyle = global::YamaCaisse.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.alertDialogCenterButtons = global::YamaCaisse.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.alertDialogStyle = global::YamaCaisse.Droid.Resource.Attribute.alertDialogStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.alertDialogTheme = global::YamaCaisse.Droid.Resource.Attribute.alertDialogTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.allowStacking = global::YamaCaisse.Droid.Resource.Attribute.allowStacking;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.alpha = global::YamaCaisse.Droid.Resource.Attribute.alpha;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.alphabeticModifiers = global::YamaCaisse.Droid.Resource.Attribute.alphabeticModifiers;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.arrowHeadLength = global::YamaCaisse.Droid.Resource.Attribute.arrowHeadLength;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.arrowShaftLength = global::YamaCaisse.Droid.Resource.Attribute.arrowShaftLength;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.autoCompleteTextViewStyle = global::YamaCaisse.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.autoSizeMaxTextSize = global::YamaCaisse.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.autoSizeMinTextSize = global::YamaCaisse.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.autoSizePresetSizes = global::YamaCaisse.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.autoSizeStepGranularity = global::YamaCaisse.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.autoSizeTextType = global::YamaCaisse.Droid.Resource.Attribute.autoSizeTextType;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.background = global::YamaCaisse.Droid.Resource.Attribute.background;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.backgroundSplit = global::YamaCaisse.Droid.Resource.Attribute.backgroundSplit;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.backgroundStacked = global::YamaCaisse.Droid.Resource.Attribute.backgroundStacked;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.backgroundTint = global::YamaCaisse.Droid.Resource.Attribute.backgroundTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.backgroundTintMode = global::YamaCaisse.Droid.Resource.Attribute.backgroundTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.barLength = global::YamaCaisse.Droid.Resource.Attribute.barLength;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.behavior_autoHide = global::YamaCaisse.Droid.Resource.Attribute.behavior_autoHide;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.behavior_fitToContents = global::YamaCaisse.Droid.Resource.Attribute.behavior_fitToContents;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.behavior_hideable = global::YamaCaisse.Droid.Resource.Attribute.behavior_hideable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.behavior_overlapTop = global::YamaCaisse.Droid.Resource.Attribute.behavior_overlapTop;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.behavior_peekHeight = global::YamaCaisse.Droid.Resource.Attribute.behavior_peekHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.behavior_skipCollapsed = global::YamaCaisse.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.borderlessButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.borderWidth = global::YamaCaisse.Droid.Resource.Attribute.borderWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.bottomAppBarStyle = global::YamaCaisse.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.bottomNavigationStyle = global::YamaCaisse.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.bottomSheetDialogTheme = global::YamaCaisse.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.bottomSheetStyle = global::YamaCaisse.Droid.Resource.Attribute.bottomSheetStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxBackgroundColor = global::YamaCaisse.Droid.Resource.Attribute.boxBackgroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxBackgroundMode = global::YamaCaisse.Droid.Resource.Attribute.boxBackgroundMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxCollapsedPaddingTop = global::YamaCaisse.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxCornerRadiusBottomEnd = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxCornerRadiusBottomStart = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxCornerRadiusTopEnd = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxCornerRadiusTopStart = global::YamaCaisse.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxStrokeColor = global::YamaCaisse.Droid.Resource.Attribute.boxStrokeColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.boxStrokeWidth = global::YamaCaisse.Droid.Resource.Attribute.boxStrokeWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonBarButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonBarNegativeButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonBarNeutralButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonBarPositiveButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonBarStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonGravity = global::YamaCaisse.Droid.Resource.Attribute.buttonGravity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonIconDimen = global::YamaCaisse.Droid.Resource.Attribute.buttonIconDimen;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonPanelSideLayout = global::YamaCaisse.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonStyle = global::YamaCaisse.Droid.Resource.Attribute.buttonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonStyleSmall = global::YamaCaisse.Droid.Resource.Attribute.buttonStyleSmall;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonTint = global::YamaCaisse.Droid.Resource.Attribute.buttonTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.buttonTintMode = global::YamaCaisse.Droid.Resource.Attribute.buttonTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cardBackgroundColor = global::YamaCaisse.Droid.Resource.Attribute.cardBackgroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cardCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.cardCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cardElevation = global::YamaCaisse.Droid.Resource.Attribute.cardElevation;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cardMaxElevation = global::YamaCaisse.Droid.Resource.Attribute.cardMaxElevation;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cardPreventCornerOverlap = global::YamaCaisse.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cardUseCompatPadding = global::YamaCaisse.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cardViewStyle = global::YamaCaisse.Droid.Resource.Attribute.cardViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.checkboxStyle = global::YamaCaisse.Droid.Resource.Attribute.checkboxStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.checkedChip = global::YamaCaisse.Droid.Resource.Attribute.checkedChip;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.checkedIcon = global::YamaCaisse.Droid.Resource.Attribute.checkedIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.checkedIconEnabled = global::YamaCaisse.Droid.Resource.Attribute.checkedIconEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.checkedIconVisible = global::YamaCaisse.Droid.Resource.Attribute.checkedIconVisible;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.checkedTextViewStyle = global::YamaCaisse.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipBackgroundColor = global::YamaCaisse.Droid.Resource.Attribute.chipBackgroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.chipCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipEndPadding = global::YamaCaisse.Droid.Resource.Attribute.chipEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipGroupStyle = global::YamaCaisse.Droid.Resource.Attribute.chipGroupStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipIcon = global::YamaCaisse.Droid.Resource.Attribute.chipIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipIconEnabled = global::YamaCaisse.Droid.Resource.Attribute.chipIconEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipIconSize = global::YamaCaisse.Droid.Resource.Attribute.chipIconSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipIconTint = global::YamaCaisse.Droid.Resource.Attribute.chipIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipIconVisible = global::YamaCaisse.Droid.Resource.Attribute.chipIconVisible;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipMinHeight = global::YamaCaisse.Droid.Resource.Attribute.chipMinHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipSpacing = global::YamaCaisse.Droid.Resource.Attribute.chipSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipSpacingHorizontal = global::YamaCaisse.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipSpacingVertical = global::YamaCaisse.Droid.Resource.Attribute.chipSpacingVertical;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipStandaloneStyle = global::YamaCaisse.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipStartPadding = global::YamaCaisse.Droid.Resource.Attribute.chipStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipStrokeColor = global::YamaCaisse.Droid.Resource.Attribute.chipStrokeColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipStrokeWidth = global::YamaCaisse.Droid.Resource.Attribute.chipStrokeWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.chipStyle = global::YamaCaisse.Droid.Resource.Attribute.chipStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeIcon = global::YamaCaisse.Droid.Resource.Attribute.closeIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeIconEnabled = global::YamaCaisse.Droid.Resource.Attribute.closeIconEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeIconEndPadding = global::YamaCaisse.Droid.Resource.Attribute.closeIconEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeIconSize = global::YamaCaisse.Droid.Resource.Attribute.closeIconSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeIconStartPadding = global::YamaCaisse.Droid.Resource.Attribute.closeIconStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeIconTint = global::YamaCaisse.Droid.Resource.Attribute.closeIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeIconVisible = global::YamaCaisse.Droid.Resource.Attribute.closeIconVisible;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.closeItemLayout = global::YamaCaisse.Droid.Resource.Attribute.closeItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.collapseContentDescription = global::YamaCaisse.Droid.Resource.Attribute.collapseContentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.collapsedTitleGravity = global::YamaCaisse.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.collapsedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.collapseIcon = global::YamaCaisse.Droid.Resource.Attribute.collapseIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.color = global::YamaCaisse.Droid.Resource.Attribute.color;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorAccent = global::YamaCaisse.Droid.Resource.Attribute.colorAccent;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorBackgroundFloating = global::YamaCaisse.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorButtonNormal = global::YamaCaisse.Droid.Resource.Attribute.colorButtonNormal;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorControlActivated = global::YamaCaisse.Droid.Resource.Attribute.colorControlActivated;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorControlHighlight = global::YamaCaisse.Droid.Resource.Attribute.colorControlHighlight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorControlNormal = global::YamaCaisse.Droid.Resource.Attribute.colorControlNormal;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorError = global::YamaCaisse.Droid.Resource.Attribute.colorError;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorPrimary = global::YamaCaisse.Droid.Resource.Attribute.colorPrimary;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorPrimaryDark = global::YamaCaisse.Droid.Resource.Attribute.colorPrimaryDark;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorSecondary = global::YamaCaisse.Droid.Resource.Attribute.colorSecondary;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.colorSwitchThumbNormal = global::YamaCaisse.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.commitIcon = global::YamaCaisse.Droid.Resource.Attribute.commitIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentDescription = global::YamaCaisse.Droid.Resource.Attribute.contentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentInsetEnd = global::YamaCaisse.Droid.Resource.Attribute.contentInsetEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentInsetEndWithActions = global::YamaCaisse.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentInsetLeft = global::YamaCaisse.Droid.Resource.Attribute.contentInsetLeft;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentInsetRight = global::YamaCaisse.Droid.Resource.Attribute.contentInsetRight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentInsetStart = global::YamaCaisse.Droid.Resource.Attribute.contentInsetStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentInsetStartWithNavigation = global::YamaCaisse.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentPadding = global::YamaCaisse.Droid.Resource.Attribute.contentPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentPaddingBottom = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingBottom;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentPaddingLeft = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingLeft;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentPaddingRight = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingRight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentPaddingTop = global::YamaCaisse.Droid.Resource.Attribute.contentPaddingTop;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.contentScrim = global::YamaCaisse.Droid.Resource.Attribute.contentScrim;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.controlBackground = global::YamaCaisse.Droid.Resource.Attribute.controlBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.coordinatorLayoutStyle = global::YamaCaisse.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.cornerRadius = global::YamaCaisse.Droid.Resource.Attribute.cornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.counterEnabled = global::YamaCaisse.Droid.Resource.Attribute.counterEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.counterMaxLength = global::YamaCaisse.Droid.Resource.Attribute.counterMaxLength;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.counterOverflowTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.counterTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.counterTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.customNavigationLayout = global::YamaCaisse.Droid.Resource.Attribute.customNavigationLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.defaultQueryHint = global::YamaCaisse.Droid.Resource.Attribute.defaultQueryHint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dialogCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.dialogCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dialogPreferredPadding = global::YamaCaisse.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dialogTheme = global::YamaCaisse.Droid.Resource.Attribute.dialogTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.displayOptions = global::YamaCaisse.Droid.Resource.Attribute.displayOptions;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.divider = global::YamaCaisse.Droid.Resource.Attribute.divider;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dividerHorizontal = global::YamaCaisse.Droid.Resource.Attribute.dividerHorizontal;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dividerPadding = global::YamaCaisse.Droid.Resource.Attribute.dividerPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dividerVertical = global::YamaCaisse.Droid.Resource.Attribute.dividerVertical;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.drawableSize = global::YamaCaisse.Droid.Resource.Attribute.drawableSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.drawerArrowStyle = global::YamaCaisse.Droid.Resource.Attribute.drawerArrowStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dropdownListPreferredItemHeight = global::YamaCaisse.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.dropDownListViewStyle = global::YamaCaisse.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.editTextBackground = global::YamaCaisse.Droid.Resource.Attribute.editTextBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.editTextColor = global::YamaCaisse.Droid.Resource.Attribute.editTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.editTextStyle = global::YamaCaisse.Droid.Resource.Attribute.editTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.elevation = global::YamaCaisse.Droid.Resource.Attribute.elevation;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.enforceMaterialTheme = global::YamaCaisse.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.enforceTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.enforceTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.errorEnabled = global::YamaCaisse.Droid.Resource.Attribute.errorEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.errorTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.errorTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandActivityOverflowButtonDrawable = global::YamaCaisse.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expanded = global::YamaCaisse.Droid.Resource.Attribute.expanded;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandedTitleGravity = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleGravity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandedTitleMargin = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMargin;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandedTitleMarginBottom = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandedTitleMarginEnd = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandedTitleMarginStart = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandedTitleMarginTop = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.expandedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fabAlignmentMode = global::YamaCaisse.Droid.Resource.Attribute.fabAlignmentMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fabCradleMargin = global::YamaCaisse.Droid.Resource.Attribute.fabCradleMargin;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fabCradleRoundedCornerRadius = global::YamaCaisse.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fabCradleVerticalOffset = global::YamaCaisse.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fabCustomSize = global::YamaCaisse.Droid.Resource.Attribute.fabCustomSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fabSize = global::YamaCaisse.Droid.Resource.Attribute.fabSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fastScrollEnabled = global::YamaCaisse.Droid.Resource.Attribute.fastScrollEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fastScrollVerticalThumbDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fastScrollVerticalTrackDrawable = global::YamaCaisse.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.firstBaselineToTopHeight = global::YamaCaisse.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.floatingActionButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.font = global::YamaCaisse.Droid.Resource.Attribute.font;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontFamily = global::YamaCaisse.Droid.Resource.Attribute.fontFamily;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontProviderAuthority = global::YamaCaisse.Droid.Resource.Attribute.fontProviderAuthority;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontProviderCerts = global::YamaCaisse.Droid.Resource.Attribute.fontProviderCerts;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontProviderFetchStrategy = global::YamaCaisse.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontProviderFetchTimeout = global::YamaCaisse.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontProviderPackage = global::YamaCaisse.Droid.Resource.Attribute.fontProviderPackage;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontProviderQuery = global::YamaCaisse.Droid.Resource.Attribute.fontProviderQuery;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontStyle = global::YamaCaisse.Droid.Resource.Attribute.fontStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontVariationSettings = global::YamaCaisse.Droid.Resource.Attribute.fontVariationSettings;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.fontWeight = global::YamaCaisse.Droid.Resource.Attribute.fontWeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.foregroundInsidePadding = global::YamaCaisse.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.gapBetweenBars = global::YamaCaisse.Droid.Resource.Attribute.gapBetweenBars;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.goIcon = global::YamaCaisse.Droid.Resource.Attribute.goIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.headerLayout = global::YamaCaisse.Droid.Resource.Attribute.headerLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.height = global::YamaCaisse.Droid.Resource.Attribute.height;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.helperText = global::YamaCaisse.Droid.Resource.Attribute.helperText;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.helperTextEnabled = global::YamaCaisse.Droid.Resource.Attribute.helperTextEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.helperTextTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.hideMotionSpec = global::YamaCaisse.Droid.Resource.Attribute.hideMotionSpec;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.hideOnContentScroll = global::YamaCaisse.Droid.Resource.Attribute.hideOnContentScroll;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.hideOnScroll = global::YamaCaisse.Droid.Resource.Attribute.hideOnScroll;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.hintAnimationEnabled = global::YamaCaisse.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.hintEnabled = global::YamaCaisse.Droid.Resource.Attribute.hintEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.hintTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.hintTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.homeAsUpIndicator = global::YamaCaisse.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.homeLayout = global::YamaCaisse.Droid.Resource.Attribute.homeLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.hoveredFocusedTranslationZ = global::YamaCaisse.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.icon = global::YamaCaisse.Droid.Resource.Attribute.icon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconEndPadding = global::YamaCaisse.Droid.Resource.Attribute.iconEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconGravity = global::YamaCaisse.Droid.Resource.Attribute.iconGravity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconifiedByDefault = global::YamaCaisse.Droid.Resource.Attribute.iconifiedByDefault;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconPadding = global::YamaCaisse.Droid.Resource.Attribute.iconPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconSize = global::YamaCaisse.Droid.Resource.Attribute.iconSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconStartPadding = global::YamaCaisse.Droid.Resource.Attribute.iconStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconTint = global::YamaCaisse.Droid.Resource.Attribute.iconTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.iconTintMode = global::YamaCaisse.Droid.Resource.Attribute.iconTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.imageButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.imageButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.indeterminateProgressStyle = global::YamaCaisse.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.initialActivityCount = global::YamaCaisse.Droid.Resource.Attribute.initialActivityCount;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.insetForeground = global::YamaCaisse.Droid.Resource.Attribute.insetForeground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.isLightTheme = global::YamaCaisse.Droid.Resource.Attribute.isLightTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemBackground = global::YamaCaisse.Droid.Resource.Attribute.itemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemHorizontalPadding = global::YamaCaisse.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemHorizontalTranslationEnabled = global::YamaCaisse.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemIconPadding = global::YamaCaisse.Droid.Resource.Attribute.itemIconPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemIconSize = global::YamaCaisse.Droid.Resource.Attribute.itemIconSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemIconTint = global::YamaCaisse.Droid.Resource.Attribute.itemIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemPadding = global::YamaCaisse.Droid.Resource.Attribute.itemPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemSpacing = global::YamaCaisse.Droid.Resource.Attribute.itemSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.itemTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemTextAppearanceActive = global::YamaCaisse.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemTextAppearanceInactive = global::YamaCaisse.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.itemTextColor = global::YamaCaisse.Droid.Resource.Attribute.itemTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.keylines = global::YamaCaisse.Droid.Resource.Attribute.keylines;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.labelVisibilityMode = global::YamaCaisse.Droid.Resource.Attribute.labelVisibilityMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.lastBaselineToBottomHeight = global::YamaCaisse.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout = global::YamaCaisse.Droid.Resource.Attribute.layout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layoutManager = global::YamaCaisse.Droid.Resource.Attribute.layoutManager;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_anchor = global::YamaCaisse.Droid.Resource.Attribute.layout_anchor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_anchorGravity = global::YamaCaisse.Droid.Resource.Attribute.layout_anchorGravity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_behavior = global::YamaCaisse.Droid.Resource.Attribute.layout_behavior;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_collapseMode = global::YamaCaisse.Droid.Resource.Attribute.layout_collapseMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_collapseParallaxMultiplier = global::YamaCaisse.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_dodgeInsetEdges = global::YamaCaisse.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_insetEdge = global::YamaCaisse.Droid.Resource.Attribute.layout_insetEdge;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_keyline = global::YamaCaisse.Droid.Resource.Attribute.layout_keyline;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_scrollFlags = global::YamaCaisse.Droid.Resource.Attribute.layout_scrollFlags;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.layout_scrollInterpolator = global::YamaCaisse.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.liftOnScroll = global::YamaCaisse.Droid.Resource.Attribute.liftOnScroll;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.lineHeight = global::YamaCaisse.Droid.Resource.Attribute.lineHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.lineSpacing = global::YamaCaisse.Droid.Resource.Attribute.lineSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listChoiceBackgroundIndicator = global::YamaCaisse.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listDividerAlertDialog = global::YamaCaisse.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listItemLayout = global::YamaCaisse.Droid.Resource.Attribute.listItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listLayout = global::YamaCaisse.Droid.Resource.Attribute.listLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listMenuViewStyle = global::YamaCaisse.Droid.Resource.Attribute.listMenuViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listPopupWindowStyle = global::YamaCaisse.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listPreferredItemHeight = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listPreferredItemHeightLarge = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listPreferredItemHeightSmall = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listPreferredItemPaddingLeft = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.listPreferredItemPaddingRight = global::YamaCaisse.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.logo = global::YamaCaisse.Droid.Resource.Attribute.logo;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.logoDescription = global::YamaCaisse.Droid.Resource.Attribute.logoDescription;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.materialButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.materialButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.materialCardViewStyle = global::YamaCaisse.Droid.Resource.Attribute.materialCardViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.maxActionInlineWidth = global::YamaCaisse.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.maxButtonHeight = global::YamaCaisse.Droid.Resource.Attribute.maxButtonHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.maxImageSize = global::YamaCaisse.Droid.Resource.Attribute.maxImageSize;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.measureWithLargestChild = global::YamaCaisse.Droid.Resource.Attribute.measureWithLargestChild;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.menu = global::YamaCaisse.Droid.Resource.Attribute.menu;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.multiChoiceItemLayout = global::YamaCaisse.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.navigationContentDescription = global::YamaCaisse.Droid.Resource.Attribute.navigationContentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.navigationIcon = global::YamaCaisse.Droid.Resource.Attribute.navigationIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.navigationMode = global::YamaCaisse.Droid.Resource.Attribute.navigationMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.navigationViewStyle = global::YamaCaisse.Droid.Resource.Attribute.navigationViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.numericModifiers = global::YamaCaisse.Droid.Resource.Attribute.numericModifiers;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.overlapAnchor = global::YamaCaisse.Droid.Resource.Attribute.overlapAnchor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.paddingBottomNoButtons = global::YamaCaisse.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.paddingEnd = global::YamaCaisse.Droid.Resource.Attribute.paddingEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.paddingStart = global::YamaCaisse.Droid.Resource.Attribute.paddingStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.paddingTopNoTitle = global::YamaCaisse.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.panelBackground = global::YamaCaisse.Droid.Resource.Attribute.panelBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.panelMenuListTheme = global::YamaCaisse.Droid.Resource.Attribute.panelMenuListTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.panelMenuListWidth = global::YamaCaisse.Droid.Resource.Attribute.panelMenuListWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.passwordToggleContentDescription = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.passwordToggleDrawable = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.passwordToggleEnabled = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.passwordToggleTint = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.passwordToggleTintMode = global::YamaCaisse.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.popupMenuStyle = global::YamaCaisse.Droid.Resource.Attribute.popupMenuStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.popupTheme = global::YamaCaisse.Droid.Resource.Attribute.popupTheme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.popupWindowStyle = global::YamaCaisse.Droid.Resource.Attribute.popupWindowStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.preserveIconSpacing = global::YamaCaisse.Droid.Resource.Attribute.preserveIconSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.pressedTranslationZ = global::YamaCaisse.Droid.Resource.Attribute.pressedTranslationZ;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.progressBarPadding = global::YamaCaisse.Droid.Resource.Attribute.progressBarPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.progressBarStyle = global::YamaCaisse.Droid.Resource.Attribute.progressBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.queryBackground = global::YamaCaisse.Droid.Resource.Attribute.queryBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.queryHint = global::YamaCaisse.Droid.Resource.Attribute.queryHint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.radioButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.radioButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.ratingBarStyle = global::YamaCaisse.Droid.Resource.Attribute.ratingBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.ratingBarStyleIndicator = global::YamaCaisse.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.ratingBarStyleSmall = global::YamaCaisse.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.reverseLayout = global::YamaCaisse.Droid.Resource.Attribute.reverseLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.rippleColor = global::YamaCaisse.Droid.Resource.Attribute.rippleColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.scrimAnimationDuration = global::YamaCaisse.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.scrimBackground = global::YamaCaisse.Droid.Resource.Attribute.scrimBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.scrimVisibleHeightTrigger = global::YamaCaisse.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.searchHintIcon = global::YamaCaisse.Droid.Resource.Attribute.searchHintIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.searchIcon = global::YamaCaisse.Droid.Resource.Attribute.searchIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.searchViewStyle = global::YamaCaisse.Droid.Resource.Attribute.searchViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.seekBarStyle = global::YamaCaisse.Droid.Resource.Attribute.seekBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.selectableItemBackground = global::YamaCaisse.Droid.Resource.Attribute.selectableItemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.selectableItemBackgroundBorderless = global::YamaCaisse.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.showAsAction = global::YamaCaisse.Droid.Resource.Attribute.showAsAction;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.showDividers = global::YamaCaisse.Droid.Resource.Attribute.showDividers;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.showMotionSpec = global::YamaCaisse.Droid.Resource.Attribute.showMotionSpec;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.showText = global::YamaCaisse.Droid.Resource.Attribute.showText;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.showTitle = global::YamaCaisse.Droid.Resource.Attribute.showTitle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.singleChoiceItemLayout = global::YamaCaisse.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.singleLine = global::YamaCaisse.Droid.Resource.Attribute.singleLine;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.singleSelection = global::YamaCaisse.Droid.Resource.Attribute.singleSelection;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.snackbarButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.snackbarStyle = global::YamaCaisse.Droid.Resource.Attribute.snackbarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.spanCount = global::YamaCaisse.Droid.Resource.Attribute.spanCount;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.spinBars = global::YamaCaisse.Droid.Resource.Attribute.spinBars;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.spinnerDropDownItemStyle = global::YamaCaisse.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.spinnerStyle = global::YamaCaisse.Droid.Resource.Attribute.spinnerStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.splitTrack = global::YamaCaisse.Droid.Resource.Attribute.splitTrack;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.srcCompat = global::YamaCaisse.Droid.Resource.Attribute.srcCompat;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.stackFromEnd = global::YamaCaisse.Droid.Resource.Attribute.stackFromEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.state_above_anchor = global::YamaCaisse.Droid.Resource.Attribute.state_above_anchor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.state_collapsed = global::YamaCaisse.Droid.Resource.Attribute.state_collapsed;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.state_collapsible = global::YamaCaisse.Droid.Resource.Attribute.state_collapsible;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.state_liftable = global::YamaCaisse.Droid.Resource.Attribute.state_liftable;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.state_lifted = global::YamaCaisse.Droid.Resource.Attribute.state_lifted;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.statusBarBackground = global::YamaCaisse.Droid.Resource.Attribute.statusBarBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.statusBarScrim = global::YamaCaisse.Droid.Resource.Attribute.statusBarScrim;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.strokeColor = global::YamaCaisse.Droid.Resource.Attribute.strokeColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.strokeWidth = global::YamaCaisse.Droid.Resource.Attribute.strokeWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.subMenuArrow = global::YamaCaisse.Droid.Resource.Attribute.subMenuArrow;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.submitBackground = global::YamaCaisse.Droid.Resource.Attribute.submitBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.subtitle = global::YamaCaisse.Droid.Resource.Attribute.subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.subtitleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.subtitleTextColor = global::YamaCaisse.Droid.Resource.Attribute.subtitleTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.subtitleTextStyle = global::YamaCaisse.Droid.Resource.Attribute.subtitleTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.suggestionRowLayout = global::YamaCaisse.Droid.Resource.Attribute.suggestionRowLayout;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.switchMinWidth = global::YamaCaisse.Droid.Resource.Attribute.switchMinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.switchPadding = global::YamaCaisse.Droid.Resource.Attribute.switchPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.switchStyle = global::YamaCaisse.Droid.Resource.Attribute.switchStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.switchTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.switchTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabBackground = global::YamaCaisse.Droid.Resource.Attribute.tabBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabContentStart = global::YamaCaisse.Droid.Resource.Attribute.tabContentStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabGravity = global::YamaCaisse.Droid.Resource.Attribute.tabGravity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIconTint = global::YamaCaisse.Droid.Resource.Attribute.tabIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIconTintMode = global::YamaCaisse.Droid.Resource.Attribute.tabIconTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIndicator = global::YamaCaisse.Droid.Resource.Attribute.tabIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIndicatorAnimationDuration = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIndicatorColor = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIndicatorFullWidth = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIndicatorGravity = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabIndicatorHeight = global::YamaCaisse.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabInlineLabel = global::YamaCaisse.Droid.Resource.Attribute.tabInlineLabel;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabMaxWidth = global::YamaCaisse.Droid.Resource.Attribute.tabMaxWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabMinWidth = global::YamaCaisse.Droid.Resource.Attribute.tabMinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabMode = global::YamaCaisse.Droid.Resource.Attribute.tabMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabPadding = global::YamaCaisse.Droid.Resource.Attribute.tabPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabPaddingBottom = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingBottom;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabPaddingEnd = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabPaddingStart = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabPaddingTop = global::YamaCaisse.Droid.Resource.Attribute.tabPaddingTop;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabRippleColor = global::YamaCaisse.Droid.Resource.Attribute.tabRippleColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabSelectedTextColor = global::YamaCaisse.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabStyle = global::YamaCaisse.Droid.Resource.Attribute.tabStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.tabTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabTextColor = global::YamaCaisse.Droid.Resource.Attribute.tabTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tabUnboundedRipple = global::YamaCaisse.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAllCaps = global::YamaCaisse.Droid.Resource.Attribute.textAllCaps;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceBody1 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceBody1;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceBody2 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceBody2;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceButton = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceButton;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceCaption = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceCaption;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceHeadline1 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceHeadline2 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceHeadline3 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceHeadline4 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceHeadline5 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceHeadline6 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceLargePopupMenu = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceListItem = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceListItem;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceListItemSecondary = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceListItemSmall = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceOverline = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceOverline;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearancePopupMenuHeader = global::YamaCaisse.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceSearchResultSubtitle = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceSearchResultTitle = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceSmallPopupMenu = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceSubtitle1 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textAppearanceSubtitle2 = global::YamaCaisse.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textColorAlertDialogListItem = global::YamaCaisse.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textColorSearchUrl = global::YamaCaisse.Droid.Resource.Attribute.textColorSearchUrl;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textEndPadding = global::YamaCaisse.Droid.Resource.Attribute.textEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textInputStyle = global::YamaCaisse.Droid.Resource.Attribute.textInputStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.textStartPadding = global::YamaCaisse.Droid.Resource.Attribute.textStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.theme = global::YamaCaisse.Droid.Resource.Attribute.theme;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.thickness = global::YamaCaisse.Droid.Resource.Attribute.thickness;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.thumbTextPadding = global::YamaCaisse.Droid.Resource.Attribute.thumbTextPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.thumbTint = global::YamaCaisse.Droid.Resource.Attribute.thumbTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.thumbTintMode = global::YamaCaisse.Droid.Resource.Attribute.thumbTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tickMark = global::YamaCaisse.Droid.Resource.Attribute.tickMark;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tickMarkTint = global::YamaCaisse.Droid.Resource.Attribute.tickMarkTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tickMarkTintMode = global::YamaCaisse.Droid.Resource.Attribute.tickMarkTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tint = global::YamaCaisse.Droid.Resource.Attribute.tint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tintMode = global::YamaCaisse.Droid.Resource.Attribute.tintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.title = global::YamaCaisse.Droid.Resource.Attribute.title;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleEnabled = global::YamaCaisse.Droid.Resource.Attribute.titleEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleMargin = global::YamaCaisse.Droid.Resource.Attribute.titleMargin;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleMarginBottom = global::YamaCaisse.Droid.Resource.Attribute.titleMarginBottom;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleMarginEnd = global::YamaCaisse.Droid.Resource.Attribute.titleMarginEnd;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleMargins = global::YamaCaisse.Droid.Resource.Attribute.titleMargins;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleMarginStart = global::YamaCaisse.Droid.Resource.Attribute.titleMarginStart;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleMarginTop = global::YamaCaisse.Droid.Resource.Attribute.titleMarginTop;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleTextAppearance = global::YamaCaisse.Droid.Resource.Attribute.titleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleTextColor = global::YamaCaisse.Droid.Resource.Attribute.titleTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.titleTextStyle = global::YamaCaisse.Droid.Resource.Attribute.titleTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.toolbarId = global::YamaCaisse.Droid.Resource.Attribute.toolbarId;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.toolbarNavigationButtonStyle = global::YamaCaisse.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.toolbarStyle = global::YamaCaisse.Droid.Resource.Attribute.toolbarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tooltipForegroundColor = global::YamaCaisse.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tooltipFrameBackground = global::YamaCaisse.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.tooltipText = global::YamaCaisse.Droid.Resource.Attribute.tooltipText;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.track = global::YamaCaisse.Droid.Resource.Attribute.track;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.trackTint = global::YamaCaisse.Droid.Resource.Attribute.trackTint;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.trackTintMode = global::YamaCaisse.Droid.Resource.Attribute.trackTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.ttcIndex = global::YamaCaisse.Droid.Resource.Attribute.ttcIndex;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.useCompatPadding = global::YamaCaisse.Droid.Resource.Attribute.useCompatPadding;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.viewInflaterClass = global::YamaCaisse.Droid.Resource.Attribute.viewInflaterClass;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.voiceIcon = global::YamaCaisse.Droid.Resource.Attribute.voiceIcon;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowActionBar = global::YamaCaisse.Droid.Resource.Attribute.windowActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowActionBarOverlay = global::YamaCaisse.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowActionModeOverlay = global::YamaCaisse.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowFixedHeightMajor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowFixedHeightMinor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowFixedWidthMajor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowFixedWidthMinor = global::YamaCaisse.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowMinWidthMajor = global::YamaCaisse.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowMinWidthMinor = global::YamaCaisse.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::SkiaSharp.Views.Forms.Resource.Attribute.windowNoTitle = global::YamaCaisse.Droid.Resource.Attribute.windowNoTitle;
+			global::SkiaSharp.Views.Forms.Resource.Boolean.abc_action_bar_embed_tabs = global::YamaCaisse.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::SkiaSharp.Views.Forms.Resource.Boolean.abc_allow_stacked_button_bar = global::YamaCaisse.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::SkiaSharp.Views.Forms.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::YamaCaisse.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::SkiaSharp.Views.Forms.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::YamaCaisse.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_background_cache_hint_selector_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_background_cache_hint_selector_material_light = global::YamaCaisse.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_btn_colored_borderless_text_material = global::YamaCaisse.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_btn_colored_text_material = global::YamaCaisse.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_color_highlight_material = global::YamaCaisse.Droid.Resource.Color.abc_color_highlight_material;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_hint_foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_hint_foreground_material_light = global::YamaCaisse.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_input_method_navigation_guard = global::YamaCaisse.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_primary_text_disable_only_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_primary_text_disable_only_material_light = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_primary_text_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_primary_text_material_light = global::YamaCaisse.Droid.Resource.Color.abc_primary_text_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_search_url_text = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_search_url_text_normal = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text_normal;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_search_url_text_pressed = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_search_url_text_selected = global::YamaCaisse.Droid.Resource.Color.abc_search_url_text_selected;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_secondary_text_material_dark = global::YamaCaisse.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_secondary_text_material_light = global::YamaCaisse.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_tint_btn_checkable = global::YamaCaisse.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_tint_default = global::YamaCaisse.Droid.Resource.Color.abc_tint_default;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_tint_edittext = global::YamaCaisse.Droid.Resource.Color.abc_tint_edittext;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_tint_seek_thumb = global::YamaCaisse.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_tint_spinner = global::YamaCaisse.Droid.Resource.Color.abc_tint_spinner;
+			global::SkiaSharp.Views.Forms.Resource.Color.abc_tint_switch_track = global::YamaCaisse.Droid.Resource.Color.abc_tint_switch_track;
+			global::SkiaSharp.Views.Forms.Resource.Color.accent_material_dark = global::YamaCaisse.Droid.Resource.Color.accent_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.accent_material_light = global::YamaCaisse.Droid.Resource.Color.accent_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.background_floating_material_dark = global::YamaCaisse.Droid.Resource.Color.background_floating_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.background_floating_material_light = global::YamaCaisse.Droid.Resource.Color.background_floating_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.background_material_dark = global::YamaCaisse.Droid.Resource.Color.background_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.background_material_light = global::YamaCaisse.Droid.Resource.Color.background_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.bright_foreground_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.bright_foreground_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.bright_foreground_inverse_material_dark = global::YamaCaisse.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.bright_foreground_inverse_material_light = global::YamaCaisse.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.bright_foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.bright_foreground_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.bright_foreground_material_light = global::YamaCaisse.Droid.Resource.Color.bright_foreground_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.browser_actions_bg_grey = global::YamaCaisse.Droid.Resource.Color.browser_actions_bg_grey;
+			global::SkiaSharp.Views.Forms.Resource.Color.browser_actions_divider_color = global::YamaCaisse.Droid.Resource.Color.browser_actions_divider_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.browser_actions_text_color = global::YamaCaisse.Droid.Resource.Color.browser_actions_text_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.browser_actions_title_color = global::YamaCaisse.Droid.Resource.Color.browser_actions_title_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.button_material_dark = global::YamaCaisse.Droid.Resource.Color.button_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.button_material_light = global::YamaCaisse.Droid.Resource.Color.button_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.cardview_dark_background = global::YamaCaisse.Droid.Resource.Color.cardview_dark_background;
+			global::SkiaSharp.Views.Forms.Resource.Color.cardview_light_background = global::YamaCaisse.Droid.Resource.Color.cardview_light_background;
+			global::SkiaSharp.Views.Forms.Resource.Color.cardview_shadow_end_color = global::YamaCaisse.Droid.Resource.Color.cardview_shadow_end_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.cardview_shadow_start_color = global::YamaCaisse.Droid.Resource.Color.cardview_shadow_start_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_bottom_navigation_shadow_color = global::YamaCaisse.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_default_color_primary = global::YamaCaisse.Droid.Resource.Color.design_default_color_primary;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_default_color_primary_dark = global::YamaCaisse.Droid.Resource.Color.design_default_color_primary_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_error = global::YamaCaisse.Droid.Resource.Color.design_error;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_fab_shadow_end_color = global::YamaCaisse.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_fab_shadow_mid_color = global::YamaCaisse.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_fab_shadow_start_color = global::YamaCaisse.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_fab_stroke_end_inner_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_fab_stroke_end_outer_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_fab_stroke_top_inner_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_fab_stroke_top_outer_color = global::YamaCaisse.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_snackbar_background_color = global::YamaCaisse.Droid.Resource.Color.design_snackbar_background_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.design_tint_password_toggle = global::YamaCaisse.Droid.Resource.Color.design_tint_password_toggle;
+			global::SkiaSharp.Views.Forms.Resource.Color.dim_foreground_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.dim_foreground_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.dim_foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.dim_foreground_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.dim_foreground_material_light = global::YamaCaisse.Droid.Resource.Color.dim_foreground_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.error_color_material_dark = global::YamaCaisse.Droid.Resource.Color.error_color_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.error_color_material_light = global::YamaCaisse.Droid.Resource.Color.error_color_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.foreground_material_dark = global::YamaCaisse.Droid.Resource.Color.foreground_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.foreground_material_light = global::YamaCaisse.Droid.Resource.Color.foreground_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.highlighted_text_material_dark = global::YamaCaisse.Droid.Resource.Color.highlighted_text_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.highlighted_text_material_light = global::YamaCaisse.Droid.Resource.Color.highlighted_text_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_blue_grey_800 = global::YamaCaisse.Droid.Resource.Color.material_blue_grey_800;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_blue_grey_900 = global::YamaCaisse.Droid.Resource.Color.material_blue_grey_900;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_blue_grey_950 = global::YamaCaisse.Droid.Resource.Color.material_blue_grey_950;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_deep_teal_200 = global::YamaCaisse.Droid.Resource.Color.material_deep_teal_200;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_deep_teal_500 = global::YamaCaisse.Droid.Resource.Color.material_deep_teal_500;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_grey_100 = global::YamaCaisse.Droid.Resource.Color.material_grey_100;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_grey_300 = global::YamaCaisse.Droid.Resource.Color.material_grey_300;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_grey_50 = global::YamaCaisse.Droid.Resource.Color.material_grey_50;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_grey_600 = global::YamaCaisse.Droid.Resource.Color.material_grey_600;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_grey_800 = global::YamaCaisse.Droid.Resource.Color.material_grey_800;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_grey_850 = global::YamaCaisse.Droid.Resource.Color.material_grey_850;
+			global::SkiaSharp.Views.Forms.Resource.Color.material_grey_900 = global::YamaCaisse.Droid.Resource.Color.material_grey_900;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::YamaCaisse.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_bottom_nav_item_tint = global::YamaCaisse.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_bg_color_disabled = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_bg_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_stroke_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_text_btn_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_text_color_disabled = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_text_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_btn_transparent_bg_color = global::YamaCaisse.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_chip_background_color = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_background_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_chip_close_icon_tint = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_chip_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_chip_text_color = global::YamaCaisse.Droid.Resource.Color.mtrl_chip_text_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_fab_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_scrim_color = global::YamaCaisse.Droid.Resource.Color.mtrl_scrim_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_tabs_colored_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_tabs_icon_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_tabs_ripple_color = global::YamaCaisse.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_textinput_default_box_stroke_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_textinput_disabled_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::YamaCaisse.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.mtrl_text_btn_text_color_selector = global::YamaCaisse.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::SkiaSharp.Views.Forms.Resource.Color.notification_action_color_filter = global::YamaCaisse.Droid.Resource.Color.notification_action_color_filter;
+			global::SkiaSharp.Views.Forms.Resource.Color.notification_icon_bg_color = global::YamaCaisse.Droid.Resource.Color.notification_icon_bg_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.notification_material_background_media_default_color = global::YamaCaisse.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_dark_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_dark_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_dark_material_light = global::YamaCaisse.Droid.Resource.Color.primary_dark_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_material_light = global::YamaCaisse.Droid.Resource.Color.primary_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_text_default_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_text_default_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_text_default_material_light = global::YamaCaisse.Droid.Resource.Color.primary_text_default_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_text_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.primary_text_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.ripple_material_dark = global::YamaCaisse.Droid.Resource.Color.ripple_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.ripple_material_light = global::YamaCaisse.Droid.Resource.Color.ripple_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.secondary_text_default_material_dark = global::YamaCaisse.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.secondary_text_default_material_light = global::YamaCaisse.Droid.Resource.Color.secondary_text_default_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.secondary_text_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.secondary_text_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.switch_thumb_disabled_material_dark = global::YamaCaisse.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.switch_thumb_disabled_material_light = global::YamaCaisse.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.switch_thumb_material_dark = global::YamaCaisse.Droid.Resource.Color.switch_thumb_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.switch_thumb_material_light = global::YamaCaisse.Droid.Resource.Color.switch_thumb_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.switch_thumb_normal_material_dark = global::YamaCaisse.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.switch_thumb_normal_material_light = global::YamaCaisse.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Color.tooltip_background_dark = global::YamaCaisse.Droid.Resource.Color.tooltip_background_dark;
+			global::SkiaSharp.Views.Forms.Resource.Color.tooltip_background_light = global::YamaCaisse.Droid.Resource.Color.tooltip_background_light;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_content_inset_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_default_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_default_padding_end_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_default_padding_start_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_elevation_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_stacked_max_height = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_button_min_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_button_min_width_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_action_button_min_width_overflow_material = global::YamaCaisse.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_alert_dialog_button_bar_height = global::YamaCaisse.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_alert_dialog_button_dimen = global::YamaCaisse.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_button_inset_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_button_inset_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_button_padding_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_button_padding_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::YamaCaisse.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_config_prefDialogWidth = global::YamaCaisse.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_control_corner_material = global::YamaCaisse.Droid.Resource.Dimension.abc_control_corner_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_control_inset_material = global::YamaCaisse.Droid.Resource.Dimension.abc_control_inset_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_control_padding_material = global::YamaCaisse.Droid.Resource.Dimension.abc_control_padding_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_corner_radius_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_fixed_height_major = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_fixed_height_minor = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_fixed_width_major = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_fixed_width_minor = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_min_width_major = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_min_width_minor = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_padding_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_padding_top_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dialog_title_divider_material = global::YamaCaisse.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_disabled_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_disabled_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dropdownitem_icon_width = global::YamaCaisse.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dropdownitem_text_padding_left = global::YamaCaisse.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_dropdownitem_text_padding_right = global::YamaCaisse.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_edit_text_inset_bottom_material = global::YamaCaisse.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_edit_text_inset_top_material = global::YamaCaisse.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_floating_window_z = global::YamaCaisse.Droid.Resource.Dimension.abc_floating_window_z;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_list_item_padding_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_panel_menu_list_width = global::YamaCaisse.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_progress_bar_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_search_view_preferred_height = global::YamaCaisse.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_search_view_preferred_width = global::YamaCaisse.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_seekbar_track_background_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_seekbar_track_progress_height_material = global::YamaCaisse.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_select_dialog_padding_start_material = global::YamaCaisse.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_switch_padding = global::YamaCaisse.Droid.Resource.Dimension.abc_switch_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_body_1_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_body_2_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_button_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_caption_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_display_1_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_display_2_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_display_3_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_display_4_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_headline_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_large_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_medium_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_menu_header_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_menu_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_small_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_subhead_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_title_material = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.abc_text_size_title_material_toolbar = global::YamaCaisse.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.browser_actions_context_menu_max_width = global::YamaCaisse.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.browser_actions_context_menu_min_padding = global::YamaCaisse.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.cardview_compat_inset_shadow = global::YamaCaisse.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.cardview_default_elevation = global::YamaCaisse.Droid.Resource.Dimension.cardview_default_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.cardview_default_radius = global::YamaCaisse.Droid.Resource.Dimension.cardview_default_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.compat_button_inset_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.compat_button_inset_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.compat_button_padding_horizontal_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.compat_button_padding_vertical_material = global::YamaCaisse.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.compat_control_corner_material = global::YamaCaisse.Droid.Resource.Dimension.compat_control_corner_material;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.compat_notification_large_icon_max_height = global::YamaCaisse.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.compat_notification_large_icon_max_width = global::YamaCaisse.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_appbar_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_appbar_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_active_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_height = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_icon_size = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_item_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_item_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_margin = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_shadow_height = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_navigation_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_sheet_modal_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_bottom_sheet_peek_height_min = global::YamaCaisse.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_fab_border_width = global::YamaCaisse.Droid.Resource.Dimension.design_fab_border_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_fab_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_fab_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_fab_image_size = global::YamaCaisse.Droid.Resource.Dimension.design_fab_image_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_fab_size_mini = global::YamaCaisse.Droid.Resource.Dimension.design_fab_size_mini;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_fab_size_normal = global::YamaCaisse.Droid.Resource.Dimension.design_fab_size_normal;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_fab_translation_z_hovered_focused = global::YamaCaisse.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_fab_translation_z_pressed = global::YamaCaisse.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_icon_size = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_item_horizontal_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_item_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_padding_bottom = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_navigation_separator_vertical_padding = global::YamaCaisse.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_action_inline_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_background_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_elevation = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_padding_horizontal = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_padding_vertical = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_snackbar_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_tab_max_width = global::YamaCaisse.Droid.Resource.Dimension.design_tab_max_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_tab_scrollable_min_width = global::YamaCaisse.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_tab_text_size = global::YamaCaisse.Droid.Resource.Dimension.design_tab_text_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_tab_text_size_2line = global::YamaCaisse.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.design_textinput_caption_translate_y = global::YamaCaisse.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.disabled_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.disabled_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.fastscroll_default_thickness = global::YamaCaisse.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.fastscroll_margin = global::YamaCaisse.Droid.Resource.Dimension.fastscroll_margin;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.fastscroll_minimum_range = global::YamaCaisse.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.highlight_alpha_material_colored = global::YamaCaisse.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.highlight_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.highlight_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.hint_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.hint_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.hint_pressed_alpha_material_dark = global::YamaCaisse.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.hint_pressed_alpha_material_light = global::YamaCaisse.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::YamaCaisse.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::YamaCaisse.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::YamaCaisse.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_bottomappbar_height = global::YamaCaisse.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_disabled_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_disabled_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_focused_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_hovered_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_inset = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_letter_spacing = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_padding_bottom = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_padding_left = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_padding_right = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_padding_top = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_pressed_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_stroke_size = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_text_size = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_btn_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_btn_z;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_card_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_card_spacing = global::YamaCaisse.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_chip_pressed_translation_z = global::YamaCaisse.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_chip_text_size = global::YamaCaisse.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_fab_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::YamaCaisse.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_fab_translation_z_pressed = global::YamaCaisse.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_navigation_elevation = global::YamaCaisse.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_navigation_item_icon_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_snackbar_margin = global::YamaCaisse.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_box_padding_end = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::YamaCaisse.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.mtrl_toolbar_default_height = global::YamaCaisse.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_action_icon_size = global::YamaCaisse.Droid.Resource.Dimension.notification_action_icon_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_action_text_size = global::YamaCaisse.Droid.Resource.Dimension.notification_action_text_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_big_circle_margin = global::YamaCaisse.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_content_margin_start = global::YamaCaisse.Droid.Resource.Dimension.notification_content_margin_start;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_large_icon_height = global::YamaCaisse.Droid.Resource.Dimension.notification_large_icon_height;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_large_icon_width = global::YamaCaisse.Droid.Resource.Dimension.notification_large_icon_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_main_column_padding_top = global::YamaCaisse.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_media_narrow_margin = global::YamaCaisse.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_right_icon_size = global::YamaCaisse.Droid.Resource.Dimension.notification_right_icon_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_right_side_padding_top = global::YamaCaisse.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_small_icon_background_padding = global::YamaCaisse.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_small_icon_size_as_large = global::YamaCaisse.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_subtext_size = global::YamaCaisse.Droid.Resource.Dimension.notification_subtext_size;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_top_pad = global::YamaCaisse.Droid.Resource.Dimension.notification_top_pad;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.notification_top_pad_large_text = global::YamaCaisse.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.subtitle_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.subtitle_outline_width = global::YamaCaisse.Droid.Resource.Dimension.subtitle_outline_width;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.subtitle_shadow_offset = global::YamaCaisse.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.subtitle_shadow_radius = global::YamaCaisse.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_corner_radius = global::YamaCaisse.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_horizontal_padding = global::YamaCaisse.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_margin = global::YamaCaisse.Droid.Resource.Dimension.tooltip_margin;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::YamaCaisse.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_precise_anchor_threshold = global::YamaCaisse.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_vertical_padding = global::YamaCaisse.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_y_offset_non_touch = global::YamaCaisse.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::SkiaSharp.Views.Forms.Resource.Dimension.tooltip_y_offset_touch = global::YamaCaisse.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_action_bar_item_background_material = global::YamaCaisse.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_borderless_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_check_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_check_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_colored_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_default_mtrl_shape = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_radio_material = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::YamaCaisse.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_cab_background_internal_bg = global::YamaCaisse.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_cab_background_top_material = global::YamaCaisse.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_control_background_material = global::YamaCaisse.Droid.Resource.Drawable.abc_control_background_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_dialog_material_background = global::YamaCaisse.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_edit_text_material = global::YamaCaisse.Droid.Resource.Drawable.abc_edit_text_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_ab_back_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_clear_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_go_search_api_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_menu_overflow_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_search_api_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_star_black_16dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_star_black_36dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_star_black_48dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_star_half_black_16dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_star_half_black_36dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_star_half_black_48dp = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ic_voice_search_api_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_item_background_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_item_background_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_divider_material = global::YamaCaisse.Droid.Resource.Drawable.abc_list_divider_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_divider_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_focused_holo = global::YamaCaisse.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_longpressed_holo = global::YamaCaisse.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_pressed_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_pressed_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_selector_disabled_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_selector_holo_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_list_selector_holo_light = global::YamaCaisse.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::YamaCaisse.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_popup_background_mtrl_mult = global::YamaCaisse.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ratingbar_indicator_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ratingbar_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_ratingbar_small_material = global::YamaCaisse.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_seekbar_thumb_material = global::YamaCaisse.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_seekbar_tick_mark_material = global::YamaCaisse.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_seekbar_track_material = global::YamaCaisse.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_spinner_textfield_background_material = global::YamaCaisse.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_switch_thumb_material = global::YamaCaisse.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_switch_track_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_tab_indicator_material = global::YamaCaisse.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_textfield_search_material = global::YamaCaisse.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_text_cursor_material = global::YamaCaisse.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::YamaCaisse.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.abc_vector_test = global::YamaCaisse.Droid.Resource.Drawable.abc_vector_test;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.avd_hide_password = global::YamaCaisse.Droid.Resource.Drawable.avd_hide_password;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.avd_show_password = global::YamaCaisse.Droid.Resource.Drawable.avd_show_password;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.design_bottom_navigation_item_background = global::YamaCaisse.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.design_fab_background = global::YamaCaisse.Droid.Resource.Drawable.design_fab_background;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.design_ic_visibility = global::YamaCaisse.Droid.Resource.Drawable.design_ic_visibility;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.design_ic_visibility_off = global::YamaCaisse.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.design_password_eye = global::YamaCaisse.Droid.Resource.Drawable.design_password_eye;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.design_snackbar_background = global::YamaCaisse.Droid.Resource.Drawable.design_snackbar_background;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.ic_mtrl_chip_checked_black = global::YamaCaisse.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.ic_mtrl_chip_checked_circle = global::YamaCaisse.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.ic_mtrl_chip_close_circle = global::YamaCaisse.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.mtrl_snackbar_background = global::YamaCaisse.Droid.Resource.Drawable.mtrl_snackbar_background;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.mtrl_tabs_default_indicator = global::YamaCaisse.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.navigation_empty_icon = global::YamaCaisse.Droid.Resource.Drawable.navigation_empty_icon;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_action_background = global::YamaCaisse.Droid.Resource.Drawable.notification_action_background;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_bg;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_bg_low = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_low;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_bg_low_normal = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_bg_low_pressed = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_bg_normal = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_normal;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_bg_normal_pressed = global::YamaCaisse.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_icon_background = global::YamaCaisse.Droid.Resource.Drawable.notification_icon_background;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_template_icon_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_template_icon_low_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notification_tile_bg = global::YamaCaisse.Droid.Resource.Drawable.notification_tile_bg;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.notify_panel_notification_icon_bg = global::YamaCaisse.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.tooltip_frame_dark = global::YamaCaisse.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::SkiaSharp.Views.Forms.Resource.Drawable.tooltip_frame_light = global::YamaCaisse.Droid.Resource.Drawable.tooltip_frame_light;
+			global::SkiaSharp.Views.Forms.Resource.Id.action0 = global::YamaCaisse.Droid.Resource.Id.action0;
+			global::SkiaSharp.Views.Forms.Resource.Id.actions = global::YamaCaisse.Droid.Resource.Id.actions;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_bar = global::YamaCaisse.Droid.Resource.Id.action_bar;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_bar_activity_content = global::YamaCaisse.Droid.Resource.Id.action_bar_activity_content;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_bar_container = global::YamaCaisse.Droid.Resource.Id.action_bar_container;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_bar_root = global::YamaCaisse.Droid.Resource.Id.action_bar_root;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_bar_spinner = global::YamaCaisse.Droid.Resource.Id.action_bar_spinner;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_bar_subtitle = global::YamaCaisse.Droid.Resource.Id.action_bar_subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_bar_title = global::YamaCaisse.Droid.Resource.Id.action_bar_title;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_container = global::YamaCaisse.Droid.Resource.Id.action_container;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_context_bar = global::YamaCaisse.Droid.Resource.Id.action_context_bar;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_divider = global::YamaCaisse.Droid.Resource.Id.action_divider;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_image = global::YamaCaisse.Droid.Resource.Id.action_image;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_menu_divider = global::YamaCaisse.Droid.Resource.Id.action_menu_divider;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_menu_presenter = global::YamaCaisse.Droid.Resource.Id.action_menu_presenter;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_mode_bar = global::YamaCaisse.Droid.Resource.Id.action_mode_bar;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_mode_bar_stub = global::YamaCaisse.Droid.Resource.Id.action_mode_bar_stub;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_mode_close_button = global::YamaCaisse.Droid.Resource.Id.action_mode_close_button;
+			global::SkiaSharp.Views.Forms.Resource.Id.action_text = global::YamaCaisse.Droid.Resource.Id.action_text;
+			global::SkiaSharp.Views.Forms.Resource.Id.activity_chooser_view_content = global::YamaCaisse.Droid.Resource.Id.activity_chooser_view_content;
+			global::SkiaSharp.Views.Forms.Resource.Id.add = global::YamaCaisse.Droid.Resource.Id.add;
+			global::SkiaSharp.Views.Forms.Resource.Id.alertTitle = global::YamaCaisse.Droid.Resource.Id.alertTitle;
+			global::SkiaSharp.Views.Forms.Resource.Id.all = global::YamaCaisse.Droid.Resource.Id.all;
+			global::SkiaSharp.Views.Forms.Resource.Id.ALT = global::YamaCaisse.Droid.Resource.Id.ALT;
+			global::SkiaSharp.Views.Forms.Resource.Id.always = global::YamaCaisse.Droid.Resource.Id.always;
+			global::SkiaSharp.Views.Forms.Resource.Id.async = global::YamaCaisse.Droid.Resource.Id.async;
+			global::SkiaSharp.Views.Forms.Resource.Id.auto = global::YamaCaisse.Droid.Resource.Id.auto;
+			global::SkiaSharp.Views.Forms.Resource.Id.beginning = global::YamaCaisse.Droid.Resource.Id.beginning;
+			global::SkiaSharp.Views.Forms.Resource.Id.blocking = global::YamaCaisse.Droid.Resource.Id.blocking;
+			global::SkiaSharp.Views.Forms.Resource.Id.bottom = global::YamaCaisse.Droid.Resource.Id.bottom;
+			global::SkiaSharp.Views.Forms.Resource.Id.bottomtab_navarea = global::YamaCaisse.Droid.Resource.Id.bottomtab_navarea;
+			global::SkiaSharp.Views.Forms.Resource.Id.bottomtab_tabbar = global::YamaCaisse.Droid.Resource.Id.bottomtab_tabbar;
+			global::SkiaSharp.Views.Forms.Resource.Id.browser_actions_header_text = global::YamaCaisse.Droid.Resource.Id.browser_actions_header_text;
+			global::SkiaSharp.Views.Forms.Resource.Id.browser_actions_menu_items = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_items;
+			global::SkiaSharp.Views.Forms.Resource.Id.browser_actions_menu_item_icon = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::SkiaSharp.Views.Forms.Resource.Id.browser_actions_menu_item_text = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::SkiaSharp.Views.Forms.Resource.Id.browser_actions_menu_view = global::YamaCaisse.Droid.Resource.Id.browser_actions_menu_view;
+			global::SkiaSharp.Views.Forms.Resource.Id.buttonPanel = global::YamaCaisse.Droid.Resource.Id.buttonPanel;
+			global::SkiaSharp.Views.Forms.Resource.Id.cancel_action = global::YamaCaisse.Droid.Resource.Id.cancel_action;
+			global::SkiaSharp.Views.Forms.Resource.Id.center = global::YamaCaisse.Droid.Resource.Id.center;
+			global::SkiaSharp.Views.Forms.Resource.Id.center_horizontal = global::YamaCaisse.Droid.Resource.Id.center_horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Id.center_vertical = global::YamaCaisse.Droid.Resource.Id.center_vertical;
+			global::SkiaSharp.Views.Forms.Resource.Id.checkbox = global::YamaCaisse.Droid.Resource.Id.checkbox;
+			global::SkiaSharp.Views.Forms.Resource.Id.chronometer = global::YamaCaisse.Droid.Resource.Id.chronometer;
+			global::SkiaSharp.Views.Forms.Resource.Id.clip_horizontal = global::YamaCaisse.Droid.Resource.Id.clip_horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Id.clip_vertical = global::YamaCaisse.Droid.Resource.Id.clip_vertical;
+			global::SkiaSharp.Views.Forms.Resource.Id.collapseActionView = global::YamaCaisse.Droid.Resource.Id.collapseActionView;
+			global::SkiaSharp.Views.Forms.Resource.Id.container = global::YamaCaisse.Droid.Resource.Id.container;
+			global::SkiaSharp.Views.Forms.Resource.Id.content = global::YamaCaisse.Droid.Resource.Id.content;
+			global::SkiaSharp.Views.Forms.Resource.Id.contentPanel = global::YamaCaisse.Droid.Resource.Id.contentPanel;
+			global::SkiaSharp.Views.Forms.Resource.Id.coordinator = global::YamaCaisse.Droid.Resource.Id.coordinator;
+			global::SkiaSharp.Views.Forms.Resource.Id.CTRL = global::YamaCaisse.Droid.Resource.Id.CTRL;
+			global::SkiaSharp.Views.Forms.Resource.Id.custom = global::YamaCaisse.Droid.Resource.Id.custom;
+			global::SkiaSharp.Views.Forms.Resource.Id.customPanel = global::YamaCaisse.Droid.Resource.Id.customPanel;
+			global::SkiaSharp.Views.Forms.Resource.Id.decor_content_parent = global::YamaCaisse.Droid.Resource.Id.decor_content_parent;
+			global::SkiaSharp.Views.Forms.Resource.Id.default_activity_button = global::YamaCaisse.Droid.Resource.Id.default_activity_button;
+			global::SkiaSharp.Views.Forms.Resource.Id.design_bottom_sheet = global::YamaCaisse.Droid.Resource.Id.design_bottom_sheet;
+			global::SkiaSharp.Views.Forms.Resource.Id.design_menu_item_action_area = global::YamaCaisse.Droid.Resource.Id.design_menu_item_action_area;
+			global::SkiaSharp.Views.Forms.Resource.Id.design_menu_item_action_area_stub = global::YamaCaisse.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::SkiaSharp.Views.Forms.Resource.Id.design_menu_item_text = global::YamaCaisse.Droid.Resource.Id.design_menu_item_text;
+			global::SkiaSharp.Views.Forms.Resource.Id.design_navigation_view = global::YamaCaisse.Droid.Resource.Id.design_navigation_view;
+			global::SkiaSharp.Views.Forms.Resource.Id.disableHome = global::YamaCaisse.Droid.Resource.Id.disableHome;
+			global::SkiaSharp.Views.Forms.Resource.Id.edit_query = global::YamaCaisse.Droid.Resource.Id.edit_query;
+			global::SkiaSharp.Views.Forms.Resource.Id.end = global::YamaCaisse.Droid.Resource.Id.end;
+			global::SkiaSharp.Views.Forms.Resource.Id.end_padder = global::YamaCaisse.Droid.Resource.Id.end_padder;
+			global::SkiaSharp.Views.Forms.Resource.Id.enterAlways = global::YamaCaisse.Droid.Resource.Id.enterAlways;
+			global::SkiaSharp.Views.Forms.Resource.Id.enterAlwaysCollapsed = global::YamaCaisse.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::SkiaSharp.Views.Forms.Resource.Id.exitUntilCollapsed = global::YamaCaisse.Droid.Resource.Id.exitUntilCollapsed;
+			global::SkiaSharp.Views.Forms.Resource.Id.expanded_menu = global::YamaCaisse.Droid.Resource.Id.expanded_menu;
+			global::SkiaSharp.Views.Forms.Resource.Id.expand_activities_button = global::YamaCaisse.Droid.Resource.Id.expand_activities_button;
+			global::SkiaSharp.Views.Forms.Resource.Id.fill = global::YamaCaisse.Droid.Resource.Id.fill;
+			global::SkiaSharp.Views.Forms.Resource.Id.filled = global::YamaCaisse.Droid.Resource.Id.filled;
+			global::SkiaSharp.Views.Forms.Resource.Id.fill_horizontal = global::YamaCaisse.Droid.Resource.Id.fill_horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Id.fill_vertical = global::YamaCaisse.Droid.Resource.Id.fill_vertical;
+			global::SkiaSharp.Views.Forms.Resource.Id.@fixed = global::YamaCaisse.Droid.Resource.Id.@fixed;
+			global::SkiaSharp.Views.Forms.Resource.Id.flyoutcontent_appbar = global::YamaCaisse.Droid.Resource.Id.flyoutcontent_appbar;
+			global::SkiaSharp.Views.Forms.Resource.Id.flyoutcontent_recycler = global::YamaCaisse.Droid.Resource.Id.flyoutcontent_recycler;
+			global::SkiaSharp.Views.Forms.Resource.Id.forever = global::YamaCaisse.Droid.Resource.Id.forever;
+			global::SkiaSharp.Views.Forms.Resource.Id.FUNCTION = global::YamaCaisse.Droid.Resource.Id.FUNCTION;
+			global::SkiaSharp.Views.Forms.Resource.Id.ghost_view = global::YamaCaisse.Droid.Resource.Id.ghost_view;
+			global::SkiaSharp.Views.Forms.Resource.Id.group_divider = global::YamaCaisse.Droid.Resource.Id.group_divider;
+			global::SkiaSharp.Views.Forms.Resource.Id.home = global::YamaCaisse.Droid.Resource.Id.home;
+			global::SkiaSharp.Views.Forms.Resource.Id.homeAsUp = global::YamaCaisse.Droid.Resource.Id.homeAsUp;
+			global::SkiaSharp.Views.Forms.Resource.Id.icon = global::YamaCaisse.Droid.Resource.Id.icon;
+			global::SkiaSharp.Views.Forms.Resource.Id.icon_group = global::YamaCaisse.Droid.Resource.Id.icon_group;
+			global::SkiaSharp.Views.Forms.Resource.Id.ifRoom = global::YamaCaisse.Droid.Resource.Id.ifRoom;
+			global::SkiaSharp.Views.Forms.Resource.Id.image = global::YamaCaisse.Droid.Resource.Id.image;
+			global::SkiaSharp.Views.Forms.Resource.Id.info = global::YamaCaisse.Droid.Resource.Id.info;
+			global::SkiaSharp.Views.Forms.Resource.Id.italic = global::YamaCaisse.Droid.Resource.Id.italic;
+			global::SkiaSharp.Views.Forms.Resource.Id.item_touch_helper_previous_elevation = global::YamaCaisse.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Id.labeled = global::YamaCaisse.Droid.Resource.Id.labeled;
+			global::SkiaSharp.Views.Forms.Resource.Id.largeLabel = global::YamaCaisse.Droid.Resource.Id.largeLabel;
+			global::SkiaSharp.Views.Forms.Resource.Id.left = global::YamaCaisse.Droid.Resource.Id.left;
+			global::SkiaSharp.Views.Forms.Resource.Id.line1 = global::YamaCaisse.Droid.Resource.Id.line1;
+			global::SkiaSharp.Views.Forms.Resource.Id.line3 = global::YamaCaisse.Droid.Resource.Id.line3;
+			global::SkiaSharp.Views.Forms.Resource.Id.listMode = global::YamaCaisse.Droid.Resource.Id.listMode;
+			global::SkiaSharp.Views.Forms.Resource.Id.list_item = global::YamaCaisse.Droid.Resource.Id.list_item;
+			global::SkiaSharp.Views.Forms.Resource.Id.main_appbar = global::YamaCaisse.Droid.Resource.Id.main_appbar;
+			global::SkiaSharp.Views.Forms.Resource.Id.main_tablayout = global::YamaCaisse.Droid.Resource.Id.main_tablayout;
+			global::SkiaSharp.Views.Forms.Resource.Id.main_toolbar = global::YamaCaisse.Droid.Resource.Id.main_toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Id.main_viewpager = global::YamaCaisse.Droid.Resource.Id.main_viewpager;
+			global::SkiaSharp.Views.Forms.Resource.Id.masked = global::YamaCaisse.Droid.Resource.Id.masked;
+			global::SkiaSharp.Views.Forms.Resource.Id.media_actions = global::YamaCaisse.Droid.Resource.Id.media_actions;
+			global::SkiaSharp.Views.Forms.Resource.Id.message = global::YamaCaisse.Droid.Resource.Id.message;
+			global::SkiaSharp.Views.Forms.Resource.Id.META = global::YamaCaisse.Droid.Resource.Id.META;
+			global::SkiaSharp.Views.Forms.Resource.Id.middle = global::YamaCaisse.Droid.Resource.Id.middle;
+			global::SkiaSharp.Views.Forms.Resource.Id.mini = global::YamaCaisse.Droid.Resource.Id.mini;
+			global::SkiaSharp.Views.Forms.Resource.Id.mtrl_child_content_container = global::YamaCaisse.Droid.Resource.Id.mtrl_child_content_container;
+			global::SkiaSharp.Views.Forms.Resource.Id.mtrl_internal_children_alpha_tag = global::YamaCaisse.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::SkiaSharp.Views.Forms.Resource.Id.multiply = global::YamaCaisse.Droid.Resource.Id.multiply;
+			global::SkiaSharp.Views.Forms.Resource.Id.navigation_header_container = global::YamaCaisse.Droid.Resource.Id.navigation_header_container;
+			global::SkiaSharp.Views.Forms.Resource.Id.never = global::YamaCaisse.Droid.Resource.Id.never;
+			global::SkiaSharp.Views.Forms.Resource.Id.none = global::YamaCaisse.Droid.Resource.Id.none;
+			global::SkiaSharp.Views.Forms.Resource.Id.normal = global::YamaCaisse.Droid.Resource.Id.normal;
+			global::SkiaSharp.Views.Forms.Resource.Id.notification_background = global::YamaCaisse.Droid.Resource.Id.notification_background;
+			global::SkiaSharp.Views.Forms.Resource.Id.notification_main_column = global::YamaCaisse.Droid.Resource.Id.notification_main_column;
+			global::SkiaSharp.Views.Forms.Resource.Id.notification_main_column_container = global::YamaCaisse.Droid.Resource.Id.notification_main_column_container;
+			global::SkiaSharp.Views.Forms.Resource.Id.outline = global::YamaCaisse.Droid.Resource.Id.outline;
+			global::SkiaSharp.Views.Forms.Resource.Id.parallax = global::YamaCaisse.Droid.Resource.Id.parallax;
+			global::SkiaSharp.Views.Forms.Resource.Id.parentPanel = global::YamaCaisse.Droid.Resource.Id.parentPanel;
+			global::SkiaSharp.Views.Forms.Resource.Id.parent_matrix = global::YamaCaisse.Droid.Resource.Id.parent_matrix;
+			global::SkiaSharp.Views.Forms.Resource.Id.pin = global::YamaCaisse.Droid.Resource.Id.pin;
+			global::SkiaSharp.Views.Forms.Resource.Id.progress_circular = global::YamaCaisse.Droid.Resource.Id.progress_circular;
+			global::SkiaSharp.Views.Forms.Resource.Id.progress_horizontal = global::YamaCaisse.Droid.Resource.Id.progress_horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Id.radio = global::YamaCaisse.Droid.Resource.Id.radio;
+			global::SkiaSharp.Views.Forms.Resource.Id.right = global::YamaCaisse.Droid.Resource.Id.right;
+			global::SkiaSharp.Views.Forms.Resource.Id.right_icon = global::YamaCaisse.Droid.Resource.Id.right_icon;
+			global::SkiaSharp.Views.Forms.Resource.Id.right_side = global::YamaCaisse.Droid.Resource.Id.right_side;
+			global::SkiaSharp.Views.Forms.Resource.Id.save_image_matrix = global::YamaCaisse.Droid.Resource.Id.save_image_matrix;
+			global::SkiaSharp.Views.Forms.Resource.Id.save_non_transition_alpha = global::YamaCaisse.Droid.Resource.Id.save_non_transition_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Id.save_scale_type = global::YamaCaisse.Droid.Resource.Id.save_scale_type;
+			global::SkiaSharp.Views.Forms.Resource.Id.screen = global::YamaCaisse.Droid.Resource.Id.screen;
+			global::SkiaSharp.Views.Forms.Resource.Id.scroll = global::YamaCaisse.Droid.Resource.Id.scroll;
+			global::SkiaSharp.Views.Forms.Resource.Id.scrollable = global::YamaCaisse.Droid.Resource.Id.scrollable;
+			global::SkiaSharp.Views.Forms.Resource.Id.scrollIndicatorDown = global::YamaCaisse.Droid.Resource.Id.scrollIndicatorDown;
+			global::SkiaSharp.Views.Forms.Resource.Id.scrollIndicatorUp = global::YamaCaisse.Droid.Resource.Id.scrollIndicatorUp;
+			global::SkiaSharp.Views.Forms.Resource.Id.scrollView = global::YamaCaisse.Droid.Resource.Id.scrollView;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_badge = global::YamaCaisse.Droid.Resource.Id.search_badge;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_bar = global::YamaCaisse.Droid.Resource.Id.search_bar;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_button = global::YamaCaisse.Droid.Resource.Id.search_button;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_close_btn = global::YamaCaisse.Droid.Resource.Id.search_close_btn;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_edit_frame = global::YamaCaisse.Droid.Resource.Id.search_edit_frame;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_go_btn = global::YamaCaisse.Droid.Resource.Id.search_go_btn;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_mag_icon = global::YamaCaisse.Droid.Resource.Id.search_mag_icon;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_plate = global::YamaCaisse.Droid.Resource.Id.search_plate;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_src_text = global::YamaCaisse.Droid.Resource.Id.search_src_text;
+			global::SkiaSharp.Views.Forms.Resource.Id.search_voice_btn = global::YamaCaisse.Droid.Resource.Id.search_voice_btn;
+			global::SkiaSharp.Views.Forms.Resource.Id.selected = global::YamaCaisse.Droid.Resource.Id.selected;
+			global::SkiaSharp.Views.Forms.Resource.Id.select_dialog_listview = global::YamaCaisse.Droid.Resource.Id.select_dialog_listview;
+			global::SkiaSharp.Views.Forms.Resource.Id.shellcontent_appbar = global::YamaCaisse.Droid.Resource.Id.shellcontent_appbar;
+			global::SkiaSharp.Views.Forms.Resource.Id.shellcontent_toolbar = global::YamaCaisse.Droid.Resource.Id.shellcontent_toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Id.SHIFT = global::YamaCaisse.Droid.Resource.Id.SHIFT;
+			global::SkiaSharp.Views.Forms.Resource.Id.shortcut = global::YamaCaisse.Droid.Resource.Id.shortcut;
+			global::SkiaSharp.Views.Forms.Resource.Id.showCustom = global::YamaCaisse.Droid.Resource.Id.showCustom;
+			global::SkiaSharp.Views.Forms.Resource.Id.showHome = global::YamaCaisse.Droid.Resource.Id.showHome;
+			global::SkiaSharp.Views.Forms.Resource.Id.showTitle = global::YamaCaisse.Droid.Resource.Id.showTitle;
+			global::SkiaSharp.Views.Forms.Resource.Id.smallLabel = global::YamaCaisse.Droid.Resource.Id.smallLabel;
+			global::SkiaSharp.Views.Forms.Resource.Id.snackbar_action = global::YamaCaisse.Droid.Resource.Id.snackbar_action;
+			global::SkiaSharp.Views.Forms.Resource.Id.snackbar_text = global::YamaCaisse.Droid.Resource.Id.snackbar_text;
+			global::SkiaSharp.Views.Forms.Resource.Id.snap = global::YamaCaisse.Droid.Resource.Id.snap;
+			global::SkiaSharp.Views.Forms.Resource.Id.snapMargins = global::YamaCaisse.Droid.Resource.Id.snapMargins;
+			global::SkiaSharp.Views.Forms.Resource.Id.spacer = global::YamaCaisse.Droid.Resource.Id.spacer;
+			global::SkiaSharp.Views.Forms.Resource.Id.split_action_bar = global::YamaCaisse.Droid.Resource.Id.split_action_bar;
+			global::SkiaSharp.Views.Forms.Resource.Id.src_atop = global::YamaCaisse.Droid.Resource.Id.src_atop;
+			global::SkiaSharp.Views.Forms.Resource.Id.src_in = global::YamaCaisse.Droid.Resource.Id.src_in;
+			global::SkiaSharp.Views.Forms.Resource.Id.src_over = global::YamaCaisse.Droid.Resource.Id.src_over;
+			global::SkiaSharp.Views.Forms.Resource.Id.start = global::YamaCaisse.Droid.Resource.Id.start;
+			global::SkiaSharp.Views.Forms.Resource.Id.status_bar_latest_event_content = global::YamaCaisse.Droid.Resource.Id.status_bar_latest_event_content;
+			global::SkiaSharp.Views.Forms.Resource.Id.stretch = global::YamaCaisse.Droid.Resource.Id.stretch;
+			global::SkiaSharp.Views.Forms.Resource.Id.submenuarrow = global::YamaCaisse.Droid.Resource.Id.submenuarrow;
+			global::SkiaSharp.Views.Forms.Resource.Id.submit_area = global::YamaCaisse.Droid.Resource.Id.submit_area;
+			global::SkiaSharp.Views.Forms.Resource.Id.SYM = global::YamaCaisse.Droid.Resource.Id.SYM;
+			global::SkiaSharp.Views.Forms.Resource.Id.tabMode = global::YamaCaisse.Droid.Resource.Id.tabMode;
+			global::SkiaSharp.Views.Forms.Resource.Id.tag_transition_group = global::YamaCaisse.Droid.Resource.Id.tag_transition_group;
+			global::SkiaSharp.Views.Forms.Resource.Id.tag_unhandled_key_event_manager = global::YamaCaisse.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::SkiaSharp.Views.Forms.Resource.Id.tag_unhandled_key_listeners = global::YamaCaisse.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::SkiaSharp.Views.Forms.Resource.Id.text = global::YamaCaisse.Droid.Resource.Id.text;
+			global::SkiaSharp.Views.Forms.Resource.Id.text2 = global::YamaCaisse.Droid.Resource.Id.text2;
+			global::SkiaSharp.Views.Forms.Resource.Id.textinput_counter = global::YamaCaisse.Droid.Resource.Id.textinput_counter;
+			global::SkiaSharp.Views.Forms.Resource.Id.textinput_error = global::YamaCaisse.Droid.Resource.Id.textinput_error;
+			global::SkiaSharp.Views.Forms.Resource.Id.textinput_helper_text = global::YamaCaisse.Droid.Resource.Id.textinput_helper_text;
+			global::SkiaSharp.Views.Forms.Resource.Id.textSpacerNoButtons = global::YamaCaisse.Droid.Resource.Id.textSpacerNoButtons;
+			global::SkiaSharp.Views.Forms.Resource.Id.textSpacerNoTitle = global::YamaCaisse.Droid.Resource.Id.textSpacerNoTitle;
+			global::SkiaSharp.Views.Forms.Resource.Id.textStart = global::YamaCaisse.Droid.Resource.Id.textStart;
+			global::SkiaSharp.Views.Forms.Resource.Id.text_input_password_toggle = global::YamaCaisse.Droid.Resource.Id.text_input_password_toggle;
+			global::SkiaSharp.Views.Forms.Resource.Id.time = global::YamaCaisse.Droid.Resource.Id.time;
+			global::SkiaSharp.Views.Forms.Resource.Id.title = global::YamaCaisse.Droid.Resource.Id.title;
+			global::SkiaSharp.Views.Forms.Resource.Id.titleDividerNoCustom = global::YamaCaisse.Droid.Resource.Id.titleDividerNoCustom;
+			global::SkiaSharp.Views.Forms.Resource.Id.title_template = global::YamaCaisse.Droid.Resource.Id.title_template;
+			global::SkiaSharp.Views.Forms.Resource.Id.top = global::YamaCaisse.Droid.Resource.Id.top;
+			global::SkiaSharp.Views.Forms.Resource.Id.topPanel = global::YamaCaisse.Droid.Resource.Id.topPanel;
+			global::SkiaSharp.Views.Forms.Resource.Id.touch_outside = global::YamaCaisse.Droid.Resource.Id.touch_outside;
+			global::SkiaSharp.Views.Forms.Resource.Id.transition_current_scene = global::YamaCaisse.Droid.Resource.Id.transition_current_scene;
+			global::SkiaSharp.Views.Forms.Resource.Id.transition_layout_save = global::YamaCaisse.Droid.Resource.Id.transition_layout_save;
+			global::SkiaSharp.Views.Forms.Resource.Id.transition_position = global::YamaCaisse.Droid.Resource.Id.transition_position;
+			global::SkiaSharp.Views.Forms.Resource.Id.transition_scene_layoutid_cache = global::YamaCaisse.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::SkiaSharp.Views.Forms.Resource.Id.transition_transform = global::YamaCaisse.Droid.Resource.Id.transition_transform;
+			global::SkiaSharp.Views.Forms.Resource.Id.uniform = global::YamaCaisse.Droid.Resource.Id.uniform;
+			global::SkiaSharp.Views.Forms.Resource.Id.unlabeled = global::YamaCaisse.Droid.Resource.Id.unlabeled;
+			global::SkiaSharp.Views.Forms.Resource.Id.up = global::YamaCaisse.Droid.Resource.Id.up;
+			global::SkiaSharp.Views.Forms.Resource.Id.useLogo = global::YamaCaisse.Droid.Resource.Id.useLogo;
+			global::SkiaSharp.Views.Forms.Resource.Id.view_offset_helper = global::YamaCaisse.Droid.Resource.Id.view_offset_helper;
+			global::SkiaSharp.Views.Forms.Resource.Id.visible = global::YamaCaisse.Droid.Resource.Id.visible;
+			global::SkiaSharp.Views.Forms.Resource.Id.withText = global::YamaCaisse.Droid.Resource.Id.withText;
+			global::SkiaSharp.Views.Forms.Resource.Id.wrap_content = global::YamaCaisse.Droid.Resource.Id.wrap_content;
+			global::SkiaSharp.Views.Forms.Resource.Integer.abc_config_activityDefaultDur = global::YamaCaisse.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::SkiaSharp.Views.Forms.Resource.Integer.abc_config_activityShortDur = global::YamaCaisse.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::SkiaSharp.Views.Forms.Resource.Integer.app_bar_elevation_anim_duration = global::YamaCaisse.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::SkiaSharp.Views.Forms.Resource.Integer.bottom_sheet_slide_duration = global::YamaCaisse.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::SkiaSharp.Views.Forms.Resource.Integer.cancel_button_image_alpha = global::YamaCaisse.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Integer.config_tooltipAnimTime = global::YamaCaisse.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::SkiaSharp.Views.Forms.Resource.Integer.design_snackbar_text_max_lines = global::YamaCaisse.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::SkiaSharp.Views.Forms.Resource.Integer.design_tab_indicator_anim_duration_ms = global::YamaCaisse.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::SkiaSharp.Views.Forms.Resource.Integer.hide_password_duration = global::YamaCaisse.Droid.Resource.Integer.hide_password_duration;
+			global::SkiaSharp.Views.Forms.Resource.Integer.mtrl_btn_anim_delay_ms = global::YamaCaisse.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::SkiaSharp.Views.Forms.Resource.Integer.mtrl_btn_anim_duration_ms = global::YamaCaisse.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::SkiaSharp.Views.Forms.Resource.Integer.mtrl_chip_anim_duration = global::YamaCaisse.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::SkiaSharp.Views.Forms.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::YamaCaisse.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::SkiaSharp.Views.Forms.Resource.Integer.show_password_duration = global::YamaCaisse.Droid.Resource.Integer.show_password_duration;
+			global::SkiaSharp.Views.Forms.Resource.Integer.status_bar_notification_info_maxnum = global::YamaCaisse.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::SkiaSharp.Views.Forms.Resource.Interpolator.mtrl_fast_out_linear_in = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::SkiaSharp.Views.Forms.Resource.Interpolator.mtrl_fast_out_slow_in = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::SkiaSharp.Views.Forms.Resource.Interpolator.mtrl_linear = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_linear;
+			global::SkiaSharp.Views.Forms.Resource.Interpolator.mtrl_linear_out_slow_in = global::YamaCaisse.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_action_bar_title_item = global::YamaCaisse.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_action_bar_up_container = global::YamaCaisse.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_action_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_action_menu_layout = global::YamaCaisse.Droid.Resource.Layout.abc_action_menu_layout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_action_mode_bar = global::YamaCaisse.Droid.Resource.Layout.abc_action_mode_bar;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_action_mode_close_item_material = global::YamaCaisse.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_activity_chooser_view = global::YamaCaisse.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_activity_chooser_view_list_item = global::YamaCaisse.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_alert_dialog_button_bar_material = global::YamaCaisse.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_alert_dialog_material = global::YamaCaisse.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_alert_dialog_title_material = global::YamaCaisse.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_cascading_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_dialog_title_material = global::YamaCaisse.Droid.Resource.Layout.abc_dialog_title_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_expanded_menu_layout = global::YamaCaisse.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_list_menu_item_checkbox = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_list_menu_item_icon = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_list_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_list_menu_item_radio = global::YamaCaisse.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_popup_menu_header_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_popup_menu_item_layout = global::YamaCaisse.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_screen_content_include = global::YamaCaisse.Droid.Resource.Layout.abc_screen_content_include;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_screen_simple = global::YamaCaisse.Droid.Resource.Layout.abc_screen_simple;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_screen_simple_overlay_action_mode = global::YamaCaisse.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_screen_toolbar = global::YamaCaisse.Droid.Resource.Layout.abc_screen_toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_search_dropdown_item_icons_2line = global::YamaCaisse.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_search_view = global::YamaCaisse.Droid.Resource.Layout.abc_search_view;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_select_dialog_material = global::YamaCaisse.Droid.Resource.Layout.abc_select_dialog_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.abc_tooltip = global::YamaCaisse.Droid.Resource.Layout.abc_tooltip;
+			global::SkiaSharp.Views.Forms.Resource.Layout.BottomTabLayout = global::YamaCaisse.Droid.Resource.Layout.BottomTabLayout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.browser_actions_context_menu_page = global::YamaCaisse.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::SkiaSharp.Views.Forms.Resource.Layout.browser_actions_context_menu_row = global::YamaCaisse.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_bottom_navigation_item = global::YamaCaisse.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_bottom_sheet_dialog = global::YamaCaisse.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_layout_snackbar = global::YamaCaisse.Droid.Resource.Layout.design_layout_snackbar;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_layout_snackbar_include = global::YamaCaisse.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_layout_tab_icon = global::YamaCaisse.Droid.Resource.Layout.design_layout_tab_icon;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_layout_tab_text = global::YamaCaisse.Droid.Resource.Layout.design_layout_tab_text;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_menu_item_action_area = global::YamaCaisse.Droid.Resource.Layout.design_menu_item_action_area;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_navigation_item = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_navigation_item_header = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item_header;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_navigation_item_separator = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item_separator;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_navigation_item_subheader = global::YamaCaisse.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_navigation_menu = global::YamaCaisse.Droid.Resource.Layout.design_navigation_menu;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_navigation_menu_item = global::YamaCaisse.Droid.Resource.Layout.design_navigation_menu_item;
+			global::SkiaSharp.Views.Forms.Resource.Layout.design_text_input_password_icon = global::YamaCaisse.Droid.Resource.Layout.design_text_input_password_icon;
+			global::SkiaSharp.Views.Forms.Resource.Layout.FlyoutContent = global::YamaCaisse.Droid.Resource.Layout.FlyoutContent;
+			global::SkiaSharp.Views.Forms.Resource.Layout.mtrl_layout_snackbar = global::YamaCaisse.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::SkiaSharp.Views.Forms.Resource.Layout.mtrl_layout_snackbar_include = global::YamaCaisse.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_action = global::YamaCaisse.Droid.Resource.Layout.notification_action;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_action_tombstone = global::YamaCaisse.Droid.Resource.Layout.notification_action_tombstone;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_media_action = global::YamaCaisse.Droid.Resource.Layout.notification_media_action;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_media_cancel_action = global::YamaCaisse.Droid.Resource.Layout.notification_media_cancel_action;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_big_media = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_big_media_custom = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_big_media_narrow = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_big_media_narrow_custom = global::YamaCaisse.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_custom_big = global::YamaCaisse.Droid.Resource.Layout.notification_template_custom_big;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_icon_group = global::YamaCaisse.Droid.Resource.Layout.notification_template_icon_group;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_lines_media = global::YamaCaisse.Droid.Resource.Layout.notification_template_lines_media;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_media = global::YamaCaisse.Droid.Resource.Layout.notification_template_media;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_media_custom = global::YamaCaisse.Droid.Resource.Layout.notification_template_media_custom;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_part_chronometer = global::YamaCaisse.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::SkiaSharp.Views.Forms.Resource.Layout.notification_template_part_time = global::YamaCaisse.Droid.Resource.Layout.notification_template_part_time;
+			global::SkiaSharp.Views.Forms.Resource.Layout.RootLayout = global::YamaCaisse.Droid.Resource.Layout.RootLayout;
+			global::SkiaSharp.Views.Forms.Resource.Layout.select_dialog_item_material = global::YamaCaisse.Droid.Resource.Layout.select_dialog_item_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.select_dialog_multichoice_material = global::YamaCaisse.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.select_dialog_singlechoice_material = global::YamaCaisse.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::SkiaSharp.Views.Forms.Resource.Layout.ShellContent = global::YamaCaisse.Droid.Resource.Layout.ShellContent;
+			global::SkiaSharp.Views.Forms.Resource.Layout.support_simple_spinner_dropdown_item = global::YamaCaisse.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_action_bar_home_description = global::YamaCaisse.Droid.Resource.String.abc_action_bar_home_description;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_action_bar_up_description = global::YamaCaisse.Droid.Resource.String.abc_action_bar_up_description;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_action_menu_overflow_description = global::YamaCaisse.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_action_mode_done = global::YamaCaisse.Droid.Resource.String.abc_action_mode_done;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_activitychooserview_choose_application = global::YamaCaisse.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_activity_chooser_view_see_all = global::YamaCaisse.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_capital_off = global::YamaCaisse.Droid.Resource.String.abc_capital_off;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_capital_on = global::YamaCaisse.Droid.Resource.String.abc_capital_on;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_body_1_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_body_1_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_body_2_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_body_2_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_button_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_button_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_caption_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_caption_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_display_1_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_1_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_display_2_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_2_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_display_3_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_3_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_display_4_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_display_4_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_headline_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_headline_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_menu_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_menu_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_subhead_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_subhead_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_font_family_title_material = global::YamaCaisse.Droid.Resource.String.abc_font_family_title_material;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_alt_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_ctrl_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_delete_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_enter_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_function_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_meta_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_shift_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_space_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_menu_sym_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_prepend_shortcut_label = global::YamaCaisse.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_searchview_description_clear = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_clear;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_searchview_description_query = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_query;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_searchview_description_search = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_search;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_searchview_description_submit = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_submit;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_searchview_description_voice = global::YamaCaisse.Droid.Resource.String.abc_searchview_description_voice;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_search_hint = global::YamaCaisse.Droid.Resource.String.abc_search_hint;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_shareactionprovider_share_with = global::YamaCaisse.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_shareactionprovider_share_with_application = global::YamaCaisse.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::SkiaSharp.Views.Forms.Resource.String.abc_toolbar_collapse_description = global::YamaCaisse.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::SkiaSharp.Views.Forms.Resource.String.appbar_scrolling_view_behavior = global::YamaCaisse.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::SkiaSharp.Views.Forms.Resource.String.bottom_sheet_behavior = global::YamaCaisse.Droid.Resource.String.bottom_sheet_behavior;
+			global::SkiaSharp.Views.Forms.Resource.String.character_counter_content_description = global::YamaCaisse.Droid.Resource.String.character_counter_content_description;
+			global::SkiaSharp.Views.Forms.Resource.String.character_counter_pattern = global::YamaCaisse.Droid.Resource.String.character_counter_pattern;
+			global::SkiaSharp.Views.Forms.Resource.String.fab_transformation_scrim_behavior = global::YamaCaisse.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::SkiaSharp.Views.Forms.Resource.String.fab_transformation_sheet_behavior = global::YamaCaisse.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::SkiaSharp.Views.Forms.Resource.String.hide_bottom_view_on_scroll_behavior = global::YamaCaisse.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::SkiaSharp.Views.Forms.Resource.String.mtrl_chip_close_icon_content_description = global::YamaCaisse.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::SkiaSharp.Views.Forms.Resource.String.password_toggle_content_description = global::YamaCaisse.Droid.Resource.String.password_toggle_content_description;
+			global::SkiaSharp.Views.Forms.Resource.String.path_password_eye = global::YamaCaisse.Droid.Resource.String.path_password_eye;
+			global::SkiaSharp.Views.Forms.Resource.String.path_password_eye_mask_strike_through = global::YamaCaisse.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::SkiaSharp.Views.Forms.Resource.String.path_password_eye_mask_visible = global::YamaCaisse.Droid.Resource.String.path_password_eye_mask_visible;
+			global::SkiaSharp.Views.Forms.Resource.String.path_password_strike_through = global::YamaCaisse.Droid.Resource.String.path_password_strike_through;
+			global::SkiaSharp.Views.Forms.Resource.String.search_menu_title = global::YamaCaisse.Droid.Resource.String.search_menu_title;
+			global::SkiaSharp.Views.Forms.Resource.String.status_bar_notification_info_overflow = global::YamaCaisse.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.AlertDialog_AppCompat = global::YamaCaisse.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.AlertDialog_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Animation_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Animation_AppCompat_DropDownUp = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::SkiaSharp.Views.Forms.Resource.Style.Animation_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::SkiaSharp.Views.Forms.Resource.Style.Animation_Design_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_AlertDialog_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_AlertDialog_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Animation_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Animation_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_CardView = global::YamaCaisse.Droid.Resource.Style.Base_CardView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_DialogWindowTitle_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Large = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Small = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::YamaCaisse.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_Theme_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V21_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V22_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V22_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V23_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V23_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V26_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V26_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V28_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V28_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::YamaCaisse.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActionMode = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Button_Small = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_EditText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ImageButton = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ListView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_RatingBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_SearchView = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_SeekBar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Spinner = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::YamaCaisse.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_Design_TabLayout = global::YamaCaisse.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_MaterialComponents_Chip = global::YamaCaisse.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::YamaCaisse.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::YamaCaisse.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::SkiaSharp.Views.Forms.Resource.Style.CardView = global::YamaCaisse.Droid.Resource.Style.CardView;
+			global::SkiaSharp.Views.Forms.Resource.Style.CardView_Dark = global::YamaCaisse.Droid.Resource.Style.CardView_Dark;
+			global::SkiaSharp.Views.Forms.Resource.Style.CardView_Light = global::YamaCaisse.Droid.Resource.Style.CardView_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.collectionViewStyle = global::YamaCaisse.Droid.Resource.Style.collectionViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::YamaCaisse.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_V21_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_V21_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_V25_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_V25_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Platform_Widget_AppCompat_Spinner = global::YamaCaisse.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::YamaCaisse.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::YamaCaisse.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Body1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Body2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Caption = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Display1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Display2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Display3 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Display4 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Headline = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Large = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Medium = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Menu = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Small = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Subhead = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Info = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Time = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_Counter = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_Counter_Overflow = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_Error = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_HelperText = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_Hint = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_Snackbar_Message = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Design_Tab = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Button = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Caption = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Chip = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Overline = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_MaterialComponents_Tab = global::YamaCaisse.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::YamaCaisse.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_AppCompat = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_AppCompat_Dark = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::YamaCaisse.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DayNight = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_AppCompat_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_Design = global::YamaCaisse.Droid.Resource.Style.Theme_Design;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_Design_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_Design_Light = global::YamaCaisse.Droid.Resource.Style.Theme_Design_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_Design_Light_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_Design_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_CompactMenu = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_NoActionBar = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::YamaCaisse.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActionMode = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ActivityChooserView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Button = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ButtonBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Button_Borderless = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Button_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Button_Small = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_EditText = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ImageButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_SearchView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ListMenuView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ListPopupWindow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ListView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ListView_DropDown = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ListView_Menu = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_PopupMenu = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_PopupWindow = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ProgressBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_RatingBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_RatingBar_Small = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_SearchView = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_SeekBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Spinner = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Toolbar = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::YamaCaisse.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Compat_NotificationActionContainer = global::YamaCaisse.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Compat_NotificationActionText = global::YamaCaisse.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_AppBarLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_BottomNavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_BottomSheet_Modal = global::YamaCaisse.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_CollapsingToolbar = global::YamaCaisse.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_FloatingActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_NavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_Snackbar = global::YamaCaisse.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_TabLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Design_TextInputLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_CardView = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_ChipGroup = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Chip_Action = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_NavigationView = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Snackbar = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TabLayout = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_MaterialComponents_Toolbar = global::YamaCaisse.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Style.Widget_Support_CoordinatorLayout = global::YamaCaisse.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar = global::YamaCaisse.Droid.Resource.Styleable.ActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBarLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionBarLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::YamaCaisse.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_background = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_background;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_backgroundSplit = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_backgroundStacked = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_contentInsetEnd = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_contentInsetLeft = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_contentInsetRight = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_contentInsetStart = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_customNavigationLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_displayOptions = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_divider = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_divider;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_elevation = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_height = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_height;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_hideOnContentScroll = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_homeAsUpIndicator = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_homeLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_icon = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_icon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_itemPadding = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_logo = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_logo;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_navigationMode = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_popupTheme = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_progressBarPadding = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_progressBarStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_subtitle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_subtitleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_title = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_title;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionBar_titleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMenuItemView = global::YamaCaisse.Droid.Resource.Styleable.ActionMenuItemView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMenuItemView_android_minWidth = global::YamaCaisse.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMenuView = global::YamaCaisse.Droid.Resource.Styleable.ActionMenuView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMode = global::YamaCaisse.Droid.Resource.Styleable.ActionMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMode_background = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_background;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMode_backgroundSplit = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMode_closeItemLayout = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMode_height = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_height;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMode_subtitleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActionMode_titleTextStyle = global::YamaCaisse.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActivityChooserView = global::YamaCaisse.Droid.Resource.Styleable.ActivityChooserView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::YamaCaisse.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ActivityChooserView_initialActivityCount = global::YamaCaisse.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_android_layout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_buttonIconDimen = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_listItemLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_listLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_showTitle = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::YamaCaisse.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableCompat = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableItem = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableTransition = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::YamaCaisse.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayoutStates = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayoutStates_state_liftable = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayoutStates_state_lifted = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_android_background = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_elevation = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_expanded = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_Layout = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppBarLayout_liftOnScroll = global::YamaCaisse.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatImageView = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatImageView_android_src = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatImageView_srcCompat = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatImageView_tint = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatImageView_tintMode = global::YamaCaisse.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatSeekBar = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatSeekBar_android_thumb = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatSeekBar_tickMark = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::YamaCaisse.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_fontFamily = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_lineHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTextView_textAllCaps = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarDivider = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarSize = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_buttonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_checkboxStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorAccent = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorControlActivated = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorControlNormal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorError = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorPrimary = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_controlBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_dialogTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_dividerVertical = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_editTextBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_editTextColor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_editTextStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_panelBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_searchViewStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_seekBarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_spinnerStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_switchStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_toolbarStyle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowActionBar = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.AppCompatTheme_windowNoTitle = global::YamaCaisse.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomAppBar = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomAppBar_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomAppBar_fabCradleMargin = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomAppBar_hideOnScroll = global::YamaCaisse.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_elevation = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_itemBackground = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_itemIconSize = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_itemIconTint = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_itemTextColor = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomNavigationView_menu = global::YamaCaisse.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomSheetBehavior_Layout = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::YamaCaisse.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ButtonBarLayout = global::YamaCaisse.Droid.Resource.Styleable.ButtonBarLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ButtonBarLayout_allowStacking = global::YamaCaisse.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView = global::YamaCaisse.Droid.Resource.Styleable.CardView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_android_minHeight = global::YamaCaisse.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_android_minWidth = global::YamaCaisse.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_cardBackgroundColor = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_cardCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_cardElevation = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardElevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_cardMaxElevation = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_cardPreventCornerOverlap = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_cardUseCompatPadding = global::YamaCaisse.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_contentPadding = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_contentPaddingBottom = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_contentPaddingLeft = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_contentPaddingRight = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CardView_contentPaddingTop = global::YamaCaisse.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip = global::YamaCaisse.Droid.Resource.Styleable.Chip;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ChipGroup = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ChipGroup_checkedChip = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ChipGroup_chipSpacing = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ChipGroup_chipSpacingVertical = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ChipGroup_singleLine = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ChipGroup_singleSelection = global::YamaCaisse.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_android_checkable = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_checkable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_android_ellipsize = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_android_text = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_text;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_checkedIcon = global::YamaCaisse.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_checkedIconEnabled = global::YamaCaisse.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_checkedIconVisible = global::YamaCaisse.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipBackgroundColor = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipCornerRadius = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipIcon = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipIconEnabled = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipIconSize = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipIconTint = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipIconVisible = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipMinHeight = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipStrokeColor = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_chipStrokeWidth = global::YamaCaisse.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_closeIcon = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_closeIconEnabled = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_closeIconEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_closeIconSize = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_closeIconStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_closeIconTint = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_closeIconVisible = global::YamaCaisse.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_hideMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_iconEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_iconStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_rippleColor = global::YamaCaisse.Droid.Resource.Styleable.Chip_rippleColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_showMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_textEndPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Chip_textStartPadding = global::YamaCaisse.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_Layout = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_title = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::YamaCaisse.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ColorStateListItem = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ColorStateListItem_alpha = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ColorStateListItem_android_alpha = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ColorStateListItem_android_color = global::YamaCaisse.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CompoundButton = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CompoundButton_android_button = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CompoundButton_buttonTint = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CompoundButton_buttonTintMode = global::YamaCaisse.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_keylines = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::YamaCaisse.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DesignTheme = global::YamaCaisse.Droid.Resource.Styleable.DesignTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::YamaCaisse.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DesignTheme_bottomSheetStyle = global::YamaCaisse.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_barLength = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_color = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_drawableSize = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_spinBars = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.DrawerArrowToggle_thickness = global::YamaCaisse.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_borderWidth = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_elevation = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_fabCustomSize = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_fabSize = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_maxImageSize = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_rippleColor = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_showMotionSpec = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FloatingActionButton_useCompatPadding = global::YamaCaisse.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FlowLayout = global::YamaCaisse.Droid.Resource.Styleable.FlowLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FlowLayout_itemSpacing = global::YamaCaisse.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FlowLayout_lineSpacing = global::YamaCaisse.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamily = global::YamaCaisse.Droid.Resource.Styleable.FontFamily;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_android_font = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_android_fontStyle = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_android_fontWeight = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_font = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_fontStyle = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_fontWeight = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamilyFont_ttcIndex = global::YamaCaisse.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamily_fontProviderAuthority = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamily_fontProviderCerts = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamily_fontProviderPackage = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.FontFamily_fontProviderQuery = global::YamaCaisse.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ForegroundLinearLayout = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::YamaCaisse.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColorItem = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColorItem_android_color = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColorItem_android_offset = global::YamaCaisse.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_centerColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_centerX = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_centerY = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_endColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_endX = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_endY = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_gradientRadius = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_startColor = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_startX = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_startY = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_tileMode = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.GradientColor_android_type = global::YamaCaisse.Droid.Resource.Styleable.GradientColor_android_type;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_android_gravity = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_android_orientation = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_divider = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_Layout = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.LinearLayoutCompat_showDividers = global::YamaCaisse.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ListPopupWindow = global::YamaCaisse.Droid.Resource.Styleable.ListPopupWindow;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::YamaCaisse.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::YamaCaisse.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_android_insetBottom = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_android_insetLeft = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_android_insetRight = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_android_insetTop = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_backgroundTintMode = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_cornerRadius = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_icon = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_icon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_iconGravity = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_iconPadding = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_iconSize = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_iconTint = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_iconTintMode = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_rippleColor = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_strokeColor = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialButton_strokeWidth = global::YamaCaisse.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialCardView = global::YamaCaisse.Droid.Resource.Styleable.MaterialCardView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialCardView_strokeColor = global::YamaCaisse.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialCardView_strokeWidth = global::YamaCaisse.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::YamaCaisse.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuGroup = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuGroup_android_checkableBehavior = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuGroup_android_enabled = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuGroup_android_id = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuGroup_android_menuCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuGroup_android_orderInCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuGroup_android_visible = global::YamaCaisse.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem = global::YamaCaisse.Droid.Resource.Styleable.MenuItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_actionLayout = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_actionProviderClass = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_actionViewClass = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_alphabeticModifiers = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_checkable = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_checked = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_enabled = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_icon = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_id = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_id;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_menuCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_numericShortcut = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_onClick = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_orderInCategory = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_title = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_title;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_titleCondensed = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_android_visible = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_contentDescription = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_iconTint = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_iconTintMode = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_numericModifiers = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_showAsAction = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuItem_tooltipText = global::YamaCaisse.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView = global::YamaCaisse.Droid.Resource.Styleable.MenuView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_android_headerBackground = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_android_horizontalDivider = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_android_itemBackground = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_android_itemTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_android_verticalDivider = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_android_windowAnimationStyle = global::YamaCaisse.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_preserveIconSpacing = global::YamaCaisse.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.MenuView_subMenuArrow = global::YamaCaisse.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView = global::YamaCaisse.Droid.Resource.Styleable.NavigationView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_android_background = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_android_background;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_elevation = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_headerLayout = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_itemBackground = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_itemHorizontalPadding = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_itemIconPadding = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_itemIconTint = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_itemTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_itemTextColor = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.NavigationView_menu = global::YamaCaisse.Droid.Resource.Styleable.NavigationView_menu;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.PopupWindow = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.PopupWindowBackgroundState = global::YamaCaisse.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::YamaCaisse.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.PopupWindow_android_popupBackground = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.PopupWindow_overlapAnchor = global::YamaCaisse.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecycleListView = global::YamaCaisse.Droid.Resource.Styleable.RecycleListView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::YamaCaisse.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::YamaCaisse.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_android_descendantFocusability = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_android_orientation = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_fastScrollEnabled = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_layoutManager = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_reverseLayout = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_spanCount = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.RecyclerView_stackFromEnd = global::YamaCaisse.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ScrimInsetsFrameLayout = global::YamaCaisse.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::YamaCaisse.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ScrollingViewBehavior_Layout = global::YamaCaisse.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::YamaCaisse.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView = global::YamaCaisse.Droid.Resource.Styleable.SearchView;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_android_focusable = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_android_imeOptions = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_android_inputType = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_closeIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_commitIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_defaultQueryHint = global::YamaCaisse.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_goIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_goIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_iconifiedByDefault = global::YamaCaisse.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_layout = global::YamaCaisse.Droid.Resource.Styleable.SearchView_layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_queryBackground = global::YamaCaisse.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_queryHint = global::YamaCaisse.Droid.Resource.Styleable.SearchView_queryHint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_searchHintIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_searchIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_submitBackground = global::YamaCaisse.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_suggestionRowLayout = global::YamaCaisse.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SearchView_voiceIcon = global::YamaCaisse.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Snackbar = global::YamaCaisse.Droid.Resource.Styleable.Snackbar;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SnackbarLayout = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SnackbarLayout_android_maxWidth = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SnackbarLayout_elevation = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::YamaCaisse.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Snackbar_snackbarButtonStyle = global::YamaCaisse.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Snackbar_snackbarStyle = global::YamaCaisse.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Spinner = global::YamaCaisse.Droid.Resource.Styleable.Spinner;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Spinner_android_dropDownWidth = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Spinner_android_entries = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_entries;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Spinner_android_popupBackground = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Spinner_android_prompt = global::YamaCaisse.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Spinner_popupTheme = global::YamaCaisse.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawable = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawableItem = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawableItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawableItem_android_drawable = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawable_android_constantSize = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawable_android_dither = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawable_android_variablePadding = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.StateListDrawable_android_visible = global::YamaCaisse.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_android_textOff = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_android_textOn = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_android_thumb = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_showText = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_splitTrack = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_switchMinWidth = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_switchPadding = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_switchTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_thumbTextPadding = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_thumbTint = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_thumbTintMode = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_track = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_track;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_trackTint = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.SwitchCompat_trackTintMode = global::YamaCaisse.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabItem = global::YamaCaisse.Droid.Resource.Styleable.TabItem;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabItem_android_icon = global::YamaCaisse.Droid.Resource.Styleable.TabItem_android_icon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabItem_android_layout = global::YamaCaisse.Droid.Resource.Styleable.TabItem_android_layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabItem_android_text = global::YamaCaisse.Droid.Resource.Styleable.TabItem_android_text;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout = global::YamaCaisse.Droid.Resource.Styleable.TabLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabBackground = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabContentStart = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabGravity = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIconTint = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIconTintMode = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIndicator = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIndicatorColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIndicatorGravity = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabIndicatorHeight = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabInlineLabel = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabMaxWidth = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabMinWidth = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabMode = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabPadding = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabPaddingBottom = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabPaddingEnd = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabPaddingStart = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabPaddingTop = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabRippleColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabSelectedTextColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabTextColor = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TabLayout_tabUnboundedRipple = global::YamaCaisse.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_fontFamily = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_shadowColor = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_shadowDx = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_shadowDy = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_shadowRadius = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_textColor = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_textColorHint = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_textColorLink = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_textSize = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_textStyle = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_android_typeface = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_fontFamily = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextAppearance_textAllCaps = global::YamaCaisse.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_android_hint = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_android_textColorHint = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxStrokeColor = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_counterEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_counterMaxLength = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_counterTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_errorEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_errorTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_helperText = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_helperTextEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_hintEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_hintTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_passwordToggleTint = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::YamaCaisse.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ThemeEnforcement = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar = global::YamaCaisse.Droid.Resource.Styleable.Toolbar;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_android_gravity = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_android_minHeight = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_buttonGravity = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_collapseContentDescription = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_collapseIcon = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_contentInsetEnd = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_contentInsetLeft = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_contentInsetRight = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_contentInsetStart = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_logo = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_logo;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_logoDescription = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_maxButtonHeight = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_navigationContentDescription = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_navigationIcon = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_popupTheme = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_subtitle = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_subtitleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_subtitleTextColor = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_title = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_title;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleMargin = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleMarginBottom = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleMarginEnd = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleMargins = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleMarginStart = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleMarginTop = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleTextAppearance = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.Toolbar_titleTextColor = global::YamaCaisse.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.View = global::YamaCaisse.Droid.Resource.Styleable.View;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewBackgroundHelper = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewBackgroundHelper_android_background = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::YamaCaisse.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewStubCompat = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewStubCompat_android_id = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewStubCompat_android_inflatedId = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.ViewStubCompat_android_layout = global::YamaCaisse.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.View_android_focusable = global::YamaCaisse.Droid.Resource.Styleable.View_android_focusable;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.View_android_theme = global::YamaCaisse.Droid.Resource.Styleable.View_android_theme;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.View_paddingEnd = global::YamaCaisse.Droid.Resource.Styleable.View_paddingEnd;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.View_paddingStart = global::YamaCaisse.Droid.Resource.Styleable.View_paddingStart;
+			global::SkiaSharp.Views.Forms.Resource.Styleable.View_theme = global::YamaCaisse.Droid.Resource.Styleable.View_theme;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::YamaCaisse.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::YamaCaisse.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::YamaCaisse.Droid.Resource.Attribute.font;
@@ -1709,6 +6859,7 @@ namespace YamaCaisse.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Animation_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.AppCompatDialogStyle = global::YamaCaisse.Droid.Resource.Style.AppCompatDialogStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_AlertDialog_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -1901,7 +7052,8 @@ namespace YamaCaisse.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.CardView_Dark = global::YamaCaisse.Droid.Resource.Style.CardView_Dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.CardView_Light = global::YamaCaisse.Droid.Resource.Style.CardView_Light;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.collectionViewStyle = global::YamaCaisse.Droid.Resource.Style.collectionViewStyle;
-			global::Xamarin.Forms.Platform.Android.Resource.Style.NestedScrollBarStyle = global::YamaCaisse.Droid.Resource.Style.NestedScrollBarStyle;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.MainTheme = global::YamaCaisse.Droid.Resource.Style.MainTheme;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.MainTheme_Base = global::YamaCaisse.Droid.Resource.Style.MainTheme_Base;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Platform_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Platform_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Platform_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents;
@@ -4272,6 +9424,7 @@ namespace YamaCaisse.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Animation_AppCompat_DropDownUp = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
 			global::Xamarin.Forms.Platform.Resource.Style.Animation_AppCompat_Tooltip = global::YamaCaisse.Droid.Resource.Style.Animation_AppCompat_Tooltip;
 			global::Xamarin.Forms.Platform.Resource.Style.Animation_Design_BottomSheetDialog = global::YamaCaisse.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Xamarin.Forms.Platform.Resource.Style.AppCompatDialogStyle = global::YamaCaisse.Droid.Resource.Style.AppCompatDialogStyle;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_AlertDialog_AppCompat = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_AlertDialog_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Animation_AppCompat_Dialog = global::YamaCaisse.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -4464,7 +9617,8 @@ namespace YamaCaisse.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.CardView_Dark = global::YamaCaisse.Droid.Resource.Style.CardView_Dark;
 			global::Xamarin.Forms.Platform.Resource.Style.CardView_Light = global::YamaCaisse.Droid.Resource.Style.CardView_Light;
 			global::Xamarin.Forms.Platform.Resource.Style.collectionViewStyle = global::YamaCaisse.Droid.Resource.Style.collectionViewStyle;
-			global::Xamarin.Forms.Platform.Resource.Style.NestedScrollBarStyle = global::YamaCaisse.Droid.Resource.Style.NestedScrollBarStyle;
+			global::Xamarin.Forms.Platform.Resource.Style.MainTheme = global::YamaCaisse.Droid.Resource.Style.MainTheme;
+			global::Xamarin.Forms.Platform.Resource.Style.MainTheme_Base = global::YamaCaisse.Droid.Resource.Style.MainTheme_Base;
 			global::Xamarin.Forms.Platform.Resource.Style.Platform_AppCompat = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat;
 			global::Xamarin.Forms.Platform.Resource.Style.Platform_AppCompat_Light = global::YamaCaisse.Droid.Resource.Style.Platform_AppCompat_Light;
 			global::Xamarin.Forms.Platform.Resource.Style.Platform_MaterialComponents = global::YamaCaisse.Droid.Resource.Style.Platform_MaterialComponents;
@@ -11483,8 +16637,8 @@ namespace YamaCaisse.Droid
 			// aapt resource value: 0x7F0E00C5
 			public const int CardView_Light = 2131624133;
 			
-			// aapt resource value: 0x7F0E0203
-			public const int collectionViewStyle = 2131624451;
+			// aapt resource value: 0x7F0E0202
+			public const int collectionViewStyle = 2131624450;
 			
 			// aapt resource value: 0x7F0E00C6
 			public const int MainTheme = 2131624134;
@@ -11493,949 +16647,946 @@ namespace YamaCaisse.Droid
 			public const int MainTheme_Base = 2131624135;
 			
 			// aapt resource value: 0x7F0E00C8
-			public const int NestedScrollBarStyle = 2131624136;
+			public const int Platform_AppCompat = 2131624136;
 			
 			// aapt resource value: 0x7F0E00C9
-			public const int Platform_AppCompat = 2131624137;
+			public const int Platform_AppCompat_Light = 2131624137;
 			
 			// aapt resource value: 0x7F0E00CA
-			public const int Platform_AppCompat_Light = 2131624138;
+			public const int Platform_MaterialComponents = 2131624138;
 			
 			// aapt resource value: 0x7F0E00CB
-			public const int Platform_MaterialComponents = 2131624139;
+			public const int Platform_MaterialComponents_Dialog = 2131624139;
 			
 			// aapt resource value: 0x7F0E00CC
-			public const int Platform_MaterialComponents_Dialog = 2131624140;
+			public const int Platform_MaterialComponents_Light = 2131624140;
 			
 			// aapt resource value: 0x7F0E00CD
-			public const int Platform_MaterialComponents_Light = 2131624141;
+			public const int Platform_MaterialComponents_Light_Dialog = 2131624141;
 			
 			// aapt resource value: 0x7F0E00CE
-			public const int Platform_MaterialComponents_Light_Dialog = 2131624142;
+			public const int Platform_ThemeOverlay_AppCompat = 2131624142;
 			
 			// aapt resource value: 0x7F0E00CF
-			public const int Platform_ThemeOverlay_AppCompat = 2131624143;
+			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131624143;
 			
 			// aapt resource value: 0x7F0E00D0
-			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131624144;
+			public const int Platform_ThemeOverlay_AppCompat_Light = 2131624144;
 			
 			// aapt resource value: 0x7F0E00D1
-			public const int Platform_ThemeOverlay_AppCompat_Light = 2131624145;
+			public const int Platform_V21_AppCompat = 2131624145;
 			
 			// aapt resource value: 0x7F0E00D2
-			public const int Platform_V21_AppCompat = 2131624146;
+			public const int Platform_V21_AppCompat_Light = 2131624146;
 			
 			// aapt resource value: 0x7F0E00D3
-			public const int Platform_V21_AppCompat_Light = 2131624147;
+			public const int Platform_V25_AppCompat = 2131624147;
 			
 			// aapt resource value: 0x7F0E00D4
-			public const int Platform_V25_AppCompat = 2131624148;
+			public const int Platform_V25_AppCompat_Light = 2131624148;
 			
 			// aapt resource value: 0x7F0E00D5
-			public const int Platform_V25_AppCompat_Light = 2131624149;
+			public const int Platform_Widget_AppCompat_Spinner = 2131624149;
 			
 			// aapt resource value: 0x7F0E00D6
-			public const int Platform_Widget_AppCompat_Spinner = 2131624150;
+			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131624150;
 			
 			// aapt resource value: 0x7F0E00D7
-			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131624151;
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131624151;
 			
 			// aapt resource value: 0x7F0E00D8
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131624152;
+			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131624152;
 			
 			// aapt resource value: 0x7F0E00D9
-			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131624153;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131624153;
 			
 			// aapt resource value: 0x7F0E00DA
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131624154;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131624154;
 			
 			// aapt resource value: 0x7F0E00DB
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131624155;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131624155;
 			
 			// aapt resource value: 0x7F0E00DC
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = 2131624156;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131624156;
 			
 			// aapt resource value: 0x7F0E00DD
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = 2131624157;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131624157;
 			
 			// aapt resource value: 0x7F0E00DE
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131624158;
-			
-			// aapt resource value: 0x7F0E00DF
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131624159;
-			
-			// aapt resource value: 0x7F0E00E5
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131624165;
-			
-			// aapt resource value: 0x7F0E00E0
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131624160;
-			
-			// aapt resource value: 0x7F0E00E1
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131624161;
-			
-			// aapt resource value: 0x7F0E00E2
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131624162;
-			
-			// aapt resource value: 0x7F0E00E3
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131624163;
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = 2131624158;
 			
 			// aapt resource value: 0x7F0E00E4
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131624164;
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131624164;
+			
+			// aapt resource value: 0x7F0E00DF
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131624159;
+			
+			// aapt resource value: 0x7F0E00E0
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131624160;
+			
+			// aapt resource value: 0x7F0E00E1
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131624161;
+			
+			// aapt resource value: 0x7F0E00E2
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131624162;
+			
+			// aapt resource value: 0x7F0E00E3
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131624163;
+			
+			// aapt resource value: 0x7F0E00E5
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131624165;
 			
 			// aapt resource value: 0x7F0E00E6
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131624166;
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131624166;
 			
 			// aapt resource value: 0x7F0E00E7
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131624167;
+			public const int TextAppearance_AppCompat = 2131624167;
 			
 			// aapt resource value: 0x7F0E00E8
-			public const int TextAppearance_AppCompat = 2131624168;
+			public const int TextAppearance_AppCompat_Body1 = 2131624168;
 			
 			// aapt resource value: 0x7F0E00E9
-			public const int TextAppearance_AppCompat_Body1 = 2131624169;
+			public const int TextAppearance_AppCompat_Body2 = 2131624169;
 			
 			// aapt resource value: 0x7F0E00EA
-			public const int TextAppearance_AppCompat_Body2 = 2131624170;
+			public const int TextAppearance_AppCompat_Button = 2131624170;
 			
 			// aapt resource value: 0x7F0E00EB
-			public const int TextAppearance_AppCompat_Button = 2131624171;
+			public const int TextAppearance_AppCompat_Caption = 2131624171;
 			
 			// aapt resource value: 0x7F0E00EC
-			public const int TextAppearance_AppCompat_Caption = 2131624172;
+			public const int TextAppearance_AppCompat_Display1 = 2131624172;
 			
 			// aapt resource value: 0x7F0E00ED
-			public const int TextAppearance_AppCompat_Display1 = 2131624173;
+			public const int TextAppearance_AppCompat_Display2 = 2131624173;
 			
 			// aapt resource value: 0x7F0E00EE
-			public const int TextAppearance_AppCompat_Display2 = 2131624174;
+			public const int TextAppearance_AppCompat_Display3 = 2131624174;
 			
 			// aapt resource value: 0x7F0E00EF
-			public const int TextAppearance_AppCompat_Display3 = 2131624175;
+			public const int TextAppearance_AppCompat_Display4 = 2131624175;
 			
 			// aapt resource value: 0x7F0E00F0
-			public const int TextAppearance_AppCompat_Display4 = 2131624176;
+			public const int TextAppearance_AppCompat_Headline = 2131624176;
 			
 			// aapt resource value: 0x7F0E00F1
-			public const int TextAppearance_AppCompat_Headline = 2131624177;
+			public const int TextAppearance_AppCompat_Inverse = 2131624177;
 			
 			// aapt resource value: 0x7F0E00F2
-			public const int TextAppearance_AppCompat_Inverse = 2131624178;
+			public const int TextAppearance_AppCompat_Large = 2131624178;
 			
 			// aapt resource value: 0x7F0E00F3
-			public const int TextAppearance_AppCompat_Large = 2131624179;
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131624179;
 			
 			// aapt resource value: 0x7F0E00F4
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131624180;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131624180;
 			
 			// aapt resource value: 0x7F0E00F5
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131624181;
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131624181;
 			
 			// aapt resource value: 0x7F0E00F6
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131624182;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131624182;
 			
 			// aapt resource value: 0x7F0E00F7
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131624183;
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131624183;
 			
 			// aapt resource value: 0x7F0E00F8
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131624184;
+			public const int TextAppearance_AppCompat_Medium = 2131624184;
 			
 			// aapt resource value: 0x7F0E00F9
-			public const int TextAppearance_AppCompat_Medium = 2131624185;
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131624185;
 			
 			// aapt resource value: 0x7F0E00FA
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131624186;
+			public const int TextAppearance_AppCompat_Menu = 2131624186;
 			
 			// aapt resource value: 0x7F0E00FB
-			public const int TextAppearance_AppCompat_Menu = 2131624187;
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131624187;
 			
 			// aapt resource value: 0x7F0E00FC
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131624188;
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131624188;
 			
 			// aapt resource value: 0x7F0E00FD
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131624189;
+			public const int TextAppearance_AppCompat_Small = 2131624189;
 			
 			// aapt resource value: 0x7F0E00FE
-			public const int TextAppearance_AppCompat_Small = 2131624190;
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131624190;
 			
 			// aapt resource value: 0x7F0E00FF
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131624191;
+			public const int TextAppearance_AppCompat_Subhead = 2131624191;
 			
 			// aapt resource value: 0x7F0E0100
-			public const int TextAppearance_AppCompat_Subhead = 2131624192;
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131624192;
 			
 			// aapt resource value: 0x7F0E0101
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131624193;
+			public const int TextAppearance_AppCompat_Title = 2131624193;
 			
 			// aapt resource value: 0x7F0E0102
-			public const int TextAppearance_AppCompat_Title = 2131624194;
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131624194;
 			
 			// aapt resource value: 0x7F0E0103
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131624195;
+			public const int TextAppearance_AppCompat_Tooltip = 2131624195;
 			
 			// aapt resource value: 0x7F0E0104
-			public const int TextAppearance_AppCompat_Tooltip = 2131624196;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131624196;
 			
 			// aapt resource value: 0x7F0E0105
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131624197;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131624197;
 			
 			// aapt resource value: 0x7F0E0106
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131624198;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131624198;
 			
 			// aapt resource value: 0x7F0E0107
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131624199;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131624199;
 			
 			// aapt resource value: 0x7F0E0108
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131624200;
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131624200;
 			
 			// aapt resource value: 0x7F0E0109
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131624201;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131624201;
 			
 			// aapt resource value: 0x7F0E010A
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131624202;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131624202;
 			
 			// aapt resource value: 0x7F0E010B
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131624203;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131624203;
 			
 			// aapt resource value: 0x7F0E010C
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131624204;
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131624204;
 			
 			// aapt resource value: 0x7F0E010D
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131624205;
+			public const int TextAppearance_AppCompat_Widget_Button = 2131624205;
 			
 			// aapt resource value: 0x7F0E010E
-			public const int TextAppearance_AppCompat_Widget_Button = 2131624206;
+			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131624206;
 			
 			// aapt resource value: 0x7F0E010F
-			public const int TextAppearance_AppCompat_Widget_Button_Borderless_Colored = 2131624207;
+			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131624207;
 			
 			// aapt resource value: 0x7F0E0110
-			public const int TextAppearance_AppCompat_Widget_Button_Colored = 2131624208;
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131624208;
 			
 			// aapt resource value: 0x7F0E0111
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131624209;
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131624209;
 			
 			// aapt resource value: 0x7F0E0112
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131624210;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131624210;
 			
 			// aapt resource value: 0x7F0E0113
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Header = 2131624211;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131624211;
 			
 			// aapt resource value: 0x7F0E0114
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131624212;
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131624212;
 			
 			// aapt resource value: 0x7F0E0115
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131624213;
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131624213;
 			
 			// aapt resource value: 0x7F0E0116
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131624214;
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131624214;
 			
 			// aapt resource value: 0x7F0E0117
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131624215;
+			public const int TextAppearance_Compat_Notification = 2131624215;
 			
 			// aapt resource value: 0x7F0E0118
-			public const int TextAppearance_Compat_Notification = 2131624216;
+			public const int TextAppearance_Compat_Notification_Info = 2131624216;
 			
 			// aapt resource value: 0x7F0E0119
-			public const int TextAppearance_Compat_Notification_Info = 2131624217;
+			public const int TextAppearance_Compat_Notification_Info_Media = 2131624217;
 			
 			// aapt resource value: 0x7F0E011A
-			public const int TextAppearance_Compat_Notification_Info_Media = 2131624218;
+			public const int TextAppearance_Compat_Notification_Line2 = 2131624218;
 			
 			// aapt resource value: 0x7F0E011B
-			public const int TextAppearance_Compat_Notification_Line2 = 2131624219;
+			public const int TextAppearance_Compat_Notification_Line2_Media = 2131624219;
 			
 			// aapt resource value: 0x7F0E011C
-			public const int TextAppearance_Compat_Notification_Line2_Media = 2131624220;
+			public const int TextAppearance_Compat_Notification_Media = 2131624220;
 			
 			// aapt resource value: 0x7F0E011D
-			public const int TextAppearance_Compat_Notification_Media = 2131624221;
+			public const int TextAppearance_Compat_Notification_Time = 2131624221;
 			
 			// aapt resource value: 0x7F0E011E
-			public const int TextAppearance_Compat_Notification_Time = 2131624222;
+			public const int TextAppearance_Compat_Notification_Time_Media = 2131624222;
 			
 			// aapt resource value: 0x7F0E011F
-			public const int TextAppearance_Compat_Notification_Time_Media = 2131624223;
+			public const int TextAppearance_Compat_Notification_Title = 2131624223;
 			
 			// aapt resource value: 0x7F0E0120
-			public const int TextAppearance_Compat_Notification_Title = 2131624224;
+			public const int TextAppearance_Compat_Notification_Title_Media = 2131624224;
 			
 			// aapt resource value: 0x7F0E0121
-			public const int TextAppearance_Compat_Notification_Title_Media = 2131624225;
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131624225;
 			
 			// aapt resource value: 0x7F0E0122
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131624226;
+			public const int TextAppearance_Design_Counter = 2131624226;
 			
 			// aapt resource value: 0x7F0E0123
-			public const int TextAppearance_Design_Counter = 2131624227;
+			public const int TextAppearance_Design_Counter_Overflow = 2131624227;
 			
 			// aapt resource value: 0x7F0E0124
-			public const int TextAppearance_Design_Counter_Overflow = 2131624228;
+			public const int TextAppearance_Design_Error = 2131624228;
 			
 			// aapt resource value: 0x7F0E0125
-			public const int TextAppearance_Design_Error = 2131624229;
+			public const int TextAppearance_Design_HelperText = 2131624229;
 			
 			// aapt resource value: 0x7F0E0126
-			public const int TextAppearance_Design_HelperText = 2131624230;
+			public const int TextAppearance_Design_Hint = 2131624230;
 			
 			// aapt resource value: 0x7F0E0127
-			public const int TextAppearance_Design_Hint = 2131624231;
+			public const int TextAppearance_Design_Snackbar_Message = 2131624231;
 			
 			// aapt resource value: 0x7F0E0128
-			public const int TextAppearance_Design_Snackbar_Message = 2131624232;
+			public const int TextAppearance_Design_Tab = 2131624232;
 			
 			// aapt resource value: 0x7F0E0129
-			public const int TextAppearance_Design_Tab = 2131624233;
+			public const int TextAppearance_MaterialComponents_Body1 = 2131624233;
 			
 			// aapt resource value: 0x7F0E012A
-			public const int TextAppearance_MaterialComponents_Body1 = 2131624234;
+			public const int TextAppearance_MaterialComponents_Body2 = 2131624234;
 			
 			// aapt resource value: 0x7F0E012B
-			public const int TextAppearance_MaterialComponents_Body2 = 2131624235;
+			public const int TextAppearance_MaterialComponents_Button = 2131624235;
 			
 			// aapt resource value: 0x7F0E012C
-			public const int TextAppearance_MaterialComponents_Button = 2131624236;
+			public const int TextAppearance_MaterialComponents_Caption = 2131624236;
 			
 			// aapt resource value: 0x7F0E012D
-			public const int TextAppearance_MaterialComponents_Caption = 2131624237;
+			public const int TextAppearance_MaterialComponents_Chip = 2131624237;
 			
 			// aapt resource value: 0x7F0E012E
-			public const int TextAppearance_MaterialComponents_Chip = 2131624238;
+			public const int TextAppearance_MaterialComponents_Headline1 = 2131624238;
 			
 			// aapt resource value: 0x7F0E012F
-			public const int TextAppearance_MaterialComponents_Headline1 = 2131624239;
+			public const int TextAppearance_MaterialComponents_Headline2 = 2131624239;
 			
 			// aapt resource value: 0x7F0E0130
-			public const int TextAppearance_MaterialComponents_Headline2 = 2131624240;
+			public const int TextAppearance_MaterialComponents_Headline3 = 2131624240;
 			
 			// aapt resource value: 0x7F0E0131
-			public const int TextAppearance_MaterialComponents_Headline3 = 2131624241;
+			public const int TextAppearance_MaterialComponents_Headline4 = 2131624241;
 			
 			// aapt resource value: 0x7F0E0132
-			public const int TextAppearance_MaterialComponents_Headline4 = 2131624242;
+			public const int TextAppearance_MaterialComponents_Headline5 = 2131624242;
 			
 			// aapt resource value: 0x7F0E0133
-			public const int TextAppearance_MaterialComponents_Headline5 = 2131624243;
+			public const int TextAppearance_MaterialComponents_Headline6 = 2131624243;
 			
 			// aapt resource value: 0x7F0E0134
-			public const int TextAppearance_MaterialComponents_Headline6 = 2131624244;
+			public const int TextAppearance_MaterialComponents_Overline = 2131624244;
 			
 			// aapt resource value: 0x7F0E0135
-			public const int TextAppearance_MaterialComponents_Overline = 2131624245;
+			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131624245;
 			
 			// aapt resource value: 0x7F0E0136
-			public const int TextAppearance_MaterialComponents_Subtitle1 = 2131624246;
+			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131624246;
 			
 			// aapt resource value: 0x7F0E0137
-			public const int TextAppearance_MaterialComponents_Subtitle2 = 2131624247;
+			public const int TextAppearance_MaterialComponents_Tab = 2131624247;
 			
 			// aapt resource value: 0x7F0E0138
-			public const int TextAppearance_MaterialComponents_Tab = 2131624248;
+			public const int TextAppearance_MediaRouter_PrimaryText = 2131624248;
 			
 			// aapt resource value: 0x7F0E0139
-			public const int TextAppearance_MediaRouter_PrimaryText = 2131624249;
+			public const int TextAppearance_MediaRouter_SecondaryText = 2131624249;
 			
 			// aapt resource value: 0x7F0E013A
-			public const int TextAppearance_MediaRouter_SecondaryText = 2131624250;
+			public const int TextAppearance_MediaRouter_Title = 2131624250;
 			
 			// aapt resource value: 0x7F0E013B
-			public const int TextAppearance_MediaRouter_Title = 2131624251;
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131624251;
 			
 			// aapt resource value: 0x7F0E013C
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131624252;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131624252;
 			
 			// aapt resource value: 0x7F0E013D
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131624253;
-			
-			// aapt resource value: 0x7F0E013E
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131624254;
-			
-			// aapt resource value: 0x7F0E0173
-			public const int ThemeOverlay_AppCompat = 2131624307;
-			
-			// aapt resource value: 0x7F0E0174
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131624308;
-			
-			// aapt resource value: 0x7F0E0175
-			public const int ThemeOverlay_AppCompat_Dark = 2131624309;
-			
-			// aapt resource value: 0x7F0E0176
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131624310;
-			
-			// aapt resource value: 0x7F0E0177
-			public const int ThemeOverlay_AppCompat_Dialog = 2131624311;
-			
-			// aapt resource value: 0x7F0E0178
-			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131624312;
-			
-			// aapt resource value: 0x7F0E0179
-			public const int ThemeOverlay_AppCompat_Light = 2131624313;
-			
-			// aapt resource value: 0x7F0E017A
-			public const int ThemeOverlay_MaterialComponents = 2131624314;
-			
-			// aapt resource value: 0x7F0E017B
-			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131624315;
-			
-			// aapt resource value: 0x7F0E017C
-			public const int ThemeOverlay_MaterialComponents_Dark = 2131624316;
-			
-			// aapt resource value: 0x7F0E017D
-			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131624317;
-			
-			// aapt resource value: 0x7F0E017E
-			public const int ThemeOverlay_MaterialComponents_Dialog = 2131624318;
-			
-			// aapt resource value: 0x7F0E017F
-			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131624319;
-			
-			// aapt resource value: 0x7F0E0180
-			public const int ThemeOverlay_MaterialComponents_Light = 2131624320;
-			
-			// aapt resource value: 0x7F0E0181
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131624321;
-			
-			// aapt resource value: 0x7F0E0182
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131624322;
-			
-			// aapt resource value: 0x7F0E0183
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131624323;
-			
-			// aapt resource value: 0x7F0E0184
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131624324;
-			
-			// aapt resource value: 0x7F0E0185
-			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131624325;
-			
-			// aapt resource value: 0x7F0E0186
-			public const int ThemeOverlay_MediaRouter_Dark = 2131624326;
-			
-			// aapt resource value: 0x7F0E0187
-			public const int ThemeOverlay_MediaRouter_Light = 2131624327;
-			
-			// aapt resource value: 0x7F0E013F
-			public const int Theme_AppCompat = 2131624255;
-			
-			// aapt resource value: 0x7F0E0140
-			public const int Theme_AppCompat_CompactMenu = 2131624256;
-			
-			// aapt resource value: 0x7F0E0141
-			public const int Theme_AppCompat_DayNight = 2131624257;
-			
-			// aapt resource value: 0x7F0E0142
-			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131624258;
-			
-			// aapt resource value: 0x7F0E0143
-			public const int Theme_AppCompat_DayNight_Dialog = 2131624259;
-			
-			// aapt resource value: 0x7F0E0146
-			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131624262;
-			
-			// aapt resource value: 0x7F0E0144
-			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131624260;
-			
-			// aapt resource value: 0x7F0E0145
-			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131624261;
-			
-			// aapt resource value: 0x7F0E0147
-			public const int Theme_AppCompat_DayNight_NoActionBar = 2131624263;
-			
-			// aapt resource value: 0x7F0E0148
-			public const int Theme_AppCompat_Dialog = 2131624264;
-			
-			// aapt resource value: 0x7F0E014B
-			public const int Theme_AppCompat_DialogWhenLarge = 2131624267;
-			
-			// aapt resource value: 0x7F0E0149
-			public const int Theme_AppCompat_Dialog_Alert = 2131624265;
-			
-			// aapt resource value: 0x7F0E014A
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131624266;
-			
-			// aapt resource value: 0x7F0E014C
-			public const int Theme_AppCompat_Light = 2131624268;
-			
-			// aapt resource value: 0x7F0E014D
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131624269;
-			
-			// aapt resource value: 0x7F0E014E
-			public const int Theme_AppCompat_Light_Dialog = 2131624270;
-			
-			// aapt resource value: 0x7F0E0151
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131624273;
-			
-			// aapt resource value: 0x7F0E014F
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131624271;
-			
-			// aapt resource value: 0x7F0E0150
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131624272;
-			
-			// aapt resource value: 0x7F0E0152
-			public const int Theme_AppCompat_Light_NoActionBar = 2131624274;
-			
-			// aapt resource value: 0x7F0E0153
-			public const int Theme_AppCompat_NoActionBar = 2131624275;
-			
-			// aapt resource value: 0x7F0E0154
-			public const int Theme_Design = 2131624276;
-			
-			// aapt resource value: 0x7F0E0155
-			public const int Theme_Design_BottomSheetDialog = 2131624277;
-			
-			// aapt resource value: 0x7F0E0156
-			public const int Theme_Design_Light = 2131624278;
-			
-			// aapt resource value: 0x7F0E0157
-			public const int Theme_Design_Light_BottomSheetDialog = 2131624279;
-			
-			// aapt resource value: 0x7F0E0158
-			public const int Theme_Design_Light_NoActionBar = 2131624280;
-			
-			// aapt resource value: 0x7F0E0159
-			public const int Theme_Design_NoActionBar = 2131624281;
-			
-			// aapt resource value: 0x7F0E015A
-			public const int Theme_MaterialComponents = 2131624282;
-			
-			// aapt resource value: 0x7F0E015B
-			public const int Theme_MaterialComponents_BottomSheetDialog = 2131624283;
-			
-			// aapt resource value: 0x7F0E015C
-			public const int Theme_MaterialComponents_Bridge = 2131624284;
-			
-			// aapt resource value: 0x7F0E015D
-			public const int Theme_MaterialComponents_CompactMenu = 2131624285;
-			
-			// aapt resource value: 0x7F0E015E
-			public const int Theme_MaterialComponents_Dialog = 2131624286;
-			
-			// aapt resource value: 0x7F0E0161
-			public const int Theme_MaterialComponents_DialogWhenLarge = 2131624289;
-			
-			// aapt resource value: 0x7F0E015F
-			public const int Theme_MaterialComponents_Dialog_Alert = 2131624287;
-			
-			// aapt resource value: 0x7F0E0160
-			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131624288;
-			
-			// aapt resource value: 0x7F0E0162
-			public const int Theme_MaterialComponents_Light = 2131624290;
-			
-			// aapt resource value: 0x7F0E0163
-			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131624291;
-			
-			// aapt resource value: 0x7F0E0164
-			public const int Theme_MaterialComponents_Light_Bridge = 2131624292;
-			
-			// aapt resource value: 0x7F0E0165
-			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131624293;
-			
-			// aapt resource value: 0x7F0E0166
-			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131624294;
-			
-			// aapt resource value: 0x7F0E0167
-			public const int Theme_MaterialComponents_Light_Dialog = 2131624295;
-			
-			// aapt resource value: 0x7F0E016A
-			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131624298;
-			
-			// aapt resource value: 0x7F0E0168
-			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131624296;
-			
-			// aapt resource value: 0x7F0E0169
-			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131624297;
-			
-			// aapt resource value: 0x7F0E016B
-			public const int Theme_MaterialComponents_Light_NoActionBar = 2131624299;
-			
-			// aapt resource value: 0x7F0E016C
-			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131624300;
-			
-			// aapt resource value: 0x7F0E016D
-			public const int Theme_MaterialComponents_NoActionBar = 2131624301;
-			
-			// aapt resource value: 0x7F0E016E
-			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131624302;
-			
-			// aapt resource value: 0x7F0E016F
-			public const int Theme_MediaRouter = 2131624303;
-			
-			// aapt resource value: 0x7F0E0170
-			public const int Theme_MediaRouter_Light = 2131624304;
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131624253;
 			
 			// aapt resource value: 0x7F0E0172
-			public const int Theme_MediaRouter_LightControlPanel = 2131624306;
+			public const int ThemeOverlay_AppCompat = 2131624306;
+			
+			// aapt resource value: 0x7F0E0173
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131624307;
+			
+			// aapt resource value: 0x7F0E0174
+			public const int ThemeOverlay_AppCompat_Dark = 2131624308;
+			
+			// aapt resource value: 0x7F0E0175
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131624309;
+			
+			// aapt resource value: 0x7F0E0176
+			public const int ThemeOverlay_AppCompat_Dialog = 2131624310;
+			
+			// aapt resource value: 0x7F0E0177
+			public const int ThemeOverlay_AppCompat_Dialog_Alert = 2131624311;
+			
+			// aapt resource value: 0x7F0E0178
+			public const int ThemeOverlay_AppCompat_Light = 2131624312;
+			
+			// aapt resource value: 0x7F0E0179
+			public const int ThemeOverlay_MaterialComponents = 2131624313;
+			
+			// aapt resource value: 0x7F0E017A
+			public const int ThemeOverlay_MaterialComponents_ActionBar = 2131624314;
+			
+			// aapt resource value: 0x7F0E017B
+			public const int ThemeOverlay_MaterialComponents_Dark = 2131624315;
+			
+			// aapt resource value: 0x7F0E017C
+			public const int ThemeOverlay_MaterialComponents_Dark_ActionBar = 2131624316;
+			
+			// aapt resource value: 0x7F0E017D
+			public const int ThemeOverlay_MaterialComponents_Dialog = 2131624317;
+			
+			// aapt resource value: 0x7F0E017E
+			public const int ThemeOverlay_MaterialComponents_Dialog_Alert = 2131624318;
+			
+			// aapt resource value: 0x7F0E017F
+			public const int ThemeOverlay_MaterialComponents_Light = 2131624319;
+			
+			// aapt resource value: 0x7F0E0180
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText = 2131624320;
+			
+			// aapt resource value: 0x7F0E0181
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = 2131624321;
+			
+			// aapt resource value: 0x7F0E0182
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131624322;
+			
+			// aapt resource value: 0x7F0E0183
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = 2131624323;
+			
+			// aapt resource value: 0x7F0E0184
+			public const int ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131624324;
+			
+			// aapt resource value: 0x7F0E0185
+			public const int ThemeOverlay_MediaRouter_Dark = 2131624325;
+			
+			// aapt resource value: 0x7F0E0186
+			public const int ThemeOverlay_MediaRouter_Light = 2131624326;
+			
+			// aapt resource value: 0x7F0E013E
+			public const int Theme_AppCompat = 2131624254;
+			
+			// aapt resource value: 0x7F0E013F
+			public const int Theme_AppCompat_CompactMenu = 2131624255;
+			
+			// aapt resource value: 0x7F0E0140
+			public const int Theme_AppCompat_DayNight = 2131624256;
+			
+			// aapt resource value: 0x7F0E0141
+			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131624257;
+			
+			// aapt resource value: 0x7F0E0142
+			public const int Theme_AppCompat_DayNight_Dialog = 2131624258;
+			
+			// aapt resource value: 0x7F0E0145
+			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131624261;
+			
+			// aapt resource value: 0x7F0E0143
+			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131624259;
+			
+			// aapt resource value: 0x7F0E0144
+			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131624260;
+			
+			// aapt resource value: 0x7F0E0146
+			public const int Theme_AppCompat_DayNight_NoActionBar = 2131624262;
+			
+			// aapt resource value: 0x7F0E0147
+			public const int Theme_AppCompat_Dialog = 2131624263;
+			
+			// aapt resource value: 0x7F0E014A
+			public const int Theme_AppCompat_DialogWhenLarge = 2131624266;
+			
+			// aapt resource value: 0x7F0E0148
+			public const int Theme_AppCompat_Dialog_Alert = 2131624264;
+			
+			// aapt resource value: 0x7F0E0149
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131624265;
+			
+			// aapt resource value: 0x7F0E014B
+			public const int Theme_AppCompat_Light = 2131624267;
+			
+			// aapt resource value: 0x7F0E014C
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131624268;
+			
+			// aapt resource value: 0x7F0E014D
+			public const int Theme_AppCompat_Light_Dialog = 2131624269;
+			
+			// aapt resource value: 0x7F0E0150
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131624272;
+			
+			// aapt resource value: 0x7F0E014E
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131624270;
+			
+			// aapt resource value: 0x7F0E014F
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131624271;
+			
+			// aapt resource value: 0x7F0E0151
+			public const int Theme_AppCompat_Light_NoActionBar = 2131624273;
+			
+			// aapt resource value: 0x7F0E0152
+			public const int Theme_AppCompat_NoActionBar = 2131624274;
+			
+			// aapt resource value: 0x7F0E0153
+			public const int Theme_Design = 2131624275;
+			
+			// aapt resource value: 0x7F0E0154
+			public const int Theme_Design_BottomSheetDialog = 2131624276;
+			
+			// aapt resource value: 0x7F0E0155
+			public const int Theme_Design_Light = 2131624277;
+			
+			// aapt resource value: 0x7F0E0156
+			public const int Theme_Design_Light_BottomSheetDialog = 2131624278;
+			
+			// aapt resource value: 0x7F0E0157
+			public const int Theme_Design_Light_NoActionBar = 2131624279;
+			
+			// aapt resource value: 0x7F0E0158
+			public const int Theme_Design_NoActionBar = 2131624280;
+			
+			// aapt resource value: 0x7F0E0159
+			public const int Theme_MaterialComponents = 2131624281;
+			
+			// aapt resource value: 0x7F0E015A
+			public const int Theme_MaterialComponents_BottomSheetDialog = 2131624282;
+			
+			// aapt resource value: 0x7F0E015B
+			public const int Theme_MaterialComponents_Bridge = 2131624283;
+			
+			// aapt resource value: 0x7F0E015C
+			public const int Theme_MaterialComponents_CompactMenu = 2131624284;
+			
+			// aapt resource value: 0x7F0E015D
+			public const int Theme_MaterialComponents_Dialog = 2131624285;
+			
+			// aapt resource value: 0x7F0E0160
+			public const int Theme_MaterialComponents_DialogWhenLarge = 2131624288;
+			
+			// aapt resource value: 0x7F0E015E
+			public const int Theme_MaterialComponents_Dialog_Alert = 2131624286;
+			
+			// aapt resource value: 0x7F0E015F
+			public const int Theme_MaterialComponents_Dialog_MinWidth = 2131624287;
+			
+			// aapt resource value: 0x7F0E0161
+			public const int Theme_MaterialComponents_Light = 2131624289;
+			
+			// aapt resource value: 0x7F0E0162
+			public const int Theme_MaterialComponents_Light_BottomSheetDialog = 2131624290;
+			
+			// aapt resource value: 0x7F0E0163
+			public const int Theme_MaterialComponents_Light_Bridge = 2131624291;
+			
+			// aapt resource value: 0x7F0E0164
+			public const int Theme_MaterialComponents_Light_DarkActionBar = 2131624292;
+			
+			// aapt resource value: 0x7F0E0165
+			public const int Theme_MaterialComponents_Light_DarkActionBar_Bridge = 2131624293;
+			
+			// aapt resource value: 0x7F0E0166
+			public const int Theme_MaterialComponents_Light_Dialog = 2131624294;
+			
+			// aapt resource value: 0x7F0E0169
+			public const int Theme_MaterialComponents_Light_DialogWhenLarge = 2131624297;
+			
+			// aapt resource value: 0x7F0E0167
+			public const int Theme_MaterialComponents_Light_Dialog_Alert = 2131624295;
+			
+			// aapt resource value: 0x7F0E0168
+			public const int Theme_MaterialComponents_Light_Dialog_MinWidth = 2131624296;
+			
+			// aapt resource value: 0x7F0E016A
+			public const int Theme_MaterialComponents_Light_NoActionBar = 2131624298;
+			
+			// aapt resource value: 0x7F0E016B
+			public const int Theme_MaterialComponents_Light_NoActionBar_Bridge = 2131624299;
+			
+			// aapt resource value: 0x7F0E016C
+			public const int Theme_MaterialComponents_NoActionBar = 2131624300;
+			
+			// aapt resource value: 0x7F0E016D
+			public const int Theme_MaterialComponents_NoActionBar_Bridge = 2131624301;
+			
+			// aapt resource value: 0x7F0E016E
+			public const int Theme_MediaRouter = 2131624302;
+			
+			// aapt resource value: 0x7F0E016F
+			public const int Theme_MediaRouter_Light = 2131624303;
 			
 			// aapt resource value: 0x7F0E0171
-			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131624305;
+			public const int Theme_MediaRouter_LightControlPanel = 2131624305;
+			
+			// aapt resource value: 0x7F0E0170
+			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131624304;
+			
+			// aapt resource value: 0x7F0E0187
+			public const int Widget_AppCompat_ActionBar = 2131624327;
 			
 			// aapt resource value: 0x7F0E0188
-			public const int Widget_AppCompat_ActionBar = 2131624328;
+			public const int Widget_AppCompat_ActionBar_Solid = 2131624328;
 			
 			// aapt resource value: 0x7F0E0189
-			public const int Widget_AppCompat_ActionBar_Solid = 2131624329;
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131624329;
 			
 			// aapt resource value: 0x7F0E018A
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131624330;
+			public const int Widget_AppCompat_ActionBar_TabText = 2131624330;
 			
 			// aapt resource value: 0x7F0E018B
-			public const int Widget_AppCompat_ActionBar_TabText = 2131624331;
+			public const int Widget_AppCompat_ActionBar_TabView = 2131624331;
 			
 			// aapt resource value: 0x7F0E018C
-			public const int Widget_AppCompat_ActionBar_TabView = 2131624332;
+			public const int Widget_AppCompat_ActionButton = 2131624332;
 			
 			// aapt resource value: 0x7F0E018D
-			public const int Widget_AppCompat_ActionButton = 2131624333;
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131624333;
 			
 			// aapt resource value: 0x7F0E018E
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131624334;
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131624334;
 			
 			// aapt resource value: 0x7F0E018F
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131624335;
+			public const int Widget_AppCompat_ActionMode = 2131624335;
 			
 			// aapt resource value: 0x7F0E0190
-			public const int Widget_AppCompat_ActionMode = 2131624336;
+			public const int Widget_AppCompat_ActivityChooserView = 2131624336;
 			
 			// aapt resource value: 0x7F0E0191
-			public const int Widget_AppCompat_ActivityChooserView = 2131624337;
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131624337;
 			
 			// aapt resource value: 0x7F0E0192
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131624338;
-			
-			// aapt resource value: 0x7F0E0193
-			public const int Widget_AppCompat_Button = 2131624339;
-			
-			// aapt resource value: 0x7F0E0199
-			public const int Widget_AppCompat_ButtonBar = 2131624345;
-			
-			// aapt resource value: 0x7F0E019A
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131624346;
-			
-			// aapt resource value: 0x7F0E0194
-			public const int Widget_AppCompat_Button_Borderless = 2131624340;
-			
-			// aapt resource value: 0x7F0E0195
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131624341;
-			
-			// aapt resource value: 0x7F0E0196
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131624342;
-			
-			// aapt resource value: 0x7F0E0197
-			public const int Widget_AppCompat_Button_Colored = 2131624343;
+			public const int Widget_AppCompat_Button = 2131624338;
 			
 			// aapt resource value: 0x7F0E0198
-			public const int Widget_AppCompat_Button_Small = 2131624344;
+			public const int Widget_AppCompat_ButtonBar = 2131624344;
+			
+			// aapt resource value: 0x7F0E0199
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131624345;
+			
+			// aapt resource value: 0x7F0E0193
+			public const int Widget_AppCompat_Button_Borderless = 2131624339;
+			
+			// aapt resource value: 0x7F0E0194
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131624340;
+			
+			// aapt resource value: 0x7F0E0195
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131624341;
+			
+			// aapt resource value: 0x7F0E0196
+			public const int Widget_AppCompat_Button_Colored = 2131624342;
+			
+			// aapt resource value: 0x7F0E0197
+			public const int Widget_AppCompat_Button_Small = 2131624343;
+			
+			// aapt resource value: 0x7F0E019A
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131624346;
 			
 			// aapt resource value: 0x7F0E019B
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131624347;
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131624347;
 			
 			// aapt resource value: 0x7F0E019C
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131624348;
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131624348;
 			
 			// aapt resource value: 0x7F0E019D
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131624349;
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131624349;
 			
 			// aapt resource value: 0x7F0E019E
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131624350;
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131624350;
 			
 			// aapt resource value: 0x7F0E019F
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131624351;
+			public const int Widget_AppCompat_EditText = 2131624351;
 			
 			// aapt resource value: 0x7F0E01A0
-			public const int Widget_AppCompat_EditText = 2131624352;
+			public const int Widget_AppCompat_ImageButton = 2131624352;
 			
 			// aapt resource value: 0x7F0E01A1
-			public const int Widget_AppCompat_ImageButton = 2131624353;
+			public const int Widget_AppCompat_Light_ActionBar = 2131624353;
 			
 			// aapt resource value: 0x7F0E01A2
-			public const int Widget_AppCompat_Light_ActionBar = 2131624354;
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131624354;
 			
 			// aapt resource value: 0x7F0E01A3
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131624355;
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131624355;
 			
 			// aapt resource value: 0x7F0E01A4
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131624356;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131624356;
 			
 			// aapt resource value: 0x7F0E01A5
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131624357;
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131624357;
 			
 			// aapt resource value: 0x7F0E01A6
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131624358;
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131624358;
 			
 			// aapt resource value: 0x7F0E01A7
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131624359;
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131624359;
 			
 			// aapt resource value: 0x7F0E01A8
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131624360;
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131624360;
 			
 			// aapt resource value: 0x7F0E01A9
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131624361;
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131624361;
 			
 			// aapt resource value: 0x7F0E01AA
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131624362;
+			public const int Widget_AppCompat_Light_ActionButton = 2131624362;
 			
 			// aapt resource value: 0x7F0E01AB
-			public const int Widget_AppCompat_Light_ActionButton = 2131624363;
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131624363;
 			
 			// aapt resource value: 0x7F0E01AC
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131624364;
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131624364;
 			
 			// aapt resource value: 0x7F0E01AD
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131624365;
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131624365;
 			
 			// aapt resource value: 0x7F0E01AE
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131624366;
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131624366;
 			
 			// aapt resource value: 0x7F0E01AF
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131624367;
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131624367;
 			
 			// aapt resource value: 0x7F0E01B0
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131624368;
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131624368;
 			
 			// aapt resource value: 0x7F0E01B1
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131624369;
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131624369;
 			
 			// aapt resource value: 0x7F0E01B2
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131624370;
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131624370;
 			
 			// aapt resource value: 0x7F0E01B3
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131624371;
+			public const int Widget_AppCompat_Light_PopupMenu = 2131624371;
 			
 			// aapt resource value: 0x7F0E01B4
-			public const int Widget_AppCompat_Light_PopupMenu = 2131624372;
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131624372;
 			
 			// aapt resource value: 0x7F0E01B5
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131624373;
+			public const int Widget_AppCompat_Light_SearchView = 2131624373;
 			
 			// aapt resource value: 0x7F0E01B6
-			public const int Widget_AppCompat_Light_SearchView = 2131624374;
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131624374;
 			
 			// aapt resource value: 0x7F0E01B7
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131624375;
+			public const int Widget_AppCompat_ListMenuView = 2131624375;
 			
 			// aapt resource value: 0x7F0E01B8
-			public const int Widget_AppCompat_ListMenuView = 2131624376;
+			public const int Widget_AppCompat_ListPopupWindow = 2131624376;
 			
 			// aapt resource value: 0x7F0E01B9
-			public const int Widget_AppCompat_ListPopupWindow = 2131624377;
+			public const int Widget_AppCompat_ListView = 2131624377;
 			
 			// aapt resource value: 0x7F0E01BA
-			public const int Widget_AppCompat_ListView = 2131624378;
+			public const int Widget_AppCompat_ListView_DropDown = 2131624378;
 			
 			// aapt resource value: 0x7F0E01BB
-			public const int Widget_AppCompat_ListView_DropDown = 2131624379;
+			public const int Widget_AppCompat_ListView_Menu = 2131624379;
 			
 			// aapt resource value: 0x7F0E01BC
-			public const int Widget_AppCompat_ListView_Menu = 2131624380;
+			public const int Widget_AppCompat_PopupMenu = 2131624380;
 			
 			// aapt resource value: 0x7F0E01BD
-			public const int Widget_AppCompat_PopupMenu = 2131624381;
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131624381;
 			
 			// aapt resource value: 0x7F0E01BE
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131624382;
+			public const int Widget_AppCompat_PopupWindow = 2131624382;
 			
 			// aapt resource value: 0x7F0E01BF
-			public const int Widget_AppCompat_PopupWindow = 2131624383;
+			public const int Widget_AppCompat_ProgressBar = 2131624383;
 			
 			// aapt resource value: 0x7F0E01C0
-			public const int Widget_AppCompat_ProgressBar = 2131624384;
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131624384;
 			
 			// aapt resource value: 0x7F0E01C1
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131624385;
+			public const int Widget_AppCompat_RatingBar = 2131624385;
 			
 			// aapt resource value: 0x7F0E01C2
-			public const int Widget_AppCompat_RatingBar = 2131624386;
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131624386;
 			
 			// aapt resource value: 0x7F0E01C3
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131624387;
+			public const int Widget_AppCompat_RatingBar_Small = 2131624387;
 			
 			// aapt resource value: 0x7F0E01C4
-			public const int Widget_AppCompat_RatingBar_Small = 2131624388;
+			public const int Widget_AppCompat_SearchView = 2131624388;
 			
 			// aapt resource value: 0x7F0E01C5
-			public const int Widget_AppCompat_SearchView = 2131624389;
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131624389;
 			
 			// aapt resource value: 0x7F0E01C6
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131624390;
+			public const int Widget_AppCompat_SeekBar = 2131624390;
 			
 			// aapt resource value: 0x7F0E01C7
-			public const int Widget_AppCompat_SeekBar = 2131624391;
+			public const int Widget_AppCompat_SeekBar_Discrete = 2131624391;
 			
 			// aapt resource value: 0x7F0E01C8
-			public const int Widget_AppCompat_SeekBar_Discrete = 2131624392;
+			public const int Widget_AppCompat_Spinner = 2131624392;
 			
 			// aapt resource value: 0x7F0E01C9
-			public const int Widget_AppCompat_Spinner = 2131624393;
+			public const int Widget_AppCompat_Spinner_DropDown = 2131624393;
 			
 			// aapt resource value: 0x7F0E01CA
-			public const int Widget_AppCompat_Spinner_DropDown = 2131624394;
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131624394;
 			
 			// aapt resource value: 0x7F0E01CB
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131624395;
+			public const int Widget_AppCompat_Spinner_Underlined = 2131624395;
 			
 			// aapt resource value: 0x7F0E01CC
-			public const int Widget_AppCompat_Spinner_Underlined = 2131624396;
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131624396;
 			
 			// aapt resource value: 0x7F0E01CD
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131624397;
+			public const int Widget_AppCompat_Toolbar = 2131624397;
 			
 			// aapt resource value: 0x7F0E01CE
-			public const int Widget_AppCompat_Toolbar = 2131624398;
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131624398;
 			
 			// aapt resource value: 0x7F0E01CF
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131624399;
+			public const int Widget_Compat_NotificationActionContainer = 2131624399;
 			
 			// aapt resource value: 0x7F0E01D0
-			public const int Widget_Compat_NotificationActionContainer = 2131624400;
+			public const int Widget_Compat_NotificationActionText = 2131624400;
 			
 			// aapt resource value: 0x7F0E01D1
-			public const int Widget_Compat_NotificationActionText = 2131624401;
+			public const int Widget_Design_AppBarLayout = 2131624401;
 			
 			// aapt resource value: 0x7F0E01D2
-			public const int Widget_Design_AppBarLayout = 2131624402;
+			public const int Widget_Design_BottomNavigationView = 2131624402;
 			
 			// aapt resource value: 0x7F0E01D3
-			public const int Widget_Design_BottomNavigationView = 2131624403;
+			public const int Widget_Design_BottomSheet_Modal = 2131624403;
 			
 			// aapt resource value: 0x7F0E01D4
-			public const int Widget_Design_BottomSheet_Modal = 2131624404;
+			public const int Widget_Design_CollapsingToolbar = 2131624404;
 			
 			// aapt resource value: 0x7F0E01D5
-			public const int Widget_Design_CollapsingToolbar = 2131624405;
+			public const int Widget_Design_FloatingActionButton = 2131624405;
 			
 			// aapt resource value: 0x7F0E01D6
-			public const int Widget_Design_FloatingActionButton = 2131624406;
+			public const int Widget_Design_NavigationView = 2131624406;
 			
 			// aapt resource value: 0x7F0E01D7
-			public const int Widget_Design_NavigationView = 2131624407;
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131624407;
 			
 			// aapt resource value: 0x7F0E01D8
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131624408;
+			public const int Widget_Design_Snackbar = 2131624408;
 			
 			// aapt resource value: 0x7F0E01D9
-			public const int Widget_Design_Snackbar = 2131624409;
+			public const int Widget_Design_TabLayout = 2131624409;
 			
 			// aapt resource value: 0x7F0E01DA
-			public const int Widget_Design_TabLayout = 2131624410;
+			public const int Widget_Design_TextInputLayout = 2131624410;
 			
 			// aapt resource value: 0x7F0E01DB
-			public const int Widget_Design_TextInputLayout = 2131624411;
+			public const int Widget_MaterialComponents_BottomAppBar = 2131624411;
 			
 			// aapt resource value: 0x7F0E01DC
-			public const int Widget_MaterialComponents_BottomAppBar = 2131624412;
+			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131624412;
 			
 			// aapt resource value: 0x7F0E01DD
-			public const int Widget_MaterialComponents_BottomAppBar_Colored = 2131624413;
+			public const int Widget_MaterialComponents_BottomNavigationView = 2131624413;
 			
 			// aapt resource value: 0x7F0E01DE
-			public const int Widget_MaterialComponents_BottomNavigationView = 2131624414;
+			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131624414;
 			
 			// aapt resource value: 0x7F0E01DF
-			public const int Widget_MaterialComponents_BottomNavigationView_Colored = 2131624415;
+			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131624415;
 			
 			// aapt resource value: 0x7F0E01E0
-			public const int Widget_MaterialComponents_BottomSheet_Modal = 2131624416;
+			public const int Widget_MaterialComponents_Button = 2131624416;
 			
 			// aapt resource value: 0x7F0E01E1
-			public const int Widget_MaterialComponents_Button = 2131624417;
+			public const int Widget_MaterialComponents_Button_Icon = 2131624417;
 			
 			// aapt resource value: 0x7F0E01E2
-			public const int Widget_MaterialComponents_Button_Icon = 2131624418;
+			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131624418;
 			
 			// aapt resource value: 0x7F0E01E3
-			public const int Widget_MaterialComponents_Button_OutlinedButton = 2131624419;
+			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131624419;
 			
 			// aapt resource value: 0x7F0E01E4
-			public const int Widget_MaterialComponents_Button_OutlinedButton_Icon = 2131624420;
+			public const int Widget_MaterialComponents_Button_TextButton = 2131624420;
 			
 			// aapt resource value: 0x7F0E01E5
-			public const int Widget_MaterialComponents_Button_TextButton = 2131624421;
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131624421;
 			
 			// aapt resource value: 0x7F0E01E6
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog = 2131624422;
+			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131624422;
 			
 			// aapt resource value: 0x7F0E01E7
-			public const int Widget_MaterialComponents_Button_TextButton_Dialog_Icon = 2131624423;
+			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131624423;
 			
 			// aapt resource value: 0x7F0E01E8
-			public const int Widget_MaterialComponents_Button_TextButton_Icon = 2131624424;
+			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131624424;
 			
 			// aapt resource value: 0x7F0E01E9
-			public const int Widget_MaterialComponents_Button_UnelevatedButton = 2131624425;
+			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131624425;
 			
 			// aapt resource value: 0x7F0E01EA
-			public const int Widget_MaterialComponents_Button_UnelevatedButton_Icon = 2131624426;
-			
-			// aapt resource value: 0x7F0E01EB
-			public const int Widget_MaterialComponents_CardView = 2131624427;
-			
-			// aapt resource value: 0x7F0E01F0
-			public const int Widget_MaterialComponents_ChipGroup = 2131624432;
-			
-			// aapt resource value: 0x7F0E01EC
-			public const int Widget_MaterialComponents_Chip_Action = 2131624428;
-			
-			// aapt resource value: 0x7F0E01ED
-			public const int Widget_MaterialComponents_Chip_Choice = 2131624429;
-			
-			// aapt resource value: 0x7F0E01EE
-			public const int Widget_MaterialComponents_Chip_Entry = 2131624430;
+			public const int Widget_MaterialComponents_CardView = 2131624426;
 			
 			// aapt resource value: 0x7F0E01EF
-			public const int Widget_MaterialComponents_Chip_Filter = 2131624431;
+			public const int Widget_MaterialComponents_ChipGroup = 2131624431;
+			
+			// aapt resource value: 0x7F0E01EB
+			public const int Widget_MaterialComponents_Chip_Action = 2131624427;
+			
+			// aapt resource value: 0x7F0E01EC
+			public const int Widget_MaterialComponents_Chip_Choice = 2131624428;
+			
+			// aapt resource value: 0x7F0E01ED
+			public const int Widget_MaterialComponents_Chip_Entry = 2131624429;
+			
+			// aapt resource value: 0x7F0E01EE
+			public const int Widget_MaterialComponents_Chip_Filter = 2131624430;
+			
+			// aapt resource value: 0x7F0E01F0
+			public const int Widget_MaterialComponents_FloatingActionButton = 2131624432;
 			
 			// aapt resource value: 0x7F0E01F1
-			public const int Widget_MaterialComponents_FloatingActionButton = 2131624433;
+			public const int Widget_MaterialComponents_NavigationView = 2131624433;
 			
 			// aapt resource value: 0x7F0E01F2
-			public const int Widget_MaterialComponents_NavigationView = 2131624434;
+			public const int Widget_MaterialComponents_Snackbar = 2131624434;
 			
 			// aapt resource value: 0x7F0E01F3
-			public const int Widget_MaterialComponents_Snackbar = 2131624435;
+			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131624435;
 			
 			// aapt resource value: 0x7F0E01F4
-			public const int Widget_MaterialComponents_Snackbar_FullWidth = 2131624436;
+			public const int Widget_MaterialComponents_TabLayout = 2131624436;
 			
 			// aapt resource value: 0x7F0E01F5
-			public const int Widget_MaterialComponents_TabLayout = 2131624437;
+			public const int Widget_MaterialComponents_TabLayout_Colored = 2131624437;
 			
 			// aapt resource value: 0x7F0E01F6
-			public const int Widget_MaterialComponents_TabLayout_Colored = 2131624438;
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131624438;
 			
 			// aapt resource value: 0x7F0E01F7
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox = 2131624439;
+			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131624439;
 			
 			// aapt resource value: 0x7F0E01F8
-			public const int Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = 2131624440;
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131624440;
 			
 			// aapt resource value: 0x7F0E01F9
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox = 2131624441;
+			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131624441;
 			
 			// aapt resource value: 0x7F0E01FA
-			public const int Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = 2131624442;
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131624442;
 			
 			// aapt resource value: 0x7F0E01FB
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox = 2131624443;
+			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131624443;
 			
 			// aapt resource value: 0x7F0E01FC
-			public const int Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = 2131624444;
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131624444;
 			
 			// aapt resource value: 0x7F0E01FD
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox = 2131624445;
+			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131624445;
 			
 			// aapt resource value: 0x7F0E01FE
-			public const int Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = 2131624446;
+			public const int Widget_MaterialComponents_Toolbar = 2131624446;
 			
 			// aapt resource value: 0x7F0E01FF
-			public const int Widget_MaterialComponents_Toolbar = 2131624447;
+			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131624447;
 			
 			// aapt resource value: 0x7F0E0200
-			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131624448;
+			public const int Widget_MediaRouter_MediaRouteButton = 2131624448;
 			
 			// aapt resource value: 0x7F0E0201
-			public const int Widget_MediaRouter_MediaRouteButton = 2131624449;
-			
-			// aapt resource value: 0x7F0E0202
-			public const int Widget_Support_CoordinatorLayout = 2131624450;
+			public const int Widget_Support_CoordinatorLayout = 2131624449;
 			
 			static Style()
 			{

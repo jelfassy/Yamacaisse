@@ -10,20 +10,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.5.0.530" />
-    <PackageReference Include="Microsoft.AppCenter" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.1.0" />
-    <PackageReference Include="Microsoft.AppCenter.Push" Version="3.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Microsoft.AppCenter" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.2.1" />
+    <PackageReference Include="Microsoft.AppCenter.Push" Version="3.2.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Rg.Plugins.Popup" Version="1.2.0.223" />
-    <PackageReference Include="Polly" Version="7.2.0" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.2" />
+    <PackageReference Include="Polly" Version="7.2.1" />
     <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.1" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.2.1" />
     <PackageReference Include="Microcharts.Forms" Version="0.7.1" />
     <PackageReference Include="Microcharts" Version="0.7.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\WallStreetServices\" />

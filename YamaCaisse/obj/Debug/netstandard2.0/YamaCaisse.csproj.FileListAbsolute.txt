@@ -65,7 +65,6 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupTable.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/ProductionPage.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/RapportPage.xaml.g.cs
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/ReservationPage.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/View/BonProductionView.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/View/MiniBonProduction.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/View/ProduitListView.xaml.g.cs
@@ -126,3 +125,9 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.pdb
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/BordPage.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/ChartsPage.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupClient.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupSeveur.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/WallStreetPage.xaml.g.cs
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.csproj.CoreCompileInputs.cache
