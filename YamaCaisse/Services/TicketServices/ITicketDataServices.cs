@@ -40,12 +40,22 @@ namespace YamaCaisse.Services.TicketServices
         /// <param name="id">Identifier.</param>
         /// <param name="ticket">Ticket.</param>
         Task<bool> PutTicket(int id, Ticket ticket);
+
         /// <summary>
         /// Prints the table.
         /// </summary>
         /// <returns>The table.</returns>
         /// <param name="idTable">Identifier table.</param>
-        Task<bool> PrintTable(int idTable,int idPrinter,int idserveur);
+        Task<bool> Print(int idTicket,int idPrinter);
+
+        /// <summary>
+        /// Prints the table.
+        /// </summary>
+        /// <returns>The table.</returns>
+        /// <param name="idTable">Identifier table.</param>
+        Task<bool> Addition(int idTable, int idPrinter, int idserveur);
+
+        /// <summary>
         /// <summary>
         /// Prints the fiche.
         /// </summary>

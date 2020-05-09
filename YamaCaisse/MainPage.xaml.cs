@@ -33,12 +33,12 @@ namespace YamaCaisse
         public MainPage()
         {
             InitializeComponent();
-              BindingContext = this;
+            BindingContext = this;
             this.IsBusy = false;
             //  if (Application.Current.Properties.ContainsKey("ServeurAdress"))
             //  this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
             //this.AdresseServeur.Text = "192.168.1.37:63058";
-           // List<ServeurCnx> listServeur = new List<ServeurCnx>();
+            // List<ServeurCnx> listServeur = new List<ServeurCnx>();
             //ServeurCnx cn = new ServeurCnx()
             //{
             //    SeveurName = "Debug",
@@ -48,12 +48,12 @@ namespace YamaCaisse
             //    PassWindows = "1234"
             //};
             //listServeur.Add(cn);
-           // Application.Current.Properties["ServeurList"] = listServeur;
+            // Application.Current.Properties["ServeurList"] = listServeur;
         }
 
         void Click_Number(object sender, EventArgs e)
         {
-            this.CodeUser.Text = string.Concat(this.CodeUser.Text,(sender as Button).Text);
+            this.CodeUser.Text = string.Concat(this.CodeUser.Text, (sender as Button).Text);
         }
 
         protected override void OnAppearing()
@@ -67,16 +67,16 @@ namespace YamaCaisse
             try
             {
 
-        
-            pkListServeur.Items.Clear();
-            List<ServeurCnx> listServeur = new List<ServeurCnx>();
+
+                pkListServeur.Items.Clear();
+                List<ServeurCnx> listServeur = new List<ServeurCnx>();
                 if (Application.Current.Properties.ContainsKey("ServeurList"))
                     listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
-            foreach (var serv in listServeur)
-            {
-                pkListServeur.Items.Add(serv.SeveurName);
-            }
-           if(pkListServeur.Items.Count > 0)
+                foreach (var serv in listServeur)
+                {
+                    pkListServeur.Items.Add(serv.SeveurName);
+                }
+                if (pkListServeur.Items.Count > 0)
                     pkListServeur.SelectedIndex = 0;
             }
             catch (Exception ex)
@@ -93,7 +93,7 @@ namespace YamaCaisse
         void Click_Back(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(this.CodeUser.Text))
-            this.CodeUser.Text = this.CodeUser.Text.Remove(this.CodeUser.Text.Length - 1);
+                this.CodeUser.Text = this.CodeUser.Text.Remove(this.CodeUser.Text.Length - 1);
         }
 
         async void Click_Serveur(object sender, EventArgs e)
@@ -118,6 +118,18 @@ namespace YamaCaisse
             }
 
             LoadPickerData();
+        }
+
+        async void Click_ModServeur(object sender, EventArgs e)
+        {
+            List<ServeurCnx> listServeur = new List<ServeurCnx>();
+            if (Application.Current.Properties.ContainsKey("ServeurList"))
+            {
+                var popServ = new PopupSeveur(this);
+                popServ.serveurName = this.pkListServeur.SelectedItem.ToString();
+                await Navigation.PushPopupAsync(popServ);
+                LoadPickerData();
+            }
         }
 
         async void Click_Connexion(object sender, EventArgs e)
@@ -169,7 +181,7 @@ namespace YamaCaisse
                 Crashes.TrackError(ex, property);
                 await DisplayAlert("Serveur Indisponible", "Serveur indisponible", "OK");
             }
-           
+
         }
 
         async void SetServeurAdresse()
@@ -196,10 +208,10 @@ namespace YamaCaisse
             Application.Current.Properties["ServeurAdress"] = serveur.ServeurAdresse;
         }
 
-        async void Click_Production(object sender,EventArgs e)
+        async void Click_Production(object sender, EventArgs e)
         {
             SetServeurAdresse();
-            
+
             await Navigation.PushPopupAsync(new PopupGetProduction());
 
         }

@@ -5,6 +5,7 @@
     <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="350">
         <StackLayout x:Name="stkPaiement">
             <Label x:Name="eMontantPayer" Text="" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+           <Button Clicked="Click_Print" Text="Imprimer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
             <Grid x:Name="gdTypePaiment" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />

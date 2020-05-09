@@ -15,10 +15,19 @@ namespace YamaCaisse.Pages
     {
         public MainPage _mainpage { get; set; }
         private IConfigDataServices _configDataServices;
+        public string serveurName { get; set; }
         public PopupSeveur(MainPage mainPage)
         {
             InitializeComponent();
             _mainpage = mainPage;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if(serveurName != null)
+            {
+
+            }
         }
 
         void OnToggled(object sender, ToggledEventArgs e)

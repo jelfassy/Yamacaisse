@@ -32,11 +32,12 @@ namespace YamaCaisse.View
             this.Attente = attente;
             this.BonProduction = bonProduction;
             SetColorView(DateTime.Now - HeureCommande);
-            this.startTimer();
-            var tgr = new TapGestureRecognizer { NumberOfTapsRequired = 1 };
+            //this.startTimer();
+            var tgr = new TapGestureRecognizer() { NumberOfTapsRequired=2 };
             tgr.Tapped += (sender, args) => {
                 this.Show_Clicked(sender, args);
             };
+
             this.GestureRecognizers.Add(tgr);
         }
 
@@ -78,8 +79,9 @@ namespace YamaCaisse.View
           
         }
 
-        async void Show_Clicked(object sender, System.EventArgs e)
+        public async void Show_Clicked(object sender, System.EventArgs e)
         {
+            var tes = sender;
            await ProdPage.CreateBonProductionView(BonProduction);
         }
     }

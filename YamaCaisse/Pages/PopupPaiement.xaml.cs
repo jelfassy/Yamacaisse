@@ -9,6 +9,7 @@ using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.PaiementServices;
+using YamaCaisse.Services.TicketServices;
 using YamaCaisse.Services.TypePaiementServices;
 
 namespace YamaCaisse.Pages
@@ -17,6 +18,8 @@ namespace YamaCaisse.Pages
     {
         private ITypePaiementDataServices _typePaiementServices;
         private IPaiementDataServices _paiementDataServices;
+        private ITicketDataServices _ticketDataServices;
+
 
         public bool FirstPressNumber { get; set; }
 
@@ -40,6 +43,7 @@ namespace YamaCaisse.Pages
                 _ticket = tick;
                 _typePaiementServices = DependencyService.Get<ITypePaiementDataServices>();
                 _paiementDataServices = DependencyService.Get<IPaiementDataServices>();
+                _ticketDataServices = DependencyService.Get<ITicketDataServices>();
                 stkListHisto.IsVisible = false;
                 stkPaiement.IsVisible = true;
                 LoadData();
@@ -148,7 +152,20 @@ namespace YamaCaisse.Pages
             }
         }
 
-        async void Click_SelectTypePaiement(object sender, EventArgs e)
+        /// <summary>
+        /// Impression du ticket
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        async void Click_Print(object sender, EventArgs e)
+        {
+            if (_ticket.TIK_ID != 0)
+            {
+                await _ticketDataServices.Addition((int)_ticket.TIK_ID, App.ConfigViewModel.Printer.PRT_ID, App.UserId);
+            }
+        }
+
+            async void Click_SelectTypePaiement(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             foreach (var btng in gdTypePaiment.Children)

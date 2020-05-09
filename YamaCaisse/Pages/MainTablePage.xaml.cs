@@ -100,7 +100,7 @@ namespace YamaCaisse.Pages
         {
             if (TicketViewModel.Current.TKT_ID != 0)
             {
-                await _ticketDataServices.PrintTable((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID,App.UserId);
+                await _ticketDataServices.Addition((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID,App.UserId);
                 this.tableListControl.Refresh();
                 await Navigation.PushPopupAsync(new PopupPaiement(TicketViewModel.Current.Ticket));
             }

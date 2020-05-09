@@ -10,6 +10,7 @@ using Microsoft.AspNet.SignalR.Client;
 using Newtonsoft.Json;
 using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Services;
+using Xamarin.Essentials;
 //using Xamarin.Essentials;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
@@ -51,26 +52,26 @@ namespace YamaCaisse.Pages
         {
             exit = false;
             base.OnAppearing();
-            //hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
-            //hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
-            //LoadData(true);
-            //hubProxy.On<int, string>("NewBon", (production, bonProduction) =>
-            //{
-            //    MainThread.BeginInvokeOnMainThread(() =>
-            //    {
-            //        if (production == ConfigViewModel.Current.Production.PROD_ID)
-            //        {
-            //            var bon = JsonConvert.DeserializeObject<BonProduction>(bonProduction);
-            //            if (!ListAll.Contains(bon))
-            //                ListAll.Add(bon);
-            //            {
-            //                this.CreateMiniBonProductionView(bon);
+            hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
+            hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
+            LoadData(true);
+            hubProxy.On<int, string>("NewBon", (production, bonProduction) =>
+            {
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    if (production == ConfigViewModel.Current.Production.PROD_ID)
+                    {
+                        var bon = JsonConvert.DeserializeObject<BonProduction>(bonProduction);
+                        if (!ListAll.Contains(bon))
+                            ListAll.Add(bon);
+                        {
+                            this.CreateMiniBonProductionView(bon);
 
-            //                CreateRecap();
-            //            }
-            //        }
-            //    });
-            //});
+                            CreateRecap();
+                        }
+                    }
+                });
+            });
 
             hubProxy.On<int, string>("BonSended", (production, bonProduction) =>
             {
@@ -258,6 +259,12 @@ namespace YamaCaisse.Pages
                 }
                 var bprod = new MiniBonProduction(item.BON_ID % 100, tabNom, nbPlat, item.Bon_DATE_DEBUT.Value, allEnAttente, this, item);
 
+                var tgr = new TapGestureRecognizer() { NumberOfTapsRequired = 1 };
+                tgr.Tapped += (sender, args) => {
+                    bprod.Show_Clicked(sender, args);
+                };
+
+                bprod.GestureRecognizers.Add(tgr);
                 GdListBon.Children.Add(bprod);
 
             }

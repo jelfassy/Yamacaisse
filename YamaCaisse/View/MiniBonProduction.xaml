@@ -21,7 +21,7 @@
              BackgroundColor="Green"
              HeightRequest="15"
              VerticalOptions="FillAndExpand"
-             HorizontalOptions="FillAndExpand" />
+             HorizontalOptions="FillAndExpand"/>
       <Label
            Text="Bon N° :"
            FontSize="Large"
@@ -61,4 +61,7 @@
            Grid.Column="2"
            VerticalOptions="FillAndExpand"
            HorizontalOptions="FillAndExpand" />
+    
+
+
 </Grid>

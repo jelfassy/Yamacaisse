@@ -105,16 +105,16 @@ namespace YamaCaisse.Services.TicketServices
         }
 
         /// <summary>
-        /// Prints the table.
+        /// Addition the table.
         /// </summary>
         /// <returns>The table.</returns>
         /// <param name="idTable">Identifier table.</param>
-        public async Task<bool>PrintTable(int idTable, int idPrinter,int idserveur)
+        public async Task<bool>Addition(int idTicket, int idPrinter,int idserveur)
         {
             try
             {
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Print/", idTable.ToString(),"/",idPrinter.ToString(),"/",idserveur.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Addition/", idTicket.ToString(),"/",idPrinter.ToString(),"/",idserveur.ToString()));
 
                 await Task.Run(() =>
                 {
@@ -130,7 +130,7 @@ namespace YamaCaisse.Services.TicketServices
             {
                 var property = new Dictionary<string, string>
                 {
-                    {this.GetType().Name,"PrintTicket" + idTable}
+                    {this.GetType().Name,"Addition" + idTicket}
                 };
                 Crashes.TrackError(Iex, property);
                 throw Iex;
@@ -139,12 +139,50 @@ namespace YamaCaisse.Services.TicketServices
             {
                 var property = new Dictionary<string, string>
                 {
-                    {this.GetType().Name,"PrintTicket" + idTable }
+                    {this.GetType().Name,"Addition" + idTicket }
                 };
                 Crashes.TrackError(ex, property);
                 throw ex;
             }
         }
+
+        public async Task<bool> Print(int idTicket, int idPrinter)
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Print/", idTicket.ToString(), "/", idPrinter.ToString()));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintTicket" + idTicket}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintTicket" + idTicket }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Prints the fiche.
         /// </summary>
