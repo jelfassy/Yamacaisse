@@ -161,7 +161,7 @@ namespace YamaCaisse.Pages
         {
             if (_ticket.TIK_ID != 0)
             {
-                await _ticketDataServices.Addition((int)_ticket.TIK_ID, App.ConfigViewModel.Printer.PRT_ID, App.UserId);
+                await _ticketDataServices.Print((int)_ticket.TIK_ID, App.ConfigViewModel.Printer.PRT_ID);
             }
         }
 

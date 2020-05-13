@@ -97,7 +97,6 @@ namespace YamaCaisse.Pages
         async void Printer_Clicked(object sender, System.EventArgs e)
         {
             await Navigation.PushPopupAsync(new PopupPinter());
-           
         }
     }
 }

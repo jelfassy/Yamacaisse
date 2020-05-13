@@ -72,7 +72,7 @@ namespace YamaCaisse.Pages
             if (IsEcranTicket == true)
             {
                 reslistTicket = reslistTicket.ToList();
-                this.btPayer.IsVisible = false;
+               // this.btPayer.IsVisible = false;
                 this.btAnnuler.IsVisible = true;
             }
             else
@@ -214,7 +214,7 @@ namespace YamaCaisse.Pages
 
         async void Click_Reprint(object sender, EventArgs e)
         {
-            await _ticketDataServices.Addition((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID,App.UserId);
+            await _ticketDataServices.Print((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID);
         }
 
 

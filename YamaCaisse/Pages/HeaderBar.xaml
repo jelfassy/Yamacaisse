@@ -15,8 +15,7 @@
         <ColumnDefinition Width="1*" />
         <ColumnDefinition Width="1*" />
         <ColumnDefinition Width="1*" />
-        <ColumnDefinition Width="1*" />
-        
+        <ColumnDefinition Width="1*" /> 
     </Grid.ColumnDefinitions>
     <Button Grid.Column="0" Grid.Row="0"  Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="Red" TextColor="{StaticResource TextIconeColor}" />
     <Button Grid.Column="1" Grid.Row="0"  Text="Table" Clicked="Click_Table" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
