@@ -59,6 +59,8 @@ namespace YamaCaisse.Entity
 
         public bool? PDT_INFO_BT { get; set; }
 
+        public bool? PDT_ISDIVERS { get; set; }
+
         public Tva T_TVA
         {
             get;

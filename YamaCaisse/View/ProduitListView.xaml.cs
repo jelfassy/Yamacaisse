@@ -14,6 +14,7 @@ using YamaCaisse.ViewModel;
 using Rg.Plugins.Popup.Extensions;
 using YamaCaisse.Behavior;
 using YamaCaisse.Services.WallStreetServices;
+using System.Threading.Tasks;
 
 namespace YamaCaisse.View
 {
@@ -147,6 +148,7 @@ namespace YamaCaisse.View
                 {
                     prod = pageprod.T_PRODUIT;
                 }
+               
                 if (prod.PDT_INFO_BT != true)
                 {
 
@@ -164,8 +166,12 @@ namespace YamaCaisse.View
                         T_TVA = prod.T_TVA,
                         LTK_TPVT = App.DeviceIdentifier,
                         LIST_COMPLEMENT = new ObservableCollection<LigneTicket>()
-                    };
 
+                    };
+                    if (prod.PDT_ISDIVERS == true)
+                    {
+                        prod.PDT_Prix = await ReadMontantInPopup();
+                    }
                     if (TicketViewModel.Current.Promotion != null)
                         PDT_Prix = prod.PDT_Prix * ((100 - decimal.Parse(TicketViewModel.Current.Promotion.PROM_MONTANT_TAUX)) / 100);
                     else
@@ -290,6 +296,27 @@ namespace YamaCaisse.View
                 Crashes.TrackError(ex, property);
             }
 
+        }
+
+        public Task<decimal> ReadMontantInPopup()
+        {
+            var tcs = new TaskCompletionSource<decimal>();
+
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                var page = new PopupMontant();
+               
+
+                await Navigation.PushPopupAsync(page);
+
+                var value = await page.GetValue();
+
+                await Navigation.PopPopupAsync();
+
+                tcs.SetResult(value);
+            });
+
+            return tcs.Task;
         }
     }
 }
