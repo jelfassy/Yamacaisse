@@ -48,9 +48,27 @@ namespace YamaCaisse.Pages
 
             ListCompte = await _compteDataServices.GetCompteList();
 
+            var nbCompte = ListCompte.Count();
 
+            var nbRow = nbCompte / 2;
+            var grid = new Grid
+            {
+                ColumnDefinitions =
+                {
+                    new ColumnDefinition(),
+                    new ColumnDefinition()
+                }
+            };
+
+            for(int m = 0; m <= nbRow;m++)
+            {
+                grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+            }
+            int i = 0;
+            int j = 0;
             foreach (var compte in ListCompte.OrderBy(c => c.CMP_NOM))
             {
+
                 var button = new Button
                 {
                     Text = compte.CMP_NOM,
@@ -61,8 +79,15 @@ namespace YamaCaisse.Pages
                 button.FontSize = 24;
                 button.ClassId = compte.CMP_ID.ToString();
                 button.Clicked += Click_SelectCompte;
-                stkCompte.Children.Add(button);
+                grid.Children.Add(button, i, j);
+                j++;
+                if (j == 2)
+                {
+                    i++;
+                    j = 0;
+                }
             }
+            stkCompte.Children.Add(grid);
         }
 
         async void Click_SelectCompte(object sender, EventArgs e)
