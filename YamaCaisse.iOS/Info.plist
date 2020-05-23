@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>10.3</string>
+	<string>10.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>YamaCaisse</string>
 	<key>CFBundleIdentifier</key>
