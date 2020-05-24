@@ -55,11 +55,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>Apple Development: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
+    <CodesignKey>iPhone Distribution</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
 <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+<MtouchExtraArgs>--optimize=experimental-xforms-product-</MtouchExtraArgs>
+<MtouchLink>Full</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -97,6 +98,33 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_32x32.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_256x256.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_512x512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_40x40-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_60x60-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_58x58-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_87x87-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_80x80-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_120x120-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_120x120-2-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_180x180-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_20x20-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_40x40-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_29x29-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_58x58-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_40x40-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_80x80-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_76x76-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_152x152-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_167x167-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_1024x1024-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_120x120-2-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_180x180-1-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_48x48-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_55x55-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_58x58-2-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_87x87-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_80x80-1-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_88x88-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\YamaCaisse_100x100-1.png" />
     </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -200,5 +228,9 @@
   <ItemGroup>
     <AndroidResource Include="Resources\FlecheMoin.png" />
     <AndroidResource Include="Resources\FlechePlus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
 </Project>
