@@ -108,7 +108,7 @@ namespace YamaCaisse
             {
                 listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
 
-                var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
+                var serveur = listServeur.FirstOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
 
                 listServeur.Remove(serveur);
                 var jsonValueToSave = JsonConvert.SerializeObject(listServeur);
