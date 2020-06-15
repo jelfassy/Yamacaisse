@@ -69,13 +69,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>Apple Development: jonathan el fassy (DP4M47J2GZ)</CodesignKey>
+    <CodesignKey>iPhone Distribution: jonathan el fassy (ZFL7473G29)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
 <DeviceSpecificBuild>true</DeviceSpecificBuild>
 <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 <MtouchFloat32>true</MtouchFloat32>
 <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
 <MtouchExtraArgs>--linksdkonly</MtouchExtraArgs>
+<CodesignProvision>dev iPad all + jojo</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
