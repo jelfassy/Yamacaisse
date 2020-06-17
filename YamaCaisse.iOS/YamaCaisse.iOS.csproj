@@ -76,7 +76,7 @@
 <MtouchFloat32>true</MtouchFloat32>
 <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
 <MtouchExtraArgs>--linksdkonly</MtouchExtraArgs>
-<CodesignProvision>dev iPad all + jojo</CodesignProvision>
+<CodesignProvision>dev iPad all + pressing</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
