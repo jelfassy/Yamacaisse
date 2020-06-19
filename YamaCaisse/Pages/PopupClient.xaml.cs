@@ -42,10 +42,10 @@ namespace YamaCaisse.Pages
         void OnTextChanged(object sender, EventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
-            ListClient.ItemsSource = LstClient.Where(c => c.CLI_NOM.Contains(searchBar.Text)
-                                                    || c.CLI_PRENOM.Contains(searchBar.Text)
-                                                    || c.CLI_TELEPHONE.Contains(searchBar.Text)
-                                                    || c.CLI_MAIL.Contains(searchBar.Text));
+            ListClient.ItemsSource = LstClient.Where(c => (c.CLI_NOM != null && c.CLI_NOM.Contains(searchBar.Text))
+                                                    || (c.CLI_PRENOM != null && c.CLI_PRENOM.Contains(searchBar.Text))
+                                                    || (c.CLI_TELEPHONE != null && c.CLI_TELEPHONE.Contains(searchBar.Text))
+                                                    || (c.CLI_MAIL != null && c.CLI_MAIL.Contains(searchBar.Text)));
         }
 
 
