@@ -18,7 +18,7 @@
         <ColumnDefinition Width="1*" /> 
     </Grid.ColumnDefinitions>
     <Button Grid.Column="0" Grid.Row="0"  Text="Logout" Clicked="Click_Deconnexion" BackgroundColor="Red" TextColor="{StaticResource TextIconeColor}" />
-    <Button Grid.Column="1" Grid.Row="0"  Text="Table" Clicked="Click_Table" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+    <Button x:Name="btTable" Grid.Column="1" Grid.Row="0"  Text="Table" Clicked="Click_Table" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
     <Button Grid.Column="2" Grid.Row="0"  Text="Commande" Clicked="Click_Commande" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
     <Button Grid.Column="3" Grid.Row="0"  Text="Paiement" Clicked="Click_Paiement" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />     
 

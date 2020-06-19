@@ -114,7 +114,7 @@
                       <Picker x:Name="pkListPromotion" Title="Select Promotion" Grid.Column="1" Grid.Row="4"/>
 
                     <Button x:Name="btAjouter" Clicked="Click_ajouter" Text="Ajouter" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
-                    <Button x:Name="btModifier" Clicked="Click_Modifier" Text="Modifier" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
+                    <Button x:Name="btModifier" Clicked="Click_Modifier" Text="Modifier" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="0" Grid.Row="5"/>
                     <Button x:Name="btSelect" Clicked="Click_select" Text="Selectionner" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
 
                 </Grid>

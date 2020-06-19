@@ -35,6 +35,11 @@ namespace YamaCaisse.Pages
             btTicket.IsVisible = false;
             btRapport.IsVisible = false;
 
+            if(ConfigViewModel.Current.ModePressing)
+            {
+                btTable.IsVisible = false;
+            }
+
             if (ConfigViewModel.Current.Profil == "Manager")
             {
                 btTicket.IsVisible = true;
