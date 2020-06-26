@@ -99,6 +99,54 @@ namespace YamaCaisse.Tools
         }
 
         /// <summary>
+        /// Static Method GetAsync, This method implement HttpClient.GetAsync.
+        /// Simplification Helper
+        /// </summary>
+        /// <param name="uriString">Uri to call</param>
+        /// <returns>Task -> JObject </returns>
+        public static async Task<JObject> DeleteAsync(string uriString)
+        {
+            try
+            {
+                var uri = new Uri(string.Concat(uriString));
+
+                return await retryPolicy.ExecuteAsync(async () =>
+                {
+                    HttpResponseMessage response = await client.DeleteAsync(uri);
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        int code = (int)response.StatusCode;
+
+                        if (code == 403)
+                        {
+                            throw new Exception("Timeout");
+                        }
+                        else if (code != 500 && code != 404)
+                        {
+                            response.EnsureSuccessStatusCode();
+                        }
+                    }
+
+                    var content = await response.Content.ReadAsStringAsync();
+                    content = CheckContent(response, content);
+
+                    JObject res = JObject.Parse(content);
+                    return res;
+                });
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new InvalidOperationException("ErrorMessageAccesReseau");
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("ErrorMessageProblemeFonctionnement");
+            }
+
+        }
+
+        /// <summary>
         /// Gets the list async.
         /// </summary>
         /// <returns>The list async.</returns>
@@ -270,7 +318,7 @@ namespace YamaCaisse.Tools
         {
             return Policy
                 .Handle<HttpRequestException>()
-                .WaitAndRetryAsync(1, retryAttempt =>
+                .WaitAndRetryAsync(0, retryAttempt =>
                     TimeSpan.FromSeconds(retryAttempt));
         }
 

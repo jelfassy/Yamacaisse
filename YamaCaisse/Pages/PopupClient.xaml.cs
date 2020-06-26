@@ -120,6 +120,16 @@ namespace YamaCaisse.Pages
             this.btModifier.IsVisible = true;
         }
 
+        void Supprimer_Clicked(object sender, System.EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var client = (Client)mi.CommandParameter;
+
+
+            //TicketViewModel.Current.RemoveLigneTicket(ligneTicket);
+        }
+        
+
         public async void Click_close(object sender,EventArgs e)
         {
             if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
@@ -138,13 +148,13 @@ namespace YamaCaisse.Pages
                 CLI_PRENOM = eprenom.Text,
                 CLI_TELEPHONE = eTel.Text,
                 CLI_MAIL = eMail.Text,
-                 FK_PROM_ID = prom?.PROM_ID
+                FK_PROM_ID = prom?.PROM_ID
             };
 
-            var rs = await this._ClientDataServices.SaveClient(client);
+            var rs = await this._ClientDataServices.DeleteClient(client);
            if (rs)
             {
-               await DisplayAlert("client ajouter", "ajouter", "fermer");
+               await DisplayAlert("client Supprimer", "Supprimer", "fermer");
                 loadData();
             }
         }

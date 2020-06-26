@@ -54,6 +54,9 @@
                      <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell Appearing="Cell_OnAppearing">
+                                <ViewCell.ContextActions>
+                                   <MenuItem Clicked="Supprimer_Clicked" CommandParameter="{Binding .}" Text="Supprimer" IsDestructive="true" />
+                                </ViewCell.ContextActions>
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="70">

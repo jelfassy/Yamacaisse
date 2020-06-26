@@ -94,7 +94,49 @@ namespace YamaCaisse.Services.ClientServices
             }
         }
 
-     
-        
+        public async Task<bool> DeleteClient(Client client)
+        {
+            try
+            {
+                Client res;
+                bool result = false;
+                var js = JsonConvert.SerializeObject(client, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+                JObject o = await HttpHelper.DeleteAsync(string.Concat(App.UrlGateway, Baseurl,"/" + client.CLI_ID));
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<Client>();
+                    if (res == null)
+                        result = false;
+                    else
+                        result = true;
+
+                });
+                return result;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_SaveClient"}
+                };
+                Crashes.TrackError(Iex, property);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"SaveClient" }
+                };
+                Crashes.TrackError(ex, property);
+                return false;
+            }
+        }
+
     }
 }
