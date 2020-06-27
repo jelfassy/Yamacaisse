@@ -127,7 +127,6 @@ namespace YamaCaisse.Pages
 
             var rs = await this._ClientDataServices.DeleteClient(client);
 
-            var rs = await this._ClientDataServices.SaveClient(client);
             if (rs)
             {
                 await DisplayAlert("client Supprimer", "Supprimer", "fermer");
