@@ -46,7 +46,7 @@
         </StackLayout>
        <StackLayout Orientation="Horizontal">
                 <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-                <Button x:Name="btValider" Clicked="btValider_Clicked" Text="Encaisser" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
+                <Button x:Name="btValider" Clicked="btValider_Clicked" Text="Valider" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
             </StackLayout>
     </StackLayout>
 </pages:PopupPage>

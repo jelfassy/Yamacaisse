@@ -48,9 +48,9 @@ namespace YamaCaisse.ViewModel
         {
             get
             {
-                if (this.TIK_ANNUL == true)
-                    return TextDecorations.Strikethrough;
-                else
+                //if (this.TIK_ANNUL == true)
+                //    return TextDecorations.Strikethrough;
+                //else
                     return TextDecorations.None;
             }
         }

@@ -301,6 +301,8 @@ namespace YamaCaisse.Pages
                     {
 
                         var rs = await _ticketDataServices.PostTicket(TicketViewModel.Current.GetTicketToSend());
+                        if(ConfigViewModel.Current.ModePressing)
+                            await _ticketDataServices.Print((int)rs.TIK_ID, App.ConfigViewModel.Printer.PRT_ID);
                         if (TicketViewModel.Current.IdTable == null)
                             await Navigation.PushPopupAsync(new PopupPaiement(rs));
                     }

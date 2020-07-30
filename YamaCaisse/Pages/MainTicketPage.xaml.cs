@@ -72,7 +72,12 @@ namespace YamaCaisse.Pages
             if (IsEcranTicket == true)
             {
                 reslistTicket = reslistTicket.ToList();
-               // this.btPayer.IsVisible = false;
+
+                if(ConfigViewModel.Current.Profil != "Manager" && ConfigViewModel.Current.Profil != "Admin")
+                    reslistTicket = reslistTicket.Where(c=>c.Employe == App.User.EMP_NOM).ToList();
+
+                this.btPayer.IsVisible = true;
+                this.btPayer.Text = "Paiement";
                 this.btAnnuler.IsVisible = true;
             }
             else
@@ -104,7 +109,7 @@ namespace YamaCaisse.Pages
 
         public void Cell_OnAppearing(object sender, EventArgs e)
         {
-            var viewCell = (ViewCell)sender;
+            var viewCell = (ViewCell)sender; 
 
             if (viewCell.View != null)
             {
