@@ -8,12 +8,14 @@ using Xamarin.Forms;
 using YamaCaisse.Entity;
 using YamaCaisse.Services.CompteServices;
 using YamaCaisse.Services.PaiementServices;
+using YamaCaisse.Services.TicketServices;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
     public partial class PopupCompte : PopupPage
     {
+        private ITicketDataServices _ticketDataServices;
 
         private ICompteDataServices _compteDataServices;
 
@@ -38,6 +40,7 @@ namespace YamaCaisse.Pages
             btSave.IsVisible = false;
             _compteDataServices = DependencyService.Get<ICompteDataServices>();
             _paiementDataServices = DependencyService.Get<IPaiementDataServices>();
+            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
             LoadListCompte();
         }
 
@@ -108,7 +111,7 @@ namespace YamaCaisse.Pages
 
                 };
                 await _paiementDataServices.PostPaiement(paiementtick);
-
+                await _ticketDataServices.Print(this._idTicket, ConfigViewModel.Current.Printer.PRT_ID);
                 if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
                 {
                     await Navigation.PopPopupAsync();
