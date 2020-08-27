@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Rg.Plugins.Popup.Services;
@@ -47,9 +48,22 @@ namespace YamaCaisse.View
 
         }
 
+        private bool isBusy;
+
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set
+            {
+                isBusy = value;
+                OnPropertyChanged(nameof(IsBusy));
+            }
+        }
+
         public TableView(bool move)
         {
             InitializeComponent();
+            this.BindingContext = this;
             CurrentPage = "Grille";
             InitGridTable(CurrentPage);
             InitListSalle();
@@ -57,6 +71,7 @@ namespace YamaCaisse.View
             NbByPage = 25;
             this.Move = move;
             this.RetourTable = false;
+            this.isBusy = false;
         }
 
         public void Refresh()
@@ -361,6 +376,7 @@ namespace YamaCaisse.View
 
         public async void SetTable(int SelectedTableId)
         {
+            this.isBusy = true;
             if (this.Move == true)
             {
                 var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, SelectedTableId);
@@ -390,6 +406,7 @@ namespace YamaCaisse.View
                 TicketViewModel.Current.Clear();
                 TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId, false);
             }
+            this.isBusy = false;
         }
 
         public void UnSelectAllTable(int SelectedTableId)

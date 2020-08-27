@@ -5,27 +5,47 @@ using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using YamaCaisse.Entity;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
     public partial class PopupFormule : PopupPage
     {
+        private List<Produit> _listFormule;
         public PopupFormule()
         {
             InitializeComponent();
-       
-            this.IdPage = TicketViewModel.Current.GetListOpenFormule().FirstOrDefault().PDT_PageFormule.Value;
+           
+          
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            Load();
+        }
+
+        private async void Load()
+        {
+            _listFormule = await TicketViewModel.Current.GetListOpenFormule();
+            Produit produit;
+            if (this.IdPage == 0)
+                produit = _listFormule.FirstOrDefault();
+            else
+                produit = _listFormule.FirstOrDefault(c => c.PDT_PageFormule == this.IdPage);
+            this.IdPage = produit.PDT_PageFormule.Value;
             this.PageProduitControl.InitProduitButton(this.IdPage);
-            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListCurrentFormule.FirstOrDefault(c => c.T_PRODUIT.Pdt_IsMenu == true && c.T_PRODUIT.PDT_PageFormule == this.IdPage);
+            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListCurrentFormule.FirstOrDefault(c => c.FK_PDT_ID == produit.PDT_ID);
             CreateHeaderFormule();
         }
 
         public void CreateHeaderFormule()
         {
             List<int> listin = new List<int>();
-            var listFormule = TicketViewModel.Current.GetListOpenFormule();
-            foreach (var formule in listFormule)
+            
+            foreach (var formule in _listFormule)
             {
                 if (!listin.Contains(formule.PDT_ID))
                 {
@@ -55,7 +75,8 @@ namespace YamaCaisse.Pages
         {
             Button btn = (Button)sender;
             this.IdPage = int.Parse(btn.ClassId);
-            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListLigneTicket.SingleOrDefault(c => c.T_PRODUIT.Pdt_IsMenu == true && c.T_PRODUIT.PDT_PageFormule == this.IdPage);
+            var formule = _listFormule.FirstOrDefault(c => c.PDT_PageFormule == this.IdPage);
+            TicketViewModel.Current.SelectedligneTicket = TicketViewModel.Current.ListCurrentFormule.FirstOrDefault(c => c.FK_PDT_ID == formule.PDT_ID);
             this.PageProduitControl.InitProduitButton(this.IdPage);
         }
 

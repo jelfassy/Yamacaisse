@@ -2,7 +2,6 @@
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-                 xmlns:rlocal="clr-namespace:YamaCaisse.Renderer;assembly=YamaCaisse"
                  x:Class="YamaCaisse.Pages.PopupPaiement">
     <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="350">
         <StackLayout x:Name="stkPaiement">

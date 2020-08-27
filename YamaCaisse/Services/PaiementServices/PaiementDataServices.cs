@@ -120,5 +120,36 @@ namespace YamaCaisse.Services.PaiementServices
         {
             throw new NotImplementedException();
         }
+
+
+        public async Task<bool> DeletePaiement(PaiementTicket paiement)
+        {
+            try
+            {
+                JObject o = await HttpHelper.DeleteAsync(string.Concat(App.UrlGateway, Baseurl,paiement.PATI_ID));
+
+                return true;
+
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_PostTicket"}
+                };
+                Crashes.TrackError(Iex, property);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PostTicket" }
+                };
+                Crashes.TrackError(ex, property);
+                return false;
+            }
+        }
+
     }
 }

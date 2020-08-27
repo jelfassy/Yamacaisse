@@ -59,7 +59,7 @@ namespace YamaCaisse.Pages
         {
             FirstPressNumber = true;
             LoadBouttonTypePaiement();
-            MontantTotal = _ticket.TIK_MNT_TOTAL - _ticket.T_PAIEMENT_TICKET.Sum(c=>c.Montant.Value);
+            MontantTotal = _ticket.TIK_MNT_TOTAL - _ticket.T_PAIEMENT_TICKET.Where(c=>c.PATI_DELETE != true).Sum(c=>c.Montant.Value);
             eMontantPayer.Text = MontantTotal.ToString("N2");
             eMontantPayer.TextColor = Color.Gray;
             //eMontantPayer.Placeholder = _ticket.TIK_MNT_TOTAL.ToString("0.00");
@@ -247,8 +247,14 @@ namespace YamaCaisse.Pages
             var action = await DisplayAlert("Supprimer?", "Etes-vous sure de vouloir supprimer ce paiement ?", "Yes", "No");
             if(action)
             {
-
+                await _paiementDataServices.DeletePaiement(lignePaiement);
+                var rslist = await this._paiementDataServices.GetListPaiement(this._ticket.TIK_ID);
+                this.eMntPaye.Text = rslist.Sum(c => c.Montant).Value.ToString();
+                this.eMntDue.Text = (this._ticket.TIK_MNT_TOTAL - rslist.Sum(c => c.Montant).Value).ToString();
+                var listPaiement = new ObservableCollection<PaiementTicket>(rslist);
+                this.listViewPaiement.ItemsSource = listPaiement;
             }
+            LoadData();
         }
 
         async void Click_Close(object sender, EventArgs e)

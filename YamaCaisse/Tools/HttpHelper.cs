@@ -281,6 +281,7 @@ namespace YamaCaisse.Tools
             }
         }
 
+
         /// <summary>
         /// Deserializes to list.
         /// </summary>

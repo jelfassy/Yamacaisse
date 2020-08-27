@@ -32,7 +32,7 @@ namespace YamaCaisse.Pages
             this.lbConnectUser.BackgroundColor =Color.FromHex(App.User.EMP_COULEUR);
             this.lbConnectUser.TextColor = Color.White;
 
-            btTicket.IsVisible = false;
+            btTicket.IsVisible = true;
             btRapport.IsVisible = false;
 
             if(ConfigViewModel.Current.ModePressing)
@@ -40,10 +40,10 @@ namespace YamaCaisse.Pages
                 btTable.IsVisible = false;
             }
 
-            if (ConfigViewModel.Current.Profil == "Manager")
-            {
-                btTicket.IsVisible = true;
-            }
+            //if (ConfigViewModel.Current.Profil == "Manager")
+            //{
+            //    btTicket.IsVisible = true;
+            //}
             if(ConfigViewModel.Current.Profil == "Admin")
             {
                 btTicket.IsVisible = true;

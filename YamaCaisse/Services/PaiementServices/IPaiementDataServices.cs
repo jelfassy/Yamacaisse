@@ -34,5 +34,7 @@ namespace YamaCaisse.Services.PaiementServices
         /// <param name="id">Identifier.</param>
         /// <param name="paiement">Paiement.</param>
         Task<bool> PutPaiement(int id, PaiementTicket paiement);
+
+        Task<bool> DeletePaiement(PaiementTicket paiement);
     }
 }

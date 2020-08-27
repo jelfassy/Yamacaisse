@@ -26,6 +26,8 @@ namespace YamaCaisse.ViewModel
         public static TicketViewModel Current => _current ?? (_current = new TicketViewModel());
 
 
+        public bool IsMenu { get; set; }
+
         public void RefreshListProperty()
         {
             OnPropertyChanged(nameof(MontantTotal));
@@ -54,7 +56,7 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.Promotion = null;
         }
 
-        public void SetTicket(Ticket ticket, bool isAddition = false)
+        public async void SetTicket(Ticket ticket, bool isAddition = false)
         {
             if (ticket != null)
             {
@@ -65,11 +67,12 @@ namespace YamaCaisse.ViewModel
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
                 this.ListLigneCompr = new ObservableCollection<LigneTicket>();
-                this.ListCurrentFormule = ticket.T_LIGNE_TICKET.Where(c => c.T_PRODUIT.Pdt_IsMenu == true).ToList();
-                this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET);
+                this.ListCurrentFormule = await this._ticketDataServices.ListMenu(ticket.TIK_ID);
+                this.ListPaiementTicket = new ObservableCollection<PaiementTicket>(ticket.T_PAIEMENT_TICKET?.Where(c=>c.PATI_DELETE != true));
                 this.Ticket = ticket;
                 this.MotifAnnulation = ticket.TIK_MOTIF_ANNUL;
                 this.Client = ticket.T_CLIENT;
+                this.IsMenu = await this.IsCurrentMenu();
                 if(!isAddition)
                 {
                     this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
@@ -241,18 +244,23 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+        private async Task<bool> IsCurrentMenu()
+        {
+            return await _ticketDataServices.IsMenu(this.TKT_ID);
+        }
+
         public bool HaveMenuInTicket
         {
             get
             {
                 try
                 {
-                    if (ListLigneTicket == null)
+                    if (ListCurrentFormule == null)
                         return false;
-                    if (ListLigneTicket.Count > 0)
+                    if (ListCurrentFormule.Count > 0)
                     {
-                        var rs = ListLigneTicket.Select(c => c.T_PRODUIT).Where(c => c.Pdt_IsMenu == true);
-                        return rs.Any();
+                        var rs = IsMenu;
+                        return rs;
                     }
                     return false;
                 }
@@ -264,10 +272,12 @@ namespace YamaCaisse.ViewModel
             }
         }
 
-        public List<Produit> GetListOpenFormule()
+
+        public async Task<List<Produit>> GetListOpenFormule()
         {
-            var rs = this.ListCurrentFormule.Select(c => c.T_PRODUIT);
-            return rs.ToList();
+            var rs = await this._ticketDataServices.GetListProduitMenu(this.TKT_ID);
+             return rs;
+          //  return null;
         }
 
         private ObservableCollection<LigneTicket> _listLigneTicket;
@@ -460,7 +470,7 @@ namespace YamaCaisse.ViewModel
             {
                 var inlist = newlist.SingleOrDefault(d => 
                     d.LTK_DESIGNATION_PRODUIT == item.LTK_DESIGNATION_PRODUIT
-                       // && d.LTK_SOMME == item.LTK_SOMME
+                        && d.LTK_SOMME == item.LTK_SOMME
                         && d.FK_REC_ID == item.FK_REC_ID 
                         && d.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID).SequenceEqual(item.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID)));
                 if (inlist != null)

@@ -277,6 +277,113 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
+
+
+        public async Task<bool> IsMenu(int idTicket)
+        {
+            try
+            {
+
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "IsMenu/", idTicket));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IsMenu"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IsMenu" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
+        public async Task<List<LigneTicket>> ListMenu(int idTicket)
+        {
+            try
+            {
+                List<LigneTicket> res = new List<LigneTicket>();
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "ListMenu/", idTicket.ToString()));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.Select((JToken s) => s.ToObject<LigneTicket>()).ToList();
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetTickets"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetTickets"}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+        
+        public async Task<List<Produit>> GetListProduitMenu(int idTicket)
+        {
+            try
+            {
+                List<Produit> res = new List<Produit>();
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetListProduitMenu/", idTicket.ToString()));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.Select((JToken s) => s.ToObject<Produit>()).ToList();
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetListProduitMenu"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetListProduitMenu"}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
         /// <summary>
         /// Posts the ticket.
         /// </summary>
@@ -317,6 +424,88 @@ namespace YamaCaisse.Services.TicketServices
                 var property = new Dictionary<string, string>
                 {
                     {this.GetType().Name,"PostTicket" }
+                };
+                Crashes.TrackError(ex, property);
+                return null;
+            }
+        }
+
+        public async Task<Ticket> EclaterVerTicket(int idOldTicket,Ticket newt_TICKET)
+        {
+            try
+            {
+                Ticket res = null;
+                var js = JsonConvert.SerializeObject(new { idOldTicket, newt_TICKET }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+                // var rs = string.Concat("{\"t_TICKET\":", js, "}");
+
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"EclaterVersTicket"), js);
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<Ticket>();
+
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_EclaterVerTicket"}
+                };
+                Crashes.TrackError(Iex, property);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"EclaterVerTicket" }
+                };
+                Crashes.TrackError(ex, property);
+                return null;
+            }
+        }
+
+        public async Task<Ticket> EclaterVerTable(int idOldTicket, Ticket newt_TICKET)
+        {
+            try
+            {
+                Ticket res = null;
+                var js = JsonConvert.SerializeObject(new { idOldTicket, newt_TICKET }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+                // var rs = string.Concat("{\"t_TICKET\":", js, "}");
+
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "EclaterVerTable"), js);
+
+                await Task.Run(() =>
+                {
+                    res = o.ToObject<Ticket>();
+
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_EclaterVerTable"}
+                };
+                Crashes.TrackError(Iex, property);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"EclaterVerTable" }
                 };
                 Crashes.TrackError(ex, property);
                 return null;

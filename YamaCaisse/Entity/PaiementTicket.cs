@@ -37,6 +37,8 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public bool? PATI_DELETE { get; set; }
+
         public int? EMP_ID { get; set; }
 
         public DateTime? PATI_DATE { get; set; }

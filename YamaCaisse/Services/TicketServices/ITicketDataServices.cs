@@ -66,5 +66,13 @@ namespace YamaCaisse.Services.TicketServices
         Task<bool> RetourTable(int idTable, Ticket ticket);
 
         Task<bool> AnnulerTicker(Ticket ticket);
+
+        Task<Ticket> EclaterVerTicket(int idOldTicket, Ticket ticket);
+
+        Task<Ticket> EclaterVerTable(int idOldTicket, Ticket newt_TICKET);
+
+        Task<bool> IsMenu(int idTicket);
+        Task<List<LigneTicket>> ListMenu(int idTicket);
+        Task<List<Produit>> GetListProduitMenu(int idTicket);
     }
 }

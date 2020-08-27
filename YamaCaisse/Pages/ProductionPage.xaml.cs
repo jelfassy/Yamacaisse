@@ -140,10 +140,10 @@ namespace YamaCaisse.Pages
                 {
                     foreach (var ligne in BligneTicket)
                     {
-                        if (listligneRecap.Select(c => c.T_PRODUIT.PDT_Designation).Contains(ligne.T_PRODUIT.PDT_Designation))
+                        if (listligneRecap.Select(c => c.LTK_DESIGNATION_PRODUIT).Contains(ligne.LTK_DESIGNATION_PRODUIT))
                         {
                             if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecap.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
-                                listligneRecap.SingleOrDefault(c => c.T_PRODUIT.PDT_Designation == ligne.T_PRODUIT.PDT_Designation).LTK_QTE += ligne.LTK_QTE;
+                                listligneRecap.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT).LTK_QTE += ligne.LTK_QTE;
                             else
                                 listligneRecap.Add(ligne);
                         }

@@ -66,8 +66,6 @@ namespace YamaCaisse
         {
             try
             {
-
-
                 pkListServeur.Items.Clear();
                 List<ServeurCnx> listServeur = new List<ServeurCnx>();
                 if (Application.Current.Properties.ContainsKey("ServeurList"))
