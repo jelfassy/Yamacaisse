@@ -38,6 +38,11 @@ namespace YamaCaisse.Pages
             if(ConfigViewModel.Current.ModePressing)
             {
                 btTable.IsVisible = false;
+                btFacture.IsVisible = true;
+            }
+            else
+            {
+                btFacture.IsVisible = false;
             }
 
             //if (ConfigViewModel.Current.Profil == "Manager")
@@ -88,6 +93,11 @@ namespace YamaCaisse.Pages
         async void Click_Rapport (object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new YamaCaisse.Pages.RapportPage());
+        }
+
+        async void Click_Facture(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new YamaCaisse.Pages.FacturePage());
         }
 
         async void Click_Deconnexion(object sender, EventArgs e)

@@ -134,15 +134,15 @@ namespace YamaCaisse.Pages
             }
         }
 
-        public async Task<Microcharts.Entry[]> GetData(int idGraphique)
+        public async Task<Microcharts.ChartEntry[]> GetData(int idGraphique)
         {
             listData = await _rapportDataServices.GetGraphiqueData(CurrentDate, idGraphique);
-            var entries = new Microcharts.Entry[listData.Count];
+            var entries = new Microcharts.ChartEntry[listData.Count];
             int i = 0;
             int color = 0;
             foreach (var entry in listData)
             {
-                entries[i] = new Microcharts.Entry((float)entry.value)
+                entries[i] = new Microcharts.ChartEntry((float)entry.value)
                 {
                     Label = entry.Name,
                     ValueLabel = entry.value.ToString(),

@@ -74,5 +74,7 @@ namespace YamaCaisse.Services.TicketServices
         Task<bool> IsMenu(int idTicket);
         Task<List<LigneTicket>> ListMenu(int idTicket);
         Task<List<Produit>> GetListProduitMenu(int idTicket);
+
+        Task<bool> Offert(int idTicket);
     }
 }

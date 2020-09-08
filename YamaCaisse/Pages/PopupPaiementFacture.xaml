@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="YamaCaisse.Pages.PopupPaiementFacture">
+   <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="350">
+        <StackLayout x:Name="stkPaiement">
+             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+              <Label Text="Compte" Grid.Column="0" Grid.Row="0" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+              <Label x:Name="lbCompte" Text="{Binding CurrentFacture.T_COMPTE.CMP_NOM}" Grid.Column="1" Grid.Row="0" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+
+              <Label Text="Num Facture" Grid.Column="0" Grid.Row="1" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+              <Label x:Name="lbNumFact" Text="{Binding CurrentFacture.FAC_NUM}" Grid.Column="1" Grid.Row="1" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+
+              <Label Text="Montant" Grid.Column="0" Grid.Row="2" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+              <Label x:Name="lbMontant" Text="{Binding CurrentFacture.MONTANT_TTC,StringFormat='{0:0.00}'}" Grid.Column="1" Grid.Row="2" HorizontalOptions="FillAndExpand" FontSize="22" BackgroundColor="White" HorizontalTextAlignment="Center" />
+
+             </Grid>
+             <Grid x:Name="gdTypePaiment" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <StackLayout Orientation="Horizontal">
+                <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button x:Name="btEncaisser" Clicked="Click_Encaisser" Text="Encaisser" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
+            </StackLayout>
+        </StackLayout>
+       </StackLayout>
+</pages:PopupPage>

@@ -442,7 +442,7 @@ namespace YamaCaisse.Services.TicketServices
 
                 // var rs = string.Concat("{\"t_TICKET\":", js, "}");
 
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"EclaterVersTicket"), js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"Eclater/VersTicket"), js);
 
                 await Task.Run(() =>
                 {
@@ -471,19 +471,19 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
-        public async Task<Ticket> EclaterVerTable(int idOldTicket, Ticket newt_TICKET)
+        public async Task<Ticket> EclaterVerTable(int idOldTicket, Ticket t_TICKET)
         {
             try
             {
                 Ticket res = null;
-                var js = JsonConvert.SerializeObject(new { idOldTicket, newt_TICKET }, new JsonSerializerSettings()
+                var js = JsonConvert.SerializeObject(t_TICKET, new JsonSerializerSettings()
                 {
                     NullValueHandling = NullValueHandling.Ignore
                 });
 
                 // var rs = string.Concat("{\"t_TICKET\":", js, "}");
 
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "EclaterVerTable"), js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Eclater/VerTable?idOldTicket="+ idOldTicket), js);
 
                 await Task.Run(() =>
                 {
@@ -625,6 +625,44 @@ namespace YamaCaisse.Services.TicketServices
                 };
                 Crashes.TrackError(ex, property);
                 return false;
+            }
+        }
+
+        public async Task<bool> Offert(int idTicket)
+        {
+            try
+            {
+
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Offert/", idTicket));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"Offert"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"Offert"}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
             }
         }
     }

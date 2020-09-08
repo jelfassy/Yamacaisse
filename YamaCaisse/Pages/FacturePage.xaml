@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse"
+             xmlns:lx="clr-namespace:YamaCaisse.Pages" 
+             x:Class="YamaCaisse.Pages.FacturePage">
+      <ContentPage.Content>
+        <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <local:HeaderBar />
+                     <SearchBar Placeholder="Rechercher Compte..."
+                       TextChanged="OnTextChanged"
+                        CancelButtonColor="Orange"
+                        PlaceholderColor="Orange"
+                        TextColor="Orange"
+                        HorizontalTextAlignment="Center"
+                        FontSize="Medium"
+                        FontAttributes="Italic" />
+                        <ListView x:Name="listViewFacture" HorizontalOptions="FillAndExpand" RowHeight="60" ItemsSource="{Binding ListFacture}" SeparatorVisibility="Default" ItemSelected="Ligne_ItemSelected">
+                        <ListView.Header>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60">
+                                    </RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="3*" />
+                                    <ColumnDefinition Width="2*" />
+                                     <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+                                 <Label Grid.Row="0" Grid.Column="0" Text="Compte" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Numéro" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="2" Text="Montant" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                </Label>
+                                <Label Grid.Row="0" Grid.Column="3" Text="Payer" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
+                                </Label>
+                            </Grid>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell Appearing="Cell_OnAppearing" >
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="60">
+                                            </RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*" />
+                                            <ColumnDefinition Width="3*" />
+                                            <ColumnDefinition Width="2*" />
+                                            <ColumnDefinition Width="2*" />
+                                        </Grid.ColumnDefinitions>
+                                        <BoxView x:Name="backgdligne" Grid.Column="0" Grid.Row="0" BackgroundColor="{Binding LigneAnnule}" Grid.ColumnSpan="6" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding T_COMPTE.CMP_NOM}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding FAC_NUM}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}" />
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding MONTANT_TTC,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}"/>
+                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding PAYER}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" TextDecorations="{Binding TextDecorations}"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                              <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <!--<Button x:Name="btPayer" Grid.Column="0" Text="Payer" Clicked="btPayer_Clicked" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />-->
+            </Grid>
+             </StackLayout>
+            <!--<lx:ActivityIndicator IsBusy="{Binding IsBusy}" />-->
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

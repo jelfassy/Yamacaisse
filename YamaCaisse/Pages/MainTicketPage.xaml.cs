@@ -55,6 +55,7 @@ namespace YamaCaisse.Pages
             if (ConfigViewModel.Current.Profil != "Admin")
             {
                 btAnnuler.IsVisible = false;
+                btOffert.IsVisible = false;
             }
         }
 
@@ -82,6 +83,7 @@ namespace YamaCaisse.Pages
             }
             else
             {
+                
                 this.btAnnuler.IsVisible = true;
                 if (ConfigViewModel.Current.Profil == "Manager" || ConfigViewModel.Current.Profil == "Admin")
                 {
@@ -240,6 +242,16 @@ namespace YamaCaisse.Pages
             }
         }
 
+        void btOffert_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (TicketViewModel.Current.TKT_ID != 0)
+            {
+                this._ticketDataServices.Offert(TicketViewModel.Current.TKT_ID);
+                //var popupAnn = new PopupAnnuler();
+                //popupAnn._maintTicketPage = this;
+                //await Navigation.PushPopupAsync(popupAnn);
+            }
+        }
 
 
     }

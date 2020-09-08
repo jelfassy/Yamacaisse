@@ -161,6 +161,7 @@ namespace YamaCaisse.Pages
             {
                await DisplayAlert("client Ajouter", "Ajouter", "fermer");
                 loadData();
+
             }
         }
 

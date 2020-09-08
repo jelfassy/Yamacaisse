@@ -2,35 +2,72 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
-      "Microcharts/0.7.1": {
+      "HarfBuzzSharp/2.6.1.6": {
         "type": "package",
-        "dependencies": {
-          "SkiaSharp.Views": "1.59.1.1"
-        },
         "compile": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/HarfBuzzSharp.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/osx/native/libHarfBuzzSharp.dylib": {
+            "assetType": "native",
+            "rid": "osx"
+          },
+          "runtimes/win-arm64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
         }
       },
-      "Microcharts.Forms/0.7.1": {
+      "Microcharts/0.9.5.7": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp.Views.Forms": "1.59.1.1",
-          "System.ValueTuple": "4.4.0",
-          "Xamarin.Forms": "2.4.0.280"
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp.Views": "2.80.1",
+          "Topten.RichTextKit": "0.3.129"
         },
         "compile": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.1": {
+      "Microcharts.Forms/0.9.5.7": {
+        "type": "package",
+        "dependencies": {
+          "Microcharts": "0.9.5.7",
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "System.ValueTuple": "4.5.0",
+          "Topten.RichTextKit": "0.3.129",
+          "Xamarin.Forms": "4.7.0.1179"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        }
+      },
+      "Microsoft.AppCenter/3.4.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -41,10 +78,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.1": {
+      "Microsoft.AppCenter.Analytics/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -55,10 +92,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.1": {
+      "Microsoft.AppCenter.Crashes/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -69,10 +106,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.2.1": {
+      "Microsoft.AppCenter.Distribute/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -83,10 +120,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.2.1": {
+      "Microsoft.AppCenter.Push/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -109,10 +146,10 @@
           "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/3.1.3": {
+      "Microsoft.AspNetCore.Connections.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "3.1.3",
+          "Microsoft.AspNetCore.Http.Features": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -122,12 +159,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Client/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
@@ -136,11 +173,11 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Common/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
@@ -149,10 +186,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.3": {
+      "Microsoft.AspNetCore.Http.Features/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -162,11 +199,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
@@ -175,14 +212,14 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging": "3.1.3",
-          "System.Threading.Channels": "4.7.0"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging": "3.1.7",
+          "System.Threading.Channels": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
@@ -191,12 +228,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
@@ -205,10 +242,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {}
@@ -229,10 +266,10 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.3": {
+      "Microsoft.Extensions.Configuration/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.3"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -241,10 +278,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -253,10 +290,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.3": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.3"
+          "Microsoft.Extensions.Configuration": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -265,10 +302,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -277,7 +314,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -286,13 +323,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.3": {
+      "Microsoft.Extensions.Logging/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -301,7 +338,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -310,11 +347,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.3": {
+      "Microsoft.Extensions.Options/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -324,7 +361,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.3": {
+      "Microsoft.Extensions.Primitives/3.1.7": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -355,10 +392,10 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/2.0.0.2": {
+      "Rg.Plugins.Popup/2.0.0.5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.5.0.530"
+          "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
@@ -367,7 +404,7 @@
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.2.1": {
+      "SkiaSharp/2.80.1": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
@@ -375,18 +412,17 @@
         "runtime": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
+        },
         "runtimeTargets": {
           "runtimes/osx/native/libSkiaSharp.dylib": {
             "assetType": "native",
             "rid": "osx"
           },
-          "runtimes/tizen-armel/native/libSkiaSharp.so": {
+          "runtimes/win-arm64/native/libSkiaSharp.dll": {
             "assetType": "native",
-            "rid": "tizen-armel"
-          },
-          "runtimes/tizen-x86/native/libSkiaSharp.so": {
-            "assetType": "native",
-            "rid": "tizen-x86"
+            "rid": "win-arm64"
           },
           "runtimes/win-x64/native/libSkiaSharp.dll": {
             "assetType": "native",
@@ -398,10 +434,10 @@
           }
         }
       },
-      "SkiaSharp.Views/1.68.2.1": {
+      "SkiaSharp.Views/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1"
+          "SkiaSharp": "2.80.1"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
@@ -410,12 +446,12 @@
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.2.1": {
+      "SkiaSharp.Views.Forms/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1",
-          "SkiaSharp.Views": "1.68.2.1",
-          "Xamarin.Forms": "4.4.0.991757"
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views": "2.80.1",
+          "Xamarin.Forms": "4.6.0.772"
         },
         "compile": {
           "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
@@ -424,7 +460,7 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "System.Buffers/4.5.0": {
+      "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Buffers.dll": {}
@@ -476,7 +512,7 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "System.Text.Encodings.Web/4.7.0": {
+      "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
@@ -485,13 +521,13 @@
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/4.7.1": {
+      "System.Text.Json/4.7.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
-          "System.Buffers": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.7.0",
-          "System.Text.Encodings.Web": "4.7.0"
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1",
+          "System.Text.Encodings.Web": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
@@ -500,7 +536,7 @@
           "lib/netstandard2.0/System.Text.Json.dll": {}
         }
       },
-      "System.Threading.Channels/4.7.0": {
+      "System.Threading.Channels/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Threading.Channels.dll": {}
@@ -518,7 +554,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -527,7 +563,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.1": {
+      "Topten.RichTextKit/0.3.129": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp": "2.80.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        }
+      },
+      "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -540,7 +589,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.726": {
+      "Xamarin.Forms/4.8.0.1364": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -616,8 +665,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -674,20 +723,20 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microcharts": "0.7.1",
-          "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.2.1",
-          "Microsoft.AppCenter.Analytics": "3.2.1",
-          "Microsoft.AppCenter.Crashes": "3.2.1",
-          "Microsoft.AppCenter.Distribute": "3.2.1",
-          "Microsoft.AppCenter.Push": "3.2.1",
+          "Microcharts": "0.9.5.7",
+          "Microcharts.Forms": "0.9.5.7",
+          "Microsoft.AppCenter": "3.4.1",
+          "Microsoft.AppCenter.Analytics": "3.4.1",
+          "Microsoft.AppCenter.Crashes": "3.4.1",
+          "Microsoft.AppCenter.Distribute": "3.4.1",
+          "Microsoft.AppCenter.Push": "3.4.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
           "Polly": "7.2.1",
-          "Rg.Plugins.Popup": "2.0.0.2",
-          "SkiaSharp.Views.Forms": "1.68.2.1",
-          "Xamarin.Essentials": "1.5.3.1",
-          "Xamarin.Forms": "4.6.0.726"
+          "Rg.Plugins.Popup": "2.0.0.5",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "Xamarin.Essentials": "1.5.3.2",
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -698,35 +747,54 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
-      "Microcharts/0.7.1": {
+      "HarfBuzzSharp/2.6.1.6": {
         "type": "package",
-        "dependencies": {
-          "SkiaSharp.Views": "1.59.1.1"
-        },
         "compile": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/HarfBuzzSharp.targets": {}
         }
       },
-      "Microcharts.Forms/0.7.1": {
+      "Microcharts/0.9.5.7": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp.Views.Forms": "1.59.1.1",
-          "System.ValueTuple": "4.4.0",
-          "Xamarin.Forms": "2.4.0.280"
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp.Views": "2.80.1",
+          "Topten.RichTextKit": "0.3.129"
         },
         "compile": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.1": {
+      "Microcharts.Forms/0.9.5.7": {
+        "type": "package",
+        "dependencies": {
+          "Microcharts": "0.9.5.7",
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "System.ValueTuple": "4.5.0",
+          "Topten.RichTextKit": "0.3.129",
+          "Xamarin.Forms": "4.7.0.1179"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        }
+      },
+      "Microsoft.AppCenter/3.4.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -737,10 +805,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.1": {
+      "Microsoft.AppCenter.Analytics/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -751,10 +819,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.1": {
+      "Microsoft.AppCenter.Crashes/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -765,10 +833,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.2.1": {
+      "Microsoft.AppCenter.Distribute/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -779,10 +847,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.2.1": {
+      "Microsoft.AppCenter.Push/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -805,10 +873,10 @@
           "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/3.1.3": {
+      "Microsoft.AspNetCore.Connections.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "3.1.3",
+          "Microsoft.AspNetCore.Http.Features": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -818,12 +886,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Client/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
@@ -832,11 +900,11 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Common/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
@@ -845,10 +913,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.3": {
+      "Microsoft.AspNetCore.Http.Features/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -858,11 +926,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
@@ -871,14 +939,14 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging": "3.1.3",
-          "System.Threading.Channels": "4.7.0"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging": "3.1.7",
+          "System.Threading.Channels": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
@@ -887,12 +955,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
@@ -901,10 +969,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {}
@@ -925,10 +993,10 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.3": {
+      "Microsoft.Extensions.Configuration/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.3"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -937,10 +1005,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -949,10 +1017,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.3": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.3"
+          "Microsoft.Extensions.Configuration": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -961,10 +1029,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -973,7 +1041,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -982,13 +1050,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.3": {
+      "Microsoft.Extensions.Logging/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -997,7 +1065,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -1006,11 +1074,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.3": {
+      "Microsoft.Extensions.Options/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -1020,7 +1088,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.3": {
+      "Microsoft.Extensions.Primitives/3.1.7": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -1051,10 +1119,10 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/2.0.0.2": {
+      "Rg.Plugins.Popup/2.0.0.5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.5.0.530"
+          "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
@@ -1063,19 +1131,22 @@
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.2.1": {
+      "SkiaSharp/2.80.1": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
         },
         "runtime": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
         }
       },
-      "SkiaSharp.Views/1.68.2.1": {
+      "SkiaSharp.Views/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1"
+          "SkiaSharp": "2.80.1"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
@@ -1084,12 +1155,12 @@
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.2.1": {
+      "SkiaSharp.Views.Forms/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1",
-          "SkiaSharp.Views": "1.68.2.1",
-          "Xamarin.Forms": "4.4.0.991757"
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views": "2.80.1",
+          "Xamarin.Forms": "4.6.0.772"
         },
         "compile": {
           "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
@@ -1098,7 +1169,7 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "System.Buffers/4.5.0": {
+      "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Buffers.dll": {}
@@ -1150,7 +1221,7 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "System.Text.Encodings.Web/4.7.0": {
+      "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
@@ -1159,13 +1230,13 @@
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/4.7.1": {
+      "System.Text.Json/4.7.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
-          "System.Buffers": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.7.0",
-          "System.Text.Encodings.Web": "4.7.0"
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1",
+          "System.Text.Encodings.Web": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
@@ -1174,7 +1245,7 @@
           "lib/netstandard2.0/System.Text.Json.dll": {}
         }
       },
-      "System.Threading.Channels/4.7.0": {
+      "System.Threading.Channels/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Threading.Channels.dll": {}
@@ -1192,7 +1263,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1201,7 +1272,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.1": {
+      "Topten.RichTextKit/0.3.129": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp": "2.80.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        }
+      },
+      "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -1214,7 +1298,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.726": {
+      "Xamarin.Forms/4.8.0.1364": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1290,8 +1374,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -1348,20 +1432,20 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microcharts": "0.7.1",
-          "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.2.1",
-          "Microsoft.AppCenter.Analytics": "3.2.1",
-          "Microsoft.AppCenter.Crashes": "3.2.1",
-          "Microsoft.AppCenter.Distribute": "3.2.1",
-          "Microsoft.AppCenter.Push": "3.2.1",
+          "Microcharts": "0.9.5.7",
+          "Microcharts.Forms": "0.9.5.7",
+          "Microsoft.AppCenter": "3.4.1",
+          "Microsoft.AppCenter.Analytics": "3.4.1",
+          "Microsoft.AppCenter.Crashes": "3.4.1",
+          "Microsoft.AppCenter.Distribute": "3.4.1",
+          "Microsoft.AppCenter.Push": "3.4.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
           "Polly": "7.2.1",
-          "Rg.Plugins.Popup": "2.0.0.2",
-          "SkiaSharp.Views.Forms": "1.68.2.1",
-          "Xamarin.Essentials": "1.5.3.1",
-          "Xamarin.Forms": "4.6.0.726"
+          "Rg.Plugins.Popup": "2.0.0.5",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "Xamarin.Essentials": "1.5.3.2",
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -1372,35 +1456,57 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
-      "Microcharts/0.7.1": {
+      "HarfBuzzSharp/2.6.1.6": {
         "type": "package",
-        "dependencies": {
-          "SkiaSharp.Views": "1.59.1.1"
-        },
         "compile": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/libHarfBuzzSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/HarfBuzzSharp.targets": {}
         }
       },
-      "Microcharts.Forms/0.7.1": {
+      "Microcharts/0.9.5.7": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp.Views.Forms": "1.59.1.1",
-          "System.ValueTuple": "4.4.0",
-          "Xamarin.Forms": "2.4.0.280"
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp.Views": "2.80.1",
+          "Topten.RichTextKit": "0.3.129"
         },
         "compile": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.1": {
+      "Microcharts.Forms/0.9.5.7": {
+        "type": "package",
+        "dependencies": {
+          "Microcharts": "0.9.5.7",
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "System.ValueTuple": "4.5.0",
+          "Topten.RichTextKit": "0.3.129",
+          "Xamarin.Forms": "4.7.0.1179"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        }
+      },
+      "Microsoft.AppCenter/3.4.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -1411,10 +1517,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.1": {
+      "Microsoft.AppCenter.Analytics/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -1425,10 +1531,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.1": {
+      "Microsoft.AppCenter.Crashes/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -1439,10 +1545,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.2.1": {
+      "Microsoft.AppCenter.Distribute/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -1453,10 +1559,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.2.1": {
+      "Microsoft.AppCenter.Push/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -1479,10 +1585,10 @@
           "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/3.1.3": {
+      "Microsoft.AspNetCore.Connections.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "3.1.3",
+          "Microsoft.AspNetCore.Http.Features": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -1492,12 +1598,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Client/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
@@ -1506,11 +1612,11 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Common/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
@@ -1519,10 +1625,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.3": {
+      "Microsoft.AspNetCore.Http.Features/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -1532,11 +1638,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
@@ -1545,14 +1651,14 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging": "3.1.3",
-          "System.Threading.Channels": "4.7.0"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging": "3.1.7",
+          "System.Threading.Channels": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
@@ -1561,12 +1667,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
@@ -1575,10 +1681,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {}
@@ -1599,10 +1705,10 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.3": {
+      "Microsoft.Extensions.Configuration/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.3"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -1611,10 +1717,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -1623,10 +1729,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.3": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.3"
+          "Microsoft.Extensions.Configuration": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -1635,10 +1741,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -1647,7 +1753,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -1656,13 +1762,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.3": {
+      "Microsoft.Extensions.Logging/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -1671,7 +1777,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -1680,11 +1786,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.3": {
+      "Microsoft.Extensions.Options/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -1694,7 +1800,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.3": {
+      "Microsoft.Extensions.Primitives/3.1.7": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -1725,10 +1831,10 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/2.0.0.2": {
+      "Rg.Plugins.Popup/2.0.0.5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.5.0.530"
+          "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
@@ -1737,7 +1843,7 @@
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.2.1": {
+      "SkiaSharp/2.80.1": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
@@ -1747,12 +1853,15 @@
         },
         "native": {
           "runtimes/win-x64/native/libSkiaSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
         }
       },
-      "SkiaSharp.Views/1.68.2.1": {
+      "SkiaSharp.Views/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1"
+          "SkiaSharp": "2.80.1"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
@@ -1761,12 +1870,12 @@
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.2.1": {
+      "SkiaSharp.Views.Forms/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1",
-          "SkiaSharp.Views": "1.68.2.1",
-          "Xamarin.Forms": "4.4.0.991757"
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views": "2.80.1",
+          "Xamarin.Forms": "4.6.0.772"
         },
         "compile": {
           "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
@@ -1775,7 +1884,7 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "System.Buffers/4.5.0": {
+      "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Buffers.dll": {}
@@ -1827,7 +1936,7 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "System.Text.Encodings.Web/4.7.0": {
+      "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
@@ -1836,13 +1945,13 @@
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/4.7.1": {
+      "System.Text.Json/4.7.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
-          "System.Buffers": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.7.0",
-          "System.Text.Encodings.Web": "4.7.0"
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1",
+          "System.Text.Encodings.Web": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
@@ -1851,7 +1960,7 @@
           "lib/netstandard2.0/System.Text.Json.dll": {}
         }
       },
-      "System.Threading.Channels/4.7.0": {
+      "System.Threading.Channels/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Threading.Channels.dll": {}
@@ -1869,7 +1978,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -1878,7 +1987,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.1": {
+      "Topten.RichTextKit/0.3.129": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp": "2.80.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        }
+      },
+      "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -1891,7 +2013,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.726": {
+      "Xamarin.Forms/4.8.0.1364": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1967,8 +2089,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -2025,20 +2147,20 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microcharts": "0.7.1",
-          "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.2.1",
-          "Microsoft.AppCenter.Analytics": "3.2.1",
-          "Microsoft.AppCenter.Crashes": "3.2.1",
-          "Microsoft.AppCenter.Distribute": "3.2.1",
-          "Microsoft.AppCenter.Push": "3.2.1",
+          "Microcharts": "0.9.5.7",
+          "Microcharts.Forms": "0.9.5.7",
+          "Microsoft.AppCenter": "3.4.1",
+          "Microsoft.AppCenter.Analytics": "3.4.1",
+          "Microsoft.AppCenter.Crashes": "3.4.1",
+          "Microsoft.AppCenter.Distribute": "3.4.1",
+          "Microsoft.AppCenter.Push": "3.4.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
           "Polly": "7.2.1",
-          "Rg.Plugins.Popup": "2.0.0.2",
-          "SkiaSharp.Views.Forms": "1.68.2.1",
-          "Xamarin.Essentials": "1.5.3.1",
-          "Xamarin.Forms": "4.6.0.726"
+          "Rg.Plugins.Popup": "2.0.0.5",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "Xamarin.Essentials": "1.5.3.2",
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -2049,35 +2171,57 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
-      "Microcharts/0.7.1": {
+      "HarfBuzzSharp/2.6.1.6": {
         "type": "package",
-        "dependencies": {
-          "SkiaSharp.Views": "1.59.1.1"
-        },
         "compile": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
         },
         "runtime": {
-          "lib/Xamarin.iOS10/Microcharts.dll": {},
-          "lib/Xamarin.iOS10/Microcharts.iOS.dll": {}
+          "lib/xamarinios1.0/HarfBuzzSharp.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/libHarfBuzzSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/HarfBuzzSharp.targets": {}
         }
       },
-      "Microcharts.Forms/0.7.1": {
+      "Microcharts/0.9.5.7": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp.Views.Forms": "1.59.1.1",
-          "System.ValueTuple": "4.4.0",
-          "Xamarin.Forms": "2.4.0.280"
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp.Views": "2.80.1",
+          "Topten.RichTextKit": "0.3.129"
         },
         "compile": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/Microcharts.Forms.dll": {}
+          "lib/xamarinios1.0/Microcharts.dll": {},
+          "lib/xamarinios1.0/Microcharts.iOS.dll": {}
         }
       },
-      "Microsoft.AppCenter/3.2.1": {
+      "Microcharts.Forms/0.9.5.7": {
+        "type": "package",
+        "dependencies": {
+          "Microcharts": "0.9.5.7",
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "System.ValueTuple": "4.5.0",
+          "Topten.RichTextKit": "0.3.129",
+          "Xamarin.Forms": "4.7.0.1179"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microcharts.Forms.dll": {},
+          "lib/netstandard2.0/Microcharts.dll": {}
+        }
+      },
+      "Microsoft.AppCenter/3.4.1": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.dll": {},
@@ -2088,10 +2232,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/3.2.1": {
+      "Microsoft.AppCenter.Analytics/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.dll": {},
@@ -2102,10 +2246,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Analytics.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/3.2.1": {
+      "Microsoft.AppCenter.Crashes/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.dll": {},
@@ -2116,10 +2260,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Distribute/3.2.1": {
+      "Microsoft.AppCenter.Distribute/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.dll": {},
@@ -2130,10 +2274,10 @@
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.iOS.Bindings.dll": {}
         }
       },
-      "Microsoft.AppCenter.Push/3.2.1": {
+      "Microsoft.AppCenter.Push/3.4.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "3.2.1"
+          "Microsoft.AppCenter": "3.4.1"
         },
         "compile": {
           "lib/Xamarin.iOS10/Microsoft.AppCenter.Push.dll": {},
@@ -2156,10 +2300,10 @@
           "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/3.1.3": {
+      "Microsoft.AspNetCore.Connections.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "3.1.3",
+          "Microsoft.AspNetCore.Http.Features": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -2169,12 +2313,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Client/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Common": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
@@ -2183,11 +2327,11 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Common/3.1.3": {
+      "Microsoft.AspNetCore.Http.Connections.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
@@ -2196,10 +2340,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Http.Features/3.1.3": {
+      "Microsoft.AspNetCore.Http.Features/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.IO.Pipelines": "4.7.1"
         },
         "compile": {
@@ -2209,11 +2353,11 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.3"
+          "Microsoft.AspNetCore.Http.Connections.Client": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
@@ -2222,14 +2366,14 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Client.Core/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3",
-          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging": "3.1.3",
-          "System.Threading.Channels": "4.7.0"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging": "3.1.7",
+          "System.Threading.Channels": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
@@ -2238,12 +2382,12 @@
           "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Common/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3",
-          "System.Text.Json": "4.7.1"
+          "Microsoft.AspNetCore.Connections.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7",
+          "System.Text.Json": "4.7.2"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
@@ -2252,10 +2396,10 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll": {}
         }
       },
-      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.3": {
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "3.1.3"
+          "Microsoft.AspNetCore.SignalR.Common": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {}
@@ -2276,10 +2420,10 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration/3.1.3": {
+      "Microsoft.Extensions.Configuration/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Abstractions": "3.1.3"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
@@ -2288,10 +2432,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.3"
+          "Microsoft.Extensions.Primitives": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
@@ -2300,10 +2444,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Binder/3.1.3": {
+      "Microsoft.Extensions.Configuration.Binder/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration": "3.1.3"
+          "Microsoft.Extensions.Configuration": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
@@ -2312,10 +2456,10 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
@@ -2324,7 +2468,7 @@
           "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.3": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
@@ -2333,13 +2477,13 @@
           "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging/3.1.3": {
+      "Microsoft.Extensions.Logging/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Configuration.Binder": "3.1.3",
-          "Microsoft.Extensions.DependencyInjection": "3.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Options": "3.1.3"
+          "Microsoft.Extensions.Configuration.Binder": "3.1.7",
+          "Microsoft.Extensions.DependencyInjection": "3.1.7",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Options": "3.1.7"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
@@ -2348,7 +2492,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.1.3": {
+      "Microsoft.Extensions.Logging.Abstractions/3.1.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
@@ -2357,11 +2501,11 @@
           "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.Options/3.1.3": {
+      "Microsoft.Extensions.Options/3.1.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.3",
-          "Microsoft.Extensions.Primitives": "3.1.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.7",
+          "Microsoft.Extensions.Primitives": "3.1.7",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "compile": {
@@ -2371,7 +2515,7 @@
           "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.3": {
+      "Microsoft.Extensions.Primitives/3.1.7": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.2",
@@ -2402,10 +2546,10 @@
           "lib/netstandard2.0/Polly.dll": {}
         }
       },
-      "Rg.Plugins.Popup/2.0.0.2": {
+      "Rg.Plugins.Popup/2.0.0.5": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Forms": "4.5.0.530"
+          "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
@@ -2414,7 +2558,7 @@
           "lib/xamarinios10/Rg.Plugins.Popup.dll": {}
         }
       },
-      "SkiaSharp/1.68.2.1": {
+      "SkiaSharp/2.80.1": {
         "type": "package",
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.dll": {}
@@ -2424,12 +2568,15 @@
         },
         "native": {
           "runtimes/win-x86/native/libSkiaSharp.dll": {}
+        },
+        "build": {
+          "build/xamarinios1.0/SkiaSharp.targets": {}
         }
       },
-      "SkiaSharp.Views/1.68.2.1": {
+      "SkiaSharp.Views/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1"
+          "SkiaSharp": "2.80.1"
         },
         "compile": {
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
@@ -2438,12 +2585,12 @@
           "lib/xamarinios1.0/SkiaSharp.Views.iOS.dll": {}
         }
       },
-      "SkiaSharp.Views.Forms/1.68.2.1": {
+      "SkiaSharp.Views.Forms/2.80.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp": "1.68.2.1",
-          "SkiaSharp.Views": "1.68.2.1",
-          "Xamarin.Forms": "4.4.0.991757"
+          "SkiaSharp": "2.80.1",
+          "SkiaSharp.Views": "2.80.1",
+          "Xamarin.Forms": "4.6.0.772"
         },
         "compile": {
           "ref/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
@@ -2452,7 +2599,7 @@
           "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll": {}
         }
       },
-      "System.Buffers/4.5.0": {
+      "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Buffers.dll": {}
@@ -2504,7 +2651,7 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "System.Text.Encodings.Web/4.7.0": {
+      "System.Text.Encodings.Web/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
@@ -2513,13 +2660,13 @@
           "lib/netstandard2.1/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/4.7.1": {
+      "System.Text.Json/4.7.2": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
-          "System.Buffers": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.7.0",
-          "System.Text.Encodings.Web": "4.7.0"
+          "System.Buffers": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.7.1",
+          "System.Text.Encodings.Web": "4.7.1"
         },
         "compile": {
           "lib/netstandard2.0/System.Text.Json.dll": {}
@@ -2528,7 +2675,7 @@
           "lib/netstandard2.0/System.Text.Json.dll": {}
         }
       },
-      "System.Threading.Channels/4.7.0": {
+      "System.Threading.Channels/4.7.1": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/System.Threading.Channels.dll": {}
@@ -2546,7 +2693,7 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "System.ValueTuple/4.4.0": {
+      "System.ValueTuple/4.5.0": {
         "type": "package",
         "compile": {
           "ref/xamarinios10/_._": {}
@@ -2555,7 +2702,20 @@
           "lib/xamarinios10/_._": {}
         }
       },
-      "Xamarin.Essentials/1.5.3.1": {
+      "Topten.RichTextKit/0.3.129": {
+        "type": "package",
+        "dependencies": {
+          "HarfBuzzSharp": "2.6.1.6",
+          "SkiaSharp": "2.80.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Topten.RichTextKit.dll": {}
+        }
+      },
+      "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
           "OpenTK-1.0",
@@ -2568,7 +2728,7 @@
           "lib/xamarinios10/Xamarin.Essentials.dll": {}
         }
       },
-      "Xamarin.Forms/4.6.0.726": {
+      "Xamarin.Forms/4.8.0.1364": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2644,8 +2804,8 @@
           "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pl"
           },
-          "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll": {
-            "locale": "pt-br"
+          "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll": {
+            "locale": "pt-BR"
           },
           "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll": {
             "locale": "pt"
@@ -2702,20 +2862,20 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microcharts": "0.7.1",
-          "Microcharts.Forms": "0.7.1",
-          "Microsoft.AppCenter": "3.2.1",
-          "Microsoft.AppCenter.Analytics": "3.2.1",
-          "Microsoft.AppCenter.Crashes": "3.2.1",
-          "Microsoft.AppCenter.Distribute": "3.2.1",
-          "Microsoft.AppCenter.Push": "3.2.1",
+          "Microcharts": "0.9.5.7",
+          "Microcharts.Forms": "0.9.5.7",
+          "Microsoft.AppCenter": "3.4.1",
+          "Microsoft.AppCenter.Analytics": "3.4.1",
+          "Microsoft.AppCenter.Crashes": "3.4.1",
+          "Microsoft.AppCenter.Distribute": "3.4.1",
+          "Microsoft.AppCenter.Push": "3.4.1",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "Newtonsoft.Json": "12.0.3",
           "Polly": "7.2.1",
-          "Rg.Plugins.Popup": "2.0.0.2",
-          "SkiaSharp.Views.Forms": "1.68.2.1",
-          "Xamarin.Essentials": "1.5.3.1",
-          "Xamarin.Forms": "4.6.0.726"
+          "Rg.Plugins.Popup": "2.0.0.5",
+          "SkiaSharp.Views.Forms": "2.80.1",
+          "Xamarin.Essentials": "1.5.3.2",
+          "Xamarin.Forms": "4.8.0.1364"
         },
         "compile": {
           "bin/placeholder/YamaCaisse.dll": {}
@@ -2727,42 +2887,103 @@
     }
   },
   "libraries": {
-    "Microcharts/0.7.1": {
-      "sha512": "Py79bYXqvsqthZtk1ChdDhy/n4mb7T2CKjzTVU7ldj4dnjgFC2nbOJMGeAJkDk1lZPoQPSPx3obSq7S29Zrt8g==",
+    "HarfBuzzSharp/2.6.1.6": {
+      "sha512": "yL3wjJk6bfc4vYcf13/89rIgbPAlzS3/FydToxwYhep0/yLLSMyydLZ08fvZQO2+79F7eEvuK0Q6lCNifJXyvw==",
       "type": "package",
-      "path": "microcharts/0.7.1",
+      "path": "harfbuzzsharp/2.6.1.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-NOTICES.txt",
+        "build/monoandroid1.0/HarfBuzzSharp.targets",
+        "build/monoandroid1.0/arm/libHarfBuzzSharp.so",
+        "build/monoandroid1.0/arm64/libHarfBuzzSharp.so",
+        "build/monoandroid1.0/x64/libHarfBuzzSharp.so",
+        "build/monoandroid1.0/x86/libHarfBuzzSharp.so",
+        "build/net462/HarfBuzzSharp.targets",
+        "build/tizen40/HarfBuzzSharp.targets",
+        "build/tizen40/arm/libHarfBuzzSharp.so",
+        "build/tizen40/x86/libHarfBuzzSharp.so",
+        "build/xamarinios1.0/HarfBuzzSharp.targets",
+        "build/xamarinios1.0/libHarfBuzzSharp.a",
+        "build/xamarinmac2.0/HarfBuzzSharp.targets",
+        "build/xamarintvos1.0/HarfBuzzSharp.targets",
+        "build/xamarintvos1.0/libHarfBuzzSharp.a",
+        "build/xamarinwatchos1.0/HarfBuzzSharp.targets",
+        "build/xamarinwatchos1.0/libHarfBuzzSharp.a",
+        "buildTransitive/net462/HarfBuzzSharp.targets",
+        "harfbuzzsharp.2.6.1.6.nupkg.sha512",
+        "harfbuzzsharp.nuspec",
+        "lib/monoandroid1.0/HarfBuzzSharp.dll",
+        "lib/monoandroid1.0/HarfBuzzSharp.xml",
+        "lib/net462/HarfBuzzSharp.dll",
+        "lib/net462/HarfBuzzSharp.xml",
+        "lib/netstandard1.3/HarfBuzzSharp.dll",
+        "lib/netstandard1.3/HarfBuzzSharp.xml",
+        "lib/netstandard2.0/HarfBuzzSharp.dll",
+        "lib/netstandard2.0/HarfBuzzSharp.xml",
+        "lib/tizen40/HarfBuzzSharp.dll",
+        "lib/tizen40/HarfBuzzSharp.xml",
+        "lib/uap10.0.10240/HarfBuzzSharp.dll",
+        "lib/uap10.0.10240/HarfBuzzSharp.xml",
+        "lib/uap10.0.16299/HarfBuzzSharp.dll",
+        "lib/uap10.0.16299/HarfBuzzSharp.xml",
+        "lib/xamarinios1.0/HarfBuzzSharp.dll",
+        "lib/xamarinios1.0/HarfBuzzSharp.xml",
+        "lib/xamarinmac2.0/HarfBuzzSharp.dll",
+        "lib/xamarinmac2.0/HarfBuzzSharp.xml",
+        "lib/xamarintvos1.0/HarfBuzzSharp.dll",
+        "lib/xamarintvos1.0/HarfBuzzSharp.xml",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.dll",
+        "lib/xamarinwatchos1.0/HarfBuzzSharp.xml",
+        "runtimes/osx/native/libHarfBuzzSharp.dylib",
+        "runtimes/win-arm64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x64/native/libHarfBuzzSharp.dll",
+        "runtimes/win-x86/native/libHarfBuzzSharp.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/libHarfBuzzSharp.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libHarfBuzzSharp.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/libHarfBuzzSharp.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/libHarfBuzzSharp.dll"
+      ]
+    },
+    "Microcharts/0.9.5.7": {
+      "sha512": "arWcis+eDsHh88ki028ydm6SlxQ8om57iPJIcCF1I/UMhd9BdR140PC+2cetJHeSSfjusKFaqViPUr8eOu0+gQ==",
+      "type": "package",
+      "path": "microcharts/0.9.5.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/MonoAndroid10/Microcharts.Droid.dll",
         "lib/MonoAndroid10/Microcharts.dll",
-        "lib/Xamarin.iOS10/Microcharts.dll",
-        "lib/Xamarin.iOS10/Microcharts.iOS.dll",
-        "lib/netstandard1.4/Microcharts.dll",
-        "lib/uap/Microcharts.Uwp.dll",
-        "lib/uap/Microcharts.dll",
-        "lib/xamarinmac/Microcharts.dll",
-        "lib/xamarinmac/Microcharts.macOS.dll",
-        "microcharts.0.7.1.nupkg.sha512",
+        "lib/netstandard2.0/Microcharts.dll",
+        "lib/uap10.0/Microcharts.Uwp.dll",
+        "lib/uap10.0/Microcharts.dll",
+        "lib/xamarinios1.0/Microcharts.dll",
+        "lib/xamarinios1.0/Microcharts.iOS.dll",
+        "lib/xamarinmac2.0/Microcharts.dll",
+        "lib/xamarinmac2.0/Microcharts.macOS.dll",
+        "microcharts.0.9.5.7.nupkg.sha512",
         "microcharts.nuspec"
       ]
     },
-    "Microcharts.Forms/0.7.1": {
-      "sha512": "/oeY4j/x3I8PY6sNV3B6CHKdvZl3cJHxfkxIKSPaX86bc50mq1C0L+LqVnbRMwMa1PpywPtwL1+aqlKGM8bL3w==",
+    "Microcharts.Forms/0.9.5.7": {
+      "sha512": "uQ0TzswPn9pdQOAyjpYxTBDGze5VYHDTuEDhW89zfWoD6lHNP2LtbYHV0UGbBV7qbuhFY3PyD8wVc3OIR0caUw==",
       "type": "package",
-      "path": "microcharts.forms/0.7.1",
+      "path": "microcharts.forms/0.9.5.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/netstandard1.4/Microcharts.Forms.dll",
-        "microcharts.forms.0.7.1.nupkg.sha512",
+        "lib/netstandard2.0/Microcharts.Forms.dll",
+        "lib/netstandard2.0/Microcharts.dll",
+        "microcharts.forms.0.9.5.7.nupkg.sha512",
         "microcharts.forms.nuspec"
       ]
     },
-    "Microsoft.AppCenter/3.2.1": {
-      "sha512": "3t2lTMEbhDNPEXCurKBS8wRag4xtloGm9E7F4DpLIRhJtTCYgcIwvajPYj3WE0LjSzhrMKEn9tCaORHDAsdmaw==",
+    "Microsoft.AppCenter/3.4.1": {
+      "sha512": "xpaHZECIg/9i8/q1Z4lFELWa0/uI68OVp0El4xICsgWxug8bN1vR7jNbVtsmtnEMV5fI0STzQBdL+qkUsmkf1w==",
       "type": "package",
-      "path": "microsoft.appcenter/3.2.1",
+      "path": "microsoft.appcenter/3.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2780,14 +3001,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.xml",
         "lib/uap10.0/Microsoft.AppCenter.dll",
         "lib/uap10.0/Microsoft.AppCenter.xml",
-        "microsoft.appcenter.3.2.1.nupkg.sha512",
+        "microsoft.appcenter.3.4.1.nupkg.sha512",
         "microsoft.appcenter.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Analytics/3.2.1": {
-      "sha512": "38HJ5GxKMI3Hyy32SiPxcZfOEL8aBKcV2MR/BLCKR9VlNt4ZpbdJLU/4yoFi/n8zkyFkJykVSA8ADtOjekYseA==",
+    "Microsoft.AppCenter.Analytics/3.4.1": {
+      "sha512": "mtO+bxPR/LyVw3iITxdxu30rosaQ+KLHvD9QD0BtDhiHpMdClb9OWC/prkgd1yelXRo+UrFTmz8ZFkU0lo0eSw==",
       "type": "package",
-      "path": "microsoft.appcenter.analytics/3.2.1",
+      "path": "microsoft.appcenter.analytics/3.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2805,14 +3026,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Analytics.xml",
         "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
         "lib/uap10.0/Microsoft.AppCenter.Analytics.xml",
-        "microsoft.appcenter.analytics.3.2.1.nupkg.sha512",
+        "microsoft.appcenter.analytics.3.4.1.nupkg.sha512",
         "microsoft.appcenter.analytics.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Crashes/3.2.1": {
-      "sha512": "T3nFFv+Zq0oGHawKkqo6x6Aox+dITbKxsTuDMtuyTStTEhKuwXuIx08xoViMF0oDHjYk0NHSZICOVKoUjwuBzQ==",
+    "Microsoft.AppCenter.Crashes/3.4.1": {
+      "sha512": "NA4h4aCBG7mhx+3TAcUvW4PSOtHyxgoL/jz6uCd9seScczxc6QmFt3GqIrHiXBjqwitgg3ov/DB9E56mzsCNgQ==",
       "type": "package",
-      "path": "microsoft.appcenter.crashes/3.2.1",
+      "path": "microsoft.appcenter.crashes/3.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2830,14 +3051,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Crashes.xml",
         "lib/uap10.0/Microsoft.AppCenter.Crashes.dll",
         "lib/uap10.0/Microsoft.AppCenter.Crashes.xml",
-        "microsoft.appcenter.crashes.3.2.1.nupkg.sha512",
+        "microsoft.appcenter.crashes.3.4.1.nupkg.sha512",
         "microsoft.appcenter.crashes.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Distribute/3.2.1": {
-      "sha512": "Dk7ItzG3M0q4YwAuKbvL1pBtBdvelFS1DfGCN/FYPPWkkmv6LBsgv8IrEaIJUW+u2AlEXGXsbfhJglfa/5QgfQ==",
+    "Microsoft.AppCenter.Distribute/3.4.1": {
+      "sha512": "wRDkiYeXfcfVcOUO2vSK9n3agCe6rdEcVctGEsrAum8BIYxQH+qcOmfvxFvYJZhULOvqI4DnDMX+P8/XOYSj3w==",
       "type": "package",
-      "path": "microsoft.appcenter.distribute/3.2.1",
+      "path": "microsoft.appcenter.distribute/3.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2849,14 +3070,14 @@
         "lib/Xamarin.iOS10/Microsoft.AppCenter.Distribute.xml",
         "lib/netstandard1.0/Microsoft.AppCenter.Distribute.dll",
         "lib/netstandard1.0/Microsoft.AppCenter.Distribute.xml",
-        "microsoft.appcenter.distribute.3.2.1.nupkg.sha512",
+        "microsoft.appcenter.distribute.3.4.1.nupkg.sha512",
         "microsoft.appcenter.distribute.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Push/3.2.1": {
-      "sha512": "Qp8Bv7lhJy6slYu0yRuZr6a6b26Jmrf6mQ9wBM+8roVftKPm33mu1+567r/l0CQRskLwy9oK+YB6L7Z/0pSjvA==",
+    "Microsoft.AppCenter.Push/3.4.1": {
+      "sha512": "hMHceeQamfHJqZDTJKQ/lkYfZtDjQVqh0nDWb4eYgb3dsScxk1JOScxpyZBlaYT5BQ06ckz4nKzskBsGW5fuHQ==",
       "type": "package",
-      "path": "microsoft.appcenter.push/3.2.1",
+      "path": "microsoft.appcenter.push/3.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2870,7 +3091,7 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Push.xml",
         "lib/uap10.0/Microsoft.AppCenter.Push.dll",
         "lib/uap10.0/Microsoft.AppCenter.Push.xml",
-        "microsoft.appcenter.push.3.2.1.nupkg.sha512",
+        "microsoft.appcenter.push.3.4.1.nupkg.sha512",
         "microsoft.appcenter.push.nuspec"
       ]
     },
@@ -2897,131 +3118,139 @@
         "microsoft.aspnet.signalr.client.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Connections.Abstractions/3.1.3": {
-      "sha512": "zHtm5JBWFrephZR2nKYGbHy9oDeHbNVNLgfZURdU8PMC7gNTBxpAC61hPJWM9P7+snY2y1OSPjEGYsXqr5viZg==",
+    "Microsoft.AspNetCore.Connections.Abstractions/3.1.7": {
+      "sha512": "Gtsi0mok+xtGQjJoyJDmzk98pgGzf0tLTEUCnNgeNHP4+0js1DKFtqfILL2IGwgtCLvdEJz4asj7hhpAMgpJNw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.connections.abstractions/3.1.3",
+      "path": "microsoft.aspnetcore.connections.abstractions/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Connections.Abstractions.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Connections.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.xml",
         "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.xml",
-        "microsoft.aspnetcore.connections.abstractions.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.connections.abstractions.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.connections.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Connections.Client/3.1.3": {
-      "sha512": "XazVWQNqNXbz4uH3kzhVpuF8wneSilIQG2lxVGbp+EQL5C0y6A4emozp8dsUFH2SXisdWPTivEGWm9YTnP/u7g==",
+    "Microsoft.AspNetCore.Http.Connections.Client/3.1.7": {
+      "sha512": "h+VoCDulpcPsOKSlmlR2jJqXor2eNzOtbufWx0Y6mjbZYm6rtoqXbIqctmSAh8TAvLCU28T0ziQkn5MQ6GFytw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.connections.client/3.1.3",
+      "path": "microsoft.aspnetcore.http.connections.client/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Client.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Client.xml",
         "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.Http.Connections.Client.xml",
-        "microsoft.aspnetcore.http.connections.client.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.http.connections.client.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.http.connections.client.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Connections.Common/3.1.3": {
-      "sha512": "EU3NCpikbfA6MKbqvKE5r1F4vpsEWHrsc2ynuSOe/XnDtxgx5Wqpx1StcPQAtfAkWsKrA6yT7z+HZmTSWYJ0pQ==",
+    "Microsoft.AspNetCore.Http.Connections.Common/3.1.7": {
+      "sha512": "563HzK06aLC8VSL3rId9Efh0/eGqDoAOwM/b1TJIH1YJTyKh/O7YjTQUty+eL30+zr54q9YPWX49e/94VMDdgg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.connections.common/3.1.3",
+      "path": "microsoft.aspnetcore.http.connections.common/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Connections.Common.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Connections.Common.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Connections.Common.xml",
-        "microsoft.aspnetcore.http.connections.common.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.http.connections.common.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.http.connections.common.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/3.1.3": {
-      "sha512": "b4uf46BbySr/6oSi80Vzpvp2J38bcsVfk4yWIq0Vah9nNV6IfnhaqmLri1032qXm/6v+0peb9vb36IlWtJxRQw==",
+    "Microsoft.AspNetCore.Http.Features/3.1.7": {
+      "sha512": "gOIh/ATcFrVvFxQK1CvfeIla4bOVHnXIhzImQrBvFVtemNIoMy7kD4d+/U/4833nhAU0t8JjNS3lG9DCywOnfQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/3.1.3",
+      "path": "microsoft.aspnetcore.http.features/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.Http.Features.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Client/3.1.3": {
-      "sha512": "/4OAoFwIBS6JC60GZnlXwcwIJU3FKIif0vk4hSqJLW/El/0RyddesaIB2q8cl2KCg292Syj8/wbesAPLP4jz6g==",
+    "Microsoft.AspNetCore.SignalR.Client/3.1.7": {
+      "sha512": "5MGJwUaAgWN6obaOJ9n9SztYf9mVa2mOw3X1JUcGaxrraOtDusum2PkNqxFUMHF46246bQ74HNq4O9V+7tkfOw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.client/3.1.3",
+      "path": "microsoft.aspnetcore.signalr.client/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.xml",
-        "microsoft.aspnetcore.signalr.client.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.client.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.signalr.client.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Client.Core/3.1.3": {
-      "sha512": "9xN0/1KzIF5Faw7bK7lYSeRKvfQeO5H20Ms0uyTuLcuRLW4C14FB4Cw3WB4kynt6+34M5iTgFZ6mPeZooFmwsg==",
+    "Microsoft.AspNetCore.SignalR.Client.Core/3.1.7": {
+      "sha512": "ZTy2lkX5ZaIlFskqsqKykQL1j3ce+7cdqNVoNOqG06i2hNwuJ9gh8i0fRzQlfWJAguQ0JuDgTI8cdT2M4mtTww==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.client.core/3.1.3",
+      "path": "microsoft.aspnetcore.signalr.client.core/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.Core.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Client.Core.xml",
         "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.dll",
         "lib/netstandard2.1/Microsoft.AspNetCore.SignalR.Client.Core.xml",
-        "microsoft.aspnetcore.signalr.client.core.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.client.core.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.signalr.client.core.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Common/3.1.3": {
-      "sha512": "BrzNDtPtyyokMCsNu9OacKwkjbjnbKxx2u9Ie9xKDtDCJziW28QJxzagJP1x+CwC+ibbWs8a4OFj+Yx1pAxBbg==",
+    "Microsoft.AspNetCore.SignalR.Common/3.1.7": {
+      "sha512": "ezUdG05eVVixcQ6Psagqlac4jPj66OBgoKYojG8ex4Y8vC1GJnUG8mvNKA4v1zZ2w7C1BYr/KUzeSAg2oafQQQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.common/3.1.3",
+      "path": "microsoft.aspnetcore.signalr.common/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Common.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.xml",
-        "microsoft.aspnetcore.signalr.common.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.common.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.signalr.common.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.3": {
-      "sha512": "CFw6iYru+aRmdd8jA53TVDR6RRIigTjs7vx65s1G4cn9/AeqxThpEHfMzF8LXb7c9EK9ouGO3OTwmIDsro7YZw==",
+    "Microsoft.AspNetCore.SignalR.Protocols.Json/3.1.7": {
+      "sha512": "tLU7IEBm874wNFLKeMxWr0t57DQoQK5mVb6Ft83a55B31FkWCEGAkAmgWouDkSxxrrolYYIeu0gi9IBMak/btQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.signalr.protocols.json/3.1.3",
+      "path": "microsoft.aspnetcore.signalr.protocols.json/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
         "lib/netcoreapp3.1/Microsoft.AspNetCore.SignalR.Protocols.Json.xml",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Protocols.Json.xml",
-        "microsoft.aspnetcore.signalr.protocols.json.3.1.3.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.protocols.json.3.1.7.nupkg.sha512",
         "microsoft.aspnetcore.signalr.protocols.json.nuspec"
       ]
     },
@@ -3049,10 +3278,10 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.Configuration/3.1.3": {
-      "sha512": "nTr4JgTSJScDBD3lahIh1jUBH8A43oG1cqID1qLoHSZhtegslpIyTYxmnehtUKi6xdY5j9R0oWeeGEP+JTcmAg==",
+    "Microsoft.Extensions.Configuration/3.1.7": {
+      "sha512": "JCVsQYNZNGeLXWMw6tkCZ8Wa2IQKF9AiLKeq9Ff2XvGJTMzhYEHAzF/FvHdeBBhPiOf+Kl1t6mdcHL93kUz6MA==",
       "type": "package",
-      "path": "microsoft.extensions.configuration/3.1.3",
+      "path": "microsoft.extensions.configuration/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3061,14 +3290,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
-        "microsoft.extensions.configuration.3.1.3.nupkg.sha512",
+        "microsoft.extensions.configuration.3.1.7.nupkg.sha512",
         "microsoft.extensions.configuration.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.Abstractions/3.1.3": {
-      "sha512": "d3vpIJdw+hRtkW1WoNTXhCczakVVId30Tj58li5GbJxz6MVGi8gy4+7JdLBb/wuHFd4+25cZe+Z0WPi207rBbQ==",
+    "Microsoft.Extensions.Configuration.Abstractions/3.1.7": {
+      "sha512": "WJEbrrIgly95D9rM8Gwr4w8sbYla6/iOcCZ0UE7+Qg/Q8NnQJwAJ60Lq1A26zbNE8Fm1fkbGU90LDl8e+BoRSQ==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.abstractions/3.1.3",
+      "path": "microsoft.extensions.configuration.abstractions/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3077,14 +3306,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
-        "microsoft.extensions.configuration.abstractions.3.1.3.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Configuration.Binder/3.1.3": {
-      "sha512": "GouLlU6JOffNNudJpC+eGtGMe9o5ds2oH9dsJUEH1QS13eLl60eNX9rHicaE40c252e7Aixn3sS7yregDfpQ8g==",
+    "Microsoft.Extensions.Configuration.Binder/3.1.7": {
+      "sha512": "FYQ64i7DwYO6XDdOFi+VkoRDDzel570I+X/vTYt6mVJWNj1SAstXwZ71P5d6P2Cei+cT950NiScOwj4F8EUeTA==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.binder/3.1.3",
+      "path": "microsoft.extensions.configuration.binder/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3093,14 +3322,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
-        "microsoft.extensions.configuration.binder.3.1.3.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.3.1.7.nupkg.sha512",
         "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/3.1.3": {
-      "sha512": "H/d/jt4Pdp2iYx28shLkxfgQpk9S7cCCTEjtS/61PbZcFAT/mc4cemmOlBdED7+CqmEAIDg8X4Fo0KtADaNizg==",
+    "Microsoft.Extensions.DependencyInjection/3.1.7": {
+      "sha512": "yp38AFc5tJQZkjINjXBcxq+dANU06lo27D84duitZthtRPsgKJL87uf9RWRsDdRsWd+kXflmdMWFLKFjyKx6Pw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/3.1.3",
+      "path": "microsoft.extensions.dependencyinjection/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3113,28 +3342,28 @@
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.3.1.3.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.3.1.7.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.nuspec"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.3": {
-      "sha512": "woeS5XeBChU76EmtFCwGHKgBfsYIn76u3myDq4zNY2ZrcwzBMNEViK2FRgXDgF11PBNbGdKCXsWFFZDtqPW0nQ==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.7": {
+      "sha512": "oKL2yNtTN1/cOp+cbdyv5TeLzO+GkO9B3fvbcPzKWTNCkDoH3ccYS3FWC1p4KSYe9frW4WsyfSTeM8X+xftOig==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.3",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.3.1.3.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Logging/3.1.3": {
-      "sha512": "mAuOMhgB73dgVYeJzrksGU6BUBr7vIruFJyxssYK1nmDS+ude0kShILrXPq2iGHOvYNacczW4VSa6zcssUh4iQ==",
+    "Microsoft.Extensions.Logging/3.1.7": {
+      "sha512": "p68Hvr8S+t+bGUeXRX6wcjlkK961w0YRXWy8O6pkTsucdNpnzB8mwLIgcnQ7oj0biw8S1Ftv4PREzPIwo1UwpA==",
       "type": "package",
-      "path": "microsoft.extensions.logging/3.1.3",
+      "path": "microsoft.extensions.logging/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3143,28 +3372,28 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Logging.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.xml",
-        "microsoft.extensions.logging.3.1.3.nupkg.sha512",
+        "microsoft.extensions.logging.3.1.7.nupkg.sha512",
         "microsoft.extensions.logging.nuspec"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/3.1.3": {
-      "sha512": "j6r0E+OVinD4s13CIZASYJLLLApStb1yh5Vig7moB2FE1UsMRj4TYJ/xioDjreVA0dyOFpbWny1/n2iSJMbmNg==",
+    "Microsoft.Extensions.Logging.Abstractions/3.1.7": {
+      "sha512": "oD7LQbMuaqq/yAz8PKX0hl4+H/vDFTQHo8rxbKB36P1/bG8FG7JUVKBoHkSt1MaJUtgyiHrH1AlAhaucKUKyEg==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/3.1.3",
+      "path": "microsoft.extensions.logging.abstractions/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.3.1.3.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.3.1.7.nupkg.sha512",
         "microsoft.extensions.logging.abstractions.nuspec"
       ]
     },
-    "Microsoft.Extensions.Options/3.1.3": {
-      "sha512": "RyOSOg/kHW3AXojWGSdOs3BXJJnE9Sc6RVvP4LhnY5oaC2Da4k8CWfIw7I+QThxV8HTCPjzmON9c+QO+JZggNg==",
+    "Microsoft.Extensions.Options/3.1.7": {
+      "sha512": "O5TXu1D79hbaZuKCIK4mswSP86MtmiIQjuOZnVhPdbjOVILsoQwZUtnmU2xRfX1E0QWuFEI0umhw3mDDn6dNHw==",
       "type": "package",
-      "path": "microsoft.extensions.options/3.1.3",
+      "path": "microsoft.extensions.options/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3173,14 +3402,14 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Options.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
-        "microsoft.extensions.options.3.1.3.nupkg.sha512",
+        "microsoft.extensions.options.3.1.7.nupkg.sha512",
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/3.1.3": {
-      "sha512": "5gK6qeq9CBCHBfB3Tim3jCJTLafT9FXFBAZZq39rC8adz8mxcjVAuQSw3jGgHqoRk0jwtXKFhXJUVur8vfeuFg==",
+    "Microsoft.Extensions.Primitives/3.1.7": {
+      "sha512": "sa17s3vDAXTuIVGxuJcK713i0B0iaUoiwY4Sl2SLHhMqM8snznn0YVGiZAVkoKEUFWjvIg1Z/JNmAicBamI4mg==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/3.1.3",
+      "path": "microsoft.extensions.primitives/3.1.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3189,7 +3418,7 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.1.3.nupkg.sha512",
+        "microsoft.extensions.primitives.3.1.7.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -3247,10 +3476,10 @@
         "polly.nuspec"
       ]
     },
-    "Rg.Plugins.Popup/2.0.0.2": {
-      "sha512": "UExzgLevcih/oDokftGPKRqaefS65ByAOeaFzfr1Qy2opeyv9+eR0hDWotGb0hPI5JFHD7NJv5aK6NbTM3WuLw==",
+    "Rg.Plugins.Popup/2.0.0.5": {
+      "sha512": "uUfLWqKU6B7Uf5LVgZCNNK2R5y7iR7vxio6hoixZcr4IeCyx6zSDYZwAkwCy6cDeV11RDbDSHF5gTV0EUTlnow==",
       "type": "package",
-      "path": "rg.plugins.popup/2.0.0.2",
+      "path": "rg.plugins.popup/2.0.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3291,28 +3520,47 @@
         "lib/xamarinwatchos10/Rg.Plugins.Popup.pdb",
         "lib/xamarinwatchos10/Rg.Plugins.Popup.xml",
         "readme.txt",
-        "rg.plugins.popup.2.0.0.2.nupkg.sha512",
+        "rg.plugins.popup.2.0.0.5.nupkg.sha512",
         "rg.plugins.popup.nuspec"
       ]
     },
-    "SkiaSharp/1.68.2.1": {
-      "sha512": "ecEdDOeukBHW4bjvk6MZrGIAh3TyPyY1ImBKobuPs7PukKKkkZtiPxe35u2UXO9E68ulX4iMTNj/PmEaawPsRQ==",
+    "SkiaSharp/2.80.1": {
+      "sha512": "CiQwnDzG+1JNGzjAN9G/9n/lJgUVA/NPOFgSlEtu6c7qQ0O7P1tMjrXp/+PtWfX0xyyY9ABsFAZK2kW34U7r/A==",
       "type": "package",
-      "path": "skiasharp/1.68.2.1",
+      "path": "skiasharp/2.80.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "THIRD-PARTY-NOTICES.txt",
-        "build/net45/SkiaSharp.targets",
+        "build/monoandroid1.0/SkiaSharp.targets",
+        "build/monoandroid1.0/arm/libSkiaSharp.so",
+        "build/monoandroid1.0/arm64/libSkiaSharp.so",
+        "build/monoandroid1.0/x64/libSkiaSharp.so",
+        "build/monoandroid1.0/x86/libSkiaSharp.so",
         "build/net462/SkiaSharp.targets",
         "build/tizen40/SkiaSharp.targets",
-        "buildTransitive/net45/SkiaSharp.targets",
+        "build/tizen40/arm/libSkiaSharp.so",
+        "build/tizen40/x86/libSkiaSharp.so",
+        "build/xamarinios1.0/SkiaSharp.targets",
+        "build/xamarinios1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarinios1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarinios1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarinios1.0/libSkiaSharp.framework/libSkiaSharp",
+        "build/xamarinmac2.0/SkiaSharp.targets",
+        "build/xamarintvos1.0/SkiaSharp.targets",
+        "build/xamarintvos1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarintvos1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarintvos1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarintvos1.0/libSkiaSharp.framework/libSkiaSharp",
+        "build/xamarinwatchos1.0/SkiaSharp.targets",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/Info.plist",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/Modules/module.modulemap",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/_CodeSignature/CodeResources",
+        "build/xamarinwatchos1.0/libSkiaSharp.framework/libSkiaSharp",
         "buildTransitive/net462/SkiaSharp.targets",
         "lib/monoandroid1.0/SkiaSharp.dll",
         "lib/monoandroid1.0/SkiaSharp.xml",
-        "lib/net45/SkiaSharp.dll",
-        "lib/net45/SkiaSharp.xml",
         "lib/net462/SkiaSharp.dll",
         "lib/net462/SkiaSharp.xml",
         "lib/netstandard1.3/SkiaSharp.dll",
@@ -3334,36 +3582,38 @@
         "lib/xamarinwatchos1.0/SkiaSharp.dll",
         "lib/xamarinwatchos1.0/SkiaSharp.xml",
         "runtimes/osx/native/libSkiaSharp.dylib",
-        "runtimes/tizen-armel/native/libSkiaSharp.so",
-        "runtimes/tizen-x86/native/libSkiaSharp.so",
+        "runtimes/win-arm64/native/libSkiaSharp.dll",
         "runtimes/win-x64/native/libSkiaSharp.dll",
         "runtimes/win-x86/native/libSkiaSharp.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-arm/nativeassets/uap10.0/libSkiaSharp.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libEGL.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libGLESv2.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/libSkiaSharp.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/libSkiaSharp.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libEGL.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libGLESv2.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/libSkiaSharp.dll",
-        "skiasharp.1.68.2.1.nupkg.sha512",
+        "skiasharp.2.80.1.nupkg.sha512",
         "skiasharp.nuspec",
         "xamarin.interactive/SkiaSharp.Workbooks.dll"
       ]
     },
-    "SkiaSharp.Views/1.68.2.1": {
-      "sha512": "jdiW8bysLbe9icIrRkSu0nr4y6x/N3SZA9nAZWqvbr3dY5uGFTOZVortcX6FvwS8AQGjWEWQB81b4DfWq6ijxg==",
+    "SkiaSharp.Views/2.80.1": {
+      "sha512": "ROcoe+eUjDwz/FqRNQq2IFWQe0WSFCtHIak1OA2fcDqm3lBSA0Sd3UhyBYpYcmb1kDI9nvLx5hftGC5X2vMcZA==",
       "type": "package",
-      "path": "skiasharp.views/1.68.2.1",
+      "path": "skiasharp.views/2.80.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "lib/monoandroid1.0/SkiaSharp.Views.Android.dll",
         "lib/monoandroid1.0/SkiaSharp.Views.Android.xml",
-        "lib/net45/SkiaSharp.Views.Desktop.dll",
-        "lib/net45/SkiaSharp.Views.Desktop.xml",
+        "lib/net462/SkiaSharp.Views.Desktop.dll",
+        "lib/net462/SkiaSharp.Views.Desktop.xml",
         "lib/tizen40/SkiaSharp.Views.Tizen.dll",
         "lib/tizen40/SkiaSharp.Views.Tizen.xml",
         "lib/uap10.0/SkiaSharp.Views.UWP.dll",
@@ -3377,28 +3627,36 @@
         "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.dll",
         "lib/xamarinwatchos1.0/SkiaSharp.Views.watchOS.xml",
         "runtimes/win10-arm/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
         "runtimes/win10-x64/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
         "runtimes/win10-x86/nativeassets/uap10.0/SkiaSharp.Views.Interop.UWP.dll",
-        "skiasharp.views.1.68.2.1.nupkg.sha512",
+        "skiasharp.views.2.80.1.nupkg.sha512",
         "skiasharp.views.nuspec"
       ]
     },
-    "SkiaSharp.Views.Forms/1.68.2.1": {
-      "sha512": "BnYevJcOEJUKBOpPyEA2zmFDcQqhqy8KDiKzkKF209AuX0RhymgojTM/K4nnI6RIWO2U06uOYH6bnWME/LjUzg==",
+    "SkiaSharp.Views.Forms/2.80.1": {
+      "sha512": "YP6YSU6StMlBTb1NRMOc1KWBuHe4kq44Psjib/jUIIbs1aBsjzEf9QwMAzPyYvGXiiqIAXkCCnLoDCH5ufiXCQ==",
       "type": "package",
-      "path": "skiasharp.views.forms/1.68.2.1",
+      "path": "skiasharp.views.forms/2.80.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
-        "build/net45/SkiaSharp.Views.Forms.targets",
+        "build/net462/SkiaSharp.Views.Forms.targets",
         "lib/monoandroid1.0/SkiaSharp.Views.Forms.dll",
+        "lib/monoandroid1.0/SkiaSharp.Views.Forms.xml",
+        "lib/net462/_._",
         "lib/tizen40/SkiaSharp.Views.Forms.dll",
+        "lib/tizen40/SkiaSharp.Views.Forms.xml",
         "lib/uap10.0/SkiaSharp.Views.Forms.dll",
+        "lib/uap10.0/SkiaSharp.Views.Forms.xml",
         "lib/xamarinios1.0/SkiaSharp.Views.Forms.dll",
+        "lib/xamarinios1.0/SkiaSharp.Views.Forms.xml",
         "lib/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
+        "lib/xamarinmac2.0/SkiaSharp.Views.Forms.xml",
         "ref/monoandroid1.0/SkiaSharp.Views.Forms.dll",
         "ref/monoandroid1.0/SkiaSharp.Views.Forms.xml",
+        "ref/net462/_._",
         "ref/netstandard1.3/SkiaSharp.Views.Forms.dll",
         "ref/netstandard1.3/SkiaSharp.Views.Forms.xml",
         "ref/netstandard2.0/SkiaSharp.Views.Forms.dll",
@@ -3411,19 +3669,21 @@
         "ref/xamarinios1.0/SkiaSharp.Views.Forms.xml",
         "ref/xamarinmac2.0/SkiaSharp.Views.Forms.dll",
         "ref/xamarinmac2.0/SkiaSharp.Views.Forms.xml",
-        "skiasharp.views.forms.1.68.2.1.nupkg.sha512",
+        "skiasharp.views.forms.2.80.1.nupkg.sha512",
         "skiasharp.views.forms.nuspec"
       ]
     },
-    "System.Buffers/4.5.0": {
-      "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
       "type": "package",
-      "path": "system.buffers/4.5.0",
+      "path": "system.buffers/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
         "lib/netcoreapp2.0/_._",
         "lib/netstandard1.1/System.Buffers.dll",
         "lib/netstandard1.1/System.Buffers.xml",
@@ -3438,7 +3698,7 @@
         "ref/netstandard2.0/System.Buffers.dll",
         "ref/netstandard2.0/System.Buffers.xml",
         "ref/uap10.0.16299/_._",
-        "system.buffers.4.5.0.nupkg.sha512",
+        "system.buffers.4.5.1.nupkg.sha512",
         "system.buffers.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -3608,31 +3868,34 @@
         "version.txt"
       ]
     },
-    "System.Text.Encodings.Web/4.7.0": {
-      "sha512": "IJanJWPQvya2sbGStt3Fkdy4IaomUBSadAfYWeJDQw0zclMk9ixSvMeei6cSmTTQ6ZkGIIAbhHZVCoLR7GgX7Q==",
+    "System.Text.Encodings.Web/4.7.1": {
+      "sha512": "3qreYFQcLnyFk1LuaNWyyWE+sfkfe5eSTaIIssYrLNUIDbgyZNQBYQSzSDo4AprpjVeVX2T4KHKii9fiSZVUow==",
       "type": "package",
-      "path": "system.text.encodings.web/4.7.0",
+      "path": "system.text.encodings.web/4.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Encodings.Web.dll",
+        "lib/net461/System.Text.Encodings.Web.xml",
         "lib/netstandard1.0/System.Text.Encodings.Web.dll",
         "lib/netstandard1.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.0/System.Text.Encodings.Web.dll",
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.1/System.Text.Encodings.Web.dll",
         "lib/netstandard2.1/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.4.7.0.nupkg.sha512",
+        "system.text.encodings.web.4.7.1.nupkg.sha512",
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Text.Json/4.7.1": {
-      "sha512": "XwzMbct3iNepJaFylN1+l8weWlFburEzXidqleSsLvSXdHSIJHEKtRVKHPlpWcFmJX6k3goPFfVgUfp40RR+bg==",
+    "System.Text.Json/4.7.2": {
+      "sha512": "TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
       "type": "package",
-      "path": "system.text.json/4.7.1",
+      "path": "system.text.json/4.7.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3645,28 +3908,31 @@
         "lib/netcoreapp3.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.4.7.1.nupkg.sha512",
+        "system.text.json.4.7.2.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Threading.Channels/4.7.0": {
-      "sha512": "gdOOXBhtt2UpTxYJm1DRmoqNfYg5ypvhzhVt0vxKhzxXFjS81r8yIOSFsJYLRa1Jc14GBAqCnjxJstO3zBN7gg==",
+    "System.Threading.Channels/4.7.1": {
+      "sha512": "6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
       "type": "package",
-      "path": "system.threading.channels/4.7.0",
+      "path": "system.threading.channels/4.7.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Threading.Channels.dll",
+        "lib/net461/System.Threading.Channels.xml",
         "lib/netcoreapp3.0/System.Threading.Channels.dll",
         "lib/netcoreapp3.0/System.Threading.Channels.xml",
         "lib/netstandard1.3/System.Threading.Channels.dll",
         "lib/netstandard1.3/System.Threading.Channels.xml",
         "lib/netstandard2.0/System.Threading.Channels.dll",
         "lib/netstandard2.0/System.Threading.Channels.xml",
-        "system.threading.channels.4.7.0.nupkg.sha512",
+        "system.threading.channels.4.7.1.nupkg.sha512",
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -3707,10 +3973,10 @@
         "version.txt"
       ]
     },
-    "System.ValueTuple/4.4.0": {
-      "sha512": "BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==",
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
-      "path": "system.valuetuple/4.4.0",
+      "path": "system.valuetuple/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3728,6 +3994,7 @@
         "lib/netstandard2.0/_._",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
         "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
@@ -3735,27 +4002,43 @@
         "ref/MonoAndroid10/_._",
         "ref/MonoTouch10/_._",
         "ref/net461/System.ValueTuple.dll",
-        "ref/net461/System.ValueTuple.xml",
         "ref/net47/System.ValueTuple.dll",
-        "ref/net47/System.ValueTuple.xml",
         "ref/netcoreapp2.0/_._",
         "ref/netstandard2.0/_._",
         "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
-        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "ref/uap10.0.16299/_._",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.valuetuple.4.4.0.nupkg.sha512",
+        "system.valuetuple.4.5.0.nupkg.sha512",
         "system.valuetuple.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "Xamarin.Essentials/1.5.3.1": {
-      "sha512": "6sE3kGMhES7dsR8ll+ar+roEIFobjPfDskKNMsU4FF6cV27ZsdArGZHxe1QqPPJcMT6PzJsGvA3l5PNMZgw5ng==",
+    "Topten.RichTextKit/0.3.129": {
+      "sha512": "yrdbXNCbQaDaNHF8K5Ob4QJjTPQwYr34dS+YyFN8wGYBtrFiKoGP2XDt4A09ZkgoiX4HT96KG8n/Sz2kSR0ouQ==",
       "type": "package",
-      "path": "xamarin.essentials/1.5.3.1",
+      "path": "topten.richtextkit/0.3.129",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Topten.RichTextKit.dll",
+        "lib/net462/Topten.RichTextKit.xml",
+        "lib/netcoreapp2.0/Topten.RichTextKit.dll",
+        "lib/netcoreapp2.0/Topten.RichTextKit.xml",
+        "lib/netstandard2.0/Topten.RichTextKit.dll",
+        "lib/netstandard2.0/Topten.RichTextKit.xml",
+        "nuget-icon.png",
+        "topten.richtextkit.0.3.129.nupkg.sha512",
+        "topten.richtextkit.nuspec"
+      ]
+    },
+    "Xamarin.Essentials/1.5.3.2": {
+      "sha512": "BSLgDJUOPFRwTpQaftM+s4qb/MsTjrqXulEYDOcK6KF3i0Orf75zo3RwRfqnQ8WfpoEFxW/v0jgcPWCvOMgHxg==",
+      "type": "package",
+      "path": "xamarin.essentials/1.5.3.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3796,17 +4079,18 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.5.3.1.nupkg.sha512",
+        "xamarin.essentials.1.5.3.2.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/4.6.0.726": {
-      "sha512": "NI7iL5NnrQN/gCyoHLlexcDndNin67hFV7ObG8QQU2zbEi15B1SRaAsuiNeXVYAHfXg3/amqryqzGd+3R6lyZQ==",
+    "Xamarin.Forms/4.8.0.1364": {
+      "sha512": "BZLQDhxXPSu3MbyL4izhGkM2qu0nPaPVEoNZps+cHlgcpA4S5y6f/Kieb6z4S1tyZF1k4a2VPXnyEAFFF78dVA==",
       "type": "package",
-      "path": "xamarin.forms/4.6.0.726",
+      "path": "xamarin.forms/4.8.0.1364",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "Assets/xamarin_128x128.png",
         "build/MonoAndroid10/proguard.cfg",
         "build/XCODE10/Xamarin.Forms.Platform.iOS.dll",
         "build/XCODE10/Xamarin.Forms.Platform.iOS.pdb",
@@ -3886,8 +4170,8 @@
         "lib/MonoAndroid10.0/ja/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid10.0/ko/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10.0/ko/Xamarin.Forms.Xaml.xml",
-        "lib/MonoAndroid10.0/pt-br/Xamarin.Forms.Core.xml",
-        "lib/MonoAndroid10.0/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid10.0/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid10.0/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid10.0/ru/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10.0/ru/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid10.0/zh-Hans/Xamarin.Forms.Core.xml",
@@ -3919,8 +4203,8 @@
         "lib/MonoAndroid90/ja/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid90/ko/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid90/ko/Xamarin.Forms.Xaml.xml",
-        "lib/MonoAndroid90/pt-br/Xamarin.Forms.Core.xml",
-        "lib/MonoAndroid90/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/MonoAndroid90/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/MonoAndroid90/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid90/ru/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid90/ru/Xamarin.Forms.Xaml.xml",
         "lib/MonoAndroid90/zh-Hans/Xamarin.Forms.Core.xml",
@@ -3974,9 +4258,9 @@
         "lib/Xamarin.iOS10/nb/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/nl/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/pl/Xamarin.Forms.Platform.iOS.resources.dll",
-        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Core.xml",
-        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Platform.iOS.resources.dll",
-        "lib/Xamarin.iOS10/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll",
+        "lib/Xamarin.iOS10/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/pt/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/ro/Xamarin.Forms.Platform.iOS.resources.dll",
         "lib/Xamarin.iOS10/ru/Xamarin.Forms.Core.xml",
@@ -4025,8 +4309,8 @@
         "lib/netstandard2.0/ja/Xamarin.Forms.Xaml.xml",
         "lib/netstandard2.0/ko/Xamarin.Forms.Core.xml",
         "lib/netstandard2.0/ko/Xamarin.Forms.Xaml.xml",
-        "lib/netstandard2.0/pt-br/Xamarin.Forms.Core.xml",
-        "lib/netstandard2.0/pt-br/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/pt-BR/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/pt-BR/Xamarin.Forms.Xaml.xml",
         "lib/netstandard2.0/ru/Xamarin.Forms.Core.xml",
         "lib/netstandard2.0/ru/Xamarin.Forms.Xaml.xml",
         "lib/netstandard2.0/zh-Hans/Xamarin.Forms.Core.xml",
@@ -4068,6 +4352,7 @@
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Resources.xaml",
+        "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/Shell/ShellPageWrapper.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/StepperControl.xaml",
         "lib/uap10.0.14393/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xaml",
@@ -4100,6 +4385,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PickerStyle.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/PromptDialog.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Resources.xaml",
+        "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Shell/ShellPageWrapper.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/Shell/ShellStyles.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/SliderStyle.xaml",
         "lib/uap10.0.16299/Xamarin.Forms.Platform.UAP/StepperControl.xaml",
@@ -4109,7 +4395,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.4.6.0.726.nupkg.sha512",
+        "xamarin.forms.4.8.0.1364.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -4135,19 +4421,19 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
-      "Microcharts.Forms >= 0.7.1",
-      "Microsoft.AppCenter >= 3.2.1",
-      "Microsoft.AppCenter.Analytics >= 3.2.1",
-      "Microsoft.AppCenter.Crashes >= 3.2.1",
-      "Microsoft.AppCenter.Distribute >= 3.2.1",
-      "Microsoft.AppCenter.Push >= 3.2.1",
-      "Microsoft.AspNetCore.SignalR.Client >= 3.1.3",
+      "Microcharts.Forms >= 0.9.5.7",
+      "Microsoft.AppCenter >= 3.4.1",
+      "Microsoft.AppCenter.Analytics >= 3.4.1",
+      "Microsoft.AppCenter.Crashes >= 3.4.1",
+      "Microsoft.AppCenter.Distribute >= 3.4.1",
+      "Microsoft.AppCenter.Push >= 3.4.1",
+      "Microsoft.AspNetCore.SignalR.Client >= 3.1.7",
       "Newtonsoft.Json >= 12.0.3",
       "Polly >= 7.2.1",
-      "Rg.Plugins.Popup >= 2.0.0.2",
-      "SkiaSharp.Views.Forms >= 1.68.2.1",
-      "Xamarin.Essentials >= 1.5.3.1",
-      "Xamarin.Forms >= 4.6.0.726",
+      "Rg.Plugins.Popup >= 2.0.0.5",
+      "SkiaSharp.Views.Forms >= 2.80.1",
+      "Xamarin.Essentials >= 1.5.3.2",
+      "Xamarin.Forms >= 4.8.0.1364",
       "Xamarin.TestCloud.Agent >= 0.21.9",
       "YamaCaisse >= 1.0.0"
     ]
@@ -4189,31 +4475,31 @@
         "dependencies": {
           "Microcharts.Forms": {
             "target": "Package",
-            "version": "[0.7.1, )"
+            "version": "[0.9.5.7, )"
           },
           "Microsoft.AppCenter": {
             "target": "Package",
-            "version": "[3.2.1, )"
+            "version": "[3.4.1, )"
           },
           "Microsoft.AppCenter.Analytics": {
             "target": "Package",
-            "version": "[3.2.1, )"
+            "version": "[3.4.1, )"
           },
           "Microsoft.AppCenter.Crashes": {
             "target": "Package",
-            "version": "[3.2.1, )"
+            "version": "[3.4.1, )"
           },
           "Microsoft.AppCenter.Distribute": {
             "target": "Package",
-            "version": "[3.2.1, )"
+            "version": "[3.4.1, )"
           },
           "Microsoft.AppCenter.Push": {
             "target": "Package",
-            "version": "[3.2.1, )"
+            "version": "[3.4.1, )"
           },
           "Microsoft.AspNetCore.SignalR.Client": {
             "target": "Package",
-            "version": "[3.1.3, )"
+            "version": "[3.1.7, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -4225,19 +4511,19 @@
           },
           "Rg.Plugins.Popup": {
             "target": "Package",
-            "version": "[2.0.0.2, )"
+            "version": "[2.0.0.5, )"
           },
           "SkiaSharp.Views.Forms": {
             "target": "Package",
-            "version": "[1.68.2.1, )"
+            "version": "[2.80.1, )"
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.5.3.1, )"
+            "version": "[1.5.3.2, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[4.6.0.726, )"
+            "version": "[4.8.0.1364, )"
           },
           "Xamarin.TestCloud.Agent": {
             "target": "Package",

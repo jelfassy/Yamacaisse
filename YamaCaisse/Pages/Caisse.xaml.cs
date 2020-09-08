@@ -43,13 +43,10 @@ namespace YamaCaisse.Pages
             set;
         }
 
-        private List<Produit> lstProduitPage;
-
         private List<PageProduit> listPageProduit;
 
         private HubConnection hubConnection;
         private IHubProxy hubProxy;
-        bool connected;
 
         public Caisse()
         {
