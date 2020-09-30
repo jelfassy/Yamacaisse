@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 x:Class="YamaCaisse.Pages.PopupDivise">
+    <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid WidthRequest="300">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Division" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+            <Label Grid.Row="0" Grid.Column="1" x:Name="lblNbDivise" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+ 
+            <Label Grid.Row="1" Grid.Column="0" Text="Montant" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+            <Label Grid.Row="1" Grid.Column="1" BackgroundColor="{StaticResource DividerColor}" x:Name="LblMontant" FontSize="Large" HorizontalOptions="FillAndExpand" />
+        </Grid>
+       
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="300">
+            <Grid HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Button Text="1" HeightRequest="40" Grid.Column="0" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="2" HeightRequest="40" Grid.Column="1" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="3" HeightRequest="40" Grid.Column="2" Grid.Row="0" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="4" HeightRequest="40" Grid.Column="0" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="5" HeightRequest="40" Grid.Column="1" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="6" HeightRequest="40" Grid.Column="2" Grid.Row="1" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="7" HeightRequest="40" Grid.Column="0" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="8" HeightRequest="40" Grid.Column="1" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="9" HeightRequest="40" Grid.Column="2" Grid.Row="2" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button x:Name="Backspace" HeightRequest="40" Text="retour" FontSize="Medium" Grid.Column="0" Grid.Row="3" Clicked="Click_Back" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button Text="0" HeightRequest="40" Grid.Column="1" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+                <Button x:Name="virgule" HeightRequest="40" Text="," Grid.Column="2" Grid.Row="3" Clicked="Click_Number" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+            </Grid>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Button Clicked="Click_Fiche" Text="Fiche" BackgroundColor="Green" TextColor="{StaticResource TextIconeColor}" />
+        </StackLayout>
+    </StackLayout>
+</pages:PopupPage>

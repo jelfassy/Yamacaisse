@@ -235,6 +235,57 @@ namespace YamaCaisse.Services.TicketServices
                 throw ex;
             }
         }
+        /// <summary>
+        /// Prints the fiche.
+        /// </summary>
+        /// <returns>The fiche.</returns>
+        /// <param name="idTicket">Identifier ticket.</param>
+        public async Task<bool> PrintDiviseFiche(Ticket ticket, int nbPersonne)
+        {
+            try
+            {
+                bool res = true;
+                var js = JsonConvert.SerializeObject(new
+                {
+                    idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    idticket = ticket.TIK_ID,
+                    nbCouvert = nbPersonne,
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Divise"), js);
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintFiche"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintFiche" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
 
         /// <summary>
         /// Gets the current table ticket

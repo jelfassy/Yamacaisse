@@ -29,7 +29,7 @@
                     </StackLayout>
                 </ScrollView>
                 <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="2" />
-                <localView:TicketView x:Name="ticketControl" Grid.Column="3" />
+                <localView:TicketView x:Name="ticketControl" Grid.Column="3"/>
                 <StackLayout x:Name="stkxtra" Grid.Column="5">
                     <ImageButton Source="Sablier.png" Clicked="Click_Attente" BackgroundColor="{StaticResource AccentColor}" />
                     <ImageButton Source="EntrePlat.png" Clicked="Click_EntPlat" BackgroundColor="{StaticResource AccentColor}" />

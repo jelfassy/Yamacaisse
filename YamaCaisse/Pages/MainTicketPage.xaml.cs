@@ -224,6 +224,11 @@ namespace YamaCaisse.Pages
             await _ticketDataServices.Print((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID);
         }
 
+        async void btDivise_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushPopupAsync(new PopupDivise());
+        }
+
 
         async void Click_RetourTable(object sender,EventArgs e)
         {

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse" xmlns:lx="clr-namespace:YamaCaisse.Pages" xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" x:Class="YamaCaisse.Pages.PopupEclater">
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse"
+                 xmlns:lx="clr-namespace:YamaCaisse.Pages"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 x:Class="YamaCaisse.Pages.PopupEclater">
     <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <StackLayout Spacing="0" BackgroundColor="{StaticResource DarkPrimaryColor}" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
 

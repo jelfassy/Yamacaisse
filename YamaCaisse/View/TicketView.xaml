@@ -11,8 +11,8 @@
         </ResourceDictionary>
     </ContentView.Resources>
     <ContentView.Content>
-        <StackLayout x:Name="StkList" Grid.Column="2" BackgroundColor="White" VerticalOptions="StartAndExpand">
-            <Label Text="{Binding MotifAnnulation,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Red" />
+        <StackLayout x:Name="StkList" Grid.Column="2" BackgroundColor="White" VerticalOptions="FillAndExpand">
+             <Label Text="{Binding MotifAnnulation,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="Red" />
              <Button x:Name="btClient" Text="Client" FontSize="Large" WidthRequest="100" Clicked="Click_Client" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
              </Button>
             <Grid VerticalOptions="StartAndExpand">
@@ -26,12 +26,13 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="2*" />
                     <RowDefinition Height="2" />
-                    <RowDefinition Height="{Binding HeightRownMenu,Source={x:Static local:TicketViewModel.Current}}" />
+                    <RowDefinition Height="1*" />
+                    <!--<RowDefinition Height="{Binding HeightRownMenu,Source={x:Static local:TicketViewModel.Current}}" />-->
                     <RowDefinition Height="8*" />
                     <RowDefinition Height="2" />
                     <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Clicked="Click_SelectTable" Text="{Binding TableName, Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
+                <Button Grid.Row="0" Grid.Column="0" Clicked="Click_SelectTable" Text="{Binding TableName, Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" MinimumHeightRequest="40" />
                 <BoxView Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
                 <Label Grid.Row="0" Grid.Column="2" Text="{Binding MontantTotal,StringFormat='{0:0.00}',Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
                 <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
