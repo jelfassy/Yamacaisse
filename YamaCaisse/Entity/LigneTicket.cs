@@ -227,9 +227,9 @@ namespace YamaCaisse.Entity
         {
             get
             {
-                if (this._LIST_COMPLEMENT == null)
+                if (this._LIST_COMPLEMENT == null && string.IsNullOrEmpty(this._LTK_INFO))
                     return false;
-                else if (this._LIST_COMPLEMENT.Count == 0)
+                else if (this._LIST_COMPLEMENT.Count == 0 && string.IsNullOrEmpty(this._LTK_INFO))
                     return false;
                 else
                     return true;
@@ -410,12 +410,18 @@ namespace YamaCaisse.Entity
         {
             get
             {
-                if (this._LIST_COMPLEMENT == null)
+                if (this._LIST_COMPLEMENT == null && string.IsNullOrEmpty(this.LTK_INFO))
                     return 0;
-                else if (this._LIST_COMPLEMENT.Count == 0)
+                else if (this._LIST_COMPLEMENT.Count == 0 && string.IsNullOrEmpty(this.LTK_INFO))
                     return 0;
                 else
-                    return (25 * this._LIST_COMPLEMENT.Count);
+                {
+                    var ret =  (25 * this._LIST_COMPLEMENT.Count);
+                    if (!string.IsNullOrEmpty(this.LTK_INFO))
+                        ret = ret + 30;
+                    return ret;
+                }
+
             }
         }
 
@@ -450,6 +456,25 @@ namespace YamaCaisse.Entity
                     return true;
                 else
                     return false;
+            }
+        }
+
+        /// <summary>
+        /// Ligne info Ticket
+        /// </summary>
+        private string _LTK_INFO;
+        public string LTK_INFO
+        {
+            get
+            {
+                return _LTK_INFO;
+            }
+            set
+            {
+                this._LTK_INFO = value;
+                OnPropertyChanged(nameof(LTK_INFO));
+                OnPropertyChanged(nameof(VisibleComplement));
+                OnPropertyChanged(nameof(SizeUnderList));
             }
         }
 

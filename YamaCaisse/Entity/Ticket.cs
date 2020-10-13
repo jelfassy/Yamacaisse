@@ -67,6 +67,11 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        /// <summary>
+        /// Date de retour Prevu mode pressing
+        /// </summary>
+        public DateTime? TIK_DT_RETOUR { get; set; }
+
         public List<LigneTicket> T_LIGNE_TICKET
         {
             get;

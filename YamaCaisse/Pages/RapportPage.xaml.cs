@@ -46,6 +46,7 @@ namespace YamaCaisse.Pages
                 btwallstreet.IsVisible = true;
                 btwallstreet.IsVisible = true;
                 btCrash.IsVisible = true;
+                btReinit.IsVisible = true;
                 pkListProduit.IsVisible = true;
                 LoadPickerData();
 
@@ -55,6 +56,7 @@ namespace YamaCaisse.Pages
                 pkListProduit.IsVisible = false;
                 btwallstreet.IsVisible = false;
                 btCrash.IsVisible = false;
+                btReinit.IsVisible = false;
                 pkListProduit.IsVisible = false;
             }
         }

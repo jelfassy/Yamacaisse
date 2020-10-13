@@ -100,6 +100,8 @@ namespace YamaCaisse.ViewModel
             }
         }
 
+        public DateTime? DateRetour { get; set; }
+
         public Ticket Ticket { get; set; }
 
         public int Number { get; set; }
@@ -327,6 +329,7 @@ namespace YamaCaisse.ViewModel
                 TIK_NB_COUVERT = this.NbCouvert,
                 T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
                 FK_JOU_ID = App.JourId,
+                TIK_DT_RETOUR = DateRetour
 
             };
             if (App.ConfigViewModel.Printer != null)
@@ -360,8 +363,8 @@ namespace YamaCaisse.ViewModel
                 TIK_NB_COUVERT = this.NbCouvert,
                 T_LIGNE_TICKET = new System.Collections.Generic.List<LigneTicket>(),
                 FK_JOU_ID = App.JourId,
-                TIK_TPV = App.DeviceIdentifier
-
+                TIK_TPV = App.DeviceIdentifier,
+               TIK_DT_RETOUR = DateRetour
             };
             if (App.ConfigViewModel.Printer != null)
                 ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
@@ -471,7 +474,8 @@ namespace YamaCaisse.ViewModel
                 var inlist = newlist.SingleOrDefault(d => 
                     d.LTK_DESIGNATION_PRODUIT == item.LTK_DESIGNATION_PRODUIT
                         && d.LTK_SOMME == item.LTK_SOMME
-                        && d.FK_REC_ID == item.FK_REC_ID 
+                        && d.FK_REC_ID == item.FK_REC_ID
+                        && d.LTK_INFO == item.LTK_INFO
                         && d.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID).SequenceEqual(item.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID)));
                 if (inlist != null)
                 {

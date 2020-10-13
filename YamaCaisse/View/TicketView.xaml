@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse"
              xmlns:converters="clr-namespace:YamaCaisse.Tools;assembly=YamaCaisse"
              xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
+
              x:Class="YamaCaisse.View.TicketView">
      <ContentView.Resources>
         <ResourceDictionary>
@@ -50,6 +51,7 @@
                                     <MenuItem Clicked="Click_Attente" CommandParameter="{Binding .}" Text="En Attente" />
                                     <MenuItem Clicked="Click_ChangeReclame" CommandParameter="{Binding .}" Text="Suite" />
                                     <MenuItem Clicked="Message_Clicked" CommandParameter="{Binding .}" Text="Change" />
+                                    <MenuItem Clicked="Text_Clicked" CommandParameter="{Binding .}" Text="Info" />
                                     <MenuItem Clicked="Supprimer_Clicked" CommandParameter="{Binding .}" Text="Supprimer" IsDestructive="true" />
                                 </ViewCell.ContextActions>
                                 <Grid>
@@ -71,7 +73,10 @@
                                     </Label>
                                     <Label Grid.Row="0" Grid.Column="2" Text="{Binding LTK_DESIGNATION_PRODUIT}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding LTK_SOMME,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                  
                                     <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" HeightRequest="{Binding SizeUnderList}">
+                                          <Label Text="{Binding LTK_INFO}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="BlueViolet" />
+
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="{Binding VisibleComplement1, Converter={StaticResource BoolToGridRowHeightConverter}}" />
@@ -147,6 +152,17 @@
                    <Label Text="{Binding Client.CLI_TELEPHONE,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                    <Label Text="{Binding Promotion.PROM_NOM,Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                     </StackLayout>
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="5" x:Name="GdRetour">
+                     <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                      <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                       </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Text="Retour :" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                    <DatePicker Grid.Column="1" x:Name="DtPicker" Format="D" Date="{Binding TIK_DT_RETOUR, Source={x:Static local:TicketViewModel.Current}}" DateSelected="DtPicker_DateSelected"/>
                 </Grid>
             </Grid>
         </StackLayout>

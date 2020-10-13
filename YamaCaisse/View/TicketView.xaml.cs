@@ -27,9 +27,15 @@ namespace YamaCaisse.View
             _tableDataServices = DependencyService.Get<ITableDataServices>();
 
             if (ConfigViewModel.Current.ModePressing)
+            {
                 btClient.IsVisible = true;
+                GdRetour.IsVisible = true;
+            }
             else
+            {
                 btClient.IsVisible = false;
+                GdRetour.IsVisible = false;
+            }
         }
 
 
@@ -94,6 +100,17 @@ namespace YamaCaisse.View
             await PopupNavigation.Instance.PushAsync(new PopupCaisse(page.PAG_ID));
         }
 
+        async void Text_Clicked(object sender,System.EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+
+            var ligneTicket = (LigneTicket)mi.CommandParameter;
+            TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+            await PopupNavigation.Instance.PushAsync(new PopupTextMessage());
+
+        }
+
+
         void Supprimer_Clicked(object sender, System.EventArgs e)
         {
             var mi = ((MenuItem)sender);
@@ -117,6 +134,11 @@ namespace YamaCaisse.View
         {
             var item = (LigneTicket)e.SelectedItem;
             TicketViewModel.Current.SelectedligneTicket = item;
+        }
+
+        void DtPicker_DateSelected(System.Object sender, Xamarin.Forms.DateChangedEventArgs e)
+        {
+            TicketViewModel.Current.DateRetour = this.DtPicker.Date.ToLocalTime();
         }
     }
 }
