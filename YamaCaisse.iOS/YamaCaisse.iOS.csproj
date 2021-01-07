@@ -78,6 +78,7 @@
 <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
 <MtouchExtraArgs>--linksdkonly</MtouchExtraArgs>
 <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+<MtouchLink>SdkOnly</MtouchLink>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
