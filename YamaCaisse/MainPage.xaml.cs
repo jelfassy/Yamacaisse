@@ -38,7 +38,7 @@ namespace YamaCaisse
             //  if (Application.Current.Properties.ContainsKey("ServeurAdress"))
             //  this.AdresseServeur.Text = (Application.Current.Properties["ServeurAdress"] as string);
             //this.AdresseServeur.Text = "192.168.1.37:63058";
-            // List<ServeurCnx> listServeur = new List<ServeurCnx>();
+            //List<ServeurCnx> listServeur = new List<ServeurCnx>();
             //ServeurCnx cn = new ServeurCnx()
             //{
             //    SeveurName = "Debug",
@@ -186,24 +186,34 @@ namespace YamaCaisse
         {
             if (!Application.Current.Properties.ContainsKey("ServeurList"))
             {
-                await DisplayAlert("Serveur Indisponible", "Ajouter un Serveur", "OK");
+                App.UrlGateway = "https://yamacaisseweb.azurewebsites.net/";
+                Application.Current.Properties["ServeurAdress"] = "https://yamacaisseweb.azurewebsites.net/";
+                Application.Current.Properties["Authent"] = true;
+                Application.Current.Properties["UserName"] = "Jojo";
+                Application.Current.Properties["Password"] = "1234";
+
+                await DisplayAlert("Serveur","Vous étes en Mode Demo", "OK");
                 return;
             }
-            List<ServeurCnx> listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
-
-            var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
-            Application.Current.Properties["Authent"] = serveur.AuthentWindows;
-            Application.Current.Properties["UserName"] = serveur.UserWindows;
-            Application.Current.Properties["Password"] = serveur.PassWindows;
-            this.IsBusy = true;
-            IDevice device = DependencyService.Get<IDevice>();
-            App.DeviceIdentifier = device.GetIdentifier();
-            if (serveur.ServeurAdresse.StartsWith("192"))
-                this.typeconnection = "http://";
             else
-                this.typeconnection = "https://";
-            App.UrlGateway = typeconnection + serveur.ServeurAdresse + "/";
-            Application.Current.Properties["ServeurAdress"] = serveur.ServeurAdresse;
+            {
+                List<ServeurCnx> listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
+
+                var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
+                Application.Current.Properties["Authent"] = serveur.AuthentWindows;
+                Application.Current.Properties["UserName"] = serveur.UserWindows;
+                Application.Current.Properties["Password"] = serveur.PassWindows;
+                this.IsBusy = true;
+                IDevice device = DependencyService.Get<IDevice>();
+                App.DeviceIdentifier = device.GetIdentifier();
+                if (serveur.ServeurAdresse.StartsWith("192"))
+                    this.typeconnection = "http://";
+                else
+                    this.typeconnection = "https://";
+                App.UrlGateway = typeconnection + serveur.ServeurAdresse + "/";
+                Application.Current.Properties["ServeurAdress"] = serveur.ServeurAdresse;
+
+            }
         }
 
         async void Click_Production(object sender, EventArgs e)
