@@ -72,8 +72,8 @@ namespace YamaCaisse.View
 
         private void SetColorView(TimeSpan? timeSpan, bool attente)
         {
-            Timer = Convert.ToDateTime(timeSpan.Value.ToString()).ToString("HH:mm");
-            this.lblTimer.Text = Timer;
+           // Timer = Convert.ToDateTime(timeSpan.Value.ToString()).ToString("HH:mm");
+           // this.lblTimer.Text = Timer;
             if (this.Send)
             {
                 this.bxViewColor.BackgroundColor = Color.Gray;
@@ -116,11 +116,11 @@ namespace YamaCaisse.View
             this.ProductionPage.ListAll.Remove(this.BonProduction);
         }
 
-      
-        //async void Print_Clicked(object sender,System.EventArgs e)
-        //{
-        //    var 
-        //}
+
+        async void Print_Clicked(object sender, System.EventArgs e)
+        {
+            
+        }
     }
 }
 

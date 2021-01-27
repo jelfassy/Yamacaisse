@@ -71,21 +71,21 @@ namespace YamaCaisse.Pages
         {
             base.OnAppearing();
 
-            hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
-            hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
+            //hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
+            //hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
 
-            hubProxy.On<int, string>("Logout", (production, bonProduction) =>
-            {
-                MainThread.BeginInvokeOnMainThread(async () =>
-                {
-                    TicketViewModel.Current.Clear();
-                    App.JsonPageProduit.Clear();
-                    App.ListSalle = null;
-                    App.JsonPage = null;
-                    await Navigation.PushModalAsync(new YamaCaisse.MainPage());
+            //hubProxy.On<int, string>("Logout", (production, bonProduction) =>
+            //{
+            //    MainThread.BeginInvokeOnMainThread(async () =>
+            //    {
+            //        TicketViewModel.Current.Clear();
+            //        App.JsonPageProduit.Clear();
+            //        App.ListSalle = null;
+            //        App.JsonPage = null;
+            //        await Navigation.PushModalAsync(new YamaCaisse.MainPage());
 
-                });
-            });
+            //    });
+            //});
         }
 
 

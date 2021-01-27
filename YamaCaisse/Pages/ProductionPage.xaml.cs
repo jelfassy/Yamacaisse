@@ -99,6 +99,7 @@ namespace YamaCaisse.Pages
             ExecuteLoad();
         }
 
+
         public async void ExecuteLoad()
         {
             if (IsBusy)
@@ -114,7 +115,12 @@ namespace YamaCaisse.Pages
                 await DisplayAlert("Serveur", "connection etablie", "ok");
                 ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
                 LoadData(true);
-                
+
+                Device.StartTimer(TimeSpan.FromMinutes(2), () =>
+                {
+                    LoadData(true);
+                    return true;
+                });
 
             }
             catch (Exception ex)
