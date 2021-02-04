@@ -72,6 +72,7 @@ namespace YamaCaisse
                     listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
                 foreach (var serv in listServeur)
                 {
+                    if(!string.IsNullOrEmpty(serv.SeveurName))
                     pkListServeur.Items.Add(serv.SeveurName);
                 }
                 if (pkListServeur.Items.Count > 0)
