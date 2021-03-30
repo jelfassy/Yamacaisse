@@ -123,5 +123,20 @@ namespace YamaCaisse.Pages
             }
         }
 
+        async void btnScan_Clicked(object sender, EventArgs e)
+        {
+            #if __ANDROID__
+	            // Initialize the scanner first so it can track the current context
+	            MobileBarcodeScanner.Initialize (Application);
+            #endif
+
+            var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+
+            var result = await scanner.Scan();
+
+            if (result != null)
+                Console.WriteLine("Scanned Barcode: " + result.Text);
+        }
+
     }
 }

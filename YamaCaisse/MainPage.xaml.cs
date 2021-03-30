@@ -119,6 +119,21 @@ namespace YamaCaisse
             LoadPickerData();
         }
 
+
+        async void btScanServeur_Clicked(object sender, EventArgs e)
+        {
+            #if __ANDROID__
+	                        // Initialize the scanner first so it can track the current context
+	                        MobileBarcodeScanner.Initialize (Application);
+            #endif
+
+            var scanner = new ZXing.Mobile.MobileBarcodeScanner();
+
+            var result = await scanner.Scan();
+
+            if (result != null)
+                Console.WriteLine("Scanned Barcode: " + result.Text);
+        }
         async void Click_ModServeur(object sender, EventArgs e)
         {
             List<ServeurCnx> listServeur = new List<ServeurCnx>();
@@ -185,10 +200,12 @@ namespace YamaCaisse
 
         async void SetServeurAdresse()
         {
-            if (!Application.Current.Properties.ContainsKey("ServeurList"))
+            List<ServeurCnx> listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
+            if (listServeur.Count == 0)
             {
+              //  App.UrlGateway = "http://localhost:63055/";
                 App.UrlGateway = "https://yamacaisseweb.azurewebsites.net/";
-                Application.Current.Properties["ServeurAdress"] = "https://yamacaisseweb.azurewebsites.net/";
+                Application.Current.Properties["ServeurAdress"] = App.UrlGateway;
                 Application.Current.Properties["Authent"] = true;
                 Application.Current.Properties["UserName"] = "Jojo";
                 Application.Current.Properties["Password"] = "1234";
@@ -198,8 +215,6 @@ namespace YamaCaisse
             }
             else
             {
-                List<ServeurCnx> listServeur = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
-
                 var serveur = listServeur.SingleOrDefault(c => c.SeveurName == pkListServeur.SelectedItem.ToString());
                 Application.Current.Properties["Authent"] = serveur.AuthentWindows;
                 Application.Current.Properties["UserName"] = serveur.UserWindows;

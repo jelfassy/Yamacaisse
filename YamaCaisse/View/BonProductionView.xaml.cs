@@ -117,9 +117,9 @@ namespace YamaCaisse.View
         }
 
 
-        async void Print_Clicked(object sender, System.EventArgs e)
+        async void Printed_Clicked(object sender, System.EventArgs e)
         {
-            
+
         }
     }
 }

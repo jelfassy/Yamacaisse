@@ -35,7 +35,7 @@ namespace YamaCaisse.Pages
         private List<string> list;
 
         public ObservableCollection<LigneTicket> ListRecap { get; set; }
-
+        public ObservableCollection<LigneTicket> ListRecapTodo { get; set; }
         int column = 0;
         int row = 0;
 
@@ -68,6 +68,7 @@ namespace YamaCaisse.Pages
                             this.CreateMiniBonProductionView(bon);
 
                             CreateRecap();
+                            
                         }
                     }
                 });
@@ -133,6 +134,44 @@ namespace YamaCaisse.Pages
             }
         }
 
+        public async void RecapEncour(List<BonProduction> ListAll)
+        {
+            try
+            {
+               // ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+
+                var listligneRecapTodo = new List<LigneTicket>();
+
+                foreach (var BligneTicket in ListAll.Where(d=>d.BON_EN_COURS == true).Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
+                {
+                    foreach (var ligne in BligneTicket)
+                    {
+                        if (listligneRecapTodo.Select(c => c.LTK_DESIGNATION_PRODUIT).Contains(ligne.LTK_DESIGNATION_PRODUIT))
+                        {
+                            if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecapTodo.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
+                                listligneRecapTodo.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT).LTK_QTE += ligne.LTK_QTE;
+                            else
+                                listligneRecapTodo.Add(ligne);
+                        }
+                        else
+                            listligneRecapTodo.Add(ligne);
+                    }
+                }
+                this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecapTodo);
+                this.ListRecapEncour.ItemsSource = this.ListRecap;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"CreateRecap","recap"}
+                };
+                Crashes.TrackError(ex, property);
+                // throw ex;
+                // await DisplayAlert("Reseau", "Probleme sur le refresh", "OK");
+            }
+        }
+
 
         public async void CreateRecap()
         {
@@ -159,6 +198,7 @@ namespace YamaCaisse.Pages
                 }
                 this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecap);
                 this.ListRecapToDo.ItemsSource = this.ListRecap;
+                RecapEncour(ListAll);
             }
             catch (Exception ex)
             {

@@ -25,6 +25,9 @@
                 </Button>
                    <Button Text="Supprimer Serveur" Clicked="Click_SuppServeur" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
                 </Button>
+                <Button x:Name="btScanServeur" Text="Scanner Serveur" Clicked="btScanServeur_Clicked" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}">
+                </Button>
+
             </StackLayout>
             <Image x:Name="logo" Source="YamaCaisse_1024x1024.png" WidthRequest="200" HeightRequest="200"/>
             <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
