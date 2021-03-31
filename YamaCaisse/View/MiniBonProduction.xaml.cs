@@ -37,7 +37,10 @@ namespace YamaCaisse.View
             tgr.Tapped += (sender, args) => {
                 this.Show_Clicked(sender, args);
             };
-
+            if (bonProduction.BON_EN_COURS == true)
+                imgencours.IsVisible = true;
+            else
+                imgencours.IsVisible = false;
             this.GestureRecognizers.Add(tgr);
         }
 
@@ -45,9 +48,14 @@ namespace YamaCaisse.View
         {
             Device.StartTimer(TimeSpan.FromSeconds(5), () =>
             {
-                SetColorView(HeureCommande - DateTime.Now);
+                SetColorView(DateTime.Now - HeureCommande);
                 return true;
             });
+        }
+
+        public void SetEncour()
+        {
+            this.imgencours.IsVisible = true;
         }
 
         private void SetColorView(TimeSpan? timeSpan)

@@ -117,11 +117,11 @@ namespace YamaCaisse.Pages
                 ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
                 LoadData(true);
 
-                Device.StartTimer(TimeSpan.FromMinutes(2), () =>
-                {
-                    LoadData(true);
-                    return true;
-                });
+                //Device.StartTimer(TimeSpan.FromMinutes(5), () =>
+                //{
+                //    LoadData(true);
+                //    return true;
+                //});
 
             }
             catch (Exception ex)
@@ -392,6 +392,24 @@ namespace YamaCaisse.Pages
                 Crashes.TrackError(ex, property);
             }
             
+
+        }
+
+        public void SetBonEncours(BonProductionView view)
+        {
+            try
+            {
+                var miniBon = (MiniBonProduction)GdListBon.Children.FirstOrDefault(c => c.StyleId == view.StyleId);
+                miniBon.SetEncour();
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {"RemoveBonProduction","Production"}
+                };
+                Crashes.TrackError(ex, property);
+            }
 
         }
 

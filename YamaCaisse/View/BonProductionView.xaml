@@ -105,7 +105,8 @@
             </ListView.ItemTemplate>
         </ListView>
         <StackLayout>
-        <Button BackgroundColor="Blue" TextColor="White" Text="Envoyé" Clicked="Envoye_Clicked" />
+         <Button x:Name="btEnCours" BackgroundColor="Blue" TextColor="White" Text="En cours" Clicked="EnCours_Clicked" />
+        <Button x:Name="btEnvoyer" BackgroundColor="Blue" TextColor="White" Text="Envoyé" Clicked="Envoye_Clicked" />
         </StackLayout>
     </StackLayout>
 </ContentView>

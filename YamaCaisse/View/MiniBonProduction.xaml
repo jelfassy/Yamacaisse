@@ -61,7 +61,8 @@
            Grid.Column="2"
            VerticalOptions="FillAndExpand"
            HorizontalOptions="FillAndExpand" />
-    
+
+     <Image x:Name="imgencours" Source="work.png" Grid.Row="1" Grid.Column="2"/>
 
 
 </Grid>

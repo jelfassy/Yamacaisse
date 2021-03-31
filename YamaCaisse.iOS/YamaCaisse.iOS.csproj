@@ -227,6 +227,7 @@
     <BundleResource Include="Resources\Message.png" />
     <BundleResource Include="Resources\EntrePlat.png" />
     <BundleResource Include="Resources\YamaCaisse_1024x1024.png" />
+    <BundleResource Include="Resources\work.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />

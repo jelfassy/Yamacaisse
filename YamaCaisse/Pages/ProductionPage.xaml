@@ -95,11 +95,11 @@
                          <RowDefinition Height="2*" />
                          <RowDefinition Height="1*" />
                          </Grid.RowDefinitions>
-                    <StackLayout x:Name="ShowBon" Orientation="Vertical">
+                    <StackLayout x:Name="ShowBon" Orientation="Vertical" Grid.Row="0">
 
                     </StackLayout>
-                    <StackLayout x:Name="StkEncours" >
-                    <CollectionView x:Name="ListRecapEncour" Grid.Column="0" ItemsSource="{Binding }" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="White">
+                    <StackLayout x:Name="StkEncours"  Grid.Row="1">
+                    <CollectionView x:Name="ListRecapEncour" Grid.Row="1" ItemsSource="{Binding }" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="White">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Grid>

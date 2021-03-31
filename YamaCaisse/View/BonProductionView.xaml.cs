@@ -59,12 +59,14 @@ namespace YamaCaisse.View
                 else
                     allEnAttente = false;
             }
-            SetColorView( BonProduction.Bon_DATE_DEBUT - DateTime.Now, allEnAttente);
+            SetColorView(DateTime.Now - BonProduction.Bon_DATE_DEBUT, allEnAttente);
 
             foreach (var ll in list)
                 grouped.Add(ll);
             this.lblnbPlat.Text = "Nb Plat : " + nbPlat.ToString();
 
+            if(BonProduction.BON_EN_COURS == true)
+                this.btEnCours.IsVisible = false;
 
             //this.E_listligneTicket.ItemsSource = grouped; 
             this.E_listligneTicket.ItemsSource = BonProduction.T_BON_LIGNE_TICKET.Select(c => c.T_LIGNE_TICKET);
@@ -113,9 +115,22 @@ namespace YamaCaisse.View
             var rs = await _bonProductionDataServices.PutBonProduction(this.BonProduction.BON_ID, this.BonProduction);
             this.ProductionPage.CreateRecap();
             this.ProductionPage.RemoveBonProduction(this);
+            this.btEnCours.IsVisible = false;
+            this.btEnvoyer.IsVisible = false;
             this.ProductionPage.ListAll.Remove(this.BonProduction);
         }
 
+        async void EnCours_Clicked(object sender, System.EventArgs e)
+        {
+            var button = (Button)sender;
+            this.Send = true;
+            this.BonProduction.BON_EN_COURS = true;
+            var rs = await _bonProductionDataServices.PutBonProduction(this.BonProduction.BON_ID, this.BonProduction);
+            this.btEnCours.IsVisible = false;
+            this.ProductionPage.SetBonEncours(this);
+            this.ProductionPage.CreateRecap();
+        }
+        
 
         async void Printed_Clicked(object sender, System.EventArgs e)
         {
