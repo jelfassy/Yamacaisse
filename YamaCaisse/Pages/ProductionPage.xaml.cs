@@ -117,11 +117,11 @@ namespace YamaCaisse.Pages
                 ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
                 LoadData(true);
 
-                //Device.StartTimer(TimeSpan.FromMinutes(5), () =>
-                //{
-                //    LoadData(true);
-                //    return true;
-                //});
+                Device.StartTimer(TimeSpan.FromMinutes(1), () =>
+                {
+                    LoadData(true);
+                    return true;
+                });
 
             }
             catch (Exception ex)
@@ -138,27 +138,27 @@ namespace YamaCaisse.Pages
         {
             try
             {
-               // ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+                var listligneRecapEnCours = new List<LigneTicket>();
 
-                var listligneRecapTodo = new List<LigneTicket>();
+                ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
 
-                foreach (var BligneTicket in ListAll.Where(d=>d.BON_EN_COURS == true).Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
+                foreach (var BligneTicket in ListAll.Where(d=>d.BON_EN_COURS == true && d.BON_DATE_FIN == null).Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
                 {
                     foreach (var ligne in BligneTicket)
                     {
-                        if (listligneRecapTodo.Select(c => c.LTK_DESIGNATION_PRODUIT).Contains(ligne.LTK_DESIGNATION_PRODUIT))
+                        if (listligneRecapEnCours.Select(c => c.LTK_DESIGNATION_PRODUIT).Contains(ligne.LTK_DESIGNATION_PRODUIT))
                         {
-                            if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecapTodo.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
-                                listligneRecapTodo.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT).LTK_QTE += ligne.LTK_QTE;
+                            if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecapEnCours.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
+                                listligneRecapEnCours.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT).LTK_QTE += ligne.LTK_QTE;
                             else
-                                listligneRecapTodo.Add(ligne);
+                                listligneRecapEnCours.Add(ligne);
                         }
                         else
-                            listligneRecapTodo.Add(ligne);
+                            listligneRecapEnCours.Add(ligne);
                     }
                 }
-                this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecapTodo);
-                this.ListRecapEncour.ItemsSource = this.ListRecap;
+                this.ListRecapTodo = new ObservableCollection<LigneTicket>(listligneRecapEnCours);
+                this.ListRecapEncour.ItemsSource = this.ListRecapTodo;
             }
             catch (Exception ex)
             {
