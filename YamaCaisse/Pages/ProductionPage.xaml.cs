@@ -117,11 +117,11 @@ namespace YamaCaisse.Pages
                 ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
                 LoadData(true);
 
-                Device.StartTimer(TimeSpan.FromMinutes(1), () =>
-                {
-                    LoadData(true);
-                    return true;
-                });
+                //Device.StartTimer(TimeSpan.FromMinutes(1), () =>
+                //{
+                //    LoadData(true);
+                //    return true;
+                //});
 
             }
             catch (Exception ex)
@@ -146,15 +146,39 @@ namespace YamaCaisse.Pages
                 {
                     foreach (var ligne in BligneTicket)
                     {
-                        if (listligneRecapEnCours.Select(c => c.LTK_DESIGNATION_PRODUIT).Contains(ligne.LTK_DESIGNATION_PRODUIT))
+                        var inlist = listligneRecapEnCours.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
+                                                                                && c.FK_REC_ID == ligne.FK_REC_ID
+                                                                                && c.LIST_COMPLEMENT.Select(m => m.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(d => d.FK_PDT_ID))
+                                                                                && c.LTK_INFO == ligne.LTK_INFO);
+                        if (inlist != null)
                         {
-                            if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecapEnCours.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
-                                listligneRecapEnCours.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT).LTK_QTE += ligne.LTK_QTE;
-                            else
-                                listligneRecapEnCours.Add(ligne);
+                            inlist.LTK_QTE += ligne.LTK_QTE;
+                            inlist.LTK_MNT_TVA += ligne.LTK_MNT_TVA;
+                            inlist.LTK_SOMME += ligne.LTK_SOMME;
+                            inlist.LTK_TOTAL_HT += ligne.LTK_TOTAL_HT;
+
+                            foreach (var under in inlist.LIST_COMPLEMENT)
+                            {
+                                var elem = ligne.LIST_COMPLEMENT.FirstOrDefault(c => c.LTK_DESIGNATION_PRODUIT == under.LTK_DESIGNATION_PRODUIT);
+                                under.LTK_QTE += elem.LTK_QTE;
+                                under.LTK_MNT_TVA += elem.LTK_MNT_TVA;
+                                under.LTK_SOMME += elem.LTK_SOMME;
+                                under.LTK_TOTAL_HT += elem.LTK_TOTAL_HT;
+                            }
                         }
                         else
+                        {
                             listligneRecapEnCours.Add(ligne);
+                        }
+                        //if (listligneRecapEnCours.Select(c => c.LTK_DESIGNATION_PRODUIT).Contains(ligne.LTK_DESIGNATION_PRODUIT))
+                        //{
+                        //    if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecapEnCours.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
+                        //        listligneRecapEnCours.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT).LTK_QTE += ligne.LTK_QTE;
+                        //    else
+                        //        listligneRecapEnCours.Add(ligne);
+                        //}
+                        //else
+                        //    listligneRecapEnCours.Add(ligne);
                     }
                 }
                 this.ListRecapTodo = new ObservableCollection<LigneTicket>(listligneRecapEnCours);
@@ -185,15 +209,30 @@ namespace YamaCaisse.Pages
                 {
                     foreach (var ligne in BligneTicket)
                     {
-                        if (listligneRecap.Select(c => c.LTK_DESIGNATION_PRODUIT).Contains(ligne.LTK_DESIGNATION_PRODUIT))
+                        var inlist = listligneRecap.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT
+                                                                              && c.FK_REC_ID == ligne.FK_REC_ID
+                                                                              && c.LIST_COMPLEMENT.Select(m => m.FK_PDT_ID).SequenceEqual(ligne.LIST_COMPLEMENT.Select(d => d.FK_PDT_ID))
+                                                                              && c.LTK_INFO == ligne.LTK_INFO);
+                        if (inlist != null)
                         {
-                            if (ligne.LIST_COMPLEMENT.Count == 0 || listligneRecap.Select(c => c.LIST_COMPLEMENT).Contains(ligne.LIST_COMPLEMENT))
-                                listligneRecap.SingleOrDefault(c => c.LTK_DESIGNATION_PRODUIT == ligne.LTK_DESIGNATION_PRODUIT).LTK_QTE += ligne.LTK_QTE;
-                            else
-                                listligneRecap.Add(ligne);
+                            inlist.LTK_QTE += ligne.LTK_QTE;
+                            inlist.LTK_MNT_TVA += ligne.LTK_MNT_TVA;
+                            inlist.LTK_SOMME += ligne.LTK_SOMME;
+                            inlist.LTK_TOTAL_HT += ligne.LTK_TOTAL_HT;
+
+                            foreach (var under in inlist.LIST_COMPLEMENT)
+                            {
+                                var elem = ligne.LIST_COMPLEMENT.FirstOrDefault(c => c.LTK_DESIGNATION_PRODUIT == under.LTK_DESIGNATION_PRODUIT);
+                                under.LTK_QTE += elem.LTK_QTE;
+                                under.LTK_MNT_TVA += elem.LTK_MNT_TVA;
+                                under.LTK_SOMME += elem.LTK_SOMME;
+                                under.LTK_TOTAL_HT += elem.LTK_TOTAL_HT;
+                            }
                         }
                         else
+                        {
                             listligneRecap.Add(ligne);
+                        }
                     }
                 }
                 this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecap);

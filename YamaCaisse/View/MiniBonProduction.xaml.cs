@@ -32,7 +32,7 @@ namespace YamaCaisse.View
             this.Attente = attente;
             this.BonProduction = bonProduction;
             SetColorView(DateTime.Now - HeureCommande);
-            //this.startTimer();
+            this.startTimer();
             var tgr = new TapGestureRecognizer() { NumberOfTapsRequired=2 };
             tgr.Tapped += (sender, args) => {
                 this.Show_Clicked(sender, args);
@@ -46,7 +46,7 @@ namespace YamaCaisse.View
 
         void startTimer()
         {
-            Device.StartTimer(TimeSpan.FromSeconds(5), () =>
+            Device.StartTimer(TimeSpan.FromSeconds(10), () =>
             {
                 SetColorView(DateTime.Now - HeureCommande);
                 return true;

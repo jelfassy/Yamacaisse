@@ -4,11 +4,11 @@
              xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse"
              xmlns:converters="clr-namespace:YamaCaisse.Tools;assembly=YamaCaisse"
              x:Class="YamaCaisse.Pages.ProductionPage">
-          <ContentView.Resources>
+          <ContentPage.Resources>
         <ResourceDictionary>
             <converters:BoolToGridRowHeightConverter x:Key="BoolToGridRowHeightConverter" />
         </ResourceDictionary>
-    </ContentView.Resources>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout x:Name="StkList" BackgroundColor="Gray" VerticalOptions="StartAndExpand" Orientation="Vertical" Margin="0,10,0,0">
             <Grid BackgroundColor="Purple">
@@ -38,12 +38,13 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
-                <CollectionView x:Name="ListRecapToDo" Grid.Column="0" ItemsSource="{Binding }" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="White">
-                    <CollectionView.ItemTemplate>
+                <ListView x:Name="ListRecapToDo" Grid.Column="0" HorizontalOptions="FillAndExpand" HasUnevenRows="true" VerticalOptions="StartAndExpand" BackgroundColor="White">
+                    <ListView.ItemTemplate>
                         <DataTemplate>
+                            <ViewCell>
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="30" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
@@ -82,9 +83,10 @@
                                     </Grid>
                                 </StackLayout>
                             </Grid>
+                                </ViewCell>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                    </ListView.ItemTemplate>
+                </ListView>
                 <ScrollView Orientation="Vertical" Grid.Column="1">
                     <StackLayout x:Name="GdListBon" Orientation="Vertical">
 
@@ -99,12 +101,13 @@
 
                     </StackLayout>
                     <StackLayout x:Name="StkEncours"  Grid.Row="1">
-                    <CollectionView x:Name="ListRecapEncour" Grid.Row="1" ItemsSource="{Binding }" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" BackgroundColor="White">
-                    <CollectionView.ItemTemplate>
+                    <ListView x:Name="ListRecapEncour" Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HasUnevenRows="true" BackgroundColor="White">
+                    <ListView.ItemTemplate>
                         <DataTemplate>
+                            <ViewCell>
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="30" />
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
@@ -143,9 +146,10 @@
                                     </Grid>
                                 </StackLayout>
                             </Grid>
+                                </ViewCell>
                         </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
+                    </ListView.ItemTemplate>
+                </ListView>
                     </StackLayout>
                 </Grid>
             </Grid>
