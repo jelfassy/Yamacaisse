@@ -52,6 +52,7 @@ namespace YamaCaisse.Pages
         {
             exit = false;
             base.OnAppearing();
+
             hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
             hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
             LoadData(true);
@@ -115,6 +116,7 @@ namespace YamaCaisse.Pages
 
                 await DisplayAlert("Serveur", "connection etablie", "ok");
                 ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
+                listTable = await LoadTable();
                 LoadData(true);
 
                 //Device.StartTimer(TimeSpan.FromMinutes(1), () =>
@@ -142,7 +144,7 @@ namespace YamaCaisse.Pages
 
                 ListAll = await _bonProductionDataServices.GetBonProduction(ConfigViewModel.Current.Production.PROD_ID, true);
 
-                foreach (var BligneTicket in ListAll.Where(d=>d.BON_EN_COURS == true && d.BON_DATE_FIN == null).Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
+                foreach (var BligneTicket in ListAll.Where(d=>d.BON_EN_COURS == true && d.BON_DATE_FIN == null).Select(c => c.BON_LIGNE_TICKET.Select(d => d.LigneTicket)))
                 {
                     foreach (var ligne in BligneTicket)
                     {
@@ -205,7 +207,7 @@ namespace YamaCaisse.Pages
 
                 var listligneRecap = new List<LigneTicket>();
 
-                foreach (var BligneTicket in ListAll.Select(c => c.T_BON_LIGNE_TICKET.Select(d => d.T_LIGNE_TICKET)))
+                foreach (var BligneTicket in ListAll.Select(c => c.BON_LIGNE_TICKET.Select(d => d.LigneTicket)))
                 {
                     foreach (var ligne in BligneTicket)
                     {
@@ -329,15 +331,15 @@ namespace YamaCaisse.Pages
         {
             try
             {
-                var firstLigne = item.T_BON_LIGNE_TICKET.FirstOrDefault();
-                listTable = await LoadTable();
+                var firstLigne = item.BON_LIGNE_TICKET.FirstOrDefault();
+               
                 string tabNom = listTable.FirstOrDefault(c => c.TAB_ID == firstLigne.FK_TABLE_ID)?.TAB_NOM;
                 int nbPlat = 0;
                 bool allEnAttente = false;
-                foreach (var ligne in item.T_BON_LIGNE_TICKET.OrderBy(r => r.T_LIGNE_TICKET.FK_REC_ID))
+                foreach (var ligne in item.BON_LIGNE_TICKET.OrderBy(r => r.LigneTicket.FK_REC_ID))
                 {
-                    nbPlat = nbPlat + (int)ligne.T_LIGNE_TICKET.LTK_QTE;
-                    if (ligne.T_LIGNE_TICKET.LTK_ATTENTE == true)
+                    nbPlat = nbPlat + (int)ligne.LigneTicket.LTK_QTE;
+                    if (ligne.LigneTicket.LTK_ATTENTE == true)
                         allEnAttente = true;
                     else
                         allEnAttente = false;

@@ -120,6 +120,12 @@ namespace YamaCaisse.Entity
             set;
         }
 
+        public string EMP_NOM { get; set; }
+
+        public string REC_NAME { get; set; }
+
+        public string REC_COLOR { get; set; }
+
         /// <summary>
         /// Gets or sets the t produit.
         /// </summary>

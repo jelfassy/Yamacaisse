@@ -15,7 +15,7 @@ namespace YamaCaisse.Entity
 
         public int? FK_TABLE_ID { get; set; }
 
-        public LigneTicket T_LIGNE_TICKET { get; set; }
+        public LigneTicket LigneTicket { get; set; }
 
 
 

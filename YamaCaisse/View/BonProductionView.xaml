@@ -72,11 +72,11 @@
                                         <ColumnDefinition Width="1*" />
                                         <ColumnDefinition Width="4*" />
                                     </Grid.ColumnDefinitions>
-                                    <BoxView Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding T_RECLAME.REC_COLOR}" />
-                                    <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding T_RECLAME.REC_NAME}" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}"/>
+                                    <BoxView Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="{Binding REC_COLOR}" />
+                                    <Label Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding REC_NAME}" VerticalTextAlignment="Start" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}"/>
                                     
                                     <Label Grid.Row="0" Grid.Column="1" FontSize="Medium" Margin="10,0,0,0" Text="{Binding LTK_QTE}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
-                                    <Label Grid.Row="0" Grid.Column="2" FontSize="Medium" Text="{Binding T_PRODUIT.PDT_Designation}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                    <Label Grid.Row="0" Grid.Column="2" FontSize="Medium" Text="{Binding LTK_DESIGNATION_PRODUIT}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                     <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" HeightRequest="{Binding SizeUnderList}">
                                         <Grid>
                                         <Grid.RowDefinitions>

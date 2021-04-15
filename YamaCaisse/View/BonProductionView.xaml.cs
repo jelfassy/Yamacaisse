@@ -42,19 +42,19 @@ namespace YamaCaisse.View
             int nbPlat = 0;
             this.idBon = BonProduction.BON_ID % 100;
             this.lblNumBon.Text = this.idBon.ToString();
-            var firstLigne = BonProduction.T_BON_LIGNE_TICKET.FirstOrDefault();
+            var firstLigne = BonProduction.BON_LIGNE_TICKET.FirstOrDefault();
             this.lblNumTable.Text = "Table N°: " + ListTable.FirstOrDefault(c => c.TAB_ID == firstLigne.FK_TABLE_ID)?.TAB_NOM;
-            this.lblServeur.Text = firstLigne.T_LIGNE_TICKET?.T_EMPLOYE?.EMP_NOM;
+            this.lblServeur.Text = firstLigne.LigneTicket?.T_EMPLOYE?.EMP_NOM;
 
             var grouped = new ObservableCollection<GroupReclameModel>();
 
             var list = new List<GroupReclameModel>();
             // GroupReclameModel group;
             bool allEnAttente = false;
-            foreach (var ligne in BonProduction.T_BON_LIGNE_TICKET.OrderBy(r => r.T_LIGNE_TICKET.FK_REC_ID))
+            foreach (var ligne in BonProduction.BON_LIGNE_TICKET.OrderBy(r => r.LigneTicket.FK_REC_ID))
             {
-                nbPlat = nbPlat + (int)ligne.T_LIGNE_TICKET.LTK_QTE;
-                if (ligne.T_LIGNE_TICKET.LTK_ATTENTE == true)
+                nbPlat = nbPlat + (int)ligne.LigneTicket.LTK_QTE;
+                if (ligne.LigneTicket.LTK_ATTENTE == true)
                     allEnAttente = true;
                 else
                     allEnAttente = false;
@@ -69,7 +69,7 @@ namespace YamaCaisse.View
                 this.btEnCours.IsVisible = false;
 
             //this.E_listligneTicket.ItemsSource = grouped; 
-            this.E_listligneTicket.ItemsSource = BonProduction.T_BON_LIGNE_TICKET.Select(c => c.T_LIGNE_TICKET);
+            this.E_listligneTicket.ItemsSource = BonProduction.BON_LIGNE_TICKET.Select(c => c.LigneTicket);
         }
 
         private void SetColorView(TimeSpan? timeSpan, bool attente)
@@ -130,7 +130,6 @@ namespace YamaCaisse.View
         async void EnCours_Clicked(object sender, System.EventArgs e)
         {
             var button = (Button)sender;
-            this.Send = true;
             this.BonProduction.BON_EN_COURS = true;
             var rs = await _bonProductionDataServices.PutBonProduction(this.BonProduction.BON_ID, this.BonProduction);
             this.btEnCours.IsVisible = false;
