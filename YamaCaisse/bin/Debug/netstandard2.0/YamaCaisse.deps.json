@@ -9,43 +9,31 @@
     ".NETStandard,Version=v2.0/": {
       "YamaCaisse/1.0.0": {
         "dependencies": {
-          "Microcharts": "0.9.5.7",
-          "Microcharts.Forms": "0.9.5.7",
-          "Microsoft.AppCenter": "3.4.1",
-          "Microsoft.AppCenter.Analytics": "3.4.1",
-          "Microsoft.AppCenter.Crashes": "3.4.1",
-          "Microsoft.AppCenter.Distribute": "3.4.1",
-          "Microsoft.AppCenter.Push": "3.4.1",
+          "Microcharts": "0.9.5.9",
+          "Microcharts.Forms": "0.9.5.9",
+          "Microsoft.AppCenter": "4.2.0",
+          "Microsoft.AppCenter.Analytics": "4.2.0",
+          "Microsoft.AppCenter.Crashes": "4.2.0",
+          "Microsoft.AppCenter.Distribute": "4.2.0",
+          "Microsoft.AppCenter.Push": "3.4.3",
           "Microsoft.AspNet.SignalR.Client": "2.4.1",
           "NETStandard.Library": "2.0.3",
-          "Newtonsoft.Json": "12.0.3",
-          "Polly": "7.2.1",
-          "Rg.Plugins.Popup": "2.0.0.5",
-          "SkiaSharp.Views.Forms": "2.80.1",
-          "Xamarin.Essentials": "1.5.3.2",
-          "Xamarin.Forms": "4.8.0.1364"
+          "Newtonsoft.Json": "13.0.1",
+          "Polly": "7.2.2",
+          "Rg.Plugins.Popup": "2.0.0.11",
+          "SkiaSharp.Views.Forms": "2.80.2",
+          "Xamarin.Essentials": "1.6.1",
+          "Xamarin.Forms": "5.0.0.2012",
+          "ZXing.Net.Mobile": "2.4.1"
         },
         "runtime": {
           "YamaCaisse.dll": {}
         }
       },
-      "HarfBuzzSharp/2.6.1.6": {
+      "Microcharts/0.9.5.9": {
         "dependencies": {
-          "System.Memory": "4.5.3"
-        },
-        "runtime": {
-          "lib/netstandard2.0/HarfBuzzSharp.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "2.6.1.6"
-          }
-        }
-      },
-      "Microcharts/0.9.5.7": {
-        "dependencies": {
-          "HarfBuzzSharp": "2.6.1.6",
-          "SkiaSharp": "2.80.1",
-          "System.ValueTuple": "4.5.0",
-          "Topten.RichTextKit": "0.3.129"
+          "SkiaSharp": "2.80.2",
+          "System.ValueTuple": "4.5.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microcharts.dll": {
@@ -54,14 +42,13 @@
           }
         }
       },
-      "Microcharts.Forms/0.9.5.7": {
+      "Microcharts.Forms/0.9.5.9": {
         "dependencies": {
-          "Microcharts": "0.9.5.7",
-          "SkiaSharp": "2.80.1",
-          "SkiaSharp.Views.Forms": "2.80.1",
+          "Microcharts": "0.9.5.9",
+          "SkiaSharp": "2.80.2",
+          "SkiaSharp.Views.Forms": "2.80.2",
           "System.ValueTuple": "4.5.0",
-          "Topten.RichTextKit": "0.3.129",
-          "Xamarin.Forms": "4.8.0.1364"
+          "Xamarin.Forms": "5.0.0.2012"
         },
         "runtime": {
           "lib/netstandard2.0/Microcharts.Forms.dll": {
@@ -74,61 +61,61 @@
           }
         }
       },
-      "Microsoft.AppCenter/3.4.1": {
+      "Microsoft.AppCenter/4.2.0": {
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "3.4.1.0"
+            "fileVersion": "4.2.0.0"
           }
         }
       },
-      "Microsoft.AppCenter.Analytics/3.4.1": {
+      "Microsoft.AppCenter.Analytics/4.2.0": {
         "dependencies": {
-          "Microsoft.AppCenter": "3.4.1"
+          "Microsoft.AppCenter": "4.2.0"
         },
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "3.4.1.0"
+            "fileVersion": "4.2.0.0"
           }
         }
       },
-      "Microsoft.AppCenter.Crashes/3.4.1": {
+      "Microsoft.AppCenter.Crashes/4.2.0": {
         "dependencies": {
-          "Microsoft.AppCenter": "3.4.1"
+          "Microsoft.AppCenter": "4.2.0"
         },
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "3.4.1.0"
+            "fileVersion": "4.2.0.0"
           }
         }
       },
-      "Microsoft.AppCenter.Distribute/3.4.1": {
+      "Microsoft.AppCenter.Distribute/4.2.0": {
         "dependencies": {
-          "Microsoft.AppCenter": "3.4.1"
+          "Microsoft.AppCenter": "4.2.0"
         },
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.Distribute.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "3.4.1.0"
+            "fileVersion": "4.2.0.0"
           }
         }
       },
-      "Microsoft.AppCenter.Push/3.4.1": {
+      "Microsoft.AppCenter.Push/3.4.3": {
         "dependencies": {
-          "Microsoft.AppCenter": "3.4.1"
+          "Microsoft.AppCenter": "4.2.0"
         },
         "runtime": {
           "lib/netstandard1.0/Microsoft.AppCenter.Push.dll": {
             "assemblyVersion": "0.0.0.0",
-            "fileVersion": "3.4.1.0"
+            "fileVersion": "3.4.3.0"
           }
         }
       },
       "Microsoft.AspNet.SignalR.Client/2.4.1": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {
@@ -143,48 +130,48 @@
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
       },
-      "Newtonsoft.Json/12.0.3": {
+      "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.3.23909"
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
           }
         }
       },
-      "Polly/7.2.1": {
+      "Polly/7.2.2": {
         "runtime": {
           "lib/netstandard2.0/Polly.dll": {
             "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.2.1.0"
+            "fileVersion": "7.2.2.0"
           }
         }
       },
-      "Rg.Plugins.Popup/2.0.0.5": {
+      "Rg.Plugins.Popup/2.0.0.11": {
         "dependencies": {
-          "Xamarin.Forms": "4.8.0.1364"
+          "Xamarin.Forms": "5.0.0.2012"
         },
         "runtime": {
           "lib/netstandard2.0/Rg.Plugins.Popup.dll": {
-            "assemblyVersion": "2.0.0.5",
-            "fileVersion": "2.0.0.5"
+            "assemblyVersion": "2.0.0.11",
+            "fileVersion": "2.0.0.11"
           }
         }
       },
-      "SkiaSharp/2.80.1": {
+      "SkiaSharp/2.80.2": {
         "dependencies": {
           "System.Memory": "4.5.3"
         },
         "runtime": {
           "lib/netstandard2.0/SkiaSharp.dll": {
             "assemblyVersion": "2.80.0.0",
-            "fileVersion": "2.80.1.0"
+            "fileVersion": "2.80.2.0"
           }
         }
       },
-      "SkiaSharp.Views.Forms/2.80.1": {
+      "SkiaSharp.Views.Forms/2.80.2": {
         "dependencies": {
-          "SkiaSharp": "2.80.1",
-          "Xamarin.Forms": "4.8.0.1364"
+          "SkiaSharp": "2.80.2",
+          "Xamarin.Forms": "5.0.0.2012"
         }
       },
       "System.Buffers/4.4.0": {
@@ -225,19 +212,7 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
-      "Topten.RichTextKit/0.3.129": {
-        "dependencies": {
-          "HarfBuzzSharp": "2.6.1.6",
-          "SkiaSharp": "2.80.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Topten.RichTextKit.dll": {
-            "assemblyVersion": "0.3.129.0",
-            "fileVersion": "0.3.129.0"
-          }
-        }
-      },
-      "Xamarin.Essentials/1.5.3.2": {
+      "Xamarin.Essentials/1.6.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -248,19 +223,35 @@
           }
         }
       },
-      "Xamarin.Forms/4.8.0.1364": {
+      "Xamarin.Forms/5.0.0.2012": {
         "runtime": {
           "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.8.0.352"
+            "fileVersion": "5.0.0.671"
           },
           "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.8.0.352"
+            "fileVersion": "5.0.0.671"
           },
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "4.8.0.352"
+            "fileVersion": "5.0.0.671"
+          }
+        }
+      },
+      "ZXing.Net.Mobile/2.4.1": {
+        "runtime": {
+          "lib/netstandard1.0/ZXing.Net.Mobile.Core.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/ZXingNetMobile.dll": {
+            "assemblyVersion": "2.4.1.0",
+            "fileVersion": "2.4.1.0"
+          },
+          "lib/netstandard1.0/zxing.portable.dll": {
+            "assemblyVersion": "0.16.2.0",
+            "fileVersion": "0.16.2.0"
           }
         }
       }
@@ -272,61 +263,54 @@
       "serviceable": false,
       "sha512": ""
     },
-    "HarfBuzzSharp/2.6.1.6": {
+    "Microcharts/0.9.5.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yL3wjJk6bfc4vYcf13/89rIgbPAlzS3/FydToxwYhep0/yLLSMyydLZ08fvZQO2+79F7eEvuK0Q6lCNifJXyvw==",
-      "path": "harfbuzzsharp/2.6.1.6",
-      "hashPath": "harfbuzzsharp.2.6.1.6.nupkg.sha512"
+      "sha512": "sha512-oiaPjsC+l211tRXw17bxT7D1uPHLZG4wZq7w9h9w7LFX76s4ppLN9UGVkUQJ2vBammdFH0JXtbvEUVtbOq85UQ==",
+      "path": "microcharts/0.9.5.9",
+      "hashPath": "microcharts.0.9.5.9.nupkg.sha512"
     },
-    "Microcharts/0.9.5.7": {
+    "Microcharts.Forms/0.9.5.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-arWcis+eDsHh88ki028ydm6SlxQ8om57iPJIcCF1I/UMhd9BdR140PC+2cetJHeSSfjusKFaqViPUr8eOu0+gQ==",
-      "path": "microcharts/0.9.5.7",
-      "hashPath": "microcharts.0.9.5.7.nupkg.sha512"
+      "sha512": "sha512-qWph+JII7fWqx/ObgqT0IQ9ICGTHSUfvXT1l+Yf/LlLK4DAhDdvn0AKKUatz2uvHy1xHmzBFS+nzdreOpBA2Vw==",
+      "path": "microcharts.forms/0.9.5.9",
+      "hashPath": "microcharts.forms.0.9.5.9.nupkg.sha512"
     },
-    "Microcharts.Forms/0.9.5.7": {
+    "Microsoft.AppCenter/4.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uQ0TzswPn9pdQOAyjpYxTBDGze5VYHDTuEDhW89zfWoD6lHNP2LtbYHV0UGbBV7qbuhFY3PyD8wVc3OIR0caUw==",
-      "path": "microcharts.forms/0.9.5.7",
-      "hashPath": "microcharts.forms.0.9.5.7.nupkg.sha512"
+      "sha512": "sha512-KdKGKmcqA+wZ//q7e5ZIiJTOEc6PSXTgrwieLPvCgZ/6wgnBnha0HE5gTlKpvRAO4Ga5paTt3gAMI/Fi8yprPA==",
+      "path": "microsoft.appcenter/4.2.0",
+      "hashPath": "microsoft.appcenter.4.2.0.nupkg.sha512"
     },
-    "Microsoft.AppCenter/3.4.1": {
+    "Microsoft.AppCenter.Analytics/4.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xpaHZECIg/9i8/q1Z4lFELWa0/uI68OVp0El4xICsgWxug8bN1vR7jNbVtsmtnEMV5fI0STzQBdL+qkUsmkf1w==",
-      "path": "microsoft.appcenter/3.4.1",
-      "hashPath": "microsoft.appcenter.3.4.1.nupkg.sha512"
+      "sha512": "sha512-JsV+cWjwUh2dRkbO2Kz8ZDihaxQcGWZt8ttABJzt+4OpftU7gxB299cmLMVSQkdv8nub80RXf230i3W/1OjB7w==",
+      "path": "microsoft.appcenter.analytics/4.2.0",
+      "hashPath": "microsoft.appcenter.analytics.4.2.0.nupkg.sha512"
     },
-    "Microsoft.AppCenter.Analytics/3.4.1": {
+    "Microsoft.AppCenter.Crashes/4.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mtO+bxPR/LyVw3iITxdxu30rosaQ+KLHvD9QD0BtDhiHpMdClb9OWC/prkgd1yelXRo+UrFTmz8ZFkU0lo0eSw==",
-      "path": "microsoft.appcenter.analytics/3.4.1",
-      "hashPath": "microsoft.appcenter.analytics.3.4.1.nupkg.sha512"
+      "sha512": "sha512-hL6ba7LcT8v4DLFljizZWhlv3T48DFvU3EK3KF09PwQ7w4oBGNWA++EQsgqH83pSdmCGzlv5NpYCWoJVfgtCTw==",
+      "path": "microsoft.appcenter.crashes/4.2.0",
+      "hashPath": "microsoft.appcenter.crashes.4.2.0.nupkg.sha512"
     },
-    "Microsoft.AppCenter.Crashes/3.4.1": {
+    "Microsoft.AppCenter.Distribute/4.2.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NA4h4aCBG7mhx+3TAcUvW4PSOtHyxgoL/jz6uCd9seScczxc6QmFt3GqIrHiXBjqwitgg3ov/DB9E56mzsCNgQ==",
-      "path": "microsoft.appcenter.crashes/3.4.1",
-      "hashPath": "microsoft.appcenter.crashes.3.4.1.nupkg.sha512"
+      "sha512": "sha512-+AacUG1fEdIqpSU9oK5Vf1TdE1S4meMkAYtSWtDFwtl5ivE4U3X07tmXfTdTNyspJ9tIhzes3L1thqPvUmCQOA==",
+      "path": "microsoft.appcenter.distribute/4.2.0",
+      "hashPath": "microsoft.appcenter.distribute.4.2.0.nupkg.sha512"
     },
-    "Microsoft.AppCenter.Distribute/3.4.1": {
+    "Microsoft.AppCenter.Push/3.4.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wRDkiYeXfcfVcOUO2vSK9n3agCe6rdEcVctGEsrAum8BIYxQH+qcOmfvxFvYJZhULOvqI4DnDMX+P8/XOYSj3w==",
-      "path": "microsoft.appcenter.distribute/3.4.1",
-      "hashPath": "microsoft.appcenter.distribute.3.4.1.nupkg.sha512"
-    },
-    "Microsoft.AppCenter.Push/3.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-hMHceeQamfHJqZDTJKQ/lkYfZtDjQVqh0nDWb4eYgb3dsScxk1JOScxpyZBlaYT5BQ06ckz4nKzskBsGW5fuHQ==",
-      "path": "microsoft.appcenter.push/3.4.1",
-      "hashPath": "microsoft.appcenter.push.3.4.1.nupkg.sha512"
+      "sha512": "sha512-KfQTUsefwizSGbz8ty5FBofbpqq2+0sQ5rPOw4UPJ2iBCMJKtqa4LJlupd/LQdiX61T6q7RShyRWptrht/QIew==",
+      "path": "microsoft.appcenter.push/3.4.3",
+      "hashPath": "microsoft.appcenter.push.3.4.3.nupkg.sha512"
     },
     "Microsoft.AspNet.SignalR.Client/2.4.1": {
       "type": "package",
@@ -349,40 +333,40 @@
       "path": "netstandard.library/2.0.3",
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
-    "Newtonsoft.Json/12.0.3": {
+    "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
-      "path": "newtonsoft.json/12.0.3",
-      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "Polly/7.2.1": {
+    "Polly/7.2.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Od8SnPlpQr+PuAS0YzY3jgtzaDNknlIuAaldN2VEIyTvm/wCg22C5nUkUV1BEG8rIsub5RFMoV/NEQ0tM/+7Uw==",
-      "path": "polly/7.2.1",
-      "hashPath": "polly.7.2.1.nupkg.sha512"
+      "sha512": "sha512-E6CeKyS513j7taKAq4q2MESDBvzuzWnR1rQ2Y2zqJvpiVtKMm699Aubb20MUPBDmb0Ov8PmcLHTCVFdCjoy2kA==",
+      "path": "polly/7.2.2",
+      "hashPath": "polly.7.2.2.nupkg.sha512"
     },
-    "Rg.Plugins.Popup/2.0.0.5": {
+    "Rg.Plugins.Popup/2.0.0.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-uUfLWqKU6B7Uf5LVgZCNNK2R5y7iR7vxio6hoixZcr4IeCyx6zSDYZwAkwCy6cDeV11RDbDSHF5gTV0EUTlnow==",
-      "path": "rg.plugins.popup/2.0.0.5",
-      "hashPath": "rg.plugins.popup.2.0.0.5.nupkg.sha512"
+      "sha512": "sha512-Fa225jLSyum7oFwmC2tZeJqf0b/m2ZpvVSEVIhqmxcme4nEW6rl1Ncnj6zGIOjKlZ05m8L3mxdFdiI/TxI5InQ==",
+      "path": "rg.plugins.popup/2.0.0.11",
+      "hashPath": "rg.plugins.popup.2.0.0.11.nupkg.sha512"
     },
-    "SkiaSharp/2.80.1": {
+    "SkiaSharp/2.80.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CiQwnDzG+1JNGzjAN9G/9n/lJgUVA/NPOFgSlEtu6c7qQ0O7P1tMjrXp/+PtWfX0xyyY9ABsFAZK2kW34U7r/A==",
-      "path": "skiasharp/2.80.1",
-      "hashPath": "skiasharp.2.80.1.nupkg.sha512"
+      "sha512": "sha512-D25rzdCwh+3L+XyXqpNa+H/yiLJbE3/R3K/XexwHyQjGdzZvSufFW3oqf3En7hhqSIsxsJ8f5NEZ0J5W5wlGBg==",
+      "path": "skiasharp/2.80.2",
+      "hashPath": "skiasharp.2.80.2.nupkg.sha512"
     },
-    "SkiaSharp.Views.Forms/2.80.1": {
+    "SkiaSharp.Views.Forms/2.80.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YP6YSU6StMlBTb1NRMOc1KWBuHe4kq44Psjib/jUIIbs1aBsjzEf9QwMAzPyYvGXiiqIAXkCCnLoDCH5ufiXCQ==",
-      "path": "skiasharp.views.forms/2.80.1",
-      "hashPath": "skiasharp.views.forms.2.80.1.nupkg.sha512"
+      "sha512": "sha512-8aRDb98O2cHymB94O8FBj85qMC+MYEY6591wBpHcwgfz4HMo4orSMApD5y8VDmHpA5KR0Yh2ija+HTylz/9CgA==",
+      "path": "skiasharp.views.forms/2.80.2",
+      "hashPath": "skiasharp.views.forms.2.80.2.nupkg.sha512"
     },
     "System.Buffers/4.4.0": {
       "type": "package",
@@ -419,26 +403,26 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "Topten.RichTextKit/0.3.129": {
+    "Xamarin.Essentials/1.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-yrdbXNCbQaDaNHF8K5Ob4QJjTPQwYr34dS+YyFN8wGYBtrFiKoGP2XDt4A09ZkgoiX4HT96KG8n/Sz2kSR0ouQ==",
-      "path": "topten.richtextkit/0.3.129",
-      "hashPath": "topten.richtextkit.0.3.129.nupkg.sha512"
+      "sha512": "sha512-gG1Bp4j4bpJQ0dp9MeBJQJ9c8xULauIlhc7Cx5Qw4J2K1c+4Glq5n+gkb9Pm0UA/CevXVqLK5ZXmZkuYI52FgA==",
+      "path": "xamarin.essentials/1.6.1",
+      "hashPath": "xamarin.essentials.1.6.1.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.5.3.2": {
+    "Xamarin.Forms/5.0.0.2012": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BSLgDJUOPFRwTpQaftM+s4qb/MsTjrqXulEYDOcK6KF3i0Orf75zo3RwRfqnQ8WfpoEFxW/v0jgcPWCvOMgHxg==",
-      "path": "xamarin.essentials/1.5.3.2",
-      "hashPath": "xamarin.essentials.1.5.3.2.nupkg.sha512"
+      "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
+      "path": "xamarin.forms/5.0.0.2012",
+      "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
     },
-    "Xamarin.Forms/4.8.0.1364": {
+    "ZXing.Net.Mobile/2.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BZLQDhxXPSu3MbyL4izhGkM2qu0nPaPVEoNZps+cHlgcpA4S5y6f/Kieb6z4S1tyZF1k4a2VPXnyEAFFF78dVA==",
-      "path": "xamarin.forms/4.8.0.1364",
-      "hashPath": "xamarin.forms.4.8.0.1364.nupkg.sha512"
+      "sha512": "sha512-iCL2WcqOyUnC1iFFdzXijk0EXfoLMDqW88MyhoTZigSyhJZM2C5hKgSZVyfx9E35tgkde/IZwHkk8cVDnbQlYg==",
+      "path": "zxing.net.mobile/2.4.1",
+      "hashPath": "zxing.net.mobile.2.4.1.nupkg.sha512"
     }
   }
 }

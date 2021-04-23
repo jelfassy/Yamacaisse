@@ -160,10 +160,10 @@
       <Version>2.0.0.11</Version>
     </PackageReference>
     <PackageReference Include="Polly">
-      <Version>7.2.1</Version>
+      <Version>7.2.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client">
-      <Version>5.0.4</Version>
+      <Version>5.0.5</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp.Views.Forms">
       <Version>2.80.2</Version>

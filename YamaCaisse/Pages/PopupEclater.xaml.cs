@@ -223,14 +223,20 @@ namespace YamaCaisse.Pages
                     ligne.FK_LTK_ID = null;
                     ligne.TIK_MOVE_TIK = TicketViewModel.Current.TKT_ID;
                 }
-                var rs = await _ticketDataServices.PostTicket(ticket);
-                await Navigation.PopPopupAsync();
+
                 if (this.TableId == 0)
                 {
+                    var rs = await _ticketDataServices.EclaterVerTicket(this.TikId, ticket);
+                    await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
+                    this.ListSelectedLigneTicket.Clear();
+                    this.MontantTotal = 0;
                     await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
                 }
                 else
                 {
+                    var rs = await _ticketDataServices.EclaterVerTable(this.TikId, ticket);
+                    this.ListSelectedLigneTicket.Clear();
+                    this.MontantTotal = 0;
                     _mainTablePage.Refresh();
                 }
             }
@@ -239,8 +245,8 @@ namespace YamaCaisse.Pages
 
         async void btTable_clicked(object sender, EventArgs e)
         {
-            var popTable = new PopupTable(this, true);
-            await PopupNavigation.Instance.PushAsync(popTable);
+           var popTable = new PopupTable(this, true);
+           await PopupNavigation.Instance.PushAsync(popTable);
 
         }
 

@@ -57,6 +57,13 @@
                                   WidthRequest="150" Grid.Row="1" Grid.Column="1"/>
 
                 </Grid>
+                <StackLayout Spacing="10">  
+        <Button Text="Scan"  
+                x:Name="btnScan"  
+                Clicked="btnScan_Clicked" />  
+        <Entry x:Name="txtBarcode"
+               Placeholder="Text Do scan"/>  
+    </StackLayout>  
                    <Button Clicked="Click_Close" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" Grid.Column="0" Grid.Row="5"/>
                    <Button Clicked="Click_ajouter" Text="Ajouter" BackgroundColor="Blue" TextColor="{StaticResource TextIconeColor}" Grid.Column="1" Grid.Row="5"/>
             </Grid>

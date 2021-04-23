@@ -135,7 +135,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Polly/7.2.1": {
+      "Polly/7.2.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Polly.dll": {}
@@ -631,10 +631,10 @@
         "packageIcon.png"
       ]
     },
-    "Polly/7.2.1": {
-      "sha512": "Od8SnPlpQr+PuAS0YzY3jgtzaDNknlIuAaldN2VEIyTvm/wCg22C5nUkUV1BEG8rIsub5RFMoV/NEQ0tM/+7Uw==",
+    "Polly/7.2.2": {
+      "sha512": "E6CeKyS513j7taKAq4q2MESDBvzuzWnR1rQ2Y2zqJvpiVtKMm699Aubb20MUPBDmb0Ov8PmcLHTCVFdCjoy2kA==",
       "type": "package",
-      "path": "polly/7.2.1",
+      "path": "polly/7.2.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -650,7 +650,7 @@
         "lib/netstandard2.0/Polly.dll",
         "lib/netstandard2.0/Polly.pdb",
         "lib/netstandard2.0/Polly.xml",
-        "polly.7.2.1.nupkg.sha512",
+        "polly.7.2.2.nupkg.sha512",
         "polly.nuspec"
       ]
     },
@@ -1291,7 +1291,7 @@
       "Microsoft.AspNet.SignalR.Client >= 2.4.1",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 13.0.1",
-      "Polly >= 7.2.1",
+      "Polly >= 7.2.2",
       "Rg.Plugins.Popup >= 2.0.0.11",
       "SkiaSharp.Views.Forms >= 2.80.2",
       "Xamarin.Essentials >= 1.6.1",
@@ -1384,7 +1384,7 @@
           },
           "Polly": {
             "target": "Package",
-            "version": "[7.2.1, )"
+            "version": "[7.2.2, )"
           },
           "Rg.Plugins.Popup": {
             "target": "Package",
@@ -1417,7 +1417,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
       }
     }
   }
