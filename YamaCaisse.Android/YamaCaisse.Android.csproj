@@ -34,7 +34,7 @@
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <AndroidLinkSkip>--linkskip=alarm</AndroidLinkSkip>
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>latestmajor</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,7 +46,7 @@
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>latestmajor</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
