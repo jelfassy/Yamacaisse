@@ -19,8 +19,8 @@ namespace YamaCaisse.Entity
 
         public bool? BON_EN_COURS{ get; set; }
 
-        public List<BonLigneTicket> BON_LIGNE_TICKET
-        {
+        public List<BonLigneTicket> BON_LIGNE_TICKET {
+
             get;
             set;
         }
