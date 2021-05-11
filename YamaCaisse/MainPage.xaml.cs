@@ -200,6 +200,10 @@ namespace YamaCaisse
                 Application.Current.Properties["Authent"] = true;
                 Application.Current.Properties["UserName"] = "Jojo";
                 Application.Current.Properties["Password"] = "1234";
+                await DisplayAlert("ServeurAdress", Application.Current.Properties["ServeurAdress"].ToString(), "ok");
+                await DisplayAlert("Authent", Application.Current.Properties["Authent"].ToString(), "ok");
+                await DisplayAlert("UserName", Application.Current.Properties["UserName"].ToString(), "ok");
+                await DisplayAlert("Password", Application.Current.Properties["Password"].ToString(), "ok");
 
                 await DisplayAlert("Serveur","Vous étes en Mode Demo", "OK");
                 return;
