@@ -136,3 +136,4 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.pdb
+/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupFlashCode.xaml.g.cs

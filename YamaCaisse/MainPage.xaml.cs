@@ -122,18 +122,9 @@ namespace YamaCaisse
 
         async void btScanServeur_Clicked(object sender, EventArgs e)
         {
-            #if __ANDROID__
-	                        // Initialize the scanner first so it can track the current context
-	                        MobileBarcodeScanner.Initialize (Application);
-            #endif
-
-            var scanner = new ZXing.Mobile.MobileBarcodeScanner();
-
-            var result = await scanner.Scan();
-
-            if (result != null)
-                Console.WriteLine("Scanned Barcode: " + result.Text);
+            await Navigation.PushPopupAsync(new PopupFlashCode());
         }
+
         async void Click_ModServeur(object sender, EventArgs e)
         {
             List<ServeurCnx> listServeur = new List<ServeurCnx>();

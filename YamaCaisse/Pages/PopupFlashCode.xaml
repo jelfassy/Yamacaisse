@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+    x:Class="YamaCaisse.Pages.PopupFlashCode">
+    <StackLayout>
+        <Label x:Name="scanResultText"/>
+        <zxing:ZXingScannerView IsScanning="True"  OnScanResult="ZXingScannerView_OnScanResult" />
+    </StackLayout>
+</pages:PopupPage>

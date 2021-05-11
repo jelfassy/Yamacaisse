@@ -103,7 +103,7 @@
               "target": "Package",
               "version": "[5.0.0.2012, )"
             },
-            "ZXing.Net.Mobile": {
+            "ZXing.Net.Mobile.Forms": {
               "target": "Package",
               "version": "[2.4.1, )"
             }

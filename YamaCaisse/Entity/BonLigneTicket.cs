@@ -1,4 +1,6 @@
 ﻿using System;
+using Newtonsoft.Json;
+
 namespace YamaCaisse.Entity
 {
     public class BonLigneTicket
@@ -15,6 +17,8 @@ namespace YamaCaisse.Entity
 
         public int? FK_TABLE_ID { get; set; }
 
+
+        [JsonIgnore]
         public LigneTicket LigneTicket { get; set; }
 
 

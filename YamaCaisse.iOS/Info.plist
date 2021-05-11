@@ -38,5 +38,7 @@
 	<string>1.6</string>
 	<key>UIMainStoryboardFile</key>
 	<string>LaunchScreen</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Cette Application veut lire le FlashCode</string>
 </dict>
 </plist>
