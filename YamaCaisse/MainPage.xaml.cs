@@ -122,7 +122,7 @@ namespace YamaCaisse
 
         async void btScanServeur_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushPopupAsync(new PopupFlashCode());
+            await Navigation.PushPopupAsync(new PopupFlashCode(this));
         }
 
         async void Click_ModServeur(object sender, EventArgs e)
