@@ -59,6 +59,7 @@ namespace YamaCaisse.Pages
                 serveur.ServeurAdresse = rs[1].ToString() + ":" + rs[2].ToString();
                 serveur.UserWindows = rs[3].ToString();
                 serveur.PassWindows = rs[4].ToString();
+                serveur.AuthentWindows = true;
             }
             else
             {
@@ -66,6 +67,7 @@ namespace YamaCaisse.Pages
                 serveur.ServeurAdresse = rs[1].ToString();
                 serveur.UserWindows = rs[2].ToString();
                 serveur.PassWindows = rs[3].ToString();
+                serveur.AuthentWindows = true;
             }
             return serveur;
         }
