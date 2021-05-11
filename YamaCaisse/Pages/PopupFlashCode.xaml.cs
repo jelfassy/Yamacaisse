@@ -37,10 +37,13 @@ namespace YamaCaisse.Pages
                 else
                     App.Current.Properties["ServeurList"] = jsonValueToSave;
 
+                 App.Current.SavePropertiesAsync();
+
                 if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
                 {
                     _mainpage.LoadPickerData();
-                     Navigation.PopPopupAsync();
+                    DisplayAlert("Serveur", "Serveur Ajouté !", "ok");
+                    Navigation.PopPopupAsync();
                 }
 
             });
