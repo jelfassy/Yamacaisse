@@ -30,7 +30,9 @@ namespace YamaCaisse.Pages
                     list = JsonConvert.DeserializeObject<List<ServeurCnx>>(Application.Current.Properties["ServeurList"].ToString());
                 else
                     list = new List<ServeurCnx>();
-                list.Add(MapServeur(result.Text));
+                var serveur = MapServeur(result.Text);
+                if(!list.Select(c=>c.SeveurName).Contains(serveur.SeveurName))
+                list.Add(serveur);
                 var jsonValueToSave = JsonConvert.SerializeObject(list);
                 if (!Application.Current.Properties.ContainsKey("ServeurList"))
                     App.Current.Properties.Add("ServeurList", jsonValueToSave);
@@ -55,7 +57,7 @@ namespace YamaCaisse.Pages
             ServeurCnx serveur = new ServeurCnx();
             if (rs.Count() == 5)
             {
-                serveur.SeveurName = rs[0].ToString();
+                serveur.SeveurName = rs[0].ToString().Trim();
                 serveur.ServeurAdresse = rs[1].ToString() + ":" + rs[2].ToString();
                 serveur.UserWindows = rs[3].ToString();
                 serveur.PassWindows = rs[4].ToString();
