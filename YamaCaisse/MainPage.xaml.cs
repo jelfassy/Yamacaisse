@@ -214,6 +214,11 @@ namespace YamaCaisse
                 Application.Current.Properties["Authent"] = serveur.AuthentWindows;
                 Application.Current.Properties["UserName"] = serveur.UserWindows;
                 Application.Current.Properties["Password"] = serveur.PassWindows;
+                await DisplayAlert("ServeurAdress", Application.Current.Properties["ServeurAdress"].ToString(), "ok");
+                await DisplayAlert("Authent", Application.Current.Properties["Authent"].ToString(), "ok");
+                await DisplayAlert("UserName", Application.Current.Properties["UserName"].ToString(), "ok");
+                await DisplayAlert("Password", Application.Current.Properties["Password"].ToString(), "ok");
+
                 this.IsBusy = true;
                 IDevice device = DependencyService.Get<IDevice>();
                 App.DeviceIdentifier = device.GetIdentifier();
