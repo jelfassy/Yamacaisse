@@ -143,7 +143,6 @@ namespace YamaCaisse
             {
                 SetServeurAdresse();
                 _userDataServices = DependencyService.Get<IUserDataServices>();
-                await DisplayAlert("",)
                 var user = await _userDataServices.GetUserbyCode(this.CodeUser.Text);
                 if (user == null)
                 {
