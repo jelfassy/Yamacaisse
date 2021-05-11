@@ -7,6 +7,6 @@
     x:Class="YamaCaisse.Pages.PopupFlashCode">
     <StackLayout>
         <Label x:Name="scanResultText"/>
-        <zxing:ZXingScannerView IsScanning="True"  OnScanResult="ZXingScannerView_OnScanResult" />
+        <zxing:ZXingScannerView IsScanning="True" IsAnalyzing="True" OnScanResult="ZXingScannerView_OnScanResult" />
     </StackLayout>
 </pages:PopupPage>
