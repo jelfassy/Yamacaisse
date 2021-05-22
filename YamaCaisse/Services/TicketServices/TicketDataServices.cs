@@ -534,7 +534,7 @@ namespace YamaCaisse.Services.TicketServices
 
                 // var rs = string.Concat("{\"t_TICKET\":", js, "}");
 
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Eclater/VerTable?idOldTicket="+ idOldTicket), js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Eclater/VersTable/"+ idOldTicket), js);
 
                 await Task.Run(() =>
                 {

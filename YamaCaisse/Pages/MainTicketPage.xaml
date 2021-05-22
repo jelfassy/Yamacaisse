@@ -49,7 +49,7 @@
                                 </Label>
                                 <Label Grid.Row="0" Grid.Column="3" Text="Reste due" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
                                      <Label.GestureRecognizers>
-                                         <TapGestureRecognizer Tapped="onTap_TriStaff"/>
+                                         <TapGestureRecognizer Tapped="onTap_TriRestantDue"/>
                                     </Label.GestureRecognizers>
                                 </Label>
                                 <Label Grid.Row="0" Grid.Column="4" Text="Staff" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}">
@@ -57,7 +57,11 @@
                                          <TapGestureRecognizer Tapped="onTap_TriStaff"/>
                                     </Label.GestureRecognizers>
                                 </Label>
-                                <Label Grid.Row="0" Grid.Column="5" Text="Table" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
+                                <Label Grid.Row="0" Grid.Column="5" Text="Table" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" >
+                                  <Label.GestureRecognizers>
+                                         <TapGestureRecognizer Tapped="onTap_TriTable"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
                             </Grid>
                         </ListView.Header>
                         <ListView.ItemTemplate>

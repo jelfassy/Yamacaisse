@@ -176,9 +176,9 @@ namespace YamaCaisse.Pages
         void onTap_TriMontant(object sender, EventArgs args)
         {
             if (TriMontant)
-                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.TIK_DATE));
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderBy(c => c.TIK_MNT_TOTAL));
             else
-                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.TIK_DATE));
+                ListTicket = new ObservableCollection<TicketPaiementViewModel>(ListTicket.OrderByDescending(c => c.TIK_MNT_TOTAL));
             TriMontant = !TriMontant;
             listViewTicket.ItemsSource = ListTicket;
         }

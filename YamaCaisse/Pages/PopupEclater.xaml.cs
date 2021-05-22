@@ -227,7 +227,6 @@ namespace YamaCaisse.Pages
                 if (this.TableId == 0)
                 {
                     var rs = await _ticketDataServices.EclaterVerTicket(this.TikId, ticket);
-                    await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
                     this.ListSelectedLigneTicket.Clear();
                     this.MontantTotal = 0;
                     await PopupNavigation.Instance.PushAsync(new PopupPaiement(rs));
@@ -235,7 +234,7 @@ namespace YamaCaisse.Pages
                 else
                 {
                     var rs = await _ticketDataServices.EclaterVerTable(this.TikId, ticket);
-                    this.ListSelectedLigneTicket.Clear();
+                   this.ListSelectedLigneTicket.Clear();
                     this.MontantTotal = 0;
                     _mainTablePage.Refresh();
                 }

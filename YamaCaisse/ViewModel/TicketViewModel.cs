@@ -473,7 +473,7 @@ namespace YamaCaisse.ViewModel
             {
                 var inlist = newlist.SingleOrDefault(d => 
                     d.LTK_DESIGNATION_PRODUIT == item.LTK_DESIGNATION_PRODUIT
-                        && d.LTK_SOMME == item.LTK_SOMME
+                        && d.LTK_PRIX_UNITAIRE == item.LTK_PRIX_UNITAIRE
                         && d.FK_REC_ID == item.FK_REC_ID
                         && d.LTK_INFO == item.LTK_INFO
                         && d.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID).SequenceEqual(item.LIST_COMPLEMENT.Select(c=>c.FK_PDT_ID)));
@@ -482,6 +482,8 @@ namespace YamaCaisse.ViewModel
                     inlist.LTK_QTE += item.LTK_QTE;
                     inlist.LTK_MNT_TVA += item.LTK_MNT_TVA;
                     inlist.LTK_SOMME += item.LTK_SOMME;
+                    if (inlist.LTK_INFO != null)
+                        inlist.LTK_INFO += inlist.LTK_INFO;
                 }
                 else
                 {
