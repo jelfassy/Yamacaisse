@@ -4,12 +4,16 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Xamarin.Forms;
 using System.Linq;
+using Newtonsoft.Json;
 
 namespace YamaCaisse.Entity
 {
     public class LigneTicket : INotifyPropertyChanged
     {
-
+        public LigneTicket()
+        {
+            LIST_COMPLEMENT = new ObservableCollection<LigneTicket>();
+        }
         public int LTK_ID
         {
             get;
@@ -242,7 +246,7 @@ namespace YamaCaisse.Entity
             }
         }
 
-
+        [JsonIgnore]
         public string CmplLigne1
         {
             get { var rs = this.LIST_COMPLEMENT.FirstOrDefault() != null ? 
@@ -251,7 +255,7 @@ namespace YamaCaisse.Entity
                 return rs;
             }
         }
-
+        [JsonIgnore]
         public decimal? MntCmplLigne1
         {
             get { var  rs =this.LIST_COMPLEMENT.FirstOrDefault() != null ? 
@@ -259,7 +263,7 @@ namespace YamaCaisse.Entity
                 return rs; }
            
         }
-
+        [JsonIgnore]
         public bool? VisibleComplement1
         {
             get
@@ -270,7 +274,7 @@ namespace YamaCaisse.Entity
                     return true;
             }
         }
-
+        [JsonIgnore]
         public string CmplLigne2
         {
             get
@@ -282,7 +286,7 @@ namespace YamaCaisse.Entity
             }
 
         }
-
+        [JsonIgnore]
         public decimal? MntCmplLigne2
         {
             get
@@ -294,7 +298,7 @@ namespace YamaCaisse.Entity
             }
 
         }
-
+        [JsonIgnore]
         public bool? VisibleComplement2
         {
             get
@@ -305,7 +309,7 @@ namespace YamaCaisse.Entity
                     return true;
             }
         }
-
+        [JsonIgnore]
         public string CmplLigne3
         {
             get
@@ -317,7 +321,7 @@ namespace YamaCaisse.Entity
             }
 
         }
-
+        [JsonIgnore]
         public decimal? MntCmplLigne3
         {
             get
@@ -329,6 +333,7 @@ namespace YamaCaisse.Entity
             }
 
         }
+        [JsonIgnore]
         public bool? VisibleComplement3
         {
             get
@@ -339,7 +344,7 @@ namespace YamaCaisse.Entity
                     return true;
             }
         }
-
+        [JsonIgnore]
         public string CmplLigne4
         {
             get
@@ -350,7 +355,7 @@ namespace YamaCaisse.Entity
                 return rs;
             }
         }
-
+        [JsonIgnore]
         public decimal? MntCmplLigne4
         {
             get
@@ -363,6 +368,7 @@ namespace YamaCaisse.Entity
 
 
         }
+        [JsonIgnore]
         public bool? VisibleComplement4
         {
             get
@@ -373,7 +379,7 @@ namespace YamaCaisse.Entity
                     return true;
             }
         }
-
+        [JsonIgnore]
         public string CmplLigne5
         {
             get
@@ -385,7 +391,7 @@ namespace YamaCaisse.Entity
             }
 
         }
-
+        [JsonIgnore]
         public decimal? MntCmplLigne5
         {
             get
@@ -396,7 +402,7 @@ namespace YamaCaisse.Entity
                 return rs;
             }
         }
-
+        [JsonIgnore]
         public bool? VisibleComplement5
         {
             get
