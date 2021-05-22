@@ -18,7 +18,6 @@ namespace YamaCaisse.Entity
         public int? FK_TABLE_ID { get; set; }
 
 
-        [JsonIgnore]
         public LigneTicket LigneTicket { get; set; }
 
 
