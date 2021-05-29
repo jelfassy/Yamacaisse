@@ -255,6 +255,19 @@ namespace YamaCaisse.Entity
                 return rs;
             }
         }
+
+        [JsonIgnore]
+        public int? CmplQteLigne1
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.FirstOrDefault() != null ?
+                   this.LIST_COMPLEMENT.FirstOrDefault().LTK_QTE :
+                   0 ;
+                return rs;
+            }
+        }
+        
         [JsonIgnore]
         public decimal? MntCmplLigne1
         {
@@ -282,6 +295,18 @@ namespace YamaCaisse.Entity
                 var rs = this.LIST_COMPLEMENT.Skip(1).FirstOrDefault() != null ?
                   this.LIST_COMPLEMENT.Skip(1).FirstOrDefault().LTK_DESIGNATION_PRODUIT :
                   string.Empty;
+                return rs;
+            }
+
+        }
+        [JsonIgnore]
+        public int? CmplQteLigne2
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(1).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(1).FirstOrDefault().LTK_QTE :
+                  0;
                 return rs;
             }
 
@@ -321,6 +346,19 @@ namespace YamaCaisse.Entity
             }
 
         }
+      
+        [JsonIgnore]
+        public int? CmplQteLigne3
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(2).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(2).FirstOrDefault().LTK_QTE :
+                  0;
+                return rs;
+            }
+
+        }
         [JsonIgnore]
         public decimal? MntCmplLigne3
         {
@@ -355,6 +393,18 @@ namespace YamaCaisse.Entity
                 return rs;
             }
         }
+       [JsonIgnore]
+        public int? CmplQteLigne4
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(3).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(3).FirstOrDefault().LTK_QTE :
+                  0;
+                return rs;
+            }
+
+        }
         [JsonIgnore]
         public decimal? MntCmplLigne4
         {
@@ -387,6 +437,18 @@ namespace YamaCaisse.Entity
                 var rs = this.LIST_COMPLEMENT.Skip(4).FirstOrDefault() != null ?
                   this.LIST_COMPLEMENT.Skip(4).FirstOrDefault().LTK_DESIGNATION_PRODUIT :
                   string.Empty;
+                return rs;
+            }
+
+        }
+        [JsonIgnore]
+        public int? CmplQteLigne5
+        {
+            get
+            {
+                var rs = this.LIST_COMPLEMENT.Skip(4).FirstOrDefault() != null ?
+                  this.LIST_COMPLEMENT.Skip(4).FirstOrDefault().LTK_QTE :
+                  0;
                 return rs;
             }
 

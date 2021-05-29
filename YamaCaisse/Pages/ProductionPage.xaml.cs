@@ -218,14 +218,18 @@ namespace YamaCaisse.Pages
                         if (inlist != null)
                         {
                             inlist.LTK_QTE += ligne.LTK_QTE;
-                           // inlist.LTK_MNT_TVA += ligne.LTK_MNT_TVA;
-                           // inlist.LTK_SOMME += ligne.LTK_SOMME;
-                           // inlist.LTK_TOTAL_HT += ligne.LTK_TOTAL_HT;
 
-                            foreach (var under in inlist.LIST_COMPLEMENT)
+                            foreach (var under in ligne.LIST_COMPLEMENT)
                             {
-                                var elem = ligne.LIST_COMPLEMENT.FirstOrDefault(c => c.LTK_DESIGNATION_PRODUIT == under.LTK_DESIGNATION_PRODUIT);
-                                under.LTK_QTE += elem.LTK_QTE;
+                                var elem = inlist.LIST_COMPLEMENT.FirstOrDefault(c => c.LTK_DESIGNATION_PRODUIT == under.LTK_DESIGNATION_PRODUIT);
+                                if (elem == null)
+                                    inlist.LIST_COMPLEMENT.Add(new LigneTicket()
+                                    {
+                                        LTK_QTE = 1,
+                                        LTK_DESIGNATION_PRODUIT = under.LTK_DESIGNATION_PRODUIT
+                                    });
+                                else
+                                    elem.LTK_QTE += elem.LTK_QTE;
                               //  under.LTK_MNT_TVA += elem.LTK_MNT_TVA;
                                // under.LTK_SOMME += elem.LTK_SOMME;
                                // under.LTK_TOTAL_HT += elem.LTK_TOTAL_HT;
