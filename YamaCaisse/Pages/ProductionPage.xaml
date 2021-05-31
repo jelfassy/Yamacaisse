@@ -83,7 +83,7 @@
                                         <Label Grid.Row="3" Grid.Column="1" Text="{Binding CmplLigne4}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}" />
                                         <Label Grid.Row="3" Grid.Column="2" Text="{Binding MntCmplLigne4 ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}" />
 
-                                        <Label Grid.Row="3" Grid.Column="0" Text="{Binding CmplQteLigne5}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}" />
+                                        <Label Grid.Row="4" Grid.Column="0" Text="{Binding CmplQteLigne5}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement4}" />
                                         <Label Grid.Row="4" Grid.Column="1" Text="{Binding CmplLigne5}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}" />
                                         <Label Grid.Row="4" Grid.Column="1" Text="{Binding MntCmplLigne5 ,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" IsVisible="{Binding VisibleComplement5}" />
                                     </Grid>
