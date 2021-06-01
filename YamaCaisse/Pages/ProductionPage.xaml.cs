@@ -162,7 +162,7 @@ namespace YamaCaisse.Pages
                             foreach (var under in inlist.LIST_COMPLEMENT)
                             {
                                 var elem = ligne.LIST_COMPLEMENT.FirstOrDefault(c => c.LTK_DESIGNATION_PRODUIT == under.LTK_DESIGNATION_PRODUIT);
-                                under.LTK_QTE += elem.LTK_QTE;
+                                under.LTK_QTE += 1;
                               //  under.LTK_MNT_TVA += elem.LTK_MNT_TVA;
                                // under.LTK_SOMME += elem.LTK_SOMME;
                                // under.LTK_TOTAL_HT += elem.LTK_TOTAL_HT;
@@ -229,7 +229,7 @@ namespace YamaCaisse.Pages
                                         LTK_DESIGNATION_PRODUIT = under.LTK_DESIGNATION_PRODUIT
                                     });
                                 else
-                                    elem.LTK_QTE += elem.LTK_QTE;
+                                    elem.LTK_QTE += 1;
                               //  under.LTK_MNT_TVA += elem.LTK_MNT_TVA;
                                // under.LTK_SOMME += elem.LTK_SOMME;
                                // under.LTK_TOTAL_HT += elem.LTK_TOTAL_HT;
@@ -241,7 +241,7 @@ namespace YamaCaisse.Pages
                         }
                     }
                 }
-                this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecap);
+                this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecap.OrderBy(c=>c.LTK_DESIGNATION_PRODUIT);
                 this.ListRecapToDo.ItemsSource = this.ListRecap;
                 RecapEncour(ListAll);
             }
