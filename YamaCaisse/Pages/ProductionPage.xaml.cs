@@ -241,7 +241,7 @@ namespace YamaCaisse.Pages
                         }
                     }
                 }
-                this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecap.OrderBy(c=>c.LTK_DESIGNATION_PRODUIT);
+                this.ListRecap = new ObservableCollection<LigneTicket>(listligneRecap.OrderBy(c=>c.LTK_DESIGNATION_PRODUIT));
                 this.ListRecapToDo.ItemsSource = this.ListRecap;
                 RecapEncour(ListAll);
             }
