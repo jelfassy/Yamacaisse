@@ -228,13 +228,11 @@
     <BundleResource Include="Resources\EntrePlat.png" />
     <BundleResource Include="Resources\YamaCaisse_1024x1024.png" />
     <BundleResource Include="Resources\work.png" />
+    <BundleResource Include="Resources\FlecheMoin.png" />
+    <BundleResource Include="Resources\FlechePlus.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\FlecheMoin.png" />
-    <AndroidResource Include="Resources\FlechePlus.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

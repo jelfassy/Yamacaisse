@@ -69,19 +69,20 @@ namespace YamaCaisse.Pages
             GdList.Children.Clear();
             foreach (var produit in listProduit.OrderByDescending(c => (c.PDT_Prix - c.PDT_PRIX_COURRANT_WS)))
             {
-                var imgFleche = new Image() {  HorizontalOptions = LayoutOptions.Fill };
+                var imgFleche = new Image() {  HorizontalOptions = LayoutOptions.Fill
+                };
                 if (oldPrice.ContainsKey(produit.PDT_ID))
                 {
                     var mntPrecedent = oldPrice[produit.PDT_ID];
                     if (mntPrecedent.Value > produit.PDT_PRIX_COURRANT_WS)
                     {
                         col = Color.Green;
-                        imgFleche.Source = "FlecheMoin.png";
+                        imgFleche.Source = App.UrlGateway + "Content/Images/FlecheMoins.png";
                     }
                     else if (mntPrecedent.Value < produit.PDT_PRIX_COURRANT_WS)
                     {
                         col = Color.Red;
-                        imgFleche.Source = "FlechePlus.png";
+                        imgFleche.Source = App.UrlGateway + "Content/Images/FlechePlus.png";
                     }
                     else
                     { col = Color.White; }
@@ -96,14 +97,14 @@ namespace YamaCaisse.Pages
                 GdList.Children.Add(new Label()
                 {
                     Text = produit.PDT_Designation ,
-                    FontSize = 25,
+                    FontSize = 35,
                     TextColor = col
                 }, column, row);
 
                 GdList.Children.Add(new Label()
                 {
                     Text = (produit.PDT_PRIX_COURRANT_WS == null ? produit.PDT_Prix.ToString() : produit.PDT_PRIX_COURRANT_WS.ToString()) + "€",
-                    FontSize = 25,
+                    FontSize = 35,
                     TextColor = col
                 }, column + 1, row);
 
@@ -112,7 +113,7 @@ namespace YamaCaisse.Pages
                 GdList.Children.Add(new Label()
                 {
                     Text = (produit.PDT_PRIX_COURRANT_WS.Value - produit.PDT_Prix.Value).ToString() + "€",
-                    FontSize = 25,
+                    FontSize = 35,
                     TextColor = col
                 }, column + 3, row);
                 column = column + 5;

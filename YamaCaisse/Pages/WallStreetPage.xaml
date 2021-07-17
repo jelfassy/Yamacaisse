@@ -11,21 +11,21 @@
                 <RowDefinition Height="2*" />
              </Grid.RowDefinitions>
             <Image x:Name="ImageLogo"  HorizontalOptions="Fill" Grid.Row="0" />
-            <Label Text="" x:Name="lbChrono" FontSize="40" TextColor="Yellow" Grid.Row="1" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+            <Label Text="" x:Name="lbChrono" FontSize="70" TextColor="Yellow" Grid.Row="1" HorizontalTextAlignment="Center" VerticalOptions="Center"/>
         <Grid x:Name="GdList" Grid.Row="2" Margin="15,0,0,15" VerticalOptions="StartAndExpand" >
             <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="25" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="25" />
-                <RowDefinition Height="25" />
-                 <RowDefinition Height="25" />
-                 <RowDefinition Height="25" />
-                 <RowDefinition Height="25" />
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                 <RowDefinition Height="50" />
+                 <RowDefinition Height="50" />
+                 <RowDefinition Height="50" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*" />
@@ -33,7 +33,7 @@
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="3*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
