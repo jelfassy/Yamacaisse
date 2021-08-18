@@ -61,6 +61,10 @@ namespace YamaCaisse.Entity
 
         public bool? PDT_ISDIVERS { get; set; }
 
+        public string PDT_SIZE { get; set; }
+
+        public string PDT_CODE_BAR { get; set; }
+
         public Tva T_TVA
         {
             get;

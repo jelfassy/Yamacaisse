@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
+    x:Class="YamaCaisse.Pages.PopupBarCode">
+    <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid WidthRequest="400">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Code" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <Entry BackgroundColor="White"  Grid.Row="0" Grid.Column="1" Opacity="1" x:Name="eCodeBar" WidthRequest="150"/>
+            <Button x:Name="btLoad"  Clicked="btLoad_Clicked" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Charger" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Grid x:Name="GdDetailProduit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Produit " HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Label Grid.Row="0" Grid.Column="1" x:Name="LblProduit" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Taille" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" x:Name="LblTaille" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Prix" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Label Grid.Row="2" Grid.Column="1" x:Name="LblPrix" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+            </Grid>
+            <Button x:Name="btOK" Grid.Column="0" Clicked="btOK_Clicked" Grid.Row="3" Text="Envoi" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Button x:Name="btFermer" Grid.Column="1" Clicked="btFermer_Clicked" Grid.Row="3" Text="Fermer" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+
+        </Grid>
+    </StackLayout>
+</pages:PopupPage>

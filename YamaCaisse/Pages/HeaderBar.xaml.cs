@@ -11,7 +11,6 @@ namespace YamaCaisse.Pages
 {
     public partial class HeaderBar : Grid
     {
-        
 
         public HeaderBar()
         {
@@ -39,10 +38,19 @@ namespace YamaCaisse.Pages
             {
                 btTable.IsVisible = false;
                 btFacture.IsVisible = true;
+                btScan.IsVisible = false;
+            }
+            else if(ConfigViewModel.Current.ModeBoutique)
+            {
+                btTable.IsVisible = false;
+                btFacture.IsVisible = false;
+                btScan.IsVisible = true;
+                btCommand.Text = "Article";
             }
             else
             {
                 btFacture.IsVisible = false;
+                btScan.IsVisible = false;
             }
 
             //if (ConfigViewModel.Current.Profil == "Manager")
@@ -112,6 +120,11 @@ namespace YamaCaisse.Pages
         async void Printer_Clicked(object sender, System.EventArgs e)
         {
             await Navigation.PushPopupAsync(new PopupPinter());
+        }
+
+        async void btScan_Clicked(System.Object sender, System.EventArgs e)
+        {
+           await Navigation.PushModalAsync(new YamaCaisse.Pages.ScanBarCodePage());
         }
     }
 }

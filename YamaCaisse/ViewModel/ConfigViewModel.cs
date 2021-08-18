@@ -20,7 +20,15 @@ namespace YamaCaisse.ViewModel
             set;
         }
 
+        /// <summary>
+        /// Caisse en Mode Pressing
+        /// </summary>
         public bool ModePressing { get; set; }
+
+        /// <summary>
+        /// Mode Boutique 
+        /// </summary>
+        public bool ModeBoutique { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="T:YamaCaisse.ViewModel.ConfigViewModel"/> couvert requis.

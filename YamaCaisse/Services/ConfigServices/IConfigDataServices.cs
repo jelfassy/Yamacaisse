@@ -8,6 +8,7 @@ namespace YamaCaisse.Services.ConfigServices
         Task<bool> TestPing();
         Task<bool> CouvertRequis();
         Task<bool> ModePressing();
+        Task<bool> ModeBoutique();
         Task<bool> ModeWallStreet();
         Task<int> TimerWallStreet();
     }

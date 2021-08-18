@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:YamaCaisse.Pages;assembly=YamaCaisse" 
+    xmlns:localView="clr-namespace:YamaCaisse.View;assembly=YamaCaisse"
+    x:Class="YamaCaisse.Pages.ScanBarCodePage">
+    <ContentPage.Content>
+            <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource DarkPrimaryColor}" Margin="0,20,0,0">
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <local:HeaderBar />
+                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                     <StackLayout Margin="12" Padding="24" Spacing="24" BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid WidthRequest="400">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Code" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            <Entry BackgroundColor="White"  Grid.Row="0" Grid.Column="1" Opacity="1" x:Name="eCodeBar" WidthRequest="150"/>
+            <Button x:Name="btLoad"  Clicked="btLoad_Clicked" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Charger" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            <Grid x:Name="GdDetailProduit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Produit " HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Label Grid.Row="0" Grid.Column="1" x:Name="LblProduit" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                <Label Grid.Row="1" Grid.Column="0" Text="Taille" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" x:Name="LblTaille" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Prix" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
+                <Label Grid.Row="2" Grid.Column="1" x:Name="LblPrix" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
+            </Grid>
+             <Button Grid.Column="1" Clicked="btOK_Clicked" Grid.Row="2" Text="OK" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            </Grid>
+            </StackLayout>
+                    <localView:TicketView x:Name="ticketView" Grid.Column="1" />
+                </Grid>
+                   <!-- Boutons de bas de pages -->
+            <Grid HorizontalOptions="StartAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" BackgroundColor="{StaticResource DividerColor}" HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+                <Button Grid.Column="1" Clicked="Click_Envoi" Grid.Row="1" Text="Envoi" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+                <Button Grid.Column="2" Clicked="Click_Clear" Grid.Row="1" Text="Efface Tout" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            </Grid>
+                </StackLayout>
+                </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
