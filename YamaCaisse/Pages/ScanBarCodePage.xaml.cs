@@ -30,17 +30,9 @@ namespace YamaCaisse.Pages
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
         }
 
-         async void btOK_Clicked(System.Object sender, System.EventArgs e)
+         void btOK_Clicked(System.Object sender, System.EventArgs e)
         {
-             _produit = await _produitDataServices.GetProduitbyCodeBar(this.eCodeBar.Text);
-
-            this.LblProduit.Text = _produit.PDT_Designation;
-            this.LblTaille.Text = _produit.PDT_SIZE;
-            this.LblPrix.Text = _produit.PDT_Prix.ToString();
-
             AddToTicket();
-
-            this.eCodeBar.Text = string.Empty;
         }
 
         public Task<decimal> ReadMontantInPopup()
@@ -68,9 +60,7 @@ namespace YamaCaisse.Pages
         {
             _produit = await _produitDataServices.GetProduitbyCodeBar(this.eCodeBar.Text);
 
-            this.LblProduit.Text = _produit.PDT_Designation;
-            this.LblTaille.Text = _produit.PDT_SIZE;
-            this.LblPrix.Text = _produit.PDT_Prix.ToString();
+
         }
 
         async void AddToTicket()
@@ -229,13 +219,11 @@ namespace YamaCaisse.Pages
         {
             _produit = await _produitDataServices.GetProduitbyCodeBar(this.eCodeBar.Text);
 
-            this.LblProduit.Text = _produit.PDT_Designation;
-            this.LblTaille.Text = _produit.PDT_SIZE;
-            this.LblPrix.Text = _produit.PDT_Prix.ToString();
 
             AddToTicket();
 
             this.eCodeBar.Text = string.Empty;
+            this.eCodeBar.Focus();
         }
 
     }
