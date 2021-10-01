@@ -216,5 +216,11 @@ namespace YamaCaisse.Pages
             TicketViewModel.Current.Clear();
 
         }
+
+        void eCodeBar_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
+        {
+            AddToTicket();
+        }
+
     }
 }
