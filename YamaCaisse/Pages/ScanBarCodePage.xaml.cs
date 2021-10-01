@@ -226,6 +226,8 @@ namespace YamaCaisse.Pages
             this.LblPrix.Text = _produit.PDT_Prix.ToString();
 
             AddToTicket();
+
+            this.eCodeBar.Text = string.Empty;
         }
 
     }
