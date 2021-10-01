@@ -217,8 +217,14 @@ namespace YamaCaisse.Pages
 
         }
 
-        void eCodeBar_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
+        async void eCodeBar_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
+            _produit = await _produitDataServices.GetProduitbyCodeBar(this.eCodeBar.Text);
+
+            this.LblProduit.Text = _produit.PDT_Designation;
+            this.LblTaille.Text = _produit.PDT_SIZE;
+            this.LblPrix.Text = _produit.PDT_Prix.ToString();
+
             AddToTicket();
         }
 
