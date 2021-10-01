@@ -48,6 +48,14 @@ namespace YamaCaisse.Services.TicketServices
         /// <param name="idTable">Identifier table.</param>
         Task<bool> Print(int idTicket,int idPrinter);
 
+
+        /// <summary>
+        /// Prints the table.
+        /// </summary>
+        /// <returns>The table.</returns>
+        /// <param name="idTable">Identifier table.</param>
+        Task<bool> PrintCadeau(int idTicket, int idPrinter);
+
         /// <summary>
         /// Prints the table.
         /// </summary>
