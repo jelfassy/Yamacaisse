@@ -28,8 +28,9 @@
             </Grid.RowDefinitions>
             <Label Grid.Row="0" Grid.Column="0" Text="Code" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
             <Entry BackgroundColor="White"  Grid.Row="0" Grid.Column="1" Opacity="1" x:Name="eCodeBar" WidthRequest="150"/>
-            <Button x:Name="btLoad"  Clicked="btLoad_Clicked" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Charger" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
-            <Grid x:Name="GdDetailProduit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+           <!-- <Button x:Name="btLoad"  Clicked="btLoad_Clicked" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Charger" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />-->
+             <Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Clicked="btOK_Clicked" Text="OK" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+           <!-- <Grid x:Name="GdDetailProduit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -45,8 +46,8 @@
                 <Label Grid.Row="1" Grid.Column="1" x:Name="LblTaille" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
                 <Label Grid.Row="2" Grid.Column="0" Text="Prix" HorizontalOptions="FillAndExpand" FontSize="Small" FontAttributes="Italic" BackgroundColor="White" TextColor="Gray" HorizontalTextAlignment="Center" />
                 <Label Grid.Row="2" Grid.Column="1" x:Name="LblPrix" BackgroundColor="{StaticResource DividerColor}" FontSize="Large" HorizontalOptions="FillAndExpand"/>
-            </Grid>
-             <Button Grid.Column="1" Clicked="btOK_Clicked" Grid.Row="2" Text="OK" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />
+            </Grid>-->
+             <!--<Button Grid.Column="1" Clicked="btOK_Clicked" Grid.Row="2" Text="OK" BackgroundColor="{StaticResource AccentColor}" TextColor="{StaticResource TextIconeColor}" />-->
             </Grid>
             </StackLayout>
                     <localView:TicketView x:Name="ticketView" Grid.Column="1" />
