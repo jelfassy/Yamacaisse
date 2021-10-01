@@ -57,6 +57,18 @@ namespace YamaCaisse.Pages
                 btAnnuler.IsVisible = false;
                 btOffert.IsVisible = false;
             }
+
+            if(ConfigViewModel.Current.ModeBoutique)
+            {
+                btDivise.IsVisible = false;
+                btRetourTable.IsVisible = false;
+                btFiche.IsVisible = false;
+                btCadeau.IsVisible = true;
+            }
+            else
+            {
+                btCadeau.IsVisible = false;
+            }
         }
 
         void OnTextChanged(object sender, EventArgs e)
@@ -217,6 +229,11 @@ namespace YamaCaisse.Pages
         {
             await Navigation.PushPopupAsync(new PopupFiche());
 
+        }
+
+        async void Click_Cadeau(object sender, EventArgs e)
+        {
+            await _ticketDataServices.PrintCadeau((int)TicketViewModel.Current.TKT_ID, App.ConfigViewModel.Printer.PRT_ID);
         }
 
         async void Click_Reprint(object sender, EventArgs e)
