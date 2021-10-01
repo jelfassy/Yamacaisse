@@ -31,7 +31,6 @@
     <Folder Include="Services\ClientServices\" />
     <Folder Include="Services\PromotionServices\" />
     <Folder Include="Services\FactureServices\" />
-    <Folder Include="Services\ProduitServices\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Pages\PopupReservation.cs" />
@@ -41,6 +40,6 @@
     <EmbeddedResource Remove="Pages\EclaterPage.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Services\ProduitServices\" />
+    <None Remove="Services\ProduitServices\.DS_Store" />
   </ItemGroup>
 </Project>
