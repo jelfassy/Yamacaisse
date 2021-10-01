@@ -30,9 +30,15 @@ namespace YamaCaisse.Pages
             _ticketDataServices = DependencyService.Get<ITicketDataServices>();
         }
 
-         void btOK_Clicked(System.Object sender, System.EventArgs e)
+         async void btOK_Clicked(System.Object sender, System.EventArgs e)
         {
+            _produit = await _produitDataServices.GetProduitbyCodeBar(this.eCodeBar.Text);
+
+
             AddToTicket();
+
+            this.eCodeBar.Text = string.Empty;
+            this.eCodeBar.Focus();
         }
 
         public Task<decimal> ReadMontantInPopup()
