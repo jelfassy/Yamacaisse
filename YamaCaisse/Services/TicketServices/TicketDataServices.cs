@@ -183,6 +183,44 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
+        public async Task<bool> PrintCadeau(int idTicket, int idPrinter)
+        {
+            try
+            {
+                bool res = true;
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "PrintCadeau/", idTicket.ToString(), "/", idPrinter.ToString()));
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintCadeau" + idTicket}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"PrintCadeau" + idTicket }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+        
+
         /// <summary>
         /// Prints the fiche.
         /// </summary>
