@@ -32,7 +32,15 @@ namespace YamaCaisse.Pages
 
          void btOK_Clicked(System.Object sender, System.EventArgs e)
         {
+             _produit = await _produitDataServices.GetProduitbyCodeBar(this.eCodeBar.Text);
+
+            this.LblProduit.Text = _produit.PDT_Designation;
+            this.LblTaille.Text = _produit.PDT_SIZE;
+            this.LblPrix.Text = _produit.PDT_Prix.ToString();
+
             AddToTicket();
+
+            this.eCodeBar.Text = string.Empty;
         }
 
         public Task<decimal> ReadMontantInPopup()
