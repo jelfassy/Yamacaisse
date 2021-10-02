@@ -36,6 +36,11 @@ namespace YamaCaisse.View
                 btClient.IsVisible = false;
                 GdRetour.IsVisible = false;
             }
+
+            if (ConfigViewModel.Current.ModeBoutique)
+            {
+                btClient.IsVisible = true;
+            }
         }
 
 
