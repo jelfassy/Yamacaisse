@@ -78,8 +78,11 @@ namespace YamaCaisse.Pages
 
         async void Click_Commande(object sender, EventArgs e)
         {
-            TicketViewModel.Current.Clear();
-                App.CurrentPage = nameof(Caisse);
+            if (!ConfigViewModel.Current.ModeBoutique)
+            {
+                TicketViewModel.Current.Clear();
+            }
+            App.CurrentPage = nameof(Caisse);
                 await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
         }
 

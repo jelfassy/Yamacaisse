@@ -77,6 +77,7 @@ namespace YamaCaisse.View
         {
         }
 
+
         async void Click_ChangeReclame(object sender, System.EventArgs e)
         {
             var mi = ((MenuItem)sender);
@@ -93,6 +94,13 @@ namespace YamaCaisse.View
             await PopupNavigation.Instance.PushAsync(new PopupQuantite());
         }
 
+        async void Click_Retour(object sender, System.EventArgs e)
+        {
+            var mi = ((MenuItem)sender);
+            var ligneTicket = (LigneTicket)mi.CommandParameter;
+            TicketViewModel.Current.SelectedligneTicket = ligneTicket;
+            TicketViewModel.Current.ChangeLigneRetourClient();
+        }
 
         async void Message_Clicked(object sender, System.EventArgs e)
         {

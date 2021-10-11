@@ -553,6 +553,40 @@ namespace YamaCaisse.ViewModel
 
         }
 
+        public void ChangeLigneRetourClient()
+        {
+            var newlist = new ObservableCollection<LigneTicket>();
+
+            foreach (var item in TicketViewModel.Current.ListLigneTicket)
+            {
+                if (item == Current.SelectedligneTicket)
+                {
+                    item.LTK_SOMME = item.LTK_SOMME * -1;
+                    item.LTK_PRIX_UNITAIRE = item.LTK_PRIX_UNITAIRE * -1;
+                    item.LTK_TOTAL_HT = ((item.LTK_TOTAL_HT * 1) / (1 + item.T_TVA.TVA_Tx))* -1;
+                    if (item.LIST_COMPLEMENT != null)
+                    {
+                        foreach (var subligne in item.LIST_COMPLEMENT)
+                        {
+                            if (subligne.LTK_SOMME != null)
+                            {
+                                TicketViewModel.Current.MontantTotal = TicketViewModel.Current.MontantTotal - subligne.LTK_SOMME.Value;
+                                subligne.LTK_QTE = -1;
+                                subligne.LTK_SOMME = subligne.LTK_PRIX_UNITAIRE * -1;
+                                subligne.LTK_MNT_TVA = (subligne.LTK_SOMME * item.T_TVA.TVA_Tx) * -1;
+                                TicketViewModel.Current.MontantTotal -= subligne.LTK_SOMME.Value;
+                            }
+                        }
+                    }
+                    TicketViewModel.Current.MontantTotal += ((item.LTK_PRIX_UNITAIRE.Value * 1) * 2);
+                }
+                newlist.Add(item);
+            }
+            TicketViewModel.Current.ListLigneTicket = newlist;
+
+            //TicketViewModel.Current.MontantTotal = (decimal)newlist.Select(c => c.LTK_SOMME).Sum();
+
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

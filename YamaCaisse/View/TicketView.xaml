@@ -48,8 +48,9 @@
                             <ViewCell>
                                 <ViewCell.ContextActions>
                                     <MenuItem Clicked="Click_Quantite" CommandParameter="{Binding .}" Text="Qte" />
-                                    <MenuItem Clicked="Click_Attente" CommandParameter="{Binding .}" Text="En Attente" />
-                                    <MenuItem Clicked="Click_ChangeReclame" CommandParameter="{Binding .}" Text="Suite" />
+                                     <MenuItem Clicked="Click_Retour" CommandParameter="{Binding .}" Text="Retour" />
+                                    <MenuItem Clicked="Click_Attente" CommandParameter="{Binding .}" Text="En Attente"/>
+                                    <MenuItem Clicked="Click_ChangeReclame" CommandParameter="{Binding .}" Text="Suite"/>
                                     <MenuItem Clicked="Message_Clicked" CommandParameter="{Binding .}" Text="Change" />
                                     <MenuItem Clicked="Text_Clicked" CommandParameter="{Binding .}" Text="Info" />
                                     <MenuItem Clicked="Supprimer_Clicked" CommandParameter="{Binding .}" Text="Supprimer" IsDestructive="true" />
@@ -75,7 +76,7 @@
                                     <Label Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Text="{Binding LTK_SOMME,StringFormat='{0:0.00}'}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="{StaticResource PrimaryTextColor}" />
                                   
                                     <StackLayout IsVisible="{Binding VisibleComplement}" VerticalOptions="FillAndExpand" Orientation="Vertical" Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" HeightRequest="{Binding SizeUnderList}">
-                                          <Label Text="{Binding LTK_INFO}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" TextColor="BlueViolet" />
+                                          <Label Text="{Binding LTK_INFO}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" />
 
                                         <Grid>
                                             <Grid.RowDefinitions>
