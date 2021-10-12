@@ -48,7 +48,6 @@
                             <ViewCell>
                                 <ViewCell.ContextActions>
                                     <MenuItem Clicked="Click_Quantite" CommandParameter="{Binding .}" Text="Qte" />
-                                     <MenuItem Clicked="Click_Retour" CommandParameter="{Binding .}" Text="Retour" />
                                     <MenuItem Clicked="Click_Attente" CommandParameter="{Binding .}" Text="En Attente"/>
                                     <MenuItem Clicked="Click_ChangeReclame" CommandParameter="{Binding .}" Text="Suite"/>
                                     <MenuItem Clicked="Message_Clicked" CommandParameter="{Binding .}" Text="Change" />

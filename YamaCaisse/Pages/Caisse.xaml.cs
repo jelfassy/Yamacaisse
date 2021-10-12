@@ -71,6 +71,17 @@ namespace YamaCaisse.Pages
         {
             base.OnAppearing();
 
+
+            if(ConfigViewModel.Current.ModeBoutique)
+            {
+                btentreplat.IsVisible = false;
+                btMessage.IsVisible = false;
+                btSablier.IsVisible = false;
+            }
+            else
+            {
+                btRetour.IsVisible = false;
+            }
             //hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
             //hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
 
@@ -237,6 +248,14 @@ namespace YamaCaisse.Pages
             }
         }
 
+        void btRetour_Clicked(System.Object sender, System.EventArgs e)
+        {
+            if (TicketViewModel.Current.SelectedligneTicket != null)
+            {
+                TicketViewModel.Current.ChangeLigneRetourClient();
+            }
+        }
+
         void Click_Attente(object sender, EventArgs e)
         {
             if (TicketViewModel.Current.SelectedligneTicket != null)
@@ -332,5 +351,7 @@ namespace YamaCaisse.Pages
             TicketViewModel.Current.Clear();
 
         }
+
+
     }
 }

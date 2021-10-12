@@ -31,10 +31,12 @@
                 <localView:ProduitListView x:Name="PageProduitControl" Grid.Column="2" />
                 <localView:TicketView x:Name="ticketControl" Grid.Column="3"/>
                 <StackLayout x:Name="stkxtra" Grid.Column="5">
-                    <ImageButton Source="Sablier.png" Clicked="Click_Attente" BackgroundColor="{StaticResource AccentColor}" />
-                    <ImageButton Source="EntrePlat.png" Clicked="Click_EntPlat" BackgroundColor="{StaticResource AccentColor}" />
-                    <ImageButton Source="Message.png" Clicked="Click_Message" BackgroundColor="{StaticResource AccentColor}"  />
-                    <ImageButton Source="Supprimer.png" Clicked="Click_Supp" BackgroundColor="Red" />
+                    <ImageButton x:Name="btSablier" Source="Sablier.png" Clicked="Click_Attente" BackgroundColor="{StaticResource AccentColor}" />
+                    <ImageButton x:Name="btentreplat" Source="EntrePlat.png" Clicked="Click_EntPlat" BackgroundColor="{StaticResource AccentColor}" />
+                    <ImageButton x:Name="btMessage" Source="Message.png" Clicked="Click_Message" BackgroundColor="{StaticResource AccentColor}"  />
+                    <ImageButton x:Name="btRetour" Source="Retour.png" Clicked="btRetour_Clicked" BackgroundColor="Orange" />
+                    <ImageButton x:Name="btDelete" Source="Supprimer.png" Clicked="Click_Supp" BackgroundColor="Red" />
+
                 </StackLayout>
             </Grid>
             <!-- Boutons de bas de pages -->

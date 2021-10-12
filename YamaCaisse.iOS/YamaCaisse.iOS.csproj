@@ -230,6 +230,7 @@
     <BundleResource Include="Resources\work.png" />
     <BundleResource Include="Resources\FlecheMoin.png" />
     <BundleResource Include="Resources\FlechePlus.png" />
+    <BundleResource Include="Resources\Retour.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderer\" />
