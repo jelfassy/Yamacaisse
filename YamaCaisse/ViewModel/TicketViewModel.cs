@@ -588,6 +588,26 @@ namespace YamaCaisse.ViewModel
 
         }
 
+        public void ChangeLignePourcentage(decimal pourcentage)
+        {
+            var newlist = new ObservableCollection<LigneTicket>();
+
+            foreach (var item in TicketViewModel.Current.ListLigneTicket)
+            {
+                if (item == Current.SelectedligneTicket)
+                {
+                    TicketViewModel.Current.MontantTotal -= item.LTK_SOMME.Value;
+                    item.LTK_SOMME = item.LTK_SOMME * (1 - pourcentage);
+                    item.LTK_PRIX_UNITAIRE = item.LTK_PRIX_UNITAIRE * (1 - pourcentage);
+                    item.LTK_TOTAL_HT = ((item.LTK_TOTAL_HT * 1) / (1 + item.T_TVA.TVA_Tx)) * (1 - pourcentage);
+
+                    TicketViewModel.Current.MontantTotal += ((item.LTK_PRIX_UNITAIRE.Value * 1));
+                }
+                newlist.Add(item);
+            }
+            TicketViewModel.Current.ListLigneTicket = newlist;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)

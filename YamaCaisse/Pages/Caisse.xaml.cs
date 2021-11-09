@@ -81,6 +81,7 @@ namespace YamaCaisse.Pages
             else
             {
                 btRetour.IsVisible = false;
+                btRemise.IsVisible = false;
             }
             //hubConnection = new HubConnection(App.UrlGateway + "/signalr", useDefaultUrl: false);
             //hubProxy = hubConnection.CreateHubProxy("ServicesStatusHub");
@@ -217,7 +218,7 @@ namespace YamaCaisse.Pages
         {
             var list = sender as ListView;
             ligneTicketSelected = ((LigneTicket)list.SelectedItem);
-
+            TicketViewModel.Current.SelectedligneTicket = ligneTicketSelected;
         }
 
         #endregion
@@ -352,6 +353,11 @@ namespace YamaCaisse.Pages
 
         }
 
+        async void btRemise_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var page = new PopupPourcentage();
+            await Navigation.PushPopupAsync(page);
+        }
 
     }
 }

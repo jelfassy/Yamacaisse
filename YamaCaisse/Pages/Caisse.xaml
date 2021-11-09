@@ -35,8 +35,8 @@
                     <ImageButton x:Name="btentreplat" Source="EntrePlat.png" Clicked="Click_EntPlat" BackgroundColor="{StaticResource AccentColor}" />
                     <ImageButton x:Name="btMessage" Source="Message.png" Clicked="Click_Message" BackgroundColor="{StaticResource AccentColor}"  />
                     <ImageButton x:Name="btRetour" Source="Retour.png" Clicked="btRetour_Clicked" BackgroundColor="Orange" />
+                    <ImageButton x:Name="btRemise" Source="percentage.png" Clicked="btRemise_Clicked" BackgroundColor="Orange" />
                     <ImageButton x:Name="btDelete" Source="Supprimer.png" Clicked="Click_Supp" BackgroundColor="Red" />
-
                 </StackLayout>
             </Grid>
             <!-- Boutons de bas de pages -->
