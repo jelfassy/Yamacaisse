@@ -61,12 +61,16 @@ namespace YamaCaisse.Pages
         }
 
 
-        void btValider_Clicked(System.Object sender, System.EventArgs e)
+        async void btValider_Clicked(System.Object sender, System.EventArgs e)
         {
             if (TicketViewModel.Current.SelectedligneTicket != null)
             {
                 var pourcent = decimal.Parse(this.ePourcentage.Text.Remove(this.ePourcentage.Text.Length - 1)) / 100;
                 TicketViewModel.Current.ChangeLignePourcentage(pourcent);
+                if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
+                {
+                    await Navigation.PopPopupAsync();
+                }
             }
         }
 
