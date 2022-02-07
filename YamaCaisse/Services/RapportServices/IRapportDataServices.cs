@@ -25,6 +25,8 @@ namespace YamaCaisse.Services.RapportServices
 
         Task<bool> GetRapportAnnuler(DateTime date);
 
+        Task<bool> GetRapportPointage(DateTime date);
+
         Task<List<GraphiqueDataModel>> GetGraphiqueData(DateTime date, int idGraphique);
 
         Task<List<GraphiqueModel>> GetListGraphique();

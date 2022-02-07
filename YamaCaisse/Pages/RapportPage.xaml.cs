@@ -121,6 +121,10 @@ namespace YamaCaisse.Pages
         {
             await Navigation.PushModalAsync(new WallStreetPage());
         }
-        
+
+        async void RapportPointage_Clicked(System.Object sender, System.EventArgs e)
+        {
+            var rs = await _rapportDataServices.GetRapportPointage(DtPicker.Date.ToLocalTime());
+        }
     }
 }

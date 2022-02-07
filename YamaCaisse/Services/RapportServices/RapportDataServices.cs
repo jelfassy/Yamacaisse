@@ -211,6 +211,49 @@ namespace YamaCaisse.Services.RapportServices
             }
         }
 
+        public async Task<bool> GetRapportPointage(DateTime date)
+        {
+            try
+            {
+                bool res = false;
+                var js = JsonConvert.SerializeObject(new
+                {
+                    Idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    Date = date
+
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Pointage"), js);
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                return res;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"IOE_GetRapportPointage" }
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"GetRapportPointage" }
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
 
         public async Task<List<GraphiqueModel>> GetListGraphique()
         {
