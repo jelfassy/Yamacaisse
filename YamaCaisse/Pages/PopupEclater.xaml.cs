@@ -118,7 +118,7 @@ namespace YamaCaisse.Pages
             var ticket = await _ticketDataServices.GetTicket(this.TikId);
             TicketViewModel.Current.Clear();
             TicketViewModel.Current.SetTicket(ticket, true);
-            this.listLigneTicket = TicketViewModel.Current.ListLigneTicket;
+            this.listLigneTicket = new ObservableCollection<LigneTicket>(TicketViewModel.Current.ListLigneTicket.Where(c=>c.LTK_SOMME > 0).ToList());
             this.IsBusy = false;
         }
 
