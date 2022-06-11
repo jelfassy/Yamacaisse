@@ -217,7 +217,7 @@ namespace YamaCaisse
                 Application.Current.Properties["Password"] = serveur.PassWindows;
 
                 this.IsBusy = true;
-                IDevice device = DependencyService.Get<IDevice>();
+              //  IDevice device = DependencyService.Get<IDevice>();
                 App.DeviceIdentifier = device.GetIdentifier();
                 if (serveur.ServeurAdresse.StartsWith("192"))
                     this.typeconnection = "http://";
