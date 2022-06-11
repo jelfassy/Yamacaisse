@@ -8,6 +8,7 @@ using Newtonsoft.Json.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using YamaCaisse.Entity;
+using YamaCaisse.Services.UserServices;
 using YamaCaisse.ViewModel;
 
 namespace YamaCaisse
@@ -42,10 +43,14 @@ namespace YamaCaisse
         public App()
         {
             InitializeComponent();
+
+            DependencyService.Register<IUserDataServices,UserDataServices>();
+
             TicketViewModel = new TicketViewModel();
             ConfigViewModel = ConfigViewModel.Current;
             MainPage = new YamaCaisse.MainPage();
             JsonPageProduit = new Dictionary<int, JObject>();
+           
             MainPage = new MainPage();
         }
 

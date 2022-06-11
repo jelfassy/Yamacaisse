@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 using YamaCaisse.Entity;
 using YamaCaisse.Tools;
 
-[assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.UserServices.UserDataServices))]
+//[assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.UserServices.UserDataServices))]
 namespace YamaCaisse.Services.UserServices
 {
     /// <summary>
