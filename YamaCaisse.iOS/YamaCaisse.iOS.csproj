@@ -60,7 +60,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
 <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 <MtouchExtraArgs>--optimize=experimental-xforms-product-</MtouchExtraArgs>
-<MtouchLink>Full</MtouchLink>
+<MtouchLink>None</MtouchLink>
 <CodesignProvision>VS: WildCard Development</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
