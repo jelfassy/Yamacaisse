@@ -19,7 +19,7 @@ namespace YamaCaisse.View
         public BonProductionView()
         {
             InitializeComponent();
-            _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
+            _bonProductionDataServices =  new BonProductionDataServices();
             this.Send = false;
         }
 

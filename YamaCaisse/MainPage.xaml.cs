@@ -158,22 +158,22 @@ namespace YamaCaisse
                     App.User = user;
                     App.UserId = user.EMP_ID;
 
-                    _jourDataServices = DependencyService.Get<IJourDataServices>();
+                    _jourDataServices = new JourDataServices());
                     var jour = await _jourDataServices.GetCurrentJourId();
                     if (jour == null)
                         throw new Exception("Probleme de jour");
                     App.JourId = jour.JOU_ID;
 
-                    _configDataServices = DependencyService.Get<IConfigDataServices>();
+                    _configDataServices = new ConfigDataServices();
                     var couvert = await _configDataServices.CouvertRequis();
                     ConfigViewModel.Current.CouvertRequis = couvert;
 
-                    _configDataServices = DependencyService.Get<IConfigDataServices>();
+   
                     var pressing = await _configDataServices.ModePressing();
                     ConfigViewModel.Current.ModePressing = pressing;
 
 
-                    _configDataServices = DependencyService.Get<IConfigDataServices>();
+         
                     var boutique = await _configDataServices.ModeBoutique();
                     ConfigViewModel.Current.ModeBoutique = boutique;
 

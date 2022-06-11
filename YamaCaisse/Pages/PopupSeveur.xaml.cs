@@ -57,7 +57,7 @@ namespace YamaCaisse.Pages
             Application.Current.Properties["Password"] = serveur.PassWindows;
             App.UrlGateway = "http://" + serveur.ServeurAdresse + "/";
             Application.Current.Properties["ServeurAdress"] = serveur.ServeurAdresse;
-            _configDataServices = DependencyService.Get<IConfigDataServices>();
+            _configDataServices = new ConfigDataServices();
             var rs = await _configDataServices.TestPing();
             if (rs == true)
                 await DisplayAlert("Test serveur", "Connexion ok", "ok");

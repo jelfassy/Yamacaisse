@@ -96,8 +96,8 @@ namespace YamaCaisse.Pages
         {
             InitializeComponent();
             this._mainTablePage = main;
-            _tableDataServices = DependencyService.Get<ITableDataServices>();
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _tableDataServices = new TableDataServices();
+            _ticketDataServices = new TicketDataServices();
             this.BindingContext = this;
             this.ListSelectedLigneTicket = new ObservableCollection<LigneTicket>();
             TikId = ticketId;

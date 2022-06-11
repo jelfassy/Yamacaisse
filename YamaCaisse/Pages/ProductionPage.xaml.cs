@@ -45,7 +45,7 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             list = new List<string>();
             ListAll = new List<BonProduction>();
-            _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
+            _bonProductionDataServices = new BonProductionDataServices();
         }
 
         protected override void OnAppearing()
@@ -474,7 +474,7 @@ namespace YamaCaisse.Pages
         {
             if (listTable == null)
             {
-                _tableDataServices = DependencyService.Get<ITableDataServices>();
+                _tableDataServices = new TableDataServices();
                 listTable = await _tableDataServices.GetTableList();
                 return listTable;
             }

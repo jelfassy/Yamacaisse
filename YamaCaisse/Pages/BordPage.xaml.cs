@@ -13,7 +13,7 @@ namespace YamaCaisse.Pages
         public BordPage(DateTime date)
         {
             InitializeComponent();
-            _rapportDataServices = DependencyService.Get<RapportDataServices>();
+            _rapportDataServices =  new RapportDataServices();
             this.CurrentDate = date;
             Load();
         }

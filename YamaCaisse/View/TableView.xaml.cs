@@ -88,7 +88,7 @@ namespace YamaCaisse.View
                 StkPageList.Children.Add(CreateButtonSalles("Grille", "Grille"));
                 StkPageList.Children.Add(CreateButtonSalles("Ouvert", "Ouvert"));
 
-                _salleDataServices = DependencyService.Get<ISalleDataServices>();
+                _salleDataServices = new SalleDataServices();();
 
                 var list = await _salleDataServices.GetSalles();
                 foreach (var pg in list.OrderBy(c => c.SAL_ORDER))
@@ -129,7 +129,7 @@ namespace YamaCaisse.View
         private async void InitMapSalle(int id)
         {
             StkTableList.Children.Clear();
-            _SalleTableDataServices = DependencyService.Get<ISalleTableDataServices>();
+            _SalleTableDataServices = new SalleTableDataServices();();
 
 
             var ls = await _SalleTableDataServices.SalleTablesbyIdSalle(id);
@@ -186,7 +186,7 @@ namespace YamaCaisse.View
         {
             StkTableList.Children.Clear();
             var grid = new Grid();
-            _tableDataServices = DependencyService.Get<ITableDataServices>();
+            _tableDataServices = new TableDataServices();
 
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             //grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
@@ -385,7 +385,7 @@ namespace YamaCaisse.View
             }
             else if (this.RetourTable)
             {
-                _TicketDataServices = DependencyService.Get<ITicketDataServices>();
+                _TicketDataServices = new TicketDataServices();
                 var rs = await _TicketDataServices.RetourTable(SelectedTableId, TicketViewModel.Current.Ticket);
                 TicketViewModel.Current.Clear();
                 TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId, false);

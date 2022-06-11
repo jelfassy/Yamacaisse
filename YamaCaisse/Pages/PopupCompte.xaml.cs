@@ -38,9 +38,9 @@ namespace YamaCaisse.Pages
             this._montant = montant;
             eCompte.IsVisible = false;
             btSave.IsVisible = false;
-            _compteDataServices = DependencyService.Get<ICompteDataServices>();
-            _paiementDataServices = DependencyService.Get<IPaiementDataServices>();
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _compteDataServices = new CompteDataServices();
+            _paiementDataServices = new PaiementDataServices();;
+            _ticketDataServices = new TicketDataServices();
             LoadListCompte();
         }
 

@@ -15,7 +15,7 @@ namespace YamaCaisse.Pages
         public PopupPurger(ProductionPage main)
         {
             InitializeComponent();
-            _bonProductionDataServices = DependencyService.Get<IBonProductionDataServices>();
+            _bonProductionDataServices = new BonProductionDataServices();
             _productionPage = main;
         }
         private IBonProductionDataServices _bonProductionDataServices;

@@ -57,11 +57,11 @@ namespace YamaCaisse.View
             this.RowDefinitions.Clear();
             this.ColumnDefinitions.Clear();
 
-            _pageProduitDataServices = DependencyService.Get<IPageProduitDataServices>();
+            _pageProduitDataServices = new PageProduitDataServices();;
             listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.IdPage);
-            _wallStreetDataServices = DependencyService.Get<WallStreetDataServices>();
+            _wallStreetDataServices = new WallStreetDataServices();();
 
-            _pageDataServices = DependencyService.Get<IPageDataServices>();
+            _pageDataServices = new PageDataServices();;
             var Lpage = await _pageDataServices.GetPageList();
             var page = Lpage.SingleOrDefault(c => c.PAG_ID == this.IdPage);
             this.IsFormulePage = page.PAG_MENU;

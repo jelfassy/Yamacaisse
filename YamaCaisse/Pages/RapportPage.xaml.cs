@@ -24,9 +24,9 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             BindingContext = this;
             this.IsBusy = false;
-            _rapportDataServices = DependencyService.Get<RapportDataServices>();
-            _configDataServices = DependencyService.Get<ConfigDataServices>();
-            _wallStreetDataServices = DependencyService.Get<WallStreetDataServices>();
+            _rapportDataServices = new RapportDataServices();
+            _configDataServices = new ConfigDataServices();
+            _wallStreetDataServices = new WallStreetDataServices();();
         }
 
 

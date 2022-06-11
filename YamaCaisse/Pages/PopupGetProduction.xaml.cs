@@ -25,7 +25,7 @@ namespace YamaCaisse.Pages
 
         public async void LoadData()
         {
-            _productionDataServices = DependencyService.Get<IProductionDataServices>();
+            _productionDataServices = new ProductionDataServices();
             listProduction = await _productionDataServices.GetProductionList();
 
             foreach (var item in listProduction)

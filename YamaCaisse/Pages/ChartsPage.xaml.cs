@@ -27,7 +27,7 @@ namespace YamaCaisse.Pages
             {
                 InitializeComponent();
                 this.CurrentDate = date;
-                _rapportDataServices = DependencyService.Get<RapportDataServices>();
+                _rapportDataServices =  new RapportDataServices();
                 InitColor();
                 IsCharts = true;
                 IsList = false;

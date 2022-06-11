@@ -19,7 +19,7 @@ namespace YamaCaisse.Pages
         {
             InitializeComponent();
             firstMontant = true;
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _ticketDataServices = new TicketDataServices();
             this.Current = "Couvert";
 
             lblNbDivise.GestureRecognizers.Add(new TapGestureRecognizer()

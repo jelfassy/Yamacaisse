@@ -53,8 +53,8 @@ namespace YamaCaisse.Pages
             this.BindingContext = this;
             bool firstLoad = true;
             InitializeComponent();
-            _pageDataServices = DependencyService.Get<IPageDataServices>();
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _pageDataServices = new PageDataServices();
+            _ticketDataServices = new TicketDataServices();
             IsEnable = true;
             InitPageButton(firstLoad);
             this.Number = 1;

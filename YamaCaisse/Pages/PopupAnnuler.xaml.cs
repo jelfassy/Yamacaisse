@@ -19,7 +19,7 @@ namespace YamaCaisse.Pages
         public PopupAnnuler()
         {
             InitializeComponent();
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _ticketDataServices = new TicketDataServices();
             this.eMnt.Text = TicketViewModel.Current.MontantTotal.ToString();
             this.eTickNum.Text = "#" + TicketViewModel.Current.TKT_ID.ToString();
 

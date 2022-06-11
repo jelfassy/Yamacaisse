@@ -23,8 +23,8 @@ namespace YamaCaisse.Pages
             InitializeComponent();
             CurrentFacture = fact;
             this.BindingContext = this;
-            _typePaiementServices = DependencyService.Get<ITypePaiementDataServices>();
-            _FactureDataServices = DependencyService.Get<IFactureDataServices>();
+            _typePaiementServices = new TypePaiementDataServices();;
+            _FactureDataServices = new FactureDataServices();
         }
 
 

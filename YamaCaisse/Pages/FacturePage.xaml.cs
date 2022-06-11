@@ -19,7 +19,7 @@ namespace YamaCaisse.Pages
         public FacturePage()
         {
             InitializeComponent();
-            _FactureDataServices = DependencyService.Get<IFactureDataServices>();
+            _FactureDataServices = new FactureDataServices();
             this.BindingContext = this;
         }
 

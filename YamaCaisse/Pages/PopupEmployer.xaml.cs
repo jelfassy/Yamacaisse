@@ -23,7 +23,7 @@ namespace YamaCaisse.Pages
         public PopupEmployer(DateTime datea)
         {
             InitializeComponent();
-            _rapportDataServices = DependencyService.Get<RapportDataServices>();
+            _rapportDataServices = new RapportDataServices();
 
             date = datea;
             LoadListEmployer();
@@ -32,7 +32,7 @@ namespace YamaCaisse.Pages
 
         public async void LoadListEmployer()
         {
-            _userDataServices = DependencyService.Get<IUserDataServices>();
+            _userDataServices = new UserDataServices();;
 
             ListEmploye = await _userDataServices.GetListUser();
 

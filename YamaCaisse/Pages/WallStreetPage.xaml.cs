@@ -21,8 +21,8 @@ namespace YamaCaisse.Pages
         public WallStreetPage()
         {
             InitializeComponent();
-            _configDataServices = DependencyService.Get<ConfigDataServices>();
-            _wallStreetDataServices = DependencyService.Get<WallStreetDataServices>();
+            _configDataServices = new ConfigDataServices();
+            _wallStreetDataServices = new WallStreetDataServices();();
             _SecondsElapsed = 0;
             oldPrice = new Dictionary<int, decimal?>();
         }

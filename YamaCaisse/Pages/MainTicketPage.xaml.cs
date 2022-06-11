@@ -43,7 +43,7 @@ namespace YamaCaisse.Pages
         public MainTicketPage(bool isTicket)
         {
             InitializeComponent();
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _ticketDataServices = new TicketDataServices();
             IsEcranTicket = isTicket;
            
             loadData();

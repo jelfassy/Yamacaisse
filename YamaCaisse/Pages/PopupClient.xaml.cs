@@ -26,8 +26,8 @@ namespace YamaCaisse.Pages
         public PopupClient()
         {
             InitializeComponent();
-            _ClientDataServices = DependencyService.Get<IClientDataServices>();
-            _PomotionDataServices = DependencyService.Get<IPomotionDataServices>();
+            _ClientDataServices = new ClientDataServices();
+            _PomotionDataServices = new PomotionDataServices();
         }
 
         protected override void OnAppearing()

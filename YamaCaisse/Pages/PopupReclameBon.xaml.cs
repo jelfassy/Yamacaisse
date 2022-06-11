@@ -32,7 +32,7 @@ namespace YamaCaisse.Pages
 
         public async void LoadListReclame()
         {
-            _reclameDataServices = DependencyService.Get<IReclameDataServices>();
+            _reclameDataServices = new ReclameDataServices();
 
             ListReclames = await _reclameDataServices.GetReclameList();
 

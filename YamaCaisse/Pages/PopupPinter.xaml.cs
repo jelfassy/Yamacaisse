@@ -32,7 +32,7 @@ namespace YamaCaisse.Pages
             int num = 0;
             int row = 0;
 
-            _printerDataServices = DependencyService.Get<PrinterDataServices>();
+            _printerDataServices = new PrinterDataServices();
             var listPrint = await _printerDataServices.GetPrinterList();
 
             foreach(var item in listPrint)
@@ -70,7 +70,7 @@ namespace YamaCaisse.Pages
         {
             Button btn = (Button)sender;
             int idprinter = int.Parse(btn.ClassId);
-            _printerDataServices = DependencyService.Get<PrinterDataServices>();
+            _printerDataServices = new PrinterDataServices();
             var listPrint = await _printerDataServices.GetPrinterList();
 
             ConfigViewModel.Current.Printer = listPrint.SingleOrDefault(c=>c.PRT_ID == idprinter);

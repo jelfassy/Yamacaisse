@@ -18,8 +18,8 @@ namespace YamaCaisse.ViewModel
 
         public TicketViewModel()
         {
-            _tableDataServices = DependencyService.Get<ITableDataServices>();
-            _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+            _tableDataServices = new TableDataServices();
+            _ticketDataServices = new TicketDataServices();
         }
 
         private static TicketViewModel _current;

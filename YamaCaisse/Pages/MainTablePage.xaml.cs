@@ -29,7 +29,7 @@ namespace YamaCaisse.Pages
                 this.BindingContext = this;
                 InitializeComponent();
                  
-                _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+                _ticketDataServices = new TicketDataServices();
 
             }
             catch (Exception ex)

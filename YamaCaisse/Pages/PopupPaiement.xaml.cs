@@ -41,9 +41,9 @@ namespace YamaCaisse.Pages
             {
                 InitializeComponent();
                 _ticket = tick;
-                _typePaiementServices = DependencyService.Get<ITypePaiementDataServices>();
-                _paiementDataServices = DependencyService.Get<IPaiementDataServices>();
-                _ticketDataServices = DependencyService.Get<ITicketDataServices>();
+                _typePaiementServices = new TypePaiementDataServices();;
+                _paiementDataServices = new PaiementDataServices();;
+                _ticketDataServices = new TicketDataServices();
                 stkListHisto.IsVisible = false;
                 stkPaiement.IsVisible = true;
                 LoadData();

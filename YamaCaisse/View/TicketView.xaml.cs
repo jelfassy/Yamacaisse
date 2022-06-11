@@ -23,8 +23,8 @@ namespace YamaCaisse.View
             InitializeComponent();
             this.switchcolor = false;
             BindingContext = this;
-            _pageDataServices = DependencyService.Get<IPageDataServices>();
-            _tableDataServices = DependencyService.Get<ITableDataServices>();
+            _pageDataServices = new PageDataServices();;
+            _tableDataServices = new TableDataServices();
 
             if (ConfigViewModel.Current.ModePressing)
             {

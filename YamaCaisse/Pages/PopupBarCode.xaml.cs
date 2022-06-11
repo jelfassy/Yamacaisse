@@ -25,7 +25,7 @@ namespace YamaCaisse.Pages
         {
             InitializeComponent();
             BindingContext = this;
-            _produitDataServices = DependencyService.Get<IProduitDataServices>();
+            _produitDataServices = new ProduitDataServices();
         }
 
         async void btOK_Clicked(System.Object sender, System.EventArgs e)
