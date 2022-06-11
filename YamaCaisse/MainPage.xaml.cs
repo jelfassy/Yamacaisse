@@ -218,7 +218,7 @@ namespace YamaCaisse
 
                 this.IsBusy = true;
               //  IDevice device = DependencyService.Get<IDevice>();
-                App.DeviceIdentifier = device.GetIdentifier();
+                App.DeviceIdentifier = "00000000";
                 if (serveur.ServeurAdresse.StartsWith("192"))
                     this.typeconnection = "http://";
                 else
