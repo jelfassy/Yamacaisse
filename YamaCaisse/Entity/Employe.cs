@@ -10,7 +10,7 @@ namespace YamaCaisse.Entity
     {
         public Employe()
         {
-
+            T_USER_PROFIL = new T_USER_PROFIL();
         }
 
         public int EMP_ID { get; set; }
