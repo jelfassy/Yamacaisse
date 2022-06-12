@@ -38,7 +38,7 @@
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchLink>Full</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchEnableSGenConc>false</MtouchEnableSGenConc>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
