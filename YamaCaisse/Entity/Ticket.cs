@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace YamaCaisse.Entity
 {
     public class Ticket
     {
+        [JsonConstructor]
         public Ticket()
         {
 

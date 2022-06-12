@@ -1,8 +1,11 @@
 ﻿using System;
+using Newtonsoft.Json;
+
 namespace YamaCaisse.Entity
 {
     public class TypePaiement
     {
+        [JsonConstructor]
         public TypePaiement()
         {
 

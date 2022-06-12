@@ -1,8 +1,11 @@
 ﻿using System;
+using Newtonsoft.Json;
+
 namespace YamaCaisse.Entity
 {
     public class T_USER_PROFIL
     {
+        [JsonConstructor]
         public T_USER_PROFIL()
         {
 
