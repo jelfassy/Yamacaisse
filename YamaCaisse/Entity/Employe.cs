@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace YamaCaisse.Entity
 {
     public class Employe
     {
+        [JsonConstructor]
         public Employe()
         {
            // T_USER_PROFIL = new T_USER_PROFIL();
