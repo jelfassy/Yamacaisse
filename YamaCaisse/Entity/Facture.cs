@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class Facture
     {
+        public Facture()
+        {
+
+        }
         public int FAC_ID { get; set; }
 
         public string FAC_NUM { get; set; }

@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class ServeurCnx
     {
+        public ServeurCnx()
+        {
+
+        }
        public string SeveurName { get; set; }
 
         public string ServeurAdresse { get; set; }

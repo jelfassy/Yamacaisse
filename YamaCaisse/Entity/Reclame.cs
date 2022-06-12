@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class Reclame
     {
+        public Reclame()
+        {
+
+        }
        public int REC_ID
         {
             get;

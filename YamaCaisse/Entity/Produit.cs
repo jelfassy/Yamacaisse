@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class Produit
     {
+        public Produit()
+        {
+
+        }
         public int PDT_ID
         {
             get;

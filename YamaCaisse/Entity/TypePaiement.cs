@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class TypePaiement
     {
+        public TypePaiement()
+        {
+
+        }
        public int TPA_ID
         {
             get;

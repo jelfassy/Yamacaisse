@@ -5,6 +5,10 @@ namespace YamaCaisse.Entity
 {
     public class PaiementTicket
     {
+        public PaiementTicket()
+        {
+
+        }
        public int PATI_ID
         {
             get;

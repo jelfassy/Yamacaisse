@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class Client
     {
+        public Client()
+        {
+
+        }
         public int CLI_ID { get; set; }
 
         public string CLI_NOM { get; set; }

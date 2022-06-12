@@ -8,6 +8,10 @@ namespace YamaCaisse.Entity
 {
     public class Table
     {
+        public Table()
+        {
+
+        }
         public int TAB_ID { get; set; }
         public string TAB_NOM { get; set; }
         public Nullable<int> TAB_ICONE { get; set; }

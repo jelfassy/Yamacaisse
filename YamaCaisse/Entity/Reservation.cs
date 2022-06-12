@@ -5,6 +5,10 @@ namespace YamaCaisse.Entity
 {
     public class Reservation
     {
+        public Reservation()
+        {
+            T_RESERVATION_TABLE = new List<ReservationTable>();
+        }
         public int RES_ID { get; set; }
 
         public DateTime RES_DATE { get; set; }

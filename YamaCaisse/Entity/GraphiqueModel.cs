@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class GraphiqueModel
     {
+        public GraphiqueModel()
+        {
+
+        }
         public int GPG_ID { get; set; }
 
         public string GPG_LIBELLE { get; set; }

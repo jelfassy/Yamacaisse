@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class Profil
     {
+        public Profil()
+        {
+
+        }
         public int USP_ID
         {
             get;

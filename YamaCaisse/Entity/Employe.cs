@@ -8,6 +8,10 @@ namespace YamaCaisse.Entity
 {
     public class Employe
     {
+        public Employe()
+        {
+
+        }
         public int EMP_ID { get; set; }
         public string EMP_NOM { get; set; }
         public string EMP_CODE { get; set; }

@@ -6,6 +6,10 @@ namespace YamaCaisse.Entity
 {
     public class Ticket
     {
+        public Ticket()
+        {
+
+        }
        public int TIK_ID
         {
             get;

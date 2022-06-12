@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class Promotion
     {
+        public Promotion()
+        {
+
+        }
         public int PROM_ID { get; set; }
 
         public string PROM_NOM { get; set; }

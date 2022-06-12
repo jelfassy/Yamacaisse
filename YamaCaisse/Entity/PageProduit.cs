@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class PageProduit
     {
+        public PageProduit()
+        {
+
+        }
        public int PGPD_ID
         {
             get;

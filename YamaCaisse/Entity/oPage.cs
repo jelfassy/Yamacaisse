@@ -3,7 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class oPage
     {
+        public oPage()
+        {
 
+        }
         public int PAG_ID
         {
             get;

@@ -3,6 +3,10 @@ namespace YamaCaisse.Entity
 {
     public class SalleTable
     {
+        public SalleTable()
+        {
+
+        }
         public int SALTAB_ID
         {
             get;
