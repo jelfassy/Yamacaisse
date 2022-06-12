@@ -59,7 +59,7 @@ namespace YamaCaisse.View
 
             _pageProduitDataServices = new PageProduitDataServices();;
             listPageProduit = await _pageProduitDataServices.GetPageProduitsbyId(this.IdPage);
-            _wallStreetDataServices = new WallStreetDataServices();();
+            _wallStreetDataServices = new WallStreetDataServices();
 
             _pageDataServices = new PageDataServices();;
             var Lpage = await _pageDataServices.GetPageList();

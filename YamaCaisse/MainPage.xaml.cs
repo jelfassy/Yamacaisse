@@ -158,7 +158,7 @@ namespace YamaCaisse
                     App.User = user;
                     App.UserId = user.EMP_ID;
 
-                    _jourDataServices = new JourDataServices());
+                    _jourDataServices = new JourDataServices();
                     var jour = await _jourDataServices.GetCurrentJourId();
                     if (jour == null)
                         throw new Exception("Probleme de jour");

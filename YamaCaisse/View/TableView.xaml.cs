@@ -88,7 +88,7 @@ namespace YamaCaisse.View
                 StkPageList.Children.Add(CreateButtonSalles("Grille", "Grille"));
                 StkPageList.Children.Add(CreateButtonSalles("Ouvert", "Ouvert"));
 
-                _salleDataServices = new SalleDataServices();();
+                _salleDataServices = new SalleDataServices();
 
                 var list = await _salleDataServices.GetSalles();
                 foreach (var pg in list.OrderBy(c => c.SAL_ORDER))
@@ -129,7 +129,7 @@ namespace YamaCaisse.View
         private async void InitMapSalle(int id)
         {
             StkTableList.Children.Clear();
-            _SalleTableDataServices = new SalleTableDataServices();();
+            _SalleTableDataServices = new SalleTableDataServices();
 
 
             var ls = await _SalleTableDataServices.SalleTablesbyIdSalle(id);

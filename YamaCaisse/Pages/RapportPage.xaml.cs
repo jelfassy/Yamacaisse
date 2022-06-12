@@ -26,7 +26,7 @@ namespace YamaCaisse.Pages
             this.IsBusy = false;
             _rapportDataServices = new RapportDataServices();
             _configDataServices = new ConfigDataServices();
-            _wallStreetDataServices = new WallStreetDataServices();();
+            _wallStreetDataServices = new WallStreetDataServices();
         }
 
 

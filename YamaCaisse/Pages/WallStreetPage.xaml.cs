@@ -22,7 +22,7 @@ namespace YamaCaisse.Pages
         {
             InitializeComponent();
             _configDataServices = new ConfigDataServices();
-            _wallStreetDataServices = new WallStreetDataServices();();
+            _wallStreetDataServices = new WallStreetDataServices();
             _SecondsElapsed = 0;
             oldPrice = new Dictionary<int, decimal?>();
         }
