@@ -10,13 +10,13 @@ namespace YamaCaisse.Entity
     {
         public Employe()
         {
-            T_USER_PROFIL = new T_USER_PROFIL();
+           // T_USER_PROFIL = new T_USER_PROFIL();
         }
 
         public int EMP_ID { get; set; }
         public string EMP_NOM { get; set; }
         public string EMP_CODE { get; set; }
         public string EMP_COULEUR { get; set; }
-        public T_USER_PROFIL T_USER_PROFIL { get; set; }
+       // public T_USER_PROFIL T_USER_PROFIL { get; set; }
     }
 }
