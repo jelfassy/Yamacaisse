@@ -1,9 +1,9 @@
 ﻿using System;
 namespace YamaCaisse.Entity
 {
-    public class Profil
+    public class T_USER_PROFIL
     {
-        public Profil()
+        public T_USER_PROFIL()
         {
 
         }
