@@ -1,6 +1,7 @@
 ﻿using System;
 namespace YamaCaisse.Entity
 {
+    [Preserve(AllMembers = true)]
     public class oPage
     {
         public oPage()

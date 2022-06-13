@@ -5,6 +5,7 @@ using Xamarin.Forms;
 
 namespace YamaCaisse.Entity
 {
+    [Preserve(AllMembers = true)]
     public class Ticket
     {
         [JsonConstructor]

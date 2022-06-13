@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace YamaCaisse.Entity
 {
+    [Preserve(AllMembers = true)]
     public class PaiementTicket
     {
         public PaiementTicket()

@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 
 namespace YamaCaisse.Entity
 {
+    [Preserve(AllMembers = true)]
     public class LigneTicket : INotifyPropertyChanged
     {
         public LigneTicket()

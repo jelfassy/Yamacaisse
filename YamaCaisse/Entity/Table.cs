@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace YamaCaisse.Entity
 {
+    [Preserve(AllMembers = true)]
     public class Table
     {
         public Table()

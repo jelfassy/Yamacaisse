@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 
 namespace YamaCaisse.Entity
 {
+    [Preserve(AllMembers = true)]
     public class TypePaiement
     {
         [JsonConstructor]
