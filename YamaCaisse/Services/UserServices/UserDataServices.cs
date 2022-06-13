@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using System.Text;
 using YamaCaisse.Entity;
 using YamaCaisse.Tools;
+using Newtonsoft.Json;
 
 [assembly: Xamarin.Forms.Dependency(typeof(YamaCaisse.Services.UserServices.UserDataServices))]
 namespace YamaCaisse.Services.UserServices
@@ -29,7 +31,10 @@ namespace YamaCaisse.Services.UserServices
             {
                 JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetT_EMPLOYEbyCode/", code));
                 Employe res = null;
-                await Task.Run(() => { res = o.ToObject<Employe>(); });
+                await Task.Run(() => {
+                    res = JsonConvert.DeserializeObject<Employe>(o.ToString());
+                   // o.ToObject<Employe>();
+                   });
                 if (res.EMP_ID == 0)
                     return null;
                 return res;
