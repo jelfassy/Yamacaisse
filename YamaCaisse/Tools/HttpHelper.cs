@@ -98,6 +98,49 @@ namespace YamaCaisse.Tools
 
         }
 
+
+
+        public static async Task<string> GetAsync(string uriString,bool txt)
+        {
+            try
+            {
+                var uri = new Uri(string.Concat(uriString));
+
+                return await retryPolicy.ExecuteAsync(async () =>
+                {
+                    HttpResponseMessage response = await client.GetAsync(uri);
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        int code = (int)response.StatusCode;
+
+                        if (code == 403)
+                        {
+                            throw new Exception("Timeout");
+                        }
+                        else if (code != 500 && code != 404)
+                        {
+                            response.EnsureSuccessStatusCode();
+                        }
+                    }
+
+                    var content = await response.Content.ReadAsStringAsync();
+                    content = CheckContent(response, content);
+
+                    //string res = JObject.Parse(content);
+                    return content;
+                });
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new InvalidOperationException("ErrorMessageAccesReseau");
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("ErrorMessageProblemeFonctionnement");
+            }
+
+        }
         /// <summary>
         /// Static Method GetAsync, This method implement HttpClient.GetAsync.
         /// Simplification Helper
@@ -194,6 +237,8 @@ namespace YamaCaisse.Tools
             }
 
         }
+
+
 
         /// <summary>
         /// Puts the async.

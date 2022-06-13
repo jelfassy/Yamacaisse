@@ -29,10 +29,10 @@ namespace YamaCaisse.Services.UserServices
         {
             try
             {
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetT_EMPLOYEbyCode/", code));
+                string o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "GetT_EMPLOYEbyCode/", code),true);
                 Employe res = null;
                 await Task.Run(() => {
-                    res = JsonConvert.DeserializeObject<Employe>(o.ToString());
+                    res = JsonConvert.DeserializeObject<Employe>(o);
                    // o.ToObject<Employe>();
                    });
                 if (res.EMP_ID == 0)
