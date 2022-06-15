@@ -87,7 +87,6 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.deps.json
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.pdb
-/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.csprojAssemblyReference.cache
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/ActivityIndicator.xaml.g.cs
@@ -137,3 +136,8 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.pdb
 /Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupFlashCode.xaml.g.cs
+/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.csproj.AssemblyReference.cache
+/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupBarCode.xaml.g.cs
+/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupPourcentage.xaml.g.cs
+/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/ScanBarCodePage.xaml.g.cs

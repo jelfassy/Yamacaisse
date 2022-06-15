@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {}
+    "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {}
   },
   "projects": {
-    "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {
+    "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
+        "projectUniqueName": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
         "projectName": "YamaCaisse.iOS",
-        "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
+        "projectPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
         "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-        "outputPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse.iOS/obj/",
+        "outputPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
-                "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj"
+              "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj": {
+                "projectPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj"
               }
             }
           }
@@ -42,19 +42,19 @@
             },
             "Microsoft.AppCenter": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Crashes": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Distribute": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Push": {
               "target": "Package",
@@ -62,7 +62,7 @@
             },
             "Microsoft.AspNetCore.SignalR.Client": {
               "target": "Package",
-              "version": "[5.0.5, )"
+              "version": "[6.0.5, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -70,29 +70,37 @@
             },
             "Polly": {
               "target": "Package",
-              "version": "[7.2.2, )"
+              "version": "[7.2.3, )"
             },
             "Rg.Plugins.Popup": {
               "target": "Package",
-              "version": "[2.0.0.11, )"
+              "version": "[2.1.0, )"
             },
             "SkiaSharp.Views.Forms": {
               "target": "Package",
-              "version": "[2.80.2, )"
+              "version": "[2.88.0, )"
+            },
+            "System.Buffers": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2478, )"
             },
             "Xamarin.TestCloud.Agent": {
               "target": "Package",
-              "version": "[0.22.2, )"
+              "version": "[0.23.1, )"
             },
-            "ZXing.Net.Mobile": {
+            "ZXing.Net.Mobile.Forms": {
               "target": "Package",
               "version": "[2.4.1, )"
             }
@@ -111,14 +119,14 @@
         }
       }
     },
-    "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj": {
+    "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectUniqueName": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
         "projectName": "YamaCaisse",
-        "projectPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
         "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-        "outputPath": "/Users/jonathanelfassy/Projects/YamaCaisse/YamaCaisse/obj/",
+        "outputPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -158,19 +166,19 @@
             },
             "Microsoft.AppCenter": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Analytics": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Crashes": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Distribute": {
               "target": "Package",
-              "version": "[4.2.0, )"
+              "version": "[4.5.1, )"
             },
             "Microsoft.AppCenter.Push": {
               "target": "Package",
@@ -178,7 +186,7 @@
             },
             "Microsoft.AspNet.SignalR.Client": {
               "target": "Package",
-              "version": "[2.4.1, )"
+              "version": "[2.4.3, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -192,25 +200,25 @@
             },
             "Polly": {
               "target": "Package",
-              "version": "[7.2.2, )"
+              "version": "[7.2.3, )"
             },
             "Rg.Plugins.Popup": {
               "target": "Package",
-              "version": "[2.0.0.11, )"
+              "version": "[2.1.0, )"
             },
             "SkiaSharp.Views.Forms": {
               "target": "Package",
-              "version": "[2.80.2, )"
+              "version": "[2.88.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2478, )"
             },
-            "ZXing.Net.Mobile": {
+            "ZXing.Net.Mobile.Forms": {
               "target": "Package",
               "version": "[2.4.1, )"
             }
@@ -225,7 +233,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
         }
       }
     }
