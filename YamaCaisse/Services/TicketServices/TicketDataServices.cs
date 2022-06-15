@@ -615,7 +615,7 @@ namespace YamaCaisse.Services.TicketServices
                 {
                     NullValueHandling = NullValueHandling.Ignore
                 });
-                JObject o = await HttpHelper.PutAsync(string.Concat(App.UrlGateway, Baseurl, id), js);
+                 JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"PutTicket/",id), js);
 
                 return true;
             }
