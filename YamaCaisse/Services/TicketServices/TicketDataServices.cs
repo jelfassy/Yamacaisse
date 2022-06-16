@@ -234,7 +234,7 @@ namespace YamaCaisse.Services.TicketServices
                
                 bool res = true;
                 var js = JsonConvert.SerializeObject(new {
-                    idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     idticket = ticket.TIK_ID,
                     nbCouvert = nbcouvert,
                     Montant = Montant
@@ -285,7 +285,7 @@ namespace YamaCaisse.Services.TicketServices
                 bool res = true;
                 var js = JsonConvert.SerializeObject(new
                 {
-                    idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     idticket = ticket.TIK_ID,
                     nbCouvert = nbPersonne,
                 }, new JsonSerializerSettings()
