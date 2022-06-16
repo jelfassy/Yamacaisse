@@ -718,6 +718,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microcharts": "0.9.5.9",
           "Microcharts.Forms": "0.9.5.9",
           "Microsoft.AppCenter": "4.5.1",
           "Microsoft.AppCenter.Analytics": "4.5.1",
@@ -1440,6 +1441,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microcharts": "0.9.5.9",
           "Microcharts.Forms": "0.9.5.9",
           "Microsoft.AppCenter": "4.5.1",
           "Microsoft.AppCenter.Analytics": "4.5.1",
@@ -2162,6 +2164,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microcharts": "0.9.5.9",
           "Microcharts.Forms": "0.9.5.9",
           "Microsoft.AppCenter": "4.5.1",
           "Microsoft.AppCenter.Analytics": "4.5.1",
@@ -2884,6 +2887,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microcharts": "0.9.5.9",
           "Microcharts.Forms": "0.9.5.9",
           "Microsoft.AppCenter": "4.5.1",
           "Microsoft.AppCenter.Analytics": "4.5.1",
