@@ -285,7 +285,7 @@ namespace YamaCaisse.Services.TicketServices
                 bool res = true;
                 var js = JsonConvert.SerializeObject(new
                 {
-                    idprinter = ConfigViewModel.Current.Printer.PRT_ID,
+                    idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     idticket = ticket.TIK_ID,
                     nbCouvert = nbPersonne,
                 }, new JsonSerializerSettings()
@@ -617,7 +617,6 @@ namespace YamaCaisse.Services.TicketServices
                 });
 
                  JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"PutTicket/",id), js);
-
 
                 return true;
             }
