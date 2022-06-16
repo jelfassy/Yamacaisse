@@ -95,6 +95,7 @@ namespace YamaCaisse.Pages
             try
             {
                 this.IsBusy = true;
+               // await DisplayAlert("printer", App.ConfigViewModel.Printer.PRT_ID.ToString(), "ok");
                 var rs = await _rapportDataServices.GetRapportJour(DtPicker.Date.ToLocalTime());
                 this.IsBusy = false;
             }
