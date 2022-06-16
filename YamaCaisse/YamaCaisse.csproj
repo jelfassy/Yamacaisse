@@ -21,10 +21,10 @@
     <PackageReference Include="Microsoft.AspNet.SignalR.Client" Version="2.4.3" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="2.88.0" />
     <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
-    <PackageReference Include="Microcharts" Version="0.9.5.9" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
     <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microcharts" Version="0.9.5.9" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\WallStreetServices\" />
@@ -43,5 +43,6 @@
     <None Remove="Services\ProduitServices\.DS_Store" />
     <None Remove="Newtonsoft.Json" />
     <None Remove="Json.Net" />
+    <None Remove="Microcharts" />
   </ItemGroup>
 </Project>
