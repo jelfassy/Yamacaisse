@@ -1390,6 +1390,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Microcharts >= 0.9.5.9",
       "Microcharts.Forms >= 0.9.5.9",
       "Microsoft.AppCenter >= 4.5.1",
       "Microsoft.AppCenter.Analytics >= 4.5.1",
@@ -1448,6 +1449,10 @@
       "netstandard2.0": {
         "targetAlias": "netstandard2.0",
         "dependencies": {
+          "Microcharts": {
+            "target": "Package",
+            "version": "[0.9.5.9, )"
+          },
           "Microcharts.Forms": {
             "target": "Package",
             "version": "[0.9.5.9, )"
