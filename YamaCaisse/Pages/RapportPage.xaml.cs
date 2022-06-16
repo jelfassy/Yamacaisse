@@ -7,6 +7,7 @@ using YamaCaisse.Services.ConfigServices;
 using YamaCaisse.Services.RapportServices;
 using YamaCaisse.Services.WallStreetServices;
 using System.Linq;
+using Microsoft.AppCenter.Crashes;
 
 namespace YamaCaisse.Pages
 {
@@ -91,9 +92,17 @@ namespace YamaCaisse.Pages
 
         async void RapportJour_Clicked(object sender, System.EventArgs e)
         {
-            this.IsBusy = true;
-            var rs = await _rapportDataServices.GetRapportJour(DtPicker.Date.ToLocalTime());
-            this.IsBusy = false;
+            try
+            {
+                this.IsBusy = true;
+                var rs = await _rapportDataServices.GetRapportJour(DtPicker.Date.ToLocalTime());
+                this.IsBusy = false;
+            }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex,null);
+            }
+          
         }
 
         async void RapportCouvert_Clicked(object sender, System.EventArgs e)
