@@ -34,6 +34,7 @@ namespace YamaCaisse.Services.RapportServices
         {
             try
             {
+
                 bool res = false;
                 var js = JsonConvert.SerializeObject(new PrintRapportModel()
                 {
