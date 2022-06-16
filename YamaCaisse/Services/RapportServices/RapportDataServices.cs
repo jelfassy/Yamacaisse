@@ -37,7 +37,7 @@ namespace YamaCaisse.Services.RapportServices
                 bool res = false;
                 var js = JsonConvert.SerializeObject(new PrintRapportModel()
                 {
-                    IdPrinter = App.ConfigViewModel.Printer.PRT_ID,
+                    Idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     Date = date,
 
                 }, new JsonSerializerSettings()
@@ -80,7 +80,7 @@ namespace YamaCaisse.Services.RapportServices
                 bool res = false;
                 var js = JsonConvert.SerializeObject(new PrintRapportModel
                 {
-                    IdPrinter = App.ConfigViewModel.Printer.PRT_ID,
+                    Idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     Date = date,
                     IdServeur = idServeur
 
