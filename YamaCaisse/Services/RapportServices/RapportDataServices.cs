@@ -78,9 +78,9 @@ namespace YamaCaisse.Services.RapportServices
             try
             {
                 bool res = false;
-                var js = JsonConvert.SerializeObject(new
+                var js = JsonConvert.SerializeObject(new PrintRapportModel
                 {
-                    Idprinter = App.ConfigViewModel.Printer.PRT_ID,
+                    IdPrinter = App.ConfigViewModel.Printer.PRT_ID,
                     Date = date,
                     IdServeur = idServeur
 

@@ -1415,11 +1415,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
+      "projectUniqueName": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
       "projectName": "YamaCaisse",
-      "projectPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
+      "projectPath": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
       "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-      "outputPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/",
+      "outputPath": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

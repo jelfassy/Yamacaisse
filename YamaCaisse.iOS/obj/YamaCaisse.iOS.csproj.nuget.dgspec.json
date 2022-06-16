@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {}
+    "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {}
   },
   "projects": {
-    "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {
+    "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
+        "projectUniqueName": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
         "projectName": "YamaCaisse.iOS",
-        "projectPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
+        "projectPath": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/YamaCaisse.iOS.csproj",
         "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-        "outputPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse.iOS/obj/",
+        "outputPath": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj": {
-                "projectPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj"
+              "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/YamaCaisse.csproj": {
+                "projectPath": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/YamaCaisse.csproj"
               }
             }
           }
@@ -119,14 +119,14 @@
         }
       }
     },
-    "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj": {
+    "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/YamaCaisse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectUniqueName": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
         "projectName": "YamaCaisse",
-        "projectPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
+        "projectPath": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/YamaCaisse.csproj",
         "packagesPath": "/Users/jonathanelfassy/.nuget/packages/",
-        "outputPath": "/Users/jonathanelfassy/Projects/Yamacaisse/YamaCaisse/obj/",
+        "outputPath": "/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
