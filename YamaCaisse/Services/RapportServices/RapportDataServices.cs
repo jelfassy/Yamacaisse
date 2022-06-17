@@ -127,7 +127,7 @@ namespace YamaCaisse.Services.RapportServices
             try
             {
                 bool res = false;
-                var js = JsonConvert.SerializeObject(new
+                var js = JsonConvert.SerializeObject(new PrintRapportModel()
                 {
                     Idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     Date = date
@@ -174,7 +174,7 @@ namespace YamaCaisse.Services.RapportServices
             try
             {
                 bool res = false;
-                var js = JsonConvert.SerializeObject(new
+                var js = JsonConvert.SerializeObject(new PrintRapportModel()
                 {
                     Idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     Date = date
@@ -217,7 +217,7 @@ namespace YamaCaisse.Services.RapportServices
             try
             {
                 bool res = false;
-                var js = JsonConvert.SerializeObject(new
+                var js = JsonConvert.SerializeObject(new PrintRapportModel()
                 {
                     Idprinter = App.ConfigViewModel.Printer.PRT_ID,
                     Date = date
