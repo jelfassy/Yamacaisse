@@ -63,7 +63,8 @@ namespace YamaCaisse.ViewModel
                 this.TKT_ID = ticket.TIK_ID;
                 this.IdTable = ticket.FK_TAB_ID;
                 this.NbCouvert = ticket.TIK_NB_COUVERT;
-                this.TableName = ticket?.T_TABLE?.TAB_NOM;
+                if(ticket.T_TABLE != null)
+                    this.TableName = ticket.T_TABLE.TAB_NOM;
                 this.MontantTotal = ticket.TIK_MNT_TOTAL;
                 this.ListLigneTicket = new ObservableCollection<LigneTicket>(ticket.T_LIGNE_TICKET);
                 this.ListLigneCompr = new ObservableCollection<LigneTicket>();
@@ -423,7 +424,8 @@ namespace YamaCaisse.ViewModel
                     this.TKT_ID = ticket.TIK_ID;
                     this.IdTable = ticket.FK_TAB_ID;
                     this.NbCouvert = ticket.TIK_NB_COUVERT;
-                    this.TableName = ticket?.T_TABLE?.TAB_NOM;
+                    if (ticket.T_TABLE != null)
+                        this.TableName = ticket.T_TABLE.TAB_NOM;
                     this.MontantTotal = ticket.T_LIGNE_TICKET.Sum(c => c.LTK_SOMME.Value);
 
                 }
