@@ -377,6 +377,7 @@ namespace YamaCaisse.View
         public async void SetTable(int SelectedTableId)
         {
             this.isBusy = true;
+            var listTable = await _tableDataServices.GetTableList();
             if (this.Move == true)
             {
                 var rs = await _tableDataServices.MoveTable((int)TicketViewModel.Current.IdTable, SelectedTableId);
@@ -406,6 +407,7 @@ namespace YamaCaisse.View
                 TicketViewModel.Current.Clear();
                 TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId, false);
             }
+            TicketViewModel.Current.TableName = listTable.SingleOrDefault(c => c.TAB_ID == SelectedTableId).TAB_NOM;
             this.isBusy = false;
         }
 
