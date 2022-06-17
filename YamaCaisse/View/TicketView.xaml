@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:YamaCaisse.ViewModel;assembly=YamaCaisse"
@@ -33,7 +33,7 @@
                     <RowDefinition Height="2" />
                     <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Clicked="Click_SelectTable" Text="{Binding TableName, Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" MinimumHeightRequest="40" />
+                <Button Grid.Row="0" Grid.Column="0" Clicked="Click_SelectTable" Text="{Binding TableName, Source={x:Static local:TicketViewModel.Current}}" TextColor="{StaticResource PrimaryTextColor}" />
                 <BoxView Grid.Column="1" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
                 <Label Grid.Row="0" Grid.Column="2" Text="{Binding MontantTotal,StringFormat='{0:0.00}',Source={x:Static local:TicketViewModel.Current}}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="{StaticResource PrimaryTextColor}" />
                 <BoxView Grid.Column="3" Grid.Row="0" BackgroundColor="{StaticResource DividerColor}" WidthRequest="1" VerticalOptions="FillAndExpand" HorizontalOptions="Start" />
