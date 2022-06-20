@@ -84,6 +84,9 @@
 /Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/YamaCaisse/appcenter-test/YamaCaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.pdb
+/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.deps.json
+/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.dll
+/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.pdb
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.GeneratedMSBuildEditorConfig.editorconfig
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
@@ -134,10 +137,6 @@
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.AssemblyInfoInputs.cache
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.AssemblyInfo.cs
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.csproj.CoreCompileInputs.cache
-/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.deps.json
-/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.dll
-/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/bin/Debug/netstandard2.0/YamaCaisse.pdb
-/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.csproj.AssemblyReference.cache
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.pdb

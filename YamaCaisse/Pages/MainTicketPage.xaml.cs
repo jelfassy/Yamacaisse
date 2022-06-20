@@ -233,12 +233,12 @@ namespace YamaCaisse.Pages
 
         async void Click_Cadeau(object sender, EventArgs e)
         {
-            await _ticketDataServices.PrintCadeau((int)TicketViewModel.Current.TKT_ID, App.ConfigViewModel.Printer.PRT_ID);
+            await _ticketDataServices.PrintCadeau((int)TicketViewModel.Current.TKT_ID, ConfigViewModel.Current.Printer.PRT_ID);
         }
 
         async void Click_Reprint(object sender, EventArgs e)
         {
-            await _ticketDataServices.Print((int)TicketViewModel.Current.TKT_ID,App.ConfigViewModel.Printer.PRT_ID);
+            await _ticketDataServices.Print((int)TicketViewModel.Current.TKT_ID, ConfigViewModel.Current.Printer.PRT_ID);
         }
 
         async void btDivise_Clicked(object sender, EventArgs e)

@@ -333,8 +333,8 @@ namespace YamaCaisse.ViewModel
                 TIK_DT_RETOUR = DateRetour
 
             };
-            if (App.ConfigViewModel.Printer != null)
-                ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
+            if (ConfigViewModel.Current.Printer != null)
+                ticket.FK_PRT_ID = ConfigViewModel.Current.Printer.PRT_ID;
             if (ListLigneTicket == null)
                 ListLigneTicket = new ObservableCollection<LigneTicket>();
             foreach (var ligne in ListLigneTicket)
@@ -367,8 +367,8 @@ namespace YamaCaisse.ViewModel
                 TIK_TPV = App.DeviceIdentifier,
                TIK_DT_RETOUR = DateRetour
             };
-            if (App.ConfigViewModel.Printer != null)
-                ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
+            if (ConfigViewModel.Current.Printer != null)
+                ticket.FK_PRT_ID = ConfigViewModel.Current.Printer.PRT_ID;
             if (ListLigneTicket == null)
                 ListLigneTicket = new ObservableCollection<LigneTicket>();
             foreach (var ligne in ListLigneTicket.Where(c => c.LTK_SEND != true))

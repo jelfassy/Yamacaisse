@@ -228,8 +228,8 @@ namespace YamaCaisse.Pages
                     TIK_TPV = App.DeviceIdentifier
 
                 };
-                if (App.ConfigViewModel.Printer != null)
-                    ticket.FK_PRT_ID = App.ConfigViewModel.Printer.PRT_ID;
+                if (ConfigViewModel.Current.Printer != null)
+                    ticket.FK_PRT_ID = ConfigViewModel.Current.Printer.PRT_ID;
 
                 ticket.T_LIGNE_TICKET = this.ListSelectedLigneTicket.ToList();
 

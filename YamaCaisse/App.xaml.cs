@@ -25,9 +25,9 @@ namespace YamaCaisse
 
         public static int JourId { get; set; }
 
-        public static TicketViewModel TicketViewModel { get; set; }
+       // public static TicketViewModel TicketViewModel { get; set; }
 
-        public static ConfigViewModel ConfigViewModel { get; set; }
+        //public static ConfigViewModel ConfigViewModel { get; set; }
 
         public static JObject JsonPage { get; set; }
         public static Dictionary<int, JObject> JsonPageProduit { get; set; }
@@ -46,8 +46,8 @@ namespace YamaCaisse
 
             DependencyService.Register<IUserDataServices,UserDataServices>();
 
-            TicketViewModel = new TicketViewModel();
-            ConfigViewModel = ConfigViewModel.Current;
+            //TicketViewModel = new TicketViewModel();
+            //ConfigViewModel = ConfigViewModel.Current;
             MainPage = new YamaCaisse.MainPage();
             JsonPageProduit = new Dictionary<int, JObject>();
            

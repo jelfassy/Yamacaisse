@@ -11,6 +11,7 @@ using YamaCaisse.Entity;
 using YamaCaisse.Services.PaiementServices;
 using YamaCaisse.Services.TicketServices;
 using YamaCaisse.Services.TypePaiementServices;
+using YamaCaisse.ViewModel;
 
 namespace YamaCaisse.Pages
 {
@@ -161,7 +162,7 @@ namespace YamaCaisse.Pages
         {
             if (_ticket.TIK_ID != 0)
             {
-                await _ticketDataServices.Print((int)_ticket.TIK_ID, App.ConfigViewModel.Printer.PRT_ID);
+                await _ticketDataServices.Print((int)_ticket.TIK_ID, ConfigViewModel.Current.Printer.PRT_ID);
             }
         }
 
@@ -261,7 +262,7 @@ namespace YamaCaisse.Pages
         {
             if (this._maintTicketPage != null)
                 _maintTicketPage.loadData();
-            App.TicketViewModel.Clear();
+            TicketViewModel.Current.Clear();
             if (Rg.Plugins.Popup.Services.PopupNavigation.Instance.PopupStack.Any())
             {
                 await Navigation.PopPopupAsync();
