@@ -407,7 +407,8 @@ namespace YamaCaisse.View
                 TicketViewModel.Current.Clear();
                 TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId, false);
             }
-            TicketViewModel.Current.TableName = "201"; //listTable.SingleOrDefault(c => c.TAB_ID == SelectedTableId).TAB_NOM;
+            TicketViewModel.Current.TableName = listTable.SingleOrDefault(c => c.TAB_ID == SelectedTableId).TAB_NOM;
+
             this.isBusy = false;
         }
 

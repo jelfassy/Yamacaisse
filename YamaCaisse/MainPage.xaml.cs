@@ -177,7 +177,7 @@ namespace YamaCaisse
                     var boutique = await _configDataServices.ModeBoutique();
                     ConfigViewModel.Current.ModeBoutique = boutique;
 
-                    ConfigViewModel.Current.Profil = "Admin";
+                    ConfigViewModel.Current.Profil = user.T_USER_PROFIL.USP_NAME;
                     await Navigation.PushPopupAsync(new PopupPinter());
                     await Navigation.PushModalAsync(new YamaCaisse.Pages.Caisse());
                 }
