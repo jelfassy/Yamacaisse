@@ -91,7 +91,7 @@ namespace YamaCaisse.ViewModel
         public string MotifAnnulation
         {
             get
-            {
+            { 
                 return _MotifAnnulation;
             }
             set
