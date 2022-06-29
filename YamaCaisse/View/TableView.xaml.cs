@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AppCenter.Crashes;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using YamaCaisse.Entity;
@@ -408,7 +409,19 @@ namespace YamaCaisse.View
                 TicketViewModel.Current.Clear();
                 TicketViewModel.Current.LoadDataTicketbyTable(SelectedTableId, false);
             }
-            TicketViewModel.Current.TableName = listTable.SingleOrDefault(c => c.TAB_ID == SelectedTableId).TAB_NOM;
+            string table  = listTable.SingleOrDefault(c => c.TAB_ID == SelectedTableId).TAB_NOM;
+           
+            TicketViewModel.Current.TableName = table;
+
+            try
+            {
+                throw new Exception("table selectionne ID :" + SelectedTableId + " Table name : " + table + " TicketViewModel.Current.TableName : " + TicketViewModel.Current.TableName); ;
+
+            }
+            catch (Exception ex)
+            {
+                Crashes.TrackError(ex, null);
+            }
 
             this.isBusy = false;
         }
