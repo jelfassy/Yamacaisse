@@ -25,8 +25,20 @@ namespace YamaCaisse.ViewModel
         private static TicketViewModel _current;
         public static TicketViewModel Current => _current ?? (_current = new TicketViewModel());
 
+        private bool _isMenu;
 
-        public bool IsMenu { get; set; }
+        public bool IsMenu
+        {
+            get
+            {
+                return _isMenu;
+            }
+            set
+            {
+                _isMenu = value;
+                OnPropertyChanged(nameof(IsMenu));
+            }
+        }
 
         public void RefreshListProperty()
         {

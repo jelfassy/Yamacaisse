@@ -413,16 +413,6 @@ namespace YamaCaisse.View
            
             TicketViewModel.Current.TableName = table;
 
-            try
-            {
-                throw new Exception("table selectionne ID :" + SelectedTableId + " Table name : " + table + " TicketViewModel.Current.TableName : " + TicketViewModel.Current.TableName); ;
-
-            }
-            catch (Exception ex)
-            {
-                Crashes.TrackError(ex, null);
-            }
-
             this.isBusy = false;
         }
 
