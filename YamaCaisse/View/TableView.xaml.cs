@@ -376,6 +376,7 @@ namespace YamaCaisse.View
 
         public async void SetTable(int SelectedTableId)
         {
+
             this.isBusy = true;
             var listTable = await _tableDataServices.GetTableList();
             if (this.Move == true)
