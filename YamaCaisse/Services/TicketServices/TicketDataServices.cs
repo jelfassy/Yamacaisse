@@ -35,7 +35,7 @@ namespace YamaCaisse.Services.TicketServices
             try
             {
                 List<TicketforList> res = new List<TicketforList>();
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"List/", isTicket.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "List/", isTicket.ToString()));
 
                 await Task.Run(() =>
                 {
@@ -73,14 +73,14 @@ namespace YamaCaisse.Services.TicketServices
             try
             {
                 Ticket res = null;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,id.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, id.ToString()));
 
                 await Task.Run(() =>
                 {
                     res = o.ToObject<Ticket>();
                 });
                 if (res.TIK_ID == 0)
-                        return null;
+                    return null;
 
                 return res;
             }
@@ -109,12 +109,12 @@ namespace YamaCaisse.Services.TicketServices
         /// </summary>
         /// <returns>The table.</returns>
         /// <param name="idTable">Identifier table.</param>
-        public async Task<bool>Addition(int idTicket, int idPrinter,int idserveur)
+        public async Task<bool> Addition(int idTicket, int idPrinter, int idserveur)
         {
             try
             {
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Addition/", idTicket.ToString(),"/",idPrinter.ToString(),"/",idserveur.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Addition/", idTicket.ToString(), "/", idPrinter.ToString(), "/", idserveur.ToString()));
 
                 await Task.Run(() =>
                 {
@@ -219,7 +219,7 @@ namespace YamaCaisse.Services.TicketServices
                 throw ex;
             }
         }
-        
+
 
         /// <summary>
         /// Prints the fiche.
@@ -231,9 +231,10 @@ namespace YamaCaisse.Services.TicketServices
             try
             {
 
-               
+
                 bool res = true;
-                var js = JsonConvert.SerializeObject(new {
+                var js = JsonConvert.SerializeObject(new
+                {
                     idprinter = ConfigViewModel.Current.Printer.PRT_ID,
                     idticket = ticket.TIK_ID,
                     nbCouvert = nbcouvert,
@@ -242,7 +243,7 @@ namespace YamaCaisse.Services.TicketServices
                 {
                     NullValueHandling = NullValueHandling.Ignore
                 });
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche"),js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Fiche"), js);
 
                 await Task.Run(() =>
                 {
@@ -335,7 +336,7 @@ namespace YamaCaisse.Services.TicketServices
             try
             {
                 Ticket res = null;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl,"Table/", id.ToString()));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "Table/", id.ToString()));
 
                 await Task.Run(() =>
                 {
@@ -439,7 +440,7 @@ namespace YamaCaisse.Services.TicketServices
                 throw ex;
             }
         }
-        
+
         public async Task<List<Produit>> GetListProduitMenu(int idTicket)
         {
             try
@@ -488,9 +489,9 @@ namespace YamaCaisse.Services.TicketServices
                     NullValueHandling = NullValueHandling.Ignore
                 });
 
-               // var rs = string.Concat("{\"t_TICKET\":", js, "}");
- 
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl),js);
+                // var rs = string.Concat("{\"t_TICKET\":", js, "}");
+
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl), js);
 
                 await Task.Run(() =>
                 {
@@ -519,7 +520,7 @@ namespace YamaCaisse.Services.TicketServices
             }
         }
 
-        public async Task<Ticket> EclaterVerTicket(int idOldTicket,Ticket newt_TICKET)
+        public async Task<Ticket> EclaterVerTicket(int idOldTicket, Ticket newt_TICKET)
         {
             try
             {
@@ -531,7 +532,7 @@ namespace YamaCaisse.Services.TicketServices
 
                 // var rs = string.Concat("{\"t_TICKET\":", js, "}");
 
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"Eclater/VersTicket"), js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Eclater/VersTicket"), js);
 
                 await Task.Run(() =>
                 {
@@ -572,7 +573,7 @@ namespace YamaCaisse.Services.TicketServices
 
                 // var rs = string.Concat("{\"t_TICKET\":", js, "}");
 
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Eclater/VersTable/"+ idOldTicket), js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "Eclater/VersTable/" + idOldTicket), js);
 
                 await Task.Run(() =>
                 {
@@ -616,7 +617,7 @@ namespace YamaCaisse.Services.TicketServices
                     NullValueHandling = NullValueHandling.Ignore
                 });
 
-                 JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"PutTicket/",id), js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "PutTicket/", id), js);
 
                 return true;
             }
@@ -645,9 +646,9 @@ namespace YamaCaisse.Services.TicketServices
         {
             try
             {
-            
+
                 bool res = true;
-                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "RetourTable/", idTable,"/", ticket.TIK_ID));
+                JObject o = await HttpHelper.GetAsync(string.Concat(App.UrlGateway, Baseurl, "RetourTable/", idTable, "/", ticket.TIK_ID));
 
                 await Task.Run(() =>
                 {
@@ -689,7 +690,7 @@ namespace YamaCaisse.Services.TicketServices
                     NullValueHandling = NullValueHandling.Ignore
                 });
 
-                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl,"AnnulerTicket"), js);
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "AnnulerTicket"), js);
 
                 await Task.Run(() =>
                 {
@@ -750,6 +751,53 @@ namespace YamaCaisse.Services.TicketServices
                 var property = new Dictionary<string, string>
                 {
                     {this.GetType().Name,"Offert"}
+                };
+                Crashes.TrackError(ex, property);
+                throw ex;
+            }
+        }
+
+        public async Task<bool> RetourConsigne(int jourId, int quantite)
+        {
+            try
+            {
+
+
+                bool res = true;
+                var js = JsonConvert.SerializeObject(new
+                {
+                    IdJour = jourId,
+                    Quantite = quantite
+                }, new JsonSerializerSettings()
+                {
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+                JObject o = await HttpHelper.PostAsync(string.Concat(App.UrlGateway, Baseurl, "RetourConsigne"), js);
+
+                await Task.Run(() =>
+                {
+                    JToken token = o.SelectToken("data");
+                    res = token.ToObject<bool>();
+                });
+                if (res == false)
+                    return false;
+
+                return true;
+            }
+            catch (InvalidOperationException Iex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RetourConsigne"}
+                };
+                Crashes.TrackError(Iex, property);
+                throw Iex;
+            }
+            catch (Exception ex)
+            {
+                var property = new Dictionary<string, string>
+                {
+                    {this.GetType().Name,"RetourConsigne" }
                 };
                 Crashes.TrackError(ex, property);
                 throw ex;

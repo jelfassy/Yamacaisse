@@ -358,6 +358,11 @@ namespace YamaCaisse.Pages
             var page = new PopupPourcentage();
             await Navigation.PushPopupAsync(page);
         }
+        async void Click_Consigne(System.Object sender, System.EventArgs e)
+        {
+            var page = new PopupRetourConsigne();
+            await Navigation.PushPopupAsync(page);
+        }
 
     }
 }

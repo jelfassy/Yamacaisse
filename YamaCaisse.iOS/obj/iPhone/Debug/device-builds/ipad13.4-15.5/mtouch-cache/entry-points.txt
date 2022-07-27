@@ -1,0 +1,134 @@
+Function=SystemNative_ConvertErrorPlatformToPal
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ConvertErrorPalToPlatform
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_StrErrorR
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetNonCryptographicallySecureRandomBytes
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetReadDirRBufferSize
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadLink
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Stat2
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_LStat2
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Symlink
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CopyFile
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEGid
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEUid
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Link
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_MkDir
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Rename
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Unlink
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_OpenDir
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadDirR
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CloseDir
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_local_name
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_data
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/mscorlib.dll
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=NetSecurityNative_ReleaseGssBuffer
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMinorStatus
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMajorStatus
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportUserName
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportPrincipalName
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseName
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredSpNego
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredWithPassword
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseCred
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitSecContext
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DeleteSecContext
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=xamarin_start_wwan
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/System.dll
+Function=xamarin_release_managed_ref
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_set_gchandle_with_flags_safe
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_release_block_on_main_thread
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSend_IntPtr_exception
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_IntPtr_objc_msgSendSuper_IntPtr_exception
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Xamarin.iOS.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACAppCenter
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACDependencyConfiguration
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACDevice
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACKeychainUtil
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACLogger
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACServiceAbstract
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACWrapperLogger
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACWrapperSdk
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACAnalytics
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Analytics.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACEventLog
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Analytics.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACLogWithProperties
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Analytics.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACPageLog
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Analytics.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACCrashes
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACErrorAttachmentLog
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACErrorReport
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACExceptionModel
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACStackFrame
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACWrapperCrashesHelper
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACWrapperException
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACWrapperExceptionManager
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACWrapperExceptionModel
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Crashes.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACDistribute
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Distribute.iOS.Bindings.dll
+ObjectiveCClass=OBJC_CLASS_$_MSACReleaseDetails
+	/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse.iOS/obj/iPhone/Debug/device-builds/ipad13.4-15.5/mtouch-cache/1-Link/Microsoft.AppCenter.Distribute.iOS.Bindings.dll
+Function=mono_pmip

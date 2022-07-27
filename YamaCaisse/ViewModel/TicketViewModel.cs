@@ -66,6 +66,7 @@ namespace YamaCaisse.ViewModel
             TicketViewModel.Current.MotifAnnulation = null;
             TicketViewModel.Current.Client = null;
             TicketViewModel.Current.Promotion = null;
+            TicketViewModel.Current.NbRetour = null;
         }
 
         public async void SetTicket(Ticket ticket, bool isAddition = false)
@@ -157,6 +158,17 @@ namespace YamaCaisse.ViewModel
             {
                 _nbCouvert = value;
                 OnPropertyChanged(nameof(NbCouvert));
+            }
+        }
+
+        public int? _nbRetour { get; set; }
+        public int? NbRetour
+        {
+            get { return _nbRetour; }
+            set
+            {
+                _nbRetour = value;
+                OnPropertyChanged(nameof(NbRetour));
             }
         }
 

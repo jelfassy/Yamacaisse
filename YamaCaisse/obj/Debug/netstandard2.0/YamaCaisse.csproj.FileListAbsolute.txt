@@ -140,3 +140,5 @@
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/XamlC.stamp
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.dll
 /Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.pdb
+/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/YamaCaisse.csproj.AssemblyReference.cache
+/Users/jonathanelfassy/Projects/ok/Yamacaisse/YamaCaisse/obj/Debug/netstandard2.0/Pages/PopupRetourConsigne.xaml.g.cs
